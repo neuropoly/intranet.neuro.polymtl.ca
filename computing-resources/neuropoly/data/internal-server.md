@@ -28,7 +28,8 @@ Table of Contents
   * [Add users](#add-users)
   * [Permissions](#permissions-1)
   * [Deletion](#deletion-1)
-  * [Troubleshooting](#troubleshooting-1)
+  * [Backups](#backups)
+  * [Troubleshooting](#troubleshooting)
   * [References](#references)
 
 
@@ -41,25 +42,7 @@ Initial setup
 
 ### Prerequisites
 
-0. You must have a unix OS. `git-annex` is simply not compatible with anything else.
-    * **Linux**
-    * **macOS**
-    * if **Windows**, either
-        * [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or
-        * A Linux virtual machine using e.g. [VirtualBox](https://virtualbox.org/)
-1. Make sure you have `git` and `git-annex>=8` installed.
-
-    Check that `git-annex version` reports version 8 or higher!
-    * **Linux**
-        * **Arch**: `pacman -Sy git-annex`
-        * **Fedora/RedHat/CentOS**: `dnf install git-annex`
-        * **Debian/Ubuntu**: `apt-get install git-annex`, but **you must be using Ubuntu 20.04** or **Debian Testing** or higher.
-        * if on an older system and can't upgrade, you can try [installing `conda`](https://docs.conda.io/en/latest/miniconda.html) and then `conda install -f conda-forge git-annex`.
-    * **macOS**: `brew install git-annex`
-    * **WSL**:
-        * **Ubuntu-20.04**: `apt install git-annex`
-        * The [other distros](https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions) are untested.
-
+0. You must have a \*nix OS with `git-annex>=8` installed. See [`git-annex` installation](./git-annex.md#installation).
 2. Make sure you have an ssh key.
     * If not, run `ssh-keygen -t ed25519 -C your.name@polymtl.ca`. Your keys will be in the hidden folder `~/.ssh/`.
 
@@ -231,30 +214,13 @@ git push origin :synced/xy/branchname
 
 ### New repository
 
-To make a new repo:
+To make a new repo, follow this [recipe](./git-annex.md#new-repo).
 
-```
-$ mkdir my-new-repo
-$ cd my-new-repo
-$ git init
-$ touch README # and hopefully write something useful in this too
-$ git add README; git commit -m "Initial commit"
-$ (echo "*   annex.largefiles=anything"; echo "*.nii.gz   filter=annex"; echo "*.nii   filter=annex") > .gitattributes
-$ git add .gitattributes; git commit -m "Configure git-annex"
-$ git annex init
-$ git annex dead here # make sure *this* copy isn't shared to others; the repo should be shared via the server
-$ # copy in or create initial files
-$ git add .
-$ # verify your .nii.gz files were annexed
-$ git annex whereis
-$ git commit
-```
-
-To upload a new repository, pick a name that follows one of the patterns you have "C" (for "Create") permission on and do:
+Then, to upload it, pick a name under `datasets/`, e.g. "my-new-repo", and do
 
 ```
 $ git remote add origin git@data.neuro.polymtl.ca:datasets/my-new-repo
-$ git push origin # ??
+$ git annex sync --content origin
 ```
 
 Note that you have personal space under "CREATOR", so if your username is "zamboni" then you can:
@@ -312,28 +278,6 @@ Test it by running, from `server2`
 ```
 ssh git@data.neuro.polymtl.ca info
 ```
-
-
-## Troubleshooting
-
-### `rm: cannot remove`
-
-When trying to get rid of a git-annex dataset, you will run into, for example:
-
-```
-$ rm -rf data-single-subject/
-[...]
-rm: cannot remove 'data-single-subject/.git/annex/objects/mF/GV/SHA256E-s1082687--290a43b80da6f608e3d47107f3b6c05e98eebe56ed4eea633748c08bd1a7837a.nii.gz/SHA256E-s1082687--290a43b80da6f608e3d47107f3b6c05e98eebe56ed4eea633748c08bd1a7837a.nii.gz': Permission denied
-rm: cannot remove 'data-single-subject/.git/annex/objects/Vq/vF/SHA256E-s15564390--7d3e45f0d4c67f31883b76eafc6cfdca1c1591590e2243dc8d443b07616b3609.nii.gz/SHA256E-s15564390--7d3e45f0d4c67f31883b76eafc6cfdca1c1591590e2243dc8d443b07616b3609.nii.gz': Permission denied
-rm: cannot remove 'data-single-subject/.git/annex/objects/79/G6/SHA256E-s7183853--3262ac5d6c5f573720c5e508da47608bd9fa49d6cd4dd547f75046c1a2f0d5b6.nii.gz/SHA256E-s7183853--3262ac5d6c5f573720c5e508da47608bd9fa49d6cd4dd547f75046c1a2f0d5b6.nii.gz': Permission denied
-```
-
-This is because git-annex tries extra hard to make it hard to lose data, by marking its contents read-only. If you really intend to erase a dataset then:
-
-```
-$ chmod -R +w data-single-subject/.git/annex/
-$ rm -rf data-single-subject/
-``````
 
 Admin Guide
 -----------
@@ -403,7 +347,7 @@ ssh git@data.neuro.polymtl.ca D rm datasets/<dataset>
 
 Backups are automatically made to MIC-UNF's servers.
 
-*exception they're not, yet: https://github.com/neuropoly/data-management/issues/20*
+*except they're not, yet: https://github.com/neuropoly/data-management/issues/20*
 
 You can access these if you need to recover by:
 
@@ -416,7 +360,7 @@ TODO
 
 If the server is doing something strange, contact someone with sysadmin-access to the server (what luck: as of 2021-03 at least, *the admins and the sysadmins are the same set: Julien, Alex and Nick*).
 
-These people can help investigate by following the gitolote guide in the [sysadmin docs](TODO).
+These people can investigate by following the gitolote guide in the [sysadmin docs](https://github.com/neuropoly/management/blob/master/docs/gitolite.md).
 
 ### References
 
