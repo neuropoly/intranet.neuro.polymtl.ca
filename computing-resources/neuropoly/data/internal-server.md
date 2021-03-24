@@ -191,7 +191,7 @@ git annex whereis
 To check that all the annexed files have been uploaded.
 
 
-**NB** `git-annex` is not well-suited to a pull-request flow. It is mostly designed for a single person to share data among many computers, not for multiple people to share data between a few computers. We can make it work but it needs some care.
+> 🏚️ `git-annex` is not well-suited to a pull-request flow. It is mostly designed for a single person to share data among many computers, not for multiple people to share data between a few computers. We can make it work but it needs some patience. Have a cat to make it better: 🐈🌺
 
 
 #### Commit Rights
