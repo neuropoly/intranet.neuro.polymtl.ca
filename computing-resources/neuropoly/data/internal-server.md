@@ -18,12 +18,12 @@ Table of Contents
   * [Download](#download)
   * [Upload](#upload)
   * [Reviewing Pull Requests](#reviewing-pull-requests)
+    * [Commit Rights](#commit-rights)
+    * [Committing](#committing) 
   * [New repository](#new-repository)
   * [Permissions](#permissions)
   * [Deletion](#deletion)
   * [Add extra devices](#add-extra-devices)
-* [Troubleshooting](#troubleshooting)
-  * [rm: cannot remove](#rm-cannot-remove)
 * [Admin Guide](#admin-guide)
   * [Add users](#add-users)
   * [Permissions](#permissions-1)
@@ -194,12 +194,31 @@ To check that all the annexed files have been uploaded.
 **NB** `git-annex` is not well-suited to a pull-request flow. It is mostly designed for a single person to share data among many computers, not for multiple people to share data between a few computers. We can make it work but it needs some care.
 
 
-If you approve and want to commit:
+#### Commit Rights
+
+
+Each repo has its own [`OWNERS` group](#permissions) attached. These are the people allowed to commit to `master`, and usually they should be the [reviewers](#reviewing-pull-requests) as well.
+
+In order to join this group, someone already in it needs to grant you access:
+
+```
+ssh git@data.neuro.polymtl.ca perms datasets/my-new-repo + OWNERS yourname
+```
+
+You can check if you have commit rights to a dataset "my-new-repo" by seeing if you appear in the group:
+
+```
+ssh git@data.neuro.polymtl.ca perms datasets/my-new-repo -l | grep OWNERS
+```
+
+#### Committing
+
+Once a branch is finalized:
 
 ```
 git checkout master
 git merge --ff-only xy/branchname # or use git pull --squash xy/branchname
-git push
+git push  # no need for git-annex sync here, no annex files have been moved
 ```
 
 (Optional) Clean up the branch:
@@ -237,7 +256,7 @@ You can grant others permissions to your repositories with `perms`.
 ```
 ssh git@data.neuro.polymtl.ca perms datasets/my-new-repo + WRITERS someone # grant someone upload rights
 ssh git@data.neuro.polymtl.ca perms datasets/my-new-repo - WRITERS someone # revoke someone's upload rights
-ssh git@data.neuro.polymtl.ca perms datasets/my-new-repo + OWNERS researcher2 # grant someone rights to add (and remove) others
+ssh git@data.neuro.polymtl.ca perms datasets/my-new-repo + OWNERS researcher2 # grant someone rights to add (and remove) others and to merge to master
 ssh git@data.neuro.polymtl.ca perms datasets/my-new-repo -l # view users
 ssh git@data.neuro.polymtl.ca perms datasets/my-new-repo -lr # view access rules
 ```
