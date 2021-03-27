@@ -104,6 +104,8 @@ Usage
 
 During daily usage, you will need to be [*on the polyvpn network*](#connection).
 
+You should also make sure to [configure git annex](./git-annex.md#global-git-annex-config) for the best performance.
+
 ### List
 
 To see what datasets you have available, use `info`, for example:
@@ -127,9 +129,8 @@ To download an existing repository use `git clone`:
 ```
 $ git clone git@data.neuro.polymtl.ca:datasets/data-single-subject
 $ cd data-single-subject
-$ # TODO: git config annex.thin=true ?
 $ git annex init
-$ git annex get .
+$ git annex sync --content
 ```
 
 ### Upload
