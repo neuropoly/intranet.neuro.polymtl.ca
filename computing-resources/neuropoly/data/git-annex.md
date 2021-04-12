@@ -33,12 +33,13 @@ You must have a unix OS. `git-annex` is simply not compatible with anything else
       * if on an older system and can't upgrade, you can try [installing `conda`](https://docs.conda.io/en/latest/miniconda.html) (or [miniforge](https://github.com/conda-forge/miniforge/) and then using `conda install -f conda-forge git-annex`.
   * **macOS**: `brew install git-annex`
   * **WSL**:
-      * **Ubuntu-20.04**: `apt install git-annex`
-      * The [other distros](https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions) are untested.
+      * **[Ubuntu-20.04](https://www.microsoft.com/store/apps/9n6svws3rx71)**: `apt install git-annex`
+      * **[Debian](https://www.microsoft.com/store/apps/9MSVKQC78PK6)**: `apt install git-annex`
+      * The [other distros](https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions) are supported.
 
-### Verify
+### ⚠️ Verify ⚠️
 
-Check that `git-annex version` reports version 8 or higher! It should look like:
+Check that `git-annex version` reports **version 8** or higher! It should look like:
 
 ```
 $ git annex version
