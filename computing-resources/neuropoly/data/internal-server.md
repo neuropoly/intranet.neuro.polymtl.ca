@@ -169,8 +169,8 @@ Finally, ask one of that dataset's reviewers to [look at your pull request](#Rev
 If someone asks you to review their changes on branch `xy/branchname`:
 
 ```
-git annex sync --content
 git checkout xy/branchname
+git annex sync --content
 ```
 
 Then look at the branch to see if it looks right to you.
