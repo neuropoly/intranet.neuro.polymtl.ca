@@ -87,8 +87,6 @@ $ git annex init
 $ git annex dead here # make sure *this* copy isn't shared to others; the repo should be shared via the server
 $ # copy in or create initial files
 $ git add .
-$ # verify your .nii.gz files were annexed
-$ git annex whereis
 $ git commit -m "Initial data"
 ```
 
@@ -98,6 +96,8 @@ $ git commit -m "Initial data"
 
 If you have any error at all, the first thing to check is that you have `git-annex` version 8, [as explained above](#installation).
 
+
+### checking annex file locations
 
 ### "a cosmetic problem affecting git status"
 
