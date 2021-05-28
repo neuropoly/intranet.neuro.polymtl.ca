@@ -81,14 +81,17 @@ $ cd my-new-repo
 $ git init
 $ vi README # write something useful in this
 $ git add README; git commit -m "Initial commit"
+$ (echo ".DS_Store") > .gitignore
 $ (echo "*   annex.largefiles=anything"; echo "*.nii.gz   filter=annex"; echo "*.nii   filter=annex"; echo "*.tif   filter=annex") > .gitattributes
-$ git add .gitattributes; git commit -m "Configure git-annex"
+$ git add .gitignore .gitattributes; git commit -m "Configure git-annex"
 $ git annex init
 $ git annex dead here # make sure *this* copy isn't shared to others; the repo should be shared via the server
 $ # copy in or create initial files
 $ git add .
 $ git commit -m "Initial data"
 ```
+
+This ensures we don't commit useless files (`.gitignore`), and saves a lot of time by only processing NIfTI images (`.gitattributes`) -- by default, git-annex reads all files even if it doesn't ultimately decide to annex them.
 
 ## Troubleshooting
 
