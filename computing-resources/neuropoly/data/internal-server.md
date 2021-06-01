@@ -22,11 +22,13 @@ Table of Contents
     * [Committing](#committing) 
   * [New repository](#new-repository)
   * [Permissions](#permissions)
+  * [Renaming](#renaming)
   * [Deletion](#deletion)
   * [Add extra devices](#add-extra-devices)
 * [Admin Guide](#admin-guide)
   * [Add users](#add-users)
   * [Permissions](#permissions-1)
+  * [Renaming](#renaming-1)
   * [Deletion](#deletion-1)
   * [Backups](#backups)
   * [Troubleshooting](#troubleshooting)
@@ -271,6 +273,10 @@ ssh git@data.neuro.polymtl.ca perms -h
 and see https://gitolite.com/gitolite/user#setget-additional-permissions-for-repos-you-created for full details.
 
 
+### Renaming
+
+There is no way for a user to rename a repo directly ([bug report](https://github.com/neuropoly/data-management/issues/83)).
+You can [ask an admin to do it](#renaming-1).
 
 ### Deletion
 
@@ -351,6 +357,16 @@ ls -R keydir/          # optional: investigate/change who has access; this *shou
 git add -u . && git push
 ```
 
+### Renaming
+
+As an admin, you can rename a repo by connecting to the server directly:
+
+```
+ssh root@data.neuro.polymtl.ca
+sudo -u git -i
+cd repositories/datasets/
+mv $dataset.git $new_name.git
+```
 
 ### Deletion
 
