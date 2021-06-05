@@ -69,14 +69,11 @@
 * [Publishing Articles](publishing-articles.md)
 * [Printer](printer.md)
 * [Purchasing Hardware & Lab Supplies](purchasing-hardware-and-lab-supplies.md)
+* [Computer Setup](computer-setup.md)
 
 ## Computing Resources
 
 * [Computing Resources: NeuroPoly](computing-resources/computing-resources-neuropoly.md)
 * [Computing Resources: Compute Canada](computing-resources/compute-canada.md)
 * [Clusters at CRIUGM](computing-resources/clusters-at-criugm.md)
-
----
-
-* [Computer Setup](computer-setup.md)
 
