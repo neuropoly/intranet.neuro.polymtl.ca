@@ -77,3 +77,7 @@
 * [Computing Resources: Compute Canada](computing-resources/compute-canada.md)
 * [Clusters at CRIUGM](computing-resources/clusters-at-criugm.md)
 
+## MRI / Coils
+
+* [7T Agilent \(ICM\)](mri-coils/7t-agilent-icm.md)
+
