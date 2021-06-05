@@ -4,7 +4,7 @@
 
 ## 👋  Onboarding
 
-* [Introduction](onboarding/untitled.md)
+* [Introduction](onboarding/onboarding-intro.md)
 * [Checklist](onboarding/untitled-1.md)
 * [Key People](onboarding/untitled-2.md)
 * [Accounts](onboarding/accounts.md)
