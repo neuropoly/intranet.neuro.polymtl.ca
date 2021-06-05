@@ -1,5 +1,7 @@
 # Computer Setup
 
+## Modify User Template
+
 Go under:
 
 ```bash
