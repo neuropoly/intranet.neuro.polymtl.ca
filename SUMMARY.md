@@ -80,4 +80,6 @@
 ## MRI / Coils
 
 * [7T Agilent \(ICM\)](mri-coils/7t-agilent-icm.md)
+* [Coils](mri-coils/coils/README.md)
+  * [FAQ](mri-coils/coils/faq.md)
 
