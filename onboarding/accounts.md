@@ -2,92 +2,30 @@
 
 To request an account for most of these services, ask on Slack \#accounts and tag @alexfoias. He will either create or direct you to where to get the account created.
 
-## Github
-
-You will need a personal GitHub account. If you want to separate your NeuroPoly work from your personal work, make a separate GitHub account. 
-
-You should be added to [https://github.com/orgs/neuropoly/](https://github.com/orgs/neuropoly/) by an admin.
-
-You may also be added to: ​
-
-* [https://github.com/ivadomed​](https://github.com/ivadomed​)
-* [https://github.com/orgs/spinalcordtoolbox​](https://github.com/orgs/spinalcordtoolbox​) ​
-* [https://github.com/shimming-toolbox](https://github.com/shimming-toolbox)
-
-You may also be added to certain private repositories one-by-one depending your what tasks you take on, though we try to minimize this by doing most of our work in the open.
-
-To facilitate assignment and addition to repositories, please add your Github account in the table below:
-
-| Name \(sorted **FIRST NAME** alphabetically\) | Github Account |
-| :--- | :--- |
-| Ainsleigh Hill | ahill187 |
-| Alexandre D'Astous | po09i |
-| Alexandru Foias | alexfoias |
-| Andreanne Lemay | andreanne-lemay |
-| Armand Collin | hermancollin |
-| Charley Gros | charleygros |
-| Emmanuel Edward Ntiri | entiri |
-| Etienne Bergeron | etiennebergeron |
-| Eva Alonso Ortiz | evaalonsoortiz |
-| Gaspard Cereza | gaspardcereza |
-| Hanna Ma | cakester |
-| Julien Cohen-Adad | jcohenadad |
-| Kevin Bérard | KevinBerard |
-| Konstantinos Nasiotis | mpompolas |
-| Marie-Hélène Bourget | mariehbourget |
-| Mathieu Boudreau | mathieuboudreau |
-| Paul Bautin | PaulBautin |
-| Ryan Topfer | rtopfer |
-| Sandrine Bédard | sandrinebedard |
-| Uzay Macar | uzaymacar |
-| Vasudev Sharma | vs74 |
-| Yang Ding | dyt811 |
-| Yuan Wang | konantian |
-
-## Slack
-
-[https://neuropoly.slack.com](https://neuropoly.slack.com), the daily chat app and way to connect with the team. You will get an invite to your email address to get you started.
-
-You should start out in
-
-* [\#welcome](https://app.slack.com/client/T034UD4QN/C01JK28C494)
-* \#general
-* \#random
-* \#coffeebreak
-
-Most projects have specific channels:
-
-* \#axondeepseg
-* \#sct\_dev
-* \#ivado-internal
-* \#qmrlab\_general
-* \#database\_mri and \#database\_histo
-* \#shimming-toolbox
-* \#spine-generic
-
-Depending on your role, you may want to join some of these optional skill-sharing channels:
-
-* \#dev
-* \#deeplearning
-* \#bids
-
-## Zoom
-
-No account is necessary. For \(most\) lab meetings, we use [this link](https://polymtl-ca.zoom.us/j/81029425251?pwd=NytHVHN4YVlvQWdiUC9nSm5TdVlhUT09).
-
-
+## Accounts Overview
 
 <table>
   <thead>
     <tr>
+      <th style="text-align:left">Account</th>
       <th style="text-align:left">Description</th>
-      <th style="text-align:left"></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left"><b>GitHub</b>
+      </td>
+      <td style="text-align:left">See <a href="https://neuropoly.gitbook.io/neuropoly-lab/onboarding/accounts#github">Accounts: GitHub</a> below</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Slack</b>
+      </td>
+      <td style="text-align:left">See <a href="https://neuropoly.gitbook.io/neuropoly-lab/onboarding/accounts#slack">Accounts: Slack</a> below</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>Zoom</b>
+      </td>
+      <td style="text-align:left">No account is necessary. For (most) lab meetings, we use <a href="https://polymtl-ca.zoom.us/j/81029425251?pwd=NytHVHN4YVlvQWdiUC9nSm5TdVlhUT09">this link</a>.</td>
     </tr>
     <tr>
       <td style="text-align:left"><b>Google Groups</b>
@@ -180,7 +118,72 @@ No account is necessary. For \(most\) lab meetings, we use [this link](https://p
   </tbody>
 </table>
 
+## GitHub
 
+You will need a personal GitHub account. If you want to separate your **NeuroPoly** work from your personal work, make a separate GitHub account. 
 
+You should be added to [https://github.com/orgs/neuropoly/](https://github.com/orgs/neuropoly/) by an admin.
 
+You may also be added to: ​
+
+* [https://github.com/ivadomed​](https://github.com/ivadomed​)
+* [https://github.com/orgs/spinalcordtoolbox​](https://github.com/orgs/spinalcordtoolbox​) ​
+* [https://github.com/shimming-toolbox](https://github.com/shimming-toolbox)
+
+You may also be added to certain private repositories one-by-one depending your what tasks you take on, though we try to minimize this by doing most of our work in the open.
+
+To facilitate assignment and addition to repositories, please add your Github account in the table below:
+
+| Name \(sorted **FIRST NAME** alphabetically\) | Github Account |
+| :--- | :--- |
+| Ainsleigh Hill | ahill187 |
+| Alexandre D'Astous | po09i |
+| Alexandru Foias | alexfoias |
+| Andreanne Lemay | andreanne-lemay |
+| Armand Collin | hermancollin |
+| Charley Gros | charleygros |
+| Emmanuel Edward Ntiri | entiri |
+| Etienne Bergeron | etiennebergeron |
+| Eva Alonso Ortiz | evaalonsoortiz |
+| Gaspard Cereza | gaspardcereza |
+| Hanna Ma | cakester |
+| Julien Cohen-Adad | jcohenadad |
+| Kevin Bérard | KevinBerard |
+| Konstantinos Nasiotis | mpompolas |
+| Marie-Hélène Bourget | mariehbourget |
+| Mathieu Boudreau | mathieuboudreau |
+| Paul Bautin | PaulBautin |
+| Ryan Topfer | rtopfer |
+| Sandrine Bédard | sandrinebedard |
+| Uzay Macar | uzaymacar |
+| Vasudev Sharma | vs74 |
+| Yang Ding | dyt811 |
+| Yuan Wang | konantian |
+
+## Slack
+
+[https://neuropoly.slack.com](https://neuropoly.slack.com), the daily chat app and way to connect with the team. You will get an invite to your email address to get you started.
+
+You should start out in
+
+* [\#welcome](https://app.slack.com/client/T034UD4QN/C01JK28C494)
+* \#general
+* \#random
+* \#coffeebreak
+
+Most projects have specific channels:
+
+* \#axondeepseg
+* \#sct\_dev
+* \#ivado-internal
+* \#qmrlab\_general
+* \#database\_mri and \#database\_histo
+* \#shimming-toolbox
+* \#spine-generic
+
+Depending on your role, you may want to join some of these optional skill-sharing channels:
+
+* \#dev
+* \#deeplearning
+* \#bids
 
