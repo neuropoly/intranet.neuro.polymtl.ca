@@ -33,13 +33,3 @@
   * username/password: ask Julien [jcohen@polymtl.ca](mailto:jcohen@polymtl.ca)
 * Video: [https://www.dropbox.com/s/fxt8sj831osqfo0/instructions\_3dprinter.mp4](https://www.dropbox.com/s/fxt8sj831osqfo0/instructions_3dprinter.mp4)
 
-## Big 3D printer \(SST1200es de Dimension\)
-
-{% hint style="warning" %}
-Before sending request to Francois Menard, please make sure:
-
-* you tell him you want to use the SST1200es Dimension
-* you indicate the dimension of the `stl` file \(mm or inch\)
-* you make sure that the piece will be printed on the XY plane \(not Z\), otherwise, too long
-{% endhint %}
-
