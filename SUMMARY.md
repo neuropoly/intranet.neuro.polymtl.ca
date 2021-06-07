@@ -86,3 +86,7 @@
     * [OctoPrint](mri-coils/coils/3d-printing/octoprint.md)
   * [FAQ](mri-coils/coils/faq.md)
 
+---
+
+* [Ideas for Cool Projects](ideas-for-cool-projects.md)
+
