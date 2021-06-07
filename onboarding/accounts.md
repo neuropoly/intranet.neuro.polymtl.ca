@@ -152,6 +152,7 @@ To facilitate assignment and addition to repositories, please add your Github ac
 | Konstantinos Nasiotis | mpompolas |
 | Marie-Hélène Bourget | mariehbourget |
 | Mathieu Boudreau | mathieuboudreau |
+| Naga Karthik | naga-karthik |
 | Paul Bautin | PaulBautin |
 | Ryan Topfer | rtopfer |
 | Sandrine Bédard | sandrinebedard |
