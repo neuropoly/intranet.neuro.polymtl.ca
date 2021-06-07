@@ -60,17 +60,6 @@
 * [Moving to Montreal](practical-information/moving-to-montreal.md)
 * [Scholarships & Bursaries](practical-information/scholarships-and-bursaries.md)
 
----
-
-* [Project Ideas](project-ideas.md)
-* [Dropbox/Google Drive](dropbox-google-drive.md)
-* [Courses](courses.md)
-* [Conferences](conferences.md)
-* [Publishing Articles](publishing-articles.md)
-* [Printer](printer.md)
-* [Purchasing Hardware & Lab Supplies](purchasing-hardware-and-lab-supplies.md)
-* [Computer Setup](computer-setup.md)
-
 ## Computing Resources
 
 * [Computing Resources: NeuroPoly](computing-resources/computing-resources-neuropoly.md)
@@ -88,5 +77,12 @@
 
 ---
 
+* [Dropbox/Google Drive](dropbox-google-drive.md)
+* [Courses](courses.md)
+* [Conferences](conferences.md)
+* [Publishing Articles](publishing-articles.md)
+* [Printer](printer.md)
+* [Purchasing Hardware & Lab Supplies](purchasing-hardware-and-lab-supplies.md)
+* [Computer Setup](computer-setup.md)
 * [Ideas for Cool Projects](ideas-for-cool-projects.md)
 
