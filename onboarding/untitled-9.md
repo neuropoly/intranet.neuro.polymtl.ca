@@ -1,7 +1,5 @@
 # Acronyms & Jargon
 
-
-
 <table>
   <thead>
     <tr>

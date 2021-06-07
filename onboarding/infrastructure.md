@@ -18,9 +18,9 @@ Contact persons: Nick & Alex.
 
 ​[MRI and Lab facilities](https://www.neuro.polymtl.ca/facilities)
 
-If you book the MRI, please use the [Neuropoly - MRI Google Calendar](https://calendar.google.com/calendar/u/0/embed?src=k4moiei5d2lh84iokouk6lt84o@group.calendar.google.com&ctz=America/Toronto).
+If you book the MRI, please use the [NeuroPoly - MRI Google Calendar](https://calendar.google.com/calendar/u/0/embed?src=k4moiei5d2lh84iokouk6lt84o@group.calendar.google.com&ctz=America/Toronto).
 
-During the acquisition, please keep a log of your experiment: [https://drive.google.com/drive/folders/1b9O\_sCaBzGxk97TPMjdBlS7biZnwC7Dl](https://drive.google.com/drive/folders/1b9O_sCaBzGxk97TPMjdBlS7biZnwC7Dl)
+During the acquisition, please keep a log of your experiment here: [Google Drive: NeuroPoly/MRI](https://drive.google.com/drive/folders/1b9O_sCaBzGxk97TPMjdBlS7biZnwC7Dl)
 
 ## ​ <a id="undefined"></a>
 

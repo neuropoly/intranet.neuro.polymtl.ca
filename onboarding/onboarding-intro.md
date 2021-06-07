@@ -1,6 +1,6 @@
 # Introduction
 
-This section includes information for getting started at **NeuroPoly Lab**. If you feel some information is missing, please open a comment/suggestion directly in the document. Thank you! 🙏 .
+This section includes information for getting started at **NeuroPoly Lab**. If you feel some information is missing, please feel free to edit this document or open a pull request on GitHub. Thank you! 🙏 .
 
 Our default stance is:
 
