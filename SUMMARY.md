@@ -80,6 +80,7 @@
 ## MRI / Coils
 
 * [7T Agilent \(ICM\)](mri-coils/7t-agilent-icm.md)
+* [Siemens](mri-coils/siemens.md)
 * [Coils](mri-coils/coils/README.md)
   * [3D Printing](mri-coils/coils/3d-printing/README.md)
     * [OctoPrint](mri-coils/coils/3d-printing/octoprint.md)
