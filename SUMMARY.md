@@ -76,6 +76,7 @@
   * [3D Printing](mri-coils/coils/3d-printing/README.md)
     * [OctoPrint](mri-coils/coils/3d-printing/octoprint.md)
   * [FAQ](mri-coils/coils/faq.md)
+  * [PCB Manufacturing](mri-coils/coils/pcb-manufacturing.md)
 
 ---
 
