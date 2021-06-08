@@ -51,7 +51,8 @@
 ## Learning & Resources
 
 * [MRI](learning-and-resources/untitled.md)
-* [Academic Writing](learning-and-resources/academic-writing.md)
+* [Academic Writing](learning-and-resources/academic-writing/README.md)
+  * [EndNote](learning-and-resources/academic-writing/endnote.md)
 * [Histology](learning-and-resources/histology.md)
 
 ## Practical Information
