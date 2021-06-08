@@ -24,7 +24,6 @@
     * [VirtualBox](software-development/misc/virtual-machines/virtualbox.md)
     * [Vagrant](software-development/misc/virtual-machines/vagrant.md)
   * [BitBucket](software-development/misc/bitbucket.md)
-  * [Chrome](software-development/misc/chrome.md)
   * [Docker](software-development/misc/docker/README.md)
     * [Docker for Deep Learning](software-development/misc/docker/docker-for-deep-learning.md)
   * [Dropbox](software-development/misc/dropbox.md)
