@@ -41,12 +41,12 @@
     * [Using XCode](software-development/programming-languages/c++/using-xcode.md)
 * [Image Processing Software](software-development/untitled-3/README.md)
   * [FSLeyes](software-development/untitled-3/fsleyes.md)
-* [Deep Learning](software-development/untitled-2/README.md)
-  * [CUDA](software-development/untitled-2/cuda.md)
-  * [Tensorflow](software-development/untitled-2/tensorflow.md)
-  * [Conditional Random Fields \(CRF\)](software-development/untitled-2/conditional-random-fields-crf.md)
-  * [Restricted Boltzmann Machines \(RBM\)](software-development/untitled-2/restricted-boltzmann-machines-rbm.md)
-  * [Misc](software-development/untitled-2/misc.md)
+* [Deep Learning](software-development/deep-learning/README.md)
+  * [CUDA](software-development/deep-learning/cuda.md)
+  * [Tensorflow](software-development/deep-learning/tensorflow.md)
+  * [Conditional Random Fields \(CRF\)](software-development/deep-learning/conditional-random-fields-crf.md)
+  * [Restricted Boltzmann Machines \(RBM\)](software-development/deep-learning/restricted-boltzmann-machines-rbm.md)
+  * [Misc](software-development/deep-learning/misc.md)
 
 ## Learning & Resources
 
