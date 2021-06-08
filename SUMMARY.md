@@ -18,6 +18,9 @@
 ## Software Development
 
 * [NeuroPoly Packages & Collaborations](software-development/untitled.md)
+* [OS Guides](software-development/os-guides/README.md)
+  * [Linux](software-development/os-guides/linux.md)
+  * [MacOSX](software-development/os-guides/macosx.md)
 * [Contributing Guidelines](software-development/contributing.md)
 * [Other Software & Tools](software-development/misc/README.md)
   * [Virtual Machines](software-development/misc/virtual-machines/README.md)
