@@ -70,6 +70,7 @@ For our purposes, we need to make sure repos are configured with
 *             annex.largefiles=anything
 *.nii.gz      filter=annex
 *.nii         filter=annex
+*.tif         filter=annex
 ```
 
 Please use this recipe to make new datasets:
