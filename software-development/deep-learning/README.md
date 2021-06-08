@@ -2,9 +2,13 @@
 
 ​[http://scikit-learn.org/](http://scikit-learn.org/)
 
-[https://github.com/Lasagne/Lasagne](https://github.com/Lasagne/Lasagne)
+{% embed url="https://github.com/Lasagne/Lasagne" %}
 
-[https://github.com/fchollet/keras](https://github.com/fchollet/keras)
+{% embed url="https://github.com/fchollet/keras" %}
+
+{% embed url="http://nilearn.github.io/" %}
+
+
 
 ### Frameworks/Libraries <a id="frameworkslibraries"></a>
 
