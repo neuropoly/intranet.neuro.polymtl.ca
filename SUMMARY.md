@@ -45,7 +45,7 @@
   * [CUDA](software-development/deep-learning/cuda.md)
   * [Tensorflow](software-development/deep-learning/tensorflow.md)
   * [Conditional Random Fields \(CRF\)](software-development/deep-learning/conditional-random-fields-crf.md)
-  * [Restricted Boltzmann Machines \(RBM\)](software-development/deep-learning/restricted-boltzmann-machines-rbm.md)
+  * [Restricted Boltzmann Machines \(RBM\)](software-development/deep-learning/restricted-boltzmann-machines.md)
   * [Misc](software-development/deep-learning/misc.md)
 
 ## Learning & Resources
