@@ -123,7 +123,7 @@ Match Host rosenberg,bireli
 HostName %h.neuro.polymtl.ca
 
 # CPU servers
-Match Host joplin,abbey,fitzgerald,tristano,vnmrj,ferguson
+Match Host joplin,abbey,tristano,ferguson
 HostName %h.neuro.polymtl.ca
 
 # data servers
