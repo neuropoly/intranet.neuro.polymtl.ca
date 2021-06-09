@@ -110,10 +110,39 @@ After starting the vncserver, use a VNC viewer \(Finder or VNC Viewer\) to conne
 Once the VPN connection established, connect via ssh using the `STATION` you want:
 
 ```bash
- ssh <username>@<STATION>.neuro.polymtl.ca
+ ssh <POLYGRAMES_USERNAME>@<STATION>.neuro.polymtl.ca
 ```
 
-Note: For Windows systems, a terminal emulator is required. You can use [Cygwin](http://www.cygwin.com/install.html) with ssh module.
+Note: For Windows systems, you can[ install Microsoft's ssh package](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse), [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10), [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/), or [cmder](https://cmder.net/).
+
+Optionally, add this shortcut to your `~/.ssh/config` file to allow you to just type `ssh <STATION>` or any other host and be connected to the right place with the right username:
+
+```bash
+# GPU servers
+Match Host rosenberg,bireli
+HostName %h.neuro.polymtl.ca
+
+# CPU servers
+Match Host joplin,abbey,fitzgerald,tristano,vnmrj,ferguson
+HostName %h.neuro.polymtl.ca
+
+# data servers
+Match Host data
+HostName %h.neuro.polymtl.ca
+User git
+
+Match host *.neuro.polymtl.ca
+User <POLYGRAMES_USERNAME>
+```
+
+Add this to your `~/.ssh/config` to make multiple ssh connections faster and without retyping your password:
+
+```text
+Host *
+ControlMaster auto
+ControlPath ~/.ssh/%r@%h:%p
+ControlPersist 3s
+```
 
 ## Data Servers
 
@@ -434,7 +463,7 @@ If you would like to have a software installed, please list it here:
 If the **Poly-Grames** login doesn't work \(on joplin, rosenberg, bireli & abbey\) and you know your account is active, the following commands have to be run by a sudo user :
 
 ```bash
-sudo systemctl restart ntp.service smbd.service nmbd.service sssd.service
+sudo systemctl restart ntp.service smbd.service nmbd.service sssd.serviced
 ```
 
 #### SUDO for GRAMES username on linux <a id="sudo_for_grames_username_on_linux"></a>
