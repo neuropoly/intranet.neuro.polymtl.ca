@@ -177,6 +177,30 @@ After starting the vncserver, connect to it as above.
  vncserver -kill :<PORT_NUMBER>
 ```
 
+### SFTP
+
+{% tabs %}
+{% tab title="mac" %}
+1. Open the Terminal
+2. Install OSX Fuse and SSHFS
+
+```text
+brew install --cask osxfuse
+brew install sshfs
+```
+
+3. Mount drive from CLUSTER
+
+```text
+sudo sshfs -o allow_other,defer_permissions,IdentityFile=~/.ssh/id_rsa <username>@CLUSTER.neuro.polymtl.ca:/folder/to/mount /where/to/mount
+```
+{% endtab %}
+
+{% tab title="Linux" %}
+Files &gt; Other locations &gt; Connect to Server &gt; sftp://USERNAME@CLUSTER.neuro.polymtl.ca/
+{% endtab %}
+{% endtabs %}
+
 ## Data Servers
 
 ### Duke
