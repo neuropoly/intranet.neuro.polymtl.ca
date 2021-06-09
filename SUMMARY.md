@@ -55,6 +55,7 @@
 
 * [Academic Writing](learning-and-resources/academic-writing/README.md)
   * [EndNote](learning-and-resources/academic-writing/endnote.md)
+* [Shared Paperpile folder](learning-and-resources/shared-paperpile-folder.md)
 * [Deep Learning](learning-and-resources/deep-learning.md)
 * [MRI](learning-and-resources/untitled.md)
 * [Histology](learning-and-resources/histology.md)
