@@ -36,23 +36,21 @@ Password: your\_polygrames\_password
 
 When working remotely from off-campus you need to use the [VPN](http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn).
 
-To connect to the VPN, you need to have an account with École Polytechnique, specifically with [CAS](https://cas5.polymtl.ca/cas/login).
-Students should already have this. Consultants and Research Associates will need to have an account created for them.
+To connect to the VPN, you need to have an account with École Polytechnique, specifically with [CAS](https://cas5.polymtl.ca/cas/login). Students should already have this. Consultants and Research Associates will need to have an account created for them.
 
-Contact [alexandrufoias@gmail.com](mailto:alexandrufoias@gmail.com) to request VPN access be activated for your CAS account.
-When activated, [Gestion des Codes](https://codes.si.polymtl.ca/gestion/) will report "VPN_* = Actif".
+Contact [alexandrufoias@gmail.com](mailto:alexandrufoias@gmail.com) to request VPN access be activated for your CAS account. When activated, [Gestion des Codes](https://codes.si.polymtl.ca/gestion/) will report "VPN\_\* = Actif".
 
 The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing `openconnect`:
 
 {% tabs %}
 {% tab title="MacOS" %}
-```
+```text
 brew install openconnect
 ```
 {% endtab %}
 
 {% tab title="PC/Linux" %}
-```
+```text
 apt install openconnect
 ```
 {% endtab %}
@@ -72,13 +70,11 @@ GROUP=PolySSL # or PolyInvites, depending on your account's status
 echo -n "$PASS" | sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-stdin ssl.vpn.polymtl.ca
 ```
 
-```
+```text
 ./vpn.sh
 ```
 
-
-
-### SSH (command line)
+### SSH \(command line\)
 
 Once the VPN connection established, connect via ssh using the `STATION` you want:
 
@@ -117,7 +113,7 @@ ControlPath ~/.ssh/%r@%h:%p
 ControlPersist 3s
 ```
 
-### VNC (graphical interface)
+### VNC \(graphical interface\)
 
 {% tabs %}
 {% tab title="macOS" %}
@@ -152,30 +148,30 @@ On Linux targets, a VNC server needs to be started manually before the above ins
  vncconfig -iconic &
 ```
 
-2. Give the right permissions to the file `~/.vnc/xstartup`
+1. Give the right permissions to the file `~/.vnc/xstartup`
 
 ```bash
  chmod +x ~/.vnc/xstartup
 ```
 
-3. Start VNC server
-
+1. Start VNC server
 
 ```bash
  vncserver -geometry 1600x1200 :<PORT_NUMBER>
 ```
 
-**Note:** To list all running vncservers, use: ps -ef | grep vnc`
+**Note:** To list all running vncservers, use: ps -ef \| grep vnc\`
 
 After starting the vncserver, connect to it as above.
 
 {% hint style="info" %}
-**Note:**   
-- On the first start of the vncserver, you will have to set a personal password for your vnc session  
-- The resolution can be defined by changing the value of the `-geometry` flag.
+**Note:**
+
+* On the first start of the vncserver, you will have to set a personal password for your vnc session  
+* The resolution can be defined by changing the value of the `-geometry` flag.
 {% endhint %}
 
-4. Stop VNC server - mandatory at the end of your session
+1. Stop VNC server - mandatory at the end of your session
 
 ```bash
  vncserver -kill :<PORT_NUMBER>
@@ -285,7 +281,7 @@ The following CPU and GPU clusters are available for internal use at **NeuroPoly
 **IMPORTANT:** Indicate in the calendar below if you plan to launch intensive calculations on a computer \(even if it is on your station, in case you leave for holidays but are still using your station\). If you don't have writing permission on this calendar please contact [alexandrufoias@gmail.com](mailto:alexandrufoias@gmail.com).
 {% endhint %}
 
-{% embed url="https://calendar.google.com/calendar/u/0/embed?src=4mg6bgd9pv55thf9486t2miht8@group.calendar.google.com" %}
+{% embed url="https://calendar.google.com/calendar/u/0/embed?src=4mg6bgd9pv55thf9486t2miht8@group.calendar.google.com" caption="" %}
 
 ### Rosenberg
 
@@ -356,7 +352,7 @@ For fast I/O, use the NVMe hard drive, which is automatically mounted on your ho
 | Spec | Description |
 | :--- | :--- |
 | **Model** | Mac Mini |
-| **OS** |  Ubuntu 16.04 |
+| **OS** | Ubuntu 16.04 |
 | **Hostname** |  |
 | **Credentials** | [NeuroPoly Internal Document: Tristano VNC Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.wa49ms1v7x01) |
 
@@ -380,7 +376,7 @@ For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.
 | **Hostname** | `idea3t.neuro.polymtl.ca` |
 | **Credentials** | [NeuroPoly Internal Document: Idea3t Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.d65wz45n6ho7) |
 
-This computer is to be used for programming pulse sequences within the Siemens IDEA environment for VE11C \(Prisma\). 
+This computer is to be used for programming pulse sequences within the Siemens IDEA environment for VE11C \(Prisma\).
 
 #### Troubleshooting
 
@@ -476,3 +472,4 @@ Then enter your ID and password at poly.
 * QuickLook:
   * Nifti viewer
 * Tanguy's app to open Nifti files with FSLview
+

@@ -66,7 +66,8 @@
 
 ## Computing Resources
 
-* [Computing Resources: NeuroPoly](computing-resources/computing-resources-neuropoly.md)
+* [Computing Resources: NeuroPoly](computing-resources/computing-resources-neuropoly/README.md)
+  * [GPUs](computing-resources/computing-resources-neuropoly/gpus.md)
 * [Computing Resources: Compute Canada](computing-resources/compute-canada.md)
 * [Clusters at CRIUGM](computing-resources/clusters-at-criugm.md)
 
