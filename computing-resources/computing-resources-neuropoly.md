@@ -192,7 +192,7 @@ sudo umount <FOLDER_NAME>/
 To mount:
 
 ```bash
-sudo mount -t cifs //132.207.65.200/<FOLDER_NAME> /mnt/duke/<FOLDER_NAME> -o username=<GRAMES_USERNAME>,noexec
+sudo mount -t cifs //duke.neuro.polymtl.ca/<FOLDER_NAME> /mnt/duke/<FOLDER_NAME> -o username=<GRAMES_USERNAME>,noexec
 ```
 {% endtab %}
 {% endtabs %}
@@ -439,40 +439,3 @@ Then enter your ID and password at poly.
 * QuickLook:
   * Nifti viewer
 * Tanguy's app to open Nifti files with FSLview
-
-### GRAMES Software <a id="grames_software"></a>
-
-For system admins only. Some software packages can be found on the following mount:
-
-```text
-smb://132.207.65.30/Tools
-```
-
-### Wish List <a id="wish_list"></a>
-
-If you would like to have a software installed, please list it here:
-
-| Software | Added |
-| :--- | :--- |
-| nmap | added by Julien Cohen-Adad |
-
-## **Troubleshooting**
-
-#### GRAMES login fails <a id="grames_login_fails"></a>
-
-If the **Poly-Grames** login doesn't work \(on joplin, rosenberg, bireli & abbey\) and you know your account is active, the following commands have to be run by a sudo user :
-
-```bash
-sudo systemctl restart ntp.service smbd.service nmbd.service sssd.serviced
-```
-
-#### SUDO for GRAMES username on linux <a id="sudo_for_grames_username_on_linux"></a>
-
-For another sudo account \(on **joplin**, **rosenberg**, **bireli** & **abbey**\) run:
-
-```bash
-usermod -aG sudo <POLYGRAMES_USERNAME>
-```
-
-
-
