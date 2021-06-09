@@ -6,6 +6,8 @@ description: >-
 
 # Deep Learning
 
+Here is the link to the original GDoc just in case: [GDoc](https://docs.google.com/document/d/1cjiLMqNFax_Gz2L9NME45SAW6tYcIqoruX08najHo_U/edit?usp=sharing)
+
 ## Deep Learning Resources
 
 * [Deep Learning State of the Art \(2019\) - MIT \(Youtube Video\)](https://www.youtube.com/watch?v=53YvP6gdD7U)
