@@ -76,72 +76,9 @@ echo -n "$PASS" | sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-s
 ./vpn.sh
 ```
 
-### Connect with Display
 
-{% tabs %}
-{% tab title="MacOS" %}
-1. Open Finder
-2. Click Cmd+K
-3. In the “Server Address”, type \(using the `STATION` you want\): `vnc://STATION.neuro.polymtl.ca`
-4. You can use your local/network account information or the [shared account credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg)
-{% endtab %}
 
-{% tab title="PC/Linux" %}
-1. Establish a VNC connection using [REAL VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/).
-2. In the “Server Address”, type \(using the `STATION` you want\): `vnc://STATION.neuro.polymtl.ca`
-3. You can use the password from [shared account credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg)
-
-Note that this activates a “screen sharing”, so your screen is visible on the station you are controlling.
-{% endtab %}
-{% endtabs %}
-
-### Connect with Display on linux stations \(bireli & ferguson\)
-
-VNC configuration on your account on **bireli** or **ferguson** \(recommended option for screen sharing\):
-
-1. Create configuration file under `~/.vnc/xstartup` with the following contents:
-
-```bash
- #!/bin/sh
- # Uncomment the following two lines for normal desktop:
- unset SESSION_MANAGER
- unset DBUS_SESSION_BUS_ADDRESS
- startxfce4 &
- [ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
- [ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
- xsetroot -solid grey
- vncconfig -iconic &
-```
-
-2. Give the right permissions to the file `~/.vnc/xstartup`
-
-```bash
- chmod +x ~/.vnc/xstartup
-```
-
-3. Start VNC server
-
-**Note:** To list all running vncservers, use: ****`ps -ef | grep vnc`
-
-```bash
- vncserver -geometry 1600x1200 :<PORT_NUMBER>
-```
-
-After starting the vncserver, use a VNC viewer \(Finder or VNC Viewer\) to connect to the screen sharing.
-
-{% hint style="info" %}
-**Note:**   
-- On the first start of the vncserver, you will have to set a personal password for your vnc session  
-- The resolution can be defined by changing the value of the `-geometry` flag.
-{% endhint %}
-
-4. Stop VNC server - mandatory at the end of your session
-
-```bash
- vncserver -kill :<PORT_NUMBER>
-```
-
-### Connect with SSH
+### SSH (command line)
 
 Once the VPN connection established, connect via ssh using the `STATION` you want:
 
@@ -178,6 +115,70 @@ Host *
 ControlMaster auto
 ControlPath ~/.ssh/%r@%h:%p
 ControlPersist 3s
+```
+
+### VNC (graphical interface)
+
+{% tabs %}
+{% tab title="macOS" %}
+1. Open Finder
+2. Click Cmd+K
+3. In the “Server Address”, type \(using the `STATION` you want\): `vnc://STATION.neuro.polymtl.ca`
+4. You can use your local/network account information or the [shared account credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg)
+{% endtab %}
+
+{% tab title="PC/Linux" %}
+1. Establish a VNC connection using [vinaigre](https://wiki.gnome.org/Apps/Vinagre/).
+2. In the “Server Address”, type \(using the `STATION` you want\): `vnc://STATION.neuro.polymtl.ca`
+3. You can use the password from [shared account credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg)
+{% endtab %}
+{% endtabs %}
+
+#### Linux stations
+
+On Linux targets, a VNC server needs to be started manually before the above instructions will work.
+
+1. Create configuration file under `~/.vnc/xstartup` with the following contents:
+
+```bash
+ #!/bin/sh
+ # Uncomment the following two lines for normal desktop:
+ unset SESSION_MANAGER
+ unset DBUS_SESSION_BUS_ADDRESS
+ startxfce4 &
+ [ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
+ [ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
+ xsetroot -solid grey
+ vncconfig -iconic &
+```
+
+2. Give the right permissions to the file `~/.vnc/xstartup`
+
+```bash
+ chmod +x ~/.vnc/xstartup
+```
+
+3. Start VNC server
+
+
+```bash
+ vncserver -geometry 1600x1200 :<PORT_NUMBER>
+```
+
+**Note:** To list all running vncservers, use: ps -ef | grep vnc`
+
+After starting the vncserver, connect to it as above.
+
+{% hint style="info" %}
+**Note:**   
+- On the first start of the vncserver, you will have to set a personal password for your vnc session  
+- The resolution can be defined by changing the value of the `-geometry` flag.
+{% endhint %}
+
+4. Stop VNC server - mandatory at the end of your session
+
+```bash
+ vncserver -kill :<PORT_NUMBER>
 ```
 
 ## Data Servers
