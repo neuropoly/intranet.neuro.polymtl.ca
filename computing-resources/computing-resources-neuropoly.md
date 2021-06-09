@@ -32,12 +32,48 @@ Password: your\_polygrames\_password
 
 ## Connect to NeuroPoly Computers
 
-First, you need to connect to the VPN. To do so, follow [instructions](http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn) \(go to “UTILISATION DE SERVICE”\).
+### VPN
 
-For Linux you can use `openconnect` and then do:
+When working remotely from off-campus you need to use the [VPN](http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn).
+
+To connect to the VPN, you need to have an account with École Polytechnique, specifically with [CAS](https://cas5.polymtl.ca/cas/login).
+Students should already have this. Consultants and Research Associates will need to have an account created for them.
+
+Contact [alexandrufoias@gmail.com](mailto:alexandrufoias@gmail.com) to request VPN access be activated for your CAS account.
+When activated, [Gestion des Codes](https://codes.si.polymtl.ca/gestion/) will report "VPN_* = Actif".
+
+The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing `openconnect`:
+
+{% tabs %}
+{% tab title="MacOS" %}
+```
+brew install openconnect
+```
+{% endtab %}
+
+{% tab title="PC/Linux" %}
+```
+apt install openconnect
+```
+{% endtab %}
+{% endtabs %}
+
+and then calling it with this script:
 
 ```bash
-openconnect https://ssl.vpn.polymtl.ca --authgroup ... --user=... --verbose  --printcookie --dump-http-traffic
+#!/bin/bash
+# vpn.sh
+
+set -eo pipefail
+
+USER="<YOUR_CAS_USERNAME>"
+PASS="<YOUR_CAS_PASSWORD>"
+GROUP=PolySSL # or PolyInvites, depending on your account's status
+echo -n "$PASS" | sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-stdin ssl.vpn.polymtl.ca
+```
+
+```
+./vpn.sh
 ```
 
 ### Connect with Display
