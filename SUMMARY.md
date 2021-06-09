@@ -51,8 +51,9 @@
   * [Restricted Boltzmann Machines \(RBM\)](software-development/deep-learning/restricted-boltzmann-machines.md)
   * [Misc](software-development/deep-learning/misc.md)
 
-## Learning & Resources
+## Bibliography & Resources <a id="learning-and-resources"></a>
 
+* [Deep Learning](learning-and-resources/deep-learning.md)
 * [MRI](learning-and-resources/untitled.md)
 * [Academic Writing](learning-and-resources/academic-writing/README.md)
   * [EndNote](learning-and-resources/academic-writing/endnote.md)
