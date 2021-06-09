@@ -5,6 +5,11 @@
 ### **Videos**
 
 * [Videos: Paul Callaghan explaining NMR](http://www.magritek.com/support/videos/#01)
+* [Questions and Answers in MRI](https://mriquestions.com/index.html)
+* [MRI Online Course](https://www.imaios.com/fr/e-Cours/e-MRI)
+* [Spoiled-GRE: Image Contrast ](http://mriquestions.com/spoiled-gre-parameters.html)
+* [Link Between 2D Multislice and 3D MRI Sequences ](https://onlinelibrary.wiley.com/doi/pdf/10.1002/%28SICI%291522-2594%28199904%2941:4%3C824::AID-MRM23%3E3.0.CO;2-1)
+* [Introduction to MRI Physics \(YouTube Video\)](https://www.youtube.com/watch?v=Ok9ILIYzmaY)
 
 ### **Slides**
 
