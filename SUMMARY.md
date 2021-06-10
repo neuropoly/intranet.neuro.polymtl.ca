@@ -33,6 +33,7 @@
   * [Jekyll](software-development/misc/jekyll.md)
   * [Microsoft Word](software-development/misc/microsoft-word.md)
   * [Git & GitHub](software-development/misc/git-and-github.md)
+  * [Sketchup](software-development/misc/sketchup.md)
   * [XQuartz](software-development/misc/xquartz.md)
 * [Programming Languages](software-development/programming-languages/README.md)
   * [Bash/Shell](software-development/programming-languages/bash-shell/README.md)
