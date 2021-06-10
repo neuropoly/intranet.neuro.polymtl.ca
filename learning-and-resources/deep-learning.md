@@ -30,7 +30,7 @@ description: >-
 
 ## U-Net
 
-* [Original Paper](https://arxiv.org/pdf/1505.04597.pdf)
+* [arXiv: U-Net: Convolutional Networks for Biomedical Image Segmentation \(Original Paper\)](https://arxiv.org/pdf/1505.04597.pdf)
 * [Presentation from the Authors](https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/)
 * [Getting acquainted with U-NET architecture + some keras shortcuts](https://spark-in.me/post/unet-adventures-part-one-getting-acquainted-with-unet)
 * [Satellite Image Segmentation: a Workflow with U-Net](https://medium.com/vooban-ai/satellite-image-segmentation-a-workflow-with-u-net-7ff992b2a56e)
@@ -48,34 +48,34 @@ description: >-
 
 ## Feature-wise Linear Modulation \(FiLM\)
 
-* [https://arxiv.org/pdf/1709.07871.pdf](https://arxiv.org/pdf/1709.07871.pdf)
-  * [https://github.com/ethanjperez/film](https://github.com/ethanjperez/film) 
-  * [https://github.com/rosinality/film-pytorch](https://github.com/rosinality/film-pytorch)
-  * [https://github.com/pytorch/contrib/blob/master/torchcontrib/nn/functional.py](https://github.com/pytorch/contrib/blob/master/torchcontrib/nn/functional.py)
-  * [https://github.com/pytorch/contrib/blob/5b7961ab0368c4c61872e6fe96db581afb453f1e/torchcontrib/nn/modules/linear.py](https://github.com/pytorch/contrib/blob/5b7961ab0368c4c61872e6fe96db581afb453f1e/torchcontrib/nn/modules/linear.py) 
-* [https://distill.pub/2018/feature-wise-transformations/](https://distill.pub/2018/feature-wise-transformations/)
-* [https://arxiv.org/pdf/1802.01218.pdf](https://arxiv.org/pdf/1802.01218.pdf)
-  * [https://github.com/linjieyangsc/video\_seg](https://github.com/linjieyangsc/video_seg)
-* [https://arxiv.org/pdf/1903.09467.pdf](https://arxiv.org/pdf/1903.09467.pdf)
-* [https://arxiv.org/pdf/1808.04000.pdf](https://arxiv.org/pdf/1808.04000.pdf)
-* [https://openreview.net/pdf?id=S11Xr-3iM](https://openreview.net/pdf?id=S11Xr-3iM)
-* [https://github.com/ap229997/Neural-Toolbox PyTorch/blob/master/film\_layer.py](https://github.com/ap229997/Neural-Toolbox-PyTorch/blob/master/film_layer.py)
-* [https://arxiv.org/pdf/1907.11150.pdf](https://arxiv.org/pdf/1907.11150.pdf) 
+* [FiLM: Visual Reasoning with a General Conditioning Layer](https://arxiv.org/pdf/1709.07871.pdf)
+  * [GitHub: ethanjperez/film](https://github.com/ethanjperez/film)
+  * [GitHub: rosinality/film-pytorch](https://github.com/rosinality/film-pytorch)
+  * [GitHub: pytorch/contrib/torchcontrib/nn/functional.py](https://github.com/pytorch/contrib/blob/master/torchcontrib/nn/functional.py)
+  * [GitHub: pytorch/contrib/torchcontrib/nn/modules/linear.py](https://github.com/pytorch/contrib/blob/5b7961ab0368c4c61872e6fe96db581afb453f1e/torchcontrib/nn/modules/linear.py)
+* [Feature-wise transformations](https://distill.pub/2018/feature-wise-transformations/)
+* [Efficient Video Object Segmentation via Network Modulation](https://arxiv.org/pdf/1802.01218.pdf)
+  * [GitHub: linjieyangsc/video\_seg](https://github.com/linjieyangsc/video_seg)
+* [Disentangled representation learning in cardiac image analysis](https://arxiv.org/pdf/1903.09467.pdf)
+* [Language Guided Fashion Image Manipulation with Feature-wise Transformations\*](https://arxiv.org/pdf/1808.04000.pdf)
+* [Deep Multi-Class Segmentation Without Ground-Truth Labels](https://openreview.net/pdf?id=S11Xr-3iM)
+* [GitHub: ap229997/Neural-Toolbox-PyTorch/blob/master/film\_layer.py](https://github.com/ap229997/Neural-Toolbox-PyTorch/blob/master/film_layer.py)
+* [Hetero-Modal Variational Encoder-Decoder for Joint Modality Completion and Segmentation](https://arxiv.org/pdf/1907.11150.pdf)
 
 ## GANs
 
-* [https://skymind.ai/wiki/generative-adversarial-network-gan](https://skymind.ai/wiki/generative-adversarial-network-gan)
-* [https://arxiv.org/pdf/1406.2661.pdf](https://arxiv.org/pdf/1406.2661.pdf)
-* [https://towardsdatascience.com/understanding-generative-adversarial-networks-gans-cd6e4651a29](https://towardsdatascience.com/understanding-generative-adversarial-networks-gans-cd6e4651a29)
+* [A Beginner's Guide to Generative Adversarial Networks \(GANs\)](https://wiki.pathmind.com/generative-adversarial-network-gan)
+* [Generative Adversarial Nets](https://arxiv.org/pdf/1406.2661.pdf)
+* [Towards Data Science: Understanding GANs](https://towardsdatascience.com/understanding-generative-adversarial-networks-gans-cd6e4651a29)
 
 ### GANs for Synthetic Medical Data
 
-* [https://ieeexplore.ieee.org/document/8653423](https://ieeexplore.ieee.org/document/8653423) 
-* [https://arxiv.org/abs/1709.01872](https://arxiv.org/abs/1709.01872)
-* [https://arxiv.org/abs/1708.00129](https://arxiv.org/abs/1708.00129)
-* [https://link.springer.com/chapter/10.1007/978-3-030-00536-8\_1](https://link.springer.com/chapter/10.1007/978-3-030-00536-8_1)
+* [https://ieeexplore.ieee.org/document/8653423](https://ieeexplore.ieee.org/document/8653423)
+* [arXiv: Synthetic Medical Images from Dual Generative Adversarial Networks](https://arxiv.org/abs/1709.01872)
+* [arXiv: Deep Generative Adversarial Neural Networks for Realistic Prostate Lesion MRI Synthesis](https://arxiv.org/abs/1708.00129)
+* [arXiv: Medical Image Synthesis for Data Augmentation and Anonymization Using Generative Adversarial Networks](https://arxiv.org/abs/1807.10225)
 * [https://ieeexplore.ieee.org/abstract/document/8363576](https://ieeexplore.ieee.org/abstract/document/8363576)
-* [https://www.sciencedirect.com/science/article/pii/S0925231218310749](https://www.sciencedirect.com/science/article/pii/S0925231218310749)
+* [arXiv: GAN-based Synthetic Medical Image Augmentation for increased CNN Performance in Liver Lesion Classification](https://arxiv.org/pdf/1803.01229.pdf)
 * [https://link.springer.com/chapter/10.1007/978-3-319-66179-7\_48](https://link.springer.com/chapter/10.1007/978-3-319-66179-7_48)
 
 ## Few-shot Learning and Meta-Learning
@@ -90,55 +90,55 @@ description: >-
 
 ## **Domain Adaptation:**
 
-* [https://arxiv.org/pdf/1702.05374.pdf](https://arxiv.org/pdf/1702.05374.pdf) \(Domain Adaptation for Visual Applications: A Comprehensive Survey\)
-* [https://arxiv.org/pdf/1706.05208.pdf](https://arxiv.org/pdf/1706.05208.pdf) \(Self-ensembling for visual domain adaptation\)
-* [https://arxiv.org/pdf/1409.7495.pdf](https://arxiv.org/pdf/1409.7495.pdf) \(Unsupervised Domain Adaptation by Backpropagation → gradient reversal layer\)
+* [arXiv: Domain Adaptation for Visual Applications: A Comprehensive Survey](https://arxiv.org/pdf/1702.05374.pdf)
+* [arXiv: Self-ensembling for visual domain adaptation](https://arxiv.org/pdf/1706.05208.pdf)
+* [arXiv: Unsupervised Domain Adaptation by Backpropagation → gradient reversal layer](https://arxiv.org/pdf/1409.7495.pdf)
 * [Adversarial Discriminative Domain Adaptation](http://openaccess.thecvf.com/content_cvpr_2017/papers/Tzeng_Adversarial_Discriminative_Domain_CVPR_2017_paper.pdf%20)
-* [http://www.jmlr.org/papers/volume17/15-239/15-239.pdf](http://www.jmlr.org/papers/volume17/15-239/15-239.pdf) \(Domain-Adversarial Training of Neural Networks\)
-* [http://papers.nips.cc/paper/6360-learning-transferrable-representations-for-unsupervised-domain-adaptation.pdf](http://papers.nips.cc/paper/6360-learning-transferrable-representations-for-unsupervised-domain-adaptation.pdf) \(Learning Transferrable Representations for Unsupervised Domain Adaptation\)
-* [https://arxiv.org/pdf/1603.04779.pdf](https://arxiv.org/pdf/1603.04779.pdf) \(Revisiting Batch Normalization for Practical Domain Adaptation\)
-* [http://openaccess.thecvf.com/content\_cvpr\_2017/papers/Bousmalis\_Unsupervised\_Pixel-Level\_Domain\_CVPR\_2017\_paper.pdf](http://openaccess.thecvf.com/content_cvpr_2017/papers/Bousmalis_Unsupervised_Pixel-Level_Domain_CVPR_2017_paper.pdf) \(Unsupervised Pixel–Level Domain Adaptation with Generative Adversarial Networks\)
-* [https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8461682&tag=1](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8461682&tag=1) \(Adversarial Teacher-Student Learning for Unsupervised Domain Adaptation\)
-* [https://arxiv.org/pdf/1602.04889.pdf](https://arxiv.org/pdf/1602.04889.pdf) \(Unsupervised Domain Adaptation Using Approximate Label Matching\)
+* [JMLR: Domain-Adversarial Training of Neural Networks](http://www.jmlr.org/papers/volume17/15-239/15-239.pdf)
+* [Learning Transferrable Representations for Unsupervised Domain Adaptation](http://papers.nips.cc/paper/6360-learning-transferrable-representations-for-unsupervised-domain-adaptation.pdf)
+* [arXiv: Revisiting Batch Normalization for Practical Domain Adaptation](https://arxiv.org/pdf/1603.04779.pdf)
+* [Unsupervised Pixel–Level Domain Adaptation with Generative Adversarial Networks](http://openaccess.thecvf.com/content_cvpr_2017/papers/Bousmalis_Unsupervised_Pixel-Level_Domain_CVPR_2017_paper.pdf)
+* [Adversarial Teacher-Student Learning for Unsupervised Domain Adaptation](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8461682&tag=1)
+* [arXiv: Unsupervised Domain Adaptation Using Approximate Label Matching](https://arxiv.org/pdf/1602.04889.pdf)
 
 ### **Domain Adaptation for Medical Imaging:**
 
-* [https://arxiv.org/pdf/1809.10486.pdf](https://arxiv.org/pdf/1809.10486.pdf) \(nnU-Net: Self-adapting Framework for U-Net-Based Medical Image Segmentation\)
-* [https://www.sciencedirect.com/science/article/pii/S1053811919302034](https://www.sciencedirect.com/science/article/pii/S1053811919302034) \(Unsupervised domain adaptation for medical imaging segmentation with self-ensembling\)
-* [https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8363637](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8363637) \(Domain Adaptation for Biomedical Image Segmentation Using Adversarial Training\)
-* [https://link.springer.com/content/pdf/10.1007%2F978-3-319-59050-9\_47.pdf](https://link.springer.com/content/pdf/10.1007%2F978-3-319-59050-9_47.pdf) \(Unsupervised Domain Adaptation in Brain Lesion Segmentation with Adversarial Networks → Reference given in the Mila talk about domain adaptation in MRI\)
-* [https://arxiv.org/pdf/1807.04657.pdf](https://arxiv.org/pdf/1807.04657.pdf) \(DOC DE JULIEN\)
-* [http://jmai.amegroups.com/article/view/4659/html](http://jmai.amegroups.com/article/view/4659/html) \(DOC DE JULIEN\)
-* [https://books.google.ca/books?id=o3dvDwAAQBAJ&pg=PA14&lpg=PA14&dq=perone+cohen-adad+mean+teacher&source=bl&ots=nH6zParhLH&sig=ACfU3U146YZVC2bPVRhKjfwayHhJZgzkEA&hl=fr&sa=X&ved=2ahUKEwjrycXdutXhAhUBvVkKHRSqD38Q6AEwCnoECAgQAQ\#v=onepage&q=perone%20cohen-adad%20mean%20teacher&f=false](https://books.google.ca/books?id=o3dvDwAAQBAJ&pg=PA14&lpg=PA14&dq=perone+cohen-adad+mean+teacher&source=bl&ots=nH6zParhLH&sig=ACfU3U146YZVC2bPVRhKjfwayHhJZgzkEA&hl=fr&sa=X&ved=2ahUKEwjrycXdutXhAhUBvVkKHRSqD38Q6AEwCnoECAgQAQ#v=onepage&q=perone%20cohen-adad%20mean%20teacher&f=false) \(DOC DE JULIEN\)
-* [https://github.com/neuropoly/domainadaptation](https://github.com/neuropoly/domainadaptation) \(GITHUB DOMAIN ADAPTATION\)
+* [arXiv: nnU-Net: Self-adapting Framework for U-Net-Based Medical Image Segmentation](https://arxiv.org/pdf/1809.10486.pdf)
+* [Unsupervised domain adaptation for medical imaging segmentation with self-ensembling](https://www.sciencedirect.com/science/article/pii/S1053811919302034)
+* [Domain Adaptation for Biomedical Image Segmentation Using Adversarial Training](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8363637)
+* [Unsupervised Domain Adaptation in Brain Lesion Segmentation with Adversarial Networks](https://link.springer.com/content/pdf/10.1007%2F978-3-319-59050-9_47.pdf) \(Reference given in the Mila talk about domain adaptation in MRI\)
+* [arXiv: Deep semi-supervised segmentation with weight-averaged consistency targets](https://arxiv.org/pdf/1807.04657.pdf) \(auth: Julien Cohen-Adad\)
+* [Promises and limitations of deep learning for medical image segmentation](http://jmai.amegroups.com/article/view/4659/html) \(auth: Julien Cohen-Adad\)
+* [Google Books: Deep Learning in Medical Image Analysis and Multimodal Learning for Clinical Decision Support](https://books.google.ca/books?id=o3dvDwAAQBAJ&pg=PA14&lpg=PA14&dq=perone+cohen-adad+mean+teacher&source=bl&ots=nH6zParhLH&sig=ACfU3U146YZVC2bPVRhKjfwayHhJZgzkEA&hl=fr&sa=X&ved=2ahUKEwjrycXdutXhAhUBvVkKHRSqD38Q6AEwCnoECAgQAQ#v=onepage&q=perone%20cohen-adad%20mean%20teacher&f=false) \(auth: Julien Cohen-Adad\)
+* [GitHub: neuropoly/domainadaptation](https://github.com/neuropoly/domainadaptation)
 
 ## **Neural ODEs:**
 
-* [http://papers.nips.cc/paper/7892-neural-ordinary-differential-equations.pdf](http://papers.nips.cc/paper/7892-neural-ordinary-differential-equations.pdf)
-* [https://reader.elsevier.com/reader/sd/pii/S0021999117309014?token=73C63FA0F6BC4657747DBF5BA66DB7340CB0D2340C9C4460E5D3CE8FC3EE4B0A2FDF4E07AE758BA448FE80CEAD9F3D68](https://reader.elsevier.com/reader/sd/pii/S0021999117309014?token=73C63FA0F6BC4657747DBF5BA66DB7340CB0D2340C9C4460E5D3CE8FC3EE4B0A2FDF4E07AE758BA448FE80CEAD9F3D68)
-* [https://arxiv.org/pdf/1804.07010.pdf](https://arxiv.org/pdf/1804.07010.pdf)
-* [http://www.jmlr.org/papers/volume19/18-046/18-046.pdf](http://www.jmlr.org/papers/volume19/18-046/18-046.pdf)
+* [Neural Ordinary Differential Equations](http://papers.nips.cc/paper/7892-neural-ordinary-differential-equations.pdf)
+* [Hidden physics models: Machine learning of nonlinear partial differential equations](https://reader.elsevier.com/reader/sd/pii/S0021999117309014?token=73C63FA0F6BC4657747DBF5BA66DB7340CB0D2340C9C4460E5D3CE8FC3EE4B0A2FDF4E07AE758BA448FE80CEAD9F3D68)
+* [Forward-Backward Stochastic Neural Networks: Deep Learning of High-dimensional Partial Differential Equations](https://arxiv.org/pdf/1804.07010.pdf)
+* [JMLR: Deep Hidden Physics Models: Deep Learning of Nonlinear Partial Differential Equations](http://www.jmlr.org/papers/volume19/18-046/18-046.pdf)
 
 ## **Anatomical Priors:**
 
 * [https://ieeexplore.ieee.org/abstract/document/8363652](https://ieeexplore.ieee.org/abstract/document/8363652)
-* [https://arxiv.org/pdf/1909.08330.pdf](https://arxiv.org/pdf/1909.08330.pdf)
+* [arXiv: Probabilistic Atlases to Enforce Topological Constraints](https://arxiv.org/pdf/1909.08330.pdf)
 
 ## **Physics Informed Deep Learning:**
 
-* [**Raissi et al, Hidden physics models: Machine learning of nonlinear partial differential equations.**](https://reader.elsevier.com/reader/sd/pii/S0021999117309014?token=73C63FA0F6BC4657747DBF5BA66DB7340CB0D2340C9C4460E5D3CE8FC3EE4B0A2FDF4E07AE758BA448FE80CEAD9F3D68)
+* [arXiv: Hidden Physics Models: Machine Learning of Nonlinear Partial Differential Equations](https://arxiv.org/pdf/1708.00588.pdf)
 * [Yaman 2019](https://ieeexplore.ieee.org/document/8936238)
-* [Jog et al, PSACNN: Pulse sequence adaptive fast whole brain segmentation. Neuroimage 2019](https://www.ncbi.nlm.nih.gov/pubmed/31129303)
-* [Borges et al. Physics-Informed Brain MRI Segmentation. SASHIMI 2019. ](https://paperpile.com/app/p/b89e426c-aaff-080f-b8db-c3974d278584)
-* [https://arxiv.org/pdf/1711.10561.pdf](https://arxiv.org/pdf/1711.10561.pdf)
-* [https://arxiv.org/pdf/1711.10566.pdf](https://arxiv.org/pdf/1711.10566.pdf)
-* [https://arxiv.org/pdf/1808.04327.pdf](https://arxiv.org/pdf/1808.04327.pdf)
-* [https://www.aaai.org/Conferences/AAAI/2017/PreliminaryPapers/12-Stewart-14967.pdf](https://www.aaai.org/Conferences/AAAI/2017/PreliminaryPapers/12-Stewart-14967.pdf)
-* AUTOSEQ: [https://paperpile.com/app/p/6d2782e1-2c9d-0c45-998a-43c25e6d6328](https://paperpile.com/app/p/6d2782e1-2c9d-0c45-998a-43c25e6d6328) 
-* DRONE \(Zhu/Rosen\): [https://arxiv.org/pdf/1710.05267.pdf](https://arxiv.org/pdf/1710.05267.pdf)
-* MRI synthesis: [https://www2.eecs.berkeley.edu/Pubs/TechRpts/2019/EECS-2019-126.pdf](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2019/EECS-2019-126.pdf)
-* [https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.13756](https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.13756) 
-* [https://onlinelibrary.wiley.com/doi/abs/10.1002/mrm.27969](https://onlinelibrary.wiley.com/doi/abs/10.1002/mrm.27969) 
+* [PubMed: PSACNN: Pulse sequence adaptive fast whole brain segmentation](https://pubmed.ncbi.nlm.nih.gov/31129303/)
+* [Paperpile: Physics-Informed Brain MRI Segmentation](https://paperpile.com/shared/93BsPD)
+* [arXiv: Physics Informed Deep Learning \(Part I\): Data-driven Solutions of Nonlinear Partial Differential Equations](https://arxiv.org/pdf/1711.10561.pdf)
+* [arXiv: Physics Informed Deep Learning \(Part II\): Data-driven Discovery of Nonlinear Partial Differential Equations](https://arxiv.org/pdf/1711.10566.pdf)
+* [arXiv: Hidden Fluid Mechanics: A Navier-Stokes Informed Deep Learning Framework for Assimilating Flow Visualization Data](https://arxiv.org/pdf/1808.04327.pdf)
+* [Label-Free Supervision of Neural Networks with Physics and Domain Knowledge](https://www.aaai.org/Conferences/AAAI/2017/PreliminaryPapers/12-Stewart-14967.pdf)
+* [AUTOmated pulse SEQuence generation \(AUTOSEQ\) and neural network decoding for fast quantitative MR parameter measurement using continuous and simultaneous RF transmit and receive](https://paperpile.com/app/p/6d2782e1-2c9d-0c45-998a-43c25e6d6328)
+* [arXiv: MR fingerprinting Deep RecOnstruction NEtwork \(DRONE\)](https://arxiv.org/pdf/1710.05267.pdf)
+* [Complex-valued Deep Learning with Applications to Magnetic Resonance Image Synthesis](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2019/EECS-2019-126.pdf)
+* [Technical Note: Simultaneous segmentation and relaxometry for MRI through multitask learning](https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.13756)
+* [Knee menisci segmentation and relaxometry of 3D ultrashort echo time cones MR imaging using attention U-Net with transfer learning](https://onlinelibrary.wiley.com/doi/abs/10.1002/mrm.27969)
 * [CIS522 UPenn Course: Physics Informed Deep learning](https://paperpile.com/shared/Ahan9R)
 
 ## **MixUp**
@@ -150,22 +150,22 @@ description: >-
 
 ## **Uncertainty**
 
-* Bayesian segmentation using Monte Carlo sampling: [https://www.ncbi.nlm.nih.gov/pubmed/23773521](https://www.ncbi.nlm.nih.gov/pubmed/23773521) 
-* [https://link.springer.com/chapter/10.1007/978-3-030-32251-9\_59](https://link.springer.com/chapter/10.1007/978-3-030-32251-9_59) 
-* [https://link.springer.com/chapter/10.1007/978-3-030-33642-4\_6](https://link.springer.com/chapter/10.1007/978-3-030-33642-4_6) 
+* [PubMed: Improved inference in Bayesian segmentation using Monte Carlo sampling: application to hippocampal subfield volumetry](https://www.ncbi.nlm.nih.gov/pubmed/23773521)
+* [Improving Uncertainty Estimation in Convolutional Neural Networks Using Inter-rater Agreement](https://link.springer.com/chapter/10.1007/978-3-030-32251-9_59)
+* [Exploring the Relationship Between Segmentation Uncertainty, Segmentation Performance and Inter-observer Variability with Probabilistic Networks](https://link.springer.com/chapter/10.1007/978-3-030-33642-4_6)
 
 ## **Inter-rater**
 
-* Shwartzman et al. 2019: [https://arxiv.org/abs/1906.11872](https://arxiv.org/abs/1906.11872)
-* Jungo et al. 2018: [https://arxiv.org/abs/1806.02562](https://arxiv.org/abs/1806.02562) 
-* Carass et al 2020: [https://www.nature.com/articles/s41598-020-64803-w](https://www.nature.com/articles/s41598-020-64803-w) 
-* Jensen et al 2019: [https://link.springer.com/chapter/10.1007/978-3-030-32251-9\_59](https://link.springer.com/chapter/10.1007/978-3-030-32251-9_59) 
+* [arXiv: The Worrisome Impact of an Inter-rater Bias on Neural Network Training](https://arxiv.org/abs/1906.11872)
+* [arXiv: On the Effect of Inter-observer Variability for a Reliable Estimation of Uncertainty of Medical Image Segmentation](https://arxiv.org/pdf/1806.02562.pdf)
+* [Evaluating White Matter Lesion Segmentations with Refined Sørensen-Dice Analysis](https://www.nature.com/articles/s41598-020-64803-w)
+* [Improving Uncertainty Estimation in Convolutional Neural Networks Using Inter-rater Agreement](https://link.springer.com/chapter/10.1007/978-3-030-32251-9_59)
 
 ## **Out of Distribution \(OOD\)**
 
-* [https://openreview.net/forum?id=1ABDN92t49](https://openreview.net/forum?id=1ABDN92t49)
-* [https://arxiv.org/abs/2004.06569](https://arxiv.org/abs/2004.06569)
-* [https://arxiv.org/abs/2005.06831](https://arxiv.org/abs/2005.06831)
+* [Which MOoD Methods work? A Benchmark of Medical Out of Distribution Detection](https://openreview.net/forum?id=1ABDN92t49)
+* [Improving Calibration and Out-of-Distribution Detection in Medical Image Segmentation with Convolutional Neural Networks](https://arxiv.org/abs/2004.06569)
+* [Detection and Retrieval of Out-of-Distribution Objects in Semantic Segmentation](https://arxiv.org/abs/2005.06831)
 
 ## Longitudinal MS Lesion Segmentation
 
