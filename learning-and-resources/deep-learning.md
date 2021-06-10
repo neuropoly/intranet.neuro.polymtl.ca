@@ -12,10 +12,6 @@ Here is the link to the original GDoc just in case: [GDoc](https://docs.google.c
 
 * [Deep Learning State of the Art \(2019\) - MIT \(Youtube Video\)](https://www.youtube.com/watch?v=53YvP6gdD7U)
 
-## Spinal Cord Toolbox \(SCT\)
-
-* [Course Materials](https://osf.io/gvs6f/)
-
 ## Deep Learning Applied to Medical Analysis
 
 * [A survey on deep learning in medical image analysis](https://www.sciencedirect.com/science/article/abs/pii/S1361841517301135)
