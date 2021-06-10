@@ -1,4 +1,4 @@
-# Image Processing Software
+# Image Processing
 
 ## 
 
