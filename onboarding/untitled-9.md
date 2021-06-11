@@ -25,9 +25,9 @@
       </td>
     </tr>
     <tr>
-      <td style="text-align:left"><b>FILM</b>
+      <td style="text-align:left"><b>FiLM</b>
       </td>
-      <td style="text-align:left">FILMedUnet</td>
+      <td style="text-align:left">FiLMedUnet</td>
       <td style="text-align:left"><a href="https://arxiv.org/pdf/1709.07871.pdf">FiLM: Visual Reasoning with a General Conditioning Layer</a>
       </td>
     </tr>
