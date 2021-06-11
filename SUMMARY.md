@@ -63,12 +63,6 @@
 * [MRI](learning-and-resources/untitled.md)
 * [Histology](learning-and-resources/histology.md)
 
-## Practical Information
-
-* [VISAs and Work Permits](practical-information/visa.md)
-* [Moving to Montreal](practical-information/moving-to-montreal.md)
-* [Scholarships & Bursaries](practical-information/scholarships-and-bursaries.md)
-
 ## Computing Resources
 
 * [Computing Resources: NeuroPoly](computing-resources/computing-resources-neuropoly/README.md)
@@ -102,4 +96,10 @@
 * [Purchasing Hardware & Lab Supplies](purchasing-hardware-and-lab-supplies.md)
 * [Computer Setup](computer-setup.md)
 * [Ideas for Cool Projects](ideas-for-cool-projects.md)
+
+## Practical Information
+
+* [VISAs and Work Permits](practical-information/visa.md)
+* [Moving to Montreal](practical-information/moving-to-montreal.md)
+* [Scholarships & Bursaries](practical-information/scholarships-and-bursaries.md)
 
