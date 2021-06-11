@@ -38,7 +38,7 @@ When working remotely from off-campus you need to use the [VPN](http://www.polym
 
 To connect to the VPN, you need to have an account with École Polytechnique, specifically with [CAS](https://cas5.polymtl.ca/cas/login). Students should already have this. Consultants and Research Associates will need to have an account created for them.
 
-Contact [alexandrufoias@gmail.com](mailto:alexandrufoias@gmail.com) to request VPN access be activated for your CAS account. When activated, [Gestion des Codes](https://codes.si.polymtl.ca/gestion/) will report "VPN\_\* = Actif".
+Contact Alexandru Foias to request VPN access be activated for your CAS account. When activated, [Gestion des Codes](https://codes.si.polymtl.ca/gestion/) will report "VPN\_\* = Actif".
 
 The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing `openconnect`:
 
