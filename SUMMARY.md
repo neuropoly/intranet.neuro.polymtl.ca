@@ -32,6 +32,7 @@
   * [Dropbox](software-development/misc/dropbox.md)
   * [Jekyll](software-development/misc/jekyll.md)
   * [Microsoft Word](software-development/misc/microsoft-word.md)
+  * [OpenNeuro](software-development/misc/openneuro.md)
   * [Git & GitHub](software-development/misc/git-and-github.md)
   * [Sketchup](software-development/misc/sketchup.md)
   * [XQuartz](software-development/misc/xquartz.md)
