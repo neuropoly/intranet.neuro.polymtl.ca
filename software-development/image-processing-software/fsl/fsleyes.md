@@ -9,7 +9,7 @@
 The FSLeyes documentation provides two different install options:
 
 1. [Install as part of FSL](https://open.win.ox.ac.uk/pages/fsl/fsleyes/fsleyes/userdoc/install.html#install-as-part-of-fsl-recommended)
-2. [Install through `conda-forge`](https://open.win.ox.ac.uk/pages/fsl/fsleyes/fsleyes/userdoc/install.html#install-from-conda-forge-recommended)\`\`
+2. [Install through conda-forge](https://open.win.ox.ac.uk/pages/fsl/fsleyes/fsleyes/userdoc/install.html#install-from-conda-forge-recommended)
 
 Requirements when running from OSX: XQuartz
 
