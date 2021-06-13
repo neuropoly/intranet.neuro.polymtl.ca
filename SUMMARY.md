@@ -52,6 +52,7 @@
     * [FSLeyes](software-development/image-processing-software/fsl/fsleyes.md)
   * [ITK-SNAP](software-development/image-processing-software/itk-snap.md)
   * [NIfTI](software-development/image-processing-software/nifti.md)
+  * [OpenNeuro CLI](software-development/image-processing-software/openneuro-cli.md)
   * [OsiriX](software-development/image-processing-software/osirix.md)
 * [Deep Learning](software-development/deep-learning/README.md)
   * [CUDA](software-development/deep-learning/cuda.md)
