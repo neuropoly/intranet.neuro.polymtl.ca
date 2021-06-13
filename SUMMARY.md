@@ -64,8 +64,6 @@
 
 ## 📚 Bibliography & Resources <a id="learning-and-resources"></a>
 
-* [Academic Writing](learning-and-resources/academic-writing/README.md)
-  * [EndNote](learning-and-resources/academic-writing/endnote.md)
 * [Shared Paperpile folder](learning-and-resources/shared-paperpile-folder.md)
 * [Deep Learning](learning-and-resources/deep-learning.md)
 * [MRI](learning-and-resources/untitled.md)
@@ -94,12 +92,17 @@
   * [FAQ](mri-coils/coils/faq.md)
   * [PCB Manufacturing](mri-coils/coils/pcb-manufacturing.md)
 
+## Writing & Publishing
+
+* [Publishing Articles](writing-and-publishing/publishing-articles.md)
+* [Academic Writing](writing-and-publishing/academic-writing/README.md)
+  * [EndNote](writing-and-publishing/academic-writing/endnote.md)
+
 ---
 
 * [Dropbox/Google Drive](dropbox-google-drive.md)
 * [Courses](courses.md)
 * [Conferences](conferences.md)
-* [Publishing Articles](publishing-articles.md)
 * [Printer](printer.md)
 * [Purchasing Hardware & Lab Supplies](purchasing-hardware-and-lab-supplies.md)
 * [Computer Setup](computer-setup.md)

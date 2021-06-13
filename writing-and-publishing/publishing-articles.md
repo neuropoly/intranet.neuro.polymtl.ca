@@ -133,7 +133,7 @@
 
 ## Organizing Folders
 
-![](.gitbook/assets/phd101212s.gif)
+![](../.gitbook/assets/phd101212s.gif)
 
 Recommended file structure:
 
