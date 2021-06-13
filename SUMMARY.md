@@ -79,6 +79,7 @@
   * [GPUs](computing-resources/computing-resources-neuropoly/gpus.md)
 * [Computing Resources: Compute Canada](computing-resources/compute-canada.md)
 * [Clusters at CRIUGM](computing-resources/clusters-at-criugm.md)
+* [Printer](computing-resources/printer.md)
 
 ## MRI / Coils
 
@@ -103,7 +104,6 @@
 * [Dropbox/Google Drive](dropbox-google-drive.md)
 * [Courses](courses.md)
 * [Conferences](conferences.md)
-* [Printer](printer.md)
 * [Purchasing Hardware & Lab Supplies](purchasing-hardware-and-lab-supplies.md)
 * [Computer Setup](computer-setup.md)
 * [Ideas for Cool Projects](ideas-for-cool-projects.md)
