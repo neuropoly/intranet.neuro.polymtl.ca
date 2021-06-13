@@ -47,6 +47,7 @@
 * [Image Processing](software-development/image-processing-software/README.md)
   * [Advanced Normalization Tools \(ANTs\)](software-development/image-processing-software/advanced-normalization-tools-ants.md)
   * [Anima](software-development/image-processing-software/anima.md)
+  * [ITK-SNAP](software-development/image-processing-software/itk-snap.md)
   * [FSL](software-development/image-processing-software/fsl/README.md)
     * [FSLeyes](software-development/image-processing-software/fsl/fsleyes.md)
   * [NIfTI](software-development/image-processing-software/nifti.md)
