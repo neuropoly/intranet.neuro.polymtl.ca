@@ -47,6 +47,7 @@
 * [Image Processing](software-development/image-processing-software/README.md)
   * [Advanced Normalization Tools \(ANTs\)](software-development/image-processing-software/advanced-normalization-tools-ants.md)
   * [Anima](software-development/image-processing-software/anima.md)
+  * [Diffusion Simulator](software-development/image-processing-software/diffusion-simulator.md)
   * [FreeSurfer](software-development/image-processing-software/freesurfer.md)
   * [FSL](software-development/image-processing-software/fsl/README.md)
     * [FSLeyes](software-development/image-processing-software/fsl/fsleyes.md)
