@@ -3,7 +3,7 @@
 ### Computers <a id="computers"></a>
 
 * ​[Computer facilities - Neuropoly](https://www.neuro.polymtl.ca/internal_resources/list_of_computers)
-  * See [documentation to use CPU/GPU clusters](https://docs.google.com/document/u/0/d/1X--A2kql4GypfI6fNFIOYA_b6uQdeu2_Kue7n8KkTOU/edit).
+  * [Documentation on how to use CPU/GPU clusters](https://docs.google.com/document/u/0/d/1X--A2kql4GypfI6fNFIOYA_b6uQdeu2_Kue7n8KkTOU/edit).
 * ​[Computer facilities - Compute Canada](https://www.neuro.polymtl.ca/internal_resources/list_of_computers/compute_canada)​
 
 ### Data <a id="data"></a>

@@ -1,6 +1,6 @@
 # Accounts
 
-To request an account for most of these services, ask on Slack \#accounts and tag @alexfoias. He will either create or direct you to where to get the account created.
+To request an account for most of these services, ask on Slack \#accounts and tag @alexfoias. He will either create one or direct you to where to get the account created.
 
 ## Accounts Overview
 
@@ -38,7 +38,7 @@ To request an account for most of these services, ask on Slack \#accounts and ta
       <td style="text-align:left"><b>CAS (Central Authentication Service)</b>
       </td>
       <td style="text-align:left">
-        <p>Usually this will be provisioned at the same time and with the same username
+        <p>Usually, this will be provisioned at the same time and with the same username
           and password as GRAMES, but they are not otherwise linked.</p>
         <p>To access the VPN (<a href="http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn">http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn</a>)</p>
         <p>To access the HR/payroll/tax system at <a href="https://safirh.polymtl.ca/">https://safirh.polymtl.ca/</a>.</p>
@@ -71,7 +71,7 @@ To request an account for most of these services, ask on Slack \#accounts and ta
           <br
           />
         </p>
-        <p>And <a href="https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/service-informatique-web/documentLibrary/Courrier_electronique/Zimbra-ActiveSync.pdf?a=true&amp;guest=true">here</a> is
+        <p>And <a href="https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/service-informatique-web/documentLibrary/Courrier_electronique/Zimbra-ActiveSync.pdf?a=true&amp;guest=true">here</a> are
           the IT department&#x2019;s instructions on configuring your email client.
           <br
           />To change your password: <a href="https://codes.si.polymtl.ca/gestion/index.php">https://codes.si.polymtl.ca/gestion/index.php</a>&#x200B;</p>
@@ -101,7 +101,7 @@ To request an account for most of these services, ask on Slack \#accounts and ta
         <p>To access internal datasets on git+ssh://data.neuro.polymtl.ca.</p>
         <p>&#x200B;<a href="https://github.com/neuropoly/data-management/blob/master/internal-server.md">https://github.com/neuropoly/data-management/blob/master/internal-server.md</a>
         </p>
-        <p>Access is by ssh key, not by password.</p>
+        <p>Access is by ssh key, not by a password.</p>
       </td>
     </tr>
     <tr>
@@ -163,7 +163,7 @@ To facilitate assignment and addition to repositories, please add your Github ac
 
 ## Slack
 
-[https://neuropoly.slack.com](https://neuropoly.slack.com), the daily chat app and way to connect with the team. You will get an invite to your email address to get you started.
+[https://neuropoly.slack.com](https://neuropoly.slack.com), the daily chat app, and way to connect with the team. You will get an invite to your email address to get you started. A quick-start guide to Slack can be found [here](https://slack.com/intl/en-ca/help/articles/360059928654-How-to-use-Slack--your-quick-start-guide).
 
 You should start out in
 

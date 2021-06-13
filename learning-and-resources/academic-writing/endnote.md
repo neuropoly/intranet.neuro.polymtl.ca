@@ -8,7 +8,7 @@ Note: only need to do this once.
 
 1. Open EndNote
 2. Copy the shared database from [here](https://dl.dropboxusercontent.com/u/20592661/neuropoly/endnote/NeuroPoly.enlp.zip) to your home folder \(e.g., under Document/endnote/\).
-3. Open the copied databased under EndNote.
+3. Open the copied database under EndNote.
 
 ## Using EndNote <a id="using_endnote"></a>
 
