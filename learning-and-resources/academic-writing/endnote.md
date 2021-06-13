@@ -14,20 +14,20 @@ Note: only need to do this once.
 
 ### How to import a new reference <a id="how_to_import_a_new_reference"></a>
 
-WARNING!! before doing that, make sure the reference is not already existing, to avoid duplicates \(really really bad!!\).
+WARNING!! Before doing that, please ensure that the reference doesn't already exist, to avoid duplicates \(really really bad!!\).
 
 From EndNote public library:
 
-1. In Endnote, click “online search”
-2. Select a database \(PubMed recommended\)
+1. In EndNote, click “online search”
+2. Select a database \([PubMed](https://pubmed.ncbi.nlm.nih.gov/) recommended\)
 3. Type keywords, then search
-4. Right click on the reference, then select “copy reference to NeuroPoly”
+4. Right-click on the reference, then select “copy reference to NeuroPoly”
 
 From Papers2:
 
-1. in Papers, select the reference \(it should have been “matched” already\)
+1. In Papers, select the reference \(it should have been “matched” already\)
 2. press cmd+o, then save somewhere
-3. in endnote, press cmd+i, then select the file.
+3. In EndNote, press cmd+i, then select the file
 
 From BibTex:
 
@@ -50,7 +50,7 @@ I have made/obtained a collection of styles for neuroimaging journals [here](htt
 
 ## Bugs <a id="bugs"></a>
 
-### Citation in footnote like don't appear like in the text <a id="citation_in_footnote_like_don_t_appear_like_in_the_text"></a>
+### Citation in a footnote like don't appear like in the text <a id="citation_in_footnote_like_don_t_appear_like_in_the_text"></a>
 
 To change this so that citations in footnotes have the same format as references in the bibliography, in EndNote click on Edit, Output Styles, Edit “\[your style\]”, Footnotes Templates. Change Format citations in footnotes from Same as In-Text Citations to Same as Bibliography.
 
@@ -62,5 +62,5 @@ Possible solutions:
 
 ### EndNote is slow <a id="endnote_is_slow"></a>
 
-Try to “compress the library” as enx, then close EndNote, move your old library in an “old” folder \(just in case…\), then import the new compressed library. EndNote will reindex all entries, and it should be faster afterwards. 
+Try to “compress the library” as enx, then close EndNote, move your old library in an “old” folder \(just in case…\), then import the new compressed library. EndNote will reindex all entries, and it should then be faster. 
 

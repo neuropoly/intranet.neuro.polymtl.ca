@@ -152,7 +152,7 @@ description: >-
 
 * [PubMed: Improved inference in Bayesian segmentation using Monte Carlo sampling: application to hippocampal subfield volumetry](https://www.ncbi.nlm.nih.gov/pubmed/23773521)
 * [Improving Uncertainty Estimation in Convolutional Neural Networks Using Inter-rater Agreement](https://link.springer.com/chapter/10.1007/978-3-030-32251-9_59)
-* [Exploring the Relationship Between Segmentation Uncertainty, Segmentation Performance and Inter-observer Variability with Probabilistic Networks](https://link.springer.com/chapter/10.1007/978-3-030-33642-4_6)
+* [Exploring the Relationship Between Segmentation Uncertainty, Segmentation Performance and Inter-observer Variability with Probabilistic Networks](https://link.springer.com/chapter/10.1007/978-3-030-33642-4_6) 
 
 ## **Inter-rater**
 
