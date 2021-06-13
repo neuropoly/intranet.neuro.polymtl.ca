@@ -46,6 +46,7 @@
     * [Using XCode](software-development/programming-languages/c++/using-xcode.md)
 * [Image Processing](software-development/image-processing-software/README.md)
   * [Advanced Normalization Tools \(ANTs\)](software-development/image-processing-software/advanced-normalization-tools-ants.md)
+  * [Anima](software-development/image-processing-software/anima.md)
   * [FSLeyes](software-development/image-processing-software/fsleyes.md)
   * [NIfTI](software-development/image-processing-software/nifti.md)
 * [Deep Learning](software-development/deep-learning/README.md)
