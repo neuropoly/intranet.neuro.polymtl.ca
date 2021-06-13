@@ -67,6 +67,7 @@ description: >-
 * [A Beginner's Guide to Generative Adversarial Networks \(GANs\)](https://wiki.pathmind.com/generative-adversarial-network-gan)
 * [Generative Adversarial Nets](https://arxiv.org/pdf/1406.2661.pdf)
 * [Towards Data Science: Understanding GANs](https://towardsdatascience.com/understanding-generative-adversarial-networks-gans-cd6e4651a29)
+* [Improved Techniques for Training GANs](https://arxiv.org/pdf/1606.03498.pdf)
 
 ### GANs for Synthetic Medical Data
 
@@ -153,6 +154,9 @@ description: >-
 * [PubMed: Improved inference in Bayesian segmentation using Monte Carlo sampling: application to hippocampal subfield volumetry](https://www.ncbi.nlm.nih.gov/pubmed/23773521)
 * [Improving Uncertainty Estimation in Convolutional Neural Networks Using Inter-rater Agreement](https://link.springer.com/chapter/10.1007/978-3-030-32251-9_59)
 * [Exploring the Relationship Between Segmentation Uncertainty, Segmentation Performance and Inter-observer Variability with Probabilistic Networks](https://link.springer.com/chapter/10.1007/978-3-030-33642-4_6) 
+* [Dropout as a Bayesian Approximation](https://arxiv.org/pdf/1506.02142.pdf) - For Epistemic Uncertainty
+* [What Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision?](https://arxiv.org/pdf/1703.04977.pdf) - Unification of  Aleatoric and Epistemic Uncertainty
+* [What My Deep Model Doesn't Know...](http://www.cs.ox.ac.uk/people/yarin.gal/website/blog_3d801aa532c1ce.html)
 
 ## **Inter-rater**
 
