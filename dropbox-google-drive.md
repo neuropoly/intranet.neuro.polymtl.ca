@@ -82,7 +82,7 @@ This is the organization of each student's folder with Nikola and/or Julien. You
 **GENERAL RULES:**
 
 * NEVER USE SPACE OR ACCENTS IN FILE NAMES! \(Unix-unfriendly\).
-* Date format should always be YYYYMMDD \(or YYYY-MM-DD\). See this: [https://xkcd.com/1179/](https://xkcd.com/1179/)
+* Date format should always be `YYYYMMDD` \(or `YYYY-MM-DD`\). See this: [https://xkcd.com/1179/](https://xkcd.com/1179/)
 
 ![](.gitbook/assets/psa.png)
 
