@@ -136,30 +136,30 @@ To facilitate assignment and addition to repositories, please add your Github ac
 
 | Name \(sorted **FIRST NAME** alphabetically\) | Github Account |
 | :--- | :--- |
-| Ainsleigh Hill | ahill187 |
-| Alexandre D'Astous | po09i |
-| Alexandru Foias | alexfoias |
-| Andreanne Lemay | andreanne-lemay |
+| Ainsleigh Hill | [@ahill187](https://github.com/ahill187) |
+| Alexandre D'Astous | [@po09i](https://github.com/po09i) |
+| Alexandru Foias | [@alexfoias](https://github.com/alexfoias) |
+| Andreanne Lemay | [@andreanne-lemay](https://github.com/andreanne-lemay) |
 | Armand Collin | hermancollin |
-| Charley Gros | charleygros |
-| Emmanuel Edward Ntiri | entiri |
+| Charley Gros | [@charleygros](https://github.com/charleygros) |
+| Emmanuel Edward Ntiri | [@entiri](https://github.com/entiri) |
 | Etienne Bergeron | etiennebergeron |
-| Eva Alonso Ortiz | evaalonsoortiz |
-| Gaspard Cereza | gaspardcereza |
-| Hanna Ma | cakester |
-| Julien Cohen-Adad | jcohenadad |
-| Kevin Bérard | KevinBerard |
-| Konstantinos Nasiotis | mpompolas |
-| Marie-Hélène Bourget | mariehbourget |
-| Mathieu Boudreau | mathieuboudreau |
-| Naga Karthik | naga-karthik |
-| Paul Bautin | PaulBautin |
-| Ryan Topfer | rtopfer |
-| Sandrine Bédard | sandrinebedard |
-| Uzay Macar | uzaymacar |
-| Vasudev Sharma | vs74 |
-| Yang Ding | dyt811 |
-| Yuan Wang | konantian |
+| Eva Alonso Ortiz | [@evaalonsoortiz](https://github.com/evaalonsoortiz) |
+| Gaspard Cereza | [@gaspardcereza](https://github.com/gaspardcereza) |
+| Hanna Ma | [@cakester](https://github.com/cakester) |
+| Julien Cohen-Adad | [@jcohenadad](https://github.com/jcohenadad) |
+| Kevin Bérard | [@KevinBerard](https://github.com/KevinBerard) |
+| Konstantinos Nasiotis | [@mpompolas](https://github.com/mpompolas) |
+| Marie-Hélène Bourget | [@mariehbourget](https://github.com/mariehbourget) |
+| Mathieu Boudreau | [@mathieuboudreau](https://github.com/mathieuboudreau) |
+| Naga Karthik | [@naga-karthik](https://github.com/naga-karthik) |
+| Paul Bautin | [@PaulBautin](https://github.com/PaulBautin) |
+| Ryan Topfer | [@rtopfer](https://github.com/rtopfer) |
+| Sandrine Bédard | [@sandrinebedard](https://github.com/sandrinebedard) |
+| Uzay Macar | [@uzaymacar](https://github.com/uzaymacar) |
+| Vasudev Sharma | [@vs74](https://github.com/vasudev-sharma) |
+| Yang Ding | [@dyt811](https://github.com/dyt811) |
+| Yuan Wang | [@konantian](https://github.com/konantian) |
 
 ## Slack
 
