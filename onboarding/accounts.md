@@ -143,7 +143,7 @@ To facilitate assignment and addition to repositories, please add your Github ac
 | Armand Collin | hermancollin |
 | Charley Gros | [@charleygros](https://github.com/charleygros) |
 | Emmanuel Edward Ntiri | [@entiri](https://github.com/entiri) |
-| Etienne Bergeron | etiennebergeron |
+| Etienne Bergeron | [@etiennebergeron](https://github.com/etiennebergeron) |
 | Eva Alonso Ortiz | [@evaalonsoortiz](https://github.com/evaalonsoortiz) |
 | Gaspard Cereza | [@gaspardcereza](https://github.com/gaspardcereza) |
 | Hanna Ma | [@cakester](https://github.com/cakester) |
