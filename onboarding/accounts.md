@@ -142,6 +142,7 @@ To facilitate assignment and addition to repositories, please add your Github ac
 | Andreanne Lemay | [@andreanne-lemay](https://github.com/andreanne-lemay) |
 | Armand Collin | hermancollin |
 | Charley Gros | [@charleygros](https://github.com/charleygros) |
+| Daniel Papp | @dpapp86 |
 | Emmanuel Edward Ntiri | [@entiri](https://github.com/entiri) |
 | Etienne Bergeron | [@etiennebergeron](https://github.com/etiennebergeron) |
 | Eva Alonso Ortiz | [@evaalonsoortiz](https://github.com/evaalonsoortiz) |
