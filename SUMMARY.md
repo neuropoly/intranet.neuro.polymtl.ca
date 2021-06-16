@@ -60,15 +60,10 @@
   * [Restricted Boltzmann Machines \(RBM\)](software-development/deep-learning/restricted-boltzmann-machines.md)
   * [Misc](software-development/deep-learning/misc.md)
 
-## 📚 Bibliography & Learning <a id="learning-and-resources"></a>
+## Lab Organization
 
-* [Bibliography](learning-and-resources/bibliography/README.md)
-  * [Deep Learning](learning-and-resources/bibliography/deep-learning.md)
-  * [Histology](learning-and-resources/bibliography/histology.md)
-  * [MRI](learning-and-resources/bibliography/untitled.md)
-  * [Paperpile Folder](learning-and-resources/bibliography/shared-paperpile-folder.md)
-* [University Courses](learning-and-resources/courses.md)
-* [Conferences](learning-and-resources/conferences.md)
+* [Purchasing Hardware & Lab Supplies](lab-organization/purchasing-hardware-and-lab-supplies.md)
+* [Dropbox/Google Drive](lab-organization/dropbox-google-drive.md)
 
 ## Computing Resources
 
@@ -94,25 +89,30 @@
   * [FAQ](mri-coils/coils/faq.md)
   * [PCB Manufacturing](mri-coils/coils/pcb-manufacturing.md)
 
+## 📚 Bibliography & Learning <a id="learning-and-resources"></a>
+
+* [Bibliography](learning-and-resources/bibliography/README.md)
+  * [Deep Learning](learning-and-resources/bibliography/deep-learning.md)
+  * [Histology](learning-and-resources/bibliography/histology.md)
+  * [MRI](learning-and-resources/bibliography/untitled.md)
+  * [Paperpile Folder](learning-and-resources/bibliography/shared-paperpile-folder.md)
+* [University Courses](learning-and-resources/courses.md)
+* [Conferences](learning-and-resources/conferences.md)
+
 ## Writing & Publishing
 
 * [Publishing Articles](writing-and-publishing/publishing-articles.md)
 * [Academic Writing](writing-and-publishing/academic-writing/README.md)
   * [EndNote](writing-and-publishing/academic-writing/endnote.md)
 
----
-
-* [Computer Setup](computer-setup.md)
-* [Ideas for Cool Projects](ideas-for-cool-projects.md)
-
-## Lab Organization
-
-* [Purchasing Hardware & Lab Supplies](lab-organization/purchasing-hardware-and-lab-supplies.md)
-* [Dropbox/Google Drive](lab-organization/dropbox-google-drive.md)
-
 ## Practical Information
 
 * [VISAs and Work Permits](practical-information/visa.md)
 * [Moving to Montreal](practical-information/moving-to-montreal.md)
 * [Scholarships & Bursaries](practical-information/scholarships-and-bursaries.md)
+
+---
+
+* [Ideas for Cool Projects](ideas-for-cool-projects.md)
+* [Computer Setup](computer-setup.md)
 
