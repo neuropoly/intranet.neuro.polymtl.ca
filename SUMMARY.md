@@ -105,14 +105,14 @@
 * [Computer Setup](computer-setup.md)
 * [Ideas for Cool Projects](ideas-for-cool-projects.md)
 
+## Lab Organization
+
+* [Purchasing Hardware & Lab Supplies](lab-organization/purchasing-hardware-and-lab-supplies.md)
+* [Dropbox/Google Drive](lab-organization/dropbox-google-drive.md)
+
 ## Practical Information
 
 * [VISAs and Work Permits](practical-information/visa.md)
 * [Moving to Montreal](practical-information/moving-to-montreal.md)
 * [Scholarships & Bursaries](practical-information/scholarships-and-bursaries.md)
-
-## Lab Organization
-
-* [Purchasing Hardware & Lab Supplies](lab-organization/purchasing-hardware-and-lab-supplies.md)
-* [Dropbox/Google Drive](lab-organization/dropbox-google-drive.md)
 
