@@ -9,7 +9,6 @@
 * [Accounts](onboarding/accounts.md)
 * [Infrastructure](onboarding/infrastructure.md)
 * [Agenda & Calendar](onboarding/agenda_and_calendar.md)
-* [DockerHub](onboarding/untitled-6.md)
 * [Developer Setup](onboarding/untitled-7.md)
 * [Consultants](onboarding/untitled-8.md)
 * [Acronyms & Jargon](onboarding/untitled-9.md)

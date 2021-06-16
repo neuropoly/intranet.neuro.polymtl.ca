@@ -8,6 +8,12 @@ Wiki: [https://github.com/neuropoly/spinalcordtoolbox/wiki/Contributing%3A-Insta
 
 TensorFlow 1.5 required because [https://github.com/neuropoly/spinalcordtoolbox/pull/2618](https://github.com/neuropoly/spinalcordtoolbox/pull/2618)
 
+**SCT**: [https://hub.docker.com/r/neuropoly/sct](https://hub.docker.com/r/neuropoly/sct)
+
+{% hint style="warning" %}
+Note: DockerHub not up to date as of 2021-03-08
+{% endhint %}
+
 ## IvadoMed <a id="ivadomed"></a>
 
 Wiki: [https://ivadomed.org/en/latest/installation.html](https://ivadomed.org/en/latest/installation.html)
