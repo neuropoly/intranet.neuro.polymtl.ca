@@ -5,8 +5,7 @@
 ## 👋  Onboarding
 
 * [Introduction](onboarding/onboarding-intro.md)
-* [Checklist](onboarding/untitled-1.md)
-* [Key People](onboarding/untitled-2.md)
+* [Getting Started](onboarding/untitled-1.md)
 * [Accounts](onboarding/accounts.md)
 * [Infrastructure](onboarding/infrastructure.md)
 * [Agenda & Calendar](onboarding/agenda_and_calendar.md)
