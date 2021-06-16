@@ -7,8 +7,8 @@
 * [Introduction](onboarding/onboarding-intro.md)
 * [Getting Started](onboarding/untitled-1.md)
 * [Accounts](onboarding/accounts.md)
-* [Infrastructure](onboarding/infrastructure.md)
 * [Agenda & Calendar](onboarding/agenda_and_calendar.md)
+* [Infrastructure](onboarding/infrastructure.md)
 * [Developer Setup](onboarding/untitled-7.md)
 * [Consultants](onboarding/untitled-8.md)
 * [Acronyms & Jargon](onboarding/untitled-9.md)
@@ -60,12 +60,15 @@
   * [Restricted Boltzmann Machines \(RBM\)](software-development/deep-learning/restricted-boltzmann-machines.md)
   * [Misc](software-development/deep-learning/misc.md)
 
-## 📚 Bibliography & Resources <a id="learning-and-resources"></a>
+## 📚 Bibliography & Learning <a id="learning-and-resources"></a>
 
-* [Shared Paperpile folder](learning-and-resources/shared-paperpile-folder.md)
-* [Deep Learning](learning-and-resources/deep-learning.md)
-* [MRI](learning-and-resources/untitled.md)
-* [Histology](learning-and-resources/histology.md)
+* [Bibliography](learning-and-resources/bibliography/README.md)
+  * [Deep Learning](learning-and-resources/bibliography/deep-learning.md)
+  * [Histology](learning-and-resources/bibliography/histology.md)
+  * [MRI](learning-and-resources/bibliography/untitled.md)
+  * [Paperpile Folder](learning-and-resources/bibliography/shared-paperpile-folder.md)
+* [University Courses](learning-and-resources/courses.md)
+* [Conferences](learning-and-resources/conferences.md)
 
 ## Computing Resources
 
@@ -99,10 +102,6 @@
 
 ---
 
-* [Dropbox/Google Drive](dropbox-google-drive.md)
-* [Courses](courses.md)
-* [Conferences](conferences.md)
-* [Purchasing Hardware & Lab Supplies](purchasing-hardware-and-lab-supplies.md)
 * [Computer Setup](computer-setup.md)
 * [Ideas for Cool Projects](ideas-for-cool-projects.md)
 
@@ -111,4 +110,9 @@
 * [VISAs and Work Permits](practical-information/visa.md)
 * [Moving to Montreal](practical-information/moving-to-montreal.md)
 * [Scholarships & Bursaries](practical-information/scholarships-and-bursaries.md)
+
+## Lab Organization
+
+* [Purchasing Hardware & Lab Supplies](lab-organization/purchasing-hardware-and-lab-supplies.md)
+* [Dropbox/Google Drive](lab-organization/dropbox-google-drive.md)
 
