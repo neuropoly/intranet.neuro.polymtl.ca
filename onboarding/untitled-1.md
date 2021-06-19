@@ -4,7 +4,7 @@
 
 These are the things to do once you join the lab:
 
-* [ ] Add yourself to the [list of people](https://neuropoly.gitbook.io/workspace/people/overview)
+* [ ] Add yourself to the [list of people](https://app.gitbook.com/@neuropoly/s/workspace/people)
 * [ ] Make sure you have permissions for all the required [accounts](accounts.md)
 
 ## Key People
