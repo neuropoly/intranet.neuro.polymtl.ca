@@ -157,6 +157,7 @@ To facilitate assignment and addition to repositories, please add your Github ac
 | Paul Bautin | [@PaulBautin](https://github.com/PaulBautin) |
 | Ryan Topfer | [@rtopfer](https://github.com/rtopfer) |
 | Sandrine Bédard | [@sandrinebedard](https://github.com/sandrinebedard) |
+| Taowa Rosetwig | [@taowa](https://github.com/taowa) |
 | Uzay Macar | [@uzaymacar](https://github.com/uzaymacar) |
 | Vasudev Sharma | [@vs74](https://github.com/vasudev-sharma) |
 | Yang Ding | [@dyt811](https://github.com/dyt811) |
