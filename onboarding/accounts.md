@@ -84,7 +84,6 @@ To request an account for most of these services, ask on Slack \#accounts and ta
         <p>To access computing infrastructure, like servers and lab workstations.</p>
         <p>To change your password: use <code>&lt;GRAMES_PASSWORD&gt;</code> from a
           machine on the domain:</p>
-        <p></p>
         <p><code>user@laptop $ ssh &lt;GRAMES_USERNAME&gt;@joplin.neuro.polymtl.ca</code>
         </p>
         <p><code>&lt;GRAMES_USERNAME&gt;@joplin $ &lt;GRAMES_PASSWORD&gt;</code>
@@ -120,7 +119,7 @@ To request an account for most of these services, ask on Slack \#accounts and ta
 
 ## GitHub
 
-You will need a personal GitHub account. If you want to separate your **NeuroPoly** work from your personal work, make a separate GitHub account. 
+You will need a personal GitHub account. If you want to separate your **NeuroPoly** work from your personal work, make a separate GitHub account.
 
 You should be added to [https://github.com/orgs/neuropoly/](https://github.com/orgs/neuropoly/) by an admin.
 
