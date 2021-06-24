@@ -1,6 +1,16 @@
 # Table of contents
 
 * [🏠 Home](README.md)
+* [🧲  MRI scanning](mri-scanning/README.md)
+  * [UNF \(3T Prisma\)](mri-scanning/unf-3t-prisma.md)
+  * [MHI \(7T Agilent\)](mri-scanning/mhi-7t-agilent.md)
+  * [Coils](mri-scanning/coils/README.md)
+    * [3D Printing](mri-scanning/coils/3d-printing/README.md)
+      * [OctoPrint](mri-scanning/coils/3d-printing/octoprint.md)
+    * [FAQ](mri-scanning/coils/faq.md)
+    * [PCB Manufacturing](mri-scanning/coils/pcb-manufacturing.md)
+  * [Phantoms](mri-scanning/phantoms/README.md)
+    * [Phantom Recipes for MRI](mri-scanning/phantoms/phantom-recipes-for-mri.md)
 
 ## 👋  Onboarding
 
@@ -76,18 +86,6 @@
 * [Computing Resources: Compute Canada](computing-resources/compute-canada.md)
 * [Clusters at CRIUGM](computing-resources/clusters-at-criugm.md)
 * [Printer](computing-resources/printer.md)
-
-## MRI / Coils
-
-* [7T Agilent \(ICM\)](mri-coils/7t-agilent-icm.md)
-* [Siemens](mri-coils/siemens.md)
-* [Phantoms](mri-coils/phantoms/README.md)
-  * [Phantom Recipes for MRI](mri-coils/phantoms/phantom-recipes-for-mri.md)
-* [Coils](mri-coils/coils/README.md)
-  * [3D Printing](mri-coils/coils/3d-printing/README.md)
-    * [OctoPrint](mri-coils/coils/3d-printing/octoprint.md)
-  * [FAQ](mri-coils/coils/faq.md)
-  * [PCB Manufacturing](mri-coils/coils/pcb-manufacturing.md)
 
 ## 📚 Bibliography & Learning <a id="learning-and-resources"></a>
 
