@@ -53,15 +53,22 @@ supported repository versions: 8
 upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 ```
 
-### Global `git-annex` config
+### Global `git` config
 
 For smooth operation, everyone should do on all of their machines:
+
+```
+git config --global core.autocrlf true
+git config --global push.default current
+```
+
+And specifically for `git-annex`:
 
 ```
 git config --global annex.thin true # save disk space by de-duplicating checked out and annexed copies
 ```
 
-See [below](#hardlinks) to understand what this offers.
+See [below](#hardlinks) to understand what this setting offers.
 
 ## New repo
 
