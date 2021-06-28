@@ -61,6 +61,8 @@ For smooth operation, everyone should do on all of their machines:
 git config --global annex.thin true # save disk space by de-duplicating checked out and annexed copies
 ```
 
+See [below](#hardlinks) to understand what this offers.
+
 ## New repo
 
 For our purposes, we need to make sure repos are configured with
@@ -101,6 +103,64 @@ If you have any error at all, the first thing to check is that you have `git-ann
 
 
 ### checking annex file locations
+
+The content of annexed files that have been downloaded locally is stored under `repo/.git/annex/objects/`. You can find which specific file corresponds to by using `git show` or `git log -p` to see the content that `git` has recorded for the file -- which will be a string giving the "annex pointer":
+
+```
+$ git show HEAD:derivatives/labels/sub-1140317/anat/sub-1140317_T1w_seg-manual.nii.gz
+/annex/objects/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
+```
+
+and then locating a file with this name in `.git/annex/objects/`; however, it is not as simple as just combining the two together, git-annex prepends extra filenames, so you need to use `find(1)` to locate the file:
+
+```
+$ find .git/annex/objects/ -name "SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz"
+.git/annex/objects/6V/X3/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
+.git/annex/objects/6V/X3/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
+```
+
+## `annex.thin` Hardlinks <a id="hardlinks">
+
+`annex.thin` saves a lot of space by deduplicating file content via [hard links](https://wiki.debian.org/ln):
+the files your checkout `repo/` will be physically the same content as their sources in `repo/.git/annex/objects/`, instead of copies.
+
+To confirm this is working, you can compare the size of the content with the annex.
+They should be roughly the same size, **even though one is contained in the other**:
+
+```
+~/datasets/uk-biobank-processed$ du -hs uk-biobank-processed/
+81G	uk-biobank-processed/
+nguenther@data:~/datasets/uk-biobank-processed$ du -hs uk-biobank-processed/.git/annex/
+81G	uk-biobank-processed/.git/annex/
+```
+
+
+You can confirm it another way by looking at the link count on a file, e.g.
+ 
+```
+$ stat derivatives/labels/sub-1140317/anat/sub-1140317_T1w_seg-manual.nii.gz
+   File: derivatives/labels/sub-1140317/anat/sub-1140317_T1w_seg-manual.nii.gz
+   Size: 28305     	Blocks: 56         IO Block: 4096   regular file
+ Device: 802h/2050d	Inode: 1319996     Links: 2
+ Access: (0644/-rw-r--r--)  Uid: ( 1001/zamboni)   Gid: ( 1001/zamboni)
+ Access: 2021-06-28 17:19:15.321874946 -0400
+ Modify: 2021-06-28 16:00:45.261893952 -0400
+ Change: 2021-06-28 17:19:15.161873978 -0400
+  Birth: 2021-06-28 16:00:45.261893952 -0400
+```
+> 
+(macOS uses a different format for `stat(1)`, but all the same information is there)
+ 
+This shows that the link count is 2, which should be the case for "thinly" annexed files (unless they are duplicated elsewhere in the dataset, in which case the link count could be 3, 4, or higher).
+
+You can find where such a file is in the annex by searching for its inode number:
+
+```
+$ find . -inum 1319996
+ ./derivatives/labels/sub-1140317/anat/sub-1140317_T1w_seg-manual.nii.gz
+ ./.git/annex/objects/6V/X3/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
+```
+
 
 ### "a cosmetic problem affecting git status"
 
