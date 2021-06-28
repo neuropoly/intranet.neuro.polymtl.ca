@@ -235,9 +235,14 @@ For those with the **Polytechnique MEDITIS** fellowship and other fellowships, p
 
 ### Google Docs
 
-#### Figure cross-reference <a id="figure_cross-reference"></a>
+We recommend you install \(and use\) the following Adds-on:
 
-For cross-referencing figures on Google Docs, we recommend using [Cross Reference](https://workspace.google.com/marketplace/app/cross_reference/269114033347).
+| Add-on | **Purpose** |
+| :--- | :--- |
+| [Cross Reference](https://workspace.google.com/marketplace/app/cross_reference/269114033347) | Cross-referencing figures on Google Docs |
+| \*\*\*\*[Markdown Tools](https://workspace.google.com/marketplace/app/markdown_tools/788541604518) | Add heading numbers to the normal headings/styles in a Google docs document. |
+
+
 
 #### Paperpile <a id="paperpile"></a>
 
