@@ -1,5 +1,7 @@
 # Accounts
 
+To get started, please go through this list to determine which accounts you'll need.
+
 To request an account for most of these services, ask on Slack \#welcome and tag @alexfoias. He will either create one or direct you to where to get the account created.
 
 ## Accounts Overview
