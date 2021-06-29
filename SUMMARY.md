@@ -16,13 +16,13 @@
 ## 👋  Onboarding
 
 * [Introduction](onboarding/onboarding-intro.md)
-* [Getting Started](onboarding/untitled-1.md)
 * [Accounts](onboarding/accounts.md)
 * [Agenda & Calendar](onboarding/agenda_and_calendar.md)
 * [Infrastructure](onboarding/infrastructure.md)
 * [Developer Setup](onboarding/untitled-7.md)
 * [Consultants and RA](onboarding/untitled-8.md)
 * [Acronyms & Jargon](onboarding/untitled-9.md)
+* [Checklist](onboarding/checklist.md)
 
 ## Software Development
 
