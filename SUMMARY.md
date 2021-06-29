@@ -3,6 +3,7 @@
 * [🏠 Home](README.md)
 * [🧲  MRI scanning](mri-scanning/README.md)
   * [UNF \(3T Prisma\)](mri-scanning/unf-3t-prisma.md)
+  * [MNI/McGill \(7T Terra\)](mri-scanning/mni-mcgill-7t-terra.md)
   * [MHI \(7T Agilent\)](mri-scanning/mhi-7t-agilent.md)
   * [Coils](mri-scanning/coils/README.md)
     * [3D Printing](mri-scanning/coils/3d-printing/README.md)
