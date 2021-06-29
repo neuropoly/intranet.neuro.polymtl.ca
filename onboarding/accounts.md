@@ -1,6 +1,6 @@
 # Accounts
 
-To request an account for most of these services, ask on Slack \#accounts and tag @alexfoias. He will either create one or direct you to where to get the account created.
+To request an account for most of these services, ask on Slack \#welcome and tag @alexfoias. He will either create one or direct you to where to get the account created.
 
 ## Accounts Overview
 
@@ -121,17 +121,16 @@ To request an account for most of these services, ask on Slack \#accounts and ta
 
 You will need a personal GitHub account. If you want to separate your **NeuroPoly** work from your personal work, make a separate GitHub account.
 
-You should be added to [https://github.com/orgs/neuropoly/](https://github.com/orgs/neuropoly/) by an admin.
+You should be added to [https://github.com/neuropoly](https://github.com/neuropoly) by an admin.
 
 You may also be added to: ​
 
 * [https://github.com/ivadomed​](https://github.com/ivadomed​)
-* [https://github.com/orgs/spinalcordtoolbox​](https://github.com/orgs/spinalcordtoolbox​) ​
+* [https://github.com/axondeepseg](https://github.com/axondeepseg)
+* [https://github.com/spinalcordtoolbox​](https://github.com/spinalcordtoolbox)
 * [https://github.com/shimming-toolbox](https://github.com/shimming-toolbox)
 
 You may also be added to certain private repositories one-by-one depending your what tasks you take on, though we try to minimize this by doing most of our work in the open.
-
-To facilitate assignment and addition to repositories, please add your Github account in the table below:
 
 ## Slack
 
