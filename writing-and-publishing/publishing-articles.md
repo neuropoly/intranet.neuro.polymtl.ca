@@ -240,7 +240,7 @@ We recommend you install \(and use\) the following Adds-on:
 | Add-on | **Purpose** |
 | :--- | :--- |
 | [Cross Reference](https://workspace.google.com/marketplace/app/cross_reference/269114033347) | Cross-referencing figures on Google Docs |
-| [Heading Numbers](https://lorut.no/add-ons/heading-numbers-for-google-docs/) | Add heading numbers to the normal headings/styles in a Google docs document. |
+| [Markdown Tools](https://workspace.google.com/u/0/marketplace/app/markdown_tools/788541604518) | Enables adding heading numbers and the creation of a table of contents for markdown. |
 
 
 
