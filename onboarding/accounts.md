@@ -123,11 +123,11 @@ You will need a personal GitHub account. If you want to separate your **NeuroPol
 
 You should be added to [https://github.com/neuropoly](https://github.com/neuropoly) by an admin.
 
-You may also be added to: ​
+You may also be added to:
 
-* [https://github.com/ivadomed​](https://github.com/ivadomed​)
+* [https://github.com/ivadomed](https://github.com/ivadomed)
 * [https://github.com/axondeepseg](https://github.com/axondeepseg)
-* [https://github.com/spinalcordtoolbox​](https://github.com/spinalcordtoolbox)
+* [https://github.com/spinalcordtoolbox](https://github.com/spinalcordtoolbox)
 * [https://github.com/shimming-toolbox](https://github.com/shimming-toolbox)
 
 You may also be added to certain private repositories one-by-one depending your what tasks you take on, though we try to minimize this by doing most of our work in the open.
