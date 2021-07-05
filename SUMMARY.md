@@ -22,7 +22,7 @@
 * [Infrastructure](onboarding/infrastructure.md)
 * [Developer Setup](onboarding/untitled-7.md)
 * [Consultants and RA](onboarding/untitled-8.md)
-* [Acronyms & Jargon](onboarding/untitled-9.md)
+* [Acronyms & Jargon](onboarding/acronyms-jargon.md)
 
 ## Software Development
 
