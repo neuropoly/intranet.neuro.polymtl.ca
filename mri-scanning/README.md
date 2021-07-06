@@ -1,8 +1,8 @@
 ---
-description: Available MRI facilities and useful information about experiments.
+description: What MRI facilities are available and useful information about experiments.
 ---
 
-# 🧲  MRI Scanning
+# 🧲  MRI scanning
 
 ## MRI facilities
 

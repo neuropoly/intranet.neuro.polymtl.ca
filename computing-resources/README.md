@@ -1,2 +1,2 @@
-# 🖥 Computing resources
+# 🖥 Computing Resources
 

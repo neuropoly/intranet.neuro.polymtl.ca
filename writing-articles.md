@@ -1,4 +1,4 @@
-# ✍️ Writing articles
+# ✍️ Academic Writing
 
 ## Journals
 
