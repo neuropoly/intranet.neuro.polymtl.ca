@@ -42,7 +42,7 @@
   * [University Courses](bibliography-and-learning/courses.md)
   * [Conferences](bibliography-and-learning/conferences.md)
 * [💡 Ideas for Cool Projects](ideas-for-cool-projects.md)
-* [🇨🇦 Practical Information](practical-information/README.md)
+* [📎 Practical Information](practical-information/README.md)
   * [VISAs and Work Permits](practical-information/visa.md)
   * [Moving to Montreal](practical-information/moving-to-montreal.md)
   * [Scholarships & Bursaries](practical-information/scholarships-and-bursaries.md)
