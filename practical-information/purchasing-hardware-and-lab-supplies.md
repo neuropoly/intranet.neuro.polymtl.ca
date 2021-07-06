@@ -1,4 +1,4 @@
-# Purchasing Hardware & Lab Supplies
+# Purchasing stuff
 
 ## Computers
 
