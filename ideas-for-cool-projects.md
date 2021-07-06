@@ -1,4 +1,8 @@
-# Ideas for Cool Projects
+---
+description: "Do you have an idea for a cool research project? Awesome! Please write it down below \U0001F447"
+---
+
+# 💡 Ideas for Cool Projects
 
 * Please indicate the author of the idea in brackets \(to get more info if necessary\)
 * _Italic_: idea being investigated / work in progress

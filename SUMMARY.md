@@ -31,7 +31,6 @@
   * [Compute Canada](computing-resources/compute-canada.md)
   * [CRIUGM](computing-resources/clusters-at-criugm.md)
   * [🖨 Printer](computing-resources/printer.md)
-* [💡 Ideas of cool projects](ideas-of-cool-projects.md)
 * [📚 Bibliography & Learning](bibliography-and-learning/README.md)
   * [Bibliography](bibliography-and-learning/bibliography/README.md)
     * [Deep Learning](bibliography-and-learning/bibliography/deep-learning.md)
@@ -40,6 +39,7 @@
     * [Paperpile Folder](bibliography-and-learning/bibliography/shared-paperpile-folder.md)
   * [University Courses](bibliography-and-learning/courses.md)
   * [Conferences](bibliography-and-learning/conferences.md)
+* [💡 Ideas for Cool Projects](ideas-for-cool-projects.md)
 * [🇨🇦 Practical Information](practical-information/README.md)
   * [VISAs and Work Permits](practical-information/visa.md)
   * [Moving to Montreal](practical-information/moving-to-montreal.md)
@@ -99,6 +99,5 @@
 
 ---
 
-* [Ideas for Cool Projects](ideas-for-cool-projects.md)
 * [Computer Setup](computer-setup.md)
 
