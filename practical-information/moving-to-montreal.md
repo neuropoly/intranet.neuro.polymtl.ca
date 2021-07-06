@@ -7,6 +7,7 @@
 * ​[Craigslist](https://montreal.craigslist.org/): numerous listings
 * ​[Les pac](https://www.lespac.com/): many different categories of classifieds
 * ​[Louer.ca](https://www.louer.ca/): for the entire province of Quebec
+* [Rentals.ca](https://rentals.ca/): Apartments, houses, and condos for rent across Canada
 
 ### **Finding a Family Doctor**
 
