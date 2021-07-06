@@ -6,6 +6,8 @@
   * [Accounts](onboarding/accounts.md)
   * [Agenda & Calendar](onboarding/agenda-and-calendar.md)
   * [Infrastructure](onboarding/infrastructure.md)
+  * [Dropbox/Google Drive](onboarding/dropbox-google-drive.md)
+  * [Computer Setup](onboarding/computer-setup.md)
   * [Developer Setup](onboarding/developer-setup.md)
   * [Consultants and RA](onboarding/consultants-ra.md)
   * [Acronyms & Jargon](onboarding/acronyms-jargon.md)
@@ -93,9 +95,4 @@
 ## Lab Organization
 
 * [Purchasing Hardware & Lab Supplies](lab-organization/purchasing-hardware-and-lab-supplies.md)
-* [Dropbox/Google Drive](lab-organization/dropbox-google-drive.md)
-
----
-
-* [Computer Setup](computer-setup.md)
 
