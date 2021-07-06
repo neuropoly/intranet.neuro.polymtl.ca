@@ -1,6 +1,14 @@
 # Table of contents
 
 * [🏠 Home](README.md)
+* [👋 Onboarding](onboarding/README.md)
+  * [Getting Started](onboarding/getting-started.md)
+  * [Accounts](onboarding/accounts.md)
+  * [Agenda & Calendar](onboarding/agenda-and-calendar.md)
+  * [Infrastructure](onboarding/infrastructure.md)
+  * [Developer Setup](onboarding/developer-setup.md)
+  * [Consultants and RA](onboarding/consultants-ra.md)
+  * [Acronyms & Jargon](onboarding/acronyms-jargon.md)
 * [🧲  MRI scanning](mri-scanning/README.md)
   * [UNF \(3T Prisma\)](mri-scanning/unf-3t-prisma.md)
   * [MNI/McGill \(7T Terra\)](mri-scanning/mni-mcgill-7t-terra.md)
@@ -12,17 +20,6 @@
     * [PCB Manufacturing](mri-scanning/coils/pcb-manufacturing.md)
   * [Phantoms](mri-scanning/phantoms/README.md)
     * [Phantom Recipes for MRI](mri-scanning/phantoms/phantom-recipes-for-mri.md)
-
-## 👋  Onboarding
-
-* [Introduction](onboarding/onboarding-intro.md)
-* [Getting Started](onboarding/getting-started.md)
-* [Accounts](onboarding/accounts.md)
-* [Agenda & Calendar](onboarding/agenda-and-calendar.md)
-* [Infrastructure](onboarding/infrastructure.md)
-* [Developer Setup](onboarding/developer-setup.md)
-* [Consultants and RA](onboarding/consultants-ra.md)
-* [Acronyms & Jargon](onboarding/acronyms-jargon.md)
 
 ## Software Development
 
