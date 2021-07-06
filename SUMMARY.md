@@ -32,6 +32,18 @@
   * [CRIUGM](computing-resources/clusters-at-criugm.md)
   * [🖨 Printer](computing-resources/printer.md)
 * [💡 Ideas of cool projects](ideas-of-cool-projects.md)
+* [📚 Bibliography & Learning](bibliography-and-learning/README.md)
+  * [Bibliography](bibliography-and-learning/bibliography/README.md)
+    * [Deep Learning](bibliography-and-learning/bibliography/deep-learning.md)
+    * [Histology](bibliography-and-learning/bibliography/histology.md)
+    * [MRI](bibliography-and-learning/bibliography/untitled.md)
+    * [Paperpile Folder](bibliography-and-learning/bibliography/shared-paperpile-folder.md)
+  * [University Courses](bibliography-and-learning/courses.md)
+  * [Conferences](bibliography-and-learning/conferences.md)
+* [🇨🇦 Practical Information](practical-information/README.md)
+  * [VISAs and Work Permits](practical-information/visa.md)
+  * [Moving to Montreal](practical-information/moving-to-montreal.md)
+  * [Scholarships & Bursaries](practical-information/scholarships-and-bursaries.md)
 
 ## Software Development
 
@@ -84,22 +96,6 @@
 
 * [Purchasing Hardware & Lab Supplies](lab-organization/purchasing-hardware-and-lab-supplies.md)
 * [Dropbox/Google Drive](lab-organization/dropbox-google-drive.md)
-
-## 📚 Bibliography & Learning <a id="learning-and-resources"></a>
-
-* [Bibliography](learning-and-resources/bibliography/README.md)
-  * [Deep Learning](learning-and-resources/bibliography/deep-learning.md)
-  * [Histology](learning-and-resources/bibliography/histology.md)
-  * [MRI](learning-and-resources/bibliography/untitled.md)
-  * [Paperpile Folder](learning-and-resources/bibliography/shared-paperpile-folder.md)
-* [University Courses](learning-and-resources/courses.md)
-* [Conferences](learning-and-resources/conferences.md)
-
-## Practical Information
-
-* [VISAs and Work Permits](practical-information/visa.md)
-* [Moving to Montreal](practical-information/moving-to-montreal.md)
-* [Scholarships & Bursaries](practical-information/scholarships-and-bursaries.md)
 
 ---
 
