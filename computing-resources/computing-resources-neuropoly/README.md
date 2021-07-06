@@ -12,12 +12,6 @@ You can [request a Poly-Grames network account here](https://www.grames.polymtl.
 **Program:** Biomedical Engineering  
 **Director:** Julien Cohen-Adad
 
-If you want to find out who is behind u/pXXXXXX Grames account, type this:
-
-```text
-getent passwd <GRAMES_ACCOUNT>
-```
-
 ### Poly-Grames Groups <a id="polygrames_groups"></a>
 
 The list permissions for shared folders on `duke` are available [here](https://docs.google.com/document/d/1ZJUUBpiZPl0wxFsUPxkkR6vXZgfSAd3YBK5vlIpf_aA/edit).
