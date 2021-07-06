@@ -11,7 +11,7 @@
   * [Developer Setup](onboarding/developer-setup.md)
   * [Consultants and RA](onboarding/consultants-ra.md)
   * [Acronyms & Jargon](onboarding/acronyms-jargon.md)
-* [🧲  MRI scanning](mri-scanning/README.md)
+* [🧲  MRI Scanning](mri-scanning/README.md)
   * [UNF \(3T Prisma\)](mri-scanning/unf-3t-prisma.md)
   * [MNI/McGill \(7T Terra\)](mri-scanning/mni-mcgill-7t-terra.md)
   * [MHI \(7T Agilent\)](mri-scanning/mhi-7t-agilent.md)
