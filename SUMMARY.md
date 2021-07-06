@@ -20,6 +20,7 @@
     * [PCB Manufacturing](mri-scanning/coils/pcb-manufacturing.md)
   * [Phantoms](mri-scanning/phantoms/README.md)
     * [Phantom Recipes for MRI](mri-scanning/phantoms/phantom-recipes-for-mri.md)
+* [✍️ Writing articles](writing-articles.md)
 
 ## Software Development
 
@@ -94,12 +95,6 @@
   * [Paperpile Folder](learning-and-resources/bibliography/shared-paperpile-folder.md)
 * [University Courses](learning-and-resources/courses.md)
 * [Conferences](learning-and-resources/conferences.md)
-
-## Writing & Publishing
-
-* [Publishing Articles](writing-and-publishing/publishing-articles.md)
-* [Academic Writing](writing-and-publishing/academic-writing/README.md)
-  * [EndNote](writing-and-publishing/academic-writing/endnote.md)
 
 ## Practical Information
 

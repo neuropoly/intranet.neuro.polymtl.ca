@@ -1,4 +1,4 @@
-# Publishing Articles
+# ✍️ Writing articles
 
 ## Journals
 
@@ -133,7 +133,7 @@
 
 ## Organizing Folders
 
-![](../.gitbook/assets/phd101212s.gif)
+![](.gitbook/assets/phd101212s.gif)
 
 Recommended file structure:
 
@@ -169,13 +169,24 @@ You can start from [this template](https://www.neuro.polymtl.ca/_media/internal_
 * For most comments, the manuscript will need to be updated and the modified text copied in the responses. Please **do not** duplicate this text during the review process, because the manuscript might be edited later by another coauthor, and there will be discrepancies between the manuscript and the responses. Therefore, edit the manuscript first, and in the responses, indicate a placeholder with a comment “will be copy/pasted when final version of the manuscript is ready”.
 * Please read these [ten simple rules for writing a response to reviewers](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005730).
 
-## References
+## Managing References
 
-Please use [EndNote](https://endnote.com/) or [Paperpile](https://paperpile.com/) for your bibliography.
+We recommend using [Paperpile](https://paperpile.com/) for managing your bibliography.
 
 We have a Paperpile account for the lab. For login please use the Google account `neuropolylab "at" gmail "dot" com`
 
-Under the Paperpile account please create a folder with your name for a better management of the references.
+If you prefer to have your own Paperpile license please request it to your supervisor.
+
+{% hint style="info" %}
+Paperpile on Google Docs works only with Google Chrome.
+{% endhint %}
+
+### Install Paperpile
+
+1. Connect to [Paperpile website](https://paperpile.com/) with the NeuroPoly Google account \(or with your account if you have a license\). Sometimes if you only have a single Google account logged in, you will have to add another account here: [https://accounts.google.com/AccountChooser?service=lso](https://accounts.google.com/AccountChooser?service=lso)
+2. Install Paperpile chrome extension on the browser \(Google Chrome\)
+3. Use your personal account to connect on Google Docs, start a new document page. Insert citations, when you do Paperpile/Format citations/ it will require you to authorize Paperpile into Google docs.
+4. Authorize Paperpile on Google using your personal account.
 
 ## Figures \(in vectorial format\)
 
@@ -242,21 +253,16 @@ We recommend you install \(and use\) the following Adds-on:
 | [Cross Reference](https://workspace.google.com/marketplace/app/cross_reference/269114033347) | Cross-referencing figures on Google Docs |
 | [Markdown Tools](https://workspace.google.com/u/0/marketplace/app/markdown_tools/788541604518) | Enables adding heading numbers and the creation of a table of contents for markdown. |
 
-
-
-#### Paperpile <a id="paperpile"></a>
-
-For your reference manager, we recommend you use Paperpile.
-
-Paperpile on Google Docs works only with Google Chrome.
-
-1. Connect to [Paperpile website](https://paperpile.com/) with the NeuroPoly Google account. Sometimes if you only have a single Google account logged in, you will have to add another account here: [https://accounts.google.com/AccountChooser?service=lso](https://accounts.google.com/AccountChooser?service=lso)
-2. Install Paperpile chrome extension on the browser \(Google Chrome\)
-3. Use your personal account to connect on Google Docs, start a new document page. Insert citations, when you do Paperpile/Format citations/ it will require you to authorize Paperpile into Google docs.
-4. Authorize Paperpile on Google using your personal account.
-
 ### Overleaf <a id="overleaf"></a>
 
 1. We have a lab account for Overleaf. It is important to use it, otherwise you won't be able to share the document with all collaborators.
 2. Connect to [Overleaf](https://www.overleaf.com/) with the NeuroPoly Google account. Sometimes if you only have a single Google account logged in, you will have to add another account here: [https://accounts.google.com/AccountChooser?service=lso](https://accounts.google.com/AccountChooser?service=lso)
+
+## Tips for writing scientific articles
+
+* [Measure the readability of a text](https://app.readable.com/text/)
+* [https://www.elsevier.com/books/communicate-science-papers-presentations-and-posters-effectively/patience/978-0-12-801500-1](https://www.elsevier.com/books/communicate-science-papers-presentations-and-posters-effectively/patience/978-0-12-801500-1)
+* [Tips when making figures](https://twitter.com/jbhuang0604/status/1279992087497314305?s=27)
+* A paper on [How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)
+* [Useful tips for Presentations](https://twitter.com/jbhuang0604/status/1397058827405742085)
 
