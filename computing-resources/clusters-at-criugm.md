@@ -1,10 +1,10 @@
 ---
 description: >-
-  Computing at the Centre de recherche de l'Institut universitaire de gériatrie
-  de Montréal
+  The Centre de recherche de l'Institut universitaire de gériatrie de Montréal
+  (CRIUGM) has computing clusters which members of NeuroPoly Lab have access to.
 ---
 
-# Clusters at CRIUGM
+# CRIUGM
 
 ## CPU Clusters
 

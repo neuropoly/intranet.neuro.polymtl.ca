@@ -1,4 +1,4 @@
-# Computing Resources: Compute Canada
+# Compute Canada
 
 ## Create Account
 

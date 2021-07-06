@@ -1,4 +1,4 @@
-# Computing Resources: NeuroPoly
+# NeuroPoly
 
 ## Poly-Grames
 

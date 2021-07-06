@@ -1,0 +1,2 @@
+# 💡 Ideas of cool projects
+
