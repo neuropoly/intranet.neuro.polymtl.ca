@@ -98,11 +98,25 @@ model = Network(...).to(device=device)
 
 As with the [other stations](https://github.com/neuropoly/neuropoly-internal-docs/tree/24a8cfb83736a4325aa342ece74a89846c1f700d/computing-resources/computing-resources-neuropoly/stations.md#data), you should prefer getting data in via [`git-annex`](https://github.com/neuropoly/data-management/blob/master/internal-server.md), but you can it via [`duke`](https://github.com/neuropoly/neuropoly-internal-docs/tree/24a8cfb83736a4325aa342ece74a89846c1f700d/computing-resources/computing-resources-neuropoly/stations.md#duke) \(which is available to you at `~/duke/temp`\) or any other method \(`scp`, `curl`, `wget`, etc\).
 
-### Storage
+## Storage
 
-Because training datasets are particularly large, be conscious of how much space you are using.
+### Long term, slow access \(with backup\)
 
-`rosenberg` has two spare disks available for your datasets. The safest method is to keep your software \(conda envs, virtualenvs, etc\) on `~/`, the main system disk, but to put your datasets on the spare disks \(`~/data_nvme_$USER`, `~/data_extrassd_$USER`\):
+For projects and permanent storage: `~/duke`
+
+{% hint style="warning" %}
+Please, do not use space on duke while training your models. If you need more local space, post a request on slack \#computers.
+{% endhint %}
+
+### Mid-term, rapid access \(no backup\)
+
+This corresponds to your home `~/`. This is where you keep your software \(conda envs, virtualenvs, etc.\). 
+
+### Short-term, very rapid access \(no backup\)
+
+This is where you run your experiments \(eg: deep learning training\). On `rosenberg`, go to `~/data_nvme_$USER`or `~/data_extrassd_$USER`. On `bireli` and `romane` , go to your home `~/` .
+
+To keep track of your disk space, you can run `df`:
 
 ```text
 u108545@rosenberg:~$ # to see how much space is available on the spare disk
@@ -114,8 +128,6 @@ u108545@rosenberg:~$ # to measure how much space a tool takes
 u108545@rosenberg:~$ du -hs data_extrassd_u108545/miniconda3/
 18G    data_extrassd_u108545/miniconda3/
 ```
-
-`bireli` and `romane` have no spare disks at the time of writing.
 
 ## Good Training Habits
 

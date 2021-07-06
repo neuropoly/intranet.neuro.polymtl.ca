@@ -1,23 +1,5 @@
 # Bash/Shell
 
-## Awesome links
-
-* [Bash scripting cheatsheet](https://devhints.io/bash)
-
-## HDD parameters
-
-To list all block devices, run:
-
-```text
-lsblk
-```
-
-To list all partitions, run:
-
-```text
- fdisk -l
-```
-
 ## File/Folders
 
 ### Copying
