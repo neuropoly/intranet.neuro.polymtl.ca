@@ -92,4 +92,6 @@
   * [🇨🇦  Living in Montreal](practical-information/moving-to-montreal.md)
   * [Scholarships & Bursaries](practical-information/scholarships-and-bursaries.md)
   * [Purchasing Supplies](practical-information/purchasing-hardware-and-lab-supplies.md)
+* [Tips & Tricks](tips-and-tricks/README.md)
+  * [git](tips-and-tricks/git.md)
 
