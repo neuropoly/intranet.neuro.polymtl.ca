@@ -1,4 +1,4 @@
-# Purchasing stuff
+# Purchasing Supplies
 
 ## Computers
 

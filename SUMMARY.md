@@ -44,7 +44,7 @@
 * [💡 Ideas for Cool Projects](ideas-for-cool-projects.md)
 * [📎 Practical Information](practical-information/README.md)
   * [VISAs and Work Permits](practical-information/visa.md)
-  * [Moving to Montreal](practical-information/moving-to-montreal.md)
+  * [🇨🇦  Living in Montreal](practical-information/moving-to-montreal.md)
   * [Scholarships & Bursaries](practical-information/scholarships-and-bursaries.md)
   * [Purchasing Supplies](practical-information/purchasing-hardware-and-lab-supplies.md)
 * [🐍 Software Development](software-development/README.md)
