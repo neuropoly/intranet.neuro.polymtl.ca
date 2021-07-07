@@ -265,4 +265,9 @@ We recommend you install \(and use\) the following Adds-on:
 * [Tips when making figures](https://twitter.com/jbhuang0604/status/1279992087497314305?s=27)
 * A paper on [How to Read a Paper](https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf)
 * [Useful tips for Presentations](https://twitter.com/jbhuang0604/status/1397058827405742085)
+* [http://abacus.bates.edu/~ganderso/biology/resources/writing/HTWtoc.html](http://abacus.bates.edu/~ganderso/biology/resources/writing/HTWtoc.html)
+
+  [http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3178846/](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3178846/)
+
+  [http://www.columbia.edu/cu/biology/ug/research/paper.html](http://www.columbia.edu/cu/biology/ug/research/paper.html)
 
