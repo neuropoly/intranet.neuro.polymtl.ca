@@ -107,11 +107,9 @@ To request an account for most of these services, ask on Slack \#welcome and tag
       <td style="text-align:left"><b>Campus Access</b>
       </td>
       <td style="text-align:left">
-        <p>To get access to campus, you will need to have an appointment booked for
-          you with <a href="https://www.polymtl.ca/surete/horaire-et-acces">https://www.polymtl.ca/surete/horaire-et-acces</a> to
-          have a photo taken and a card printed.</p>
-        <p><b>Special COVID rules</b>: see #covid-19 on Slack. Follow the training
-          there and then get yourself signed up with S&#xFB;ret&#xE9; by Julien Cohen-Adad.</p>
+        <p>Please advise Julien Cohen-Adad before coming on campus. Special permissions have to be granted due to public health restrictions.
+           Please follow the instructions here: https://docs.google.com/presentation/d/1JtJLcgdA7aXuxRHIzu1hN_lLjYK8PI0BKa0OK-155TE/edit#slide=id.g531a5025b4_0_0</p>
+        <p><b>Special COVID rules</b>: see #covid-19 on Slack. Only people the are part of the reopening plan are allowed to come.</p>
       </td>
     </tr>
   </tbody>
