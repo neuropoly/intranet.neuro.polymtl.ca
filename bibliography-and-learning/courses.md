@@ -267,15 +267,17 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">INF8245E</td>
+      <td style="text-align:left"><a href="https://chandar-lab.github.io/INF8245E/">INF8245E</a>
+      </td>
       <td style="text-align:left">Machine Learning</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">English</td>
       <td style="text-align:left">Sarath Chandar</td>
     </tr>
     <tr>
-      <td style="text-align:left">INF8953DE</td>
+      <td style="text-align:left"><a href="https://chandar-lab.github.io/INF8953DE/">INF8953DE</a>
+      </td>
       <td style="text-align:left">Reinforcement Learning</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">English</td>
       <td style="text-align:left">Sarath Chandar</td>
     </tr>
     <tr>
@@ -358,13 +360,6 @@
       </td>
       <td style="text-align:left">Fran&#xE7;ais</td>
       <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><a href="https://chandar-lab.github.io/INF8953DE/">INF8953DE</a>
-      </td>
-      <td style="text-align:left">Reinforcement Learning</td>
-      <td style="text-align:left">English</td>
-      <td style="text-align:left">Sarath Chandar</td>
     </tr>
   </tbody>
 </table>
