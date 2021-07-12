@@ -1,4 +1,4 @@
-# ✈️ Conferences
+# Conferences
 
 ## List of Conferences <a id="list_of_conferences"></a>
 
