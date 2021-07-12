@@ -100,6 +100,7 @@
 
 | Journal | Impact Factor | Open |
 | :--- | :--- | :--- |
+| [Aperture](https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=4022) | none \(new\) | yes |
 | [Computers in Biology and Medicine](https://www.journals.elsevier.com/computers-in-biology-and-medicine) | 3.4 |  |
 | [Biomedical Optics Express](https://www.osapublishing.org/boe/home.cfm) | 3.9 |  |
 | [Magnetic Resonance in Medicine](https://onlinelibrary.wiley.com/journal/15222594) | 3.6 |  |
