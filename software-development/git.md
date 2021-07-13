@@ -227,6 +227,19 @@ Now, all tracked branches should appear when running:
   git remote show origin
 ```
 
+### Checkout branch from fork
+
+When reviewing a PR, instead of creating a branch locally we recommend using the following approach:
+
+```bash
+git remote add username git@github.username/repository_name.git
+git fetch username
+# If you want to temporarily check out the fork's branch in a detached HEAD state:
+git checkout username/add-text-output
+# If you want to create a new local branch that tracks the fork's branch:
+git checkout -b add-text-output username/add-text-output
+```
+
 ### Clone specific branch
 
 ```text
