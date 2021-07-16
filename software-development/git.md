@@ -235,9 +235,9 @@ When reviewing a PR, instead of creating a branch locally we recommend using the
 git remote add username git@github.com:username/repository_name.git
 git fetch username
 # If you want to temporarily check out the fork's branch in a detached HEAD state:
-git checkout username/add-text-output
+git checkout username/branch-name
 # If you want to create a new local branch that tracks the fork's branch:
-git checkout -b add-text-output username/add-text-output
+git checkout -b branch-name username/branch-name
 ```
 
 ### Clone specific branch
