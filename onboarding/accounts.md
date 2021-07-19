@@ -35,6 +35,11 @@ To request an account for most of these services, ask on Slack \#welcome and tag
         Event announcements go out to this list.</td>
     </tr>
     <tr>
+      <td style="text-align:left"><b>Google Lab account</b>
+      </td>
+      <td style="text-align:left">We have a Google lab account. Contact @alexfoias on slack to obtain the credentials.</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><b>CAS (Central Authentication Service)</b>
       </td>
       <td style="text-align:left">
