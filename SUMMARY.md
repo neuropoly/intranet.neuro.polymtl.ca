@@ -93,4 +93,10 @@
   * [🇨🇦  Living in Montreal](practical-information/moving-to-montreal.md)
   * [Scholarships & Bursaries](practical-information/scholarships-and-bursaries.md)
   * [Purchasing Supplies](practical-information/purchasing-hardware-and-lab-supplies.md)
+* [😎 Tips and Tricks](tips-and-tricks/README.md)
+  * [Programming](tips-and-tricks/programming/README.md)
+    * [Unix Shell \(bash\)](tips-and-tricks/programming/unix-shell-bash.md)
+    * [Python](tips-and-tricks/programming/python.md)
+    * [Matlab](tips-and-tricks/programming/matlab.md)
+    * [C++](tips-and-tricks/programming/c++.md)
 
