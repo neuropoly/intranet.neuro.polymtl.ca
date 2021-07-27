@@ -1,2 +1,2 @@
-# 📚 Bibliography
+# Bibliography
 
