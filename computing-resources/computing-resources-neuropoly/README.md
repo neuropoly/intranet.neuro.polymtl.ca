@@ -119,6 +119,8 @@ ControlPath ~/.ssh/%r@%h:%p
 ControlPersist 3s
 ```
 
+To avoid having to enter your password, you can also use an [SSH key](../../software-development/bash-shell/#ssh-public-key).
+
 ### VNC \(graphical interface\)
 
 {% tabs %}
