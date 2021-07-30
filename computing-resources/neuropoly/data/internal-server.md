@@ -69,6 +69,7 @@ Current **server admins** are:
 * jcohen@polymtl.ca
 * alexandru.foias@polymtl.ca
 * nick.guenther@polymtl.ca
+* taowa.rosetwig@polymtl.ca
 
 The admins should follow [Admin Guide > Add Users](#add-users) to create your account.
 
