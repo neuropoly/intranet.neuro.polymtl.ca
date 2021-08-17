@@ -78,7 +78,7 @@ This is your personal home folder. It is backed-up nightly.
 
 We have an internal server that hosts BIDS datasets. To access it, visit [this page](https://github.com/neuropoly/data-management/blob/master/internal-server.md#usage). 
 
-### Django
+### django
 
 This is our old server. This server is only maintained for old projects. Please **DO NOT** use it if you are starting a new project.
 
@@ -101,4 +101,3 @@ Some VirtualBox machines are accessible under **folder\_shared/virtual\_box** \(
 
 * **WinXP\_IDEA** –&gt; Siemens pulse sequence program environment
 * **WinXP\_Terranova** –&gt; Prospa software for Terranova MRI
-

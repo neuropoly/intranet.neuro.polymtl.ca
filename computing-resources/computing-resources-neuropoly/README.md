@@ -236,7 +236,7 @@ The following CPU and GPU clusters are available for internal use at **NeuroPoly
 
 [https://calendar.google.com/calendar/u/0/embed?src=4mg6bgd9pv55thf9486t2miht8@group.calendar.google.com](https://calendar.google.com/calendar/u/0/embed?src=4mg6bgd9pv55thf9486t2miht8@group.calendar.google.com)
 
-### Rosenberg
+### rosenberg
 
 | Spec         | Description                  |
 | ------------ | ---------------------------- |
@@ -252,7 +252,7 @@ The following CPU and GPU clusters are available for internal use at **NeuroPoly
 
 _For system administrators_: Please log all the changes on the station by updating the ansible scripts from [https://github.com/neuropoly/computers](https://github.com/neuropoly/computers).
 
-### Bireli
+### bireli
 
 | Spec         | Description                                                                                                                                                               |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -265,7 +265,7 @@ _For system administrators_: Please log all the changes on the station by updati
 * Use your **Poly-Grames** account to connect on the machine
 * [How to use GPU Clusters at NeuroPoly](https://intranet.neuro.polymtl.ca/computing-resources/computing-resources-neuropoly/gpus)
 
-### Joplin
+### joplin
 
 | Spec         | Description    |
 | ------------ | -------------- |
@@ -282,7 +282,7 @@ To access the sct_testing_management development webpage use the username: sct_t
 
 For fast I/O, use the NVMe hard drive, which is automatically mounted on your home at: `~/data_nvme_XXX` (XXX being your GRAMES matricule)
 
-### Abbey
+### abbey
 
 | Spec            | Description                                                                                                                                                              |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -291,7 +291,7 @@ For fast I/O, use the NVMe hard drive, which is automatically mounted on your ho
 | **Hostname**    |                                                                                                                                                                          |
 | **Credentials** | [NeuroPoly Internal Document: Abbey Teamviewer Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.mtnjvepco2an) |
 
-### Fitzgerald
+### fitzgerald
 
 | Spec            | Description                                                                                                                                                                   |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -300,7 +300,7 @@ For fast I/O, use the NVMe hard drive, which is automatically mounted on your ho
 | **Hostname**    |                                                                                                                                                                               |
 | **Credentials** | [NeuroPoly Internal Document: Fitzgerald TeamViewer Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.9kegj6dmbnac) |
 
-### Tristano
+### tristano
 
 | Spec            | Description                                                                                                                                                          |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -311,7 +311,7 @@ For fast I/O, use the NVMe hard drive, which is automatically mounted on your ho
 
 For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.ca)
 
-### Vnmrj
+### vnmrj
 
 | Spec            | Description                                                                                                                                                       |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -320,7 +320,9 @@ For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.
 | **Hostname**    |                                                                                                                                                                   |
 | **Credentials** | [NeuroPoly Internal Document: VNMRJ VNC Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.jzew4w9jgpfp) |
 
-### Idea3t - Siemens Pulse sequence programming for VE11C (Prisma)
+
+### idea3t - Siemens Pulse sequence programming for VE11C (Prisma)
+
 
 | Spec            | Description                                                                                                                                                           |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -338,7 +340,7 @@ This computer is to be used for programming pulse sequences within the Siemens I
 **Solution:** Install remote Desktop v10 or higher (v8 does not work)
 ```
 
-### Idea7t - Siemens Pulse sequence programming for VE12U (Terra)
+### idea7t - Siemens Pulse sequence programming for VE12U (Terra)
 
 | Spec            | Description                                                                                                                                                           |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -349,7 +351,7 @@ This computer is to be used for programming pulse sequences within the Siemens I
 
 This computer is to be used for programming pulse sequences within the Siemens IDEA environment for VE12U (Terra).
 
-### Peterson - CST simulations
+### peterson - CST simulations
 
 | Spec            | Description                                                                                                                                                             |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -385,7 +387,7 @@ Then enter your ID and password at poly.
 
 ## Retrieve an old backup
 
-**Duke** (/mri, /projects, /sct_testing) is backed up on **grappelli** every evening at 21:00 EST. In order to retrieve old backup you have to contact Jean-Sébastien Décarie.
+**duke** (/mri, /projects, /sct_testing) is backed up on **grappelli** every evening at 21:00 EST. In order to retrieve old backup you have to contact Jean-Sébastien Décarie.
 
 ## Software Installed <a href="software_installed_at_neuropoly" id="software_installed_at_neuropoly"></a>
 
