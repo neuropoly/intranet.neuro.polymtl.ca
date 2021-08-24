@@ -86,7 +86,7 @@
     * [MRI](bibliography-and-learning/bibliography/untitled.md)
     * [Paperpile Folder](bibliography-and-learning/bibliography/shared-paperpile-folder.md)
   * [🎓 University Courses](bibliography-and-learning/courses.md)
-  * [✈️ Conferences](bibliography-and-learning/conferences.md)
+* [✈️ Conferences](conferences.md)
 * [💡 Ideas for Cool Projects](ideas-for-cool-projects.md)
 * [📎 Practical Information](practical-information/README.md)
   * [VISAs and Work Permits](practical-information/visa.md)
