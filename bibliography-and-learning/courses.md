@@ -361,6 +361,23 @@
       <td style="text-align:left">Fran&#xE7;ais</td>
       <td style="text-align:left"></td>
     </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://sites.google.com/view/ift6268-a2020/course-description?authuser=0">IFT6268</a>
+      </td>
+      <td style="text-align:left">Self-Supervised Representation Learning</td>
+      <td style="text-align:left">English</td>
+      <td style="text-align:left">Aaron Courville</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://sites.google.com/view/ift6135-h2021">IFT6135</a>
+      </td>
+      <td style="text-align:left">
+        <p>Learning Representations</p>
+        <p>(Given in Winter. Intense course but very rewarding. Who took: Naga Karthik)</p>
+      </td>
+      <td style="text-align:left">English</td>
+      <td style="text-align:left">Aaron Courville</td>
+    </tr>
   </tbody>
 </table>
 
