@@ -1,5 +1,7 @@
 # ✈️ Conferences
 
+👉  NeuroPoly's google drive is [here](https://drive.google.com/drive/folders/0Bx3A13n3Q_EANllhUC0wRmlrblk?resourcekey=0-HIxgXUCsE6PKNnsHrcLfOQ).
+
 ## List of Conferences <a id="list_of_conferences"></a>
 
 **Machine Learning:**
