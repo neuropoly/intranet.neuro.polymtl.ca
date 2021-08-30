@@ -108,8 +108,8 @@ Email body:
 
 Please use templates for presentations:
 
-* [Keynote template](https://www.neuro.polymtl.ca/_media/internal_resources/poster_template.key)
-* [PowerPoint template](https://www.neuro.polymtl.ca/_media/internal_resources/poster_template.ppt)
+* [Keynote template](https://drive.google.com/file/d/1I7h7Fe-b5wOyzqFFHqskCGG5fXYwvCAV/view?usp=sharing)
+* [PowerPoint template](https://docs.google.com/presentation/d/1iHf2i2CdAq4VjIh5CBADQnU00xJkDJHX/edit?usp=sharing&ouid=113015882791327478973&rtpof=true&sd=true)
 
 ## Posters <a id="posters"></a>
 
