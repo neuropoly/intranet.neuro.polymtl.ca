@@ -6,6 +6,8 @@ To edit this page, you must be a lab member and part of the NeuroPoly Google Gro
 
 The external URL for this website is: [https://intranet.neuro.polymtl.ca/](https://intranet.neuro.polymtl.ca/)
 
+The main NeuroPoly website is: [https://www.neuro.polymtl.ca/](https://www.neuro.polymtl.ca/)
+
 
 
 
