@@ -119,8 +119,6 @@ Please use templates for presentations:
 
 For the visibility of the lab, please use this template in [Keynote](https://drive.google.com/open?id=1Nqn9u4-J6aNYTWLWY1pa28qRrBWSqxGs) or [PowerPoint](https://drive.google.com/open?id=12CkzxhUF6R8kHm2csfpIAL3vMxbkxV-R) format.
 
-For ISMRM Electronic poster and presentation, please use this [Microsoft PowerPoint template](https://www.neuro.polymtl.ca/_media/internal_resources/template.pptx).
-
 **How to do a poster?**
 
 * [http://colinpurrington.com/tips/academic/posterdesign](http://colinpurrington.com/tips/academic/posterdesign)
