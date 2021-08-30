@@ -1,6 +1,8 @@
 # ✈️ Conferences
 
-👉  NeuroPoly's google drive is [here](https://drive.google.com/drive/folders/0Bx3A13n3Q_EANllhUC0wRmlrblk?resourcekey=0-HIxgXUCsE6PKNnsHrcLfOQ).
+{% hint style="info" %}
+NeuroPoly's conference folder is on [google drive](https://drive.google.com/drive/folders/0Bx3A13n3Q_EANllhUC0wRmlrblk?resourcekey=0-HIxgXUCsE6PKNnsHrcLfOQ).
+{% endhint %}
 
 ## List of Conferences <a id="list_of_conferences"></a>
 
