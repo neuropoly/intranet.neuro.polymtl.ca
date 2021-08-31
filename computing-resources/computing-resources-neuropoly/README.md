@@ -38,6 +38,10 @@ Password: your\_polygrames\_password
 
 ## Connect to NeuroPoly Computers
 
+### Locally
+
+To log into a local station at NeuroPoly use your GRAMES account.
+
 ### VPN
 
 When working remotely from off-campus you need to use the [VPN](http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn).
