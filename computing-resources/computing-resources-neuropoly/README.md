@@ -34,7 +34,9 @@ Password: your\_polygrames\_password
 
 ## List of Computers at NeuroPoly
 
-[List of Servers/Computers/Printers at NeuroPoly](https://docs.google.com/document/d/11GEh5YvYRnWnERv26TezcyvyPF2W5KF0uoI2U6p7XsM/edit)
+Are you new to NeuroPoly and looking for a desk and a station? Please check the [list of Desktop/Server/Clusters computers and Printers](https://docs.google.com/document/d/11GEh5YvYRnWnERv26TezcyvyPF2W5KF0uoI2U6p7XsM/edit) so you can pick one that is free. If you'd like a particular desk and someone else is using a station remotely, please ask the admins to move the station to another location.
+
+If you prefer to work on your laptop, please let the admins know and we will give you a screen you can connect your laptop to.
 
 ## Connect to NeuroPoly Computers
 
