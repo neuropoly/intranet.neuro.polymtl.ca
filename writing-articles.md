@@ -227,7 +227,7 @@ Incorporate figure in article:
 
 For all articles/abstracts, please add the following:
 
-> Funded by the Canada Research Chair in Quantitative Magnetic Resonance Imaging \[950-230815\], the Canadian Institute of Health Research \[CIHR FDN-143263\], the Canada Foundation for Innovation \[32454, 34824\], the Fonds de Recherce du Québec - Santé \[28826\], the Natural Sciences and Engineering Research Council of Canada \[RGPIN-2019-07244\], the Canada First Research Excellence Fund \(IVADO and TransMedTech\), the Courtois NeuroMod project and the Quebec BioImaging Network \[5886, 35450\].
+> Funded by the Canada Research Chair in Quantitative Magnetic Resonance Imaging \[950-230815\], the Canadian Institute of Health Research \[CIHR FDN-143263\], the Canada Foundation for Innovation \[32454, 34824\], the Fonds de Recherche du Québec - Santé \[28826\], the Natural Sciences and Engineering Research Council of Canada \[RGPIN-2019-07244\], the Canada First Research Excellence Fund \(IVADO and TransMedTech\), the Courtois NeuroMod project and the Quebec BioImaging Network \[5886, 35450\].
 
 For projects involving SEM, please add:
 
