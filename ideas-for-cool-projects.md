@@ -22,7 +22,7 @@ description: "Do you have an idea for a cool research project? Awesome! Please w
 
 * [Data augmentation for one-shot image segmentation](https://arxiv.org/pdf/1902.09383v1.pdf)
 * [Data augmentation, contrast agnostic segmentation with synthetic images](https://arxiv.org/abs/2003.01995) \(Marie-Helene\)
-* [MS lesion segmentation](https://github.com/ivadomed/pipeline-ms-lesion)
+* [MS lesion segmentation](https://github.com/ivadomed/pipeline-ms-lesion) \(Naga\)
 * Compare SoftSeg outputs and PVE \(Andreanne, Charley\)
 * AxonDeepSeg
   * Active learning \(Mélanie\)
@@ -33,9 +33,8 @@ description: "Do you have an idea for a cool research project? Awesome! Please w
   * **training multi-contrast models for MS lesion segmentation**
   * multi-modal training, MS lesion segmentation, without co-registration \(model would learn that\)
   * **neuroRx model training**
-* Misc
-  * [phase-unwrapping](https://github.com/neuropoly/ml-phase-unwrapping) \(project started by Olivier\)
-  * Shimming project: real-time prediction of B0 shift based on resp. training period.
+* [phase-unwrapping](https://github.com/neuropoly/ml-phase-unwrapping) \(Olivier, Uzay\)
+* Shimming project: real-time prediction of B0 shift based on resp. training period.
 
 ## Spinal Cord Toolbox
 
