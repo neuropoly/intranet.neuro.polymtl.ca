@@ -22,6 +22,7 @@ description: "Do you have an idea for a cool research project? Awesome! Please w
 
 * [Data augmentation for one-shot image segmentation](https://arxiv.org/pdf/1902.09383v1.pdf)
 * [Data augmentation, contrast agnostic segmentation with synthetic images](https://arxiv.org/abs/2003.01995) \(Marie-Helene\)
+* [MS lesion segmentation](https://github.com/ivadomed/pipeline-ms-lesion)
 * Compare SoftSeg outputs and PVE \(Andreanne, Charley\)
 * AxonDeepSeg
   * Active learning \(Mélanie\)
