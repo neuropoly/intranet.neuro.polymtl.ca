@@ -369,14 +369,32 @@
       <td style="text-align:left">Aaron Courville</td>
     </tr>
     <tr>
+      <td style="text-align:left"><a href="https://www.iro.umontreal.ca/~slacoste/teaching/ift6269/A20/">IFT6269</a>
+      </td>
+      <td style="text-align:left">
+        <p>Probabilistic Graphical Models</p>
+        <p><em>(Given in Fall. Math heavy, assignment with proofs + coding exercises. Really interesting course! Who took: Naga Karthik)</em> 
+        </p>
+      </td>
+      <td style="text-align:left">English</td>
+      <td style="text-align:left">Simon Lacoste-Julien</td>
+    </tr>
+    <tr>
       <td style="text-align:left"><a href="https://sites.google.com/view/ift6135-h2021">IFT6135</a>
       </td>
       <td style="text-align:left">
         <p>Learning Representations</p>
-        <p>(Given in Winter. Intense course but very rewarding. Who took: Naga Karthik)</p>
+        <p><em>(Given in Winter. Intense course but very rewarding. Who took: Naga Karthik)</em>
+        </p>
       </td>
       <td style="text-align:left">English</td>
       <td style="text-align:left">Aaron Courville</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">IFT6145</td>
+      <td style="text-align:left">3D Vision (Vision tridimensionnelle)</td>
+      <td style="text-align:left">French</td>
+      <td style="text-align:left">Sebastien Roy</td>
     </tr>
   </tbody>
 </table>
