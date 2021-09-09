@@ -23,7 +23,7 @@ If you work on a personal laptop and need desktop equipment \(a monitor, mouse, 
 
 ### Requirements for room access
 
-To be able to access the lab rooms, you will need to activate your Polytechnique card for the specific rooms you wish to access. To activate it, please contact [dge.acces@polymtl.ca](mailto:dge.acces@polymtl.ca).
+To be able to access the lab rooms, you will need to activate your Polytechnique card for the specific rooms you wish to access. To activate it, please contact [dge.acces@polymtl.ca](mailto:dge.acces@polymtl.ca) and CC [jcohen@polymtl.ca](mailto:jcohen@polymtl.ca). If you are a new employee, please follow the onboarding procedure to obtain your ID card.
 
 ### COVID-19 Protocol
 
