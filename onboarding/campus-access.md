@@ -8,12 +8,12 @@ description: >-
 
 ### Lab rooms at Polytechnique
 
-As a NeuroPoly lab member, the majority of your time will be spent in one of two main rooms at Polytechnique \(depending on the focus of your work\):
+As a NeuroPoly lab member, the majority of your time at Polytechnique will be spent in one of two main rooms, depending on the focus of your work:
 
-* L-5613: Primarily for students working on RF/hardware/shimming projects.
-* L-5626: Primarily for students working on image analysis/deep learning projects.
+* L-5613: Primarily for those working on RF/hardware/shimming projects.
+* L-5626: Primarily for those working on image analysis/deep learning projects.
 
-There are also separate rooms for servers \(L-7944.A\), printers \(L-5619\), as well as Julien Cohen-Adad's office \(L-5610\) and Nicola Stikov's office \(L-5608\).
+There are also separate rooms for servers \(L-7944.A\), printers \(L-5619\), as well as Julien Cohen-Adad's office \(L-5610\) and Nicola Stikov's office \(L-5608\). Some of these doors require codes to access, these can be found in the [Internal Document](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.o24dt0r1154g).
 
 ### Desk/computer access
 
