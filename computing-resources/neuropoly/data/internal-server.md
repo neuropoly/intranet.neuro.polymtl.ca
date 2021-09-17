@@ -248,7 +248,7 @@ Then, to upload it, pick a name under `datasets/`, e.g. "my-new-repo", and do
 
 ```
 $ git remote add origin git@data.neuro.polymtl.ca:datasets/my-new-repo
-$ git annex sync --content origin
+$ git annex copy --to origin
 $ # verify your .nii.gz files were annexed and uploaded
 $ git annex whereis
 ```
