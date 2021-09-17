@@ -58,7 +58,6 @@ upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 For smooth operation, everyone should do on all of their machines:
 
 ```
-git config --global core.autocrlf true
 git config --global push.default current
 ```
 
@@ -76,6 +75,7 @@ For our purposes, we need to make sure repos are configured with
 
 ```
 # .gitattributes
+*             text=auto
 *             annex.largefiles=anything
 *.nii.gz      filter=annex
 *.nii         filter=annex
@@ -91,7 +91,7 @@ $ git init
 $ vi README # write something useful in this
 $ git add README; git commit -m "Initial commit"
 $ (echo ".DS_Store") > .gitignore
-$ (echo "*   annex.largefiles=anything"; echo "*.nii.gz   filter=annex"; echo "*.nii   filter=annex"; echo "*.tif   filter=annex") > .gitattributes
+$ (echo "*   text=auto"; echo "*   annex.largefiles=anything"; echo "*.nii.gz   filter=annex"; echo "*.nii   filter=annex"; echo "*.tif   filter=annex") > .gitattributes
 $ git add .gitignore .gitattributes; git commit -m "Configure git-annex"
 $ git annex init
 $ git annex dead here # make sure *this* copy isn't shared to others; the repo should be shared via the server
