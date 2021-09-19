@@ -111,7 +111,7 @@ git add .
 git commit -m "Initial data"
 ```
 
-This ensures we don't commit useless files (`.gitignore`), and saves a lot of time by only processing NIfTI images (`.gitattributes`) -- by default, git-annex reads all files even if it doesn't ultimately decide to annex them.
+If you are working on a private, internal dataset, continue by [uploading to `data.neuro.polymtl.ca`](./internal-server.md#new-repository).
 
 ## Troubleshooting
 
