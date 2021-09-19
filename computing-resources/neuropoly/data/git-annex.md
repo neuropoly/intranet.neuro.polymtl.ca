@@ -79,7 +79,7 @@ cd my-new-repo
 
 git init
 vi README # write something useful in this
-git add README; git commit -m "Initial commit"
+git add README && git commit -m "Initial commit"
 
 cat <<EOF > .gitignore
 .DS_Store
