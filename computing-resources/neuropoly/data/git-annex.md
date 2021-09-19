@@ -86,7 +86,7 @@ cat <<EOF > .gitignore
 EOF
 
 cat <<EOF > .gitattributes
-# Normalize line-endings to \n 
+# Normalize line-endings to \n
 *             text=auto
 
 # Configure filetypes stored by git-annex.
