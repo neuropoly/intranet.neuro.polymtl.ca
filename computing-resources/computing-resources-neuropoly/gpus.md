@@ -4,6 +4,8 @@ description: How to use GPU Servers at Neuropoly
 
 # GPUs
 
+This document is being ported from [here](https://docs.google.com/document/d/1X--A2kql4GypfI6fNFIOYA_b6uQdeu2_Kue7n8KkTOU/edit#).
+
 Neuropoly has several GPUs available for training deep learning models.
 
 * `bireli.neuro.polymtl.ca` -  2 x [GeForce GTX TITAN X](https://www.nvidia.com/en-us/geforce/graphics-cards/geforce-gtx-titan-x/specifications/) \(released 2014\)

@@ -236,7 +236,7 @@ The following CPU and GPU clusters are available for internal use at **NeuroPoly
 
 * By default, the root \(OS and home folder\) mount point is on the NVME disk
 * Shared **scratch** located under **/scratch**. Please clean the unnecessary data after you finish the processing.
-* [How to use GPU Clusters at NeuroPoly](https://intranet.neuro.polymtl.ca/computing-resources/computing-resources-neuropoly/gpus)
+* [How to use GPU Clusters at NeuroPoly](https://docs.google.com/document/d/1X--A2kql4GypfI6fNFIOYA_b6uQdeu2_Kue7n8KkTOU/edit#heading=h.bsou9v6ronoa)
   * [Video tutorial to get started](https://drive.google.com/file/d/17-eLVBiMNA8bNbfzpD6NLxHApZRDoy1B/view?usp=sharing)
 
 _For system administrators_: Please log all the changes on the station by updating the ansible scripts from [https://github.com/neuropoly/computers](https://github.com/neuropoly/computers).
@@ -252,7 +252,7 @@ _For system administrators_: Please log all the changes on the station by updati
 
 * Add event to the computer calendar
 * Use your **Poly-Grames** account to connect on the machine
-* [How to use GPU Clusters at NeuroPoly](https://intranet.neuro.polymtl.ca/computing-resources/computing-resources-neuropoly/gpus)
+* [How to use GPU Clusters at NeuroPoly](https://docs.google.com/document/d/1X--A2kql4GypfI6fNFIOYA_b6uQdeu2_Kue7n8KkTOU/edit#heading=h.bsou9v6ronoa)
 
 ### Joplin
 
