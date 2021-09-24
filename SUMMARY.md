@@ -21,6 +21,7 @@
       * [OctoPrint](mri-scanning/coils/3d-printing/octoprint.md)
     * [FAQ](mri-scanning/coils/faq.md)
     * [PCB Manufacturing](mri-scanning/coils/pcb-manufacturing.md)
+    * [CNC machine - Genmitsu 3018-PROVer](mri-scanning/coils/cnc-machine-genmitsu-3018-prover.md)
   * [Phantoms](mri-scanning/phantoms/README.md)
     * [Phantom Recipes for MRI](mri-scanning/phantoms/phantom-recipes-for-mri.md)
 * [✍️ Academic Writing](writing-articles.md)
