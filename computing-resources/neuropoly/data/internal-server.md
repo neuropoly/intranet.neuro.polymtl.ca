@@ -19,8 +19,9 @@ Table of Contents
   * [Upload](#upload)
   * [Reviewing Pull Requests](#reviewing-pull-requests)
     * [Commit Rights](#commit-rights)
-    * [Committing](#committing) 
+    * [Committing](#committing)
   * [New repository](#new-repository)
+  * [Releases](#releases)
   * [Permissions](#permissions)
   * [Renaming](#renaming)
   * [Deletion](#deletion)
@@ -260,6 +261,40 @@ Note that you have personal space under "CREATOR", so if your username is "zambo
 ```
 $ git remote add origin git@data.neuro.polymtl.ca:zamboni/project1
 $ git push origin
+```
+
+### Releases
+
+To make a release, use an [annotated git tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging#_annotated_tags). Use tag name as the name of the release, and the annotation for the release notes. Our naming convention for datasets is "rYYYYMMDD".
+
+For example, if today is September 8th, 2019, then to create a release do:
+
+```
+$ git tag -a r20190908
+```
+
+To view available releases, first [download](#download) a dataset, then run
+
+```
+$ git tag -l
+```
+
+To see the release notes for a specific release, use
+
+```
+$ git show r20190908
+```
+
+To use a specific release, either [download](#download) the dataset and then
+
+```
+$ git checkout r20190908
+```
+
+*or*, for example in a reproducible processing script, you can use `clone -b` to download only that specific release:
+
+```
+$ git clone --depth 1 -b r20190908 git@data.neuro.polymtl.ca:datasets/example.git
 ```
 
 ### Permissions
