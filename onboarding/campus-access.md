@@ -6,6 +6,8 @@ description: >-
 
 # Campus Access
 
+### Please advise one of the PIs or Alexandru Foias before arriving for the first time on campus in order to organize the logistics together.
+
 ### Lab rooms at Polytechnique
 
 As a NeuroPoly lab member, the majority of your time at Polytechnique will be spent in one of two main rooms, depending on the focus of your work:
