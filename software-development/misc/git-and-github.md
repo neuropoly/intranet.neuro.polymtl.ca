@@ -6,27 +6,27 @@
 **Everyone working with `git` at NeuroPoly Lab: Please take 2+ hours of your time and learn how to use `git` before using it.**
 {% endhint %}
 
-[**Official Git Documentation**](https://git-scm.com/book/en/v2)\*\*\*\*
+[**Official Git Documentation**](https://git-scm.com/book/en/v2)****
 
-\*\*\*\*
+****
 
-| Name | Type |
-| :--- | :--- |
-| [Learn By Doing](https://githowto.com/) | Tutorial |
-| [Coursera: Introduction to Git/GitHub](https://www.coursera.org/learn/introduction-git-github) | Course |
-| [Github's Learn By Doing](https://try.github.io/) | Resource List |
-| [sr.ht's Learn By Doing](https://git-send-email.io/) | Tutorial |
-| [Ramp up on Git and GitHub \(GitHub Learning Lab\)](https://lab.github.com/githubtraining/ramp-up-on-git-and-github) | Course |
-| [Managing merge conflicts \(GitHub Learning Lab\)](https://lab.github.com/githubtraining/managing-merge-conflicts) | Course |
-| [Atlassian Git Tutorial](http://www.atlassian.com/git) | Tutorial |
-| [A guide to managing git mistakes \(Julia Evans\)](https://wizardzines.com/zines/oh-shit-git/) | Guide |
-| [The curious coder's guide to git \(Matthew Brett\)](https://matthew-brett.github.io/curious-git/index.html) | Guide |
-| [Another great tutorial from Elizabeth DuPre](http://emdupre.github.io/git-course/), and a video [here](https://neurohackademy.org/course/collaborating-with-git-and-github/) | Course |
-| [Pierre Rioux Presentation](https://www.neuro.polymtl.ca/_media/tips_and_tricks/git.pdf)  | Guide |
-| [Sven Hofmann README](https://gist.github.com/hofmannsven/6814451) | Notes |
-| [git - the simple guide \(Roger Dudler\)](https://rogerdudler.github.io/git-guide/) | Guide |
-| Snapshot of all commands: [http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf) | Notes |
-| [Methods to dig yourself out of common pitfalls](https://ohshitgit.com/) | Guide |
+| Name                                                                                                                                                                          | Type          |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| [Learn By Doing](https://githowto.com)                                                                                                                                        | Tutorial      |
+| [Coursera: Introduction to Git/GitHub](https://www.coursera.org/learn/introduction-git-github)                                                                                | Course        |
+| [Github's Learn By Doing](https://try.github.io)                                                                                                                              | Resource List |
+| [sr.ht's Learn By Doing](https://git-send-email.io)                                                                                                                           | Tutorial      |
+| [Ramp up on Git and GitHub (GitHub Learning Lab)](https://lab.github.com/githubtraining/ramp-up-on-git-and-github)                                                            | Course        |
+| [Managing merge conflicts (GitHub Learning Lab)](https://lab.github.com/githubtraining/managing-merge-conflicts)                                                              | Course        |
+| [Atlassian Git Tutorial](http://www.atlassian.com/git)                                                                                                                        | Tutorial      |
+| [A guide to managing git mistakes (Julia Evans)](https://wizardzines.com/zines/oh-shit-git/)                                                                                  | Guide         |
+| [The curious coder's guide to git (Matthew Brett)](https://matthew-brett.github.io/curious-git/index.html)                                                                    | Guide         |
+| [Another great tutorial from Elizabeth DuPre](http://emdupre.github.io/git-course/), and a video [here](https://neurohackademy.org/course/collaborating-with-git-and-github/) | Course        |
+| [Pierre Rioux Presentation](https://www.neuro.polymtl.ca/\_media/tips_and_tricks/git.pdf)                                                                                     | Guide         |
+| [Sven Hofmann README](https://gist.github.com/hofmannsven/6814451)                                                                                                            | Notes         |
+| [git - the simple guide (Roger Dudler)](https://rogerdudler.github.io/git-guide/)                                                                                             | Guide         |
+| Snapshot of all commands: [http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf)                            | Notes         |
+| [Methods to dig yourself out of common pitfalls](https://ohshitgit.com)                                                                                                       | Guide         |
 
 ## Installation
 
@@ -76,32 +76,32 @@ Basic steps are:
 If you get the following error message, [create an SSH key](http://www.neuro.polymtl.ca/doku.php?id=tips_and_tricks:git#github):
 
 {% hint style="warning" %}
-> Warning: Permanently added the RSA host key for IP address 'XX.XX.XX.XX' to the list of known hosts.  
-> Permission denied \(publickey\).  
-> fatal: Could not read from remote repository.  
+> Warning: Permanently added the RSA host key for IP address 'XX.XX.XX.XX' to the list of known hosts.\
+> Permission denied (publickey).\
+> fatal: Could not read from remote repository.\
 > Please make sure you have the correct access rights and the repository exists.
 {% endhint %}
 
 
 
-#### Keep your branch up-to-date <a id="maintain_your_branch_up-to-date"></a>
+#### Keep your branch up-to-date <a href="maintain_your_branch_up-to-date" id="maintain_your_branch_up-to-date"></a>
 
 Once the clone is complete your repo will have a remote named “origin” that points to your fork on GitHub. Don’t let the name confuse you, this does not point to the original repo you forked from. To help you keep track of that repo you need to add another remote named “upstream”:
 
 * open a terminal, go to your repos and type:
 
-```text
+```
   git remote add upstream git://github.com/neuropoly/spinalcordtoolbox.git
   git fetch upstream
 ```
 
-* Then \(like “git pull” which is fetch + merge\):
+* Then (like “git pull” which is fetch + merge):
 
 git merge upstream/master master
 
-* Or if you want, replace your local work on top of the fetched branch \(like a “git pull –rebase”\)
+* Or if you want, replace your local work on top of the fetched branch (like a “git pull –rebase”)
 
-```text
+```
   git rebase upstream/master
 ```
 
@@ -116,22 +116,22 @@ The `–rebase` option can be used to ensure a linear history by preventing unne
 ```
 
 * Log in to your Github account and go to your branch.
-* Click on “Pull request”. You will be sent to a page asking you to describe your modifications; you can give any title you want to your modifications \(it doesn't need to be the name of your branch\).
+* Click on “Pull request”. You will be sent to a page asking you to describe your modifications; you can give any title you want to your modifications (it doesn't need to be the name of your branch).
 * Click on “Create a pull request”.
 
 Now you need to wait that the person in charge of the project accepts your modifications; if this person finds problems in your code, you can still push new changes to your code and they will be added to your pull request.Edit
 
-#### How to "merge" specific files from another branch <a id="how_to_merge_specific_files_from_another_branch"></a>
+#### How to "merge" specific files from another branch <a href="how_to_merge_specific_files_from_another_branch" id="how_to_merge_specific_files_from_another_branch"></a>
 
 The tool to use is “git checkout”:
 
-```text
+```
   git checkout source_branch <paths>...
 ```
 
 You simply need to give “git checkout” the name of the feature branch and the paths to the specific files that we want to add to your master branch as follows:
 
-```text
+```
   $ git branch
   * master
     your_branch
@@ -152,7 +152,7 @@ $ git commit -m “explanation of the commit you are doing”
 
 See the page [git tip how to merge specific files from another branch](http://jasonrudolph.com/blog/2009/02/25/git-tip-how-to-merge-specific-files-from-another-branch/) for more details.
 
-It is not possible to do this on SourceTree yet but an issue was opened on July 17th 2013 and is not closed yet. See [the issue here](https://jira.atlassian.com/browse/SRCTREEWIN-827?jql=text%20~%20%22merge%20specific%20files%22%20AND%20created%20%3E%3D%202013-07-17%20AND%20created%20%3C%3D%202013-07-18).
+It is not possible to do this on SourceTree yet but an issue was opened on July 17th 2013 and is not closed yet. See [the issue here](https://jira.atlassian.com/browse/SRCTREEWIN-827?jql=text%20\~%20%22merge%20specific%20files%22%20AND%20created%20%3E%3D%202013-07-17%20AND%20created%20%3C%3D%202013-07-18).
 
 See also the interesting page [Smart branching with sourcetree and git flow](http://blog.sourcetreeapp.com/2012/08/01/smart-branching-with-sourcetree-and-git-flow/) about using Git flow to set the right strategy to gang up to contribute to your project.
 
@@ -160,73 +160,73 @@ See also the interesting page [Smart branching with sourcetree and git flow](htt
 
 ### List remote branches
 
-```text
+```
   git remote show origin
 ```
 
-#### Track remote branch <a id="track_remote_branch"></a>
+#### Track remote branch <a href="track_remote_branch" id="track_remote_branch"></a>
 
-```text
+```
   git remote update
   git fetch
 ```
 
-#### Checkout existing branch <a id="checkout_existing_branch"></a>
+#### Checkout existing branch <a href="checkout_existing_branch" id="checkout_existing_branch"></a>
 
 ```bash
   git checkout <branch_name>
 ```
 
-If branch is not tracked \(use \`\`\`git remote show origin\`\`\` to check if branch is listed\), then use:
+If branch is not tracked (use \`\`\`git remote show origin\`\`\` to check if branch is listed), then use:
 
-```text
+```
   git fetch
 ```
 
 If you still don't see the branch listed, maybe your local git repository does not allow to fetch all branches on master. This happens if you clone with –depth=X. To check if this is the case, run:
 
-```text
+```
   git config --get remote.origin.fetch
 ```
 
 If result is not “+refs/heads/\*:refs/remotes/origin/\*”, then update the remote.origin.fetch variable using:
 
-```text
+```
   git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
 ```
 
 Then, fetch:
 
-```text
+```
   git fetch
 ```
 
 Now, all tracked branches should appear when running:
 
-```text
+```
   git remote show origin
 ```
 
-#### Clone specific branch <a id="clone_specific_branch"></a>
+#### Clone specific branch <a href="clone_specific_branch" id="clone_specific_branch"></a>
 
-```text
+```
 git clone -b <branch> <remote_repo> --depth 1 
 ```
 
-#### Create a branch <a id="create_a_branch"></a>
+#### Create a branch <a href="create_a_branch" id="create_a_branch"></a>
 
-```text
+```
   git checkout -b <branch_name>
 ```
 
-#### Push to remote <a id="push_to_remote"></a>
+#### Push to remote <a href="push_to_remote" id="push_to_remote"></a>
 
-```text
+```
 git push -u
 git push -u origin <branch_name>  # push to specific branch
 ```
 
-#### Remove a branch <a id="remove_a_branch"></a>
+#### Remove a branch <a href="remove_a_branch" id="remove_a_branch"></a>
 
 To remove a local branch
 
@@ -234,15 +234,15 @@ To remove a local branch
   git branch -D <branch_name>
 ```
 
-To remove a remote branch \(if you know what you are doing!\)
+To remove a remote branch (if you know what you are doing!)
 
-```text
+```
   git push origin :<branch_name>
 ```
 
-### General usage <a id="general_usage"></a>
+### General usage <a href="general_usage" id="general_usage"></a>
 
-#### Upload local repository for the first time <a id="upload_local_repository_for_the_first_time"></a>
+#### Upload local repository for the first time <a href="upload_local_repository_for_the_first_time" id="upload_local_repository_for_the_first_time"></a>
 
 First, create repository in github or bitbucket. Then, open a Terminal and run:
 
@@ -255,19 +255,19 @@ git commit -m 'First commit'
 git push -u origin master
 ```
 
-#### Switch local repository to another branch <a id="switch_local_repository_to_another_branch"></a>
+#### Switch local repository to another branch <a href="switch_local_repository_to_another_branch" id="switch_local_repository_to_another_branch"></a>
 
 ```bash
 git checkout <BRANCH_NAME>
 ```
 
-#### Check which branch you are currently working on <a id="check_which_branch_you_are_currently_working_on"></a>
+#### Check which branch you are currently working on <a href="check_which_branch_you_are_currently_working_on" id="check_which_branch_you_are_currently_working_on"></a>
 
 ```bash
 git branch
 ```
 
-#### Create repository inside repository <a id="create_repository_inside_repository"></a>
+#### Create repository inside repository <a href="create_repository_inside_repository" id="create_repository_inside_repository"></a>
 
 Use submodules:
 
@@ -276,12 +276,12 @@ Use submodules:
 
 ## Commits
 
-| Term | Description |
-| :--- | :--- |
-| **tracked file** | A tracked file is one that is part of the git version control. New files are untracked. |
+| Term               | Description                                                                                                                                                                                                                                                                                  |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **tracked file**   | A tracked file is one that is part of the git version control. New files are untracked.                                                                                                                                                                                                      |
 | **untracked file** | An untracked file is one that is not part of the git version control. This includes new files, and any files that are specified to be untracked. For example, you may want to ignore files in the `env/` folder. To mark a file as untracked, you can add the file to the `.gitignore` file. |
-| **head** | The HEAD is the most recent snapshot, or commit. |
-| **commit ID** | The commit ID is the 40-character alphanumeric identifier for a given commit. It is a hash, generated using SHA1 \(cryptographic algorithm\). |
+| **head**           | The HEAD is the most recent snapshot, or commit.                                                                                                                                                                                                                                             |
+| **commit ID**      | The commit ID is the 40-character alphanumeric identifier for a given commit. It is a hash, generated using SHA1 (cryptographic algorithm).                                                                                                                                                  |
 
 ### Commit Messages
 
@@ -293,13 +293,13 @@ git commit -m "A message describing your commit"
 
 However, you may want a longer, more descriptive message. To do this, just run:
 
-```text
+```
 git commit
 ```
 
 This will open the default text editor, so that you can add a more descriptive message:
 
-```text
+```
 Commit message style guide for Git
 
 The first line of a commit message serves as a summary.  When displayed
@@ -323,11 +323,11 @@ text editors are capable of automating this.
 
 For more information on commit messages:
 
-[https://commit.style/](https://commit.style/)
+[https://commit.style/](https://commit.style)
 
 [https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message](https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message)
 
-[https://github.com/neuropoly/spinalcordtoolbox/wiki/git\_rules](https://github.com/neuropoly/spinalcordtoolbox/wiki/git_rules)
+[https://github.com/neuropoly/spinalcordtoolbox/wiki/git_rules](https://github.com/neuropoly/spinalcordtoolbox/wiki/git_rules)
 
 ### Amending Commits
 
@@ -343,7 +343,7 @@ or
 git commit --amend -m "New commit message"
 ```
 
-This will add the changes you have added to the most recent commit. Make sure to only use this on local commits \(i.e. commits that have not been pushed\).
+This will add the changes you have added to the most recent commit. Make sure to only use this on local commits (i.e. commits that have not been pushed).
 
 ### Rollbacks
 
@@ -374,7 +374,7 @@ git push -f
 
 ## HOW TO
 
-#### Configure git <a id="configure_git"></a>
+#### Configure git <a href="configure_git" id="configure_git"></a>
 
 Before starting: configure git to identify you for each commit
 
@@ -386,15 +386,15 @@ git config --global user.name <YOUR_NAME>
 
 Define the author email to be used for all commits by the current user.
 
-```text
+```
 git config --global alias.<alias-name> <git-command>
 ```
 
-more info: [http://www.atlassian.com/git/tutorial/git-basics\#!config](http://www.atlassian.com/git/tutorial/git-basics#!config)Edit
+more info: [http://www.atlassian.com/git/tutorial/git-basics#!config](http://www.atlassian.com/git/tutorial/git-basics#!config)Edit
 
-#### Show changed files between two commits <a id="show_changed_files_between_two_commits"></a>
+#### Show changed files between two commits <a href="show_changed_files_between_two_commits" id="show_changed_files_between_two_commits"></a>
 
-```text
+```
 git diff --name-only SHA1 SHA2
 ```
 
@@ -410,100 +410,100 @@ Create a repository
 
 Create folder:
 
-```text
+```
 mkdir my_repos.git
 ```
 
 Go there:
 
-```text
+```
 cd my_repos.git
 ```
 
 Copy repository to your station
 
-```text
+```
 git clone path_to_my_repos/my_repos.git
 ```
 
 Rename directory
 
-```text
+```
 mv my_repos.git working_dir
 ```
 
-N.B. Now you can copy/modify files in your working\_dir
+N.B. Now you can copy/modify files in your working_dir
 
 Commit changes locally
 
 Add the files you want to your commit list, e.g.:
 
-```text
+```
 git add *.m
 ```
 
-To add all modified \(or deleted\) files automatically, use:
+To add all modified (or deleted) files automatically, use:
 
-```text
+```
 git add -u
 ```
 
 Commit the files
 
-```text
+```
 git commit -m 'enter description here'
 ```
 
-N.B. You have to configure the commit params \(do only once\):
+N.B. You have to configure the commit params (do only once):
 
-```text
+```
 git config --global user.name 'Your Name'
 git config --global user.email you@somedomain.com
 ```
 
 Cancel a “git add”
 
-```text
+```
 git reset <file_name>
 ```
 
-Look at the status of the files \(tracked? Modified? Added?\)
+Look at the status of the files (tracked? Modified? Added?)
 
-```text
+```
 git status -s
 ```
 
 Update changes to your repos
 
-git push path\_to\_my\_repos/my\_repos.git master
+git push path_to_my_repos/my_repos.git master
 
 example:
 
-```text
+```
 git push jcohen@door.nmr.mgh.harvard.edu:/autofs/cluster/connectome/git/process_data.git master
 ```
 
 or:
 
-```text
+```
 git push -u origin master
 ```
 
 Download changes from your repos
 
-```text
+```
 git pull
 ```
 
 Removed tracked files
 
-```text
+```
 git rm "file name"
 ```
 
-#### Download <a id="download"></a>
+#### Download <a href="download" id="download"></a>
 
-Download \(server → local station\) a repository for the first time
+Download (server → local station) a repository for the first time
 
 get address of repos, and type
 
@@ -511,7 +511,7 @@ get address of repos, and type
 git clone git@bitbucket.org:neuropoly/spinalcordtoolbox_dev.git
 ```
 
-#### Reset your branch \(revert your local commits\) <a id="reset_your_branch_revert_your_local_commits"></a>
+#### Reset your branch (revert your local commits) <a href="reset_your_branch_revert_your_local_commits" id="reset_your_branch_revert_your_local_commits"></a>
 
 Using the Terminal:
 
@@ -532,51 +532,51 @@ Using Sourcetree:
 
 assume you are on the branch `example-fix`. Find the commit with `origin/example-fix`, and right click on it. Select in the menu `Reset example-fix to this commit` and a dialog will appear. If don't want to keep the changes, you can select `Hard`, else select `Soft`
 
-#### Upload <a id="upload"></a>
+#### Upload <a href="upload" id="upload"></a>
 
-Upload \(local –&gt; server\) a repository for the first time
+Upload (local –> server) a repository for the first time
 
 * Create repository in github
 * Clone repository to local station:
 
-```text
+```
 git clone https://github.com/xxx/xxx.git
 ```
 
 * Copy files to upload to repository
 * Update repository:
 
-```text
+```
 git add *
 git commit -m "First commit"
 git push -u origin master
 ```
 
-#### Discard local changes \(if pull doesn't work\) <a id="discard_local_changes_if_pull_doesn_t_work"></a>
+#### Discard local changes (if pull doesn't work) <a href="discard_local_changes_if_pull_doesn_t_work" id="discard_local_changes_if_pull_doesn_t_work"></a>
 
 For a specific file use:
 
-```text
+```
 git checkout path/to/file/to/revert
 ```
 
 For all unstaged files use:
 
-```text
+```
 git checkout -- .
 ```
 
 ## TODO
 
-#### Ignore file mode <a id="ignore_file_mode"></a>
+#### Ignore file mode <a href="ignore_file_mode" id="ignore_file_mode"></a>
 
 If you cannot do a pull due to a change of file mode, you can ignore it:
 
-```text
+```
 git config core.fileMode false
 ```
 
-####  <a id="come_back_to_previous_commit_ignore_latest_ones"></a>
+####  <a href="come_back_to_previous_commit_ignore_latest_ones" id="come_back_to_previous_commit_ignore_latest_ones"></a>
 
 ## Rebase
 
@@ -586,55 +586,55 @@ When doing `git rebase master` to update a working branch, if there are any conf
 
 ### Recover lost commits after rebase
 
-If rebasing caused commits to be lost, use `git reflog` to find the commits that were deleted, and then do a `git reset –hard HEAD@{XX}`, XX being the commit that comes right before the merge \(the one that says: `checkout: moving from master to YOUR_BRANCH`\)
+If rebasing caused commits to be lost, use `git reflog` to find the commits that were deleted, and then do a `git reset –hard HEAD@{XX}`, XX being the commit that comes right before the merge (the one that says: `checkout: moving from master to YOUR_BRANCH`)
 
-###  <a id="commit_message_convention"></a>
+###  <a href="commit_message_convention" id="commit_message_convention"></a>
 
-### GitHub <a id="github"></a>
+### GitHub <a href="github" id="github"></a>
 
-#### Add SSH key <a id="add_ssh_key"></a>
+#### Add SSH key <a href="add_ssh_key" id="add_ssh_key"></a>
 
 1. Log in to your Github account and click on the button at the top right-hand corner called “Account settings”.
 2. Click on “SSH keys in the left panel”.
 3. Click on “Add SSH keys”.
-4. Copy and paste the content of id\_rsa.pub \(open a Terminal and type: `more ~/.ssh/id_rsa.pub`\)
+4. Copy and paste the content of id_rsa.pub (open a Terminal and type: `more ~/.ssh/id_rsa.pub`)
 
-If you don't have the file id\_rsa.pub, do the following:
+If you don't have the file id_rsa.pub, do the following:
 
 1. open a terminal
 2. go to the folder `~/.ssh/` and type:
 
-```text
+```
 ssh-keygen -t rsa -C your_email@example.com
 ```
 
-#### port 22: Connection refused <a id="port_22connection_refused"></a>
+#### port 22: Connection refused <a href="port_22connection_refused" id="port_22connection_refused"></a>
 
 If you get this message, try this:
 
-```text
+```
 vim ~/.ssh/config
 ```
 
 Add:
 
-```text
+```
 Host github.com
   Hostname ssh.github.com
   Port 443
 ```
 
-#### Compare commits/branches/tags <a id="compare_commitsbranchestags"></a>
+#### Compare commits/branches/tags <a href="compare_commitsbranchestags" id="compare_commitsbranchestags"></a>
 
-```text
+```
 https://github.com/ORGANIZATION/REPOSITORY/compare/TAG1...TAG2
 ```
 
-#### Connection closed by remote host <a id="connection_closed_by_remote_host"></a>
+#### Connection closed by remote host <a href="connection_closed_by_remote_host" id="connection_closed_by_remote_host"></a>
 
 If you get this:
 
-```text
+```
 ssh_exchange_identification: Connection closed by remote host
 fatal: Could not read from remote repository.
 Please make sure you have the correct access rights
@@ -643,7 +643,7 @@ and the repository exists.
 
 this might be due to wifi connection that does not allow ssh. So you can temporarily switch to https:
 
-```text
+```
 # check which username/remote you are set on
 git remote -v
 # it should give:
@@ -653,17 +653,17 @@ git remote -v
 git remote set-url origin https://github.com/USERNAME/OTHERREPOSITORY.git
 ```
 
-#### Search file name <a id="search_file_name"></a>
+#### Search file name <a href="search_file_name" id="search_file_name"></a>
 
 Go to search and type:
 
-```text
+```
 filename:my_file
 ```
 
 ## Tags
 
-#### Checkout specific tag or commit <a id="checkout_specific_tag_or_commit"></a>
+#### Checkout specific tag or commit <a href="checkout_specific_tag_or_commit" id="checkout_specific_tag_or_commit"></a>
 
 List all tags
 
@@ -687,7 +687,7 @@ Note: It is not possible to checkout directly using the tag. More info [here](ht
 
 If you got the following error message:
 
-```text
+```
 fatal: reference is not a tree: #commit
 ```
 
@@ -715,7 +715,7 @@ git tag -d <TAGNAME>
 
 Here are useful aliases that you could add to your `~/.bash_profile`
 
-```text
+```
 alias gs="git status -s"
 alias gc="git commit -a"
 alias gp="git push"
@@ -727,15 +727,15 @@ alias gb="git branch"
 
 ## Git Software
 
-#### Pycharm <a id="pycharm"></a>
+#### Pycharm <a href="pycharm" id="pycharm"></a>
 
 Interactive squash, rebase: [https://www.jetbrains.com/help/pycharm/edit-project-history.html](https://www.jetbrains.com/help/pycharm/edit-project-history.html)
 
-#### SourceTree <a id="sourcetree"></a>
+#### SourceTree <a href="sourcetree" id="sourcetree"></a>
 
 **Select default branches for pushing**
 
-Preferences &gt; “Git” &gt; Push branches: select “current”
+Preferences > “Git” > Push branches: select “current”
 
 **Switch to another branch**
 
@@ -749,4 +749,3 @@ In case you have not used fork and you want to update your branch from master, d
 git checkout <YOUR_BRANCH>
 git rebase master
 ```
-

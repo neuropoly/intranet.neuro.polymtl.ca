@@ -4,12 +4,12 @@
 
 Tutorial: [https://www.youtube.com/watch?v=vBreXjkizgo](https://www.youtube.com/watch?v=vBreXjkizgo)​
 
-### Installing <a id="installing"></a>
+### Installing <a href="installing" id="installing"></a>
 
 1. To use **Vagrant**, you will first need to install **VirtualBox**: [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)​
 2. Install Vagrant from here: [https://learn.hashicorp.com/tutorials/vagrant/getting-started-index?in=vagrant/getting-started](https://learn.hashicorp.com/tutorials/vagrant/getting-started-index?in=vagrant/getting-started)​
 
-### Getting Started & Basic Commands <a id="getting-started-and-basic-commands"></a>
+### Getting Started & Basic Commands <a href="getting-started-and-basic-commands" id="getting-started-and-basic-commands"></a>
 
 To create a box:
 
@@ -25,7 +25,7 @@ vagrant init ubuntu/trusty64
 
 To run the box:
 
-```text
+```
 vagrant up
 ```
 
@@ -53,7 +53,7 @@ If you update your `Vagrantfile` and want to reload:
 vagrant reload
 ```
 
-## SSH into Box <a id="ssh-into-box"></a>
+## SSH into Box <a href="ssh-into-box" id="ssh-into-box"></a>
 
 You can SSH into your box:
 
@@ -68,9 +68,9 @@ sudo apt-get update
 sudo apt-get install -y git
 ```
 
-## Vagrantfile <a id="vagrantfile"></a>
+## Vagrantfile <a href="vagrantfile" id="vagrantfile"></a>
 
-### Memory and CPU Settings <a id="memory-and-cpu-settings"></a>
+### Memory and CPU Settings <a href="memory-and-cpu-settings" id="memory-and-cpu-settings"></a>
 
 To configure memory and CPU used by your virtual box:
 
@@ -81,7 +81,7 @@ config.vm.provider "virtualbox" do |vb|
 end
 ```
 
-### Folder Settings <a id="folder-settings"></a>
+### Folder Settings <a href="folder-settings" id="folder-settings"></a>
 
 You will probably also want to use data from your local machine. To do this:
 
@@ -91,7 +91,7 @@ config.vm.synced_folder "path/to/local/folder", "path/to/vagrant/folder"
 
 The `path/to/local/folder` can be absolute, or relative to the location of the Vagrantfile. The `path/to/vagrant/folder` is where you want the data to be added in your box.
 
-### Startup/Provision Settings <a id="startup-provision-settings"></a>
+### Startup/Provision Settings <a href="startup-provision-settings" id="startup-provision-settings"></a>
 
 When you start your box, you can install packages/run commands:
 
@@ -108,7 +108,7 @@ If you have a lot of packages to install or commands to run, you may want to put
 config.vm.provision "shell", path: "install.sh"
 ```
 
-### Running MacOS <a id="running-macos"></a>
+### Running MacOS <a href="running-macos" id="running-macos"></a>
 
 In order to run MacOS, you may need to reinstall.
 
@@ -120,19 +120,17 @@ csrutil clear
 reboot
 ```
 
-2. Uninstall from the official installer \(you may have to re-download the installer if you deleted it, as the uninstall file is in there\).
+2\. Uninstall from the official installer (you may have to re-download the installer if you deleted it, as the uninstall file is in there).
 
-3. Reinstall.
+3\. Reinstall.
 
-4. Restart your computer.
+4\. Restart your computer.
 
-5. Install Oracle VM VirtualBox Extension Pack
+5\. Install Oracle VM VirtualBox Extension Pack
 
-6. Install `vagrant-vbguest`:
+6\. Install `vagrant-vbguest`:
 
 ```bash
 vagrant plugin install vagrant-vbguest
 ```
-
-
 

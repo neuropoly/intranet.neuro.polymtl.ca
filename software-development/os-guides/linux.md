@@ -1,19 +1,19 @@
 # Linux
 
-## **Automatic** M**ount on Startup**
+## **Automatic **M**ount on Startup**
 
 For the following steps you need admin permissions.
 
-1. Create data\_processing & data\_shared folders in `/mnt`, type:
+1\. Create data_processing & data_shared folders in `/mnt`, type:
 
 ```bash
 sudo mkdir /mnt/data_processing
 sudo mkdir /mnt/data_shared
 ```
 
-2. Edit mount table, type : `sudo nano /etc/fstab`
+2\. Edit mount table, type : `sudo nano /etc/fstab`
 
-3. For the following operating systems:
+3\. For the following operating systems:
 
 {% tabs %}
 {% tab title="Ubuntu 14.04 LTS" %}
@@ -41,7 +41,7 @@ Add the following lines at the bottom of the file:
 {% endtab %}
 {% endtabs %}
 
-4. Remount drives and type: `sudo mount -a`
+4\. Remount drives and type: `sudo mount -a`
 
 ## CentOS/Fedora/Red Hat
 
@@ -49,7 +49,7 @@ Add the following lines at the bottom of the file:
 
 Binaries for debian work well, just make sure the paths are set in the bashrc as follow:
 
-```text
+```
 PATH=${PATH}:${SCT_DIR}/install/debian/ants
 
 PATH=${PATH}:${SCT_DIR}/install/debian/c3d
@@ -59,11 +59,11 @@ PATH=${PATH}:${SCT_DIR}/install/debian/c3d
 
 Need `libmng` installed for fslview:
 
-```text
+```
 ~ sudo yum install libmng libpng12
 ```
 
-Then install FSL with the python script `fslinstaller.py` you'll find there : [http://goo.gl/Tfu1UW](http://goo.gl/Tfu1UW) Make sure the installer set your bash configuration, following lines should be in your bashrc or bash\_profile. If not, add it:
+Then install FSL with the python script `fslinstaller.py` you'll find there : [http://goo.gl/Tfu1UW](http://goo.gl/Tfu1UW) Make sure the installer set your bash configuration, following lines should be in your bashrc or bash_profile. If not, add it:
 
 ```bash
 FSLDIR="/usr/local/fsl"
@@ -82,7 +82,6 @@ Run the miniconda installer shell script for linux you can get there [http://con
 
 Then, in the SCT repo, type:
 
-```text
+```
 ~ bash ./requirements/requirements.sh
 ```
-

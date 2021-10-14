@@ -8,12 +8,12 @@ Go under:
  /System/Library/User\ Template/English.lproj
 ```
 
-## Shell Profile <a id="bash_profile"></a>
+## Shell Profile <a href="bash_profile" id="bash_profile"></a>
 
-You can edit your shell profile \(usually called `.bash_profile`, but some newer versions of Mac use `.zsh_profile` \) to create custom commands and make the colours in your terminal look nice.
+You can edit your shell profile (usually called `.bash_profile`, but some newer versions of Mac use `.zsh_profile` ) to create custom commands and make the colours in your terminal look nice.
 
 {% tabs %}
-{% tab title=".bash\_profile" %}
+{% tab title=".bash_profile" %}
 To edit, navigate to `$HOME/.bash_profile`
 
 ```bash
@@ -73,7 +73,7 @@ source ~/miniconda3/etc/profile.d/conda.sh
 ```
 {% endtab %}
 
-{% tab title=".zsh\_profile" %}
+{% tab title=".zsh_profile" %}
 To edit, navigate to `$HOME/.zsh_profile` 
 
 ```bash
@@ -132,13 +132,13 @@ source ~/miniconda3/etc/profile.d/conda.sh
 {% endtab %}
 {% endtabs %}
 
-## niftiviewer.app <a id="niftiviewerapp"></a>
+## niftiviewer.app <a href="niftiviewerapp" id="niftiviewerapp"></a>
 
-UPDATE: NO NEED TO DO THE THING BELOW ANYMORE WITH NIFTI. Instead, right click &gt; “get info” &gt; Open with &gt; change all… &gt; select fsleyes
+UPDATE: NO NEED TO DO THE THING BELOW ANYMORE WITH NIFTI. Instead, right click > “get info” > Open with > change all… > select fsleyes
 
 In automator, create new application - run apple script. Add the following script:
 
-```text
+```
   on run {input, parameters}
   set f to POSIX path of (input as text)
   do shell script "source ~/.bash_profile"
@@ -146,15 +146,15 @@ In automator, create new application - run apple script. Add the following scrip
   end run
 ```
 
-Select .nii file – open with –&gt; select niftiviewer.app
+Select .nii file – open with –> select niftiviewer.app
 
-## Add LINUX machine to GRAMES <a id="add_linux_machine_to_grames"></a>
+## Add LINUX machine to GRAMES <a href="add_linux_machine_to_grames" id="add_linux_machine_to_grames"></a>
 
-See info under Gdrive/Neuropoly/network/SOP\_add\_linux\_station\_grames.docx
+See info under Gdrive/Neuropoly/network/SOP_add_linux_station_grames.docx
 
-## Configure virtualenvwrapper under LINUX <a id="configure_virtualenvwrapper_under_linux"></a>
+## Configure virtualenvwrapper under LINUX <a href="configure_virtualenvwrapper_under_linux" id="configure_virtualenvwrapper_under_linux"></a>
 
-Add script under /etc/profile.d/virtual\_env\_config.sh :
+Add script under /etc/profile.d/virtual_env_config.sh :
 
 ```bash
 export WORKON_HOME=$HOME/.virtualenvs
@@ -163,7 +163,6 @@ source /usr/local/bin/virtualenvwrapper.sh #centos
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh #ubuntu
 ```
 
-## Update debian 7 to 8 <a id="update_debian_7_to_8"></a>
+## Update debian 7 to 8 <a href="update_debian_7_to_8" id="update_debian_7_to_8"></a>
 
 [https://www.prado.lt/how-to-upgrade-debian-7-wheezy-to-10-buster-safely](https://www.prado.lt/how-to-upgrade-debian-7-wheezy-to-10-buster-safely)
-

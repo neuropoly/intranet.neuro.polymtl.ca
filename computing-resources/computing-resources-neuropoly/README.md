@@ -2,23 +2,23 @@
 
 ## Poly-Grames
 
-### Poly-Grames Network Account <a id="polygrames_network_account"></a>
+### Poly-Grames Network Account <a href="polygrames_network_account" id="polygrames_network_account"></a>
 
 A **Poly-Grames** network account is required to have access to various computation resources available in the laboratory.
 
 In order to request a **Poly-Grames** network account you need to have your Polytechnique ID number.
 
-You can [request a Poly-Grames network account here](https://www.grames.polymtl.ca/facilities/servers-information/create_account/).  
-**Program:** Biomedical Engineering  
+You can [request a Poly-Grames network account here](https://www.grames.polymtl.ca/facilities/servers-information/create_account/).\
+**Program:** Biomedical Engineering\
 **Director:** Julien Cohen-Adad
 
 If you want to find out who is behind u/pXXXXXX Grames account, type this:
 
-```text
+```
 getent passwd <GRAMES_ACCOUNT>
 ```
 
-### Poly-Grames Groups <a id="polygrames_groups"></a>
+### Poly-Grames Groups <a href="polygrames_groups" id="polygrames_groups"></a>
 
 The list permissions for shared folders on `duke` are available [here](https://docs.google.com/document/d/1ZJUUBpiZPl0wxFsUPxkkR6vXZgfSAd3YBK5vlIpf_aA/edit).
 
@@ -28,9 +28,9 @@ Use Microsoft Remote Desktop Connection on creer51, creer52, creer53.
 
 Computer : creer51.grames.polymtl.ca
 
-Username: grames\your\_polygrames\_username
+Username: grames\your_polygrames_username
 
-Password: your\_polygrames\_password
+Password: your_polygrames_password
 
 ## List of Computers at NeuroPoly
 
@@ -50,19 +50,19 @@ When working remotely from off-campus you need to use the [VPN](http://www.polym
 
 To connect to the VPN, you need to have an account with École Polytechnique, specifically with [CAS](https://cas5.polymtl.ca/cas/login). Students should already have this. Consultants and Research Associates will need to have an account created for them.
 
-Contact Alexandru Foias to request VPN access be activated for your CAS account. When activated, [Gestion des Codes](https://codes.si.polymtl.ca/gestion/) will report "VPN\_\* = Actif".
+Contact Alexandru Foias to request VPN access be activated for your CAS account. When activated, [Gestion des Codes](https://codes.si.polymtl.ca/gestion/) will report "VPN_\* = Actif".
 
 The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing `openconnect`:
 
 {% tabs %}
 {% tab title="MacOS" %}
-```text
+```
 brew install openconnect
 ```
 {% endtab %}
 
 {% tab title="PC/Linux" %}
-```text
+```
 apt install openconnect
 ```
 {% endtab %}
@@ -82,11 +82,11 @@ GROUP=PolySSL # or PolyInvites, depending on your account's status
 echo -n "$PASS" | sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-stdin ssl.vpn.polymtl.ca
 ```
 
-```text
+```
 ./vpn.sh
 ```
 
-### SSH \(command line\)
+### SSH (command line)
 
 Once the VPN connection established, connect via ssh using the `STATION` you want:
 
@@ -94,7 +94,7 @@ Once the VPN connection established, connect via ssh using the `STATION` you wan
  ssh <POLYGRAMES_USERNAME>@<STATION>.neuro.polymtl.ca
 ```
 
-Note: For Windows systems, you can[ install Microsoft's ssh package](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse), [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10), [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/), or [cmder](https://cmder.net/).
+Note: For Windows systems, you can[ install Microsoft's ssh package](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse), [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10), [PuTTY](https://www.chiark.greenend.org.uk/\~sgtatham/putty/), or [cmder](https://cmder.net).
 
 Optionally, add this shortcut to your `~/.ssh/config` file to allow you to just type `ssh <STATION>` or any other host and be connected to the right place with the right username:
 
@@ -118,7 +118,7 @@ User <POLYGRAMES_USERNAME>
 
 Add this to your `~/.ssh/config` to make multiple ssh connections faster and without retyping your password:
 
-```text
+```
 Host *
 ControlMaster auto
 ControlPath ~/.ssh/%r@%h:%p
@@ -127,19 +127,19 @@ ControlPersist 3s
 
 To avoid having to enter your password, you can also use an [SSH key](../../software-development/bash-shell/#ssh-public-key).
 
-### VNC \(graphical interface\)
+### VNC (graphical interface)
 
 {% tabs %}
 {% tab title="macOS" %}
 1. Open Finder
 2. Click Cmd+K
-3. In the “Server Address”, type \(using the `STATION` you want\): `vnc://STATION.neuro.polymtl.ca`
+3. In the “Server Address”, type (using the `STATION` you want): `vnc://STATION.neuro.polymtl.ca`
 4. You can use your local/network account information or the [shared account credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg)
 {% endtab %}
 
 {% tab title="PC/Linux" %}
 1. Establish a VNC connection using [vinaigre](https://wiki.gnome.org/Apps/Vinagre/).
-2. In the “Server Address”, type \(using the `STATION` you want\): `vnc://STATION.neuro.polymtl.ca`
+2. In the “Server Address”, type (using the `STATION` you want): `vnc://STATION.neuro.polymtl.ca`
 3. You can use the password from [shared account credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg)
 {% endtab %}
 {% endtabs %}
@@ -174,7 +174,7 @@ On Linux targets, a VNC server needs to be started manually before the above ins
  vncserver -geometry 1600x1200 :<PORT_NUMBER>
 ```
 
-**Note:** To list all running vncservers, use: ps -ef \| grep vnc\`
+**Note:** To list all running vncservers, use: ps -ef | grep vnc\`
 
 After starting the vncserver, connect to it as above.
 
@@ -198,43 +198,43 @@ After starting the vncserver, connect to it as above.
 1. Open the Terminal
 2. Install OSX Fuse and SSHFS
 
-```text
+```
 brew install --cask osxfuse
 brew install sshfs
 ```
 
-3. Mount drive from CLUSTER
+3\. Mount drive from CLUSTER
 
-```text
+```
 sudo sshfs -o allow_other,defer_permissions,IdentityFile=~/.ssh/id_rsa <username>@CLUSTER.neuro.polymtl.ca:/folder/to/mount /where/to/mount
 ```
 {% endtab %}
 
 {% tab title="Linux" %}
-Files &gt; Other locations &gt; Connect to Server &gt; sftp://USERNAME@CLUSTER.neuro.polymtl.ca/
+Files > Other locations > Connect to Server > sftp://USERNAME@CLUSTER.neuro.polymtl.ca/
 {% endtab %}
 {% endtabs %}
 
-## CPU/GPU Clusters <a id="computingprogramming_stations"></a>
+## CPU/GPU Clusters <a href="computingprogramming_stations" id="computingprogramming_stations"></a>
 
 The following CPU and GPU clusters are available for internal use at **NeuroPoly**.
 
 {% hint style="warning" %}
-**IMPORTANT:** Indicate in the calendar below if you plan to launch intensive calculations on a computer \(even if it is on your station, in case you leave for holidays but are still using your station\). If you don't have writing permission on this calendar please contact [alexandrufoias@gmail.com](mailto:alexandrufoias@gmail.com).
+**IMPORTANT:** Indicate in the calendar below if you plan to launch intensive calculations on a computer (even if it is on your station, in case you leave for holidays but are still using your station). If you don't have writing permission on this calendar please contact [alexandrufoias@gmail.com](mailto:alexandrufoias@gmail.com).
 {% endhint %}
 
-{% embed url="https://calendar.google.com/calendar/u/0/embed?src=4mg6bgd9pv55thf9486t2miht8@group.calendar.google.com" caption="" %}
+{% embed url="https://calendar.google.com/calendar/u/0/embed?src=4mg6bgd9pv55thf9486t2miht8@group.calendar.google.com" %}
 
 ### Rosenberg
 
-| Spec | Description |
-| :--- | :--- |
-| **Model** | 8 x P100 GPU |
-| **OS** | Ubuntu 18.04.2 |
+| Spec         | Description                  |
+| ------------ | ---------------------------- |
+| **Model**    | 8 x P100 GPU                 |
+| **OS**       | Ubuntu 18.04.2               |
 | **Hostname** | `rosenberg.neuro.polymtl.ca` |
-| **VNC** |  |
+| **VNC**      |                              |
 
-* By default, the root \(OS and home folder\) mount point is on the NVME disk
+* By default, the root (OS and home folder) mount point is on the NVME disk
 * Shared **scratch** located under **/scratch**. Please clean the unnecessary data after you finish the processing.
 * [How to use GPU Clusters at NeuroPoly](https://intranet.neuro.polymtl.ca/computing-resources/computing-resources-neuropoly/gpus)
   * [Video tutorial to get started](https://drive.google.com/file/d/17-eLVBiMNA8bNbfzpD6NLxHApZRDoy1B/view?usp=sharing)
@@ -243,12 +243,12 @@ _For system administrators_: Please log all the changes on the station by updati
 
 ### Bireli
 
-| Spec | Description |
-| :--- | :--- |
-| **Model** | 2 x Tesla GPU |
-| **OS** | Ubuntu 16.04 |
-| **Hostname** | `bireli.neuro.polymtl.ca` |
-| **VNC** | [NeuroPoly Internal Document: Bireli TeamViewer Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.zc65h9q5641z) |
+| Spec         | Description                                                                                                                                                               |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Model**    | 2 x Tesla GPU                                                                                                                                                             |
+| **OS**       | Ubuntu 16.04                                                                                                                                                              |
+| **Hostname** | `bireli.neuro.polymtl.ca`                                                                                                                                                 |
+| **VNC**      | [NeuroPoly Internal Document: Bireli TeamViewer Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.zc65h9q5641z) |
 
 * Add event to the computer calendar
 * Use your **Poly-Grames** account to connect on the machine
@@ -256,95 +256,95 @@ _For system administrators_: Please log all the changes on the station by updati
 
 ### Joplin
 
-| Spec | Description |
-| :--- | :--- |
-| **Model** | 64-core CPU |
-| **OS** | Ubuntu 16.04.4 |
-| **Hostname** |  |
-| **VNC** |  |
+| Spec         | Description    |
+| ------------ | -------------- |
+| **Model**    | 64-core CPU    |
+| **OS**       | Ubuntu 16.04.4 |
+| **Hostname** |                |
+| **VNC**      |                |
 
 The server is bound to the GRAMES domain.
 
 Connect to the server via ssh using the **Poly-Grames** account.
 
-To access the sct\_testing\_management development webpage use the username: sct\_test\_user; passwd: management.
+To access the sct_testing_management development webpage use the username: sct_test_user; passwd: management.
 
-For fast I/O, use the NVMe hard drive, which is automatically mounted on your home at: `~/data_nvme_XXX` \(XXX being your GRAMES matricule\)
+For fast I/O, use the NVMe hard drive, which is automatically mounted on your home at: `~/data_nvme_XXX` (XXX being your GRAMES matricule)
 
 ### Abbey
 
-| Spec | Description |
-| :--- | :--- |
-| **Model** | Xeon 12-core |
-| **OS** | Ubuntu 16.04.5 |
-| **Hostname** |  |
+| Spec            | Description                                                                                                                                                              |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Model**       | Xeon 12-core                                                                                                                                                             |
+| **OS**          | Ubuntu 16.04.5                                                                                                                                                           |
+| **Hostname**    |                                                                                                                                                                          |
 | **Credentials** | [NeuroPoly Internal Document: Abbey Teamviewer Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.mtnjvepco2an) |
 
 ### Fitzgerald
 
-| Spec | Description |
-| :--- | :--- |
-| **Model** |  |
-| **OS** | Windows 7 |
-| **Hostname** |  |
+| Spec            | Description                                                                                                                                                                   |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Model**       |                                                                                                                                                                               |
+| **OS**          | Windows 7                                                                                                                                                                     |
+| **Hostname**    |                                                                                                                                                                               |
 | **Credentials** | [NeuroPoly Internal Document: Fitzgerald TeamViewer Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.9kegj6dmbnac) |
 
 ### Tristano
 
-| Spec | Description |
-| :--- | :--- |
-| **Model** | Mac Mini |
-| **OS** | Ubuntu 16.04 |
-| **Hostname** |  |
+| Spec            | Description                                                                                                                                                          |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Model**       | Mac Mini                                                                                                                                                             |
+| **OS**          | Ubuntu 16.04                                                                                                                                                         |
+| **Hostname**    |                                                                                                                                                                      |
 | **Credentials** | [NeuroPoly Internal Document: Tristano VNC Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.wa49ms1v7x01) |
 
-For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.ca/)
+For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.ca)
 
 ### Vnmrj
 
-| Spec | Description |
-| :--- | :--- |
-| **Model** | PC Intel Duo Quad Core |
-| **OS** | RedHat |
-| **Hostname** |  |
+| Spec            | Description                                                                                                                                                       |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Model**       | PC Intel Duo Quad Core                                                                                                                                            |
+| **OS**          | RedHat                                                                                                                                                            |
+| **Hostname**    |                                                                                                                                                                   |
 | **Credentials** | [NeuroPoly Internal Document: VNMRJ VNC Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.jzew4w9jgpfp) |
 
-### Idea3t - Siemens Pulse sequence programming for VE11C \(Prisma\)
+### Idea3t - Siemens Pulse sequence programming for VE11C (Prisma)
 
-| Spec | Description |
-| :--- | :--- |
-| **Model** | PC |
-| **OS** | Windows 10 |
-| **Hostname** | `idea3t.neuro.polymtl.ca` |
+| Spec            | Description                                                                                                                                                           |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Model**       | PC                                                                                                                                                                    |
+| **OS**          | Windows 10                                                                                                                                                            |
+| **Hostname**    | `idea3t.neuro.polymtl.ca`                                                                                                                                             |
 | **Credentials** | [NeuroPoly Internal Document: Idea3t Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.d65wz45n6ho7) |
 
-This computer is to be used for programming pulse sequences within the Siemens IDEA environment for VE11C \(Prisma\).
+This computer is to be used for programming pulse sequences within the Siemens IDEA environment for VE11C (Prisma).
 
 #### Troubleshooting
 
 {% hint style="danger" %}
-**Possible error:** “The certificate or associated chain is not valid.”  
-**Solution:** Install remote Desktop v10 or higher \(v8 does not work\)
+**Possible error:** “The certificate or associated chain is not valid.”\
+**Solution:** Install remote Desktop v10 or higher (v8 does not work)
 {% endhint %}
 
-### Idea7t - Siemens Pulse sequence programming for VE12U \(Terra\)
+### Idea7t - Siemens Pulse sequence programming for VE12U (Terra)
 
-| Spec | Description |
-| :--- | :--- |
-| **Model** | PC |
-| **OS** | Windows 10 |
-| **Hostname** | `idea7t.neuro.polymtl.ca` |
+| Spec            | Description                                                                                                                                                           |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Model**       | PC                                                                                                                                                                    |
+| **OS**          | Windows 10                                                                                                                                                            |
+| **Hostname**    | `idea7t.neuro.polymtl.ca`                                                                                                                                             |
 | **Credentials** | [NeuroPoly Internal Document: Idea7t Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.n9kbx2oyojzg) |
 
-This computer is to be used for programming pulse sequences within the Siemens IDEA environment for VE12U \(Terra\).
+This computer is to be used for programming pulse sequences within the Siemens IDEA environment for VE12U (Terra).
 
 ### Peterson - CST simulations
 
-| Spec | Description |
-| :--- | :--- |
-| **Model** | PC |
-| **OS** | Windows 10 |
-| **Hostname** | `peterson.grames.polymtl.ca` |
+| Spec            | Description                                                                                                                                                             |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Model**       | PC                                                                                                                                                                      |
+| **OS**          | Windows 10                                                                                                                                                              |
+| **Hostname**    | `peterson.grames.polymtl.ca`                                                                                                                                            |
 | **Credentials** | [NeuroPoly Internal Document: Peterson Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.x9gy1qxtkals) |
 
 This computer is to be used for CST simulations. The station is bound to the **Poly-Grames** domain.
@@ -353,20 +353,20 @@ This computer is to be used for CST simulations. The station is bound to the **P
 
 ### Modix
 
-| Spec | Description |
-| :--- | :--- |
-| **Model** | Raspberry Pi |
-| **OS** | OctoPrint |
-| **Hostname** | `http://132.207.154.91` |
+| Spec            | Description                                                                                                                                                          |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Model**       | Raspberry Pi                                                                                                                                                         |
+| **OS**          | OctoPrint                                                                                                                                                            |
+| **Hostname**    | `http://132.207.154.91`                                                                                                                                              |
 | **Credentials** | [NeuroPoly Internal Document: Modix Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.125uuajyox5y) |
 
-The Modix 3D printer is remotely controlled using [OctoPrint](https://octoprint.org/). To access the control interface go to the hostname and use the credentials provided above.
+The Modix 3D printer is remotely controlled using [OctoPrint](https://octoprint.org). To access the control interface go to the hostname and use the credentials provided above.
 
 ## Connect to the Polytechnique public disk
 
-Finder –&gt; Go –&gt; Connect to server Server address:
+Finder –> Go –> Connect to server Server address:
 
-```text
+```
 smb://genie06.polymtl.ca/public
 ```
 
@@ -374,32 +374,32 @@ Then enter your ID and password at poly.
 
 ## Retrieve an old backup
 
-**Duke** \(/mri, /projects, /sct\_testing\) is backed up on **grappelli** every evening at 21:00 EST. In order to retrieve old backup you have to contact Jean-Sébastien Décarie.
+**Duke** (/mri, /projects, /sct_testing) is backed up on **grappelli** every evening at 21:00 EST. In order to retrieve old backup you have to contact Jean-Sébastien Décarie.
 
-## Software Installed <a id="software_installed_at_neuropoly"></a>
+## Software Installed <a href="software_installed_at_neuropoly" id="software_installed_at_neuropoly"></a>
 
-### Installed on each station \(local\) <a id="installed_on_each_station_local"></a>
+### Installed on each station (local) <a href="installed_on_each_station_local" id="installed_on_each_station_local"></a>
 
-#### MRI <a id="mri"></a>
+#### MRI <a href="mri" id="mri"></a>
 
 * FSL
 * ANTS
 * FreeSurfer
-* mricron \(for dcm2nii conversion\)
+* mricron (for dcm2nii conversion)
 * Osirix
 * ITKsnap
 * MITKworkbench
-* Diffusion Toolkit \(with quicklook plugin\) + Trackvis
+* Diffusion Toolkit (with quicklook plugin) + Trackvis
 
-#### Programming <a id="programming"></a>
+#### Programming <a href="programming" id="programming"></a>
 
 * git
-* source tree –&gt; visualiser of git
-* Xcode \(with command line tools\)
-* PyCharm \(Python editor\)
-* Sublime Text \(code editor\)
+* source tree –> visualiser of git
+* Xcode (with command line tools)
+* PyCharm (Python editor)
+* Sublime Text (code editor)
 
-#### Misc <a id="misc"></a>
+#### Misc <a href="misc" id="misc"></a>
 
 * Google Sketchup
 * Google Chrome
@@ -407,11 +407,10 @@ Then enter your ID and password at poly.
 * Endnote
 * Dropbox
 * X11 Quartz
-* Microsoft suite \(Installation kit can be found on the GRAMES server. Please see section below.\)
-* Matlab \(Installation kit can be found on the GRAMES server. Please see section below.\)
+* Microsoft suite (Installation kit can be found on the GRAMES server. Please see section below.)
+* Matlab (Installation kit can be found on the GRAMES server. Please see section below.)
 * Slack
 * NDP view
 * QuickLook:
   * Nifti viewer
 * Tanguy's app to open Nifti files with FSLview
-

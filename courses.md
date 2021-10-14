@@ -1,4 +1,4 @@
-# Courses
+# 🎓 University Courses
 
 ## Requirements for Polytechnique Montréal
 
@@ -160,14 +160,7 @@
   <tbody>
     <tr>
       <td style="text-align:left">MDPH 607</td>
-      <td style="text-align:left">
-        <p>Introduction to Medical Imaging</p>
-        <p><em>(Winter 2015)</em>
-        </p>
-        <p><em>Excellent course with good material on MR physics<br />and MRI</em>
-        </p>
-        <p><em>WARNING! IUT does not send us a notification of<br />requests for registration, so it is important to contact<br />the program administrator where the course is held<br />to ensure that the request is processed.</em>
-        </p>
+      <td style="text-align:left">Introduction to Medical Imaging (&#x26A0;&#xFE0F; <em>it is important to contact the program administrator where the course is held to ensure that the request for inter-university CREPUQ is processed).</em>
       </td>
       <td style="text-align:left">English</td>
       <td style="text-align:left">Ives Levesque</td>
@@ -249,6 +242,13 @@
       <td style="text-align:left"><a href="https://www.mcgill.ca/study/2018-2019/courses/neur-602">NEUR 602 Current Topics in Neuroscience</a>
       </td>
     </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://neurodatascience.github.io/QLS612-Overview/">QLSC 612</a>
+      </td>
+      <td style="text-align:left">Fundamentals for Neuro Data Science</td>
+      <td style="text-align:left">English</td>
+      <td style="text-align:left"></td>
+    </tr>
   </tbody>
 </table>
 
@@ -267,15 +267,17 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">INF8245E</td>
+      <td style="text-align:left"><a href="https://chandar-lab.github.io/INF8245E/">INF8245E</a>
+      </td>
       <td style="text-align:left">Machine Learning</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">English</td>
       <td style="text-align:left">Sarath Chandar</td>
     </tr>
     <tr>
-      <td style="text-align:left">INF8953DE</td>
+      <td style="text-align:left"><a href="https://chandar-lab.github.io/INF8953DE/">INF8953DE</a>
+      </td>
       <td style="text-align:left">Reinforcement Learning</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">English</td>
       <td style="text-align:left">Sarath Chandar</td>
     </tr>
     <tr>
@@ -358,6 +360,41 @@
       </td>
       <td style="text-align:left">Fran&#xE7;ais</td>
       <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://sites.google.com/view/ift6268-a2020/course-description?authuser=0">IFT6268</a>
+      </td>
+      <td style="text-align:left">Self-Supervised Representation Learning</td>
+      <td style="text-align:left">English</td>
+      <td style="text-align:left">Aaron Courville</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://www.iro.umontreal.ca/~slacoste/teaching/ift6269/A20/">IFT6269</a>
+      </td>
+      <td style="text-align:left">
+        <p>Probabilistic Graphical Models</p>
+        <p><em>(Given in Fall. Math heavy, assignment with proofs + coding exercises. Really interesting course! Who took: Naga Karthik)</em> 
+        </p>
+      </td>
+      <td style="text-align:left">English</td>
+      <td style="text-align:left">Simon Lacoste-Julien</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><a href="https://sites.google.com/view/ift6135-h2021">IFT6135</a>
+      </td>
+      <td style="text-align:left">
+        <p>Learning Representations</p>
+        <p><em>(Given in Winter. Intense course but very rewarding. Who took: Naga Karthik)</em>
+        </p>
+      </td>
+      <td style="text-align:left">English</td>
+      <td style="text-align:left">Aaron Courville</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">IFT6145</td>
+      <td style="text-align:left">3D Vision (Vision tridimensionnelle)</td>
+      <td style="text-align:left">French</td>
+      <td style="text-align:left">Sebastien Roy</td>
     </tr>
   </tbody>
 </table>

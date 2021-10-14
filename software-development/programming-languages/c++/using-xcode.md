@@ -11,7 +11,7 @@ The creation of the project follows these steps:
 File → New Project
 
 * Choose a template for your project → OS X → Application → Command Line Tool
-* Type the name of your project and change the language \(type\) to "C++"
+* Type the name of your project and change the language (type) to "C++"
 * Choose the emplacement of the folder which will contain your project
 
 ### 2. Edit Settings
@@ -20,19 +20,19 @@ Once your project is created, some settings have to be changed to compile your p
 
 #### Build Settings
 
-* Search Paths →  HEADER\_SEARCH\_PATHS → add "/usr/local/itk/include/ITK-4.4" and "/usr/local/vtk/include/vtk-6.0" You need to verify paths before you copy-paste these ones.
-* Search Paths → LIBRARY\_SEARCH\_PATHS → add ''/usr/local/itk/lib'' and ''/usr/local/vtk/lib''
-* Apple LLVM compiler 4.2 - Language → CLANG\_CXX\_LIBRARY → change to "libstdc++" instead of "libc++"
-* Apple LLVM compiler 4.2 - Preprocessing → GCC\_PREPROCESSOR\_DEFINITIONS → Release → add "RELEASE=1"
+* Search Paths →  HEADER_SEARCH_PATHS → add "/usr/local/itk/include/ITK-4.4" and "/usr/local/vtk/include/vtk-6.0" You need to verify paths before you copy-paste these ones.
+* Search Paths → LIBRARY_SEARCH_PATHS → add ''/usr/local/itk/lib'' and ''/usr/local/vtk/lib''
+* Apple LLVM compiler 4.2 - Language → CLANG_CXX_LIBRARY → change to "libstdc++" instead of "libc++"
+* Apple LLVM compiler 4.2 - Preprocessing → GCC_PREPROCESSOR_DEFINITIONS → Release → add "RELEASE=1"
 
 #### Build Phases
 
 You should find in the part “Compile Sources” all your sources created or added to the project. If one file or your project isn't in that list, it'll not be compiled. Therefore, you must add them manually.
 
-In the part “Link Binary With Library”, you have to add all the libraries necessary to your project \(not all the VTK and ITK libraries\).  
-Typical ITK libraries are \(to read, make basic treatments and write an image\) :
+In the part “Link Binary With Library”, you have to add all the libraries necessary to your project (not all the VTK and ITK libraries).\
+Typical ITK libraries are (to read, make basic treatments and write an image) :
 
-```text
+```
 libITKCommon-4.4.1.dylib
 libitkdouble-conversion-4.4.1.dylib
 libITKIOImageBase-4.4.1.dylib
@@ -53,16 +53,16 @@ Other libraries may be necessary depending on your project. Basic VTK libraries 
 
 ### 3. Add Files
 
-You can now add your file .h and .cpp to the project, or create new files/classes directly with a right-click on the project in the Project Navigator.  
+You can now add your file .h and .cpp to the project, or create new files/classes directly with a right-click on the project in the Project Navigator.\
 If you add files by dragging and dropping them to the project navigator, assure yourself that they are in the Compile Sources in Build Phases.
 
-### 4. Set DYLD\_LIBRARY\_PATH
+### 4. Set DYLD_LIBRARY_PATH
 
 To tell to Xcode where to find libraries at the execution of your program, you have to set manually the Environment Variable `DYLD_LIBRARY_PATH` to the libraries. Go to:
 
-Product \(in the menu\) -&gt; Scheme -&gt; Edit Scheme -&gt; Arguments -&gt; Environment Variables -&gt; add the variable:
+Product (in the menu) -> Scheme -> Edit Scheme -> Arguments -> Environment Variables -> add the variable:
 
-    Name = `DYLD_LIBRARY_PATH`  
+    Name = `DYLD_LIBRARY_PATH`\
     Value = `/usr/local/itk/lib:/usr/local/vtk/lib`
 
 Over the Environment Variables, you can pass arguments on launch to your project.
@@ -75,10 +75,10 @@ To distribute your project as an executable, your have to go to : Product → Ar
 
 Your executable will be available in the new created folder.
 
-To distribute this executable without installing ITK and VTK, you may add to the executable folder the needed libraries \(`.dylib`\).  
+To distribute this executable without installing ITK and VTK, you may add to the executable folder the needed libraries (`.dylib`).\
 The executable can be called by the command if you are in the folder of your program :
 
-```text
+```
 ./NameOfYourProgram [options]
 ```
 
@@ -101,4 +101,3 @@ sudo dscl . append /Groups/_developer GroupMembership <username>
 ```
 
 Then, you can provide your login and password to build your project. You have to provide them just once per session.
-
