@@ -1,8 +1,8 @@
 ---
-description: '3T Siemens Prisma at the Unité de Neuroimagerie Fonctionnelle (UNF), CRIUGM'
+description: 3T Siemens Prisma at the Unité de Neuroimagerie Fonctionnelle (UNF), CRIUGM
 ---
 
-# UNF \(3T Prisma\)
+# UNF (3T Prisma)
 
 More details on the UNF website: [https://unf-montreal.ca/en/documentation/facility/mri/](https://unf-montreal.ca/en/documentation/facility/mri/)
 
@@ -14,3 +14,6 @@ Google map link: [https://goo.gl/maps/Kqj3JimAtPWZowc1A](https://goo.gl/maps/Kqj
 
 ​[GitHub NeuroPoly: Siemens Recon](https://github.com/neuropoly/siemens-recon)
 
+## Download the data
+
+See info here: [https://unf-montreal.ca/documentation/your_data/download_data/](https://unf-montreal.ca/documentation/your_data/download_data/)
