@@ -3,7 +3,6 @@
 * [🏠 Home](README.md)
 * [👋 Onboarding](onboarding/README.md)
   * [Getting Started](onboarding/getting-started.md)
-  * [Accounts](onboarding/accounts.md)
   * [Campus Access](onboarding/campus-access.md)
   * [Infrastructure](onboarding/infrastructure.md)
   * [Dropbox/Google Drive](onboarding/dropbox-google-drive.md)
