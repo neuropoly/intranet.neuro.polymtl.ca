@@ -20,10 +20,10 @@ Once your project is created, some settings have to be changed to compile your p
 
 #### Build Settings
 
-* Search Paths →  HEADER_SEARCH_PATHS → add "/usr/local/itk/include/ITK-4.4" and "/usr/local/vtk/include/vtk-6.0" You need to verify paths before you copy-paste these ones.
-* Search Paths → LIBRARY_SEARCH_PATHS → add ''/usr/local/itk/lib'' and ''/usr/local/vtk/lib''
-* Apple LLVM compiler 4.2 - Language → CLANG_CXX_LIBRARY → change to "libstdc++" instead of "libc++"
-* Apple LLVM compiler 4.2 - Preprocessing → GCC_PREPROCESSOR_DEFINITIONS → Release → add "RELEASE=1"
+* Search Paths →  HEADER\_SEARCH\_PATHS → add "/usr/local/itk/include/ITK-4.4" and "/usr/local/vtk/include/vtk-6.0" You need to verify paths before you copy-paste these ones.
+* Search Paths → LIBRARY\_SEARCH\_PATHS → add ''/usr/local/itk/lib'' and ''/usr/local/vtk/lib''
+* Apple LLVM compiler 4.2 - Language → CLANG\_CXX\_LIBRARY → change to "libstdc++" instead of "libc++"
+* Apple LLVM compiler 4.2 - Preprocessing → GCC\_PREPROCESSOR\_DEFINITIONS → Release → add "RELEASE=1"
 
 #### Build Phases
 
@@ -56,14 +56,14 @@ Other libraries may be necessary depending on your project. Basic VTK libraries 
 You can now add your file .h and .cpp to the project, or create new files/classes directly with a right-click on the project in the Project Navigator.\
 If you add files by dragging and dropping them to the project navigator, assure yourself that they are in the Compile Sources in Build Phases.
 
-### 4. Set DYLD_LIBRARY_PATH
+### 4. Set DYLD\_LIBRARY\_PATH
 
 To tell to Xcode where to find libraries at the execution of your program, you have to set manually the Environment Variable `DYLD_LIBRARY_PATH` to the libraries. Go to:
 
 Product (in the menu) -> Scheme -> Edit Scheme -> Arguments -> Environment Variables -> add the variable:
 
-    Name = `DYLD_LIBRARY_PATH`\
-    Value = `/usr/local/itk/lib:/usr/local/vtk/lib`
+&#x20;   Name = `DYLD_LIBRARY_PATH`\
+&#x20;   Value = `/usr/local/itk/lib:/usr/local/vtk/lib`
 
 Over the Environment Variables, you can pass arguments on launch to your project.
 
