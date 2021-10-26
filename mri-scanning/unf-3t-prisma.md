@@ -8,7 +8,7 @@ More details on the UNF website: [https://unf-montreal.ca/en/documentation/facil
 
 ## Finding participants
 
-Check our internal list of participants (requires NeuroPoly credentials).
+Check our [internal list of participants](https://docs.google.com/spreadsheets/d/1S0v-YWxYrILJmqb3PtaSTgwBECKEbnljoDfnfIROoSk/edit?usp=sharing) (requires NeuroPoly credentials).
 
 ## Filling MRI eligibility form
 
