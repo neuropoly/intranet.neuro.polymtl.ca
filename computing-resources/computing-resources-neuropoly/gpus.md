@@ -106,9 +106,9 @@ As with the [other stations](https://github.com/neuropoly/neuropoly-internal-doc
 
 For projects and permanent storage: `~/duke`
 
-{% hint style="warning" %}
+```{warning}
 Please, do not use space on duke while training your models. If you need more local space, post a request on slack \#computers.
-{% endhint %}
+```
 
 ### Mid-term, rapid access \(no backup\)
 
@@ -146,9 +146,9 @@ And:
 
 Please allocate your GPUs cooperatively on the [computer resource calendar](https://calendar.google.com/calendar?cid=NG1nNmJnZDlwdjU1dGhmOTQ4NnQybWlodDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
 
-{% hint style="warning" %}
+```{warning}
 **IMPORTANT:** If you don't have writing permission on this calendar please contact [alexandrufoias@gmail.com](mailto:alexandrufoias@gmail.com).
-{% endhint %}
+```
 
 Use this format: u918374@rosenberg:gpu\[3\].
 

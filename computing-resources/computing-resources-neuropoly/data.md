@@ -33,8 +33,8 @@ If you get the message “There are no shares available…”, then there might 
 
 #### Mount from Terminal
 
-{% tabs %}
-{% tab title="Mac OSX" %}
+
+````{tabbed} Mac OSX
 Create folder for the mount point on a location \(your home directory\) where you have read and write access:
 
 ```bash
@@ -44,16 +44,16 @@ mount -t afp afp://USERNAME:PASSWORD@duke.neuro.polymtl.ca/<FOLDER_NAME> <FOLDER
 # To unmount:
 sudo umount <FOLDER_NAME>/
 ```
-{% endtab %}
+````
 
-{% tab title="Linux" %}
+````{tabbed} Linux
 To mount:
 
 ```bash
 sudo mount -t cifs //duke.neuro.polymtl.ca/<FOLDER_NAME> /mnt/duke/<FOLDER_NAME> -o username=<GRAMES_USERNAME>,noexec
 ```
-{% endtab %}
-{% endtabs %}
+````
+
 
 #### Mount From Windows \(Win10\)
 

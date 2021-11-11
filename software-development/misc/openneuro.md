@@ -8,8 +8,8 @@
 
 ### Installation
 
-{% tabs %}
-{% tab title="Debian/Ubuntu" %}
+
+````{tabbed} Debian/Ubuntu
 Install `datalad` using `conda` :
 
 ```bash
@@ -21,9 +21,9 @@ conda activate venv3.7 
 pip install datalad 
 su  apt-get install git-annex
 ```
-{% endtab %}
+````
 
-{% tab title="MacOS" %}
+````{tabbed} MacOS
 Install `datalad` using `conda` :
 
 ```bash
@@ -36,8 +36,8 @@ pip install datalad 
 # first, install brew: https://brew.sh/
 brew install git-annex
 ```
-{% endtab %}
-{% endtabs %}
+````
+
 
 ### Usage
 
@@ -69,19 +69,19 @@ datalad update -r —merge
 
 ### Installation
 
-{% tabs %}
-{% tab title="Linux" %}
+
+````{tabbed} Linux
 Follow the [AWS Installation Instructions for Linux](https://docs.aws.amazon.com/cli/latest/userguide/install-linux.html).
-{% endtab %}
+````
 
-{% tab title="MacOS" %}
+````{tabbed} MacOS
 Follow the [AWS Installation Instructions for MacOS](https://docs.aws.amazon.com/cli/latest/userguide/install-macos.html).
-{% endtab %}
+````
 
-{% tab title="Windows" %}
+````{tabbed} Windows
 Follow the [AWS Installation Instructions for Windows](https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html).
-{% endtab %}
-{% endtabs %}
+````
+
 
 ### Download OpenNeuro Dataset
 

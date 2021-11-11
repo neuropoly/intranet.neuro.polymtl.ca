@@ -1,12 +1,21 @@
 # Deep Learning
 
+```{toctree}
+:hidden:
+cuda
+tensorflow
+conditional-random-fields-crf
+restricted-boltzmann-machines
+misc
+```
+
 ​[http://scikit-learn.org/](http://scikit-learn.org/)
 
-{% embed url="https://github.com/Lasagne/Lasagne" %}
+[https://github.com/Lasagne/Lasagne](https://github.com/Lasagne/Lasagne)
 
-{% embed url="https://github.com/fchollet/keras" %}
+[https://github.com/fchollet/keras](https://github.com/fchollet/keras)
 
-{% embed url="http://nilearn.github.io/" %}
+[http://nilearn.github.io/](http://nilearn.github.io/)
 
 
 

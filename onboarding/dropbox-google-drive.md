@@ -13,9 +13,9 @@ This is the organization of each student's folder with Nikola and/or Julien. You
 | `reports`     | Include progress reports (format: Google Slides, pptx, keynote or pdf). Google Slides are preferred because comments can easily be added. Prefix name should start with YYYYMMDD\_. Example: **`20170515_report.pptx`**                                                                                                                                                                                                                                                                                                                                                  |
 | `results`     | Snapshots/results of your experiments. Prefix should start with YYYYMMDD. Example: **`20150120_dmri_nogse/`**                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
-{% hint style="info" %}
+```{note}
 **Note for Intern Students: **You will only need to create the `admin`, `biblio`, and `reports` folders.
-{% endhint %}
+```
 
 **GENERAL RULES:**
 

@@ -2,9 +2,9 @@
 
 ## Tutorials & Courses
 
-{% hint style="info" %}
+```{note}
 **Everyone working with `git` at NeuroPoly Lab: Please take 2+ hours of your time and learn how to use `git` before using it.**
-{% endhint %}
+```
 
 [**Official Git Documentation**](https://git-scm.com/book/en/v2)****
 
@@ -32,26 +32,26 @@
 
 Full instructions to install `git` [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). We have a quick-start below:
 
-{% tabs %}
-{% tab title="Linux" %}
+
+````{tabbed} Linux
 ```bash
 sudo apt-get update
 apt-get install git-all
 ```
-{% endtab %}
+````
 
-{% tab title="MacOSX" %}
+````{tabbed} MacOSX
 Probably the easiest way to install on MacOSX is to install via [XCode Command Line Tools](https://developer.apple.com/downloads/). To check if `git` is installed:
 
 ```bash
 git --version
 ```
-{% endtab %}
+````
 
-{% tab title="Windows" %}
+````{tabbed} Windows
 Recommended install: Go to [https://git-scm.com/download/win](https://git-scm.com/download/win) and the download will start automatically.
-{% endtab %}
-{% endtabs %}
+````
+
 
 ## Contribute to a Project
 
@@ -75,12 +75,12 @@ Basic steps are:
 
 If you get the following error message, [create an SSH key](http://www.neuro.polymtl.ca/doku.php?id=tips_and_tricks:git#github):
 
-{% hint style="warning" %}
+```{warning}
 > Warning: Permanently added the RSA host key for IP address 'XX.XX.XX.XX' to the list of known hosts.\
 > Permission denied (publickey).\
 > fatal: Could not read from remote repository.\
 > Please make sure you have the correct access rights and the repository exists.
-{% endhint %}
+```
 
 
 
@@ -368,9 +368,9 @@ git reset --hard <COMMIT_NUMBER>
 git push -f
 ```
 
-{% hint style="warning" %}
+```{warning}
 **WARNING:** This will erase the latest commits!
-{% endhint %}
+```
 
 ## HOW TO
 

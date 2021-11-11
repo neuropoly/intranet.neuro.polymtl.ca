@@ -50,14 +50,14 @@ To load module \(you can put this in your `.bashrc` if you need the module all t
 module load <module_name>
 ```
 
-{% hint style="info" %}
+```{note}
 **Example**: Check if git is available and load it
 
 ```bash
 module avail git
 module load apps/git/2.13.0
 ```
-{% endhint %}
+```
 
 You have to build everything from source because you don't have root permission to install anything yourself. You can send an email to `guillimin "at" calculquebec "dot" ca` if you need them to install something on your session. They are quite responsive.
 
@@ -82,7 +82,7 @@ The folder common to the lab \(where you need to work\) is:
 
 ### **Create job script**
 
-{% hint style="info" %}
+```{note}
 **Example**
 
 ```bash
@@ -96,7 +96,7 @@ The folder common to the lab \(where you need to work\) is:
 cd /gs/project/<RAPI>/final_data_T2
 bash buildtemplateparallel.sh -d 3 -o AVT -n 0 -c 2 -j 16 *.nii.gz
 ```
-{% endhint %}
+```
 
 ### **Submit job**
 
@@ -157,7 +157,7 @@ deactivate
 * Some tricks on how to use GPUs on Cedar: [Cedar Tricks](https://www.neuro.polymtl.ca/internal_resources/list_of_computers/cedartricks)
 * [Graham and Cedar Announcement \(WestGrid News\)](https://www.westgrid.ca/westgrid_news/new_compute_canada_national_systems_now_available)
 
-{% hint style="info" %}
+```{note}
 **Example**: Run SCT on Cedar
 
 256 CPUS  
@@ -200,7 +200,7 @@ Then run `sct_pipeline`. The 16 cores will be accessible via the MPI interface:
 ```bash
 <PATH/TO/SCT>/bin/sct_pipeline -cpu-nb 16  -f sct_propseg -d /home/poq/small -p \" -i  t2s/t2s.nii.gz  -c t2s \"
 ```
-{% endhint %}
+```
 
 ### Colosse \(CQ/Laval\)
 

@@ -75,9 +75,9 @@ This is the organization of each student's folder with Nikola and/or Julien. You
   </tbody>
 </table>
 
-{% hint style="info" %}
+```{note}
 **Note for Intern Students:** You will only need to create the `admin`, `biblio`, and `reports` folders.
-{% endhint %}
+```
 
 **GENERAL RULES:**
 

@@ -184,13 +184,13 @@ It seems to work… still compiling. No complaints about type traits.
 
 ## **Fixing Installation Issues**
 
-{% hint style="danger" %}
+```{warning}
 garbage collection is no longer supported
 
 You can simply remove the -fobjc-gc flag from VTK_REQUIRED_OBJCXX_FLAGS
-{% endhint %}
+```
 
-{% hint style="danger" %}
+```{warning}
 traits error
 
 Add `libc++.dylib` to your project:
@@ -202,7 +202,7 @@ Add `libc++.dylib` to your project:
 > 5. Click the "+"
 > 6. Type `libc++.dylib` in the search bar
 > 7. Select the `libc++.dylib` file and click "Add"
-{% endhint %}
+```
 
 ## **Be prepared to use libraries**
 

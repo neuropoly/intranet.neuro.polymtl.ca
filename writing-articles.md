@@ -1,4 +1,4 @@
-# ✍️     Academic Writing
+# <span>✍️</span>     Academic Writing
 
 ## Journals
 
@@ -115,9 +115,9 @@ We have a Paperpile account for the lab. For login please use the Google account
 
 If you prefer to have your own Paperpile license please request it to your supervisor.
 
-{% hint style="info" %}
+```{note}
 Paperpile on Google Docs works only with Google Chrome.
-{% endhint %}
+```
 
 ### Install Paperpile
 
