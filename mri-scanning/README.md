@@ -2,7 +2,16 @@
 description: Available MRI facilities and useful information about experiments.
 ---
 
-# 🧲 MRI Scanning
+# <span>🧲</span> MRI Scanning
+
+```{toctree}
+:hidden:
+unf-3t-prisma
+mni-mcgill-7t-terra
+mhi-7t-agilent
+coils/README
+phantoms/README
+```
 
 ## MRI facilities
 

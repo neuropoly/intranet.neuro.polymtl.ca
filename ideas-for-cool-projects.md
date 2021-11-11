@@ -4,7 +4,7 @@ description: >-
   below 👇
 ---
 
-# 💡 Ideas for Cool Projects
+# <span>💡</span> Ideas for Cool Projects
 
 * Please indicate the author of the idea in brackets (to get more info if necessary)
 * _Italic_: idea being investigated / work in progress

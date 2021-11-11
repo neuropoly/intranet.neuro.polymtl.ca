@@ -1,5 +1,10 @@
 # 3D Printing
 
+```{toctree}
+:hidden:
+octoprint
+```
+
 ## 3D Printer - Big Builder - Dual feed \(RF lab\)
 
 * [http://3dprinter4u.nl/shop/3d-printers/big-builder-dual-feed-extruder/](http://3dprinter4u.nl/shop/3d-printers/big-builder-dual-feed-extruder/)

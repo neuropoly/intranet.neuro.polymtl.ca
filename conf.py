@@ -33,6 +33,7 @@ root_doc = 'README'
 # ones.
 extensions = [
         'myst_parser', # there's also myst_nb, which supports embedding Jupyter notebooks, but is heavier.
+        'sphinx_panels',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

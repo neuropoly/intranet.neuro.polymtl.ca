@@ -1,5 +1,12 @@
 # NeuroPoly
 
+```{toctree}
+:hidden:
+data
+cpus2
+gpus
+```
+
 ## Poly-Grames
 
 ### Poly-Grames Network Account <a href="polygrames_network_account" id="polygrames_network_account"></a>
@@ -54,19 +61,19 @@ Contact Alexandru Foias to request VPN access be activated for your CAS account.
 
 The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing `openconnect`:
 
-{% tabs %}
-{% tab title="MacOS" %}
+
+````{tabbed} MacOS
 ```
 brew install openconnect
 ```
-{% endtab %}
+````
 
-{% tab title="PC/Linux" %}
+````{tabbed} PC/Linux
 ```
 apt install openconnect
 ```
-{% endtab %}
-{% endtabs %}
+````
+
 
 and then calling it with this script:
 
@@ -133,20 +140,20 @@ To avoid having to enter your password, you can also use an [SSH key](../../soft
 
 ### VNC (graphical interface)
 
-{% tabs %}
-{% tab title="macOS" %}
+
+````{tabbed} macOS
 1. Open Finder
 2. Click Cmd+K
 3. In the “Server Address”, type (using the `STATION` you want): `vnc://STATION.neuro.polymtl.ca`
 4. You can use your local/network account information or the [shared account credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg)
-{% endtab %}
+````
 
-{% tab title="PC/Linux" %}
+````{tabbed} PC/Linux
 1. Establish a VNC connection using [vinaigre](https://wiki.gnome.org/Apps/Vinagre/).
 2. In the “Server Address”, type (using the `STATION` you want): `vnc://STATION.neuro.polymtl.ca`
 3. You can use the password from [shared account credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg)
-{% endtab %}
-{% endtabs %}
+````
+
 
 #### Linux stations
 
@@ -182,12 +189,12 @@ On Linux targets, a VNC server needs to be started manually before the above ins
 
 After starting the vncserver, connect to it as above.
 
-{% hint style="info" %}
+```{note}
 **Note:**
 
 * On the first start of the vncserver, you will have to set a personal password for your vnc session  
 * The resolution can be defined by changing the value of the `-geometry` flag.
-{% endhint %}
+```
 
 1. Stop VNC server - mandatory at the end of your session
 
@@ -197,8 +204,8 @@ After starting the vncserver, connect to it as above.
 
 ### SFTP
 
-{% tabs %}
-{% tab title="mac" %}
+
+````{tabbed} mac
 1. Open the Terminal
 2. Install OSX Fuse and SSHFS
 
@@ -212,22 +219,22 @@ brew install sshfs
 ```
 sudo sshfs -o allow_other,defer_permissions,IdentityFile=~/.ssh/id_rsa <username>@CLUSTER.neuro.polymtl.ca:/folder/to/mount /where/to/mount
 ```
-{% endtab %}
+````
 
-{% tab title="Linux" %}
+````{tabbed} Linux
 Files > Other locations > Connect to Server > sftp://USERNAME@CLUSTER.neuro.polymtl.ca/
-{% endtab %}
-{% endtabs %}
+````
+
 
 ## CPU/GPU Clusters <a href="computingprogramming_stations" id="computingprogramming_stations"></a>
 
 The following CPU and GPU clusters are available for internal use at **NeuroPoly**.
 
-{% hint style="warning" %}
+```{warning}
 **IMPORTANT:** Indicate in the calendar below if you plan to launch intensive calculations on a computer (even if it is on your station, in case you leave for holidays but are still using your station). If you don't have writing permission on this calendar please contact [alexandrufoias@gmail.com](mailto:alexandrufoias@gmail.com).
-{% endhint %}
+```
 
-{% embed url="https://calendar.google.com/calendar/u/0/embed?src=4mg6bgd9pv55thf9486t2miht8@group.calendar.google.com" %}
+[https://calendar.google.com/calendar/u/0/embed?src=4mg6bgd9pv55thf9486t2miht8@group.calendar.google.com](https://calendar.google.com/calendar/u/0/embed?src=4mg6bgd9pv55thf9486t2miht8@group.calendar.google.com)
 
 ### Rosenberg
 
@@ -326,10 +333,10 @@ This computer is to be used for programming pulse sequences within the Siemens I
 
 #### Troubleshooting
 
-{% hint style="danger" %}
+```{warning}
 **Possible error:** “The certificate or associated chain is not valid.”\
 **Solution:** Install remote Desktop v10 or higher (v8 does not work)
-{% endhint %}
+```
 
 ### Idea7t - Siemens Pulse sequence programming for VE12U (Terra)
 

@@ -33,7 +33,7 @@ JACARANDA and ELM use Sun grid engine.
 
 ### **Create Job Script**
 
-{% hint style="info" %}
+```{note}
 **Example**
 
 ```bash
@@ -51,7 +51,7 @@ sct_testing
 echo "Script ended at:"
 date
 ```
-{% endhint %}
+```
 
 * Submit job: `qsub my_job.pbs`
 * To see all the jobs currently running type: `qstat`

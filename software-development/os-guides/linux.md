@@ -15,8 +15,8 @@ sudo mkdir /mnt/data_shared
 
 3\. For the following operating systems:
 
-{% tabs %}
-{% tab title="Ubuntu 14.04 LTS" %}
+
+````{tabbed} Ubuntu 14.04 LTS
 Add the following lines at the bottom of the file:
 
 ```bash
@@ -26,9 +26,9 @@ Add the following lines at the bottom of the file:
 #data_shared @SERVER
 //IP_SERVER/data_shared        /mnt/data_shared    cifs    username=XXX,password=XXX    0       0
 ```
-{% endtab %}
+````
 
-{% tab title="Debian Wheezy 8" %}
+````{tabbed} Debian Wheezy 8
 Add the following lines at the bottom of the file:
 
 ```bash
@@ -38,8 +38,8 @@ Add the following lines at the bottom of the file:
 #data_shared @SERVER
 //IP_SERVER/data_shared    /mnt/data_shared    cifs  nounix,sec=ntlmssp,user=XXX,password=XXX 0 0
 ```
-{% endtab %}
-{% endtabs %}
+````
+
 
 4\. Remount drives and type: `sudo mount -a`
 

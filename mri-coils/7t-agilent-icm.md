@@ -75,7 +75,7 @@ DESCRIPTION: This birdcage coil is designed for 1H quadrature detection imaging 
 
 ## Wiki 7T Scanner ICM <a id="wiki_7t_scanner_icm"></a>
 
-{% embed url="http://image.liom2.polymtl.ca/en/home" %}
+[http://image.liom2.polymtl.ca/en/home](http://image.liom2.polymtl.ca/en/home)
 
 [NeuroPoly Internal Document: Wiki 7T Scanner ICM Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.1fo74ej6y2sr)
 

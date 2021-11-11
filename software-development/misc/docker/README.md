@@ -1,5 +1,10 @@
 # Docker
 
+```{toctree}
+:hidden:
+docker-for-deep-learning
+```
+
 ## Docker Terminology
 
 **Images** - The blueprints of our application which form the basis of containers.

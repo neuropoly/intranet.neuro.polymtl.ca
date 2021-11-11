@@ -1,5 +1,10 @@
 # Bash/Shell
 
+```{toctree}
+:hidden:
+script
+```
+
 ## Awesome links
 
 * [Bash scripting cheatsheet](https://devhints.io/bash)
@@ -241,20 +246,20 @@ find -name sica\*.png | xargs -t -i /bin/cp ./{} ./imagesEdit
 
 This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.
 
-{% tabs %}
-{% tab title="Linux" %}
+
+````{tabbed} Linux
 ```bash
 find FOLDER -type f -exec md5sum {} \; | md5sum
 ```
-{% endtab %}
+````
 
-{% tab title="Mac" %}
+````{tabbed} Mac
 ```bash
 find -s FOLDER -type f -exec shasum {} \; | shasum
 find -s FOLDER -type f -exec md5 {} \; | md5
 ```
-{% endtab %}
-{% endtabs %}
+````
+
 
 #### Remove files from tmp <a href="remove_files_from_tmp" id="remove_files_from_tmp"></a>
 

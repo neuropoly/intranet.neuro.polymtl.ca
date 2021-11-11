@@ -1,4 +1,4 @@
-# 🎓 University Courses
+# <span>🎓</span> University Courses
 
 ## Requirements for Polytechnique Montréal
 

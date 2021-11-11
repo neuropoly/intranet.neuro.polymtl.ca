@@ -1,5 +1,18 @@
 # Image Processing
 
+```{toctree}
+:hidden:
+advanced-normalization-tools-ants
+anima
+diffusion-simulator
+freesurfer
+fsl/README
+itk-snap
+nifti
+openneuro-cli
+osirix
+```
+
 ## Smoothing
 
 ### Gaussian Filter

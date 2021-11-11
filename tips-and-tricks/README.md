@@ -1,4 +1,4 @@
-# 😎 Tips and Tricks
+# <span>😎</span> Tips and Tricks
 
 Bash
 

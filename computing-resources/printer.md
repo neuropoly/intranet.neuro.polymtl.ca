@@ -1,4 +1,4 @@
-# 🖨 Printer
+# <span>🖨</span> Printer
 
 HP LaserJet 5500 \(BAA493\), located in Located in L-5619  
 IP address: See [NeuroPoly Internal Document: Printer](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.d17aq1y1u5gr)

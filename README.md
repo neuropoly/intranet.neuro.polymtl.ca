@@ -1,4 +1,21 @@
-# 🏠 Home
+# <span>🏠</span> Home
+
+```{toctree}
+:hidden:
+self
+onboarding/README
+agenda-and-calendar
+mri-scanning/README
+writing-articles
+computing-resources/README
+software-development/README
+courses
+bibliography/README
+conferences
+ideas-for-cool-projects
+practical-information/README
+contact
+```
 
 Welcome to the [NeuroPoly Lab](https://www.neuro.polymtl.ca/)! This website is intended for students, faculty, researchers, associates, and developers of **NeuroPoly**. Here you can find information about onboarding, software, best practices, and more :\) 
 

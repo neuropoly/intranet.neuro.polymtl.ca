@@ -1,8 +1,8 @@
 # XQuartz
 
-{% hint style="info" %}
+```{note}
 Note: XQuartz is for MacOS only
-{% endhint %}
+```
 
 ## SSH
 

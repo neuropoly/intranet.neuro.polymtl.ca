@@ -10,9 +10,9 @@ TensorFlow 1.5 required because [https://github.com/neuropoly/spinalcordtoolbox/
 
 **SCT**: [https://hub.docker.com/r/neuropoly/sct](https://hub.docker.com/r/neuropoly/sct)
 
-{% hint style="warning" %}
+```{warning}
 Note: DockerHub not up to date as of 2021-03-08
-{% endhint %}
+```
 
 ## IvadoMed <a id="ivadomed"></a>
 

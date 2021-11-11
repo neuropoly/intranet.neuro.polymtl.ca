@@ -25,21 +25,21 @@ The shared folders \(hosted on **Poly-Grames**\) are:
 
 `duke` is available over both `smb://` and `afp://`.
 
-{% tabs %}
-{% tab title="macOS" %}
+
+````{tabbed} macOS
 1. Open Finder
 2. CMD+K
 3. `afp://duke.neuro.polymtl.ca/`
-{% endtab %}
+````
 
-{% tab title="Linux" %}
+````{tabbed} Linux
 1. Open File Browser
 2. Menu > Go > Open Network Location 
 3. `smb://duke.neuro.polymtl.ca/`
-{% endtab %}
+````
 
 
-{% tab title="Windows 10" %}
+````{tabbed} Windows 10
 
 1. Open Windows explorer
 2. Right click This PC
@@ -49,15 +49,15 @@ The shared folders \(hosted on **Poly-Grames**\) are:
 6. Username: `grames\<POLYGRAMES_USERNAME>`
 7. Password: `<POLYGRAMES_PASSWORD>`.
 
-{% endtab %}
-{% endtabs %}
+````
+
 
 Note: some root folders are restricted \(e.g. **mri**\), so that you need to fill in a subfolder you have been granted access to. Example: `duke.neuro.polymtl.ca/mri/unf`
 
 #### Mount from Terminal
 
-{% tabs %}
-{% tab title="macOS" %}
+
+````{tabbed} macOS
 Create folder for the mount point on a location \(your home directory\) where you have read and write access:
 
 ```bash
@@ -67,16 +67,16 @@ mount -t afp afp://USERNAME:PASSWORD@duke.neuro.polymtl.ca/<FOLDER_NAME> <FOLDER
 # To unmount:
 sudo umount <FOLDER_NAME>/
 ```
-{% endtab %}
+````
 
-{% tab title="Linux" %}
+````{tabbed} Linux
 To mount:
 
 ```bash
 sudo mount -t cifs //duke.neuro.polymtl.ca/<FOLDER_NAME> /mnt/duke/<FOLDER_NAME> -o username=<GRAMES_USERNAME>,noexec
 ```
-{% endtab %}
-{% endtabs %}
+````
+
 
 
 ### Access from stations
