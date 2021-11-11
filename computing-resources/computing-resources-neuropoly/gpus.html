@@ -1,0 +1,1135 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GPUs &#8212; NeuroPoly Internal</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <link rel="shortcut icon" href="../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Compute Canada" href="../compute-canada.html" />
+    <link rel="prev" title="CPUS2" href="cpus2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NeuroPoly Internal</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../README.html">
+   🏠 Home
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../onboarding/README.html">
+   <span>
+    👋
+   </span>
+   Onboarding
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/getting-started.html">
+     Getting Started
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/accounts.html">
+     Accounts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/campus-access.html">
+     Campus Access
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/infrastructure.html">
+     Infrastructure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/dropbox-google-drive.html">
+     Dropbox/Google Drive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/computer-setup.html">
+     Computer Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/developer-setup.html">
+     Developer Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/consultants-ra.html">
+     Consultants and RA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/acronyms-jargon.html">
+     Acronyms &amp; Jargon
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../agenda-and-calendar.html">
+   <span>
+    📅
+   </span>
+   Calendar
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../mri-scanning/README.html">
+   <span>
+    🧲
+   </span>
+   MRI Scanning
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mri-scanning/unf-3t-prisma.html">
+     UNF (3T Prisma)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mri-scanning/mni-mcgill-7t-terra.html">
+     MNI/McGill (7T Terra)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mri-scanning/mhi-7t-agilent.html">
+     MHI (7T Agilent)
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../mri-scanning/coils/README.html">
+     Coils
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../mri-scanning/coils/3d-printing/README.html">
+       3D Printing
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../mri-scanning/coils/3d-printing/octoprint.html">
+         OctoPrint
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/coils/faq.html">
+       FAQ
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/coils/pcb-manufacturing.html">
+       PCB Manufacturing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/coils/cnc-machine-genmitsu-3018-prover.html">
+       CNC machine - Genmitsu 3018-PROVer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../mri-scanning/phantoms/README.html">
+     Phantoms
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/phantoms/phantom-recipes-for-mri.html">
+       Phantom Recipes for MRI
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../writing-articles.html">
+   <span>
+    ✍️
+   </span>
+   Academic Writing
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../README.html">
+   <span>
+    🖥
+   </span>
+   Computing Resources
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="README.html">
+     NeuroPoly
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="data.html">
+       Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="cpus2.html">
+       CPUS2
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       GPUs
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../compute-canada.html">
+     Compute Canada
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../clusters-at-criugm.html">
+     CRIUGM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../printer.html">
+     <span>
+      🖨
+     </span>
+     Printer
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../software-development/README.html">
+   <span>
+    🐍
+   </span>
+   Software Development
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../software-development/bash-shell/README.html">
+     Bash/Shell
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/bash-shell/script.html">
+       Script
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../software-development/git.html">
+     git &amp; Github
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../software-development/untitled.html">
+     NeuroPoly Packages &amp; Collaborations
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../software-development/os-guides/README.html">
+     OS Guides
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/os-guides/linux.html">
+       Linux
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/os-guides/macosx.html">
+       MacOSX
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../software-development/contributing.html">
+     Contributing Guidelines
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../software-development/misc/README.html">
+     Other Software &amp; Tools
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../software-development/misc/virtual-machines/README.html">
+       Virtual Machines
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+      <label for="toctree-checkbox-12">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../software-development/misc/virtual-machines/virtualbox.html">
+         VirtualBox
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../software-development/misc/virtual-machines/vagrant.html">
+         Vagrant
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/misc/bitbucket.html">
+       BitBucket
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../software-development/misc/docker/README.html">
+       Docker
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+      <label for="toctree-checkbox-13">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../software-development/misc/docker/docker-for-deep-learning.html">
+         Docker for Deep Learning
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/misc/dropbox.html">
+       Dropbox
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/misc/jekyll.html">
+       Jekyll
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/misc/microsoft-word.html">
+       Microsoft Word
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/misc/openneuro.html">
+       OpenNeuro
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/misc/git-and-github.html">
+       Git &amp; GitHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/misc/sketchup.html">
+       Sketchup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/misc/xquartz.html">
+       XQuartz
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../software-development/programming-languages/README.html">
+     Programming Languages
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/programming-languages/python.html">
+       Python
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/programming-languages/matlab.html">
+       MATLAB
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../software-development/programming-languages/c%2B%2B/README.html">
+       C++
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+      <label for="toctree-checkbox-15">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../software-development/programming-languages/c%2B%2B/installation-of-vtk-and-itk-on-mac-os-x.html">
+         Installation of VTK and ITK on Mac OS X
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../software-development/programming-languages/c%2B%2B/using-xcode.html">
+         Using XCode
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../software-development/image-processing-software/README.html">
+     Image Processing
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/image-processing-software/advanced-normalization-tools-ants.html">
+       Advanced Normalization Tools (ANTs)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/image-processing-software/anima.html">
+       Anima
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/image-processing-software/diffusion-simulator.html">
+       Diffusion Simulator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/image-processing-software/freesurfer.html">
+       FreeSurfer
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../software-development/image-processing-software/fsl/README.html">
+       FSL
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+      <label for="toctree-checkbox-17">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../software-development/image-processing-software/fsl/fsleyes.html">
+         FSLeyes
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/image-processing-software/itk-snap.html">
+       ITK-SNAP
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/image-processing-software/nifti.html">
+       NIfTI
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/image-processing-software/openneuro-cli.html">
+       OpenNeuro CLI
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/image-processing-software/osirix.html">
+       OsiriX
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../software-development/deep-learning/README.html">
+     Deep Learning
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+    <label for="toctree-checkbox-18">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/deep-learning/cuda.html">
+       CUDA
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/deep-learning/tensorflow.html">
+       Tensorflow
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/deep-learning/conditional-random-fields-crf.html">
+       Conditional Random Fields (CRF)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/deep-learning/restricted-boltzmann-machines.html">
+       Restricted Boltzmann Machines (RBM)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../software-development/deep-learning/misc.html">
+       Misc
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../courses.html">
+   <span>
+    🎓
+   </span>
+   University Courses
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../bibliography/README.html">
+   <span>
+    📚
+   </span>
+   Bibliography
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/deep-learning.html">
+     Deep Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/histology.html">
+     Histology
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/untitled.html">
+     MRI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/shared-paperpile-folder.html">
+     Paperpile Folder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../conferences.html">
+   <span>
+    ✈️
+   </span>
+   Conferences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ideas-for-cool-projects.html">
+   <span>
+    💡
+   </span>
+   Ideas for Cool Projects
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../practical-information/README.html">
+   <span>
+    📎
+   </span>
+   Practical Information
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/visa.html">
+     VISAs and Work Permits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/moving-to-montreal.html">
+     <span>
+      🇨🇦
+     </span>
+     Living in Montreal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/scholarships-and-bursaries.html">
+     Scholarships &amp; Bursaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/purchasing-hardware-and-lab-supplies.html">
+     Purchasing Supplies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../contact.html">
+   <span>
+    📞
+   </span>
+   Contact
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+
+
+<!-- only one Github button activated, so collapse it into the main button, saving a click for users -->
+        <a class="edit-button" href="https://github.com/neuropoly/neuropoly-internal-docs/edit/ng/sphinx/computing-resources/computing-resources-neuropoly/gpus.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fab fa-github"></i></button></a>
+
+
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Page Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connecting">
+   Connecting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hardware">
+   Hardware
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#software">
+   Software
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gpu-agnostic-code">
+     GPU-Agnostic code
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data">
+   Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#storage">
+   Storage
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#long-term-slow-access-with-backup">
+     Long term, slow access (with backup)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mid-term-rapid-access-no-backup">
+     Mid-term, rapid access (no backup)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#short-term-very-rapid-access-no-backup">
+     Short-term, very rapid access (no backup)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#good-training-habits">
+   Good Training Habits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bookings">
+   Bookings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#monitoring">
+   Monitoring
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monitoring-gpus">
+     Monitoring GPUs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tensorboard">
+   Tensorboard
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="gpus">
+<h1>GPUs<a class="headerlink" href="#gpus" title="Permalink to this headline">¶</a></h1>
+<p>This document is being ported from <a class="reference external" href="https://docs.google.com/document/d/1X--A2kql4GypfI6fNFIOYA_b6uQdeu2_Kue7n8KkTOU/edit">here</a>.</p>
+<p>Neuropoly has several GPUs available for training deep learning models.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bireli.neuro.polymtl.ca</span></code> -  2 x <a class="reference external" href="https://www.nvidia.com/en-us/geforce/graphics-cards/geforce-gtx-titan-x/specifications/">GeForce GTX TITAN X</a> (released 2014)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rosenberg.neuro.polymtl.ca</span></code> - 8 x <a class="reference external" href="https://www.nvidia.com/en-us/data-center/tesla-p100/">Tesla P100 SXM2 16GB</a> (released 2016)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">romane.neuro.polymtl.ca</span></code> - 4 x <a class="reference external" href="https://www.nvidia.com/en-us/design-visualization/rtx-a6000/">RTX A6000</a> (released 2020)</p></li>
+</ul>
+<p>We have spent money and time on this infrastructure for it to push science forward, so please take advantage of it!</p>
+<div class="section" id="connecting">
+<h2>Connecting<a class="headerlink" href="#connecting" title="Permalink to this headline">¶</a></h2>
+<p>Like <a class="reference external" href="./#connect">other machines</a>, connect with ssh using your <a class="reference external" href="https://github.com/neuropoly/neuropoly-internal-docs/tree/24a8cfb83736a4325aa342ece74a89846c1f700d/computing-resources/onboarding/accounts.md#polygrames">polygrames</a> account.</p>
+</div>
+<div class="section" id="hardware">
+<h2>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h2>
+<p>You can inspect the available GPUs on machine, and their current state, with <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ nvidia-smi
+Fri Jun  4 01:26:14 2021       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 440.33.01    Driver Version: 440.33.01    CUDA Version: 10.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla P100-SXM2...  On   | 00000000:04:00.0 Off |                    0 |
+| N/A   25C    P0    33W / 300W |     10MiB / 16280MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla P100-SXM2...  On   | 00000000:05:00.0 Off |                    0 |
+| N/A   22C    P0    33W / 300W |     10MiB / 16280MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla P100-SXM2...  On   | 00000000:09:00.0 Off |                    0 |
+| N/A   24C    P0    31W / 300W |     10MiB / 16280MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla P100-SXM2...  On   | 00000000:0A:00.0 Off |                    0 |
+| N/A   23C    P0    31W / 300W |     10MiB / 16280MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   4  Tesla P100-SXM2...  On   | 00000000:85:00.0 Off |                    0 |
+| N/A   31C    P0    51W / 300W |  10253MiB / 16280MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   5  Tesla P100-SXM2...  On   | 00000000:86:00.0 Off |                    0 |
+| N/A   22C    P0    41W / 300W |  10253MiB / 16280MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   6  Tesla P100-SXM2...  On   | 00000000:89:00.0 Off |                    0 |
+| N/A   32C    P0    51W / 300W |  10245MiB / 16280MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   7  Tesla P100-SXM2...  On   | 00000000:8A:00.0 Off |                    0 |
+| N/A   38C    P0    52W / 300W |  13684MiB / 16280MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|    4     32263      C   ...L.CA/u12345/venv-ivadomed/bin/python3.6 10243MiB |
+|    5     32264      C   ...L.CA/u12345/venv-ivadomed/bin/python3.6 10243MiB |
+|    6     33062      C   ...L.CA/u12345/venv-ivadomed/bin/python3.6 10235MiB |
+|    7     33063      C   ...L.CA/u12345/venv-ivadomed/bin/python3.6 10235MiB |
+|    7     35147      C   ...L.CA/u12345/venv-ivadomed/bin/python3.6  3439MiB |
++-----------------------------------------------------------------------------+
+</pre></div>
+</div>
+</div>
+<div class="section" id="software">
+<h2>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h2>
+<p>Both <a class="reference external" href="https://tensorflow.org"><code class="docutils literal notranslate"><span class="pre">tensorflow</span></code></a> and <a class="reference external" href="https://pytorch.org/"><code class="docutils literal notranslate"><span class="pre">torch</span></code></a> are supported on all of these machines.</p>
+<p>You can …</p>
+<p>To get your software onto these servers, download it with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code>.</p>
+<div class="section" id="gpu-agnostic-code">
+<h3>GPU-Agnostic code<a class="headerlink" href="#gpu-agnostic-code" title="Permalink to this headline">¶</a></h3>
+<p>For the benefit of being able to test code out locally, without the GPU servers, it’s helpful to write device-agnostic code, code that falls back to running on slower CPU emulation if GPUs are not available.</p>
+<p>For tensorflow, this</p>
+<p>For pytorch, this <a class="reference external" href="https://pytorch.org/docs/stable/notes/cuda.html#device-agnostic-code">looks like this</a></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>device = torch.device(&#39;cuda&#39; if torch.cuda.is_available() else &#39;cpu&#39;)
+
+...
+
+# to make tensors
+X = torch.empty((8, 42), device=device)
+
+# to make neural networks
+model = Network(...).to(device=device)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
+<p>As with the <a class="reference external" href="https://github.com/neuropoly/neuropoly-internal-docs/tree/24a8cfb83736a4325aa342ece74a89846c1f700d/computing-resources/computing-resources-neuropoly/stations.md#data">other stations</a>, you should prefer getting data in via <a class="reference external" href="https://github.com/neuropoly/data-management/blob/master/internal-server.md"><code class="docutils literal notranslate"><span class="pre">git-annex</span></code></a>, but you can it via <a class="reference external" href="https://github.com/neuropoly/neuropoly-internal-docs/tree/24a8cfb83736a4325aa342ece74a89846c1f700d/computing-resources/computing-resources-neuropoly/stations.md#duke"><code class="docutils literal notranslate"><span class="pre">duke</span></code></a> (which is available to you at <code class="docutils literal notranslate"><span class="pre">~/duke/temp</span></code>) or any other method (<code class="docutils literal notranslate"><span class="pre">scp</span></code>, <code class="docutils literal notranslate"><span class="pre">curl</span></code>, <code class="docutils literal notranslate"><span class="pre">wget</span></code>, etc).</p>
+</div>
+<div class="section" id="storage">
+<h2>Storage<a class="headerlink" href="#storage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="long-term-slow-access-with-backup">
+<h3>Long term, slow access (with backup)<a class="headerlink" href="#long-term-slow-access-with-backup" title="Permalink to this headline">¶</a></h3>
+<p>For projects and permanent storage: <code class="docutils literal notranslate"><span class="pre">~/duke</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please, do not use space on duke while training your models. If you need more local space, post a request on slack #computers.</p>
+</div>
+</div>
+<div class="section" id="mid-term-rapid-access-no-backup">
+<h3>Mid-term, rapid access (no backup)<a class="headerlink" href="#mid-term-rapid-access-no-backup" title="Permalink to this headline">¶</a></h3>
+<p>This corresponds to your home <code class="docutils literal notranslate"><span class="pre">~/</span></code>. This is where you keep your software (conda envs, virtualenvs, etc.).</p>
+</div>
+<div class="section" id="short-term-very-rapid-access-no-backup">
+<h3>Short-term, very rapid access (no backup)<a class="headerlink" href="#short-term-very-rapid-access-no-backup" title="Permalink to this headline">¶</a></h3>
+<p>This is where you run your experiments (eg: deep learning training). On <code class="docutils literal notranslate"><span class="pre">rosenberg</span></code>, go to <code class="docutils literal notranslate"><span class="pre">~/data_nvme_$USER</span></code>or <code class="docutils literal notranslate"><span class="pre">~/data_extrassd_$USER</span></code>. On <code class="docutils literal notranslate"><span class="pre">bireli</span></code> and <code class="docutils literal notranslate"><span class="pre">romane</span></code> , go to your home <code class="docutils literal notranslate"><span class="pre">~/</span></code> .</p>
+<p>To keep track of your disk space, you can run <code class="docutils literal notranslate"><span class="pre">df</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u108545@rosenberg:~$ # to see how much space is available on the spare disk
+u108545@rosenberg:~$ df -h data_extrassd_u108545
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdb1       440G   50G  368G  12% /mnt/extrassd
+
+u108545@rosenberg:~$ # to measure how much space a tool takes
+u108545@rosenberg:~$ du -hs data_extrassd_u108545/miniconda3/
+18G    data_extrassd_u108545/miniconda3/
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="good-training-habits">
+<h2>Good Training Habits<a class="headerlink" href="#good-training-habits" title="Permalink to this headline">¶</a></h2>
+<p>Instead of loading the whole dataset to memory:</p>
+<ul class="simple">
+<li><p>Use HDF5Matrix: <a class="reference external" href="https://gist.github.com/jfsantos/e2ef822c744357a4ed16ec0c885100a3">https://gist.github.com/jfsantos/e2ef822c744357a4ed16ec0c885100a3</a></p></li>
+<li><p>Provide a python generator like in: <a class="reference external" href="https://github.com/keras-team/keras/issues/107">https://github.com/keras-team/keras/issues/107</a></p></li>
+</ul>
+<p>And:</p>
+<ul class="simple">
+<li><p>Store data as float32 rather than float64</p></li>
+</ul>
+</div>
+<div class="section" id="bookings">
+<h2>Bookings<a class="headerlink" href="#bookings" title="Permalink to this headline">¶</a></h2>
+<p>Please allocate your GPUs cooperatively on the <a class="reference external" href="https://calendar.google.com/calendar?cid=NG1nNmJnZDlwdjU1dGhmOTQ4NnQybWlodDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">computer resource calendar</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>IMPORTANT:</strong> If you don’t have writing permission on this calendar please contact <a class="reference external" href="mailto:alexandrufoias&#37;&#52;&#48;gmail&#46;com">alexandrufoias<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
+</div>
+<p>Use this format: u918374&#64;rosenberg:gpu[3].</p>
+<p>Note that the GPUs are numbered from 0, as you can see in <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code>.</p>
+<p>To train, run your scripts like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ CUDA_VISIBLE_DEVICES=&quot;3&quot; ./train.sh
+</pre></div>
+</div>
+<p>You can book multiple GPUs just with commas: u918374&#64;rosenberg:gpu[2,3,5]</p>
+<p>and use them with</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ CUDA_VISIBLE_DEVICES=&quot;2,3,5&quot; ./train.sh
+</pre></div>
+</div>
+</div>
+<div class="section" id="monitoring">
+<h2>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h2>
+<p>You can monitor what the system is doing with</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>htop   # CPU processes
+</pre></div>
+</div>
+<p>and</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>nvtop  # GPU processes
+</pre></div>
+</div>
+<p>You can see how hot it is running with</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ sensors
+coretemp-isa-0001
+Adapter: ISA adapter
+Package id 1:  +30.0°C  (high = +80.0°C, crit = +90.0°C)
+Core 0:        +25.0°C  (high = +80.0°C, crit = +90.0°C)
+Core 1:        +25.0°C  (high = +80.0°C, crit = +90.0°C)
+</pre></div>
+</div>
+<p>You can see how hot its disks are running by finding out the name of the disk in /dev and running</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ df -h .
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda2       439G  412G  4.9G  99% /
+u108545@rosenberg:~$ hddtemp /dev/sda2
+/dev/sda2: PNY CS1311 480GB SSD: 30°C
+</pre></div>
+</div>
+<p>You can also see all this information plotted over time for each machine at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://monitor.neuro.polymtl.ca/host/bireli.neuro.polymtl.ca">https://monitor.neuro.polymtl.ca/host/bireli.neuro.polymtl.ca</a></p></li>
+<li><p><a class="reference external" href="https://monitor.neuro.polymtl.ca/host/rosenberg.neuro.polymtl.ca">https://monitor.neuro.polymtl.ca/host/rosenberg.neuro.polymtl.ca</a></p></li>
+<li><p><a class="reference external" href="https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca">https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca</a></p></li>
+</ul>
+<div class="section" id="monitoring-gpus">
+<h3>Monitoring GPUs<a class="headerlink" href="#monitoring-gpus" title="Permalink to this headline">¶</a></h3>
+<p>As above, you can see the computation amount, allocated RAM, temperature, fan speed of the GPUs on the command line with</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>nvidia-smi
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>nvtop
+</pre></div>
+</div>
+<p>You can see the same information over time at</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">romane</span></code> GPU 0: <a class="reference external" href="https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/#menu_nvidia_smi_submenu_gpu0_RTX_A6000">https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/#menu_nvidia_smi_submenu_gpu0_RTX_A6000</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">romane</span></code> GPU 1: <a class="reference external" href="https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/#menu_nvidia_smi_submenu_gpu1_RTX_A6000">https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/#menu_nvidia_smi_submenu_gpu1_RTX_A6000</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">romane</span></code> GPU 2: <a class="reference external" href="https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/#menu_nvidia_smi_submenu_gpu2_RTX_A6000">https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/#menu_nvidia_smi_submenu_gpu2_RTX_A6000</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">romane</span></code> GPU 3: <a class="reference external" href="https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/#menu_nvidia_smi_submenu_gpu3_RTX_A6000">https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/#menu_nvidia_smi_submenu_gpu3_RTX_A6000</a></p></li>
+</ul>
+<p>Monitoring these metrics during training will help you make more efficient batch sizes and other optimizations.</p>
+</div>
+</div>
+<div class="section" id="tensorboard">
+<h2>Tensorboard<a class="headerlink" href="#tensorboard" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="cpus2.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">CPUS2</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../compute-canada.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Compute Canada</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By NeuroPoly<br/>
+        
+            &copy; Copyright 2021, NeuroPoly.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -1,0 +1,1904 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git &amp; GitHub &#8212; NeuroPoly Internal</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <link rel="shortcut icon" href="../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Sketchup" href="sketchup.html" />
+    <link rel="prev" title="OpenNeuro" href="openneuro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NeuroPoly Internal</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../README.html">
+   🏠 Home
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../onboarding/README.html">
+   <span>
+    👋
+   </span>
+   Onboarding
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/getting-started.html">
+     Getting Started
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/accounts.html">
+     Accounts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/campus-access.html">
+     Campus Access
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/infrastructure.html">
+     Infrastructure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/dropbox-google-drive.html">
+     Dropbox/Google Drive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/computer-setup.html">
+     Computer Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/developer-setup.html">
+     Developer Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/consultants-ra.html">
+     Consultants and RA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/acronyms-jargon.html">
+     Acronyms &amp; Jargon
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../agenda-and-calendar.html">
+   <span>
+    📅
+   </span>
+   Calendar
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../mri-scanning/README.html">
+   <span>
+    🧲
+   </span>
+   MRI Scanning
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mri-scanning/unf-3t-prisma.html">
+     UNF (3T Prisma)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mri-scanning/mni-mcgill-7t-terra.html">
+     MNI/McGill (7T Terra)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mri-scanning/mhi-7t-agilent.html">
+     MHI (7T Agilent)
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../mri-scanning/coils/README.html">
+     Coils
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../mri-scanning/coils/3d-printing/README.html">
+       3D Printing
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../mri-scanning/coils/3d-printing/octoprint.html">
+         OctoPrint
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/coils/faq.html">
+       FAQ
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/coils/pcb-manufacturing.html">
+       PCB Manufacturing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/coils/cnc-machine-genmitsu-3018-prover.html">
+       CNC machine - Genmitsu 3018-PROVer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../mri-scanning/phantoms/README.html">
+     Phantoms
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/phantoms/phantom-recipes-for-mri.html">
+       Phantom Recipes for MRI
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../writing-articles.html">
+   <span>
+    ✍️
+   </span>
+   Academic Writing
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../computing-resources/README.html">
+   <span>
+    🖥
+   </span>
+   Computing Resources
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../computing-resources/computing-resources-neuropoly/README.html">
+     NeuroPoly
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing-resources/computing-resources-neuropoly/data.html">
+       Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing-resources/computing-resources-neuropoly/cpus2.html">
+       CPUS2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing-resources/computing-resources-neuropoly/gpus.html">
+       GPUs
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing-resources/compute-canada.html">
+     Compute Canada
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing-resources/clusters-at-criugm.html">
+     CRIUGM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing-resources/printer.html">
+     <span>
+      🖨
+     </span>
+     Printer
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../README.html">
+   <span>
+    🐍
+   </span>
+   Software Development
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../bash-shell/README.html">
+     Bash/Shell
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../bash-shell/script.html">
+       Script
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../git.html">
+     git &amp; Github
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../untitled.html">
+     NeuroPoly Packages &amp; Collaborations
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../os-guides/README.html">
+     OS Guides
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../os-guides/linux.html">
+       Linux
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../os-guides/macosx.html">
+       MacOSX
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../contributing.html">
+     Contributing Guidelines
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="README.html">
+     Other Software &amp; Tools
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="virtual-machines/README.html">
+       Virtual Machines
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+      <label for="toctree-checkbox-12">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="virtual-machines/virtualbox.html">
+         VirtualBox
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="virtual-machines/vagrant.html">
+         Vagrant
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="bitbucket.html">
+       BitBucket
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="docker/README.html">
+       Docker
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+      <label for="toctree-checkbox-13">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="docker/docker-for-deep-learning.html">
+         Docker for Deep Learning
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="dropbox.html">
+       Dropbox
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="jekyll.html">
+       Jekyll
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="microsoft-word.html">
+       Microsoft Word
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="openneuro.html">
+       OpenNeuro
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Git &amp; GitHub
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="sketchup.html">
+       Sketchup
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="xquartz.html">
+       XQuartz
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../programming-languages/README.html">
+     Programming Languages
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+    <label for="toctree-checkbox-14">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../programming-languages/python.html">
+       Python
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../programming-languages/matlab.html">
+       MATLAB
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../programming-languages/c%2B%2B/README.html">
+       C++
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+      <label for="toctree-checkbox-15">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../programming-languages/c%2B%2B/installation-of-vtk-and-itk-on-mac-os-x.html">
+         Installation of VTK and ITK on Mac OS X
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../programming-languages/c%2B%2B/using-xcode.html">
+         Using XCode
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../image-processing-software/README.html">
+     Image Processing
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+    <label for="toctree-checkbox-16">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../image-processing-software/advanced-normalization-tools-ants.html">
+       Advanced Normalization Tools (ANTs)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../image-processing-software/anima.html">
+       Anima
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../image-processing-software/diffusion-simulator.html">
+       Diffusion Simulator
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../image-processing-software/freesurfer.html">
+       FreeSurfer
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../image-processing-software/fsl/README.html">
+       FSL
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+      <label for="toctree-checkbox-17">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../image-processing-software/fsl/fsleyes.html">
+         FSLeyes
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../image-processing-software/itk-snap.html">
+       ITK-SNAP
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../image-processing-software/nifti.html">
+       NIfTI
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../image-processing-software/openneuro-cli.html">
+       OpenNeuro CLI
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../image-processing-software/osirix.html">
+       OsiriX
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../deep-learning/README.html">
+     Deep Learning
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+    <label for="toctree-checkbox-18">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deep-learning/cuda.html">
+       CUDA
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deep-learning/tensorflow.html">
+       Tensorflow
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deep-learning/conditional-random-fields-crf.html">
+       Conditional Random Fields (CRF)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deep-learning/restricted-boltzmann-machines.html">
+       Restricted Boltzmann Machines (RBM)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../deep-learning/misc.html">
+       Misc
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../courses.html">
+   <span>
+    🎓
+   </span>
+   University Courses
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../bibliography/README.html">
+   <span>
+    📚
+   </span>
+   Bibliography
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+  <label for="toctree-checkbox-19">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/deep-learning.html">
+     Deep Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/histology.html">
+     Histology
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/untitled.html">
+     MRI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/shared-paperpile-folder.html">
+     Paperpile Folder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../conferences.html">
+   <span>
+    ✈️
+   </span>
+   Conferences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ideas-for-cool-projects.html">
+   <span>
+    💡
+   </span>
+   Ideas for Cool Projects
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../practical-information/README.html">
+   <span>
+    📎
+   </span>
+   Practical Information
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/visa.html">
+     VISAs and Work Permits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/moving-to-montreal.html">
+     <span>
+      🇨🇦
+     </span>
+     Living in Montreal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/scholarships-and-bursaries.html">
+     Scholarships &amp; Bursaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/purchasing-hardware-and-lab-supplies.html">
+     Purchasing Supplies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../contact.html">
+   <span>
+    📞
+   </span>
+   Contact
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+
+
+<!-- only one Github button activated, so collapse it into the main button, saving a click for users -->
+        <a class="edit-button" href="https://github.com/neuropoly/neuropoly-internal-docs/edit/ng/sphinx/software-development/misc/git-and-github.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fab fa-github"></i></button></a>
+
+
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Page Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tutorials-courses">
+   Tutorials &amp; Courses
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation">
+   Installation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contribute-to-a-project">
+   Contribute to a Project
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fork-the-repository">
+     1. Fork the repository
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#keep-your-branch-up-to-date-a-href-maintain-your-branch-up-to-date-id-maintain-your-branch-up-to-date-a">
+       Keep your branch up-to-date
+       <a href="maintain_your_branch_up-to-date" id="maintain_your_branch_up-to-date">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#submit-a-pull-request">
+     4. Submit a Pull Request
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#how-to-merge-specific-files-from-another-branch-a-href-how-to-merge-specific-files-from-another-branch-id-how-to-merge-specific-files-from-another-branch-a">
+       How to “merge” specific files from another branch
+       <a href="how_to_merge_specific_files_from_another_branch" id="how_to_merge_specific_files_from_another_branch">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#branches">
+   Branches
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-remote-branches">
+     List remote branches
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#track-remote-branch-a-href-track-remote-branch-id-track-remote-branch-a">
+       Track remote branch
+       <a href="track_remote_branch" id="track_remote_branch">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#checkout-existing-branch-a-href-checkout-existing-branch-id-checkout-existing-branch-a">
+       Checkout existing branch
+       <a href="checkout_existing_branch" id="checkout_existing_branch">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#clone-specific-branch-a-href-clone-specific-branch-id-clone-specific-branch-a">
+       Clone specific branch
+       <a href="clone_specific_branch" id="clone_specific_branch">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-a-branch-a-href-create-a-branch-id-create-a-branch-a">
+       Create a branch
+       <a href="create_a_branch" id="create_a_branch">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#push-to-remote-a-href-push-to-remote-id-push-to-remote-a">
+       Push to remote
+       <a href="push_to_remote" id="push_to_remote">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#remove-a-branch-a-href-remove-a-branch-id-remove-a-branch-a">
+       Remove a branch
+       <a href="remove_a_branch" id="remove_a_branch">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#general-usage-a-href-general-usage-id-general-usage-a">
+     General usage
+     <a href="general_usage" id="general_usage">
+     </a>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#upload-local-repository-for-the-first-time-a-href-upload-local-repository-for-the-first-time-id-upload-local-repository-for-the-first-time-a">
+       Upload local repository for the first time
+       <a href="upload_local_repository_for_the_first_time" id="upload_local_repository_for_the_first_time">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#switch-local-repository-to-another-branch-a-href-switch-local-repository-to-another-branch-id-switch-local-repository-to-another-branch-a">
+       Switch local repository to another branch
+       <a href="switch_local_repository_to_another_branch" id="switch_local_repository_to_another_branch">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#check-which-branch-you-are-currently-working-on-a-href-check-which-branch-you-are-currently-working-on-id-check-which-branch-you-are-currently-working-on-a">
+       Check which branch you are currently working on
+       <a href="check_which_branch_you_are_currently_working_on" id="check_which_branch_you_are_currently_working_on">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-repository-inside-repository-a-href-create-repository-inside-repository-id-create-repository-inside-repository-a">
+       Create repository inside repository
+       <a href="create_repository_inside_repository" id="create_repository_inside_repository">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#commits">
+   Commits
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#commit-messages">
+     Commit Messages
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#amending-commits">
+     Amending Commits
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rollbacks">
+     Rollbacks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reset-commit">
+     Reset Commit
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to">
+   HOW TO
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#configure-git-a-href-configure-git-id-configure-git-a">
+     Configure git
+     <a href="configure_git" id="configure_git">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#show-changed-files-between-two-commits-a-href-show-changed-files-between-two-commits-id-show-changed-files-between-two-commits-a">
+     Show changed files between two commits
+     <a href="show_changed_files_between_two_commits" id="show_changed_files_between_two_commits">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-a-href-download-id-download-a">
+     Download
+     <a href="download" id="download">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reset-your-branch-revert-your-local-commits-a-href-reset-your-branch-revert-your-local-commits-id-reset-your-branch-revert-your-local-commits-a">
+     Reset your branch (revert your local commits)
+     <a href="reset_your_branch_revert_your_local_commits" id="reset_your_branch_revert_your_local_commits">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#upload-a-href-upload-id-upload-a">
+     Upload
+     <a href="upload" id="upload">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#discard-local-changes-if-pull-doesn-t-work-a-href-discard-local-changes-if-pull-doesn-t-work-id-discard-local-changes-if-pull-doesn-t-work-a">
+     Discard local changes (if pull doesn’t work)
+     <a href="discard_local_changes_if_pull_doesn_t_work" id="discard_local_changes_if_pull_doesn_t_work">
+     </a>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#todo">
+   TODO
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ignore-file-mode-a-href-ignore-file-mode-id-ignore-file-mode-a">
+     Ignore file mode
+     <a href="ignore_file_mode" id="ignore_file_mode">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-href-come-back-to-previous-commit-ignore-latest-ones-id-come-back-to-previous-commit-ignore-latest-ones-a">
+     <a href="come_back_to_previous_commit_ignore_latest_ones" id="come_back_to_previous_commit_ignore_latest_ones">
+     </a>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rebase">
+   Rebase
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fix-conflicts-during-rebasing">
+     Fix conflicts during rebasing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recover-lost-commits-after-rebase">
+     Recover lost commits after rebase
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-href-commit-message-convention-id-commit-message-convention-a">
+     <a href="commit_message_convention" id="commit_message_convention">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#github-a-href-github-id-github-a">
+     GitHub
+     <a href="github" id="github">
+     </a>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#add-ssh-key-a-href-add-ssh-key-id-add-ssh-key-a">
+       Add SSH key
+       <a href="add_ssh_key" id="add_ssh_key">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#port-22-connection-refused-a-href-port-22connection-refused-id-port-22connection-refused-a">
+       port 22: Connection refused
+       <a href="port_22connection_refused" id="port_22connection_refused">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#compare-commits-branches-tags-a-href-compare-commitsbranchestags-id-compare-commitsbranchestags-a">
+       Compare commits/branches/tags
+       <a href="compare_commitsbranchestags" id="compare_commitsbranchestags">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#connection-closed-by-remote-host-a-href-connection-closed-by-remote-host-id-connection-closed-by-remote-host-a">
+       Connection closed by remote host
+       <a href="connection_closed_by_remote_host" id="connection_closed_by_remote_host">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#search-file-name-a-href-search-file-name-id-search-file-name-a">
+       Search file name
+       <a href="search_file_name" id="search_file_name">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tags">
+   Tags
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checkout-specific-tag-or-commit-a-href-checkout-specific-tag-or-commit-id-checkout-specific-tag-or-commit-a">
+     Checkout specific tag or commit
+     <a href="checkout_specific_tag_or_commit" id="checkout_specific_tag_or_commit">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-tag">
+     Add Tag
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remove-tag">
+     Remove Tag
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#useful-aliases">
+   Useful aliases
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-software">
+   Git Software
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pycharm-a-href-pycharm-id-pycharm-a">
+     Pycharm
+     <a href="pycharm" id="pycharm">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sourcetree-a-href-sourcetree-id-sourcetree-a">
+     SourceTree
+     <a href="sourcetree" id="sourcetree">
+     </a>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="git-github">
+<h1>Git &amp; GitHub<a class="headerlink" href="#git-github" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tutorials-courses">
+<h2>Tutorials &amp; Courses<a class="headerlink" href="#tutorials-courses" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Everyone working with <code class="docutils literal notranslate"><span class="pre">git</span></code> at NeuroPoly Lab: Please take 2+ hours of your time and learn how to use <code class="docutils literal notranslate"><span class="pre">git</span></code> before using it.</strong></p>
+</div>
+<p><a class="reference external" href="https://git-scm.com/book/en/v2"><strong>Official Git Documentation</strong></a>****</p>
+<hr class="docutils" />
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://githowto.com">Learn By Doing</a></p></td>
+<td><p>Tutorial</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.coursera.org/learn/introduction-git-github">Coursera: Introduction to Git/GitHub</a></p></td>
+<td><p>Course</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://try.github.io">Github’s Learn By Doing</a></p></td>
+<td><p>Resource List</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://git-send-email.io">sr.ht’s Learn By Doing</a></p></td>
+<td><p>Tutorial</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://lab.github.com/githubtraining/ramp-up-on-git-and-github">Ramp up on Git and GitHub (GitHub Learning Lab)</a></p></td>
+<td><p>Course</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://lab.github.com/githubtraining/managing-merge-conflicts">Managing merge conflicts (GitHub Learning Lab)</a></p></td>
+<td><p>Course</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://www.atlassian.com/git">Atlassian Git Tutorial</a></p></td>
+<td><p>Tutorial</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://wizardzines.com/zines/oh-shit-git/">A guide to managing git mistakes (Julia Evans)</a></p></td>
+<td><p>Guide</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://matthew-brett.github.io/curious-git/index.html">The curious coder’s guide to git (Matthew Brett)</a></p></td>
+<td><p>Guide</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://emdupre.github.io/git-course/">Another great tutorial from Elizabeth DuPre</a>, and a video <a class="reference external" href="https://neurohackademy.org/course/collaborating-with-git-and-github/">here</a></p></td>
+<td><p>Course</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.neuro.polymtl.ca/%5C_media/tips_and_tricks/git.pdf">Pierre Rioux Presentation</a></p></td>
+<td><p>Guide</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://gist.github.com/hofmannsven/6814451">Sven Hofmann README</a></p></td>
+<td><p>Notes</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://rogerdudler.github.io/git-guide/">git - the simple guide (Roger Dudler)</a></p></td>
+<td><p>Guide</p></td>
+</tr>
+<tr class="row-odd"><td><p>Snapshot of all commands: <a class="reference external" href="http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf">http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf</a></p></td>
+<td><p>Notes</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://ohshitgit.com">Methods to dig yourself out of common pitfalls</a></p></td>
+<td><p>Guide</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Full instructions to install <code class="docutils literal notranslate"><span class="pre">git</span></code> <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">here</a>. We have a quick-start below:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="6f3b95ff-7692-4273-a92c-f06f9611560d" name="68b4e38c-4397-4faa-8709-a1e71a4d1d5b" type="radio">
+</input><label class="tabbed-label" for="6f3b95ff-7692-4273-a92c-f06f9611560d">
+Linux</label><div class="tabbed-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get update
+apt-get install git-all
+</pre></div>
+</div>
+</div>
+<input id="5306b9df-38e0-4601-80c1-1a6549e6a6cd" name="68b4e38c-4397-4faa-8709-a1e71a4d1d5b" type="radio">
+</input><label class="tabbed-label" for="5306b9df-38e0-4601-80c1-1a6549e6a6cd">
+MacOSX</label><div class="tabbed-content docutils">
+<p>Probably the easiest way to install on MacOSX is to install via <a class="reference external" href="https://developer.apple.com/downloads/">XCode Command Line Tools</a>. To check if <code class="docutils literal notranslate"><span class="pre">git</span></code> is installed:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git --version
+</pre></div>
+</div>
+</div>
+<input id="5b48e28d-da87-45cc-8bdc-d2cdfcca7547" name="68b4e38c-4397-4faa-8709-a1e71a4d1d5b" type="radio">
+</input><label class="tabbed-label" for="5b48e28d-da87-45cc-8bdc-d2cdfcca7547">
+Windows</label><div class="tabbed-content docutils">
+<p>Recommended install: Go to <a class="reference external" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a> and the download will start automatically.</p>
+</div>
+</div>
+</div>
+<div class="section" id="contribute-to-a-project">
+<h2>Contribute to a Project<a class="headerlink" href="#contribute-to-a-project" title="Permalink to this headline">¶</a></h2>
+<p>Basic steps are:</p>
+<ol class="simple">
+<li><p>Fork the repository</p></li>
+<li><p>Create a branch</p></li>
+<li><p>Create new features while updating your branch from the Master</p></li>
+<li><p>Submit a pull request</p></li>
+</ol>
+<div class="section" id="fork-the-repository">
+<h3>1. Fork the repository<a class="headerlink" href="#fork-the-repository" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Log in to your GitHub account</p></li>
+<li><p>Fork the project repository: click on the ‘Fork’ button near the top of the page. This creates a copy of the code under your account on the GitHub server.</p></li>
+<li><p>In a Terminal window, go to the folder where you want to copy locally the code.</p></li>
+<li><p>Clone the copy of the code to your local disk:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git clone git@github.com:your_login/project_name.git
+</pre></div>
+</div>
+<p>If you get the following error message, <a class="reference external" href="http://www.neuro.polymtl.ca/doku.php?id=tips_and_tricks:git#github">create an SSH key</a>:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<blockquote>
+<div><p>Warning: Permanently added the RSA host key for IP address ‘XX.XX.XX.XX’ to the list of known hosts.<br />
+Permission denied (publickey).<br />
+fatal: Could not read from remote repository.<br />
+Please make sure you have the correct access rights and the repository exists.</p>
+</div></blockquote>
+</div>
+<div class="section" id="keep-your-branch-up-to-date-a-href-maintain-your-branch-up-to-date-id-maintain-your-branch-up-to-date-a">
+<h4>Keep your branch up-to-date <a href="maintain_your_branch_up-to-date" id="maintain_your_branch_up-to-date"></a><a class="headerlink" href="#keep-your-branch-up-to-date-a-href-maintain-your-branch-up-to-date-id-maintain-your-branch-up-to-date-a" title="Permalink to this headline">¶</a></h4>
+<p>Once the clone is complete your repo will have a remote named “origin” that points to your fork on GitHub. Don’t let the name confuse you, this does not point to the original repo you forked from. To help you keep track of that repo you need to add another remote named “upstream”:</p>
+<ul class="simple">
+<li><p>open a terminal, go to your repos and type:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">git</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuropoly</span><span class="o">/</span><span class="n">spinalcordtoolbox</span><span class="o">.</span><span class="n">git</span>
+  <span class="n">git</span> <span class="n">fetch</span> <span class="n">upstream</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Then (like “git pull” which is fetch + merge):</p></li>
+</ul>
+<p>git merge upstream/master master</p>
+<ul class="simple">
+<li><p>Or if you want, replace your local work on top of the fetched branch (like a “git pull –rebase”)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">rebase</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">–rebase</span></code> option can be used to ensure a linear history by preventing unnecessary merge commits. Many developers prefer rebasing over merging, since it’s like saying, “I want to put my changes on top of what everybody else has done.”</p>
+</div>
+</div>
+<div class="section" id="submit-a-pull-request">
+<h3>4. Submit a Pull Request<a class="headerlink" href="#submit-a-pull-request" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>In a Terminal window, go to your git repository and type:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git push origin &lt;BRANCH_NAME&gt;
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Log in to your Github account and go to your branch.</p></li>
+<li><p>Click on “Pull request”. You will be sent to a page asking you to describe your modifications; you can give any title you want to your modifications (it doesn’t need to be the name of your branch).</p></li>
+<li><p>Click on “Create a pull request”.</p></li>
+</ul>
+<p>Now you need to wait that the person in charge of the project accepts your modifications; if this person finds problems in your code, you can still push new changes to your code and they will be added to your pull request.Edit</p>
+<div class="section" id="how-to-merge-specific-files-from-another-branch-a-href-how-to-merge-specific-files-from-another-branch-id-how-to-merge-specific-files-from-another-branch-a">
+<h4>How to “merge” specific files from another branch <a href="how_to_merge_specific_files_from_another_branch" id="how_to_merge_specific_files_from_another_branch"></a><a class="headerlink" href="#how-to-merge-specific-files-from-another-branch-a-href-how-to-merge-specific-files-from-another-branch-id-how-to-merge-specific-files-from-another-branch-a" title="Permalink to this headline">¶</a></h4>
+<p>The tool to use is “git checkout”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">checkout</span> <span class="n">source_branch</span> <span class="o">&lt;</span><span class="n">paths</span><span class="o">&gt;...</span>
+</pre></div>
+</div>
+<p>You simply need to give “git checkout” the name of the feature branch and the paths to the specific files that we want to add to your master branch as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  $ git branch
+  * master
+    your_branch
+    
+  $ git checkout your_branch &lt;path_to_file_1&gt; &lt;path_to_file_2&gt;...
+  
+  $ git status
+  # On branch master
+  # Changes to be committed:
+  #   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+  #
+  #   new file:   &lt;path_to_file_1&gt;
+  #   new file:   &lt;path_to_file_2&gt;
+  #   ...
+</pre></div>
+</div>
+<p>$ git commit -m “explanation of the commit you are doing”</p>
+<p>See the page <a class="reference external" href="http://jasonrudolph.com/blog/2009/02/25/git-tip-how-to-merge-specific-files-from-another-branch/">git tip how to merge specific files from another branch</a> for more details.</p>
+<p>It is not possible to do this on SourceTree yet but an issue was opened on July 17th 2013 and is not closed yet. See <a class="reference external" href="https://jira.atlassian.com/browse/SRCTREEWIN-827?jql=text%20%5C~%20%22merge%20specific%20files%22%20AND%20created%20%3E%3D%202013-07-17%20AND%20created%20%3C%3D%202013-07-18">the issue here</a>.</p>
+<p>See also the interesting page <a class="reference external" href="http://blog.sourcetreeapp.com/2012/08/01/smart-branching-with-sourcetree-and-git-flow/">Smart branching with sourcetree and git flow</a> about using Git flow to set the right strategy to gang up to contribute to your project.</p>
+</div>
+</div>
+</div>
+<div class="section" id="branches">
+<h2>Branches<a class="headerlink" href="#branches" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="list-remote-branches">
+<h3>List remote branches<a class="headerlink" href="#list-remote-branches" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">remote</span> <span class="n">show</span> <span class="n">origin</span>
+</pre></div>
+</div>
+<div class="section" id="track-remote-branch-a-href-track-remote-branch-id-track-remote-branch-a">
+<h4>Track remote branch <a href="track_remote_branch" id="track_remote_branch"></a><a class="headerlink" href="#track-remote-branch-a-href-track-remote-branch-id-track-remote-branch-a" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">remote</span> <span class="n">update</span>
+  <span class="n">git</span> <span class="n">fetch</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="checkout-existing-branch-a-href-checkout-existing-branch-id-checkout-existing-branch-a">
+<h4>Checkout existing branch <a href="checkout_existing_branch" id="checkout_existing_branch"></a><a class="headerlink" href="#checkout-existing-branch-a-href-checkout-existing-branch-id-checkout-existing-branch-a" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git checkout &lt;branch_name&gt;
+</pre></div>
+</div>
+<p>If branch is not tracked (use ```git remote show origin``` to check if branch is listed), then use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">fetch</span>
+</pre></div>
+</div>
+<p>If you still don’t see the branch listed, maybe your local git repository does not allow to fetch all branches on master. This happens if you clone with –depth=X. To check if this is the case, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">get</span> <span class="n">remote</span><span class="o">.</span><span class="n">origin</span><span class="o">.</span><span class="n">fetch</span>
+</pre></div>
+</div>
+<p>If result is not “+refs/heads/*:refs/remotes/origin/*”, then update the remote.origin.fetch variable using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">add</span> <span class="n">remote</span><span class="o">.</span><span class="n">origin</span><span class="o">.</span><span class="n">fetch</span> <span class="o">+</span><span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/*</span><span class="p">:</span><span class="n">refs</span><span class="o">/</span><span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/*</span>
+</pre></div>
+</div>
+<p>Then, fetch:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">fetch</span>
+</pre></div>
+</div>
+<p>Now, all tracked branches should appear when running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">remote</span> <span class="n">show</span> <span class="n">origin</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clone-specific-branch-a-href-clone-specific-branch-id-clone-specific-branch-a">
+<h4>Clone specific branch <a href="clone_specific_branch" id="clone_specific_branch"></a><a class="headerlink" href="#clone-specific-branch-a-href-clone-specific-branch-id-clone-specific-branch-a" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">-</span><span class="n">b</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">remote_repo</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">depth</span> <span class="mi">1</span> 
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-branch-a-href-create-a-branch-id-create-a-branch-a">
+<h4>Create a branch <a href="create_a_branch" id="create_a_branch"></a><a class="headerlink" href="#create-a-branch-a-href-create-a-branch-id-create-a-branch-a" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="o">&lt;</span><span class="n">branch_name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="push-to-remote-a-href-push-to-remote-id-push-to-remote-a">
+<h4>Push to remote <a href="push_to_remote" id="push_to_remote"></a><a class="headerlink" href="#push-to-remote-a-href-push-to-remote-id-push-to-remote-a" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span>
+<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">branch_name</span><span class="o">&gt;</span>  <span class="c1"># push to specific branch</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove-a-branch-a-href-remove-a-branch-id-remove-a-branch-a">
+<h4>Remove a branch <a href="remove_a_branch" id="remove_a_branch"></a><a class="headerlink" href="#remove-a-branch-a-href-remove-a-branch-id-remove-a-branch-a" title="Permalink to this headline">¶</a></h4>
+<p>To remove a local branch</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git branch -D &lt;branch_name&gt;
+</pre></div>
+</div>
+<p>To remove a remote branch (if you know what you are doing!)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="p">:</span><span class="o">&lt;</span><span class="n">branch_name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="general-usage-a-href-general-usage-id-general-usage-a">
+<h3>General usage <a href="general_usage" id="general_usage"></a><a class="headerlink" href="#general-usage-a-href-general-usage-id-general-usage-a" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="upload-local-repository-for-the-first-time-a-href-upload-local-repository-for-the-first-time-id-upload-local-repository-for-the-first-time-a">
+<h4>Upload local repository for the first time <a href="upload_local_repository_for_the_first_time" id="upload_local_repository_for_the_first_time"></a><a class="headerlink" href="#upload-local-repository-for-the-first-time-a-href-upload-local-repository-for-the-first-time-id-upload-local-repository-for-the-first-time-a" title="Permalink to this headline">¶</a></h4>
+<p>First, create repository in github or bitbucket. Then, open a Terminal and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> &lt;/path/to/your/project&gt;
+git init  <span class="c1"># initialize local git repos</span>
+git remote add origin https://USERNAME@URL_TO_REPOSITORY.git  <span class="c1"># link to remote repos</span>
+git add .  <span class="c1"># add every file under folder</span>
+git commit -m <span class="s1">&#39;First commit&#39;</span>
+git push -u origin master
+</pre></div>
+</div>
+</div>
+<div class="section" id="switch-local-repository-to-another-branch-a-href-switch-local-repository-to-another-branch-id-switch-local-repository-to-another-branch-a">
+<h4>Switch local repository to another branch <a href="switch_local_repository_to_another_branch" id="switch_local_repository_to_another_branch"></a><a class="headerlink" href="#switch-local-repository-to-another-branch-a-href-switch-local-repository-to-another-branch-id-switch-local-repository-to-another-branch-a" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout &lt;BRANCH_NAME&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="check-which-branch-you-are-currently-working-on-a-href-check-which-branch-you-are-currently-working-on-id-check-which-branch-you-are-currently-working-on-a">
+<h4>Check which branch you are currently working on <a href="check_which_branch_you_are_currently_working_on" id="check_which_branch_you_are_currently_working_on"></a><a class="headerlink" href="#check-which-branch-you-are-currently-working-on-a-href-check-which-branch-you-are-currently-working-on-id-check-which-branch-you-are-currently-working-on-a" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git branch
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-repository-inside-repository-a-href-create-repository-inside-repository-id-create-repository-inside-repository-a">
+<h4>Create repository inside repository <a href="create_repository_inside_repository" id="create_repository_inside_repository"></a><a class="headerlink" href="#create-repository-inside-repository-a-href-create-repository-inside-repository-id-create-repository-inside-repository-a" title="Permalink to this headline">¶</a></h4>
+<p>Use submodules:</p>
+<ol class="simple">
+<li><p><a class="reference external" href="http://git-scm.com/book/en/Git-Tools-Submodules">http://git-scm.com/book/en/Git-Tools-Submodules</a></p></li>
+<li><p><a class="reference external" href="http://www.arlocarreon.com/blog/git/git-repo-inside-a-git-repo/">http://www.arlocarreon.com/blog/git/git-repo-inside-a-git-repo/</a></p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="commits">
+<h2>Commits<a class="headerlink" href="#commits" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Term</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>tracked file</strong></p></td>
+<td><p>A tracked file is one that is part of the git version control. New files are untracked.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>untracked file</strong></p></td>
+<td><p>An untracked file is one that is not part of the git version control. This includes new files, and any files that are specified to be untracked. For example, you may want to ignore files in the <code class="docutils literal notranslate"><span class="pre">env/</span></code> folder. To mark a file as untracked, you can add the file to the <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>head</strong></p></td>
+<td><p>The HEAD is the most recent snapshot, or commit.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>commit ID</strong></p></td>
+<td><p>The commit ID is the 40-character alphanumeric identifier for a given commit. It is a hash, generated using SHA1 (cryptographic algorithm).</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="commit-messages">
+<h3>Commit Messages<a class="headerlink" href="#commit-messages" title="Permalink to this headline">¶</a></h3>
+<p>Your commit must be accompanied by a message. For short, simple commits, this can be achieved via:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit -m <span class="s2">&quot;A message describing your commit&quot;</span>
+</pre></div>
+</div>
+<p>However, you may want a longer, more descriptive message. To do this, just run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span>
+</pre></div>
+</div>
+<p>This will open the default text editor, so that you can add a more descriptive message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Commit</span> <span class="n">message</span> <span class="n">style</span> <span class="n">guide</span> <span class="k">for</span> <span class="n">Git</span>
+
+<span class="n">The</span> <span class="n">first</span> <span class="n">line</span> <span class="n">of</span> <span class="n">a</span> <span class="n">commit</span> <span class="n">message</span> <span class="n">serves</span> <span class="k">as</span> <span class="n">a</span> <span class="n">summary</span><span class="o">.</span>  <span class="n">When</span> <span class="n">displayed</span>
+<span class="n">on</span> <span class="n">the</span> <span class="n">web</span><span class="p">,</span> <span class="n">it</span><span class="s1">&#39;s often styled as a heading, and in emails, it&#39;</span><span class="n">s</span>
+<span class="n">typically</span> <span class="n">used</span> <span class="k">as</span> <span class="n">the</span> <span class="n">subject</span><span class="o">.</span>  <span class="n">As</span> <span class="n">such</span><span class="p">,</span> <span class="n">you</span> <span class="n">should</span> <span class="n">capitalize</span> <span class="n">it</span> <span class="ow">and</span>
+<span class="n">omit</span> <span class="nb">any</span> <span class="n">trailing</span> <span class="n">punctuation</span><span class="o">.</span>  <span class="n">Aim</span> <span class="k">for</span> <span class="n">about</span> <span class="mi">50</span> <span class="n">characters</span><span class="p">,</span> <span class="n">give</span> <span class="ow">or</span>
+<span class="n">take</span><span class="p">,</span> <span class="n">otherwise</span> <span class="n">it</span> <span class="n">may</span> <span class="n">be</span> <span class="n">painfully</span> <span class="n">truncated</span> <span class="ow">in</span> <span class="n">some</span> <span class="n">contexts</span><span class="o">.</span>  <span class="n">Write</span>
+<span class="n">it</span><span class="p">,</span> <span class="n">along</span> <span class="k">with</span> <span class="n">the</span> <span class="n">rest</span> <span class="n">of</span> <span class="n">your</span> <span class="n">message</span><span class="p">,</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">imperative</span> <span class="n">tense</span><span class="p">:</span> <span class="s2">&quot;Fix</span>
+<span class="n">bug</span><span class="s2">&quot; and not &quot;</span><span class="n">Fixed</span> <span class="n">bug</span><span class="s2">&quot; or &quot;</span><span class="n">Fixes</span> <span class="n">bug</span><span class="s2">&quot;.  Consistent wording makes it</span>
+<span class="n">easier</span> <span class="n">to</span> <span class="n">mentally</span> <span class="n">process</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">commits</span><span class="o">.</span>
+
+<span class="n">Oftentimes</span> <span class="n">a</span> <span class="n">subject</span> <span class="n">by</span> <span class="n">itself</span> <span class="ow">is</span> <span class="n">sufficient</span><span class="o">.</span>  <span class="n">When</span> <span class="n">it</span><span class="s1">&#39;s not, add a</span>
+<span class="n">blank</span> <span class="n">line</span> <span class="p">(</span><span class="n">this</span> <span class="ow">is</span> <span class="n">important</span><span class="p">)</span> <span class="n">followed</span> <span class="n">by</span> <span class="n">one</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">paragraphs</span> <span class="n">hard</span>
+<span class="n">wrapped</span> <span class="n">to</span> <span class="mi">72</span> <span class="n">characters</span><span class="o">.</span>  <span class="n">Git</span> <span class="ow">is</span> <span class="n">strongly</span> <span class="n">opinionated</span> <span class="n">that</span> <span class="n">the</span> <span class="n">author</span>
+<span class="ow">is</span> <span class="n">responsible</span> <span class="k">for</span> <span class="n">line</span> <span class="n">breaks</span><span class="p">;</span> <span class="k">if</span> <span class="n">you</span> <span class="n">omit</span> <span class="n">them</span><span class="p">,</span> <span class="n">command</span> <span class="n">line</span> <span class="n">tooling</span>
+<span class="n">will</span> <span class="n">show</span> <span class="n">it</span> <span class="k">as</span> <span class="n">one</span> <span class="n">extremely</span> <span class="n">long</span> <span class="n">unwrapped</span> <span class="n">line</span><span class="o">.</span>  <span class="n">Fortunately</span><span class="p">,</span> <span class="n">most</span>
+<span class="n">text</span> <span class="n">editors</span> <span class="n">are</span> <span class="n">capable</span> <span class="n">of</span> <span class="n">automating</span> <span class="n">this</span><span class="o">.</span>
+
+<span class="p">:</span><span class="n">q</span>
+</pre></div>
+</div>
+<p>For more information on commit messages:</p>
+<p><a class="reference external" href="https://commit.style">https://commit.style/</a></p>
+<p><a class="reference external" href="https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message">https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message</a></p>
+<p><a class="reference external" href="https://github.com/neuropoly/spinalcordtoolbox/wiki/git_rules">https://github.com/neuropoly/spinalcordtoolbox/wiki/git_rules</a></p>
+</div>
+<div class="section" id="amending-commits">
+<h3>Amending Commits<a class="headerlink" href="#amending-commits" title="Permalink to this headline">¶</a></h3>
+<p>If you made a mistake in your last commit, want to add something, or change the commit message, you can do so with the –amend flag:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit --amend
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit --amend -m <span class="s2">&quot;New commit message&quot;</span>
+</pre></div>
+</div>
+<p>This will add the changes you have added to the most recent commit. Make sure to only use this on local commits (i.e. commits that have not been pushed).</p>
+</div>
+<div class="section" id="rollbacks">
+<h3>Rollbacks<a class="headerlink" href="#rollbacks" title="Permalink to this headline">¶</a></h3>
+<p>What if you made a commit that you need to revert? The revert command allows for you to fix this. It undoes your last commit by performing the inverse of everything in the last commit. That way, you still have all the correct history, and you will be able to still see the commit you reverted.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git revert HEAD
+</pre></div>
+</div>
+<p>Alternatively, you can revert any commit using the commit ID:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git revert &lt;COMMIT_ID&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="reset-commit">
+<h3>Reset Commit<a class="headerlink" href="#reset-commit" title="Permalink to this headline">¶</a></h3>
+<p>If you want to go back to a previous commit and ignore the latest ones:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git reset --hard &lt;COMMIT_NUMBER&gt;
+git push -f
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>WARNING:</strong> This will erase the latest commits!</p>
+</div>
+</div>
+</div>
+<div class="section" id="how-to">
+<h2>HOW TO<a class="headerlink" href="#how-to" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="configure-git-a-href-configure-git-id-configure-git-a">
+<h3>Configure git <a href="configure_git" id="configure_git"></a><a class="headerlink" href="#configure-git-a-href-configure-git-id-configure-git-a" title="Permalink to this headline">¶</a></h3>
+<p>Before starting: configure git to identify you for each commit</p>
+<p>Define the author name to be used for all commits by the current user.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --global user.name &lt;YOUR_NAME&gt;
+</pre></div>
+</div>
+<p>Define the author email to be used for all commits by the current user.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">alias</span><span class="o">.&lt;</span><span class="n">alias</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">git</span><span class="o">-</span><span class="n">command</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>more info: <a class="reference external" href="http://www.atlassian.com/git/tutorial/git-basics#%21config">http://www.atlassian.com/git/tutorial/git-basics#!config</a>Edit</p>
+</div>
+<div class="section" id="show-changed-files-between-two-commits-a-href-show-changed-files-between-two-commits-id-show-changed-files-between-two-commits-a">
+<h3>Show changed files between two commits <a href="show_changed_files_between_two_commits" id="show_changed_files_between_two_commits"></a><a class="headerlink" href="#show-changed-files-between-two-commits-a-href-show-changed-files-between-two-commits-id-show-changed-files-between-two-commits-a" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">diff</span> <span class="o">--</span><span class="n">name</span><span class="o">-</span><span class="n">only</span> <span class="n">SHA1</span> <span class="n">SHA2</span>
+</pre></div>
+</div>
+<p>GIT - repository solution</p>
+<p>gitk → cool stuff</p>
+<p>Doc: <a class="reference external" href="http://gitref.org/basic/">http://gitref.org/basic/</a></p>
+<p>Download: <a class="reference external" href="http://git-scm.com/download">http://git-scm.com/download</a></p>
+<p>Create a repository</p>
+<p>Create folder:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">my_repos</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>Go there:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">my_repos</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>Copy repository to your station</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">path_to_my_repos</span><span class="o">/</span><span class="n">my_repos</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>Rename directory</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mv</span> <span class="n">my_repos</span><span class="o">.</span><span class="n">git</span> <span class="n">working_dir</span>
+</pre></div>
+</div>
+<p>N.B. Now you can copy/modify files in your working_dir</p>
+<p>Commit changes locally</p>
+<p>Add the files you want to your commit list, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">*.</span><span class="n">m</span>
+</pre></div>
+</div>
+<p>To add all modified (or deleted) files automatically, use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">-</span><span class="n">u</span>
+</pre></div>
+</div>
+<p>Commit the files</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;enter description here&#39;</span>
+</pre></div>
+</div>
+<p>N.B. You have to configure the commit params (do only once):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s1">&#39;Your Name&#39;</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="n">you</span><span class="nd">@somedomain</span><span class="o">.</span><span class="n">com</span>
+</pre></div>
+</div>
+<p>Cancel a “git add”</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span> <span class="o">&lt;</span><span class="n">file_name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Look at the status of the files (tracked? Modified? Added?)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span> <span class="o">-</span><span class="n">s</span>
+</pre></div>
+</div>
+<p>Update changes to your repos</p>
+<p>git push path_to_my_repos/my_repos.git master</p>
+<p>example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">jcohen</span><span class="nd">@door</span><span class="o">.</span><span class="n">nmr</span><span class="o">.</span><span class="n">mgh</span><span class="o">.</span><span class="n">harvard</span><span class="o">.</span><span class="n">edu</span><span class="p">:</span><span class="o">/</span><span class="n">autofs</span><span class="o">/</span><span class="n">cluster</span><span class="o">/</span><span class="n">connectome</span><span class="o">/</span><span class="n">git</span><span class="o">/</span><span class="n">process_data</span><span class="o">.</span><span class="n">git</span> <span class="n">master</span>
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
+</pre></div>
+</div>
+<p>Download changes from your repos</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span>
+</pre></div>
+</div>
+<p>Removed tracked files</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rm</span> <span class="s2">&quot;file name&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="download-a-href-download-id-download-a">
+<h3>Download <a href="download" id="download"></a><a class="headerlink" href="#download-a-href-download-id-download-a" title="Permalink to this headline">¶</a></h3>
+<p>Download (server → local station) a repository for the first time</p>
+<p>get address of repos, and type</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone git@bitbucket.org:neuropoly/spinalcordtoolbox_dev.git
+</pre></div>
+</div>
+</div>
+<div class="section" id="reset-your-branch-revert-your-local-commits-a-href-reset-your-branch-revert-your-local-commits-id-reset-your-branch-revert-your-local-commits-a">
+<h3>Reset your branch (revert your local commits) <a href="reset_your_branch_revert_your_local_commits" id="reset_your_branch_revert_your_local_commits"></a><a class="headerlink" href="#reset-your-branch-revert-your-local-commits-a-href-reset-your-branch-revert-your-local-commits-id-reset-your-branch-revert-your-local-commits-a" title="Permalink to this headline">¶</a></h3>
+<p>Using the Terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git fetch
+git reset --hard origin/master
+</pre></div>
+</div>
+<p>Moving the current branch backward by N commits:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git reset --hard HEAD~N
+</pre></div>
+</div>
+<p>Warning: This comment effectively removes the N snapshots created from the project history. Remember that this kind of reset should only be used on unpublished commits. Never perform the above operation if you’ve already pushed your commits to a shared repository.</p>
+<p>Using Sourcetree:</p>
+<p>assume you are on the branch <code class="docutils literal notranslate"><span class="pre">example-fix</span></code>. Find the commit with <code class="docutils literal notranslate"><span class="pre">origin/example-fix</span></code>, and right click on it. Select in the menu <code class="docutils literal notranslate"><span class="pre">Reset</span> <span class="pre">example-fix</span> <span class="pre">to</span> <span class="pre">this</span> <span class="pre">commit</span></code> and a dialog will appear. If don’t want to keep the changes, you can select <code class="docutils literal notranslate"><span class="pre">Hard</span></code>, else select <code class="docutils literal notranslate"><span class="pre">Soft</span></code></p>
+</div>
+<div class="section" id="upload-a-href-upload-id-upload-a">
+<h3>Upload <a href="upload" id="upload"></a><a class="headerlink" href="#upload-a-href-upload-id-upload-a" title="Permalink to this headline">¶</a></h3>
+<p>Upload (local –&gt; server) a repository for the first time</p>
+<ul class="simple">
+<li><p>Create repository in github</p></li>
+<li><p>Clone repository to local station:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">xxx</span><span class="o">/</span><span class="n">xxx</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Copy files to upload to repository</p></li>
+<li><p>Update repository:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">*</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;First commit&quot;</span>
+<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="discard-local-changes-if-pull-doesn-t-work-a-href-discard-local-changes-if-pull-doesn-t-work-id-discard-local-changes-if-pull-doesn-t-work-a">
+<h3>Discard local changes (if pull doesn’t work) <a href="discard_local_changes_if_pull_doesn_t_work" id="discard_local_changes_if_pull_doesn_t_work"></a><a class="headerlink" href="#discard-local-changes-if-pull-doesn-t-work-a-href-discard-local-changes-if-pull-doesn-t-work-id-discard-local-changes-if-pull-doesn-t-work-a" title="Permalink to this headline">¶</a></h3>
+<p>For a specific file use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">file</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">revert</span>
+</pre></div>
+</div>
+<p>For all unstaged files use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">--</span> <span class="o">.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="todo">
+<h2>TODO<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ignore-file-mode-a-href-ignore-file-mode-id-ignore-file-mode-a">
+<h3>Ignore file mode <a href="ignore_file_mode" id="ignore_file_mode"></a><a class="headerlink" href="#ignore-file-mode-a-href-ignore-file-mode-id-ignore-file-mode-a" title="Permalink to this headline">¶</a></h3>
+<p>If you cannot do a pull due to a change of file mode, you can ignore it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="n">core</span><span class="o">.</span><span class="n">fileMode</span> <span class="n">false</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="a-href-come-back-to-previous-commit-ignore-latest-ones-id-come-back-to-previous-commit-ignore-latest-ones-a">
+<h3><a href="come_back_to_previous_commit_ignore_latest_ones" id="come_back_to_previous_commit_ignore_latest_ones"></a><a class="headerlink" href="#a-href-come-back-to-previous-commit-ignore-latest-ones-id-come-back-to-previous-commit-ignore-latest-ones-a" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="rebase">
+<h2>Rebase<a class="headerlink" href="#rebase" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="fix-conflicts-during-rebasing">
+<h3>Fix conflicts during rebasing<a class="headerlink" href="#fix-conflicts-during-rebasing" title="Permalink to this headline">¶</a></h3>
+<p>When doing <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rebase</span> <span class="pre">master</span></code> to update a working branch, if there are any conflicts,Edit</p>
+</div>
+<div class="section" id="recover-lost-commits-after-rebase">
+<h3>Recover lost commits after rebase<a class="headerlink" href="#recover-lost-commits-after-rebase" title="Permalink to this headline">¶</a></h3>
+<p>If rebasing caused commits to be lost, use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reflog</span></code> to find the commits that were deleted, and then do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">–hard</span> <span class="pre">HEAD&#64;{XX}</span></code>, XX being the commit that comes right before the merge (the one that says: <code class="docutils literal notranslate"><span class="pre">checkout:</span> <span class="pre">moving</span> <span class="pre">from</span> <span class="pre">master</span> <span class="pre">to</span> <span class="pre">YOUR_BRANCH</span></code>)</p>
+</div>
+<div class="section" id="a-href-commit-message-convention-id-commit-message-convention-a">
+<h3><a href="commit_message_convention" id="commit_message_convention"></a><a class="headerlink" href="#a-href-commit-message-convention-id-commit-message-convention-a" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="github-a-href-github-id-github-a">
+<h3>GitHub <a href="github" id="github"></a><a class="headerlink" href="#github-a-href-github-id-github-a" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="add-ssh-key-a-href-add-ssh-key-id-add-ssh-key-a">
+<h4>Add SSH key <a href="add_ssh_key" id="add_ssh_key"></a><a class="headerlink" href="#add-ssh-key-a-href-add-ssh-key-id-add-ssh-key-a" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Log in to your Github account and click on the button at the top right-hand corner called “Account settings”.</p></li>
+<li><p>Click on “SSH keys in the left panel”.</p></li>
+<li><p>Click on “Add SSH keys”.</p></li>
+<li><p>Copy and paste the content of id_rsa.pub (open a Terminal and type: <code class="docutils literal notranslate"><span class="pre">more</span> <span class="pre">~/.ssh/id_rsa.pub</span></code>)</p></li>
+</ol>
+<p>If you don’t have the file id_rsa.pub, do the following:</p>
+<ol class="simple">
+<li><p>open a terminal</p></li>
+<li><p>go to the folder <code class="docutils literal notranslate"><span class="pre">~/.ssh/</span></code> and type:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">t</span> <span class="n">rsa</span> <span class="o">-</span><span class="n">C</span> <span class="n">your_email</span><span class="nd">@example</span><span class="o">.</span><span class="n">com</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="port-22-connection-refused-a-href-port-22connection-refused-id-port-22connection-refused-a">
+<h4>port 22: Connection refused <a href="port_22connection_refused" id="port_22connection_refused"></a><a class="headerlink" href="#port-22-connection-refused-a-href-port-22connection-refused-id-port-22connection-refused-a" title="Permalink to this headline">¶</a></h4>
+<p>If you get this message, try this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vim</span> <span class="o">~/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">config</span>
+</pre></div>
+</div>
+<p>Add:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Host</span> <span class="n">github</span><span class="o">.</span><span class="n">com</span>
+  <span class="n">Hostname</span> <span class="n">ssh</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">com</span>
+  <span class="n">Port</span> <span class="mi">443</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="compare-commits-branches-tags-a-href-compare-commitsbranchestags-id-compare-commitsbranchestags-a">
+<h4>Compare commits/branches/tags <a href="compare_commitsbranchestags" id="compare_commitsbranchestags"></a><a class="headerlink" href="#compare-commits-branches-tags-a-href-compare-commitsbranchestags-id-compare-commitsbranchestags-a" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ORGANIZATION</span><span class="o">/</span><span class="n">REPOSITORY</span><span class="o">/</span><span class="n">compare</span><span class="o">/</span><span class="n">TAG1</span><span class="o">...</span><span class="n">TAG2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="connection-closed-by-remote-host-a-href-connection-closed-by-remote-host-id-connection-closed-by-remote-host-a">
+<h4>Connection closed by remote host <a href="connection_closed_by_remote_host" id="connection_closed_by_remote_host"></a><a class="headerlink" href="#connection-closed-by-remote-host-a-href-connection-closed-by-remote-host-id-connection-closed-by-remote-host-a" title="Permalink to this headline">¶</a></h4>
+<p>If you get this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh_exchange_identification</span><span class="p">:</span> <span class="n">Connection</span> <span class="n">closed</span> <span class="n">by</span> <span class="n">remote</span> <span class="n">host</span>
+<span class="n">fatal</span><span class="p">:</span> <span class="n">Could</span> <span class="ow">not</span> <span class="n">read</span> <span class="kn">from</span> <span class="nn">remote</span> <span class="n">repository</span><span class="o">.</span>
+<span class="n">Please</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">you</span> <span class="n">have</span> <span class="n">the</span> <span class="n">correct</span> <span class="n">access</span> <span class="n">rights</span>
+<span class="ow">and</span> <span class="n">the</span> <span class="n">repository</span> <span class="n">exists</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>this might be due to wifi connection that does not allow ssh. So you can temporarily switch to https:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># check which username/remote you are set on</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
+<span class="c1"># it should give:</span>
+<span class="c1"># origin  git@github.com:USERNAME/REPOSITORY.git (fetch)</span>
+<span class="c1"># origin  git@github.com:USERNAME/REPOSITORY.git (push)</span>
+<span class="c1"># then set to https:</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">USERNAME</span><span class="o">/</span><span class="n">OTHERREPOSITORY</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="search-file-name-a-href-search-file-name-id-search-file-name-a">
+<h4>Search file name <a href="search_file_name" id="search_file_name"></a><a class="headerlink" href="#search-file-name-a-href-search-file-name-id-search-file-name-a" title="Permalink to this headline">¶</a></h4>
+<p>Go to search and type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">:</span><span class="n">my_file</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tags">
+<h2>Tags<a class="headerlink" href="#tags" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="checkout-specific-tag-or-commit-a-href-checkout-specific-tag-or-commit-id-checkout-specific-tag-or-commit-a">
+<h3>Checkout specific tag or commit <a href="checkout_specific_tag_or_commit" id="checkout_specific_tag_or_commit"></a><a class="headerlink" href="#checkout-specific-tag-or-commit-a-href-checkout-specific-tag-or-commit-id-checkout-specific-tag-or-commit-a" title="Permalink to this headline">¶</a></h3>
+<p>List all tags</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git tag
+</pre></div>
+</div>
+<p>Get the commit number of the tag you want, using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git show &lt;tag_xx&gt;
+</pre></div>
+</div>
+<p>Then, checkout on commit</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout &lt;commit_xx&gt;
+</pre></div>
+</div>
+<p>Note: It is not possible to checkout directly using the tag. More info <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Basics-Tagging#Checking-out-Tags">here</a></p>
+<p>If you got the following error message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fatal</span><span class="p">:</span> <span class="n">reference</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">tree</span><span class="p">:</span> <span class="c1">#commit</span>
+</pre></div>
+</div>
+<p>It means that the commit is not listed in the tree of your local git repository. To reach older commits from your local tree, do:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git pull --depth<span class="o">=</span>X  <span class="c1"># with X=number of commit back in time</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-tag">
+<h3>Add Tag<a class="headerlink" href="#add-tag" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git tag -a vx.y.z <span class="c1">#COMMIT -m &quot;added tag for vx.y.z&quot;</span>
+git push --tag origin master
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove-tag">
+<h3>Remove Tag<a class="headerlink" href="#remove-tag" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push --delete origin &lt;TAGNAME&gt;
+git tag -d &lt;TAGNAME&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="useful-aliases">
+<h2>Useful aliases<a class="headerlink" href="#useful-aliases" title="Permalink to this headline">¶</a></h2>
+<p>Here are useful aliases that you could add to your <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">gs</span><span class="o">=</span><span class="s2">&quot;git status -s&quot;</span>
+<span class="n">alias</span> <span class="n">gc</span><span class="o">=</span><span class="s2">&quot;git commit -a&quot;</span>
+<span class="n">alias</span> <span class="n">gp</span><span class="o">=</span><span class="s2">&quot;git push&quot;</span>
+<span class="n">alias</span> <span class="n">gl</span><span class="o">=</span><span class="s2">&quot;git log --pretty=oneline&quot;</span>
+<span class="n">alias</span> <span class="n">glg</span><span class="o">=</span><span class="s2">&quot;git log --pretty=oneline --decorate --all --graph&quot;</span>
+<span class="n">alias</span> <span class="n">gd</span><span class="o">=</span><span class="s2">&quot;git diff&quot;</span>
+<span class="n">alias</span> <span class="n">gb</span><span class="o">=</span><span class="s2">&quot;git branch&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="git-software">
+<h2>Git Software<a class="headerlink" href="#git-software" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pycharm-a-href-pycharm-id-pycharm-a">
+<h3>Pycharm <a href="pycharm" id="pycharm"></a><a class="headerlink" href="#pycharm-a-href-pycharm-id-pycharm-a" title="Permalink to this headline">¶</a></h3>
+<p>Interactive squash, rebase: <a class="reference external" href="https://www.jetbrains.com/help/pycharm/edit-project-history.html">https://www.jetbrains.com/help/pycharm/edit-project-history.html</a></p>
+</div>
+<div class="section" id="sourcetree-a-href-sourcetree-id-sourcetree-a">
+<h3>SourceTree <a href="sourcetree" id="sourcetree"></a><a class="headerlink" href="#sourcetree-a-href-sourcetree-id-sourcetree-a" title="Permalink to this headline">¶</a></h3>
+<p><strong>Select default branches for pushing</strong></p>
+<p>Preferences &gt; “Git” &gt; Push branches: select “current”</p>
+<p><strong>Switch to another branch</strong></p>
+<p>On the left side bar you will find a <code class="docutils literal notranslate"><span class="pre">BRANCHES</span></code> header with a list of branches. You are currently on the branch in bold. To change branch, you simply double click on the branch you want to work on.</p>
+<p><strong>Update your branch</strong></p>
+<p>In case you have not used fork and you want to update your branch from master, do this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout &lt;YOUR_BRANCH&gt;
+git rebase master
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="openneuro.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">OpenNeuro</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="sketchup.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Sketchup</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By NeuroPoly<br/>
+        
+            &copy; Copyright 2021, NeuroPoly.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
