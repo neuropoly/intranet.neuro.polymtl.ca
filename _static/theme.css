@@ -1,4 +1,11 @@
 
+.topbar .topbar-main {
+    background-color: #e73c3c
+}
+.topbar .topbar-main button.topbarbtn {
+    background-color: transparent;
+}
+
 #main-content {
     font-size: 14px;
 }
