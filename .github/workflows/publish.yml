@@ -1,0 +1,35 @@
+name: website
+
+on:
+  push:
+    branches: [ master, ng/sphinx ]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install .[sphinx]
+
+      - name: Build
+        run: |
+          make html
+
+      # TODO: use @v4 when it comes out
+      #       to benefit from symlink-awareness: https://github.com/peaceiris/actions-gh-pages/issues/643
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _build/html
+          cname: intranet.wiki-demo.neuropoly.org
