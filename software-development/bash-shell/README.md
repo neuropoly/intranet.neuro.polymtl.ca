@@ -6,15 +6,21 @@
 
 ## HDD parameters
 
+Check disk space:
+
+```
+df -h
+```
+
 To list all block devices, run:
 
-```text
+```
 lsblk
 ```
 
 To list all partitions, run:
 
-```text
+```
  fdisk -l
 ```
 
@@ -22,7 +28,7 @@ To list all partitions, run:
 
 ### Copying
 
-#### **Copy \(and synchronize\) with rsync**
+#### **Copy (and synchronize) with rsync**
 
 ```bash
 rsync -azP <FILE_SRC> <FILE_DEST>
@@ -95,7 +101,7 @@ On Maverick and later, the creation date is not updated if newer than the existi
 SetFile -d 'DD/MM/YYYY HH:MM:SS' <FILE>
 ```
 
-#### Size of a disk/folder <a id="size_of_a_diskfolder"></a>
+#### Size of a disk/folder <a href="size_of_a_diskfolder" id="size_of_a_diskfolder"></a>
 
 ```bash
 du -sh <FOLDER>
@@ -103,48 +109,48 @@ du -sh <FOLDER>
 
 or for all folders in the path
 
-```text
+```
 du -sh *
 du -sm * | sort -nr  # in MB and reverse-ordered by size
 ```
 
 **Get space on a disk**
 
-```text
+```
 df -h .
 ```
 
 
 
-#### Number of files <a id="number_of_files"></a>
+#### Number of files <a href="number_of_files" id="number_of_files"></a>
 
-== Get number of files that match a pattern
+\== Get number of files that match a pattern
 
-```text
+```
 ls -dq *pattern* | wc -l
 ```
 
-**Get number of files in a folder \(recursively\)**
+**Get number of files in a folder (recursively)**
 
-```text
+```
 find .//. ! -name . -print | grep -c //
 ```
 
 only counts files modified for the past 24h:
 
-```text
+```
 find .//. ! -name . -mtime -1 -print | grep -c //
 ```
 
 **List files modified for the past 24h**
 
-```text
+```
 find . -mtime -1 -print
 ```
 
 List number of files per folder
 
-```text
+```
 find . -maxdepth 1 -mindepth 1 -type d -exec sh -c 'echo "{} : $(find "{}" -type f | wc -l)" file\(s\)' \;
 ```
 
@@ -170,9 +176,9 @@ sudo chown <OWNER> <FILE>
 ls -le@a
 ```
 
-**Find most recently changed files \(less than 1 day ago\)**
+**Find most recently changed files (less than 1 day ago)**
 
-```text
+```
 find  -mtime -1 -ls
 ```
 
@@ -180,17 +186,17 @@ find  -mtime -1 -ls
 
 Files with specific string inside:
 
-```text
+```
 find . -name "string"
 ```
 
 Files that have been modified for the past 24 hours:
 
-```text
+```
 find ~/Documents -type f -ctime -0 | more
 ```
 
-#### Stdout / Stderr <a id="stdoutstderr"></a>
+#### Stdout / Stderr <a href="stdoutstderr" id="stdoutstderr"></a>
 
 [https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file](https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file)Edit
 
@@ -200,13 +206,13 @@ find ~/Documents -type f -ctime -0 | more
 
 compress:
 
-```text
+```
 tar -czf /path/to/output/folder/filename.tar.gz /path/to/folder
 ```
 
 extract:
 
-```text
+```
 tar -zxvf filename.tar.gz
 ```
 
@@ -214,7 +220,7 @@ tar -zxvf filename.tar.gz
 
 compress folder:
 
-```text
+```
 zip -r archive.zip folder/
 
 # Exclude a sub-folder:
@@ -223,15 +229,15 @@ zip -r archive.zip folder/ -x '*subfoldertoexclude*'
 
 extract:
 
-```text
+```
 unzip archive.zip
 ```
 
 **copie de fichiers ds une directory**
 
-find -name sica\*.png \| xargs -t -i /bin/cp ./{} ./imagesEdit
+find -name sica\*.png | xargs -t -i /bin/cp ./{} ./imagesEdit
 
-#### Checksum <a id="checksum"></a>
+#### Checksum <a href="checksum" id="checksum"></a>
 
 This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.
 
@@ -250,7 +256,7 @@ find -s FOLDER -type f -exec md5 {} \; | md5
 {% endtab %}
 {% endtabs %}
 
-#### Remove files from tmp <a id="remove_files_from_tmp"></a>
+#### Remove files from tmp <a href="remove_files_from_tmp" id="remove_files_from_tmp"></a>
 
 ```bash
 find . -name "tmp.*" -type d -print0 | xargs -0 /bin/rm -rf
@@ -258,7 +264,7 @@ find . -name "tmp.*" -type d -print0 | xargs -0 /bin/rm -rf
 
 ## .bash\_profile
 
-The `.bash_profile` file is launched when you open a new terminal. You can configure your environment variables from there. It is located in your home folder \(`$HOME`\).
+The `.bash_profile` file is launched when you open a new terminal. You can configure your environment variables from there. It is located in your home folder (`$HOME`).
 
 To load it:
 
@@ -282,7 +288,7 @@ echo "something" | mailx -s "subject" someone@email.com
 ps aux
 ```
 
-```text
+```
 top
 ```
 
@@ -321,22 +327,22 @@ wget -O data <URL>
 #### Copy file between computers
 
 * [https://magic-wormhole.readthedocs.io/en/latest/](https://magic-wormhole.readthedocs.io/en/latest/)
-* [https://clbin.com/](https://clbin.com/) \(featuring CLI uploading\) \( running [http://github.com/rupa/sprunge](http://github.com/rupa/sprunge) \)
-* [https://paste.fossdaily.xyz/](https://paste.fossdaily.xyz/) \(running privatebin\)
-* [https://paste.tildeverse.org/](https://paste.tildeverse.org/) \(running privatebin\)
-* [https://bin.snopyta.org/](https://bin.snopyta.org/) \(running privatebin\)
-* [https://pb.envs.net/](https://pb.envs.net/) \(running privatebin\)
-* [https://sebsauvage.net/paste/](https://sebsauvage.net/paste/) \(running zerobin; an unmaintained forerunner of privatebin\)
-* [https://0bin.net/](https://0bin.net/) \(running [https://github.com/sametmax/0bin](https://github.com/sametmax/0bin)\)
-* [https://demo.lufi.io/](https://demo.lufi.io/) \(running [https://lufi.io](https://lufi.io/)\)
-* [https://ybits.io/](https://ybits.io/) \(closed source but oh well\)
-* [https://upload.disroot.org/](https://upload.disroot.org/) \(running [https://lufi.io/](https://lufi.io/)\)
-* [https://framadrop.org](https://framadrop.org/) \(running lufi.io\)
-* [https://ttm.sh/](https://ttm.sh/) \(featuring cli uploading\) \(edited\)
+* [https://clbin.com/](https://clbin.com) (featuring CLI uploading) ( running [http://github.com/rupa/sprunge](http://github.com/rupa/sprunge) )
+* [https://paste.fossdaily.xyz/](https://paste.fossdaily.xyz) (running privatebin)
+* [https://paste.tildeverse.org/](https://paste.tildeverse.org) (running privatebin)
+* [https://bin.snopyta.org/](https://bin.snopyta.org) (running privatebin)
+* [https://pb.envs.net/](https://pb.envs.net) (running privatebin)
+* [https://sebsauvage.net/paste/](https://sebsauvage.net/paste/) (running zerobin; an unmaintained forerunner of privatebin)
+* [https://0bin.net/](https://0bin.net) (running [https://github.com/sametmax/0bin](https://github.com/sametmax/0bin))
+* [https://demo.lufi.io/](https://demo.lufi.io) (running [https://lufi.io](https://lufi.io))
+* [https://ybits.io/](https://ybits.io) (closed source but oh well)
+* [https://upload.disroot.org/](https://upload.disroot.org) (running [https://lufi.io/](https://lufi.io))
+* [https://framadrop.org](https://framadrop.org) (running lufi.io)
+* [https://ttm.sh/](https://ttm.sh) (featuring cli uploading) (edited)
 
-Using gist.github.com \(only for files &lt;100MB\):
+Using gist.github.com (only for files <100MB):
 
-```text
+```
 1. make a new gist
 2. note its ID in its URL (something like 3daa207ea45c75722bd0e3bc914dce3a)
 3. `git clone git@github.com:3daa207ea45c75722bd0e3bc914dce3a`
@@ -354,40 +360,40 @@ scp username@station.domain: </PATH/> . -r # copy folder
 
 ### Network/DNS
 
-**List all stations on the network \(only works on a server\)**
+**List all stations on the network (only works on a server)**
 
-```text
+```
 findsmb
 ```
 
 **find DNS**
 
-```text
+```
 cat /etc/resolv.conf
 ```
 
 **lookup DNS**
 
-```text
+```
 host HOST_NAME
 host IP_ADDRESS
 ```
 
-**Clear DNS cache \(on OSX 10.8 and later\)**
+**Clear DNS cache (on OSX 10.8 and later)**
 
-```text
+```
 sudo killall -HUP mDNSResponder
 ```
 
 **Connect to another station**
 
-```text
+```
 ssh IP
 or:
 ssh username@station.domain
 ```
 
-## Screen \(for background processes\)
+## Screen (for background processes)
 
 Let's say you connect to a station from your laptop and you wish to launch a script that will run for several hours. If you close your laptop, the remote script will stop. To prevent this, use `screen`. It opens a virtual environment from a remote station, so that any script launched within this environment will continue running even if you close your laptop.
 
@@ -395,7 +401,7 @@ Step-by-step procedure:
 
 1. Connect to a station via `ssh`
 2. Launch `screen`. It will create a new screen attached to the station.
-3. Do whatever you want \(e.g., launch a long process\).
+3. Do whatever you want (e.g., launch a long process).
 
 Detach from the screen:
 
@@ -411,7 +417,7 @@ Attach to a detached screen:
 screen -r
 ```
 
-Attach to a not detached screen. \(Multi display mode\).
+Attach to a not detached screen. (Multi display mode).
 
 ```bash
 screen -x
@@ -438,7 +444,7 @@ screen -S <NAME_OF_SESSION>
 
 ## SSH Public Key
 
-Create key on the client \(do this only once\):
+Create key on the client (do this only once):
 
 ```bash
 ssh-keygen -t rsa
@@ -454,8 +460,8 @@ ssh-copy-id demo@198.51.100.0
 
 Simple but great editor. Usually installed everywhere.
 
-> :w = save  
-> :q = quit  
+> :w = save\
+> :q = quit\
 > :wq = quit and save
 
 Coloured syntax:
@@ -464,6 +470,4 @@ Coloured syntax:
 vi ~/.vimrc
 add: syntax on
 ```
-
-
 
