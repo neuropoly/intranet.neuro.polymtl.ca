@@ -114,6 +114,7 @@ User git
 
 Match host *.neuro.polymtl.ca
 User <POLYGRAMES_USERNAME>
+PreferredAuthentications password
 ```
 
 Add this to your `~/.ssh/config` to make multiple ssh connections faster and without retyping your password:
