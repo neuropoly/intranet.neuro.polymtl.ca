@@ -260,7 +260,7 @@ _For system administrators_: Please log all the changes on the station by updati
 | Spec         | Description    |
 | ------------ | -------------- |
 | **Model**    | 64-core CPU    |
-| **OS**       | Ubuntu 16.04.4 |
+| **OS**       | Ubuntu 20.04.4 |
 | **Hostname** |                |
 | **VNC**      |                |
 
@@ -277,7 +277,7 @@ For fast I/O, use the NVMe hard drive, which is automatically mounted on your ho
 | Spec            | Description                                                                                                                                                              |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Model**       | Xeon 12-core                                                                                                                                                             |
-| **OS**          | Ubuntu 16.04.5                                                                                                                                                           |
+| **OS**          | Ubuntu 20.04.3                                                                                                                                                           |
 | **Hostname**    |                                                                                                                                                                          |
 | **Credentials** | [NeuroPoly Internal Document: Abbey Teamviewer Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.mtnjvepco2an) |
 
