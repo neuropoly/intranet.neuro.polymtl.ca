@@ -114,6 +114,7 @@ User git
 
 Match host *.neuro.polymtl.ca
 User <POLYGRAMES_USERNAME>
+# passwords are required to access /mnt/duke: https://github.com/neuropoly/computers/issues/90
 PreferredAuthentications password
 ```
 
