@@ -114,7 +114,9 @@ User git
 
 Match host *.neuro.polymtl.ca
 User <POLYGRAMES_USERNAME>
-# passwords are required to access /mnt/duke: https://github.com/neuropoly/computers/issues/90
+
+# passwords are required for grames accounts to access /mnt/duke: https://github.com/neuropoly/computers/issues/90
+Match host *.neuro.polymtl.ca user {u,p}*
 PreferredAuthentications password
 ```
 
