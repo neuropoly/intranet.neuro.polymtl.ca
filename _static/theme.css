@@ -14,6 +14,17 @@
     background: #f3f5f6;
 }
 
+/* hack: sphinx-panels overrides sphinx-book-theme's overrriding of bootstrap.css's default design,
+   which makes the sidebar end up wider than it needs to be.
+
+   Re-re-override it with sphinx-book-theme's design.
+
+   It's fragile to do it this way but it's just a small patch, hopefully it will be manageable.
+*/
+.bd-sidebar,.bd-topbar-whitespace {
+  max-width: 275px;
+}
+
 /* Expand the entire page to fill the screen; otherwise,
  * on large screens, the coloured #site-navigation leaves
  * an ugly white margin. This ensures it's always flush to the left.

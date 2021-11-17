@@ -1252,15 +1252,15 @@ zip -r archive.zip folder/ -x &#39;*subfoldertoexclude*&#39;
 <h4>Checksum <a id="checksum"></a><a class="headerlink" href="#checksum-a-id-checksum-a" title="Permalink to this headline">¶</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="dc67fac0-1e09-4ca3-9021-492e25b072ec" name="2c80fb0b-1563-4bc0-a747-6467a31a4c3d" type="radio">
-</input><label class="tabbed-label" for="dc67fac0-1e09-4ca3-9021-492e25b072ec">
+<input checked="checked" id="4229c828-c2ab-4176-aa00-8c6354c2ef0b" name="a2deca7a-0629-46b1-b494-3a70832be986" type="radio">
+</input><label class="tabbed-label" for="4229c828-c2ab-4176-aa00-8c6354c2ef0b">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
 </pre></div>
 </div>
 </div>
-<input id="93e1f484-4d2e-493d-ae2f-bb44ae160d4e" name="2c80fb0b-1563-4bc0-a747-6467a31a4c3d" type="radio">
-</input><label class="tabbed-label" for="93e1f484-4d2e-493d-ae2f-bb44ae160d4e">
+<input id="d9271aaa-ad1d-4db2-81aa-adf30d5b4636" name="a2deca7a-0629-46b1-b494-3a70832be986" type="radio">
+</input><label class="tabbed-label" for="d9271aaa-ad1d-4db2-81aa-adf30d5b4636">
 Mac</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
 find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5
