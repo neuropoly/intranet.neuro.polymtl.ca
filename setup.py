@@ -12,7 +12,7 @@ They will end up in _build/html/
 from setuptools import setup, find_packages
 
 setup(
-    name="neuropoly-internal-docs",
+    name="intranet.neuro.polymtl.ca",
     python_requires=">=3.6",
     author="NeuroPoly",
     extras_require={
