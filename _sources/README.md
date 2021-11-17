@@ -1,4 +1,4 @@
-# <span>🏠</span> Home
+# <span>🏠</span> Lab Manual
 
 ```{toctree}
 :hidden:
