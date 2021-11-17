@@ -2,7 +2,7 @@ name: website
 
 on:
   push:
-    branches: [ master, ng/sphinx ]
+    branches: [ master ]
   workflow_dispatch:
 
 jobs:
@@ -32,4 +32,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: _build/html
-          cname: intranet.wiki-demo.neuropoly.org
+          cname: intranet.neuro.polymtl.ca
