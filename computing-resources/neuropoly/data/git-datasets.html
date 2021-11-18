@@ -40,7 +40,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="git-annex" href="git-annex.html" />
-    <link rel="prev" title="Data" href="README.html" />
+    <link rel="prev" title="Poly-Grames home/ folder" href="home.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -283,6 +283,11 @@
        </i>
       </label>
       <ul class="current">
+       <li class="toctree-l4">
+        <a class="reference internal" href="home.html">
+         Poly-Grames home/ folder
+        </a>
+       </li>
        <li class="toctree-l4 current active">
         <a class="current reference internal" href="#">
          <code class="docutils literal notranslate">
@@ -296,6 +301,24 @@
        <li class="toctree-l4">
         <a class="reference internal" href="git-annex.html">
          git-annex
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="duke.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           duke
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="django.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           django
+          </span>
+         </code>
         </a>
        </li>
       </ul>
@@ -954,8 +977,10 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="data-private-bids-datasets">
 <h1><code class="docutils literal notranslate"><span class="pre">data</span></code>: private BIDS datasets<a class="headerlink" href="#data-private-bids-datasets" title="Permalink to this headline">¶</a></h1>
-<p>Much of our data is under medical ethics protections, and needs to be kept off the general internet. We have a custom server, locked down behind a VPN, with 1 terabyte of storage available. <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> (and therefore <code class="docutils literal notranslate"><span class="pre">datalad</span></code>) can store and retrieve data from it.</p>
-<p>URL: <span class="xref myst">git+ssh://data.neuro.polymtl.ca</span></p>
+<p><code class="docutils literal notranslate"><span class="pre">git+ssh://data.neuro.polymtl.ca</span></code> has a max size of ~1TB and is <a class="reference external" href="https://github.com/neuropoly/computers/issues/65">currently not backed up</a>.</p>
+<p>It hosts <a class="reference external" href="https://bids-specification.readthedocs.io">BIDS</a> datasets, version-controlled using <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">git-annex</span></code></span>.
+It is locked behind a <a class="reference external" href="../../#vpn">VPN</a> because much of our data is under medical ethics protections, and needs to be kept off the general internet.</p>
+<p>To use it, see <a class="reference external" href="./git-datasets.md#usage">this page</a>.</p>
 <div class="section" id="initial-setup">
 <h2>Initial setup<a class="headerlink" href="#initial-setup" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="prerequisites">
@@ -1294,11 +1319,11 @@ mv $dataset.git $new_name.git
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="README.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="home.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Data</p>
+            <p class="prev-next-title">Poly-Grames home/ folder</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="git-annex.html" title="next page">

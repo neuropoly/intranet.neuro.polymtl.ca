@@ -39,7 +39,7 @@
     <link rel="shortcut icon" href="../../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="data: private BIDS datasets" href="git-datasets.html" />
+    <link rel="next" title="Poly-Grames home/ folder" href="home.html" />
     <link rel="prev" title="NeuroPoly" href="../README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -284,6 +284,11 @@
       </label>
       <ul>
        <li class="toctree-l4">
+        <a class="reference internal" href="home.html">
+         Poly-Grames home/ folder
+        </a>
+       </li>
+       <li class="toctree-l4">
         <a class="reference internal" href="git-datasets.html">
          <code class="docutils literal notranslate">
           <span class="pre">
@@ -296,6 +301,24 @@
        <li class="toctree-l4">
         <a class="reference internal" href="git-annex.html">
          git-annex
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="duke.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           duke
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="django.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           django
+          </span>
+         </code>
         </a>
        </li>
       </ul>
@@ -803,70 +826,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Page Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-neuro-polymtl-ca">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     data.neuro.polymtl.ca
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#duke-neuro-polymtl-ca">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     duke.neuro.polymtl.ca
-    </span>
-   </code>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#access-from-stations">
-     Access from stations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mount-with-gui">
-     Mount with GUI
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mount-with-terminal">
-     Mount with Terminal
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#poly-grames-home-folder">
-   Poly-Grames home/ folder
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#django-neuro-polymtl-ca">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     django.neuro.polymtl.ca
-    </span>
-   </code>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#virtualbox">
-     VirtualBox
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -877,156 +836,74 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="data">
 <h1>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h1>
+<p>These are the data sources and storage options available to lab members:</p>
 <div class="toctree-wrapper compound">
-</div>
-<div class="section" id="data-neuro-polymtl-ca">
-<h2><code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code><a class="headerlink" href="#data-neuro-polymtl-ca" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">git+ssh://data.neuro.polymtl.ca</span></code> has a max size of ~1TB and is <a class="reference external" href="https://github.com/neuropoly/computers/issues/65">currently not backed up</a>.</p>
-<p>We have an internal server that hosts <a class="reference external" href="https://bids-specification.readthedocs.io">BIDS</a> datasets,
-version-controlled using <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">git-annex</span></code></span>.</p>
-<p>To use it, see <a class="reference external" href="./git-datasets.md#usage">this page</a>.</p>
-</div>
-<div class="section" id="duke-neuro-polymtl-ca">
-<h2><code class="docutils literal notranslate"><span class="pre">duke.neuro.polymtl.ca</span></code><a class="headerlink" href="#duke-neuro-polymtl-ca" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">{smb,afp}://duke.neuro.polymtl.ca</span></code> has a max size of ~15TB and is backed up nightly at two different locations.</p>
-<p>The shared folders (hosted on <strong>Poly-Grames</strong>) are:</p>
-<ul class="simple">
-<li><p><strong>histology</strong> –&gt; Raw histology files</p></li>
-<li><p><strong>mri</strong> –&gt; Raw MRI files (restricted access)</p></li>
-<li><p><strong>projects</strong> –&gt; Shared project files (subfolders containing different projects)</p></li>
-<li><p><strong>public</strong> –&gt; Contains useful software binaries</p></li>
-<li><p><strong>sct_testing</strong> –&gt; Data for testing SCT</p></li>
-<li><p><strong>temp</strong> –&gt; Use for temporary files, to share between you. Files are deleted after 15 days.</p></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="home.html">Poly-Grames home/ folder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-datasets.html"><code class="docutils literal notranslate"><span class="pre">data</span></code>: private BIDS datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="git-datasets.html#initial-setup">Initial setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#inscription">Inscription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#connection">Connection</a></li>
 </ul>
-<p><strong>NOTE: duke is not accessible when using SSH key login to linux stations.</strong></p>
-<div class="section" id="access-from-stations">
-<h3>Access from stations<a class="headerlink" href="#access-from-stations" title="Permalink to this headline">¶</a></h3>
-<p>When <a class="reference external" href="../#ssh-command-line">connecting with <code class="docutils literal notranslate"><span class="pre">ssh</span></code></a>, <code class="docutils literal notranslate"><span class="pre">duke</span></code> is available at <code class="docutils literal notranslate"><span class="pre">/mnt/duke/</span></code>, e.g.:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>u932945@joplin:~$ ls -l /mnt/duke
-total 36
-drwxr-xr-x 2 u108545 domain users  4096 May 13 14:37 histology
-drwxr-xr-x 2 u108545 domain users 12288 Jun  7 17:35 mri
-drwxr-xr-x 2 u108545 domain users  8192 Jun  8 23:21 projects
-drwxr-xr-x 2 u108545 domain users  4096 Mar 11 18:38 public
-drwxr-xr-x 2 u108545 domain users  4096 Feb 18 20:45 sct_testing
-drwxr-xr-x 2 u108545 domain users  4096 Jun  8 16:44 temp
-</pre></div>
-</div>
-</div>
-<div class="section" id="mount-with-gui">
-<h3>Mount with GUI<a class="headerlink" href="#mount-with-gui" title="Permalink to this headline">¶</a></h3>
-<p>When working on campus or <a class="reference external" href="../#vpn">over the VPN</a>, you can connect your computer to <code class="docutils literal notranslate"><span class="pre">duke</span></code>:</p>
-<div class="tabbed-set docutils">
-<input checked="checked" id="c0101477-ee60-4f0b-a51e-ff7fdafa778b" name="1718c626-14df-4bc4-87a4-152d7fda096c" type="radio">
-</input><label class="tabbed-label" for="c0101477-ee60-4f0b-a51e-ff7fdafa778b">
-Windows 10</label><div class="tabbed-content docutils">
-<ol class="simple">
-<li><p>Open Windows explorer</p></li>
-<li><p>Right click This PC</p></li>
-<li><p>Map Network Drive</p></li>
-<li><p>Address: <code class="docutils literal notranslate"><span class="pre">\\duke.neuro.polymtl.ca\&lt;FOLDER&gt;</span></code></p></li>
-<li><p>Check “Connect using different credentials”.</p></li>
-<li><p>Username: <code class="docutils literal notranslate"><span class="pre">grames\&lt;POLYGRAMES_USERNAME&gt;</span></code></p></li>
-<li><p>Password: <code class="docutils literal notranslate"><span class="pre">&lt;POLYGRAMES_PASSWORD&gt;</span></code>.</p></li>
-</ol>
-</div>
-<input id="7998814e-7d6a-44f5-aa82-d967008454ce" name="1718c626-14df-4bc4-87a4-152d7fda096c" type="radio">
-</input><label class="tabbed-label" for="7998814e-7d6a-44f5-aa82-d967008454ce">
-macOS</label><div class="tabbed-content docutils">
-<ol class="simple">
-<li><p>Open Finder</p></li>
-<li><p>CMD+K</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">afp://duke.neuro.polymtl.ca/</span></code></p></li>
-</ol>
-</div>
-<input id="999f3e8b-e68f-49cd-9401-220262df146d" name="1718c626-14df-4bc4-87a4-152d7fda096c" type="radio">
-</input><label class="tabbed-label" for="999f3e8b-e68f-49cd-9401-220262df146d">
-Linux</label><div class="tabbed-content docutils">
-<ol class="simple">
-<li><p>Open File Browser</p></li>
-<li><p>Menu &gt; Go &gt; Open Network Location</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">smb://duke.neuro.polymtl.ca/</span></code></p></li>
-</ol>
-</div>
-</div>
-<p>Note: some root folders are restricted (e.g. <strong>mri</strong>), so you need to write the URL to the destination folder you have access to. Example: <code class="docutils literal notranslate"><span class="pre">duke.neuro.polymtl.ca/mri/unf</span></code></p>
-<p>If you get the message “There are no shares available…”, then there might be a bug with the OS. Instead, try to mount on a local folder within the home directory (to have write permission).</p>
-</div>
-<div class="section" id="mount-with-terminal">
-<h3>Mount with Terminal<a class="headerlink" href="#mount-with-terminal" title="Permalink to this headline">¶</a></h3>
-<p>You can also connect your computer from the CLI, or with a script, which might be more efficient in the long run:</p>
-<div class="tabbed-set docutils">
-<input checked="checked" id="0ba0df2d-cabf-466d-b13f-cecc1e34a524" name="36c2d7e1-abc0-4117-a89b-9a383a4ee988" type="radio">
-</input><label class="tabbed-label" for="0ba0df2d-cabf-466d-b13f-cecc1e34a524">
-Mac OSX</label><div class="tabbed-content docutils">
-<p>Create folder for the mount point on a location (your home directory) where you have read and write access:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir &lt;FOLDER_NAME&gt; <span class="c1"># (e.g. &lt;FOLDER_NAME&gt;=sct_testing)</span>
-<span class="c1"># To mount:</span>
-mount -t afp afp://USERNAME:PASSWORD@duke.neuro.polymtl.ca/&lt;FOLDER_NAME&gt; &lt;FOLDER_NAME&gt;
-<span class="c1"># To unmount:</span>
-sudo umount &lt;FOLDER_NAME&gt;/
-</pre></div>
-</div>
-</div>
-<input id="537d1f9f-5072-438f-b3dc-cd5b935e90d5" name="36c2d7e1-abc0-4117-a89b-9a383a4ee988" type="radio">
-</input><label class="tabbed-label" for="537d1f9f-5072-438f-b3dc-cd5b935e90d5">
-Linux</label><div class="tabbed-content docutils">
-<p>To mount:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mount -t cifs //duke.neuro.polymtl.ca/&lt;FOLDER_NAME&gt; /mnt/duke/&lt;FOLDER_NAME&gt; -o <span class="nv">username</span><span class="o">=</span>&lt;GRAMES_USERNAME&gt;,noexec
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="poly-grames-home-folder">
-<h2>Poly-Grames home/ folder<a class="headerlink" href="#poly-grames-home-folder" title="Permalink to this headline">¶</a></h2>
-<p>Every <a class="reference external" href="../#poly-grames">GRAMES</a> account has a school-wide personal home folder. It is backed-up nightly.</p>
-<div class="tabbed-set docutils">
-<input checked="checked" id="14b9f6ab-40df-4062-9d54-41bb12d92c10" name="e73e5870-dbd5-44d9-b088-0206b2b9bb0f" type="radio">
-</input><label class="tabbed-label" for="14b9f6ab-40df-4062-9d54-41bb12d92c10">
-macOS</label><div class="tabbed-content docutils">
-<ol class="simple">
-<li><p>Open Finder</p></li>
-<li><p>CMD+K</p></li>
-<li><p>for students:</p>
-<ol class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">smb://hvclusterfs.grames.polymtl.ca/usagers/etudiants/USERNAME</span></code></p></li>
-</ol>
 </li>
-<li><p>for personnel:</p>
-<ol class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">smb://hvclusterfs.grames.polymtl.ca/usagers/personnels/USERNAME</span></code></p></li>
-</ol>
+<li class="toctree-l2"><a class="reference internal" href="git-datasets.html#usage">Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#list">List</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#download">Download</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#upload">Upload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#reviewing-pull-requests">Reviewing Pull Requests</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="git-datasets.html#commit-rights">Commit Rights</a></li>
+<li class="toctree-l4"><a class="reference internal" href="git-datasets.html#committing">Committing</a></li>
+</ul>
 </li>
-</ol>
-</div>
-</div>
-</div>
-<div class="section" id="django-neuro-polymtl-ca">
-<h2><code class="docutils literal notranslate"><span class="pre">django.neuro.polymtl.ca</span></code><a class="headerlink" href="#django-neuro-polymtl-ca" title="Permalink to this headline">¶</a></h2>
-<p>This is our old server. This server is only maintained for old projects. Please <strong>DO NOT</strong> use it if you are starting a new project.</p>
-<p>The shared folders (hosted on <strong>django</strong>) are:</p>
-<ul class="simple">
-<li><p><strong>folder_shared</strong> –&gt; used to shared files, documents, etc. Permission: R+W. Backed-up nightly.</p></li>
-<li><p><strong>matlab_shared</strong> –&gt; Various MATLAB scripts. Permission: R. Backed-up nightly.</p></li>
-<li><p><strong>data_processing</strong> –&gt; Used for processing data. <strong>Please clean your files after use!</strong> Permission: R+W. <strong>NOT BACKED-UP</strong></p></li>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#new-repository">New repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#releases">Releases</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#permissions">Permissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#renaming">Renaming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#deletion">Deletion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#add-extra-devices">Add extra devices</a></li>
 </ul>
-<p>To access these folders, here’s the procedure:</p>
-<ol class="simple">
-<li><p>CMD+K</p></li>
-<li><p>type: <code class="docutils literal notranslate"><span class="pre">afp://django.neuro.polymtl.ca</span></code></p></li>
-<li><p>select the mount point (e.g., data_shared)</p></li>
-<li><p>now if you want to make an alias on your desktop, in Finder select the mounted drive and drag/drop it on your Desktop, while pressing keys ALT+CMD</p></li>
-</ol>
-<div class="section" id="virtualbox">
-<h3>VirtualBox<a class="headerlink" href="#virtualbox" title="Permalink to this headline">¶</a></h3>
-<p>Some VirtualBox machines are accessible under <strong>folder_shared/virtual_box</strong> (this folder is read-only. For adding more, please contact Julien):</p>
-<ul class="simple">
-<li><p><strong>WinXP_IDEA</strong> –&gt; Siemens pulse sequence program environment</p></li>
-<li><p><strong>WinXP_Terranova</strong> –&gt; Prospa software for Terranova MRI</p></li>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git-datasets.html#admin-guide">Admin Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#add-users">Add users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#id1">Permissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#id2">Renaming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#id3">Deletion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#backups">Backups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-datasets.html#references">References</a></li>
 </ul>
-</div>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git-annex.html">git-annex</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="git-annex.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-annex.html#global-git-config">Global <code class="docutils literal notranslate"><span class="pre">git</span></code> config</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="git-annex.html#new-repo">New repo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-annex.html#annex-thin-hardlinks-a-id-hardlinks"><code class="docutils literal notranslate"><span class="pre">annex.thin</span></code> Hardlinks <a id="hardlinks"></a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-annex.html#troubleshooting">Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="git-annex.html#version-problems">version problems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-annex.html#checking-annex-file-locations">checking annex file locations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-annex.html#a-cosmetic-problem-affecting-git-status">“a cosmetic problem affecting git status”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-annex.html#resetting">Resetting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git-annex.html#rm-cannot-remove"><code class="docutils literal notranslate"><span class="pre">rm:</span> <span class="pre">cannot</span> <span class="pre">remove</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="duke.html"><code class="docutils literal notranslate"><span class="pre">duke</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="duke.html#access-from-stations">Access from stations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="duke.html#mount-with-gui">Mount with GUI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="duke.html#mount-with-terminal">Mount with Terminal</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="django.html"><code class="docutils literal notranslate"><span class="pre">django</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="django.html#virtualbox">VirtualBox</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 
@@ -1043,10 +920,10 @@ macOS</label><div class="tabbed-content docutils">
             <p class="prev-next-title">NeuroPoly</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="git-datasets.html" title="next page">
+    <a class='right-next' id="next-link" href="home.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">data</span></code>: private BIDS datasets</p>
+        <p class="prev-next-title">Poly-Grames home/ folder</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

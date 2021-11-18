@@ -284,6 +284,11 @@
       </label>
       <ul>
        <li class="toctree-l4">
+        <a class="reference internal" href="../../computing-resources/neuropoly/data/home.html">
+         Poly-Grames home/ folder
+        </a>
+       </li>
+       <li class="toctree-l4">
         <a class="reference internal" href="../../computing-resources/neuropoly/data/git-datasets.html">
          <code class="docutils literal notranslate">
           <span class="pre">
@@ -296,6 +301,24 @@
        <li class="toctree-l4">
         <a class="reference internal" href="../../computing-resources/neuropoly/data/git-annex.html">
          git-annex
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../computing-resources/neuropoly/data/duke.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           duke
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../computing-resources/neuropoly/data/django.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           django
+          </span>
+         </code>
         </a>
        </li>
       </ul>
@@ -1278,15 +1301,15 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 <h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">¶</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="0cc565c9-af7f-4b5c-a433-6df90f5ec722" name="a23a1e92-bcc2-4ae9-bb94-371f5902f4ad" type="radio">
-</input><label class="tabbed-label" for="0cc565c9-af7f-4b5c-a433-6df90f5ec722">
+<input checked="checked" id="9116f0ec-026a-42ff-98f6-32463e8cac33" name="4bc50dcf-3bcd-4a7d-a009-57f8c71a6846" type="radio">
+</input><label class="tabbed-label" for="9116f0ec-026a-42ff-98f6-32463e8cac33">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
 </pre></div>
 </div>
 </div>
-<input id="de23b9b1-8ccb-4ff6-903d-eaac5a618327" name="a23a1e92-bcc2-4ae9-bb94-371f5902f4ad" type="radio">
-</input><label class="tabbed-label" for="de23b9b1-8ccb-4ff6-903d-eaac5a618327">
+<input id="8add434c-e256-4f86-b018-43f2dca2aa8c" name="4bc50dcf-3bcd-4a7d-a009-57f8c71a6846" type="radio">
+</input><label class="tabbed-label" for="8add434c-e256-4f86-b018-43f2dca2aa8c">
 Mac</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
 find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5
