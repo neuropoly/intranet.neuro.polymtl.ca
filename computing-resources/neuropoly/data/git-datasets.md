@@ -1,4 +1,3 @@
-
 # `data`
 
 Private BIDS datasets.
@@ -7,8 +6,6 @@ Private BIDS datasets.
 
 It hosts [BIDS](https://bids-specification.readthedocs.io) datasets, version-controlled using [`git-annex`](git-annex.branchable.com/).
 It is locked behind a [VPN](../../#vpn) because much of our data is under medical ethics protections, and needs to be kept off the general internet.
-
-To use it, see [this page](./git-datasets.md#usage).
 
 
 Initial setup
@@ -79,7 +76,7 @@ Usage
 
 During daily usage, you will need to be [*on the polyvpn network*](#connection).
 
-You should also make sure to [configure git annex](./git-annex.md#global-git-annex-config) for the best performance.
+You should also make sure to [configure git annex](./git-annex.md#global-git-config) for the best performance.
 
 ### List
 
