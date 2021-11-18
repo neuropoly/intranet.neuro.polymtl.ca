@@ -36,6 +36,8 @@ extensions = [
         'sphinx_panels',
 ]
 
+myst_heading_anchors = 4 # enable #section links: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-header-anchors
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
