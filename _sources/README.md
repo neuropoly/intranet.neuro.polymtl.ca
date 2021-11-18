@@ -2,7 +2,7 @@
 
 ```{toctree}
 :hidden:
-Welcome to NeuroPoly <https://neuro.polymtl.ca>
+NeuroPoly Website <https://neuro.polymtl.ca>
 onboarding/README
 agenda-and-calendar
 mri-scanning/README

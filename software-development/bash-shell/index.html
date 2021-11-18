@@ -80,7 +80,7 @@
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference external" href="https://neuro.polymtl.ca">
-   Welcome to NeuroPoly
+   NeuroPoly Website
   </a>
  </li>
  <li class="toctree-l1 has-children">
@@ -1300,15 +1300,15 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 <h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">¶</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="f8b66ee9-e406-4c8b-b591-2fbce489f1d3" name="c3feca84-353b-4f25-85bd-86609fe843c4" type="radio">
-</input><label class="tabbed-label" for="f8b66ee9-e406-4c8b-b591-2fbce489f1d3">
+<input checked="checked" id="c172a2d9-6e61-4152-afec-c7c620906360" name="36811e6a-0ae1-48c1-85be-3c2691a84acb" type="radio">
+</input><label class="tabbed-label" for="c172a2d9-6e61-4152-afec-c7c620906360">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
 </pre></div>
 </div>
 </div>
-<input id="02aa99bb-35e4-436c-a950-9bff6867d21c" name="c3feca84-353b-4f25-85bd-86609fe843c4" type="radio">
-</input><label class="tabbed-label" for="02aa99bb-35e4-436c-a950-9bff6867d21c">
+<input id="19acbdc6-f756-4aa6-91ad-409311e04aaa" name="36811e6a-0ae1-48c1-85be-3c2691a84acb" type="radio">
+</input><label class="tabbed-label" for="19acbdc6-f756-4aa6-91ad-409311e04aaa">
 Mac</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
 find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5
