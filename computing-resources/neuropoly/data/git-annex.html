@@ -40,7 +40,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="duke" href="duke.html" />
-    <link rel="prev" title="data: private BIDS datasets" href="git-datasets.html" />
+    <link rel="prev" title="data" href="git-datasets.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -285,7 +285,7 @@
       <ul class="current">
        <li class="toctree-l4">
         <a class="reference internal" href="home.html">
-         Poly-Grames home/ folder
+         /home
         </a>
        </li>
        <li class="toctree-l4">
@@ -295,7 +295,6 @@
            data
           </span>
          </code>
-         : private BIDS datasets
         </a>
        </li>
        <li class="toctree-l4 current active">
@@ -933,8 +932,8 @@
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>You must have a unix OS. <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> is simply not compatible with anything else.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="8bb4018f-bfb0-4f66-9948-8049a9d4691b" name="1afac264-59cf-444c-9696-3bbc606319a5" type="radio">
-</input><label class="tabbed-label" for="8bb4018f-bfb0-4f66-9948-8049a9d4691b">
+<input checked="checked" id="a3d7a69e-3e61-4bef-a99f-49965d17190d" name="c1b95752-5ca6-4857-81bb-5b76a5c4e16c" type="radio">
+</input><label class="tabbed-label" for="a3d7a69e-3e61-4bef-a99f-49965d17190d">
 Linux</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p><strong>Arch</strong>: <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-Sy</span> <span class="pre">git-annex</span></code></p></li>
@@ -944,15 +943,15 @@ Linux</label><div class="tabbed-content docutils">
 <li><p>if on an older system and can’t upgrade, you can try <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">installing <code class="docutils literal notranslate"><span class="pre">conda</span></code></a> (or <a class="reference external" href="https://github.com/conda-forge/miniforge/">miniforge</a> and then using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-f</span> <span class="pre">conda-forge</span> <span class="pre">git-annex</span></code>.</p></li>
 </ul>
 </div>
-<input id="c3a164d5-fd21-47a8-bec9-4c151be7d53a" name="1afac264-59cf-444c-9696-3bbc606319a5" type="radio">
-</input><label class="tabbed-label" for="c3a164d5-fd21-47a8-bec9-4c151be7d53a">
+<input id="9aa15a54-4ff7-4e78-bed3-b258da26f261" name="c1b95752-5ca6-4857-81bb-5b76a5c4e16c" type="radio">
+</input><label class="tabbed-label" for="9aa15a54-4ff7-4e78-bed3-b258da26f261">
 macOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">git</span><span class="o">-</span><span class="n">annex</span>
 </pre></div>
 </div>
 </div>
-<input id="454d5448-6f05-4e58-a28a-e1260015406a" name="1afac264-59cf-444c-9696-3bbc606319a5" type="radio">
-</input><label class="tabbed-label" for="454d5448-6f05-4e58-a28a-e1260015406a">
+<input id="fad933cc-4894-461b-bfda-c7586f05d80f" name="c1b95752-5ca6-4857-81bb-5b76a5c4e16c" type="radio">
+</input><label class="tabbed-label" for="fad933cc-4894-461b-bfda-c7586f05d80f">
 Windows 10 (via WSL)</label><div class="tabbed-content docutils">
 <p>Install <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a>, pick a distro, and then run one of:</p>
 <ul class="simple">
@@ -961,8 +960,8 @@ Windows 10 (via WSL)</label><div class="tabbed-content docutils">
 <li><p>The <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions">other distros</a> are supported.</p></li>
 </ul>
 </div>
-<input id="5b28b7b6-fe33-4456-a067-b519daa6ccd7" name="1afac264-59cf-444c-9696-3bbc606319a5" type="radio">
-</input><label class="tabbed-label" for="5b28b7b6-fe33-4456-a067-b519daa6ccd7">
+<input id="34dde14b-319d-4135-8f33-2ea87fb23a98" name="c1b95752-5ca6-4857-81bb-5b76a5c4e16c" type="radio">
+</input><label class="tabbed-label" for="34dde14b-319d-4135-8f33-2ea87fb23a98">
 Windows 10 (via VirtualBox)</label><div class="tabbed-content docutils">
 <p>Install <a class="reference external" href="https://virtualbox.org/">VirtualBox</a>, install a Linux distro inside of it, and then follow the Linux instructions.</p>
 </div>
@@ -1148,7 +1147,7 @@ $ rm -rf data-single-subject/
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">data</span></code>: private BIDS datasets</p>
+            <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">data</span></code></p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="duke.html" title="next page">

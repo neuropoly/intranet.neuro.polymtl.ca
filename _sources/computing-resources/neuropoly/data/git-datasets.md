@@ -1,5 +1,7 @@
 
-# `data`: private BIDS datasets
+# `data`
+
+Private BIDS datasets.
 
 `git+ssh://data.neuro.polymtl.ca` has a max size of ~1TB and is [currently not backed up](https://github.com/neuropoly/computers/issues/65).
 

@@ -1,4 +1,4 @@
-# Poly-Grames home/ folder
+# /home
 
 Every [GRAMES](../#poly-grames) account has a school-wide personal home folder. It is backed-up nightly.
 
