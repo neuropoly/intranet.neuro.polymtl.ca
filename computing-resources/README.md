@@ -2,7 +2,7 @@
 
 ```{toctree}
 :hidden:
-computing-resources-neuropoly/README
+neuropoly/README
 compute-canada
 clusters-at-criugm
 printer
