@@ -6,8 +6,8 @@ First off, thanks for taking the time to contribute to one of **NeuroPoly**'s pr
 
 This set of guidelines provides general instruction on how to make any one of the following contributions:
 
-* Submitting a bug report or feature request (See: [Opening an Issue](https://software-1/contributing#opening-an-issue-on-github))
-* Fixing a bug or developing a feature (See: [Developing](https://software-1/contributing#developing) and [Submitting a Pull Request](https://software-1/contributing#submitting-a-pull-request))
+* Submitting a bug report or feature request (See: [Opening an Issue](#opening-an-issue-on-github))
+* Fixing a bug or developing a feature (See: [Developing](#developing) and [Submitting a Pull Request](#submitting-a-pull-request))
 
 ## Project-Specific Guidance
 
