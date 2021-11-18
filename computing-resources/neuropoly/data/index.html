@@ -794,49 +794,51 @@
     </span>
    </code>
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#duke-neuro-polymtl-ca">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     duke.neuro.polymtl.ca
+    </span>
+   </code>
+  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#duke-neuro-polymtl-ca">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       duke.neuro.polymtl.ca
-      </span>
-     </code>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#access-from-stations">
-       Access from stations
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#mount-with-gui">
-       Mount with GUI
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#mount-with-terminal">
-       Mount with Terminal
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#poly-grames-home-folder">
-     Poly-Grames home/ folder
+    <a class="reference internal nav-link" href="#access-from-stations">
+     Access from stations
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#django">
-     django
+    <a class="reference internal nav-link" href="#mount-with-gui">
+     Mount with GUI
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#virtualbox">
-       VirtualBox
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mount-with-terminal">
+     Mount with Terminal
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#poly-grames-home-folder">
+   Poly-Grames home/ folder
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#django-neuro-polymtl-ca">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     django.neuro.polymtl.ca
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#virtualbox">
+     VirtualBox
+    </a>
    </li>
   </ul>
  </li>
@@ -859,8 +861,9 @@
 <p>We have an internal server that hosts <a class="reference external" href="https://bids-specification.readthedocs.io">BIDS</a> datasets,
 version-controlled using <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">git-annex</span></code></span>.</p>
 <p>To use it, see <a class="reference external" href="./git-datasets.md#usage">this page</a>.</p>
+</div>
 <div class="section" id="duke-neuro-polymtl-ca">
-<h3><code class="docutils literal notranslate"><span class="pre">duke.neuro.polymtl.ca</span></code><a class="headerlink" href="#duke-neuro-polymtl-ca" title="Permalink to this headline">¶</a></h3>
+<h2><code class="docutils literal notranslate"><span class="pre">duke.neuro.polymtl.ca</span></code><a class="headerlink" href="#duke-neuro-polymtl-ca" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">{smb,afp}://duke.neuro.polymtl.ca</span></code> has a max size of ~15TB and is backed up nightly at two different locations.</p>
 <p>The shared folders (hosted on <strong>Poly-Grames</strong>) are:</p>
 <ul class="simple">
@@ -873,7 +876,7 @@ version-controlled using <span class="xref myst"><code class="docutils literal n
 </ul>
 <p><strong>NOTE: duke is not accessible when using SSH key login to linux stations.</strong></p>
 <div class="section" id="access-from-stations">
-<h4>Access from stations<a class="headerlink" href="#access-from-stations" title="Permalink to this headline">¶</a></h4>
+<h3>Access from stations<a class="headerlink" href="#access-from-stations" title="Permalink to this headline">¶</a></h3>
 <p>When <a class="reference external" href="../#ssh-command-line">connecting with <code class="docutils literal notranslate"><span class="pre">ssh</span></code></a>, <code class="docutils literal notranslate"><span class="pre">duke</span></code> is available at <code class="docutils literal notranslate"><span class="pre">/mnt/duke/</span></code>, e.g.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>u932945@joplin:~$ ls -l /mnt/duke
 total 36
@@ -887,11 +890,11 @@ drwxr-xr-x 2 u108545 domain users  4096 Jun  8 16:44 temp
 </div>
 </div>
 <div class="section" id="mount-with-gui">
-<h4>Mount with GUI<a class="headerlink" href="#mount-with-gui" title="Permalink to this headline">¶</a></h4>
+<h3>Mount with GUI<a class="headerlink" href="#mount-with-gui" title="Permalink to this headline">¶</a></h3>
 <p>When working on campus or <a class="reference external" href="../#vpn">over the VPN</a>, you can connect your computer to <code class="docutils literal notranslate"><span class="pre">duke</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="e3cad7de-b5af-43a0-bb67-3fd6814fa42c" name="6f2da366-de6e-4cea-ba43-1f390873802d" type="radio">
-</input><label class="tabbed-label" for="e3cad7de-b5af-43a0-bb67-3fd6814fa42c">
+<input checked="checked" id="a71768de-924c-4cb8-b9a0-b3ff247c0d52" name="c9631cdf-ddaa-42c5-8c24-03f8b0ade085" type="radio">
+</input><label class="tabbed-label" for="a71768de-924c-4cb8-b9a0-b3ff247c0d52">
 Windows 10</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open Windows explorer</p></li>
@@ -903,8 +906,8 @@ Windows 10</label><div class="tabbed-content docutils">
 <li><p>Password: <code class="docutils literal notranslate"><span class="pre">&lt;POLYGRAMES_PASSWORD&gt;</span></code>.</p></li>
 </ol>
 </div>
-<input id="08031b2f-84a7-457c-b85b-5cc63f5c7122" name="6f2da366-de6e-4cea-ba43-1f390873802d" type="radio">
-</input><label class="tabbed-label" for="08031b2f-84a7-457c-b85b-5cc63f5c7122">
+<input id="49780c7a-310f-4e77-81a5-f8b73214be19" name="c9631cdf-ddaa-42c5-8c24-03f8b0ade085" type="radio">
+</input><label class="tabbed-label" for="49780c7a-310f-4e77-81a5-f8b73214be19">
 macOS</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open Finder</p></li>
@@ -912,8 +915,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p><code class="docutils literal notranslate"><span class="pre">afp://duke.neuro.polymtl.ca/</span></code></p></li>
 </ol>
 </div>
-<input id="1d61f2ba-d870-4aa9-bc60-a9a883d6291c" name="6f2da366-de6e-4cea-ba43-1f390873802d" type="radio">
-</input><label class="tabbed-label" for="1d61f2ba-d870-4aa9-bc60-a9a883d6291c">
+<input id="00bcbddc-5a0d-498c-8cf7-ea4934643209" name="c9631cdf-ddaa-42c5-8c24-03f8b0ade085" type="radio">
+</input><label class="tabbed-label" for="00bcbddc-5a0d-498c-8cf7-ea4934643209">
 Linux</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open File Browser</p></li>
@@ -926,11 +929,11 @@ Linux</label><div class="tabbed-content docutils">
 <p>If you get the message “There are no shares available…”, then there might be a bug with the OS. Instead, try to mount on a local folder within the home directory (to have write permission).</p>
 </div>
 <div class="section" id="mount-with-terminal">
-<h4>Mount with Terminal<a class="headerlink" href="#mount-with-terminal" title="Permalink to this headline">¶</a></h4>
+<h3>Mount with Terminal<a class="headerlink" href="#mount-with-terminal" title="Permalink to this headline">¶</a></h3>
 <p>You can also connect your computer from the CLI, or with a script, which might be more efficient in the long run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="57e9d114-cb6d-4d17-aca8-5892c8e544b7" name="6163175c-2a28-459d-b50e-dbb0893195f4" type="radio">
-</input><label class="tabbed-label" for="57e9d114-cb6d-4d17-aca8-5892c8e544b7">
+<input checked="checked" id="010c00ed-7065-42cb-b8bc-90bac34e19a3" name="832d3b1f-f5f0-426f-9ba8-f17cb88fa378" type="radio">
+</input><label class="tabbed-label" for="010c00ed-7065-42cb-b8bc-90bac34e19a3">
 Mac OSX</label><div class="tabbed-content docutils">
 <p>Create folder for the mount point on a location (your home directory) where you have read and write access:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir &lt;FOLDER_NAME&gt; <span class="c1"># (e.g. &lt;FOLDER_NAME&gt;=sct_testing)</span>
@@ -941,8 +944,8 @@ sudo umount &lt;FOLDER_NAME&gt;/
 </pre></div>
 </div>
 </div>
-<input id="60de0b82-1ef2-42a6-8e43-67597e4d2305" name="6163175c-2a28-459d-b50e-dbb0893195f4" type="radio">
-</input><label class="tabbed-label" for="60de0b82-1ef2-42a6-8e43-67597e4d2305">
+<input id="d3db7315-f3dd-499d-85e4-37d42494a4f9" name="832d3b1f-f5f0-426f-9ba8-f17cb88fa378" type="radio">
+</input><label class="tabbed-label" for="d3db7315-f3dd-499d-85e4-37d42494a4f9">
 Linux</label><div class="tabbed-content docutils">
 <p>To mount:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mount -t cifs //duke.neuro.polymtl.ca/&lt;FOLDER_NAME&gt; /mnt/duke/&lt;FOLDER_NAME&gt; -o <span class="nv">username</span><span class="o">=</span>&lt;GRAMES_USERNAME&gt;,noexec
@@ -953,11 +956,11 @@ Linux</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="section" id="poly-grames-home-folder">
-<h3>Poly-Grames home/ folder<a class="headerlink" href="#poly-grames-home-folder" title="Permalink to this headline">¶</a></h3>
+<h2>Poly-Grames home/ folder<a class="headerlink" href="#poly-grames-home-folder" title="Permalink to this headline">¶</a></h2>
 <p>Every <a class="reference external" href="../#poly-grames">GRAMES</a> account has a school-wide personal home folder. It is backed-up nightly.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="faff39c7-b120-460b-8f12-643b06438668" name="ad61795e-8b48-4101-ba60-7d0f6481081c" type="radio">
-</input><label class="tabbed-label" for="faff39c7-b120-460b-8f12-643b06438668">
+<input checked="checked" id="8798ee5a-6076-4521-8b8b-a584a42a10f8" name="0fcc8fe2-a044-41e7-ab9f-1cc99f4e5f6d" type="radio">
+</input><label class="tabbed-label" for="8798ee5a-6076-4521-8b8b-a584a42a10f8">
 macOS</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open Finder</p></li>
@@ -976,8 +979,8 @@ macOS</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-<div class="section" id="django">
-<h3>django<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="django-neuro-polymtl-ca">
+<h2><code class="docutils literal notranslate"><span class="pre">django.neuro.polymtl.ca</span></code><a class="headerlink" href="#django-neuro-polymtl-ca" title="Permalink to this headline">¶</a></h2>
 <p>This is our old server. This server is only maintained for old projects. Please <strong>DO NOT</strong> use it if you are starting a new project.</p>
 <p>The shared folders (hosted on <strong>django</strong>) are:</p>
 <ul class="simple">
@@ -993,13 +996,12 @@ macOS</label><div class="tabbed-content docutils">
 <li><p>now if you want to make an alias on your desktop, in Finder select the mounted drive and drag/drop it on your Desktop, while pressing keys ALT+CMD</p></li>
 </ol>
 <div class="section" id="virtualbox">
-<h4>VirtualBox<a class="headerlink" href="#virtualbox" title="Permalink to this headline">¶</a></h4>
+<h3>VirtualBox<a class="headerlink" href="#virtualbox" title="Permalink to this headline">¶</a></h3>
 <p>Some VirtualBox machines are accessible under <strong>folder_shared/virtual_box</strong> (this folder is read-only. For adding more, please contact Julien):</p>
 <ul class="simple">
 <li><p><strong>WinXP_IDEA</strong> –&gt; Siemens pulse sequence program environment</p></li>
 <li><p><strong>WinXP_Terranova</strong> –&gt; Prospa software for Terranova MRI</p></li>
 </ul>
-</div>
 </div>
 </div>
 </div>

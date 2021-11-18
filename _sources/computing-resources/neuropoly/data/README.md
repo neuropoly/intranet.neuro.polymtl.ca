@@ -14,7 +14,7 @@ version-controlled using [`git-annex`](git-annex.branchable.com/).
 To use it, see [this page](./git-datasets.md#usage).
 
 
-### `duke.neuro.polymtl.ca`
+## `duke.neuro.polymtl.ca`
 
 `{smb,afp}://duke.neuro.polymtl.ca` has a max size of ~15TB and is backed up nightly at two different locations.
 
@@ -29,7 +29,7 @@ The shared folders \(hosted on **Poly-Grames**\) are:
 
 **NOTE: duke is not accessible when using SSH key login to linux stations.**
 
-#### Access from stations
+### Access from stations
 
 When [connecting with `ssh`](../#ssh-command-line), `duke` is available at `/mnt/duke/`, e.g.:
 
@@ -45,7 +45,7 @@ drwxr-xr-x 2 u108545 domain users  4096 Jun  8 16:44 temp
 ```
 
 
-#### Mount with GUI
+### Mount with GUI
 
 When working on campus or [over the VPN](../#vpn), you can connect your computer to `duke`:
 
@@ -78,7 +78,7 @@ Note: some root folders are restricted \(e.g. **mri**\), so you need to write th
 If you get the message “There are no shares available…”, then there might be a bug with the OS. Instead, try to mount on a local folder within the home directory \(to have write permission\).
 
 
-#### Mount with Terminal
+### Mount with Terminal
 
 You can also connect your computer from the CLI, or with a script, which might be more efficient in the long run:
 
@@ -103,7 +103,7 @@ sudo mount -t cifs //duke.neuro.polymtl.ca/<FOLDER_NAME> /mnt/duke/<FOLDER_NAME>
 ````
 
 
-### Poly-Grames home/ folder
+## Poly-Grames home/ folder
 
 Every [GRAMES](../#poly-grames) account has a school-wide personal home folder. It is backed-up nightly.
 
@@ -117,7 +117,7 @@ Every [GRAMES](../#poly-grames) account has a school-wide personal home folder. 
 ````
 
 
-### django
+## `django.neuro.polymtl.ca`
 
 This is our old server. This server is only maintained for old projects. Please **DO NOT** use it if you are starting a new project.
 
@@ -134,7 +134,7 @@ To access these folders, here's the procedure:
 3. select the mount point \(e.g., data\_shared\)
 4. now if you want to make an alias on your desktop, in Finder select the mounted drive and drag/drop it on your Desktop, while pressing keys ALT+CMD
 
-#### VirtualBox
+### VirtualBox
 
 Some VirtualBox machines are accessible under **folder\_shared/virtual\_box** \(this folder is read-only. For adding more, please contact Julien\):
 
