@@ -934,25 +934,35 @@
 </div>
 <div class="section" id="download">
 <h3>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h3>
+<div class="tabbed-set docutils">
+<input checked="checked" id="377d70f5-c49e-4bef-9a17-c34286fd9708" name="0a7b127f-6290-4dd2-8662-9f550aed97fa" type="radio">
+</input><label class="tabbed-label" for="377d70f5-c49e-4bef-9a17-c34286fd9708">
+Linux</label><div class="tabbed-content docutils">
 <ul class="simple">
-<li><p><strong>Linux</strong></p>
-<ul>
 <li><p><strong>Arch</strong>: <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-Sy</span> <span class="pre">git-annex</span></code></p></li>
 <li><p><strong>Fedora/RedHat/CentOS</strong>: <code class="docutils literal notranslate"><span class="pre">dnf</span> <span class="pre">install</span> <span class="pre">git-annex</span></code></p></li>
 <li><p><strong>Debian/Ubuntu</strong>: <code class="docutils literal notranslate"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">git-annex</span></code>, but <strong>you must be using Ubuntu 20.04</strong> or <strong>Debian Testing</strong> or higher.</p></li>
 <li><p><strong><a class="reference external" href="https://docs.computecanada.ca/">ComputeCanada</a></strong>, a supercomputer we have accounts on: <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">StdEnv/2020</span>&#160; <span class="pre">&amp;&amp;</span> <span class="pre">module</span> <span class="pre">load</span> <span class="pre">git-annex</span></code> <em>in <a class="reference external" href="https://docs.computecanada.ca/wiki/Utiliser_des_modules/en#Loading_modules_automatically">every session or batch job</a></em></p></li>
 <li><p>if on an older system and can’t upgrade, you can try <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">installing <code class="docutils literal notranslate"><span class="pre">conda</span></code></a> (or <a class="reference external" href="https://github.com/conda-forge/miniforge/">miniforge</a> and then using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-f</span> <span class="pre">conda-forge</span> <span class="pre">git-annex</span></code>.</p></li>
 </ul>
-</li>
-<li><p><strong>macOS</strong>: <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">git-annex</span></code></p></li>
-<li><p><strong>WSL</strong>:</p>
-<ul>
+</div>
+<input id="0171e3b2-41a4-4425-8903-07ec6fe2cac1" name="0a7b127f-6290-4dd2-8662-9f550aed97fa" type="radio">
+</input><label class="tabbed-label" for="0171e3b2-41a4-4425-8903-07ec6fe2cac1">
+macOS</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">git</span><span class="o">-</span><span class="n">annex</span>
+</pre></div>
+</div>
+</div>
+<input id="a4ef6cfa-dfa4-4807-87cf-3516e7cb7014" name="0a7b127f-6290-4dd2-8662-9f550aed97fa" type="radio">
+</input><label class="tabbed-label" for="a4ef6cfa-dfa4-4807-87cf-3516e7cb7014">
+Windows 10 (via WSL)</label><div class="tabbed-content docutils">
+<ul class="simple">
 <li><p><strong><a class="reference external" href="https://www.microsoft.com/store/apps/9n6svws3rx71">Ubuntu-20.04</a></strong>: <code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">install</span> <span class="pre">git-annex</span></code></p></li>
 <li><p><strong><a class="reference external" href="https://www.microsoft.com/store/apps/9MSVKQC78PK6">Debian</a></strong>: <code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">install</span> <span class="pre">git-annex</span></code></p></li>
 <li><p>The <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions">other distros</a> are supported.</p></li>
 </ul>
-</li>
-</ul>
+</div>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Check that <code class="docutils literal notranslate"><span class="pre">git-annex</span> <span class="pre">version</span></code> reports <strong>version 8</strong> or higher! It should look like:</p>
