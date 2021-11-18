@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GPUs &#8212; NeuroPoly Lab Manual</title>
+    <title>CPU Servers &#8212; NeuroPoly Lab Manual</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -39,8 +39,6 @@
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Compute Canada" href="../compute-canada.html" />
-    <link rel="prev" title="CPUS2" href="cpus2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -77,7 +75,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../README.html">
    🏠 Lab Manual
@@ -250,31 +248,31 @@
    Academic Writing
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../README.html">
    <span>
     🖥
    </span>
    Computing Resources
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active has-children">
+  <ul>
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="README.html">
      NeuroPoly
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
     <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="current">
+    <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="data.html">
+      <a class="reference internal" href="data/README.html">
        Data
       </a>
      </li>
@@ -283,8 +281,8 @@
        CPUS2
       </a>
      </li>
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
+     <li class="toctree-l3">
+      <a class="reference internal" href="gpus.html">
        GPUs
       </a>
      </li>
@@ -764,7 +762,7 @@
 
 
 <!-- only one Github button activated, so collapse it into the main button, saving a click for users -->
-        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/computing-resources/computing-resources-neuropoly/gpus.md"><button
+        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/computing-resources/neuropoly/cpus.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fab fa-github"></i></button></a>
 
@@ -787,80 +785,24 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#connecting">
-   Connecting
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hardware">
-   Hardware
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#software">
-   Software
+  <a class="reference internal nav-link" href="#joplin">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     joplin
+    </span>
+   </code>
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gpu-agnostic-code">
-     GPU-Agnostic code
+    <a class="reference internal nav-link" href="#abbey">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       abbey
+      </span>
+     </code>
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data">
-   Data
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#storage">
-   Storage
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#long-term-slow-access-with-backup">
-     Long term, slow access (with backup)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mid-term-rapid-access-no-backup">
-     Mid-term, rapid access (no backup)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#short-term-very-rapid-access-no-backup">
-     Short-term, very rapid access (no backup)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#good-training-habits">
-   Good Training Habits
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bookings">
-   Bookings
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#monitoring">
-   Monitoring
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#monitoring-gpus">
-     Monitoring GPUs
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tensorboard">
-   Tensorboard
-  </a>
  </li>
 </ul>
 
@@ -873,212 +815,57 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="gpus">
-<h1>GPUs<a class="headerlink" href="#gpus" title="Permalink to this headline">¶</a></h1>
-<p>This document is being ported from <a class="reference external" href="https://docs.google.com/document/d/1X--A2kql4GypfI6fNFIOYA_b6uQdeu2_Kue7n8KkTOU/edit">here</a>.</p>
-<p>Neuropoly has several GPUs available for training deep learning models.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bireli.neuro.polymtl.ca</span></code> -  2 x <a class="reference external" href="https://www.nvidia.com/en-us/geforce/graphics-cards/geforce-gtx-titan-x/specifications/">GeForce GTX TITAN X</a> (released 2014)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rosenberg.neuro.polymtl.ca</span></code> - 8 x <a class="reference external" href="https://www.nvidia.com/en-us/data-center/tesla-p100/">Tesla P100 SXM2 16GB</a> (released 2016)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">romane.neuro.polymtl.ca</span></code> - 4 x <a class="reference external" href="https://www.nvidia.com/en-us/design-visualization/rtx-a6000/">RTX A6000</a> (released 2020)</p></li>
-</ul>
-<p>We have spent money and time on this infrastructure for it to push science forward, so please take advantage of it!</p>
-<div class="section" id="connecting">
-<h2>Connecting<a class="headerlink" href="#connecting" title="Permalink to this headline">¶</a></h2>
-<p>Like <a class="reference external" href="./#connect">other machines</a>, connect with ssh using your <a class="reference external" href="https://github.com/neuropoly/neuropoly-internal-docs/tree/24a8cfb83736a4325aa342ece74a89846c1f700d/computing-resources/onboarding/accounts.md#polygrames">polygrames</a> account.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="cpu-servers">
+<h1>CPU Servers<a class="headerlink" href="#cpu-servers" title="Permalink to this headline">¶</a></h1>
+<p>Unless otherwise stated, use your <a class="reference external" href="./computing-resources-neuropoly.md#TODO">connect with your polygrames credentials</a></p>
+<div class="section" id="joplin">
+<h2><code class="docutils literal notranslate"><span class="pre">joplin</span></code><a class="headerlink" href="#joplin" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Spec</p></th>
+<th class="text-align:left head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><strong>Model</strong></p></td>
+<td class="text-align:left"><p>64-core CPU</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><strong>OS</strong></p></td>
+<td class="text-align:left"><p>Linux</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><strong>Hostname</strong></p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">joplin.neuro.polymtl.ca</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>For fast I/O, use the NVMe hard drive, which is automatically available: <code class="docutils literal notranslate"><span class="pre">~/data_nvme_$USER</span></code></p>
+<div class="section" id="abbey">
+<h3><code class="docutils literal notranslate"><span class="pre">abbey</span></code><a class="headerlink" href="#abbey" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Spec</p></th>
+<th class="text-align:left head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><strong>Model</strong></p></td>
+<td class="text-align:left"><p>Xeon 12-core</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><strong>OS</strong></p></td>
+<td class="text-align:left"><p>Linux</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><strong>Hostname</strong></p></td>
+<td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">abbey.neuro.polymtl.ca</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">ssh</span></code></p></td>
+<td class="text-align:left"><p>disabled</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><strong>Credentials</strong></p></td>
+<td class="text-align:left"><p><a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.mtnjvepco2an">NeuroPoly Internal Document: Abbey Teamviewer Credentials</a></p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="section" id="hardware">
-<h2>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h2>
-<p>You can inspect the available GPUs on machine, and their current state, with <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code>:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ nvidia-smi
-Fri Jun  4 01:26:14 2021       
-+-----------------------------------------------------------------------------+
-| NVIDIA-SMI 440.33.01    Driver Version: 440.33.01    CUDA Version: 10.2     |
-|-------------------------------+----------------------+----------------------+
-| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
-| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
-|===============================+======================+======================|
-|   0  Tesla P100-SXM2...  On   | 00000000:04:00.0 Off |                    0 |
-| N/A   25C    P0    33W / 300W |     10MiB / 16280MiB |      0%      Default |
-+-------------------------------+----------------------+----------------------+
-|   1  Tesla P100-SXM2...  On   | 00000000:05:00.0 Off |                    0 |
-| N/A   22C    P0    33W / 300W |     10MiB / 16280MiB |      0%      Default |
-+-------------------------------+----------------------+----------------------+
-|   2  Tesla P100-SXM2...  On   | 00000000:09:00.0 Off |                    0 |
-| N/A   24C    P0    31W / 300W |     10MiB / 16280MiB |      0%      Default |
-+-------------------------------+----------------------+----------------------+
-|   3  Tesla P100-SXM2...  On   | 00000000:0A:00.0 Off |                    0 |
-| N/A   23C    P0    31W / 300W |     10MiB / 16280MiB |      0%      Default |
-+-------------------------------+----------------------+----------------------+
-|   4  Tesla P100-SXM2...  On   | 00000000:85:00.0 Off |                    0 |
-| N/A   31C    P0    51W / 300W |  10253MiB / 16280MiB |      0%      Default |
-+-------------------------------+----------------------+----------------------+
-|   5  Tesla P100-SXM2...  On   | 00000000:86:00.0 Off |                    0 |
-| N/A   22C    P0    41W / 300W |  10253MiB / 16280MiB |      0%      Default |
-+-------------------------------+----------------------+----------------------+
-|   6  Tesla P100-SXM2...  On   | 00000000:89:00.0 Off |                    0 |
-| N/A   32C    P0    51W / 300W |  10245MiB / 16280MiB |      0%      Default |
-+-------------------------------+----------------------+----------------------+
-|   7  Tesla P100-SXM2...  On   | 00000000:8A:00.0 Off |                    0 |
-| N/A   38C    P0    52W / 300W |  13684MiB / 16280MiB |      0%      Default |
-+-------------------------------+----------------------+----------------------+
-
-+-----------------------------------------------------------------------------+
-| Processes:                                                       GPU Memory |
-|  GPU       PID   Type   Process name                             Usage      |
-|=============================================================================|
-|    4     32263      C   ...L.CA/u12345/venv-ivadomed/bin/python3.6 10243MiB |
-|    5     32264      C   ...L.CA/u12345/venv-ivadomed/bin/python3.6 10243MiB |
-|    6     33062      C   ...L.CA/u12345/venv-ivadomed/bin/python3.6 10235MiB |
-|    7     33063      C   ...L.CA/u12345/venv-ivadomed/bin/python3.6 10235MiB |
-|    7     35147      C   ...L.CA/u12345/venv-ivadomed/bin/python3.6  3439MiB |
-+-----------------------------------------------------------------------------+
-</pre></div>
-</div>
-</div>
-<div class="section" id="software">
-<h2>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h2>
-<p>Both <a class="reference external" href="https://tensorflow.org"><code class="docutils literal notranslate"><span class="pre">tensorflow</span></code></a> and <a class="reference external" href="https://pytorch.org/"><code class="docutils literal notranslate"><span class="pre">torch</span></code></a> are supported on all of these machines.</p>
-<p>You can …</p>
-<p>To get your software onto these servers, download it with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code>.</p>
-<div class="section" id="gpu-agnostic-code">
-<h3>GPU-Agnostic code<a class="headerlink" href="#gpu-agnostic-code" title="Permalink to this headline">¶</a></h3>
-<p>For the benefit of being able to test code out locally, without the GPU servers, it’s helpful to write device-agnostic code, code that falls back to running on slower CPU emulation if GPUs are not available.</p>
-<p>For tensorflow, this</p>
-<p>For pytorch, this <a class="reference external" href="https://pytorch.org/docs/stable/notes/cuda.html#device-agnostic-code">looks like this</a></p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>device = torch.device(&#39;cuda&#39; if torch.cuda.is_available() else &#39;cpu&#39;)
-
-...
-
-# to make tensors
-X = torch.empty((8, 42), device=device)
-
-# to make neural networks
-model = Network(...).to(device=device)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="data">
-<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
-<p>As with the <a class="reference external" href="https://github.com/neuropoly/neuropoly-internal-docs/tree/24a8cfb83736a4325aa342ece74a89846c1f700d/computing-resources/computing-resources-neuropoly/stations.md#data">other stations</a>, you should prefer getting data in via <a class="reference external" href="https://github.com/neuropoly/data-management/blob/master/internal-server.md"><code class="docutils literal notranslate"><span class="pre">git-annex</span></code></a>, but you can it via <a class="reference external" href="https://github.com/neuropoly/neuropoly-internal-docs/tree/24a8cfb83736a4325aa342ece74a89846c1f700d/computing-resources/computing-resources-neuropoly/stations.md#duke"><code class="docutils literal notranslate"><span class="pre">duke</span></code></a> (which is available to you at <code class="docutils literal notranslate"><span class="pre">~/duke/temp</span></code>) or any other method (<code class="docutils literal notranslate"><span class="pre">scp</span></code>, <code class="docutils literal notranslate"><span class="pre">curl</span></code>, <code class="docutils literal notranslate"><span class="pre">wget</span></code>, etc).</p>
-</div>
-<div class="section" id="storage">
-<h2>Storage<a class="headerlink" href="#storage" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="long-term-slow-access-with-backup">
-<h3>Long term, slow access (with backup)<a class="headerlink" href="#long-term-slow-access-with-backup" title="Permalink to this headline">¶</a></h3>
-<p>For projects and permanent storage: <code class="docutils literal notranslate"><span class="pre">~/duke</span></code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Please, do not use space on duke while training your models. If you need more local space, post a request on slack #computers.</p>
-</div>
-</div>
-<div class="section" id="mid-term-rapid-access-no-backup">
-<h3>Mid-term, rapid access (no backup)<a class="headerlink" href="#mid-term-rapid-access-no-backup" title="Permalink to this headline">¶</a></h3>
-<p>This corresponds to your home <code class="docutils literal notranslate"><span class="pre">~/</span></code>. This is where you keep your software (conda envs, virtualenvs, etc.).</p>
-</div>
-<div class="section" id="short-term-very-rapid-access-no-backup">
-<h3>Short-term, very rapid access (no backup)<a class="headerlink" href="#short-term-very-rapid-access-no-backup" title="Permalink to this headline">¶</a></h3>
-<p>This is where you run your experiments (eg: deep learning training). On <code class="docutils literal notranslate"><span class="pre">rosenberg</span></code>, go to <code class="docutils literal notranslate"><span class="pre">~/data_nvme_$USER</span></code>or <code class="docutils literal notranslate"><span class="pre">~/data_extrassd_$USER</span></code>. On <code class="docutils literal notranslate"><span class="pre">bireli</span></code> and <code class="docutils literal notranslate"><span class="pre">romane</span></code> , go to your home <code class="docutils literal notranslate"><span class="pre">~/</span></code> .</p>
-<p>To keep track of your disk space, you can run <code class="docutils literal notranslate"><span class="pre">df</span></code>:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u108545@rosenberg:~$ # to see how much space is available on the spare disk
-u108545@rosenberg:~$ df -h data_extrassd_u108545
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sdb1       440G   50G  368G  12% /mnt/extrassd
-
-u108545@rosenberg:~$ # to measure how much space a tool takes
-u108545@rosenberg:~$ du -hs data_extrassd_u108545/miniconda3/
-18G    data_extrassd_u108545/miniconda3/
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="good-training-habits">
-<h2>Good Training Habits<a class="headerlink" href="#good-training-habits" title="Permalink to this headline">¶</a></h2>
-<p>Instead of loading the whole dataset to memory:</p>
-<ul class="simple">
-<li><p>Use HDF5Matrix: <a class="reference external" href="https://gist.github.com/jfsantos/e2ef822c744357a4ed16ec0c885100a3">https://gist.github.com/jfsantos/e2ef822c744357a4ed16ec0c885100a3</a></p></li>
-<li><p>Provide a python generator like in: <a class="reference external" href="https://github.com/keras-team/keras/issues/107">https://github.com/keras-team/keras/issues/107</a></p></li>
-</ul>
-<p>And:</p>
-<ul class="simple">
-<li><p>Store data as float32 rather than float64</p></li>
-</ul>
-</div>
-<div class="section" id="bookings">
-<h2>Bookings<a class="headerlink" href="#bookings" title="Permalink to this headline">¶</a></h2>
-<p>Please allocate your GPUs cooperatively on the <a class="reference external" href="https://calendar.google.com/calendar?cid=NG1nNmJnZDlwdjU1dGhmOTQ4NnQybWlodDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">computer resource calendar</a>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>IMPORTANT:</strong> If you don’t have writing permission on this calendar please contact <a class="reference external" href="mailto:alexandrufoias&#37;&#52;&#48;gmail&#46;com">alexandrufoias<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
-</div>
-<p>Use this format: u918374&#64;rosenberg:gpu[3].</p>
-<p>Note that the GPUs are numbered from 0, as you can see in <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code>.</p>
-<p>To train, run your scripts like this:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ CUDA_VISIBLE_DEVICES=&quot;3&quot; ./train.sh
-</pre></div>
-</div>
-<p>You can book multiple GPUs just with commas: u918374&#64;rosenberg:gpu[2,3,5]</p>
-<p>and use them with</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ CUDA_VISIBLE_DEVICES=&quot;2,3,5&quot; ./train.sh
-</pre></div>
-</div>
-</div>
-<div class="section" id="monitoring">
-<h2>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h2>
-<p>You can monitor what the system is doing with</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>htop   # CPU processes
-</pre></div>
-</div>
-<p>and</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>nvtop  # GPU processes
-</pre></div>
-</div>
-<p>You can see how hot it is running with</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ sensors
-coretemp-isa-0001
-Adapter: ISA adapter
-Package id 1:  +30.0°C  (high = +80.0°C, crit = +90.0°C)
-Core 0:        +25.0°C  (high = +80.0°C, crit = +90.0°C)
-Core 1:        +25.0°C  (high = +80.0°C, crit = +90.0°C)
-</pre></div>
-</div>
-<p>You can see how hot its disks are running by finding out the name of the disk in /dev and running</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ df -h .
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda2       439G  412G  4.9G  99% /
-u108545@rosenberg:~$ hddtemp /dev/sda2
-/dev/sda2: PNY CS1311 480GB SSD: 30°C
-</pre></div>
-</div>
-<p>You can also see all this information plotted over time for each machine at</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://monitor.neuro.polymtl.ca/host/bireli.neuro.polymtl.ca">https://monitor.neuro.polymtl.ca/host/bireli.neuro.polymtl.ca</a></p></li>
-<li><p><a class="reference external" href="https://monitor.neuro.polymtl.ca/host/rosenberg.neuro.polymtl.ca">https://monitor.neuro.polymtl.ca/host/rosenberg.neuro.polymtl.ca</a></p></li>
-<li><p><a class="reference external" href="https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca">https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca</a></p></li>
-</ul>
-<div class="section" id="monitoring-gpus">
-<h3>Monitoring GPUs<a class="headerlink" href="#monitoring-gpus" title="Permalink to this headline">¶</a></h3>
-<p>As above, you can see the computation amount, allocated RAM, temperature, fan speed of the GPUs on the command line with</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>nvidia-smi
-</pre></div>
-</div>
-<p>or</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>nvtop
-</pre></div>
-</div>
-<p>You can see the same information over time at</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">romane</span></code> GPU 0: <a class="reference external" href="https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/#menu_nvidia_smi_submenu_gpu0_RTX_A6000">https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/#menu_nvidia_smi_submenu_gpu0_RTX_A6000</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">romane</span></code> GPU 1: <a class="reference external" href="https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/#menu_nvidia_smi_submenu_gpu1_RTX_A6000">https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/#menu_nvidia_smi_submenu_gpu1_RTX_A6000</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">romane</span></code> GPU 2: <a class="reference external" href="https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/#menu_nvidia_smi_submenu_gpu2_RTX_A6000">https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/#menu_nvidia_smi_submenu_gpu2_RTX_A6000</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">romane</span></code> GPU 3: <a class="reference external" href="https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/#menu_nvidia_smi_submenu_gpu3_RTX_A6000">https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/#menu_nvidia_smi_submenu_gpu3_RTX_A6000</a></p></li>
-</ul>
-<p>Monitoring these metrics during training will help you make more efficient batch sizes and other optimizations.</p>
-</div>
-</div>
-<div class="section" id="tensorboard">
-<h2>Tensorboard<a class="headerlink" href="#tensorboard" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -1087,21 +874,7 @@ u108545@rosenberg:~$ hddtemp /dev/sda2
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="cpus2.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">CPUS2</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../compute-canada.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Compute Canada</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
         
         </div>

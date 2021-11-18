@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Servers &#8212; NeuroPoly Lab Manual</title>
+    <title>Using git-annex &#8212; NeuroPoly Lab Manual</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -272,7 +272,7 @@
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../data.html">
+      <a class="reference internal" href="README.html">
        Data
       </a>
      </li>
@@ -762,7 +762,7 @@
 
 
 <!-- only one Github button activated, so collapse it into the main button, saving a click for users -->
-        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/computing-resources/computing-resources-neuropoly/data/README.md"><button
+        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/computing-resources/neuropoly/data/git-annex.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fab fa-github"></i></button></a>
 
@@ -785,56 +785,98 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     data
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#duke">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     duke
-    </span>
-   </code>
+  <a class="reference internal nav-link" href="#installation">
+   Installation
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#how-to-mount">
-     How to Mount
+    <a class="reference internal nav-link" href="#requirements">
+     Requirements
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mount-from-terminal">
-     Mount from Terminal
+    <a class="reference internal nav-link" href="#download">
+     Download
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#access-from-stations">
-     Access from stations
+    <a class="reference internal nav-link" href="#verify">
+     ⚠️ Verify ⚠️
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#django">
-     django
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#virtualbox">
-       VirtualBox
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#poly-grames-home-folder">
-     Poly-Grames home folder
+    <a class="reference internal nav-link" href="#global-git-config">
+     Global
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       git
+      </span>
+     </code>
+     config
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#new-repo">
+   New repo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#troubleshooting">
+   Troubleshooting
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#version-problems">
+     version problems
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checking-annex-file-locations">
+     checking annex file locations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#annex-thin-hardlinks-a-id-hardlinks">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     annex.thin
+    </span>
+   </code>
+   Hardlinks
+   <a id="hardlinks">
+   </a>
+   <ul class="nav section-nav flex-column">
+    <li class="nav-item toc-entry">
+     <a class="reference internal nav-link" href="#a-cosmetic-problem-affecting-git-status">
+      “a cosmetic problem affecting git status”
+     </a>
+    </li>
+    <li class="nav-item toc-entry">
+     <a class="reference internal nav-link" href="#resetting">
+      Resetting
+     </a>
+    </li>
+    <li class="nav-item toc-entry">
+     <a class="reference internal nav-link" href="#rm-cannot-remove">
+      <code class="docutils literal notranslate">
+       <span class="pre">
+        rm:
+       </span>
+       <span class="pre">
+        cannot
+       </span>
+       <span class="pre">
+        remove
+       </span>
+      </code>
+     </a>
+    </li>
+   </ul>
+  </a>
  </li>
 </ul>
 
@@ -847,145 +889,221 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="data-servers">
-<h1>Data Servers<a class="headerlink" href="#data-servers" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="data">
-<h2><code class="docutils literal notranslate"><span class="pre">data</span></code><a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">git+ssh://data.neuro.polymtl.ca</span></code> has a max size of ~1TB and is <a class="reference external" href="https://github.com/neuropoly/computers/issues/65">currently not backed up</a>.</p>
-<p>It supports versioning datasets using <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">git-annex</span></code></span>. <span class="xref myst">Usage instructions</span>.</p>
-</div>
-<div class="section" id="duke">
-<h2><code class="docutils literal notranslate"><span class="pre">duke</span></code><a class="headerlink" href="#duke" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">{smb,afp}://duke.neuro.polymtl.ca</span></code> has a max size of ~15TB and is backed up nightly at two different locations.</p>
-<p>The shared folders (hosted on <strong>Poly-Grames</strong>) are:</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="using-git-annex">
+<h1>Using git-annex<a class="headerlink" href="#using-git-annex" title="Permalink to this headline">¶</a></h1>
+<p><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">annex</span></code></span> is an extension to git that lets it handle large repos spread in pieces across multiple servers/disks/accounts.</p>
+<p>We are using it because</p>
+<ol class="simple">
+<li><p>We have datasets we need to trace but they are too large for plain git to handle them well</p></li>
+<li><p>It is compatible with <a class="reference external" href="https://datalad.org"><code class="docutils literal notranslate"><span class="pre">datalad</span></code></a> which gaining popularity in the neuroimaging community</p></li>
+</ol>
+<p>It has about a thousand variants and options. This covers only the parts we use.</p>
+<p><code class="docutils literal notranslate"><span class="pre">git-annex</span></code> brings with it all the power of <code class="docutils literal notranslate"><span class="pre">git</span></code>. You should be somewhat familiar with branches, tags,. Please read <a class="reference external" href="https://git-scm.com/book/en/v2">the git book</a>. The <a class="reference external" href="https://handbook.datalad.org/">datalad handbook</a> also has useful perspective, though not all of it is relevant to how we do things.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h3>
+<p>You must have a unix OS. <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> is simply not compatible with anything else.</p>
 <ul class="simple">
-<li><p><strong>histology</strong> –&gt; Raw histology files</p></li>
-<li><p><strong>mri</strong> –&gt; Raw MRI files (restricted access)</p></li>
-<li><p><strong>projects</strong> –&gt; Shared project files (subfolders containing different projects)</p></li>
-<li><p><strong>public</strong> –&gt; Contains useful software binaries</p></li>
-<li><p><strong>sct_testing</strong> –&gt; Data for testing SCT</p></li>
-<li><p><strong>temp</strong> –&gt; Use for temporary files, to share between you. Files are deleted after 15 days.</p></li>
+<li><p><strong>Linux</strong></p></li>
+<li><p><strong>macOS</strong></p></li>
+<li><p>if <strong>Windows</strong>, either</p>
+<ul>
+<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a> or</p></li>
+<li><p>A Linux virtual machine using e.g. <a class="reference external" href="https://virtualbox.org/">VirtualBox</a></p></li>
 </ul>
-<div class="section" id="how-to-mount">
-<h3>How to Mount<a class="headerlink" href="#how-to-mount" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">duke</span></code> is available over both <code class="docutils literal notranslate"><span class="pre">smb://</span></code> and <code class="docutils literal notranslate"><span class="pre">afp://</span></code>.</p>
-<div class="tabbed-set docutils">
-<input checked="checked" id="2f69d864-9ad3-4b05-b185-42fd904bd7d2" name="d8f2d9c7-8d78-4513-a1ed-0a7cf2599b20" type="radio">
-</input><label class="tabbed-label" for="2f69d864-9ad3-4b05-b185-42fd904bd7d2">
-macOS</label><div class="tabbed-content docutils">
-<ol class="simple">
-<li><p>Open Finder</p></li>
-<li><p>CMD+K</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">afp://duke.neuro.polymtl.ca/</span></code></p></li>
-</ol>
-</div>
-<input id="48e532b8-5d38-44cc-ad53-afd38179ec9b" name="d8f2d9c7-8d78-4513-a1ed-0a7cf2599b20" type="radio">
-</input><label class="tabbed-label" for="48e532b8-5d38-44cc-ad53-afd38179ec9b">
-Linux</label><div class="tabbed-content docutils">
-<ol class="simple">
-<li><p>Open File Browser</p></li>
-<li><p>Menu &gt; Go &gt; Open Network Location</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">smb://duke.neuro.polymtl.ca/</span></code></p></li>
-</ol>
-</div>
-<input id="0867c2aa-3bd0-413e-9c9c-bffc9097ceae" name="d8f2d9c7-8d78-4513-a1ed-0a7cf2599b20" type="radio">
-</input><label class="tabbed-label" for="0867c2aa-3bd0-413e-9c9c-bffc9097ceae">
-Windows 10</label><div class="tabbed-content docutils">
-<ol class="simple">
-<li><p>Open Windows explorer</p></li>
-<li><p>Right click This PC</p></li>
-<li><p>Map Network Drive</p></li>
-<li><p>Address: <code class="docutils literal notranslate"><span class="pre">\\duke.neuro.polymtl.ca\&lt;FOLDER&gt;</span></code></p></li>
-<li><p>Check “Connect using different credentials”.</p></li>
-<li><p>Username: <code class="docutils literal notranslate"><span class="pre">grames\&lt;POLYGRAMES_USERNAME&gt;</span></code></p></li>
-<li><p>Password: <code class="docutils literal notranslate"><span class="pre">&lt;POLYGRAMES_PASSWORD&gt;</span></code>.</p></li>
-</ol>
-</div>
-</div>
-<p>Note: some root folders are restricted (e.g. <strong>mri</strong>), so that you need to fill in a subfolder you have been granted access to. Example: <code class="docutils literal notranslate"><span class="pre">duke.neuro.polymtl.ca/mri/unf</span></code></p>
-</div>
-<div class="section" id="mount-from-terminal">
-<h3>Mount from Terminal<a class="headerlink" href="#mount-from-terminal" title="Permalink to this headline">¶</a></h3>
-<div class="tabbed-set docutils">
-<input checked="checked" id="0a691be1-0410-469d-8aec-56cd70a74975" name="e310cdd4-71c9-47e8-8134-67b9e7b648b5" type="radio">
-</input><label class="tabbed-label" for="0a691be1-0410-469d-8aec-56cd70a74975">
-macOS</label><div class="tabbed-content docutils">
-<p>Create folder for the mount point on a location (your home directory) where you have read and write access:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir &lt;FOLDER_NAME&gt; <span class="c1"># (e.g. &lt;FOLDER_NAME&gt;=sct_testing)</span>
-<span class="c1"># To mount:</span>
-mount -t afp afp://USERNAME:PASSWORD@duke.neuro.polymtl.ca/&lt;FOLDER_NAME&gt; &lt;FOLDER_NAME&gt;
-<span class="c1"># To unmount:</span>
-sudo umount &lt;FOLDER_NAME&gt;/
-</pre></div>
-</div>
-</div>
-<input id="531ef11c-e2c9-468e-b6f9-93b757183cdf" name="e310cdd4-71c9-47e8-8134-67b9e7b648b5" type="radio">
-</input><label class="tabbed-label" for="531ef11c-e2c9-468e-b6f9-93b757183cdf">
-Linux</label><div class="tabbed-content docutils">
-<p>To mount:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mount -t cifs //duke.neuro.polymtl.ca/&lt;FOLDER_NAME&gt; /mnt/duke/&lt;FOLDER_NAME&gt; -o <span class="nv">username</span><span class="o">=</span>&lt;GRAMES_USERNAME&gt;,noexec
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="access-from-stations">
-<h3>Access from stations<a class="headerlink" href="#access-from-stations" title="Permalink to this headline">¶</a></h3>
-<p>When <span class="xref myst">connecting with <code class="docutils literal notranslate"><span class="pre">ssh</span></code></span>, <code class="docutils literal notranslate"><span class="pre">duke</span></code> is available at <code class="docutils literal notranslate"><span class="pre">~/duke/</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>u932945@joplin:~$ ls -l ~/duke
-total 36
-drwxr-xr-x 2 u108545 domain users  4096 May 13 14:37 histology
-drwxr-xr-x 2 u108545 domain users 12288 Jun  7 17:35 mri
-drwxr-xr-x 2 u108545 domain users  8192 Jun  8 23:21 projects
-drwxr-xr-x 2 u108545 domain users  4096 Mar 11 18:38 public
-drwxr-xr-x 2 u108545 domain users  4096 Feb 18 20:45 sct_testing
-drwxr-xr-x 2 u108545 domain users  4096 Jun  8 16:44 temp
-</pre></div>
-</div>
-<p><strong>NOTE: <code class="docutils literal notranslate"><span class="pre">duke</span></code> is <a class="reference external" href="https://github.com/neuropoly/computers/issues/90">not accessible when using SSH key</a> login. You must log in with your polygrames password.</strong></p>
-</div>
-<div class="section" id="django">
-<h3>django<a class="headerlink" href="#django" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">afp://django.neuro.polymtl.ca</span></code> is our oldest server. This server is only maintained for old projects. Please <strong>DO NOT</strong> use it if you are starting a new project.</p>
-<p>The shared folders (hosted on <strong>django</strong>) are:</p>
-<ul class="simple">
-<li><p><strong>folder_shared</strong> –&gt; used to shared files, documents, etc. Permission: R+W. Backed-up nightly.</p></li>
-<li><p><strong>matlab_shared</strong> –&gt; Various MATLAB scripts. Permission: R. Backed-up nightly.</p></li>
-<li><p><strong>data_processing</strong> –&gt; Used for processing data. <strong>Please clean your files after use!</strong> Permission: R+W. <strong>NOT BACKED-UP</strong></p></li>
-</ul>
-<p>To access these folders, here’s the procedure:</p>
-<ol class="simple">
-<li><p>CMD+K</p></li>
-<li><p>type: <code class="docutils literal notranslate"><span class="pre">afp://django.neuro.polymtl.ca</span></code></p></li>
-<li><p>select the mount point (e.g., data_shared)</p></li>
-<li><p>now if you want to make an alias on your desktop, in Finder select the mounted drive and drag/drop it on your Desktop, while pressing keys ALT+CMD</p></li>
-</ol>
-<div class="section" id="virtualbox">
-<h4>VirtualBox<a class="headerlink" href="#virtualbox" title="Permalink to this headline">¶</a></h4>
-<p>Some VirtualBox machines are accessible under <strong>folder_shared/virtual_box</strong> (this folder is read-only. For adding more, please contact Julien):</p>
-<ul class="simple">
-<li><p><strong>WinXP_IDEA</strong> –&gt; Siemens pulse sequence program environment</p></li>
-<li><p><strong>WinXP_Terranova</strong> –&gt; Prospa software for Terranova MRI</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="poly-grames-home-folder">
-<h3>Poly-Grames home folder<a class="headerlink" href="#poly-grames-home-folder" title="Permalink to this headline">¶</a></h3>
-<p>This is your personal home folder, managed by <a class="reference external" href="https://www.grames.polymtl.ca/facilities/servers-information/">polygrames</a>. It is backed-up nightly.</p>
-<ol class="simple">
-<li><p>Open Finder</p></li>
-<li><p>CMD+K</p></li>
-<li><p>for students:</p>
-<ol class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">smb://hvclusterfs.grames.polymtl.ca/usagers/etudiants/USERNAME</span></code></p></li>
-</ol>
 </li>
-<li><p>for personnel:</p>
-<ol class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">smb://hvclusterfs.grames.polymtl.ca/usagers/personnels/USERNAME</span></code></p></li>
-</ol>
+</ul>
+</div>
+<div class="section" id="download">
+<h3>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><strong>Linux</strong></p>
+<ul>
+<li><p><strong>Arch</strong>: <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-Sy</span> <span class="pre">git-annex</span></code></p></li>
+<li><p><strong>Fedora/RedHat/CentOS</strong>: <code class="docutils literal notranslate"><span class="pre">dnf</span> <span class="pre">install</span> <span class="pre">git-annex</span></code></p></li>
+<li><p><strong>Debian/Ubuntu</strong>: <code class="docutils literal notranslate"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">git-annex</span></code>, but <strong>you must be using Ubuntu 20.04</strong> or <strong>Debian Testing</strong> or higher.</p></li>
+<li><p><strong><a class="reference external" href="https://docs.computecanada.ca/">ComputeCanada</a></strong>, a supercomputer we have accounts on: <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">StdEnv/2020</span>&#160; <span class="pre">&amp;&amp;</span> <span class="pre">module</span> <span class="pre">load</span> <span class="pre">git-annex</span></code> <em>in <a class="reference external" href="https://docs.computecanada.ca/wiki/Utiliser_des_modules/en#Loading_modules_automatically">every session or batch job</a></em></p></li>
+<li><p>if on an older system and can’t upgrade, you can try <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">installing <code class="docutils literal notranslate"><span class="pre">conda</span></code></a> (or <a class="reference external" href="https://github.com/conda-forge/miniforge/">miniforge</a> and then using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-f</span> <span class="pre">conda-forge</span> <span class="pre">git-annex</span></code>.</p></li>
+</ul>
 </li>
-</ol>
+<li><p><strong>macOS</strong>: <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">git-annex</span></code></p></li>
+<li><p><strong>WSL</strong>:</p>
+<ul>
+<li><p><strong><a class="reference external" href="https://www.microsoft.com/store/apps/9n6svws3rx71">Ubuntu-20.04</a></strong>: <code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">install</span> <span class="pre">git-annex</span></code></p></li>
+<li><p><strong><a class="reference external" href="https://www.microsoft.com/store/apps/9MSVKQC78PK6">Debian</a></strong>: <code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">install</span> <span class="pre">git-annex</span></code></p></li>
+<li><p>The <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions">other distros</a> are supported.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="verify">
+<h3>⚠️ Verify ⚠️<a class="headerlink" href="#verify" title="Permalink to this headline">¶</a></h3>
+<p>Check that <code class="docutils literal notranslate"><span class="pre">git-annex</span> <span class="pre">version</span></code> reports <strong>version 8</strong> or higher! It should look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git annex version
+git-annex version: 8.20210310-ga343ea76c8
+build flags: Assistant Webapp Pairing Inotify DBus DesktopNotify TorrentParser MagicMime Feeds Testsuite S3 WebDAV
+dependency versions: aws-0.22 bloomfilter-2.0.1.0 cryptonite-0.28 DAV-1.3.4 feed-1.3.2.0 ghc-8.10.4 http-client-0.7.6 persistent-sqlite-2.11.1.0 torrent-10000.1.1 uuid-1.3.14 yesod-1.6.1.0
+key/value backends: SHA256E SHA256 SHA512E SHA512 SHA224E SHA224 SHA384E SHA384 SHA3_256E SHA3_256 SHA3_512E SHA3_512 SHA3_224E SHA3_224 SHA3_384E SHA3_384 SKEIN256E SKEIN256 SKEIN512E SKEIN512 BLAKE2B256E BLAKE2B256 BLAKE2B512E BLAKE2B512 BLAKE2B160E BLAKE2B160 BLAKE2B224E BLAKE2B224 BLAKE2B384E BLAKE2B384 BLAKE2BP512E BLAKE2BP512 BLAKE2S256E BLAKE2S256 BLAKE2S160E BLAKE2S160 BLAKE2S224E BLAKE2S224 BLAKE2SP256E BLAKE2SP256 BLAKE2SP224E BLAKE2SP224 SHA1E SHA1 MD5E MD5 WORM URL X*
+remote types: git gcrypt p2p S3 bup directory rsync web bittorrent webdav adb tahoe glacier ddar git-lfs httpalso borg hook external
+operating system: linux x86_64
+supported repository versions: 8
+upgrade supported from repository versions: 0 1 2 3 4 5 6 7
+</pre></div>
+</div>
+</div>
+<div class="section" id="global-git-config">
+<h3>Global <code class="docutils literal notranslate"><span class="pre">git</span></code> config<a class="headerlink" href="#global-git-config" title="Permalink to this headline">¶</a></h3>
+<p>For smooth operation, everyone should do on all of their machines:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">push</span><span class="o">.</span><span class="n">default</span> <span class="n">current</span>
+</pre></div>
+</div>
+<p>And specifically for <code class="docutils literal notranslate"><span class="pre">git-annex</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">annex</span><span class="o">.</span><span class="n">thin</span> <span class="n">true</span> <span class="c1"># save disk space by de-duplicating checked out and annexed copies</span>
+</pre></div>
+</div>
+<p>See <a class="reference external" href="#hardlinks">below</a> to understand what this setting offers.</p>
+</div>
+</div>
+<div class="section" id="new-repo">
+<h2>New repo<a class="headerlink" href="#new-repo" title="Permalink to this headline">¶</a></h2>
+<p>Use this recipe to make new datasets:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">my</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">repo</span>
+<span class="n">cd</span> <span class="n">my</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">repo</span>
+
+<span class="n">git</span> <span class="n">init</span>
+<span class="n">vi</span> <span class="n">README</span> <span class="c1"># write something useful in this</span>
+<span class="n">git</span> <span class="n">add</span> <span class="n">README</span> <span class="o">&amp;&amp;</span> <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Initial commit&quot;</span>
+
+<span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOF</span> <span class="o">&gt;</span> <span class="o">.</span><span class="n">gitignore</span>
+<span class="o">.</span><span class="n">DS_Store</span>
+<span class="n">EOF</span>
+
+<span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOF</span> <span class="o">&gt;</span> <span class="o">.</span><span class="n">gitattributes</span>
+<span class="c1"># Normalize line-endings to \n</span>
+<span class="o">*</span>             <span class="n">text</span><span class="o">=</span><span class="n">auto</span>
+
+<span class="c1"># Configure filetypes stored by git-annex.</span>
+<span class="c1"># by default git-annex sets * filter=annex, but that is very slow:</span>
+<span class="c1"># it copies even non-annexed files through git-annex even though it will decide not to handle them.</span>
+<span class="c1"># this overrides that behaviour so that only annexed files must be processed.</span>
+<span class="o">*</span>             <span class="n">annex</span><span class="o">.</span><span class="n">largefiles</span><span class="o">=</span><span class="n">anything</span>
+<span class="o">*.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>      <span class="nb">filter</span><span class="o">=</span><span class="n">annex</span>
+<span class="o">*.</span><span class="n">nii</span>         <span class="nb">filter</span><span class="o">=</span><span class="n">annex</span>
+<span class="o">*.</span><span class="n">tif</span>         <span class="nb">filter</span><span class="o">=</span><span class="n">annex</span>
+<span class="n">EOF</span>
+
+<span class="n">git</span> <span class="n">add</span> <span class="o">.</span><span class="n">gitignore</span> <span class="o">.</span><span class="n">gitattributes</span> <span class="o">&amp;&amp;</span> <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Configure git-annex&quot;</span>
+
+<span class="n">git</span> <span class="n">annex</span> <span class="n">init</span>
+<span class="n">git</span> <span class="n">annex</span> <span class="n">dead</span> <span class="n">here</span> <span class="c1"># make sure *this* copy isn&#39;t shared to others; the repo should be shared via the server</span>
+
+<span class="c1"># Here, copy in or create initial files, wherever they are from:</span>
+<span class="c1"># rsync, wget, curl, tar, dropbox, etc &lt;...&gt;</span>
+
+<span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Initial data&quot;</span>
+</pre></div>
+</div>
+<p>If you are working on a private, internal dataset, continue by <a class="reference external" href="./internal-server.md#new-repository">uploading to <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code></a>.</p>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="version-problems">
+<h3>version problems<a class="headerlink" href="#version-problems" title="Permalink to this headline">¶</a></h3>
+<p>If you have any error at all, the first thing to check is that you have <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> version 8, <a class="reference external" href="#installation">as explained above</a>.</p>
+</div>
+<div class="section" id="checking-annex-file-locations">
+<h3>checking annex file locations<a class="headerlink" href="#checking-annex-file-locations" title="Permalink to this headline">¶</a></h3>
+<p>The content of annexed files that have been downloaded locally is stored under <code class="docutils literal notranslate"><span class="pre">repo/.git/annex/objects/</span></code>. You can find which specific file corresponds to by using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">show</span></code> or <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">-p</span></code> to see the content that <code class="docutils literal notranslate"><span class="pre">git</span></code> has recorded for the file – which will be a string giving the “annex pointer”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git show HEAD:derivatives/labels/sub-1140317/anat/sub-1140317_T1w_seg-manual.nii.gz
+/annex/objects/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
+</pre></div>
+</div>
+<p>and then locating a file with this name in <code class="docutils literal notranslate"><span class="pre">.git/annex/objects/</span></code>; however, it is not as simple as just combining the two together, git-annex prepends extra filenames, so you need to use <code class="docutils literal notranslate"><span class="pre">find(1)</span></code> to locate the file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ find .git/annex/objects/ -name &quot;SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz&quot;
+.git/annex/objects/6V/X3/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
+.git/annex/objects/6V/X3/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="annex-thin-hardlinks-a-id-hardlinks">
+<h2><code class="docutils literal notranslate"><span class="pre">annex.thin</span></code> Hardlinks <a id="hardlinks"><a class="headerlink" href="#annex-thin-hardlinks-a-id-hardlinks" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">annex.thin</span></code> saves a lot of space by deduplicating file content via <a class="reference external" href="https://wiki.debian.org/ln">hard links</a>:
+the files your checkout <code class="docutils literal notranslate"><span class="pre">repo/</span></code> will be physically the same content as their sources in <code class="docutils literal notranslate"><span class="pre">repo/.git/annex/objects/</span></code>, instead of copies.</p>
+<p>To confirm this is working, you can compare the size of the content with the annex.
+They should be roughly the same size, <strong>even though one is contained in the other</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>~/datasets/uk-biobank-processed$ du -hs uk-biobank-processed/
+81G	uk-biobank-processed/
+nguenther@data:~/datasets/uk-biobank-processed$ du -hs uk-biobank-processed/.git/annex/
+81G	uk-biobank-processed/.git/annex/
+</pre></div>
+</div>
+<p>You can confirm it another way by looking at the link count on a file, e.g.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ stat derivatives/labels/sub-1140317/anat/sub-1140317_T1w_seg-manual.nii.gz
+   File: derivatives/labels/sub-1140317/anat/sub-1140317_T1w_seg-manual.nii.gz
+   Size: 28305     	Blocks: 56         IO Block: 4096   regular file
+ Device: 802h/2050d	Inode: 1319996     Links: 2
+ Access: (0644/-rw-r--r--)  Uid: ( 1001/zamboni)   Gid: ( 1001/zamboni)
+ Access: 2021-06-28 17:19:15.321874946 -0400
+ Modify: 2021-06-28 16:00:45.261893952 -0400
+ Change: 2021-06-28 17:19:15.161873978 -0400
+  Birth: 2021-06-28 16:00:45.261893952 -0400
+</pre></div>
+</div>
+<p>(macOS uses a different format for <code class="docutils literal notranslate"><span class="pre">stat(1)</span></code>, but all the same information is there)</p>
+<p>This shows that the link count is 2, which should be the case for “thinly” annexed files (unless they are duplicated elsewhere in the dataset, in which case the link count could be 3, 4, or higher).</p>
+<p>You can find where such a file is in the annex by searching for its inode number:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ find . -inum 1319996
+ ./derivatives/labels/sub-1140317/anat/sub-1140317_T1w_seg-manual.nii.gz
+ ./.git/annex/objects/6V/X3/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
+</pre></div>
+</div>
+<div class="section" id="a-cosmetic-problem-affecting-git-status">
+<h3>“a cosmetic problem affecting git status”<a class="headerlink" href="#a-cosmetic-problem-affecting-git-status" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes the <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> filter will glitch, particularly during long uploads or downloads.
+It will usually – but not always – give you a warning in these cases saying “a cosmetic problem affecting git status”.
+Despite the innocuous sounded warning, this glitch prevents git operating.
+A symptom of this glitch is that <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> reports many, many “modified” files that shouldn’t be.</p>
+<p>The fix is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span> <span class="o">|</span> <span class="n">sed</span> <span class="o">-</span><span class="n">n</span> <span class="s1">&#39;s/modified://p&#39;</span> <span class="o">|</span> <span class="n">xargs</span> <span class="n">git</span> <span class="n">update</span><span class="o">-</span><span class="n">index</span> <span class="o">-</span><span class="n">q</span> <span class="o">--</span><span class="n">refresh</span>
+</pre></div>
+</div>
+<p>This doesn’t touch file contents, so it should be safe to run anytime.</p>
+<p>The issue is that git-annex v8 uses a filter to expand the small pointers committed to git to full files and vice versa, and if interrupted while doing its work, it can leave files with full annexed contents that do not match the annex pointers git is expecting to see. <code class="docutils literal notranslate"><span class="pre">update-index</span></code> gives git a kickstart to fix it.</p>
+</div>
+<div class="section" id="resetting">
+<h3>Resetting<a class="headerlink" href="#resetting" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">git-annex</span> <span class="pre">init</span></code> writes to a lot of places: the <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> branch,
+<code class="docutils literal notranslate"><span class="pre">.git/annex</span></code> (including several sqlite databases?), <code class="docutils literal notranslate"><span class="pre">.git</span></code>/config,
+and, sometimes, <code class="docutils literal notranslate"><span class="pre">.git/info/attributes</span></code>.</p>
+<p>To get rid of it without getting rid of the
+complete repo, you can use</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">annex</span> <span class="n">uninit</span>
+</pre></div>
+</div>
+<p>To reset just the ID of the current copy, to make it appear like a fresh repo to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">annex</span> <span class="pre">whereis</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">unset</span> <span class="n">annex</span><span class="o">.</span><span class="n">uuid</span>
+<span class="c1">#  then git annex init again? or what?</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rm-cannot-remove">
+<h3><code class="docutils literal notranslate"><span class="pre">rm:</span> <span class="pre">cannot</span> <span class="pre">remove</span></code><a class="headerlink" href="#rm-cannot-remove" title="Permalink to this headline">¶</a></h3>
+<p>When trying to get rid of a git-annex dataset, you will run into, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rm -rf data-single-subject/
+[...]
+rm: cannot remove &#39;data-single-subject/.git/annex/objects/mF/GV/SHA256E-s1082687--290a43b80da6f608e3d47107f3b6c05e98eebe56ed4eea633748c08bd1a7837a.nii.gz/SHA256E-s1082687--290a43b80da6f608e3d47107f3b6c05e98eebe56ed4eea633748c08bd1a7837a.nii.gz&#39;: Permission denied
+rm: cannot remove &#39;data-single-subject/.git/annex/objects/Vq/vF/SHA256E-s15564390--7d3e45f0d4c67f31883b76eafc6cfdca1c1591590e2243dc8d443b07616b3609.nii.gz/SHA256E-s15564390--7d3e45f0d4c67f31883b76eafc6cfdca1c1591590e2243dc8d443b07616b3609.nii.gz&#39;: Permission denied
+rm: cannot remove &#39;data-single-subject/.git/annex/objects/79/G6/SHA256E-s7183853--3262ac5d6c5f573720c5e508da47608bd9fa49d6cd4dd547f75046c1a2f0d5b6.nii.gz/SHA256E-s7183853--3262ac5d6c5f573720c5e508da47608bd9fa49d6cd4dd547f75046c1a2f0d5b6.nii.gz&#39;: Permission denied
+</pre></div>
+</div>
+<p>This is because git-annex tries extra hard to make it hard to lose data, by marking its contents read-only. If you really intend to erase the dataset the invocation is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ chmod -R +w data-single-subject/.git/annex/
+$ rm -rf data-single-subject/
+</pre></div>
+</div>
 </div>
 </div>
 </div>
