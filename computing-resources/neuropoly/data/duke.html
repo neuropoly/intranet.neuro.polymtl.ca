@@ -40,7 +40,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="django" href="django.html" />
-    <link rel="prev" title="git-annex" href="git-annex.html" />
+    <link rel="prev" title="data" href="git-datasets.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -297,11 +297,6 @@
          </code>
         </a>
        </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="git-annex.html">
-         git-annex
-        </a>
-       </li>
        <li class="toctree-l4 current active">
         <a class="current reference internal" href="#">
          <code class="docutils literal notranslate">
@@ -318,6 +313,11 @@
            django
           </span>
          </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="git-annex.html">
+         git-annex
         </a>
        </li>
       </ul>
@@ -871,7 +871,7 @@
 <p><strong>NOTE: duke is not accessible when using SSH key login to linux stations.</strong></p>
 <div class="section" id="access-from-stations">
 <h2>Access from stations<a class="headerlink" href="#access-from-stations" title="Permalink to this headline">¶</a></h2>
-<p>When <a class="reference external" href="../../#ssh-command-line">connecting with <code class="docutils literal notranslate"><span class="pre">ssh</span></code></a>, <code class="docutils literal notranslate"><span class="pre">duke</span></code> is available at <code class="docutils literal notranslate"><span class="pre">/mnt/duke/</span></code>, e.g.:</p>
+<p>When <span class="xref myst">connecting with <code class="docutils literal notranslate"><span class="pre">ssh</span></code></span>, <code class="docutils literal notranslate"><span class="pre">duke</span></code> is available at <code class="docutils literal notranslate"><span class="pre">/mnt/duke/</span></code>, e.g.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>u932945@joplin:~$ ls -l /mnt/duke
 total 36
 drwxr-xr-x 2 u108545 domain users  4096 May 13 14:37 histology
@@ -885,10 +885,10 @@ drwxr-xr-x 2 u108545 domain users  4096 Jun  8 16:44 temp
 </div>
 <div class="section" id="mount-with-gui">
 <h2>Mount with GUI<a class="headerlink" href="#mount-with-gui" title="Permalink to this headline">¶</a></h2>
-<p>When working on campus or <a class="reference external" href="../../#vpn">over the VPN</a>, you can connect your computer to <code class="docutils literal notranslate"><span class="pre">duke</span></code>:</p>
+<p>When working on campus or <span class="xref myst">over the VPN</span>, you can connect your computer to <code class="docutils literal notranslate"><span class="pre">duke</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="cb699e18-c79f-4529-8231-905bd21b8d57" name="ffc045e8-2e2f-415b-a315-0d9fa81e8213" type="radio">
-</input><label class="tabbed-label" for="cb699e18-c79f-4529-8231-905bd21b8d57">
+<input checked="checked" id="603a4a34-9549-46bd-8dd3-964f3871e853" name="3377a2a0-2c8c-415f-b243-c88ece0babb6" type="radio">
+</input><label class="tabbed-label" for="603a4a34-9549-46bd-8dd3-964f3871e853">
 Windows 10</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open Windows explorer</p></li>
@@ -900,8 +900,8 @@ Windows 10</label><div class="tabbed-content docutils">
 <li><p>Password: <code class="docutils literal notranslate"><span class="pre">&lt;POLYGRAMES_PASSWORD&gt;</span></code>.</p></li>
 </ol>
 </div>
-<input id="c4cea8ff-7096-4e32-955c-c0602a12bb42" name="ffc045e8-2e2f-415b-a315-0d9fa81e8213" type="radio">
-</input><label class="tabbed-label" for="c4cea8ff-7096-4e32-955c-c0602a12bb42">
+<input id="3c91cc9d-0dfc-48a2-af4d-1197217a4a71" name="3377a2a0-2c8c-415f-b243-c88ece0babb6" type="radio">
+</input><label class="tabbed-label" for="3c91cc9d-0dfc-48a2-af4d-1197217a4a71">
 macOS</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open Finder</p></li>
@@ -909,8 +909,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p><code class="docutils literal notranslate"><span class="pre">afp://duke.neuro.polymtl.ca/</span></code></p></li>
 </ol>
 </div>
-<input id="e011dc7b-9322-4bf8-bfdc-1dd7583eede0" name="ffc045e8-2e2f-415b-a315-0d9fa81e8213" type="radio">
-</input><label class="tabbed-label" for="e011dc7b-9322-4bf8-bfdc-1dd7583eede0">
+<input id="653f389b-47d8-4079-825f-4094299b45a8" name="3377a2a0-2c8c-415f-b243-c88ece0babb6" type="radio">
+</input><label class="tabbed-label" for="653f389b-47d8-4079-825f-4094299b45a8">
 Linux</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open File Browser</p></li>
@@ -926,8 +926,8 @@ Linux</label><div class="tabbed-content docutils">
 <h2>Mount with Terminal<a class="headerlink" href="#mount-with-terminal" title="Permalink to this headline">¶</a></h2>
 <p>You can also connect your computer from the CLI, or with a script, which might be more efficient in the long run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="852b8bb0-a781-4d58-a610-7a7bb4a68dfe" name="8564346b-17dd-4c9d-a26f-8cf8a734dd45" type="radio">
-</input><label class="tabbed-label" for="852b8bb0-a781-4d58-a610-7a7bb4a68dfe">
+<input checked="checked" id="aacd77db-002a-4bc3-a39a-1b8d69801df6" name="c44ffebf-4baa-4a19-97ab-115bed0d2dc0" type="radio">
+</input><label class="tabbed-label" for="aacd77db-002a-4bc3-a39a-1b8d69801df6">
 Mac OSX</label><div class="tabbed-content docutils">
 <p>Create folder for the mount point on a location (your home directory) where you have read and write access:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir &lt;FOLDER_NAME&gt; <span class="c1"># (e.g. &lt;FOLDER_NAME&gt;=sct_testing)</span>
@@ -938,8 +938,8 @@ sudo umount &lt;FOLDER_NAME&gt;/
 </pre></div>
 </div>
 </div>
-<input id="80d58887-5710-484b-8642-56094d2e6b15" name="8564346b-17dd-4c9d-a26f-8cf8a734dd45" type="radio">
-</input><label class="tabbed-label" for="80d58887-5710-484b-8642-56094d2e6b15">
+<input id="bbd3e1dd-8e82-4f16-893e-4ea3b2f69786" name="c44ffebf-4baa-4a19-97ab-115bed0d2dc0" type="radio">
+</input><label class="tabbed-label" for="bbd3e1dd-8e82-4f16-893e-4ea3b2f69786">
 Linux</label><div class="tabbed-content docutils">
 <p>To mount:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mount -t cifs //duke.neuro.polymtl.ca/&lt;FOLDER_NAME&gt; /mnt/duke/&lt;FOLDER_NAME&gt; -o <span class="nv">username</span><span class="o">=</span>&lt;GRAMES_USERNAME&gt;,noexec
@@ -956,11 +956,11 @@ Linux</label><div class="tabbed-content docutils">
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="git-annex.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="git-datasets.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">git-annex</p>
+            <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">data</span></code></p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="django.html" title="next page">

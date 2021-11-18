@@ -39,7 +39,7 @@
     <link rel="shortcut icon" href="../../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="git-annex" href="git-annex.html" />
+    <link rel="next" title="duke" href="duke.html" />
     <link rel="prev" title="/home" href="home.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -298,11 +298,6 @@
         </a>
        </li>
        <li class="toctree-l4">
-        <a class="reference internal" href="git-annex.html">
-         git-annex
-        </a>
-       </li>
-       <li class="toctree-l4">
         <a class="reference internal" href="duke.html">
          <code class="docutils literal notranslate">
           <span class="pre">
@@ -318,6 +313,11 @@
            django
           </span>
          </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="git-annex.html">
+         git-annex
         </a>
        </li>
       </ul>
@@ -979,14 +979,13 @@
 <p>Private BIDS datasets.</p>
 <p><code class="docutils literal notranslate"><span class="pre">git+ssh://data.neuro.polymtl.ca</span></code> has a max size of ~1TB and is <a class="reference external" href="https://github.com/neuropoly/computers/issues/65">currently not backed up</a>.</p>
 <p>It hosts <a class="reference external" href="https://bids-specification.readthedocs.io">BIDS</a> datasets, version-controlled using <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">git-annex</span></code></span>.
-It is locked behind a <a class="reference external" href="../../#vpn">VPN</a> because much of our data is under medical ethics protections, and needs to be kept off the general internet.</p>
-<p>To use it, see <a class="reference external" href="./git-datasets.md#usage">this page</a>.</p>
+It is locked behind a <span class="xref myst">VPN</span> because much of our data is under medical ethics protections, and needs to be kept off the general internet.</p>
 <div class="section" id="initial-setup">
 <h2>Initial setup<a class="headerlink" href="#initial-setup" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="prerequisites">
 <h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
-<li><p>You must have a *nix OS with <code class="docutils literal notranslate"><span class="pre">git-annex&gt;=8</span></code> installed. See <a class="reference external" href="./git-annex.md#installation"><code class="docutils literal notranslate"><span class="pre">git-annex</span></code> installation</a>.</p></li>
+<li><p>You must have a *nix OS with <code class="docutils literal notranslate"><span class="pre">git-annex&gt;=8</span></code> installed. See <a class="reference internal" href="git-annex.html#installation"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">git-annex</span></code> installation</span></a>.</p></li>
 <li><p>Make sure you have an ssh key.</p>
 <ul class="simple">
 <li><p>If not, run <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span> <span class="pre">-t</span> <span class="pre">ed25519</span> <span class="pre">-C</span> <span class="pre">your.name&#64;polymtl.ca</span></code>. Your keys will be in the hidden folder <code class="docutils literal notranslate"><span class="pre">~/.ssh/</span></code>.</p></li>
@@ -1012,7 +1011,7 @@ It is locked behind a <a class="reference external" href="../../#vpn">VPN</a> be
 <li><p>nick.guenther&#64;polymtl.ca</p></li>
 <li><p>taowa.rosetwig&#64;polymtl.ca</p></li>
 </ul>
-<p>The admins should follow <a class="reference external" href="#add-users">Admin Guide &gt; Add Users</a> to create your account.</p>
+<p>The admins should follow <a class="reference internal" href="#add-users"><span class="std std-doc">Admin Guide &gt; Add Users</span></a> to create your account.</p>
 </div>
 <div class="section" id="connection">
 <h3>Connection<a class="headerlink" href="#connection" title="Permalink to this headline">¶</a></h3>
@@ -1044,8 +1043,8 @@ list of remote commands available:
 </div>
 <div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<p>During daily usage, you will need to be <a class="reference external" href="#connection"><em>on the polyvpn network</em></a>.</p>
-<p>You should also make sure to <a class="reference external" href="./git-annex.md#global-git-annex-config">configure git annex</a> for the best performance.</p>
+<p>During daily usage, you will need to be <a class="reference internal" href="#connection"><span class="std std-doc"><em>on the polyvpn network</em></span></a>.</p>
+<p>You should also make sure to <a class="reference internal" href="git-annex.html#global-git-config"><span class="std std-doc">configure git annex</span></a> for the best performance.</p>
 <div class="section" id="list">
 <h3>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h3>
 <p>To see what datasets you have available, use <code class="docutils literal notranslate"><span class="pre">info</span></code>, for example:</p>
@@ -1075,7 +1074,7 @@ $ git annex get .                                                # download imag
 <div class="section" id="upload">
 <h3>Upload<a class="headerlink" href="#upload" title="Permalink to this headline">¶</a></h3>
 <p>Despite not being hosted on Github, we are still using a <a class="reference external" href="https://guides.github.com/introduction/flow/">pull-request workflow</a>.
-So, to make changes to a dataset, first ask its owner to <a class="reference external" href="#permissions">grant you upload rights</a>, then make a working branch for your changes:</p>
+So, to make changes to a dataset, first ask its owner to <a class="reference internal" href="#permissions"><span class="std std-doc">grant you upload rights</span></a>, then make a working branch for your changes:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git checkout -b working-branch
 $ # edit your files, add new ones, etc
 $ git add -p
@@ -1095,7 +1094,7 @@ hello zamboni, this is git@data running gitolite3 3.6.11-2 (Debian) on git 2.27.
 $ git push
 </pre></div>
 </div>
-<p>Finally, ask one of that dataset’s reviewers to <a class="reference external" href="#Reviewing-Pull-Requests">look at your pull request</a>.</p>
+<p>Finally, ask one of that dataset’s reviewers to <span class="xref myst">look at your pull request</span>.</p>
 </div>
 <div class="section" id="reviewing-pull-requests">
 <h3>Reviewing Pull Requests<a class="headerlink" href="#reviewing-pull-requests" title="Permalink to this headline">¶</a></h3>
@@ -1121,7 +1120,7 @@ $ git push
 </div></blockquote>
 <div class="section" id="commit-rights">
 <h4>Commit Rights<a class="headerlink" href="#commit-rights" title="Permalink to this headline">¶</a></h4>
-<p>Each repo has its own <a class="reference external" href="#permissions"><code class="docutils literal notranslate"><span class="pre">OWNERS</span></code> group</a> attached. These are the people allowed to commit to <code class="docutils literal notranslate"><span class="pre">master</span></code>, and usually they should be the <a class="reference external" href="#reviewing-pull-requests">reviewers</a> as well.</p>
+<p>Each repo has its own <a class="reference internal" href="#permissions"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">OWNERS</span></code> group</span></a> attached. These are the people allowed to commit to <code class="docutils literal notranslate"><span class="pre">master</span></code>, and usually they should be the <a class="reference internal" href="#reviewing-pull-requests"><span class="std std-doc">reviewers</span></a> as well.</p>
 <p>In order to join this group, someone already in it needs to grant you access:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">perms</span> <span class="n">datasets</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">repo</span> <span class="o">+</span> <span class="n">OWNERS</span> <span class="n">yourname</span>
 </pre></div>
@@ -1150,7 +1149,7 @@ $ git push
 </div>
 <div class="section" id="new-repository">
 <h3>New repository<a class="headerlink" href="#new-repository" title="Permalink to this headline">¶</a></h3>
-<p>To make a new repo, follow this <a class="reference external" href="./git-annex.md#new-repo">recipe</a>.</p>
+<p>To make a new repo, follow this <a class="reference internal" href="git-annex.html#new-repo"><span class="std std-doc">recipe</span></a>.</p>
 <p>Then, to upload it, pick a name under <code class="docutils literal notranslate"><span class="pre">datasets/</span></code>, e.g. “my-new-repo”, and do</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git remote add origin git@data.neuro.polymtl.ca:datasets/my-new-repo
 $ git push origin                           # initialize remote and upload metadata
@@ -1173,7 +1172,7 @@ $ git push origin
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git tag -a r20190908
 </pre></div>
 </div>
-<p>To view available releases, first <a class="reference external" href="#download">download</a> a dataset, then run</p>
+<p>To view available releases, first <a class="reference internal" href="#download"><span class="std std-doc">download</span></a> a dataset, then run</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git tag -l
 </pre></div>
 </div>
@@ -1181,7 +1180,7 @@ $ git push origin
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git show r20190908
 </pre></div>
 </div>
-<p>To use a specific release, either <a class="reference external" href="#download">download</a> the dataset and then</p>
+<p>To use a specific release, either <a class="reference internal" href="#download"><span class="std std-doc">download</span></a> the dataset and then</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git checkout r20190908
 </pre></div>
 </div>
@@ -1209,7 +1208,7 @@ $ git push origin
 <div class="section" id="renaming">
 <h3>Renaming<a class="headerlink" href="#renaming" title="Permalink to this headline">¶</a></h3>
 <p>There is no way for a user to rename a repo directly (<a class="reference external" href="https://github.com/neuropoly/data-management/issues/83">bug report</a>).
-You can <a class="reference external" href="#renaming-1">ask an admin to do it</a>.</p>
+You can <a class="reference internal" href="#id2"><span class="std std-doc">ask an admin to do it</span></a>.</p>
 </div>
 <div class="section" id="deletion">
 <h3>Deletion<a class="headerlink" href="#deletion" title="Permalink to this headline">¶</a></h3>
@@ -1240,7 +1239,7 @@ It is compatible with <a class="reference external" href="https://www.datalad.or
 <p><code class="docutils literal notranslate"><span class="pre">gitolite</span></code> manages users and their permissions. Each user has a namespace to themselves where they can make repos named <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca:$user/$repo.git</span></code> (like Github), and there is also a shared space <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca:datasets/*</span></code> intended for lab-wide datasets.</p>
 <div class="section" id="add-users">
 <h3>Add users<a class="headerlink" href="#add-users" title="Permalink to this headline">¶</a></h3>
-<p>To grant access to a lab member, <a class="reference external" href="#add-extra-devices">as above</a>, ask the lab member to generate an ssh key using <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code> and have them send you the <em>public key</em>. Save it to a file <code class="docutils literal notranslate"><span class="pre">id_rsa.zamboni.pub</span></code> and add them with</p>
+<p>To grant access to a lab member, <a class="reference internal" href="#add-extra-devices"><span class="std std-doc">as above</span></a>, ask the lab member to generate an ssh key using <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code> and have them send you the <em>public key</em>. Save it to a file <code class="docutils literal notranslate"><span class="pre">id_rsa.zamboni.pub</span></code> and add them with</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">id_rsa</span><span class="o">.</span><span class="n">zamboni</span><span class="o">.</span><span class="n">pub</span> <span class="o">|</span> <span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">keys</span> <span class="n">add</span> <span class="n">zamboni</span>
 </pre></div>
 </div>
@@ -1256,7 +1255,7 @@ Added SHA256:hwil2tmaw/prgIBX5odO8vOAj2i38gPrUGjGZnnkVvo : zamboni.pub
 </div>
 <div class="section" id="id1">
 <h3>Permissions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>As admin, you can add or revoke any permissions to any repo <a class="reference external" href="#permissions">using <code class="docutils literal notranslate"><span class="pre">perms</span></code></a>.</p>
+<p>As admin, you can add or revoke any permissions to any repo <a class="reference internal" href="#permissions"><span class="std std-doc">using <code class="docutils literal notranslate"><span class="pre">perms</span></code></span></a>.</p>
 <p>There is unfortunately no way to view permissions <em>as another user</em> so you will need to rely on people sending you screenshots if they are having problems
 but you can at least inspect the active sets of permissions on a repo with</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">perms</span> <span class="o">&lt;</span><span class="n">repo</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">l</span>
@@ -1283,7 +1282,7 @@ mv $dataset.git $new_name.git
 </div>
 <div class="section" id="id3">
 <h3>Deletion<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<p>You can also delete any repo <a class="reference external" href="#deletion">using <code class="docutils literal notranslate"><span class="pre">D</span></code></a>.</p>
+<p>You can also delete any repo <a class="reference internal" href="#deletion"><span class="std std-doc">using <code class="docutils literal notranslate"><span class="pre">D</span></code></span></a>.</p>
 <p>You can also get rid of a dataset immediately by:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">D</span> <span class="n">unlock</span> <span class="n">datasets</span><span class="o">/&lt;</span><span class="n">dataset</span><span class="o">&gt;</span>
 <span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">D</span> <span class="n">rm</span> <span class="n">datasets</span><span class="o">/&lt;</span><span class="n">dataset</span><span class="o">&gt;</span>
@@ -1326,10 +1325,10 @@ mv $dataset.git $new_name.git
             <p class="prev-next-title">/home</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="git-annex.html" title="next page">
+    <a class='right-next' id="next-link" href="duke.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">git-annex</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">duke</span></code></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

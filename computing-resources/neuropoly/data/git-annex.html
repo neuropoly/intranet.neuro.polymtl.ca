@@ -39,8 +39,8 @@
     <link rel="shortcut icon" href="../../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="duke" href="duke.html" />
-    <link rel="prev" title="data" href="git-datasets.html" />
+    <link rel="next" title="CPUS2" href="../cpus2.html" />
+    <link rel="prev" title="django" href="django.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -297,11 +297,6 @@
          </code>
         </a>
        </li>
-       <li class="toctree-l4 current active">
-        <a class="current reference internal" href="#">
-         git-annex
-        </a>
-       </li>
        <li class="toctree-l4">
         <a class="reference internal" href="duke.html">
          <code class="docutils literal notranslate">
@@ -318,6 +313,11 @@
            django
           </span>
          </code>
+        </a>
+       </li>
+       <li class="toctree-l4 current active">
+        <a class="current reference internal" href="#">
+         git-annex
         </a>
        </li>
       </ul>
@@ -932,8 +932,8 @@
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>You must have a unix OS. <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> is simply not compatible with anything else.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="a3d7a69e-3e61-4bef-a99f-49965d17190d" name="c1b95752-5ca6-4857-81bb-5b76a5c4e16c" type="radio">
-</input><label class="tabbed-label" for="a3d7a69e-3e61-4bef-a99f-49965d17190d">
+<input checked="checked" id="3aaaa442-8a96-4d61-a15d-ed69ea169757" name="64674295-8155-4e92-a215-70c28c8c6fca" type="radio">
+</input><label class="tabbed-label" for="3aaaa442-8a96-4d61-a15d-ed69ea169757">
 Linux</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p><strong>Arch</strong>: <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-Sy</span> <span class="pre">git-annex</span></code></p></li>
@@ -943,15 +943,15 @@ Linux</label><div class="tabbed-content docutils">
 <li><p>if on an older system and can’t upgrade, you can try <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">installing <code class="docutils literal notranslate"><span class="pre">conda</span></code></a> (or <a class="reference external" href="https://github.com/conda-forge/miniforge/">miniforge</a> and then using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-f</span> <span class="pre">conda-forge</span> <span class="pre">git-annex</span></code>.</p></li>
 </ul>
 </div>
-<input id="9aa15a54-4ff7-4e78-bed3-b258da26f261" name="c1b95752-5ca6-4857-81bb-5b76a5c4e16c" type="radio">
-</input><label class="tabbed-label" for="9aa15a54-4ff7-4e78-bed3-b258da26f261">
+<input id="5c60e8b7-c5e9-414e-a231-9c680c5026c7" name="64674295-8155-4e92-a215-70c28c8c6fca" type="radio">
+</input><label class="tabbed-label" for="5c60e8b7-c5e9-414e-a231-9c680c5026c7">
 macOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">git</span><span class="o">-</span><span class="n">annex</span>
 </pre></div>
 </div>
 </div>
-<input id="fad933cc-4894-461b-bfda-c7586f05d80f" name="c1b95752-5ca6-4857-81bb-5b76a5c4e16c" type="radio">
-</input><label class="tabbed-label" for="fad933cc-4894-461b-bfda-c7586f05d80f">
+<input id="0f146e8d-e220-47b0-b3ce-7b6d39f5a4d4" name="64674295-8155-4e92-a215-70c28c8c6fca" type="radio">
+</input><label class="tabbed-label" for="0f146e8d-e220-47b0-b3ce-7b6d39f5a4d4">
 Windows 10 (via WSL)</label><div class="tabbed-content docutils">
 <p>Install <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a>, pick a distro, and then run one of:</p>
 <ul class="simple">
@@ -960,8 +960,8 @@ Windows 10 (via WSL)</label><div class="tabbed-content docutils">
 <li><p>The <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions">other distros</a> are supported.</p></li>
 </ul>
 </div>
-<input id="34dde14b-319d-4135-8f33-2ea87fb23a98" name="c1b95752-5ca6-4857-81bb-5b76a5c4e16c" type="radio">
-</input><label class="tabbed-label" for="34dde14b-319d-4135-8f33-2ea87fb23a98">
+<input id="425066a2-787e-4819-b880-50704ca41b8e" name="64674295-8155-4e92-a215-70c28c8c6fca" type="radio">
+</input><label class="tabbed-label" for="425066a2-787e-4819-b880-50704ca41b8e">
 Windows 10 (via VirtualBox)</label><div class="tabbed-content docutils">
 <p>Install <a class="reference external" href="https://virtualbox.org/">VirtualBox</a>, install a Linux distro inside of it, and then follow the Linux instructions.</p>
 </div>
@@ -991,7 +991,7 @@ upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">annex</span><span class="o">.</span><span class="n">thin</span> <span class="n">true</span> <span class="c1"># save disk space by de-duplicating checked out and annexed copies</span>
 </pre></div>
 </div>
-<p>See <a class="reference external" href="#hardlinks">below</a> to understand what this setting offers.</p>
+<p>See <span class="xref myst">below</span> to understand what this setting offers.</p>
 </div>
 </div>
 <div class="section" id="new-repo">
@@ -1034,7 +1034,7 @@ upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Initial data&quot;</span>
 </pre></div>
 </div>
-<p>If you are working on a private, internal dataset, continue by <a class="reference external" href="./internal-server.md#new-repository">uploading to <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code></a>.</p>
+<p>If you are working on a private, internal dataset, continue by <span class="xref myst">uploading to <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code></span>.</p>
 </div>
 <div class="section" id="annex-thin-hardlinks-a-id-hardlinks">
 <h2><code class="docutils literal notranslate"><span class="pre">annex.thin</span></code> Hardlinks <a id="hardlinks"><a class="headerlink" href="#annex-thin-hardlinks-a-id-hardlinks" title="Permalink to this headline">¶</a></h2>
@@ -1073,7 +1073,7 @@ nguenther@data:~/datasets/uk-biobank-processed$ du -hs uk-biobank-processed/.git
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="version-problems">
 <h3>version problems<a class="headerlink" href="#version-problems" title="Permalink to this headline">¶</a></h3>
-<p>If you have any error at all, the first thing to check is that you have <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> version 8, <a class="reference external" href="#installation">as explained above</a>.</p>
+<p>If you have any error at all, the first thing to check is that you have <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> version 8, <a class="reference internal" href="#installation"><span class="std std-doc">as explained above</span></a>.</p>
 </div>
 <div class="section" id="checking-annex-file-locations">
 <h3>checking annex file locations<a class="headerlink" href="#checking-annex-file-locations" title="Permalink to this headline">¶</a></h3>
@@ -1143,17 +1143,17 @@ $ rm -rf data-single-subject/
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="git-datasets.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="django.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">data</span></code></p>
+            <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">django</span></code></p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="duke.html" title="next page">
+    <a class='right-next' id="next-link" href="../cpus2.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">duke</span></code></p>
+        <p class="prev-next-title">CPUS2</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
