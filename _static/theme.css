@@ -54,7 +54,7 @@
  * unfortunately we can't use a css class because sphinx rolls CSS classes
  * into the anchor links it generates for these titles.
  */
-li.toctree-l1 span:nth-child(1) {
+li.toctree-l1 > a > span:nth-child(1) {
   display: inline-block;
   width: 1.5em;
 }
