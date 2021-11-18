@@ -1,9 +1,15 @@
 
-# `data`: private BIDS datasets
+# `data`
 
-Much of our data is under medical ethics protections, and needs to be kept off the general internet. We have a custom server, locked down behind a VPN, with 1 terabyte of storage available. `git-annex` (and therefore `datalad`) can store and retrieve data from it.
+Private BIDS datasets.
 
-URL: [git+ssh://data.neuro.polymtl.ca](git+ssh://data.neuro.polymtl.ca)
+`git+ssh://data.neuro.polymtl.ca` has a max size of ~1TB and is [currently not backed up](https://github.com/neuropoly/computers/issues/65).
+
+It hosts [BIDS](https://bids-specification.readthedocs.io) datasets, version-controlled using [`git-annex`](git-annex.branchable.com/).
+It is locked behind a [VPN](../../#vpn) because much of our data is under medical ethics protections, and needs to be kept off the general internet.
+
+To use it, see [this page](./git-datasets.md#usage).
+
 
 Initial setup
 -------------
