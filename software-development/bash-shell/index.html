@@ -764,7 +764,7 @@
 
 
 <!-- only one Github button activated, so collapse it into the main button, saving a click for users -->
-        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/ng/sphinx/software-development/bash-shell/README.md"><button
+        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/software-development/bash-shell/README.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fab fa-github"></i></button></a>
 
@@ -854,16 +854,16 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#size-of-a-disk-folder-a-id-size-of-a-diskfolder-a">
+      <a class="reference internal nav-link" href="#size-of-a-disk-folder-a-href-size-of-a-diskfolder-id-size-of-a-diskfolder-a">
        Size of a disk/folder
-       <a id="size_of_a_diskfolder">
+       <a href="size_of_a_diskfolder" id="size_of_a_diskfolder">
        </a>
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#number-of-files-a-id-number-of-files-a">
+      <a class="reference internal nav-link" href="#number-of-files-a-href-number-of-files-id-number-of-files-a">
        Number of files
-       <a id="number_of_files">
+       <a href="number_of_files" id="number_of_files">
        </a>
       </a>
      </li>
@@ -896,9 +896,9 @@
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#stdout-stderr-a-id-stdoutstderr-a">
+      <a class="reference internal nav-link" href="#stdout-stderr-a-href-stdoutstderr-id-stdoutstderr-a">
        Stdout / Stderr
-       <a id="stdoutstderr">
+       <a href="stdoutstderr" id="stdoutstderr">
        </a>
       </a>
      </li>
@@ -926,16 +926,16 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#checksum-a-id-checksum-a">
+      <a class="reference internal nav-link" href="#checksum-a-href-checksum-id-checksum-a">
        Checksum
-       <a id="checksum">
+       <a href="checksum" id="checksum">
        </a>
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#remove-files-from-tmp-a-id-remove-files-from-tmp-a">
+      <a class="reference internal nav-link" href="#remove-files-from-tmp-a-href-remove-files-from-tmp-id-remove-files-from-tmp-a">
        Remove files from tmp
-       <a id="remove_files_from_tmp">
+       <a href="remove_files_from_tmp" id="remove_files_from_tmp">
        </a>
       </a>
      </li>
@@ -1064,12 +1064,16 @@
 </div>
 <div class="section" id="hdd-parameters">
 <h2>HDD parameters<a class="headerlink" href="#hdd-parameters" title="Permalink to this headline">¶</a></h2>
+<p>Check disk space:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">-</span><span class="n">h</span>
+</pre></div>
+</div>
 <p>To list all block devices, run:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>lsblk
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lsblk</span>
 </pre></div>
 </div>
 <p>To list all partitions, run:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span> fdisk -l
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">fdisk</span> <span class="o">-</span><span class="n">l</span>
 </pre></div>
 </div>
 </div>
@@ -1140,41 +1144,41 @@ rsync -azP &lt;FOLDER_SOURCE&gt;/ &lt;FOLDER_DEST&gt;  <span class="c1"># will c
 </pre></div>
 </div>
 </div>
-<div class="section" id="size-of-a-disk-folder-a-id-size-of-a-diskfolder-a">
-<h4>Size of a disk/folder <a id="size_of_a_diskfolder"></a><a class="headerlink" href="#size-of-a-disk-folder-a-id-size-of-a-diskfolder-a" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="size-of-a-disk-folder-a-href-size-of-a-diskfolder-id-size-of-a-diskfolder-a">
+<h4>Size of a disk/folder <a href="size_of_a_diskfolder" id="size_of_a_diskfolder"></a><a class="headerlink" href="#size-of-a-disk-folder-a-href-size-of-a-diskfolder-id-size-of-a-diskfolder-a" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>du -sh &lt;FOLDER&gt;
 </pre></div>
 </div>
 <p>or for all folders in the path</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>du -sh *
-du -sm * | sort -nr  # in MB and reverse-ordered by size
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">du</span> <span class="o">-</span><span class="n">sh</span> <span class="o">*</span>
+<span class="n">du</span> <span class="o">-</span><span class="n">sm</span> <span class="o">*</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">nr</span>  <span class="c1"># in MB and reverse-ordered by size</span>
 </pre></div>
 </div>
 <p><strong>Get space on a disk</strong></p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>df -h .
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">-</span><span class="n">h</span> <span class="o">.</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="number-of-files-a-id-number-of-files-a">
-<h4>Number of files <a id="number_of_files"></a><a class="headerlink" href="#number-of-files-a-id-number-of-files-a" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="number-of-files-a-href-number-of-files-id-number-of-files-a">
+<h4>Number of files <a href="number_of_files" id="number_of_files"></a><a class="headerlink" href="#number-of-files-a-href-number-of-files-id-number-of-files-a" title="Permalink to this headline">¶</a></h4>
 <p>== Get number of files that match a pattern</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ls -dq *pattern* | wc -l
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">dq</span> <span class="o">*</span><span class="n">pattern</span><span class="o">*</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
 </pre></div>
 </div>
 <p><strong>Get number of files in a folder (recursively)</strong></p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>find .//. ! -name . -print | grep -c //
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>find .//. ! -name . -print | grep -c //
 </pre></div>
 </div>
 <p>only counts files modified for the past 24h:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>find .//. ! -name . -mtime -1 -print | grep -c //
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>find .//. ! -name . -mtime -1 -print | grep -c //
 </pre></div>
 </div>
 <p><strong>List files modified for the past 24h</strong></p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>find . -mtime -1 -print
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="n">mtime</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="nb">print</span>
 </pre></div>
 </div>
 <p>List number of files per folder</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>find . -maxdepth 1 -mindepth 1 -type d -exec sh -c &#39;echo &quot;{} : $(find &quot;{}&quot; -type f | wc -l)&quot; file\(s\)&#39; \;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="n">maxdepth</span> <span class="mi">1</span> <span class="o">-</span><span class="n">mindepth</span> <span class="mi">1</span> <span class="o">-</span><span class="nb">type</span> <span class="n">d</span> <span class="o">-</span><span class="n">exec</span> <span class="n">sh</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;echo &quot;</span><span class="si">{}</span><span class="s1"> : $(find &quot;</span><span class="si">{}</span><span class="s1">&quot; -type f | wc -l)&quot; file\(s\)&#39;</span> \<span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -1201,21 +1205,21 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 </pre></div>
 </div>
 <p><strong>Find most recently changed files (less than 1 day ago)</strong></p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>find  -mtime -1 -ls
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span>  <span class="o">-</span><span class="n">mtime</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="n">ls</span>
 </pre></div>
 </div>
 <p><strong>Search files</strong></p>
 <p>Files with specific string inside:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>find . -name &quot;string&quot;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;string&quot;</span>
 </pre></div>
 </div>
 <p>Files that have been modified for the past 24 hours:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>find ~/Documents -type f -ctime -0 | more
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">~/</span><span class="n">Documents</span> <span class="o">-</span><span class="nb">type</span> <span class="n">f</span> <span class="o">-</span><span class="n">ctime</span> <span class="o">-</span><span class="mi">0</span> <span class="o">|</span> <span class="n">more</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="stdout-stderr-a-id-stdoutstderr-a">
-<h4>Stdout / Stderr <a id="stdoutstderr"></a><a class="headerlink" href="#stdout-stderr-a-id-stdoutstderr-a" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="stdout-stderr-a-href-stdoutstderr-id-stdoutstderr-a">
+<h4>Stdout / Stderr <a href="stdoutstderr" id="stdoutstderr"></a><a class="headerlink" href="#stdout-stderr-a-href-stdoutstderr-id-stdoutstderr-a" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file">https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file</a>Edit</p>
 </div>
 </div>
@@ -1225,42 +1229,42 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 <div class="section" id="tar">
 <h3><strong>tar</strong><a class="headerlink" href="#tar" title="Permalink to this headline">¶</a></h3>
 <p>compress:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>tar -czf /path/to/output/folder/filename.tar.gz /path/to/folder
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">czf</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">folder</span><span class="o">/</span><span class="n">filename</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">folder</span>
 </pre></div>
 </div>
 <p>extract:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>tar -zxvf filename.tar.gz
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">zxvf</span> <span class="n">filename</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="zip">
 <h3><strong>zip</strong><a class="headerlink" href="#zip" title="Permalink to this headline">¶</a></h3>
 <p>compress folder:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>zip -r archive.zip folder/
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">zip</span> <span class="o">-</span><span class="n">r</span> <span class="n">archive</span><span class="o">.</span><span class="n">zip</span> <span class="n">folder</span><span class="o">/</span>
 
-# Exclude a sub-folder:
-zip -r archive.zip folder/ -x &#39;*subfoldertoexclude*&#39;
+<span class="c1"># Exclude a sub-folder:</span>
+<span class="nb">zip</span> <span class="o">-</span><span class="n">r</span> <span class="n">archive</span><span class="o">.</span><span class="n">zip</span> <span class="n">folder</span><span class="o">/</span> <span class="o">-</span><span class="n">x</span> <span class="s1">&#39;*subfoldertoexclude*&#39;</span>
 </pre></div>
 </div>
 <p>extract:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>unzip archive.zip
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">unzip</span> <span class="n">archive</span><span class="o">.</span><span class="n">zip</span>
 </pre></div>
 </div>
 <p><strong>copie de fichiers ds une directory</strong></p>
 <p>find -name sica*.png | xargs -t -i /bin/cp ./{} ./imagesEdit</p>
-<div class="section" id="checksum-a-id-checksum-a">
-<h4>Checksum <a id="checksum"></a><a class="headerlink" href="#checksum-a-id-checksum-a" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="checksum-a-href-checksum-id-checksum-a">
+<h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">¶</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="a243cae9-882c-43cc-ac80-de80f426f8ab" name="a613cfdb-c3bc-4c6f-b650-de80a2df3b49" type="radio">
-</input><label class="tabbed-label" for="a243cae9-882c-43cc-ac80-de80f426f8ab">
+<input checked="checked" id="734e948c-3abc-4fcd-97a0-09332bf36579" name="ea47bad8-d9e0-4d1d-af7b-147d690b6dc1" type="radio">
+</input><label class="tabbed-label" for="734e948c-3abc-4fcd-97a0-09332bf36579">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
 </pre></div>
 </div>
 </div>
-<input id="61cd65eb-5187-4e05-80ba-8481cb2518f8" name="a613cfdb-c3bc-4c6f-b650-de80a2df3b49" type="radio">
-</input><label class="tabbed-label" for="61cd65eb-5187-4e05-80ba-8481cb2518f8">
+<input id="2e256945-f4ea-495e-a59a-d9f6db0b3b1f" name="ea47bad8-d9e0-4d1d-af7b-147d690b6dc1" type="radio">
+</input><label class="tabbed-label" for="2e256945-f4ea-495e-a59a-d9f6db0b3b1f">
 Mac</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
 find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5
@@ -1269,8 +1273,8 @@ find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</
 </div>
 </div>
 </div>
-<div class="section" id="remove-files-from-tmp-a-id-remove-files-from-tmp-a">
-<h4>Remove files from tmp <a id="remove_files_from_tmp"></a><a class="headerlink" href="#remove-files-from-tmp-a-id-remove-files-from-tmp-a" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="remove-files-from-tmp-a-href-remove-files-from-tmp-id-remove-files-from-tmp-a">
+<h4>Remove files from tmp <a href="remove_files_from_tmp" id="remove_files_from_tmp"></a><a class="headerlink" href="#remove-files-from-tmp-a-href-remove-files-from-tmp-id-remove-files-from-tmp-a" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -name <span class="s2">&quot;tmp.*&quot;</span> -type d -print0 <span class="p">|</span> xargs -0 /bin/rm -rf
 </pre></div>
 </div>
@@ -1299,7 +1303,7 @@ find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ps aux
 </pre></div>
 </div>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>top
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">top</span>
 </pre></div>
 </div>
 </div>
@@ -1339,21 +1343,21 @@ curl -o data.zip -L https://osf.io/76jkx/?action<span class="o">=</span>download
 <h4>Copy file between computers<a class="headerlink" href="#copy-file-between-computers" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p><a class="reference external" href="https://magic-wormhole.readthedocs.io/en/latest/">https://magic-wormhole.readthedocs.io/en/latest/</a></p></li>
-<li><p><a class="reference external" href="https://clbin.com/">https://clbin.com/</a> (featuring CLI uploading) ( running <a class="reference external" href="http://github.com/rupa/sprunge">http://github.com/rupa/sprunge</a> )</p></li>
-<li><p><a class="reference external" href="https://paste.fossdaily.xyz/">https://paste.fossdaily.xyz/</a> (running privatebin)</p></li>
-<li><p><a class="reference external" href="https://paste.tildeverse.org/">https://paste.tildeverse.org/</a> (running privatebin)</p></li>
-<li><p><a class="reference external" href="https://bin.snopyta.org/">https://bin.snopyta.org/</a> (running privatebin)</p></li>
-<li><p><a class="reference external" href="https://pb.envs.net/">https://pb.envs.net/</a> (running privatebin)</p></li>
+<li><p><a class="reference external" href="https://clbin.com">https://clbin.com/</a> (featuring CLI uploading) ( running <a class="reference external" href="http://github.com/rupa/sprunge">http://github.com/rupa/sprunge</a> )</p></li>
+<li><p><a class="reference external" href="https://paste.fossdaily.xyz">https://paste.fossdaily.xyz/</a> (running privatebin)</p></li>
+<li><p><a class="reference external" href="https://paste.tildeverse.org">https://paste.tildeverse.org/</a> (running privatebin)</p></li>
+<li><p><a class="reference external" href="https://bin.snopyta.org">https://bin.snopyta.org/</a> (running privatebin)</p></li>
+<li><p><a class="reference external" href="https://pb.envs.net">https://pb.envs.net/</a> (running privatebin)</p></li>
 <li><p><a class="reference external" href="https://sebsauvage.net/paste/">https://sebsauvage.net/paste/</a> (running zerobin; an unmaintained forerunner of privatebin)</p></li>
-<li><p><a class="reference external" href="https://0bin.net/">https://0bin.net/</a> (running <a class="reference external" href="https://github.com/sametmax/0bin">https://github.com/sametmax/0bin</a>)</p></li>
-<li><p><a class="reference external" href="https://demo.lufi.io/">https://demo.lufi.io/</a> (running <a class="reference external" href="https://lufi.io/">https://lufi.io</a>)</p></li>
-<li><p><a class="reference external" href="https://ybits.io/">https://ybits.io/</a> (closed source but oh well)</p></li>
-<li><p><a class="reference external" href="https://upload.disroot.org/">https://upload.disroot.org/</a> (running <a class="reference external" href="https://lufi.io/">https://lufi.io/</a>)</p></li>
-<li><p><a class="reference external" href="https://framadrop.org/">https://framadrop.org</a> (running lufi.io)</p></li>
-<li><p><a class="reference external" href="https://ttm.sh/">https://ttm.sh/</a> (featuring cli uploading) (edited)</p></li>
+<li><p><a class="reference external" href="https://0bin.net">https://0bin.net/</a> (running <a class="reference external" href="https://github.com/sametmax/0bin">https://github.com/sametmax/0bin</a>)</p></li>
+<li><p><a class="reference external" href="https://demo.lufi.io">https://demo.lufi.io/</a> (running <a class="reference external" href="https://lufi.io">https://lufi.io</a>)</p></li>
+<li><p><a class="reference external" href="https://ybits.io">https://ybits.io/</a> (closed source but oh well)</p></li>
+<li><p><a class="reference external" href="https://upload.disroot.org">https://upload.disroot.org/</a> (running <a class="reference external" href="https://lufi.io">https://lufi.io/</a>)</p></li>
+<li><p><a class="reference external" href="https://framadrop.org">https://framadrop.org</a> (running lufi.io)</p></li>
+<li><p><a class="reference external" href="https://ttm.sh">https://ttm.sh/</a> (featuring cli uploading) (edited)</p></li>
 </ul>
 <p>Using gist.github.com (only for files &lt;100MB):</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1. make a new gist
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1. make a new gist
 2. note its ID in its URL (something like 3daa207ea45c75722bd0e3bc914dce3a)
 3. `git clone git@github.com:3daa207ea45c75722bd0e3bc914dce3a`
 4. `cd 3daa207ea45c75722bd0e3bc914dce3a`
@@ -1373,26 +1377,26 @@ scp username@station.domain: &lt;/PATH/&gt; . -r <span class="c1"># copy folder<
 <div class="section" id="network-dns">
 <h3>Network/DNS<a class="headerlink" href="#network-dns" title="Permalink to this headline">¶</a></h3>
 <p><strong>List all stations on the network (only works on a server)</strong></p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>findsmb
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">findsmb</span>
 </pre></div>
 </div>
 <p><strong>find DNS</strong></p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>cat /etc/resolv.conf
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">resolv</span><span class="o">.</span><span class="n">conf</span>
 </pre></div>
 </div>
 <p><strong>lookup DNS</strong></p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>host HOST_NAME
-host IP_ADDRESS
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">host</span> <span class="n">HOST_NAME</span>
+<span class="n">host</span> <span class="n">IP_ADDRESS</span>
 </pre></div>
 </div>
 <p><strong>Clear DNS cache (on OSX 10.8 and later)</strong></p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>sudo killall -HUP mDNSResponder
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">killall</span> <span class="o">-</span><span class="n">HUP</span> <span class="n">mDNSResponder</span>
 </pre></div>
 </div>
 <p><strong>Connect to another station</strong></p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ssh IP
-or:
-ssh username@station.domain
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">IP</span>
+<span class="ow">or</span><span class="p">:</span>
+<span class="n">ssh</span> <span class="n">username</span><span class="nd">@station</span><span class="o">.</span><span class="n">domain</span>
 </pre></div>
 </div>
 </div>

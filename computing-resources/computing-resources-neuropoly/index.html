@@ -764,7 +764,7 @@
 
 
 <!-- only one Github button activated, so collapse it into the main button, saving a click for users -->
-        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/ng/sphinx/computing-resources/computing-resources-neuropoly/README.md"><button
+        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/computing-resources/computing-resources-neuropoly/README.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fab fa-github"></i></button></a>
 
@@ -1042,15 +1042,15 @@
 <p>Contact Alexandru Foias to request VPN access be activated for your CAS account. When activated, <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a> will report “VPN_* = Actif”.</p>
 <p>The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing <code class="docutils literal notranslate"><span class="pre">openconnect</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="26c1cbe6-0791-4328-ab55-bbc61628f7cd" name="534a397f-6a95-4df1-ba31-d692fe6bd292" type="radio">
-</input><label class="tabbed-label" for="26c1cbe6-0791-4328-ab55-bbc61628f7cd">
+<input checked="checked" id="7616de55-53fa-4ede-85b2-ea4c1e9659d3" name="3c537a09-8925-44a6-9138-b391bf5f7775" type="radio">
+</input><label class="tabbed-label" for="7616de55-53fa-4ede-85b2-ea4c1e9659d3">
 MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
 </div>
 </div>
-<input id="318bff74-4d5f-4e41-8271-d879166739f7" name="534a397f-6a95-4df1-ba31-d692fe6bd292" type="radio">
-</input><label class="tabbed-label" for="318bff74-4d5f-4e41-8271-d879166739f7">
+<input id="89c3a38c-173d-4cc2-ad82-7a4f36f65573" name="3c537a09-8925-44a6-9138-b391bf5f7775" type="radio">
+</input><label class="tabbed-label" for="89c3a38c-173d-4cc2-ad82-7a4f36f65573">
 PC/Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1096,6 +1096,10 @@ User git
 
 Match host *.neuro.polymtl.ca
 User &lt;POLYGRAMES_USERNAME&gt;
+
+<span class="c1"># passwords are required for grames accounts to access /mnt/duke: https://github.com/neuropoly/computers/issues/90</span>
+Match host *.neuro.polymtl.ca user <span class="o">{</span>u,p<span class="o">}</span>*
+PreferredAuthentications password
 </pre></div>
 </div>
 <p>Add this to your <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> to make multiple ssh connections faster and without retyping your password:</p>
@@ -1110,8 +1114,8 @@ User &lt;POLYGRAMES_USERNAME&gt;
 <div class="section" id="vnc-graphical-interface">
 <h3>VNC (graphical interface)<a class="headerlink" href="#vnc-graphical-interface" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="6914a31e-bd19-49e1-8db7-1e0552702cc5" name="101cf700-3136-4361-825a-998ff99a23de" type="radio">
-</input><label class="tabbed-label" for="6914a31e-bd19-49e1-8db7-1e0552702cc5">
+<input checked="checked" id="379d4b66-456b-4d29-b0af-ab636d7752e7" name="aa282c47-a6c5-4327-85db-d2fdbf39703a" type="radio">
+</input><label class="tabbed-label" for="379d4b66-456b-4d29-b0af-ab636d7752e7">
 macOS</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open Finder</p></li>
@@ -1120,8 +1124,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p>You can use your local/network account information or the <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg">shared account credentials</a></p></li>
 </ol>
 </div>
-<input id="d04e4d24-bf93-4bc2-bdfa-86178ea5115c" name="101cf700-3136-4361-825a-998ff99a23de" type="radio">
-</input><label class="tabbed-label" for="d04e4d24-bf93-4bc2-bdfa-86178ea5115c">
+<input id="fea8f055-cb30-4b6b-a0d3-e49379c6b250" name="aa282c47-a6c5-4327-85db-d2fdbf39703a" type="radio">
+</input><label class="tabbed-label" for="fea8f055-cb30-4b6b-a0d3-e49379c6b250">
 PC/Linux</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Establish a VNC connection using <a class="reference external" href="https://wiki.gnome.org/Apps/Vinagre/">vinaigre</a>.</p></li>
@@ -1180,8 +1184,8 @@ PC/Linux</label><div class="tabbed-content docutils">
 <div class="section" id="sftp">
 <h3>SFTP<a class="headerlink" href="#sftp" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="c14b6c4a-4e51-46ea-a08f-6e28bb915d4b" name="b36111b6-37b0-4c6a-9c6b-bd44814d3fc2" type="radio">
-</input><label class="tabbed-label" for="c14b6c4a-4e51-46ea-a08f-6e28bb915d4b">
+<input checked="checked" id="df49edb4-d0b3-46d3-ace5-4acc8fb06499" name="040d47f6-58b9-4415-980b-3f9be7bea7d8" type="radio">
+</input><label class="tabbed-label" for="df49edb4-d0b3-46d3-ace5-4acc8fb06499">
 mac</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open the Terminal</p></li>
@@ -1196,8 +1200,8 @@ mac</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="1ddd9496-b40e-4c38-9ce9-265a6e48a654" name="b36111b6-37b0-4c6a-9c6b-bd44814d3fc2" type="radio">
-</input><label class="tabbed-label" for="1ddd9496-b40e-4c38-9ce9-265a6e48a654">
+<input id="b53cb0a7-aada-403a-a808-c569d2b8271a" name="040d47f6-58b9-4415-980b-3f9be7bea7d8" type="radio">
+</input><label class="tabbed-label" for="b53cb0a7-aada-403a-a808-c569d2b8271a">
 Linux</label><div class="tabbed-content docutils">
 <p>Files &gt; Other locations &gt; Connect to Server &gt; sftp://USERNAME&#64;CLUSTER.neuro.polymtl.ca/</p>
 </div>
@@ -1288,7 +1292,7 @@ Linux</label><div class="tabbed-content docutils">
 <td><p>64-core CPU</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>OS</strong></p></td>
-<td><p>Ubuntu 16.04.4</p></td>
+<td><p>Ubuntu 20.04.4</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Hostname</strong></p></td>
 <td><p></p></td>
@@ -1316,7 +1320,7 @@ Linux</label><div class="tabbed-content docutils">
 <td><p>Xeon 12-core</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>OS</strong></p></td>
-<td><p>Ubuntu 16.04.5</p></td>
+<td><p>Ubuntu 20.04.3</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Hostname</strong></p></td>
 <td><p></p></td>
