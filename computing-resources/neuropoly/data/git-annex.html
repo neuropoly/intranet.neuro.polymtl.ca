@@ -814,16 +814,6 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#requirements">
-     Requirements
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#download">
-     Download
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#global-git-config">
      Global
      <code class="docutils literal notranslate">
@@ -918,25 +908,10 @@
 <p><code class="docutils literal notranslate"><span class="pre">git-annex</span></code> brings with it all the power of <code class="docutils literal notranslate"><span class="pre">git</span></code>. You should be somewhat familiar with branches, tags,. Please read <a class="reference external" href="https://git-scm.com/book/en/v2">the git book</a>. The <a class="reference external" href="https://handbook.datalad.org/">datalad handbook</a> also has useful perspective, though not all of it is relevant to how we do things.</p>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="requirements">
-<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h3>
 <p>You must have a unix OS. <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> is simply not compatible with anything else.</p>
-<ul class="simple">
-<li><p><strong>Linux</strong></p></li>
-<li><p><strong>macOS</strong></p></li>
-<li><p>if <strong>Windows</strong>, either</p>
-<ul>
-<li><p><a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a> or</p></li>
-<li><p>A Linux virtual machine using e.g. <a class="reference external" href="https://virtualbox.org/">VirtualBox</a></p></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section" id="download">
-<h3>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="377d70f5-c49e-4bef-9a17-c34286fd9708" name="0a7b127f-6290-4dd2-8662-9f550aed97fa" type="radio">
-</input><label class="tabbed-label" for="377d70f5-c49e-4bef-9a17-c34286fd9708">
+<input checked="checked" id="1fa9d8ff-cace-479f-9373-719c8c7b1589" name="fadd0385-9da6-4c29-92e6-82d29e0307cb" type="radio">
+</input><label class="tabbed-label" for="1fa9d8ff-cace-479f-9373-719c8c7b1589">
 Linux</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p><strong>Arch</strong>: <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-Sy</span> <span class="pre">git-annex</span></code></p></li>
@@ -946,21 +921,27 @@ Linux</label><div class="tabbed-content docutils">
 <li><p>if on an older system and can’t upgrade, you can try <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">installing <code class="docutils literal notranslate"><span class="pre">conda</span></code></a> (or <a class="reference external" href="https://github.com/conda-forge/miniforge/">miniforge</a> and then using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-f</span> <span class="pre">conda-forge</span> <span class="pre">git-annex</span></code>.</p></li>
 </ul>
 </div>
-<input id="0171e3b2-41a4-4425-8903-07ec6fe2cac1" name="0a7b127f-6290-4dd2-8662-9f550aed97fa" type="radio">
-</input><label class="tabbed-label" for="0171e3b2-41a4-4425-8903-07ec6fe2cac1">
+<input id="1d528c32-1121-440b-acaa-9a1ac32abe70" name="fadd0385-9da6-4c29-92e6-82d29e0307cb" type="radio">
+</input><label class="tabbed-label" for="1d528c32-1121-440b-acaa-9a1ac32abe70">
 macOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">git</span><span class="o">-</span><span class="n">annex</span>
 </pre></div>
 </div>
 </div>
-<input id="a4ef6cfa-dfa4-4807-87cf-3516e7cb7014" name="0a7b127f-6290-4dd2-8662-9f550aed97fa" type="radio">
-</input><label class="tabbed-label" for="a4ef6cfa-dfa4-4807-87cf-3516e7cb7014">
+<input id="b64f5c51-2835-4a30-84af-30d0cebf94ce" name="fadd0385-9da6-4c29-92e6-82d29e0307cb" type="radio">
+</input><label class="tabbed-label" for="b64f5c51-2835-4a30-84af-30d0cebf94ce">
 Windows 10 (via WSL)</label><div class="tabbed-content docutils">
+<p>Install <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a>, pick a distro, and then run one of:</p>
 <ul class="simple">
 <li><p><strong><a class="reference external" href="https://www.microsoft.com/store/apps/9n6svws3rx71">Ubuntu-20.04</a></strong>: <code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">install</span> <span class="pre">git-annex</span></code></p></li>
 <li><p><strong><a class="reference external" href="https://www.microsoft.com/store/apps/9MSVKQC78PK6">Debian</a></strong>: <code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">install</span> <span class="pre">git-annex</span></code></p></li>
 <li><p>The <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions">other distros</a> are supported.</p></li>
 </ul>
+</div>
+<input id="0fb2f768-aa1b-4d00-8b7d-33889cad2bc7" name="fadd0385-9da6-4c29-92e6-82d29e0307cb" type="radio">
+</input><label class="tabbed-label" for="0fb2f768-aa1b-4d00-8b7d-33889cad2bc7">
+Windows 10 (via VirtualBox)</label><div class="tabbed-content docutils">
+<p>Install <a class="reference external" href="https://virtualbox.org/">VirtualBox</a>, install a Linux distro inside of it, and then follow the Linux instructions.</p>
 </div>
 </div>
 <div class="admonition warning">
@@ -976,7 +957,6 @@ operating system: linux x86_64
 supported repository versions: 8
 upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 </pre></div>
-</div>
 </div>
 </div>
 <div class="section" id="global-git-config">

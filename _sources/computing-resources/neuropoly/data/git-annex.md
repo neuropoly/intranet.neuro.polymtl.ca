@@ -13,17 +13,7 @@ It has about a thousand variants and options. This covers only the parts we use.
 
 ## Installation
 
-### Requirements
-
 You must have a unix OS. `git-annex` is simply not compatible with anything else.
-
-  * **Linux**
-  * **macOS**
-  * if **Windows**, either
-    * [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10) or
-    * A Linux virtual machine using e.g. [VirtualBox](https://virtualbox.org/)
-
-### Download
 
 ````{tabbed} Linux
 * **Arch**: `pacman -Sy git-annex`
@@ -40,9 +30,15 @@ brew install git-annex
 ````
 
 ````{tabbed} Windows 10 (via WSL)
+Install [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10), pick a distro, and then run one of:
+
 * **[Ubuntu-20.04](https://www.microsoft.com/store/apps/9n6svws3rx71)**: `apt install git-annex`
 * **[Debian](https://www.microsoft.com/store/apps/9MSVKQC78PK6)**: `apt install git-annex`
 * The [other distros](https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions) are supported.
+````
+
+````{tabbed} Windows 10 (via VirtualBox)
+Install [VirtualBox](https://virtualbox.org/), install a Linux distro inside of it, and then follow the Linux instructions.
 ````
 
 
