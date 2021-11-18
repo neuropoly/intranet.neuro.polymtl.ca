@@ -2,7 +2,7 @@
 
 ```{toctree}
 :hidden:
-NeuroPoly <https://neuro.polymtl.ca>
+Welcome to NeuroPoly <https://neuro.polymtl.ca>
 self
 onboarding/README
 agenda-and-calendar
