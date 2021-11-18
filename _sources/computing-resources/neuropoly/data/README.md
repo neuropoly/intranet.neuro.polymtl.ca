@@ -4,6 +4,12 @@ description: This page describes the location of the MRI and histology data at N
 
 # Data
 
+```{toctree}
+:hidden:
+git-datasets
+git-annex
+```
+
 ## `data.neuro.polymtl.ca`
 
 `git+ssh://data.neuro.polymtl.ca` has a max size of ~1TB and is [currently not backed up](https://github.com/neuropoly/computers/issues/65).
