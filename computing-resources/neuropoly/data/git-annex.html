@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Using git-annex &#8212; NeuroPoly Lab Manual</title>
+    <title>git-annex &#8212; NeuroPoly Lab Manual</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -40,7 +40,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="CPUS2" href="../cpus2.html" />
-    <link rel="prev" title="Private BIDS datasets (git://data.neuro.polymtl.ca)" href="git-datasets.html" />
+    <link rel="prev" title="data: private BIDS datasets" href="git-datasets.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -285,12 +285,17 @@
       <ul class="current">
        <li class="toctree-l4">
         <a class="reference internal" href="git-datasets.html">
-         Private BIDS datasets (git://data.neuro.polymtl.ca)
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           data
+          </span>
+         </code>
+         : private BIDS datasets
         </a>
        </li>
        <li class="toctree-l4 current active">
         <a class="current reference internal" href="#">
-         Using git-annex
+         git-annex
         </a>
        </li>
       </ul>
@@ -819,11 +824,6 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#verify">
-     ⚠️ Verify ⚠️
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#global-git-config">
      Global
      <code class="docutils literal notranslate">
@@ -842,6 +842,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#annex-thin-hardlinks-a-id-hardlinks">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     annex.thin
+    </span>
+   </code>
+   Hardlinks
+   <a id="hardlinks">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#troubleshooting">
    Troubleshooting
   </a>
@@ -856,46 +868,32 @@
      checking annex file locations
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-cosmetic-problem-affecting-git-status">
+     “a cosmetic problem affecting git status”
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resetting">
+     Resetting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rm-cannot-remove">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       rm:
+      </span>
+      <span class="pre">
+       cannot
+      </span>
+      <span class="pre">
+       remove
+      </span>
+     </code>
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#annex-thin-hardlinks-a-id-hardlinks">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     annex.thin
-    </span>
-   </code>
-   Hardlinks
-   <a id="hardlinks">
-   </a>
-   <ul class="nav section-nav flex-column">
-    <li class="nav-item toc-entry">
-     <a class="reference internal nav-link" href="#a-cosmetic-problem-affecting-git-status">
-      “a cosmetic problem affecting git status”
-     </a>
-    </li>
-    <li class="nav-item toc-entry">
-     <a class="reference internal nav-link" href="#resetting">
-      Resetting
-     </a>
-    </li>
-    <li class="nav-item toc-entry">
-     <a class="reference internal nav-link" href="#rm-cannot-remove">
-      <code class="docutils literal notranslate">
-       <span class="pre">
-        rm:
-       </span>
-       <span class="pre">
-        cannot
-       </span>
-       <span class="pre">
-        remove
-       </span>
-      </code>
-     </a>
-    </li>
-   </ul>
-  </a>
  </li>
 </ul>
 
@@ -908,8 +906,8 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="using-git-annex">
-<h1>Using git-annex<a class="headerlink" href="#using-git-annex" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="git-annex">
+<h1>git-annex<a class="headerlink" href="#git-annex" title="Permalink to this headline">¶</a></h1>
 <p><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">annex</span></code></span> is an extension to git that lets it handle large repos spread in pieces across multiple servers/disks/accounts.</p>
 <p>We are using it because</p>
 <ol class="simple">
@@ -955,9 +953,8 @@
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="verify">
-<h3>⚠️ Verify ⚠️<a class="headerlink" href="#verify" title="Permalink to this headline">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>Check that <code class="docutils literal notranslate"><span class="pre">git-annex</span> <span class="pre">version</span></code> reports <strong>version 8</strong> or higher! It should look like:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git annex version
 git-annex version: 8.20210310-ga343ea76c8
@@ -969,6 +966,7 @@ operating system: linux x86_64
 supported repository versions: 8
 upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 </pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="global-git-config">
@@ -1026,27 +1024,6 @@ upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 </div>
 <p>If you are working on a private, internal dataset, continue by <a class="reference external" href="./internal-server.md#new-repository">uploading to <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code></a>.</p>
 </div>
-<div class="section" id="troubleshooting">
-<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="version-problems">
-<h3>version problems<a class="headerlink" href="#version-problems" title="Permalink to this headline">¶</a></h3>
-<p>If you have any error at all, the first thing to check is that you have <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> version 8, <a class="reference external" href="#installation">as explained above</a>.</p>
-</div>
-<div class="section" id="checking-annex-file-locations">
-<h3>checking annex file locations<a class="headerlink" href="#checking-annex-file-locations" title="Permalink to this headline">¶</a></h3>
-<p>The content of annexed files that have been downloaded locally is stored under <code class="docutils literal notranslate"><span class="pre">repo/.git/annex/objects/</span></code>. You can find which specific file corresponds to by using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">show</span></code> or <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">-p</span></code> to see the content that <code class="docutils literal notranslate"><span class="pre">git</span></code> has recorded for the file – which will be a string giving the “annex pointer”:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git show HEAD:derivatives/labels/sub-1140317/anat/sub-1140317_T1w_seg-manual.nii.gz
-/annex/objects/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
-</pre></div>
-</div>
-<p>and then locating a file with this name in <code class="docutils literal notranslate"><span class="pre">.git/annex/objects/</span></code>; however, it is not as simple as just combining the two together, git-annex prepends extra filenames, so you need to use <code class="docutils literal notranslate"><span class="pre">find(1)</span></code> to locate the file:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ find .git/annex/objects/ -name &quot;SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz&quot;
-.git/annex/objects/6V/X3/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
-.git/annex/objects/6V/X3/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
-</pre></div>
-</div>
-</div>
-</div>
 <div class="section" id="annex-thin-hardlinks-a-id-hardlinks">
 <h2><code class="docutils literal notranslate"><span class="pre">annex.thin</span></code> Hardlinks <a id="hardlinks"><a class="headerlink" href="#annex-thin-hardlinks-a-id-hardlinks" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">annex.thin</span></code> saves a lot of space by deduplicating file content via <a class="reference external" href="https://wiki.debian.org/ln">hard links</a>:
@@ -1078,6 +1055,27 @@ nguenther@data:~/datasets/uk-biobank-processed$ du -hs uk-biobank-processed/.git
  ./derivatives/labels/sub-1140317/anat/sub-1140317_T1w_seg-manual.nii.gz
  ./.git/annex/objects/6V/X3/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
 </pre></div>
+</div>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="version-problems">
+<h3>version problems<a class="headerlink" href="#version-problems" title="Permalink to this headline">¶</a></h3>
+<p>If you have any error at all, the first thing to check is that you have <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> version 8, <a class="reference external" href="#installation">as explained above</a>.</p>
+</div>
+<div class="section" id="checking-annex-file-locations">
+<h3>checking annex file locations<a class="headerlink" href="#checking-annex-file-locations" title="Permalink to this headline">¶</a></h3>
+<p>The content of annexed files that have been downloaded locally is stored under <code class="docutils literal notranslate"><span class="pre">repo/.git/annex/objects/</span></code>. You can find which specific file corresponds to by using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">show</span></code> or <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">-p</span></code> to see the content that <code class="docutils literal notranslate"><span class="pre">git</span></code> has recorded for the file – which will be a string giving the “annex pointer”:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git show HEAD:derivatives/labels/sub-1140317/anat/sub-1140317_T1w_seg-manual.nii.gz
+/annex/objects/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
+</pre></div>
+</div>
+<p>and then locating a file with this name in <code class="docutils literal notranslate"><span class="pre">.git/annex/objects/</span></code>; however, it is not as simple as just combining the two together, git-annex prepends extra filenames, so you need to use <code class="docutils literal notranslate"><span class="pre">find(1)</span></code> to locate the file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ find .git/annex/objects/ -name &quot;SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz&quot;
+.git/annex/objects/6V/X3/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
+.git/annex/objects/6V/X3/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
+</pre></div>
+</div>
 </div>
 <div class="section" id="a-cosmetic-problem-affecting-git-status">
 <h3>“a cosmetic problem affecting git status”<a class="headerlink" href="#a-cosmetic-problem-affecting-git-status" title="Permalink to this headline">¶</a></h3>
@@ -1137,7 +1135,7 @@ $ rm -rf data-single-subject/
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Private BIDS datasets (git://data.neuro.polymtl.ca)</p>
+            <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">data</span></code>: private BIDS datasets</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../cpus2.html" title="next page">

@@ -1,44 +1,9 @@
 
-# Private BIDS datasets (git://data.neuro.polymtl.ca)
+# `data`: private BIDS datasets
 
 Much of our data is under medical ethics protections, and needs to be kept off the general internet. We have a custom server, locked down behind a VPN, with 1 terabyte of storage available. `git-annex` (and therefore `datalad`) can store and retrieve data from it.
 
 URL: [git+ssh://data.neuro.polymtl.ca](git+ssh://data.neuro.polymtl.ca)
-
-Table of Contents
------------------
-
-<!--ts-->
-* [Initial setup](#initial-setup)
-  * [Prerequisites](#prerequisites)
-  * [Inscription](#inscription)
-  * [Connection](#connection)
-* [Usage](#usage)
-  * [List](#list)
-  * [Download](#download)
-  * [Upload](#upload)
-  * [Reviewing Pull Requests](#reviewing-pull-requests)
-    * [Commit Rights](#commit-rights)
-    * [Committing](#committing)
-  * [New repository](#new-repository)
-  * [Releases](#releases)
-  * [Permissions](#permissions)
-  * [Renaming](#renaming)
-  * [Deletion](#deletion)
-  * [Add extra devices](#add-extra-devices)
-* [Admin Guide](#admin-guide)
-  * [Add users](#add-users)
-  * [Permissions](#permissions-1)
-  * [Renaming](#renaming-1)
-  * [Deletion](#deletion-1)
-  * [Backups](#backups)
-  * [Troubleshooting](#troubleshooting)
-  * [References](#references)
-
-
-<!-- Added by: kousu, at: Tue 23 Mar 2021 11:54:23 PM EDT -->
-
-<!--te-->
 
 Initial setup
 -------------

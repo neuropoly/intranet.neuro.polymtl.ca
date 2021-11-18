@@ -285,12 +285,17 @@
       <ul>
        <li class="toctree-l4">
         <a class="reference internal" href="../../computing-resources/neuropoly/data/git-datasets.html">
-         Private BIDS datasets (git://data.neuro.polymtl.ca)
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           data
+          </span>
+         </code>
+         : private BIDS datasets
         </a>
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="../../computing-resources/neuropoly/data/git-annex.html">
-         Using git-annex
+         git-annex
         </a>
        </li>
       </ul>
@@ -1273,15 +1278,15 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 <h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">¶</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="2a7052c5-64d7-4151-a071-1fce59a108e9" name="5e0c2dd9-91b0-44e0-8f34-283f6ede6f37" type="radio">
-</input><label class="tabbed-label" for="2a7052c5-64d7-4151-a071-1fce59a108e9">
+<input checked="checked" id="86efcb99-3b4f-40be-afd1-e2013de14f5e" name="3f13baea-8f5b-4d5f-9e23-709e7178f9e6" type="radio">
+</input><label class="tabbed-label" for="86efcb99-3b4f-40be-afd1-e2013de14f5e">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
 </pre></div>
 </div>
 </div>
-<input id="e99bdf80-31dc-4961-a7af-720103846b3f" name="5e0c2dd9-91b0-44e0-8f34-283f6ede6f37" type="radio">
-</input><label class="tabbed-label" for="e99bdf80-31dc-4961-a7af-720103846b3f">
+<input id="661716f2-386d-4f7d-aba5-6af0768a0bcd" name="3f13baea-8f5b-4d5f-9e23-709e7178f9e6" type="radio">
+</input><label class="tabbed-label" for="661716f2-386d-4f7d-aba5-6af0768a0bcd">
 Mac</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
 find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5

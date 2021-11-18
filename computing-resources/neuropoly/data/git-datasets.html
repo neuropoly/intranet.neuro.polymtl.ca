@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Private BIDS datasets (git://data.neuro.polymtl.ca) &#8212; NeuroPoly Lab Manual</title>
+    <title>data: private BIDS datasets &#8212; NeuroPoly Lab Manual</title>
     
   <link href="../../../_static/css/theme.css" rel="stylesheet">
   <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -39,7 +39,7 @@
     <link rel="shortcut icon" href="../../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Using git-annex" href="git-annex.html" />
+    <link rel="next" title="git-annex" href="git-annex.html" />
     <link rel="prev" title="Data" href="README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -285,12 +285,17 @@
       <ul class="current">
        <li class="toctree-l4 current active">
         <a class="current reference internal" href="#">
-         Private BIDS datasets (git://data.neuro.polymtl.ca)
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           data
+          </span>
+         </code>
+         : private BIDS datasets
         </a>
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="git-annex.html">
-         Using git-annex
+         git-annex
         </a>
        </li>
       </ul>
@@ -804,11 +809,6 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#table-of-contents">
-   Table of Contents
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#initial-setup">
    Initial setup
   </a>
@@ -952,55 +952,10 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="private-bids-datasets-git-data-neuro-polymtl-ca">
-<h1>Private BIDS datasets (git://data.neuro.polymtl.ca)<a class="headerlink" href="#private-bids-datasets-git-data-neuro-polymtl-ca" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="data-private-bids-datasets">
+<h1><code class="docutils literal notranslate"><span class="pre">data</span></code>: private BIDS datasets<a class="headerlink" href="#data-private-bids-datasets" title="Permalink to this headline">¶</a></h1>
 <p>Much of our data is under medical ethics protections, and needs to be kept off the general internet. We have a custom server, locked down behind a VPN, with 1 terabyte of storage available. <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> (and therefore <code class="docutils literal notranslate"><span class="pre">datalad</span></code>) can store and retrieve data from it.</p>
 <p>URL: <span class="xref myst">git+ssh://data.neuro.polymtl.ca</span></p>
-<div class="section" id="table-of-contents">
-<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
-<!--ts-->
-<ul class="simple">
-<li><p><a class="reference external" href="#initial-setup">Initial setup</a></p>
-<ul>
-<li><p><a class="reference external" href="#prerequisites">Prerequisites</a></p></li>
-<li><p><a class="reference external" href="#inscription">Inscription</a></p></li>
-<li><p><a class="reference external" href="#connection">Connection</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="#usage">Usage</a></p>
-<ul>
-<li><p><a class="reference external" href="#list">List</a></p></li>
-<li><p><a class="reference external" href="#download">Download</a></p></li>
-<li><p><a class="reference external" href="#upload">Upload</a></p></li>
-<li><p><a class="reference external" href="#reviewing-pull-requests">Reviewing Pull Requests</a></p>
-<ul>
-<li><p><a class="reference external" href="#commit-rights">Commit Rights</a></p></li>
-<li><p><a class="reference external" href="#committing">Committing</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="#new-repository">New repository</a></p></li>
-<li><p><a class="reference external" href="#releases">Releases</a></p></li>
-<li><p><a class="reference external" href="#permissions">Permissions</a></p></li>
-<li><p><a class="reference external" href="#renaming">Renaming</a></p></li>
-<li><p><a class="reference external" href="#deletion">Deletion</a></p></li>
-<li><p><a class="reference external" href="#add-extra-devices">Add extra devices</a></p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="#admin-guide">Admin Guide</a></p>
-<ul>
-<li><p><a class="reference external" href="#add-users">Add users</a></p></li>
-<li><p><a class="reference external" href="#permissions-1">Permissions</a></p></li>
-<li><p><a class="reference external" href="#renaming-1">Renaming</a></p></li>
-<li><p><a class="reference external" href="#deletion-1">Deletion</a></p></li>
-<li><p><a class="reference external" href="#backups">Backups</a></p></li>
-<li><p><a class="reference external" href="#troubleshooting">Troubleshooting</a></p></li>
-<li><p><a class="reference external" href="#references">References</a></p></li>
-</ul>
-</li>
-</ul>
-<!-- Added by: kousu, at: Tue 23 Mar 2021 11:54:23 PM EDT -->
-<!--te-->
-</div>
 <div class="section" id="initial-setup">
 <h2>Initial setup<a class="headerlink" href="#initial-setup" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="prerequisites">
@@ -1349,7 +1304,7 @@ mv $dataset.git $new_name.git
     <a class='right-next' id="next-link" href="git-annex.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Using git-annex</p>
+        <p class="prev-next-title">git-annex</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -39,7 +39,7 @@
     <link rel="shortcut icon" href="../../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Private BIDS datasets (git://data.neuro.polymtl.ca)" href="git-datasets.html" />
+    <link rel="next" title="data: private BIDS datasets" href="git-datasets.html" />
     <link rel="prev" title="NeuroPoly" href="../README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -285,12 +285,17 @@
       <ul>
        <li class="toctree-l4">
         <a class="reference internal" href="git-datasets.html">
-         Private BIDS datasets (git://data.neuro.polymtl.ca)
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           data
+          </span>
+         </code>
+         : private BIDS datasets
         </a>
        </li>
        <li class="toctree-l4">
         <a class="reference internal" href="git-annex.html">
-         Using git-annex
+         git-annex
         </a>
        </li>
       </ul>
@@ -912,8 +917,8 @@ drwxr-xr-x 2 u108545 domain users  4096 Jun  8 16:44 temp
 <h3>Mount with GUI<a class="headerlink" href="#mount-with-gui" title="Permalink to this headline">¶</a></h3>
 <p>When working on campus or <a class="reference external" href="../#vpn">over the VPN</a>, you can connect your computer to <code class="docutils literal notranslate"><span class="pre">duke</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="8e5212ad-ddd9-4170-a014-c1ecb84b9c90" name="66f79fa7-25ae-430f-9478-742ef617cf1f" type="radio">
-</input><label class="tabbed-label" for="8e5212ad-ddd9-4170-a014-c1ecb84b9c90">
+<input checked="checked" id="0e82ed55-8e11-4182-97c9-5ddf7c692fef" name="eac01d23-1fdb-4d28-ad46-bdf8a5221fda" type="radio">
+</input><label class="tabbed-label" for="0e82ed55-8e11-4182-97c9-5ddf7c692fef">
 Windows 10</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open Windows explorer</p></li>
@@ -925,8 +930,8 @@ Windows 10</label><div class="tabbed-content docutils">
 <li><p>Password: <code class="docutils literal notranslate"><span class="pre">&lt;POLYGRAMES_PASSWORD&gt;</span></code>.</p></li>
 </ol>
 </div>
-<input id="b876bc9b-b17d-4e41-8bb6-8c6d877aa556" name="66f79fa7-25ae-430f-9478-742ef617cf1f" type="radio">
-</input><label class="tabbed-label" for="b876bc9b-b17d-4e41-8bb6-8c6d877aa556">
+<input id="a2e22c00-9b36-4d8f-b42f-40ef357d275d" name="eac01d23-1fdb-4d28-ad46-bdf8a5221fda" type="radio">
+</input><label class="tabbed-label" for="a2e22c00-9b36-4d8f-b42f-40ef357d275d">
 macOS</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open Finder</p></li>
@@ -934,8 +939,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p><code class="docutils literal notranslate"><span class="pre">afp://duke.neuro.polymtl.ca/</span></code></p></li>
 </ol>
 </div>
-<input id="40841c75-ae9d-4280-848c-9c59afe53bd3" name="66f79fa7-25ae-430f-9478-742ef617cf1f" type="radio">
-</input><label class="tabbed-label" for="40841c75-ae9d-4280-848c-9c59afe53bd3">
+<input id="1fd1f15f-7c16-4507-b6e7-f88f548830be" name="eac01d23-1fdb-4d28-ad46-bdf8a5221fda" type="radio">
+</input><label class="tabbed-label" for="1fd1f15f-7c16-4507-b6e7-f88f548830be">
 Linux</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open File Browser</p></li>
@@ -951,8 +956,8 @@ Linux</label><div class="tabbed-content docutils">
 <h3>Mount with Terminal<a class="headerlink" href="#mount-with-terminal" title="Permalink to this headline">¶</a></h3>
 <p>You can also connect your computer from the CLI, or with a script, which might be more efficient in the long run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="d78e6cfb-22ac-4d99-a55b-9c73f99e4cbb" name="84ab4a05-871c-4646-a4e4-a8321d5bb5b9" type="radio">
-</input><label class="tabbed-label" for="d78e6cfb-22ac-4d99-a55b-9c73f99e4cbb">
+<input checked="checked" id="656c2087-45f7-44c1-85f0-015cec5c8aa9" name="bba2412d-9ffb-4bee-93e8-aa85f3d82da1" type="radio">
+</input><label class="tabbed-label" for="656c2087-45f7-44c1-85f0-015cec5c8aa9">
 Mac OSX</label><div class="tabbed-content docutils">
 <p>Create folder for the mount point on a location (your home directory) where you have read and write access:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir &lt;FOLDER_NAME&gt; <span class="c1"># (e.g. &lt;FOLDER_NAME&gt;=sct_testing)</span>
@@ -963,8 +968,8 @@ sudo umount &lt;FOLDER_NAME&gt;/
 </pre></div>
 </div>
 </div>
-<input id="ed679158-01a6-49b6-96c8-50866724aac5" name="84ab4a05-871c-4646-a4e4-a8321d5bb5b9" type="radio">
-</input><label class="tabbed-label" for="ed679158-01a6-49b6-96c8-50866724aac5">
+<input id="0196bfce-1e4b-4547-807a-2d1dfb374bac" name="bba2412d-9ffb-4bee-93e8-aa85f3d82da1" type="radio">
+</input><label class="tabbed-label" for="0196bfce-1e4b-4547-807a-2d1dfb374bac">
 Linux</label><div class="tabbed-content docutils">
 <p>To mount:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mount -t cifs //duke.neuro.polymtl.ca/&lt;FOLDER_NAME&gt; /mnt/duke/&lt;FOLDER_NAME&gt; -o <span class="nv">username</span><span class="o">=</span>&lt;GRAMES_USERNAME&gt;,noexec
@@ -978,8 +983,8 @@ Linux</label><div class="tabbed-content docutils">
 <h2>Poly-Grames home/ folder<a class="headerlink" href="#poly-grames-home-folder" title="Permalink to this headline">¶</a></h2>
 <p>Every <a class="reference external" href="../#poly-grames">GRAMES</a> account has a school-wide personal home folder. It is backed-up nightly.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="2fb74190-4e95-410f-aab2-77308474010e" name="d3728b1a-695c-48fc-b07c-8645be0cd074" type="radio">
-</input><label class="tabbed-label" for="2fb74190-4e95-410f-aab2-77308474010e">
+<input checked="checked" id="a1183780-3b5c-4aa4-9f46-e7567567cace" name="e7cc084b-a3b1-43ff-b9af-96e9dd811f53" type="radio">
+</input><label class="tabbed-label" for="a1183780-3b5c-4aa4-9f46-e7567567cace">
 macOS</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open Finder</p></li>
@@ -1041,7 +1046,7 @@ macOS</label><div class="tabbed-content docutils">
     <a class='right-next' id="next-link" href="git-datasets.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Private BIDS datasets (git://data.neuro.polymtl.ca)</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">data</span></code>: private BIDS datasets</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
