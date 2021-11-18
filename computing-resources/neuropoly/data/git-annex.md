@@ -1,4 +1,4 @@
-# Using git-annex
+# git-annex
 
 [`git annex`](git-annex.branchable.com/) is an extension to git that lets it handle large repos spread in pieces across multiple servers/disks/accounts.
 
@@ -25,20 +25,28 @@ You must have a unix OS. `git-annex` is simply not compatible with anything else
 
 ### Download
 
-  * **Linux**
-      * **Arch**: `pacman -Sy git-annex`
-      * **Fedora/RedHat/CentOS**: `dnf install git-annex`
-      * **Debian/Ubuntu**: `apt-get install git-annex`, but **you must be using Ubuntu 20.04** or **Debian Testing** or higher.
-      * **[ComputeCanada](https://docs.computecanada.ca/)**, a supercomputer we have accounts on: `module load StdEnv/2020  && module load git-annex` *in [every session or batch job](https://docs.computecanada.ca/wiki/Utiliser_des_modules/en#Loading_modules_automatically)*
-      * if on an older system and can't upgrade, you can try [installing `conda`](https://docs.conda.io/en/latest/miniconda.html) (or [miniforge](https://github.com/conda-forge/miniforge/) and then using `conda install -f conda-forge git-annex`.
-  * **macOS**: `brew install git-annex`
-  * **WSL**:
-      * **[Ubuntu-20.04](https://www.microsoft.com/store/apps/9n6svws3rx71)**: `apt install git-annex`
-      * **[Debian](https://www.microsoft.com/store/apps/9MSVKQC78PK6)**: `apt install git-annex`
-      * The [other distros](https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions) are supported.
+````{tabbed} Linux
+* **Arch**: `pacman -Sy git-annex`
+* **Fedora/RedHat/CentOS**: `dnf install git-annex`
+* **Debian/Ubuntu**: `apt-get install git-annex`, but **you must be using Ubuntu 20.04** or **Debian Testing** or higher.
+* **[ComputeCanada](https://docs.computecanada.ca/)**, a supercomputer we have accounts on: `module load StdEnv/2020  && module load git-annex` *in [every session or batch job](https://docs.computecanada.ca/wiki/Utiliser_des_modules/en#Loading_modules_automatically)*
+* if on an older system and can't upgrade, you can try [installing `conda`](https://docs.conda.io/en/latest/miniconda.html) (or [miniforge](https://github.com/conda-forge/miniforge/) and then using `conda install -f conda-forge git-annex`.
+````
 
-### ⚠️ Verify ⚠️
+````{tabbed} macOS
+```
+brew install git-annex
+```
+````
 
+````{tabbed} Windows 10 (via WSL)
+* **[Ubuntu-20.04](https://www.microsoft.com/store/apps/9n6svws3rx71)**: `apt install git-annex`
+* **[Debian](https://www.microsoft.com/store/apps/9MSVKQC78PK6)**: `apt install git-annex`
+* The [other distros](https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions) are supported.
+````
+
+
+````{warning}
 Check that `git-annex version` reports **version 8** or higher! It should look like:
 
 ```
@@ -52,6 +60,7 @@ operating system: linux x86_64
 supported repository versions: 8
 upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 ```
+````
 
 ### Global `git` config
 
@@ -113,30 +122,6 @@ git commit -m "Initial data"
 
 If you are working on a private, internal dataset, continue by [uploading to `data.neuro.polymtl.ca`](./internal-server.md#new-repository).
 
-## Troubleshooting
-
-### version problems
-
-If you have any error at all, the first thing to check is that you have `git-annex` version 8, [as explained above](#installation).
-
-
-### checking annex file locations
-
-The content of annexed files that have been downloaded locally is stored under `repo/.git/annex/objects/`. You can find which specific file corresponds to by using `git show` or `git log -p` to see the content that `git` has recorded for the file -- which will be a string giving the "annex pointer":
-
-```
-$ git show HEAD:derivatives/labels/sub-1140317/anat/sub-1140317_T1w_seg-manual.nii.gz
-/annex/objects/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
-```
-
-and then locating a file with this name in `.git/annex/objects/`; however, it is not as simple as just combining the two together, git-annex prepends extra filenames, so you need to use `find(1)` to locate the file:
-
-```
-$ find .git/annex/objects/ -name "SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz"
-.git/annex/objects/6V/X3/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
-.git/annex/objects/6V/X3/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
-```
-
 ## `annex.thin` Hardlinks <a id="hardlinks">
 
 `annex.thin` saves a lot of space by deduplicating file content via [hard links](https://wiki.debian.org/ln):
@@ -180,6 +165,29 @@ $ find . -inum 1319996
 ```
 
 
+## Troubleshooting
+
+### version problems
+
+If you have any error at all, the first thing to check is that you have `git-annex` version 8, [as explained above](#installation).
+
+### checking annex file locations
+
+The content of annexed files that have been downloaded locally is stored under `repo/.git/annex/objects/`. You can find which specific file corresponds to by using `git show` or `git log -p` to see the content that `git` has recorded for the file -- which will be a string giving the "annex pointer":
+
+```
+$ git show HEAD:derivatives/labels/sub-1140317/anat/sub-1140317_T1w_seg-manual.nii.gz
+/annex/objects/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
+```
+
+and then locating a file with this name in `.git/annex/objects/`; however, it is not as simple as just combining the two together, git-annex prepends extra filenames, so you need to use `find(1)` to locate the file:
+
+```
+$ find .git/annex/objects/ -name "SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz"
+.git/annex/objects/6V/X3/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
+.git/annex/objects/6V/X3/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
+```
+
 ### "a cosmetic problem affecting git status"
 
 Sometimes the `git-annex` filter will glitch, particularly during long uploads or downloads.
@@ -198,9 +206,7 @@ This doesn't touch file contents, so it should be safe to run anytime.
 
 The issue is that git-annex v8 uses a filter to expand the small pointers committed to git to full files and vice versa, and if interrupted while doing its work, it can leave files with full annexed contents that do not match the annex pointers git is expecting to see. `update-index` gives git a kickstart to fix it.
 
-
 ### Resetting
-
 
 `git-annex init` writes to a lot of places: the `git-annex` branch,
 `.git/annex` (including several sqlite databases?), `.git`/config, 
@@ -220,7 +226,6 @@ git config --unset annex.uuid
 #  then git annex init again? or what?
 ```
 
-
 ### `rm: cannot remove`
 
 When trying to get rid of a git-annex dataset, you will run into, for example:
@@ -239,4 +244,3 @@ This is because git-annex tries extra hard to make it hard to lose data, by mark
 $ chmod -R +w data-single-subject/.git/annex/
 $ rm -rf data-single-subject/
 ```
-
