@@ -43,7 +43,7 @@ Install [VirtualBox](https://virtualbox.org/), install a Linux distro inside of 
 
 
 ````{warning}
-Check that `git-annex version` reports **version 8** or higher! It should look like:
+Check that `git annex version` reports **version 8** or higher! It should look like:
 
 ```
 $ git annex version
