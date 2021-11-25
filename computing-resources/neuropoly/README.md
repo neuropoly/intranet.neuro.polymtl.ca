@@ -103,15 +103,20 @@ Once the VPN connection established, connect via ssh using the `STATION` you wan
 
 Note: For Windows systems, you can[ install Microsoft's ssh package](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse), [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10), [PuTTY](https://www.chiark.greenend.org.uk/\~sgtatham/putty/), or [cmder](https://cmder.net).
 
-Optionally, add this shortcut to your `~/.ssh/config` file to allow you to just type `ssh <STATION>` or any other host and be connected to the right place with the right username:
+Optionally, this shortcut. It allows you to just type `ssh <STATION>` and be connected:
 
 ```bash
+cat >~/.ssh/config_neuropoly <<EOF
 # GPU servers
-Match Host rosenberg,bireli
+Match Host romane,rosenberg,bireli
 HostName %h.neuro.polymtl.ca
 
 # CPU servers
-Match Host joplin,abbey,tristano,ferguson
+Match Host joplin,abbey,tristano
+HostName %h.neuro.polymtl.ca
+
+# Workstations
+Match Host ferguson,davis
 HostName %h.neuro.polymtl.ca
 
 # data servers
@@ -120,11 +125,12 @@ HostName %h.neuro.polymtl.ca
 User git
 
 Match host *.neuro.polymtl.ca
-User <POLYGRAMES_USERNAME>
-
-# passwords are required for grames accounts to access /mnt/duke: https://github.com/neuropoly/computers/issues/90
-Match host *.neuro.polymtl.ca user {u,p}*
+User <POLYGRAMES USERNAME> # fill in your username and remove this comment
+# passwords are required to access /mnt/duke: https://github.com/neuropoly/computers/issues/90:
 PreferredAuthentications password
+EOF
+
+echo 'Include ~/.ssh/config_neuropoly' >> ~/.ssh/config
 ```
 
 Add this to your `~/.ssh/config` to make multiple ssh connections faster and without retyping your password:
