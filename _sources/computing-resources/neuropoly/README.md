@@ -123,6 +123,7 @@ HostName %h.neuro.polymtl.ca
 Match Host data
 HostName %h.neuro.polymtl.ca
 User git
+PreferredAuthentications publickey
 
 Match host *.neuro.polymtl.ca
 User <POLYGRAMES USERNAME> # fill in your username and remove this comment

@@ -1088,15 +1088,15 @@
 <p>Contact Alexandru Foias to request VPN access be activated for your CAS account. When activated, <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a> will report “VPN_* = Actif”.</p>
 <p>The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing <code class="docutils literal notranslate"><span class="pre">openconnect</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="caa854e0-734d-4e48-be5c-539c36ce1e79" name="ef9132c4-b1aa-485f-884b-ae7300ca15e7" type="radio">
-</input><label class="tabbed-label" for="caa854e0-734d-4e48-be5c-539c36ce1e79">
+<input checked="checked" id="7b6169d4-c6c1-4c84-9ddf-10868a7dfb6d" name="ec3ee9b1-02da-4402-b514-616d0b09ca3b" type="radio">
+</input><label class="tabbed-label" for="7b6169d4-c6c1-4c84-9ddf-10868a7dfb6d">
 MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
 </div>
 </div>
-<input id="25655b32-d809-40bb-a38d-41645ed1e671" name="ef9132c4-b1aa-485f-884b-ae7300ca15e7" type="radio">
-</input><label class="tabbed-label" for="25655b32-d809-40bb-a38d-41645ed1e671">
+<input id="def84109-2cd8-4b0a-8db9-c1ae176f5c2d" name="ec3ee9b1-02da-4402-b514-616d0b09ca3b" type="radio">
+</input><label class="tabbed-label" for="def84109-2cd8-4b0a-8db9-c1ae176f5c2d">
 PC/Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1144,6 +1144,7 @@ PC/Linux</label><div class="tabbed-content docutils">
 <span class="s">Match Host data</span>
 <span class="s">HostName %h.neuro.polymtl.ca</span>
 <span class="s">User git</span>
+<span class="s">PreferredAuthentications publickey</span>
 
 <span class="s">Match host *.neuro.polymtl.ca</span>
 <span class="s">User &lt;POLYGRAMES USERNAME&gt; # fill in your username and remove this comment</span>
@@ -1166,8 +1167,8 @@ PC/Linux</label><div class="tabbed-content docutils">
 <div class="section" id="vnc-graphical-interface">
 <h3>VNC (graphical interface)<a class="headerlink" href="#vnc-graphical-interface" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="264f5894-abef-4221-bee6-2eb2d5d9325b" name="9ea61107-2409-4aab-ab9d-d22e0d904392" type="radio">
-</input><label class="tabbed-label" for="264f5894-abef-4221-bee6-2eb2d5d9325b">
+<input checked="checked" id="10cda2bc-fac8-4844-9584-45aa5cd472a7" name="f1ba9f1b-f8a5-4ca2-a7f3-9f7928febb87" type="radio">
+</input><label class="tabbed-label" for="10cda2bc-fac8-4844-9584-45aa5cd472a7">
 macOS</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open Finder</p></li>
@@ -1176,8 +1177,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p>You can use your local/network account information or the <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg">shared account credentials</a></p></li>
 </ol>
 </div>
-<input id="4fc64124-3089-4444-a870-27eaa22ec7b8" name="9ea61107-2409-4aab-ab9d-d22e0d904392" type="radio">
-</input><label class="tabbed-label" for="4fc64124-3089-4444-a870-27eaa22ec7b8">
+<input id="5583e3ba-4ec4-4fa8-aca2-c279789c3c00" name="f1ba9f1b-f8a5-4ca2-a7f3-9f7928febb87" type="radio">
+</input><label class="tabbed-label" for="5583e3ba-4ec4-4fa8-aca2-c279789c3c00">
 PC/Linux</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Establish a VNC connection using <a class="reference external" href="https://wiki.gnome.org/Apps/Vinagre/">vinaigre</a>.</p></li>
@@ -1236,8 +1237,8 @@ PC/Linux</label><div class="tabbed-content docutils">
 <div class="section" id="sftp">
 <h3>SFTP<a class="headerlink" href="#sftp" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="148cc09e-94ed-4d7c-aac9-7dc5952ea349" name="082255f5-d725-4d7b-95f2-5207ce0acc48" type="radio">
-</input><label class="tabbed-label" for="148cc09e-94ed-4d7c-aac9-7dc5952ea349">
+<input checked="checked" id="8a3d1ff9-4f68-40c9-8163-1a6ad1fbdb03" name="52821b7e-83c6-48ae-9a2d-e4d76c38ae9c" type="radio">
+</input><label class="tabbed-label" for="8a3d1ff9-4f68-40c9-8163-1a6ad1fbdb03">
 mac</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open the Terminal</p></li>
@@ -1252,8 +1253,8 @@ mac</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="25d16baa-a222-4072-892f-8bb880f02c41" name="082255f5-d725-4d7b-95f2-5207ce0acc48" type="radio">
-</input><label class="tabbed-label" for="25d16baa-a222-4072-892f-8bb880f02c41">
+<input id="beda72e0-e7c8-4e40-af9b-9e463e968958" name="52821b7e-83c6-48ae-9a2d-e4d76c38ae9c" type="radio">
+</input><label class="tabbed-label" for="beda72e0-e7c8-4e40-af9b-9e463e968958">
 Linux</label><div class="tabbed-content docutils">
 <p>Files &gt; Other locations &gt; Connect to Server &gt; sftp://USERNAME&#64;CLUSTER.neuro.polymtl.ca/</p>
 </div>
