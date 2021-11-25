@@ -1088,15 +1088,15 @@
 <p>Contact Alexandru Foias to request VPN access be activated for your CAS account. When activated, <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a> will report “VPN_* = Actif”.</p>
 <p>The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing <code class="docutils literal notranslate"><span class="pre">openconnect</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="890ede59-b2b3-4be6-bd19-56a34e4c9b57" name="a09ea2f8-78bf-4aca-84fd-dc5ea3e83562" type="radio">
-</input><label class="tabbed-label" for="890ede59-b2b3-4be6-bd19-56a34e4c9b57">
+<input checked="checked" id="caa854e0-734d-4e48-be5c-539c36ce1e79" name="ef9132c4-b1aa-485f-884b-ae7300ca15e7" type="radio">
+</input><label class="tabbed-label" for="caa854e0-734d-4e48-be5c-539c36ce1e79">
 MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
 </div>
 </div>
-<input id="e5261944-0628-4ac6-b87e-98ed33766557" name="a09ea2f8-78bf-4aca-84fd-dc5ea3e83562" type="radio">
-</input><label class="tabbed-label" for="e5261944-0628-4ac6-b87e-98ed33766557">
+<input id="25655b32-d809-40bb-a38d-41645ed1e671" name="ef9132c4-b1aa-485f-884b-ae7300ca15e7" type="radio">
+</input><label class="tabbed-label" for="25655b32-d809-40bb-a38d-41645ed1e671">
 PC/Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1126,26 +1126,32 @@ PC/Linux</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 <p>Note: For Windows systems, you can<a class="reference external" href="https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse"> install Microsoft’s ssh package</a>, <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a>, <a class="reference external" href="https://www.chiark.greenend.org.uk/%5C~sgtatham/putty/">PuTTY</a>, or <a class="reference external" href="https://cmder.net">cmder</a>.</p>
-<p>Optionally, add this shortcut to your <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> file to allow you to just type <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;STATION&gt;</span></code> or any other host and be connected to the right place with the right username:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># GPU servers</span>
-Match Host rosenberg,bireli
-HostName %h.neuro.polymtl.ca
+<p>Optionally, this shortcut. It allows you to just type <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;STATION&gt;</span></code> and be connected:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat &gt;~/.ssh/config_neuropoly <span class="s">&lt;&lt;EOF</span>
+<span class="s"># GPU servers</span>
+<span class="s">Match Host romane,rosenberg,bireli</span>
+<span class="s">HostName %h.neuro.polymtl.ca</span>
 
-<span class="c1"># CPU servers</span>
-Match Host joplin,abbey,tristano,ferguson
-HostName %h.neuro.polymtl.ca
+<span class="s"># CPU servers</span>
+<span class="s">Match Host joplin,abbey,tristano</span>
+<span class="s">HostName %h.neuro.polymtl.ca</span>
 
-<span class="c1"># data servers</span>
-Match Host data
-HostName %h.neuro.polymtl.ca
-User git
+<span class="s"># Workstations</span>
+<span class="s">Match Host ferguson,davis</span>
+<span class="s">HostName %h.neuro.polymtl.ca</span>
 
-Match host *.neuro.polymtl.ca
-User &lt;POLYGRAMES_USERNAME&gt;
+<span class="s"># data servers</span>
+<span class="s">Match Host data</span>
+<span class="s">HostName %h.neuro.polymtl.ca</span>
+<span class="s">User git</span>
 
-<span class="c1"># passwords are required for grames accounts to access /mnt/duke: https://github.com/neuropoly/computers/issues/90</span>
-Match host *.neuro.polymtl.ca user <span class="o">{</span>u,p<span class="o">}</span>*
-PreferredAuthentications password
+<span class="s">Match host *.neuro.polymtl.ca</span>
+<span class="s">User &lt;POLYGRAMES USERNAME&gt; # fill in your username and remove this comment</span>
+<span class="s"># passwords are required to access /mnt/duke: https://github.com/neuropoly/computers/issues/90:</span>
+<span class="s">PreferredAuthentications password</span>
+<span class="s">EOF</span>
+
+<span class="nb">echo</span> <span class="s1">&#39;Include ~/.ssh/config_neuropoly&#39;</span> &gt;&gt; ~/.ssh/config
 </pre></div>
 </div>
 <p>Add this to your <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> to make multiple ssh connections faster and without retyping your password:</p>
@@ -1160,8 +1166,8 @@ PreferredAuthentications password
 <div class="section" id="vnc-graphical-interface">
 <h3>VNC (graphical interface)<a class="headerlink" href="#vnc-graphical-interface" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="eb3b79b1-431f-4ef2-9390-149e405d6ca1" name="8ab815f8-6690-4229-860b-dead0c268f88" type="radio">
-</input><label class="tabbed-label" for="eb3b79b1-431f-4ef2-9390-149e405d6ca1">
+<input checked="checked" id="264f5894-abef-4221-bee6-2eb2d5d9325b" name="9ea61107-2409-4aab-ab9d-d22e0d904392" type="radio">
+</input><label class="tabbed-label" for="264f5894-abef-4221-bee6-2eb2d5d9325b">
 macOS</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open Finder</p></li>
@@ -1170,8 +1176,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p>You can use your local/network account information or the <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg">shared account credentials</a></p></li>
 </ol>
 </div>
-<input id="df73fed5-dbeb-41c2-8955-a4409480b67f" name="8ab815f8-6690-4229-860b-dead0c268f88" type="radio">
-</input><label class="tabbed-label" for="df73fed5-dbeb-41c2-8955-a4409480b67f">
+<input id="4fc64124-3089-4444-a870-27eaa22ec7b8" name="9ea61107-2409-4aab-ab9d-d22e0d904392" type="radio">
+</input><label class="tabbed-label" for="4fc64124-3089-4444-a870-27eaa22ec7b8">
 PC/Linux</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Establish a VNC connection using <a class="reference external" href="https://wiki.gnome.org/Apps/Vinagre/">vinaigre</a>.</p></li>
@@ -1230,8 +1236,8 @@ PC/Linux</label><div class="tabbed-content docutils">
 <div class="section" id="sftp">
 <h3>SFTP<a class="headerlink" href="#sftp" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="675ce514-940c-47c6-bb1c-2140d31be34f" name="e6ce5a16-b9b8-4b0c-8dc9-5f89c258092c" type="radio">
-</input><label class="tabbed-label" for="675ce514-940c-47c6-bb1c-2140d31be34f">
+<input checked="checked" id="148cc09e-94ed-4d7c-aac9-7dc5952ea349" name="082255f5-d725-4d7b-95f2-5207ce0acc48" type="radio">
+</input><label class="tabbed-label" for="148cc09e-94ed-4d7c-aac9-7dc5952ea349">
 mac</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open the Terminal</p></li>
@@ -1246,8 +1252,8 @@ mac</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="15e20c26-4ffd-498d-9abd-da422c184581" name="e6ce5a16-b9b8-4b0c-8dc9-5f89c258092c" type="radio">
-</input><label class="tabbed-label" for="15e20c26-4ffd-498d-9abd-da422c184581">
+<input id="25d16baa-a222-4072-892f-8bb880f02c41" name="082255f5-d725-4d7b-95f2-5207ce0acc48" type="radio">
+</input><label class="tabbed-label" for="25d16baa-a222-4072-892f-8bb880f02c41">
 Linux</label><div class="tabbed-content docutils">
 <p>Files &gt; Other locations &gt; Connect to Server &gt; sftp://USERNAME&#64;CLUSTER.neuro.polymtl.ca/</p>
 </div>
