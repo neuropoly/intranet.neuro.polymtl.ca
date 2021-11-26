@@ -66,17 +66,33 @@ The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by fi
 ```
 brew install openconnect
 ```
+
+Open your Keychain program and click '+' to add a new password:
+- Name: `poly-vpn`
+- Account: your `YOUR_CAS_USERNAME` (corresponds to your GRAMES username)
+- Password: enter your password here.
+
+Then, create the following script:
+```bash
+#!/bin/bash
+# vpn.sh
+
+set -eo pipefail
+
+USER="<YOUR_CAS_USERNAME>"
+PASS="$(security find-generic-password -a "${USER}" -s poly-vpn -w)"
+GROUP=PolySSL # or PolyInvites, depending on your account's status
+echo -n "$PASS" | sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-stdin ssl.vpn.polymtl.ca
+```
+
 ````
 
 ````{tabbed} PC/Linux
 ```
 apt install openconnect
 ```
-````
 
-
-and then calling it with this script:
-
+Then, create the following script:
 ```bash
 #!/bin/bash
 # vpn.sh
@@ -89,9 +105,13 @@ GROUP=PolySSL # or PolyInvites, depending on your account's status
 echo -n "$PASS" | sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-stdin ssl.vpn.polymtl.ca
 ```
 
+````
+
+To connect to the VPN, you need to run:
 ```
 ./vpn.sh
 ```
+
 
 ### SSH (command line)
 

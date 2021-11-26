@@ -1088,22 +1088,38 @@
 <p>Contact Alexandru Foias to request VPN access be activated for your CAS account. When activated, <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a> will report “VPN_* = Actif”.</p>
 <p>The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing <code class="docutils literal notranslate"><span class="pre">openconnect</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="7b6169d4-c6c1-4c84-9ddf-10868a7dfb6d" name="ec3ee9b1-02da-4402-b514-616d0b09ca3b" type="radio">
-</input><label class="tabbed-label" for="7b6169d4-c6c1-4c84-9ddf-10868a7dfb6d">
+<input checked="checked" id="b1c6a3e4-4d08-4cf9-bba6-49dfe796ec62" name="9e9d6e34-df48-48cf-9aaf-04a55d162f1d" type="radio">
+</input><label class="tabbed-label" for="b1c6a3e4-4d08-4cf9-bba6-49dfe796ec62">
 MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
 </div>
+<p>Open your Keychain program and click ‘+’ to add a new password:</p>
+<ul class="simple">
+<li><p>Name: <code class="docutils literal notranslate"><span class="pre">poly-vpn</span></code></p></li>
+<li><p>Account: your <code class="docutils literal notranslate"><span class="pre">YOUR_CAS_USERNAME</span></code> (corresponds to your GRAMES username)</p></li>
+<li><p>Password: enter your password here.</p></li>
+</ul>
+<p>Then, create the following script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1"># vpn.sh</span>
+
+<span class="nb">set</span> -eo pipefail
+
+<span class="nv">USER</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR_CAS_USERNAME&gt;&quot;</span>
+<span class="nv">PASS</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>security find-generic-password -a <span class="s2">&quot;</span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span><span class="s2">&quot;</span> -s poly-vpn -w<span class="k">)</span><span class="s2">&quot;</span>
+<span class="nv">GROUP</span><span class="o">=</span>PolySSL <span class="c1"># or PolyInvites, depending on your account&#39;s status</span>
+<span class="nb">echo</span> -n <span class="s2">&quot;</span><span class="nv">$PASS</span><span class="s2">&quot;</span> <span class="p">|</span> sudo openconnect -u <span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span> --authgroup <span class="s2">&quot;</span><span class="nv">$GROUP</span><span class="s2">&quot;</span> --passwd-on-stdin ssl.vpn.polymtl.ca
+</pre></div>
 </div>
-<input id="def84109-2cd8-4b0a-8db9-c1ae176f5c2d" name="ec3ee9b1-02da-4402-b514-616d0b09ca3b" type="radio">
-</input><label class="tabbed-label" for="def84109-2cd8-4b0a-8db9-c1ae176f5c2d">
+</div>
+<input id="c1283472-b7b8-4636-bfb7-1715965ed746" name="9e9d6e34-df48-48cf-9aaf-04a55d162f1d" type="radio">
+</input><label class="tabbed-label" for="c1283472-b7b8-4636-bfb7-1715965ed746">
 PC/Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
 </div>
-</div>
-</div>
-<p>and then calling it with this script:</p>
+<p>Then, create the following script:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1"># vpn.sh</span>
 
@@ -1115,6 +1131,9 @@ PC/Linux</label><div class="tabbed-content docutils">
 <span class="nb">echo</span> -n <span class="s2">&quot;</span><span class="nv">$PASS</span><span class="s2">&quot;</span> <span class="p">|</span> sudo openconnect -u <span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span> --authgroup <span class="s2">&quot;</span><span class="nv">$GROUP</span><span class="s2">&quot;</span> --passwd-on-stdin ssl.vpn.polymtl.ca
 </pre></div>
 </div>
+</div>
+</div>
+<p>To connect to the VPN, you need to run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">vpn</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
@@ -1167,8 +1186,8 @@ PC/Linux</label><div class="tabbed-content docutils">
 <div class="section" id="vnc-graphical-interface">
 <h3>VNC (graphical interface)<a class="headerlink" href="#vnc-graphical-interface" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="10cda2bc-fac8-4844-9584-45aa5cd472a7" name="f1ba9f1b-f8a5-4ca2-a7f3-9f7928febb87" type="radio">
-</input><label class="tabbed-label" for="10cda2bc-fac8-4844-9584-45aa5cd472a7">
+<input checked="checked" id="74cf67e5-b6c3-4135-8f3c-dc9542cad496" name="242669eb-8531-4448-885d-6b7e717fdafe" type="radio">
+</input><label class="tabbed-label" for="74cf67e5-b6c3-4135-8f3c-dc9542cad496">
 macOS</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open Finder</p></li>
@@ -1177,8 +1196,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p>You can use your local/network account information or the <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg">shared account credentials</a></p></li>
 </ol>
 </div>
-<input id="5583e3ba-4ec4-4fa8-aca2-c279789c3c00" name="f1ba9f1b-f8a5-4ca2-a7f3-9f7928febb87" type="radio">
-</input><label class="tabbed-label" for="5583e3ba-4ec4-4fa8-aca2-c279789c3c00">
+<input id="fb2a9575-5703-42df-9bd8-4d34d6c5a592" name="242669eb-8531-4448-885d-6b7e717fdafe" type="radio">
+</input><label class="tabbed-label" for="fb2a9575-5703-42df-9bd8-4d34d6c5a592">
 PC/Linux</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Establish a VNC connection using <a class="reference external" href="https://wiki.gnome.org/Apps/Vinagre/">vinaigre</a>.</p></li>
@@ -1237,8 +1256,8 @@ PC/Linux</label><div class="tabbed-content docutils">
 <div class="section" id="sftp">
 <h3>SFTP<a class="headerlink" href="#sftp" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="8a3d1ff9-4f68-40c9-8163-1a6ad1fbdb03" name="52821b7e-83c6-48ae-9a2d-e4d76c38ae9c" type="radio">
-</input><label class="tabbed-label" for="8a3d1ff9-4f68-40c9-8163-1a6ad1fbdb03">
+<input checked="checked" id="9e723808-a78a-4e2a-ad3e-70635a06743c" name="7828aca9-0a11-4fcf-97b3-b4e6f489e023" type="radio">
+</input><label class="tabbed-label" for="9e723808-a78a-4e2a-ad3e-70635a06743c">
 mac</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open the Terminal</p></li>
@@ -1253,8 +1272,8 @@ mac</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="beda72e0-e7c8-4e40-af9b-9e463e968958" name="52821b7e-83c6-48ae-9a2d-e4d76c38ae9c" type="radio">
-</input><label class="tabbed-label" for="beda72e0-e7c8-4e40-af9b-9e463e968958">
+<input id="a11e3dee-4c8f-4c64-bbc9-f029d6de9390" name="7828aca9-0a11-4fcf-97b3-b4e6f489e023" type="radio">
+</input><label class="tabbed-label" for="a11e3dee-4c8f-4c64-bbc9-f029d6de9390">
 Linux</label><div class="tabbed-content docutils">
 <p>Files &gt; Other locations &gt; Connect to Server &gt; sftp://USERNAME&#64;CLUSTER.neuro.polymtl.ca/</p>
 </div>
