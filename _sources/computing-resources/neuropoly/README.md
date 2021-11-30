@@ -229,8 +229,7 @@ After starting the vncserver, connect to it as above.
  vncserver -kill :<PORT_NUMBER>
 ```
 
-### SFTP
-
+### Mount a remote station
 
 ````{tabbed} mac
 1. Open the Terminal
@@ -241,7 +240,7 @@ brew install --cask osxfuse
 brew install sshfs
 ```
 
-3\. Mount drive from CLUSTER
+3\. Mount drive from CLUSTER using SFTP
 
 ```
 sudo sshfs -o allow_other,defer_permissions,IdentityFile=~/.ssh/id_rsa <username>@CLUSTER.neuro.polymtl.ca:/folder/to/mount /where/to/mount
