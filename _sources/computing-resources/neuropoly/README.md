@@ -198,7 +198,7 @@ If you use `~` or nothing (as shown) after the `:`, the connection will be relat
 sshfs <STATION>:~/project1/ cluster_folder
 ```
 
-Will attach the remote `/home/GRAMES.POLYMTL.CA/$USER/project1/` to the local `./cluster_folder`, and
+will attach the remote `/home/GRAMES.POLYMTL.CA/$USER/project1/` to the local `./cluster_folder`, and
 
 ```
 sshfs <STATION>:project1/ cluster_folder
@@ -206,7 +206,7 @@ sshfs <STATION>:project1/ cluster_folder
 
 will do the exact same.
 
-However if you use `/` after the `:`, the mount will be relative to the _remote root directory_`, e.g.
+However if you use `/` after the `:`, the mount will be relative to the _remote root directory_, e.g.
 
 ```
 sshfs <STATION>:/tmp/ cluster_folder
