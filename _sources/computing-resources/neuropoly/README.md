@@ -169,29 +169,29 @@ ControlPersist 3s
 `ssh` also allows accessing remote files, via [`sftp`](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol).
 
 The best way to do this is `sshfs`, which makes them appear as if they were a drive on your computer:
-​
+
 1. Install sshfs, if not yet installed:
-​
+
 ````{tabbed} Linux
 ```
 sudo apt install -y sshfs
 ```
 ````
-​
+
 ````{tabbed} mac
 ```
 brew install --cask osxfuse
 brew install sshfs
 ```
 ````
-​
+
 2. Mount folder
-​
+
 ```
 mkdir cluster_folder
 sshfs <STATION>: cluster_folder
 ```
-​
+
 If you use `~` or nothing (as shown) after the `:`, the connection will be relative to to your _remote_ home directory, e.g.
 
 ```
@@ -207,13 +207,13 @@ sshfs <STATION>:project1/ cluster_folder
 will do the exact same.
 
 However if you use `/` after the `:`, the mount will be relative to the _remote root directory_`, e.g.
-​
+
 ```
 sshfs <STATION>:/tmp/ cluster_folder
 ```
 
 will attach the remote `/tmp/` to the local `./cluster_folder`
-​
+
 ### VNC (graphical interface)
 
 

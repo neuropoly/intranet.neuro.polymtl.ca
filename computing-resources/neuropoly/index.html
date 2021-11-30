@@ -1088,8 +1088,8 @@
 <p>Contact Alexandru Foias to request VPN access be activated for your CAS account. When activated, <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a> will report “VPN_* = Actif”.</p>
 <p>The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing <code class="docutils literal notranslate"><span class="pre">openconnect</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="a460639a-802c-45e2-889f-d44431952cdd" name="d5ea7e05-0c6f-453e-a5d4-05a6961ea0f0" type="radio">
-</input><label class="tabbed-label" for="a460639a-802c-45e2-889f-d44431952cdd">
+<input checked="checked" id="772e4bba-29ad-4a9e-a1cc-5fb2f5c8dcaf" name="0b629fb1-2b83-4975-b4f0-445e60d2ce6c" type="radio">
+</input><label class="tabbed-label" for="772e4bba-29ad-4a9e-a1cc-5fb2f5c8dcaf">
 MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1113,8 +1113,8 @@ MacOS</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="f7f70ce2-b952-4bc8-85e0-1d190115582c" name="d5ea7e05-0c6f-453e-a5d4-05a6961ea0f0" type="radio">
-</input><label class="tabbed-label" for="f7f70ce2-b952-4bc8-85e0-1d190115582c">
+<input id="4850fd99-3392-48a3-a7bf-4254f1105925" name="0b629fb1-2b83-4975-b4f0-445e60d2ce6c" type="radio">
+</input><label class="tabbed-label" for="4850fd99-3392-48a3-a7bf-4254f1105925">
 PC/Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1185,25 +1185,20 @@ PC/Linux</label><div class="tabbed-content docutils">
 <div class="section" id="sftp-mount-a-remote-station">
 <h3>SFTP (Mount a remote station)<a class="headerlink" href="#sftp-mount-a-remote-station" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">ssh</span></code> also allows accessing remote files, via <a class="reference external" href="https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol"><code class="docutils literal notranslate"><span class="pre">sftp</span></code></a>.</p>
-<p>The best way to do this is <code class="docutils literal notranslate"><span class="pre">sshfs</span></code>, which makes them appear as if they were a drive on your computer:
-​</p>
+<p>The best way to do this is <code class="docutils literal notranslate"><span class="pre">sshfs</span></code>, which makes them appear as if they were a drive on your computer:</p>
 <ol class="simple">
-<li><p>Install sshfs, if not yet installed:
-​</p></li>
+<li><p>Install sshfs, if not yet installed:</p></li>
 </ol>
 <div class="tabbed-set docutils">
-<input checked="checked" id="c5acd3a4-1d98-4ed8-a46f-1860ffaa5836" name="22d51ec6-d3f6-406d-addb-6d61151ea697" type="radio">
-</input><label class="tabbed-label" for="c5acd3a4-1d98-4ed8-a46f-1860ffaa5836">
+<input checked="checked" id="a189ee8d-f5a3-459a-9b58-8cc58fce7da1" name="9351d49e-c0e8-4204-b550-783f698494bf" type="radio">
+</input><label class="tabbed-label" for="a189ee8d-f5a3-459a-9b58-8cc58fce7da1">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">sshfs</span>
 </pre></div>
 </div>
 </div>
-</div>
-<p>​</p>
-<div class="tabbed-set docutils">
-<input checked="checked" id="36772ccf-f879-4bd3-8123-b032629bdae3" name="b7d374e8-eb61-4b5f-a880-48adc4e87541" type="radio">
-</input><label class="tabbed-label" for="36772ccf-f879-4bd3-8123-b032629bdae3">
+<input id="9bfe769e-4fd1-4f6f-a774-728240139e06" name="9351d49e-c0e8-4204-b550-783f698494bf" type="radio">
+</input><label class="tabbed-label" for="9bfe769e-4fd1-4f6f-a774-728240139e06">
 mac</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="o">--</span><span class="n">cask</span> <span class="n">osxfuse</span>
 <span class="n">brew</span> <span class="n">install</span> <span class="n">sshfs</span>
@@ -1211,15 +1206,14 @@ mac</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-<p>​
-2. Mount folder
-​</p>
+<ol class="simple">
+<li><p>Mount folder</p></li>
+</ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">cluster_folder</span>
 <span class="n">sshfs</span> <span class="o">&lt;</span><span class="n">STATION</span><span class="o">&gt;</span><span class="p">:</span> <span class="n">cluster_folder</span>
 </pre></div>
 </div>
-<p>​
-If you use <code class="docutils literal notranslate"><span class="pre">~</span></code> or nothing (as shown) after the <code class="docutils literal notranslate"><span class="pre">:</span></code>, the connection will be relative to to your <em>remote</em> home directory, e.g.</p>
+<p>If you use <code class="docutils literal notranslate"><span class="pre">~</span></code> or nothing (as shown) after the <code class="docutils literal notranslate"><span class="pre">:</span></code>, the connection will be relative to to your <em>remote</em> home directory, e.g.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sshfs</span> <span class="o">&lt;</span><span class="n">STATION</span><span class="o">&gt;</span><span class="p">:</span><span class="o">~/</span><span class="n">project1</span><span class="o">/</span> <span class="n">cluster_folder</span>
 </pre></div>
 </div>
@@ -1228,19 +1222,17 @@ If you use <code class="docutils literal notranslate"><span class="pre">~</span>
 </pre></div>
 </div>
 <p>will do the exact same.</p>
-<p>However if you use <code class="docutils literal notranslate"><span class="pre">/</span></code> after the <code class="docutils literal notranslate"><span class="pre">:</span></code>, the mount will be relative to the <em>remote root directory</em>`, e.g.
-​</p>
+<p>However if you use <code class="docutils literal notranslate"><span class="pre">/</span></code> after the <code class="docutils literal notranslate"><span class="pre">:</span></code>, the mount will be relative to the <em>remote root directory</em>`, e.g.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sshfs</span> <span class="o">&lt;</span><span class="n">STATION</span><span class="o">&gt;</span><span class="p">:</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span> <span class="n">cluster_folder</span>
 </pre></div>
 </div>
-<p>will attach the remote <code class="docutils literal notranslate"><span class="pre">/tmp/</span></code> to the local <code class="docutils literal notranslate"><span class="pre">./cluster_folder</span></code>
-​</p>
+<p>will attach the remote <code class="docutils literal notranslate"><span class="pre">/tmp/</span></code> to the local <code class="docutils literal notranslate"><span class="pre">./cluster_folder</span></code></p>
 </div>
 <div class="section" id="vnc-graphical-interface">
 <h3>VNC (graphical interface)<a class="headerlink" href="#vnc-graphical-interface" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="59fe42c8-b6b3-4b67-9c7f-f7091d84bf65" name="55134a5c-917e-4a34-b59d-99e0e18d5642" type="radio">
-</input><label class="tabbed-label" for="59fe42c8-b6b3-4b67-9c7f-f7091d84bf65">
+<input checked="checked" id="73177afd-28b8-4ccd-9209-7507324fdd89" name="c75e88dd-0997-4a99-8038-bfba559c4978" type="radio">
+</input><label class="tabbed-label" for="73177afd-28b8-4ccd-9209-7507324fdd89">
 macOS</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open Finder</p></li>
@@ -1249,8 +1241,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p>You can use your local/network account information or the <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg">shared account credentials</a></p></li>
 </ol>
 </div>
-<input id="1f4d218d-25d6-49a3-91c0-a032f716e048" name="55134a5c-917e-4a34-b59d-99e0e18d5642" type="radio">
-</input><label class="tabbed-label" for="1f4d218d-25d6-49a3-91c0-a032f716e048">
+<input id="748ee82f-3f46-4ba3-9f2e-ac64ecee51e9" name="c75e88dd-0997-4a99-8038-bfba559c4978" type="radio">
+</input><label class="tabbed-label" for="748ee82f-3f46-4ba3-9f2e-ac64ecee51e9">
 PC/Linux</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Establish a VNC connection using <a class="reference external" href="https://wiki.gnome.org/Apps/Vinagre/">vinaigre</a>.</p></li>
