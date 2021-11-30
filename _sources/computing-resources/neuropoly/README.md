@@ -163,8 +163,57 @@ ControlPath ~/.ssh/%r@%h:%p
 ControlPersist 3s
 ```
 
-To avoid having to enter your password, you can also use an [SSH key](../../software-development/bash-shell/#ssh-public-key).
 
+### SFTP (Mount a remote station)
+
+`ssh` also allows accessing remote files, via [`sftp`](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol).
+
+The best way to do this is `sshfs`, which makes them appear as if they were a drive on your computer:
+​
+1. Install sshfs, if not yet installed:
+​
+````{tabbed} Linux
+```
+sudo apt install -y sshfs
+```
+````
+​
+````{tabbed} mac
+```
+brew install --cask osxfuse
+brew install sshfs
+```
+````
+​
+2. Mount folder
+​
+```
+mkdir cluster_folder
+sshfs <STATION>: cluster_folder
+```
+​
+If you use `~` or nothing (as shown) after the `:`, the connection will be relative to to your _remote_ home directory, e.g.
+
+```
+sshfs <STATION>:~/project1/ cluster_folder
+```
+
+Will attach the remote `/home/GRAMES.POLYMTL.CA/$USER/project1/` to the local `./cluster_folder`, and
+
+```
+sshfs <STATION>:project1/ cluster_folder
+```
+
+will do the exact same.
+
+However if you use `/` after the `:`, the mount will be relative to the _remote root directory_`, e.g.
+​
+```
+sshfs <STATION>:/tmp/ cluster_folder
+```
+
+will attach the remote `/tmp/` to the local `./cluster_folder`
+​
 ### VNC (graphical interface)
 
 
@@ -228,28 +277,6 @@ After starting the vncserver, connect to it as above.
 ```bash
  vncserver -kill :<PORT_NUMBER>
 ```
-
-### Mount a remote station
-
-````{tabbed} mac
-1. Open the Terminal
-2. Install OSX Fuse and SSHFS
-
-```
-brew install --cask osxfuse
-brew install sshfs
-```
-
-3\. Mount drive from CLUSTER using SFTP
-
-```
-sudo sshfs -o allow_other,defer_permissions,IdentityFile=~/.ssh/id_rsa <username>@CLUSTER.neuro.polymtl.ca:/folder/to/mount /where/to/mount
-```
-````
-
-````{tabbed} Linux
-Files > Other locations > Connect to Server > sftp://USERNAME@CLUSTER.neuro.polymtl.ca/
-````
 
 
 ## CPU/GPU Clusters <a href="computingprogramming_stations" id="computingprogramming_stations"></a>

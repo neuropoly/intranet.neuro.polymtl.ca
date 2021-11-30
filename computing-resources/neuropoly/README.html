@@ -884,6 +884,11 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sftp-mount-a-remote-station">
+     SFTP (Mount a remote station)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#vnc-graphical-interface">
      VNC (graphical interface)
     </a>
@@ -894,11 +899,6 @@
       </a>
      </li>
     </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mount-a-remote-station">
-     Mount a remote station
-    </a>
    </li>
   </ul>
  </li>
@@ -1088,8 +1088,8 @@
 <p>Contact Alexandru Foias to request VPN access be activated for your CAS account. When activated, <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a> will report “VPN_* = Actif”.</p>
 <p>The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing <code class="docutils literal notranslate"><span class="pre">openconnect</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="2b0e9a4d-cf4a-4438-a772-0bd5a4a55d43" name="262338c3-713c-4d0e-9a67-81bbbc5ff10b" type="radio">
-</input><label class="tabbed-label" for="2b0e9a4d-cf4a-4438-a772-0bd5a4a55d43">
+<input checked="checked" id="a460639a-802c-45e2-889f-d44431952cdd" name="d5ea7e05-0c6f-453e-a5d4-05a6961ea0f0" type="radio">
+</input><label class="tabbed-label" for="a460639a-802c-45e2-889f-d44431952cdd">
 MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1113,8 +1113,8 @@ MacOS</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="e4dee638-cfff-4e92-b069-ae9d951a21a3" name="262338c3-713c-4d0e-9a67-81bbbc5ff10b" type="radio">
-</input><label class="tabbed-label" for="e4dee638-cfff-4e92-b069-ae9d951a21a3">
+<input id="f7f70ce2-b952-4bc8-85e0-1d190115582c" name="d5ea7e05-0c6f-453e-a5d4-05a6961ea0f0" type="radio">
+</input><label class="tabbed-label" for="f7f70ce2-b952-4bc8-85e0-1d190115582c">
 PC/Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1181,13 +1181,66 @@ PC/Linux</label><div class="tabbed-content docutils">
 <span class="n">ControlPersist</span> <span class="mi">3</span><span class="n">s</span>
 </pre></div>
 </div>
-<p>To avoid having to enter your password, you can also use an <span class="xref myst">SSH key</span>.</p>
+</div>
+<div class="section" id="sftp-mount-a-remote-station">
+<h3>SFTP (Mount a remote station)<a class="headerlink" href="#sftp-mount-a-remote-station" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">ssh</span></code> also allows accessing remote files, via <a class="reference external" href="https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol"><code class="docutils literal notranslate"><span class="pre">sftp</span></code></a>.</p>
+<p>The best way to do this is <code class="docutils literal notranslate"><span class="pre">sshfs</span></code>, which makes them appear as if they were a drive on your computer:
+​</p>
+<ol class="simple">
+<li><p>Install sshfs, if not yet installed:
+​</p></li>
+</ol>
+<div class="tabbed-set docutils">
+<input checked="checked" id="c5acd3a4-1d98-4ed8-a46f-1860ffaa5836" name="22d51ec6-d3f6-406d-addb-6d61151ea697" type="radio">
+</input><label class="tabbed-label" for="c5acd3a4-1d98-4ed8-a46f-1860ffaa5836">
+Linux</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">sshfs</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>​</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="36772ccf-f879-4bd3-8123-b032629bdae3" name="b7d374e8-eb61-4b5f-a880-48adc4e87541" type="radio">
+</input><label class="tabbed-label" for="36772ccf-f879-4bd3-8123-b032629bdae3">
+mac</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="o">--</span><span class="n">cask</span> <span class="n">osxfuse</span>
+<span class="n">brew</span> <span class="n">install</span> <span class="n">sshfs</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>​
+2. Mount folder
+​</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">cluster_folder</span>
+<span class="n">sshfs</span> <span class="o">&lt;</span><span class="n">STATION</span><span class="o">&gt;</span><span class="p">:</span> <span class="n">cluster_folder</span>
+</pre></div>
+</div>
+<p>​
+If you use <code class="docutils literal notranslate"><span class="pre">~</span></code> or nothing (as shown) after the <code class="docutils literal notranslate"><span class="pre">:</span></code>, the connection will be relative to to your <em>remote</em> home directory, e.g.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sshfs</span> <span class="o">&lt;</span><span class="n">STATION</span><span class="o">&gt;</span><span class="p">:</span><span class="o">~/</span><span class="n">project1</span><span class="o">/</span> <span class="n">cluster_folder</span>
+</pre></div>
+</div>
+<p>Will attach the remote <code class="docutils literal notranslate"><span class="pre">/home/GRAMES.POLYMTL.CA/$USER/project1/</span></code> to the local <code class="docutils literal notranslate"><span class="pre">./cluster_folder</span></code>, and</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sshfs</span> <span class="o">&lt;</span><span class="n">STATION</span><span class="o">&gt;</span><span class="p">:</span><span class="n">project1</span><span class="o">/</span> <span class="n">cluster_folder</span>
+</pre></div>
+</div>
+<p>will do the exact same.</p>
+<p>However if you use <code class="docutils literal notranslate"><span class="pre">/</span></code> after the <code class="docutils literal notranslate"><span class="pre">:</span></code>, the mount will be relative to the <em>remote root directory</em>`, e.g.
+​</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sshfs</span> <span class="o">&lt;</span><span class="n">STATION</span><span class="o">&gt;</span><span class="p">:</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span> <span class="n">cluster_folder</span>
+</pre></div>
+</div>
+<p>will attach the remote <code class="docutils literal notranslate"><span class="pre">/tmp/</span></code> to the local <code class="docutils literal notranslate"><span class="pre">./cluster_folder</span></code>
+​</p>
 </div>
 <div class="section" id="vnc-graphical-interface">
 <h3>VNC (graphical interface)<a class="headerlink" href="#vnc-graphical-interface" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="d3fc74f7-dbc9-4901-88e2-775d32747865" name="2e92e117-3733-40f6-a161-00d5331da5c2" type="radio">
-</input><label class="tabbed-label" for="d3fc74f7-dbc9-4901-88e2-775d32747865">
+<input checked="checked" id="59fe42c8-b6b3-4b67-9c7f-f7091d84bf65" name="55134a5c-917e-4a34-b59d-99e0e18d5642" type="radio">
+</input><label class="tabbed-label" for="59fe42c8-b6b3-4b67-9c7f-f7091d84bf65">
 macOS</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open Finder</p></li>
@@ -1196,8 +1249,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p>You can use your local/network account information or the <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg">shared account credentials</a></p></li>
 </ol>
 </div>
-<input id="afa4ff13-2016-4acf-9fc2-fb8853609dcc" name="2e92e117-3733-40f6-a161-00d5331da5c2" type="radio">
-</input><label class="tabbed-label" for="afa4ff13-2016-4acf-9fc2-fb8853609dcc">
+<input id="1f4d218d-25d6-49a3-91c0-a032f716e048" name="55134a5c-917e-4a34-b59d-99e0e18d5642" type="radio">
+</input><label class="tabbed-label" for="1f4d218d-25d6-49a3-91c0-a032f716e048">
 PC/Linux</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Establish a VNC connection using <a class="reference external" href="https://wiki.gnome.org/Apps/Vinagre/">vinaigre</a>.</p></li>
@@ -1250,32 +1303,6 @@ PC/Linux</label><div class="tabbed-content docutils">
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> vncserver -kill :&lt;PORT_NUMBER&gt;
 </pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="mount-a-remote-station">
-<h3>Mount a remote station<a class="headerlink" href="#mount-a-remote-station" title="Permalink to this headline">¶</a></h3>
-<div class="tabbed-set docutils">
-<input checked="checked" id="b045c1e4-4f10-44b1-98b7-d3cc81a5b441" name="eec694e3-e73e-47e9-83fe-d3a6d574796c" type="radio">
-</input><label class="tabbed-label" for="b045c1e4-4f10-44b1-98b7-d3cc81a5b441">
-mac</label><div class="tabbed-content docutils">
-<ol class="simple">
-<li><p>Open the Terminal</p></li>
-<li><p>Install OSX Fuse and SSHFS</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="o">--</span><span class="n">cask</span> <span class="n">osxfuse</span>
-<span class="n">brew</span> <span class="n">install</span> <span class="n">sshfs</span>
-</pre></div>
-</div>
-<p>3. Mount drive from CLUSTER using SFTP</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">sshfs</span> <span class="o">-</span><span class="n">o</span> <span class="n">allow_other</span><span class="p">,</span><span class="n">defer_permissions</span><span class="p">,</span><span class="n">IdentityFile</span><span class="o">=~/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span><span class="nd">@CLUSTER</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span><span class="p">:</span><span class="o">/</span><span class="n">folder</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">mount</span> <span class="o">/</span><span class="n">where</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">mount</span>
-</pre></div>
-</div>
-</div>
-<input id="186b5f41-a088-4cad-98dc-ea82643f5bc8" name="eec694e3-e73e-47e9-83fe-d3a6d574796c" type="radio">
-</input><label class="tabbed-label" for="186b5f41-a088-4cad-98dc-ea82643f5bc8">
-Linux</label><div class="tabbed-content docutils">
-<p>Files &gt; Other locations &gt; Connect to Server &gt; sftp://USERNAME&#64;CLUSTER.neuro.polymtl.ca/</p>
 </div>
 </div>
 </div>
