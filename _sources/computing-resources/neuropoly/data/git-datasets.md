@@ -109,6 +109,14 @@ If you just want to explore, you can opt for a portion of the image files by spe
 $ git annex get sub-karo*                                        # download images under any of sub-karo*/*
 ```
 
+### Update
+
+If you have already cloned a repository and you would like to get its latest version, do:
+
+```
+git pull && git annex sync --no-content && git annex get .
+```
+
 ### Upload
 
 Despite not being hosted on Github, we are still using a [pull-request workflow](https://guides.github.com/introduction/flow/).
