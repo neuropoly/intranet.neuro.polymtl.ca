@@ -1088,8 +1088,8 @@
 <p>Contact Alexandru Foias to request VPN access be activated for your CAS account. When activated, <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a> will report “VPN_* = Actif”.</p>
 <p>The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing <code class="docutils literal notranslate"><span class="pre">openconnect</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="772e4bba-29ad-4a9e-a1cc-5fb2f5c8dcaf" name="0b629fb1-2b83-4975-b4f0-445e60d2ce6c" type="radio">
-</input><label class="tabbed-label" for="772e4bba-29ad-4a9e-a1cc-5fb2f5c8dcaf">
+<input checked="checked" id="14f36241-0666-4375-9bc6-72525edb3cff" name="cdbc95e7-c48b-4916-81d2-7d71bb545447" type="radio">
+</input><label class="tabbed-label" for="14f36241-0666-4375-9bc6-72525edb3cff">
 MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1113,8 +1113,8 @@ MacOS</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="4850fd99-3392-48a3-a7bf-4254f1105925" name="0b629fb1-2b83-4975-b4f0-445e60d2ce6c" type="radio">
-</input><label class="tabbed-label" for="4850fd99-3392-48a3-a7bf-4254f1105925">
+<input id="8cfcb069-01a9-4a2d-bbec-c934560ee805" name="cdbc95e7-c48b-4916-81d2-7d71bb545447" type="radio">
+</input><label class="tabbed-label" for="8cfcb069-01a9-4a2d-bbec-c934560ee805">
 PC/Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1186,19 +1186,17 @@ PC/Linux</label><div class="tabbed-content docutils">
 <h3>SFTP (Mount a remote station)<a class="headerlink" href="#sftp-mount-a-remote-station" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">ssh</span></code> also allows accessing remote files, via <a class="reference external" href="https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol"><code class="docutils literal notranslate"><span class="pre">sftp</span></code></a>.</p>
 <p>The best way to do this is <code class="docutils literal notranslate"><span class="pre">sshfs</span></code>, which makes them appear as if they were a drive on your computer:</p>
-<ol class="simple">
-<li><p>Install sshfs, if not yet installed:</p></li>
-</ol>
+<p>Install sshfs, if not yet installed:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="a189ee8d-f5a3-459a-9b58-8cc58fce7da1" name="9351d49e-c0e8-4204-b550-783f698494bf" type="radio">
-</input><label class="tabbed-label" for="a189ee8d-f5a3-459a-9b58-8cc58fce7da1">
+<input checked="checked" id="4d98e72e-5286-48e9-9127-2dc3b06b8fc2" name="92c1b574-d169-4058-9e33-ad87f9455062" type="radio">
+</input><label class="tabbed-label" for="4d98e72e-5286-48e9-9127-2dc3b06b8fc2">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">sshfs</span>
 </pre></div>
 </div>
 </div>
-<input id="9bfe769e-4fd1-4f6f-a774-728240139e06" name="9351d49e-c0e8-4204-b550-783f698494bf" type="radio">
-</input><label class="tabbed-label" for="9bfe769e-4fd1-4f6f-a774-728240139e06">
+<input id="556807fe-e8fe-479e-911a-4a505f93efe2" name="92c1b574-d169-4058-9e33-ad87f9455062" type="radio">
+</input><label class="tabbed-label" for="556807fe-e8fe-479e-911a-4a505f93efe2">
 mac</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="o">--</span><span class="n">cask</span> <span class="n">osxfuse</span>
 <span class="n">brew</span> <span class="n">install</span> <span class="n">sshfs</span>
@@ -1206,9 +1204,7 @@ mac</label><div class="tabbed-content docutils">
 </div>
 </div>
 </div>
-<ol class="simple">
-<li><p>Mount folder</p></li>
-</ol>
+<p>Then mount the folder</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">cluster_folder</span>
 <span class="n">sshfs</span> <span class="o">&lt;</span><span class="n">STATION</span><span class="o">&gt;</span><span class="p">:</span> <span class="n">cluster_folder</span>
 </pre></div>
@@ -1231,8 +1227,8 @@ mac</label><div class="tabbed-content docutils">
 <div class="section" id="vnc-graphical-interface">
 <h3>VNC (graphical interface)<a class="headerlink" href="#vnc-graphical-interface" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="73177afd-28b8-4ccd-9209-7507324fdd89" name="c75e88dd-0997-4a99-8038-bfba559c4978" type="radio">
-</input><label class="tabbed-label" for="73177afd-28b8-4ccd-9209-7507324fdd89">
+<input checked="checked" id="496ab827-033d-42ba-aa5b-2f427ce3b6e6" name="9737507c-152f-4f70-9d93-ec6ff35534dc" type="radio">
+</input><label class="tabbed-label" for="496ab827-033d-42ba-aa5b-2f427ce3b6e6">
 macOS</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open Finder</p></li>
@@ -1241,8 +1237,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p>You can use your local/network account information or the <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg">shared account credentials</a></p></li>
 </ol>
 </div>
-<input id="748ee82f-3f46-4ba3-9f2e-ac64ecee51e9" name="c75e88dd-0997-4a99-8038-bfba559c4978" type="radio">
-</input><label class="tabbed-label" for="748ee82f-3f46-4ba3-9f2e-ac64ecee51e9">
+<input id="edefd780-ed4c-4efd-90a6-4602c7064832" name="9737507c-152f-4f70-9d93-ec6ff35534dc" type="radio">
+</input><label class="tabbed-label" for="edefd780-ed4c-4efd-90a6-4602c7064832">
 PC/Linux</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Establish a VNC connection using <a class="reference external" href="https://wiki.gnome.org/Apps/Vinagre/">vinaigre</a>.</p></li>
