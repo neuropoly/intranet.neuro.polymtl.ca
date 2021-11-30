@@ -170,7 +170,7 @@ ControlPersist 3s
 
 The best way to do this is `sshfs`, which makes them appear as if they were a drive on your computer:
 
-1. Install sshfs, if not yet installed:
+Install sshfs, if not yet installed:
 
 ````{tabbed} Linux
 ```
@@ -185,7 +185,7 @@ brew install sshfs
 ```
 ````
 
-2. Mount folder
+Then mount the folder
 
 ```
 mkdir cluster_folder
