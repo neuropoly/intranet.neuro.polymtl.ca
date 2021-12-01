@@ -480,3 +480,7 @@ Then enter your ID and password at poly.
 * QuickLook:
   * Nifti viewer
 * Tanguy's app to open Nifti files with FSLview
+
+## Admin
+
+Technical details about station management and documentation is found on [this repository](https://github.com/neuropoly/computers).
