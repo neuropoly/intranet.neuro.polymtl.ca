@@ -5,7 +5,6 @@
 useful-links
 bash-shell/README
 git
-untitled
 os-guides/README
 contributing
 misc/README
