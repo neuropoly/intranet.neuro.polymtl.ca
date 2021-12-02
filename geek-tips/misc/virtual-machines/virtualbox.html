@@ -1,0 +1,737 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VirtualBox &#8212; NeuroPoly Lab Manual</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/theme.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <link rel="shortcut icon" href="../../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NeuroPoly Lab Manual</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://neuro.polymtl.ca">
+   NeuroPoly Website
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../onboarding/README.html">
+   <span>
+    👋
+   </span>
+   Onboarding
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/getting-started.html">
+     Getting Started
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/accounts.html">
+     Accounts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/campus-access.html">
+     Campus Access
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/infrastructure.html">
+     Infrastructure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/dropbox-google-drive.html">
+     Dropbox/Google Drive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/computer-setup.html">
+     Computer Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/developer-setup.html">
+     Developer Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/consultants-ra.html">
+     Consultants and RA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/postdoc.html">
+     Postdoctoral fellows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/acronyms-jargon.html">
+     Acronyms &amp; Jargon
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../agenda-and-calendar.html">
+   <span>
+    📅
+   </span>
+   Calendar
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../mri-scanning/README.html">
+   <span>
+    🧲
+   </span>
+   MRI Scanning
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../mri-scanning/unf-3t-prisma.html">
+     UNF (3T Prisma)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../mri-scanning/mni-mcgill-7t-terra.html">
+     MNI/McGill (7T Terra)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../mri-scanning/mhi-7t-agilent.html">
+     MHI (7T Agilent)
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../mri-scanning/coils/README.html">
+     Coils
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../mri-scanning/coils/3d-printing/README.html">
+       3D Printing
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../mri-scanning/coils/3d-printing/octoprint.html">
+         OctoPrint
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mri-scanning/coils/faq.html">
+       FAQ
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mri-scanning/coils/pcb-manufacturing.html">
+       PCB Manufacturing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mri-scanning/coils/cnc-machine-genmitsu-3018-prover.html">
+       CNC machine - Genmitsu 3018-PROVer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../mri-scanning/phantoms/README.html">
+     Phantoms
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mri-scanning/phantoms/phantom-recipes-for-mri.html">
+       Phantom Recipes for MRI
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../writing-articles.html">
+   <span>
+    ✍️
+   </span>
+   Academic Writing
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../computing-resources/README.html">
+   <span>
+    🖥
+   </span>
+   Computing Resources
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../computing-resources/neuropoly/README.html">
+     NeuroPoly
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../computing-resources/neuropoly/data/README.html">
+       Data
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../computing-resources/neuropoly/data/home.html">
+         /home
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../computing-resources/neuropoly/data/git-datasets.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           data
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../computing-resources/neuropoly/data/duke.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           duke
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../computing-resources/neuropoly/data/django.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           django
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../computing-resources/neuropoly/data/git-annex.html">
+         git-annex
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../computing-resources/neuropoly/cpus2.html">
+       CPUS2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../computing-resources/neuropoly/gpus.html">
+       GPUs
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../computing-resources/compute-canada.html">
+     Compute Canada
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../computing-resources/clusters-at-criugm.html">
+     CRIUGM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../computing-resources/printer.html">
+     <span>
+      🖨
+     </span>
+     Printer
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../courses.html">
+   <span>
+    🎓
+   </span>
+   University Courses
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../bibliography/README.html">
+   <span>
+    📚
+   </span>
+   Bibliography
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../bibliography/deep-learning.html">
+     Deep Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../bibliography/histology.html">
+     Histology
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../bibliography/untitled.html">
+     MRI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../bibliography/shared-paperpile-folder.html">
+     Paperpile Folder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../conferences.html">
+   <span>
+    ✈️
+   </span>
+   Conferences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../ideas-for-cool-projects.html">
+   <span>
+    💡
+   </span>
+   Ideas for Cool Projects
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../practical-information/README.html">
+   <span>
+    📎
+   </span>
+   Practical Information
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../practical-information/visa.html">
+     VISAs and Work Permits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../practical-information/moving-to-montreal.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       🇨🇦
+      </span>
+     </code>
+     Living in Montreal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../practical-information/scholarships-and-bursaries.html">
+     Scholarships &amp; Bursaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../practical-information/purchasing-hardware-and-lab-supplies.html">
+     Purchasing Supplies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../contact.html">
+   <span>
+    📞
+   </span>
+   Contact
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+
+
+<!-- only one Github button activated, so collapse it into the main button, saving a click for users -->
+        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/misc/virtual-machines/virtualbox.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fab fa-github"></i></button></a>
+
+
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Page Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-a-ova-file-a-href-import-a-ova-file-id-import-a-ova-file-a">
+   Import a .ova file
+   <a href="import_a_ova_file" id="import_a_ova_file">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shared-folder-a-href-shared-folder-id-shared-folder-a">
+   Shared folder
+   <a href="shared_folder" id="shared_folder">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-guest-additions-recommended-a-href-using-guest-additions-recommended-id-using-guest-additions-recommended-a">
+     Using Guest Additions (recommended)
+     <a href="using_guest_additions_recommended" id="using_guest_additions_recommended">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manual-method-a-href-manual-method-id-manual-method-a">
+     Manual method
+     <a href="manual_method" id="manual_method">
+     </a>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-virtual-machine-vm-with-debian-a-href-create-a-virtual-machine-vm-with-debian-id-create-a-virtual-machine-vm-with-debian-a">
+   Create a Virtual Machine (VM) with Debian
+   <a href="create_a_virtual_machine_vm_with_debian" id="create_a_virtual_machine_vm_with_debian">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reduce-the-size-of-the-vm-a-href-reduce-the-size-of-the-vm-id-reduce-the-size-of-the-vm-a">
+   Reduce the size of the VM
+   <a href="reduce_the_size_of_the_vm" id="reduce_the_size_of_the_vm">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-guest-additions-a-href-install-guest-additions-id-install-guest-additions-a">
+   Install guest additions
+   <a href="install_guest_additions" id="install_guest_additions">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubuntu-14-04-a-href-ubuntu-1404-id-ubuntu-1404-a">
+     Ubuntu 14.04
+     <a href="ubuntu_1404" id="ubuntu_1404">
+     </a>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="virtualbox">
+<h1>VirtualBox<a class="headerlink" href="#virtualbox" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="import-a-ova-file-a-href-import-a-ova-file-id-import-a-ova-file-a">
+<h2>Import a .ova file <a href="import_a_ova_file" id="import_a_ova_file"></a><a class="headerlink" href="#import-a-ova-file-a-href-import-a-ova-file-id-import-a-ova-file-a" title="Permalink to this headline">¶</a></h2>
+<p>If you have a Virtual Machine (VM) that has a .ova extension here’s what to do to use it with Virtualbox</p>
+<ul class="simple">
+<li><p>Install virtualbox <a class="reference external" href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a></p></li>
+<li><p>Open Virtualbox, then go to file –&gt; Import appliance –&gt; Open appliance and select your .ova file</p></li>
+<li><p>Then click Continue then Import</p></li>
+<li><p>It may take several minutes to import</p></li>
+<li><p>Once it’s done just select your machine and click on Show to run it</p></li>
+</ul>
+</div>
+<div class="section" id="shared-folder-a-href-shared-folder-id-shared-folder-a">
+<h2>Shared folder <a href="shared_folder" id="shared_folder"></a><a class="headerlink" href="#shared-folder-a-href-shared-folder-id-shared-folder-a" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="using-guest-additions-recommended-a-href-using-guest-additions-recommended-id-using-guest-additions-recommended-a">
+<h3>Using Guest Additions (recommended) <a href="using_guest_additions_recommended" id="using_guest_additions_recommended"></a><a class="headerlink" href="#using-guest-additions-recommended-a-href-using-guest-additions-recommended-id-using-guest-additions-recommended-a" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://www.virtualbox.org/manual/ch04.html#idp91444064">https://www.virtualbox.org/manual/ch04.html#idp91444064</a></p>
+<p>On Linux: once you ran all the instructions here, a CD-ROM will be mounted on the guest. Then, go to /mnt/ and run the file ./VBoxLinuxAdditions.run in a terminal.</p>
+</div>
+<div class="section" id="manual-method-a-href-manual-method-id-manual-method-a">
+<h3>Manual method <a href="manual_method" id="manual_method"></a><a class="headerlink" href="#manual-method-a-href-manual-method-id-manual-method-a" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://www.virtualbox.org/manual/ch04.html#idp91444064">https://www.virtualbox.org/manual/ch04.html#idp91444064</a> If you want to transfer files between your computer (host) and your Virtual Machine (guest) you’ll need a shared folder.</p>
+<ul class="simple">
+<li><p>Create a folder on your computer that will be your shared folder e.g. /home/user/VM_shared</p></li>
+<li><p>Go to VirtualBox and open the Settings of your VM</p></li>
+<li><p>On the Shared Folders section, click on Add a folder</p></li>
+<li><p>Enter the path to your folder AND give it a different name e.g <strong>VBShared</strong>.</p></li>
+<li><p>Now, start your VM and create a folder e.g /home/user/Shared_Folder</p></li>
+<li><p>Now you need to edit the file <code class="docutils literal notranslate"><span class="pre">/etc/rc.local</span></code> and add this above the “exit 0 ” line: <code class="docutils literal notranslate"><span class="pre">mount</span> <span class="pre">-t</span> <span class="pre">vboxsf</span> <span class="pre">-o</span> </code><em><code class="docutils literal notranslate"><span class="pre">username=uid,</span> <span class="pre">groupname=gid</span></code></em><code class="docutils literal notranslate"> </code><strong><code class="docutils literal notranslate"><span class="pre">VBShared</span></code></strong><code class="docutils literal notranslate"> <span class="pre">/home/user/Shared_Folder</span></code></p>
+<ul>
+<li><p>In order to get <em>username/uid/groupname/gid</em>. Open a terminal:</p>
+<ul>
+<li><p>Get <em>username</em> –&gt; <code class="docutils literal notranslate"><span class="pre">whoami</span></code>. Get <em>groupname</em> –&gt; <code class="docutils literal notranslate"><span class="pre">groups</span></code> (uid and gid respectively) to assign the permissions to the Shared folder</p></li>
+<li><p>gid: <code class="docutils literal notranslate"><span class="pre">getent</span> <span class="pre">group</span> </code><em><code class="docutils literal notranslate"><span class="pre">groupname</span></code></em> (e.g. groupename = NeuroPoly, the command will give NeuroPoly:x:1000 where the 3rd argument is the gid)</p></li>
+<li><p>uid: <code class="docutils literal notranslate"><span class="pre">id</span> <span class="pre">-u</span> </code><em><code class="docutils literal notranslate"><span class="pre">username</span></code></em></p></li>
+</ul>
+</li>
+<li><p>For admin rights use <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">vi</span> <span class="pre">/etc/rc.local</span></code>. Or <code class="docutils literal notranslate"><span class="pre">su</span> <span class="pre">root</span></code>. Then <code class="docutils literal notranslate"><span class="pre">vi</span> <span class="pre">/etc/rc.local</span></code> You need the admin password.</p></li>
+</ul>
+</li>
+<li><p>Now reboot your VM.</p></li>
+<li><p>Make the change permanent: Go to VirtualBox–&gt;settings–&gt;foldershared–&gt;double click–&gt;’Make Permanent’ option</p></li>
+</ul>
+<p>If that didn’t work it could be because the VBoxGuestAdditions are not installed on your VM. If so, follow those next step :</p>
+<ul class="simple">
+<li><p>In the Storage section of Settings of your VM add the VBoxGuestAdditions.iso file that you’ll find in ( <em>C:\Program Files\Oracle\VirtualBox</em> for Windows or <em>/Applications/VirtualBox.app/Contents/MacOS</em> for Mac )</p></li>
+<li><p>In your VM open a terminal and run (for Linux-based VM e.g. Linux,Debian,Ubuntu):</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/media/cdrom</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">bash</span> <span class="pre">VBoxLinuxAdditions.run</span></code></p></li>
+<li><p>Reboot your VM</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="create-a-virtual-machine-vm-with-debian-a-href-create-a-virtual-machine-vm-with-debian-id-create-a-virtual-machine-vm-with-debian-a">
+<h2>Create a Virtual Machine (VM) with Debian <a href="create_a_virtual_machine_vm_with_debian" id="create_a_virtual_machine_vm_with_debian"></a><a class="headerlink" href="#create-a-virtual-machine-vm-with-debian-a-href-create-a-virtual-machine-vm-with-debian-id-create-a-virtual-machine-vm-with-debian-a" title="Permalink to this headline">¶</a></h2>
+<p>To create a Virtual Machine with Debian, you can follow this excellent tutorial: <a class="reference external" href="http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/">http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/</a>.</p>
+<p><strong>RAM</strong></p>
+<p>Don’t give to your VM more than the half of your system RAM. You need to keep memory for your own system.</p>
+</div>
+<div class="section" id="reduce-the-size-of-the-vm-a-href-reduce-the-size-of-the-vm-id-reduce-the-size-of-the-vm-a">
+<h2>Reduce the size of the VM <a href="reduce_the_size_of_the_vm" id="reduce_the_size_of_the_vm"></a><a class="headerlink" href="#reduce-the-size-of-the-vm-a-href-reduce-the-size-of-the-vm-id-reduce-the-size-of-the-vm-a" title="Permalink to this headline">¶</a></h2>
+<p>Run defrag in the guest (Windows only)</p>
+<p>Nullify free space:</p>
+<p><strong>With a Linux Guest run this:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">dd</span> <span class="k">if</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">zero</span> <span class="n">of</span><span class="o">=/</span><span class="n">bigemptyfile</span> <span class="n">bs</span><span class="o">=</span><span class="mi">4096</span><span class="n">k</span>
+<span class="n">sudo</span> <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">/</span><span class="n">bigemptyfile</span>
+</pre></div>
+</div>
+<p><strong>With a Windows Guest, download SDelete and run this:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sdelete –z
+</pre></div>
+</div>
+<p>Shutdown the guest VM</p>
+<p>Now run VBoxManage’s modifyhd command with the –compact option:</p>
+<p><strong>With a Linux Host run this:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vboxmanage</span> <span class="n">modifyhd</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">thedisk</span><span class="o">.</span><span class="n">vdi</span> <span class="o">--</span><span class="n">compact</span>
+</pre></div>
+</div>
+<p><strong>With a Windows Host run this:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VBoxManage</span><span class="o">.</span><span class="n">exe</span> <span class="n">modifyhd</span> <span class="n">c</span><span class="p">:</span>\<span class="n">path</span>\<span class="n">to</span>\<span class="n">thedisk</span><span class="o">.</span><span class="n">vdi</span> <span class="o">--</span><span class="n">compact</span>
+</pre></div>
+</div>
+<p><strong>With a Mac Host run this:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VBoxManage</span> <span class="n">modifyhd</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">thedisk</span><span class="o">.</span><span class="n">vdi</span> <span class="o">--</span><span class="n">compact</span>
+</pre></div>
+</div>
+<p>This reduces the vdi size.</p>
+<p>Source:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.maketecheasier.com/shrink-your-virtualbox-vm/">http://www.maketecheasier.com/shrink-your-virtualbox-vm/</a></p></li>
+<li><p><a class="reference external" href="http://www.thelinuxdaily.com/2010/02/shrinking-a-dynamic-virtualbox-disk-image/">http://www.thelinuxdaily.com/2010/02/shrinking-a-dynamic-virtualbox-disk-image/</a></p></li>
+<li><p><a class="reference external" href="http://jurajsplayground.com/2012/05/20/shrinking-a-dynamic-virtualbox-hard-disk-on-ubuntu/">http://jurajsplayground.com/2012/05/20/shrinking-a-dynamic-virtualbox-hard-disk-on-ubuntu/</a></p></li>
+<li><p><a class="reference external" href="http://crysol.github.io/recipe/2013-10-15/virtualbox-compact-vmdk-images/#.U8LWqY1dUkg">http://crysol.github.io/recipe/2013-10-15/virtualbox-compact-vmdk-images/#.U8LWqY1dUkg</a></p></li>
+</ul>
+</div>
+<div class="section" id="install-guest-additions-a-href-install-guest-additions-id-install-guest-additions-a">
+<h2>Install guest additions <a href="install_guest_additions" id="install_guest_additions"></a><a class="headerlink" href="#install-guest-additions-a-href-install-guest-additions-id-install-guest-additions-a" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ubuntu-14-04-a-href-ubuntu-1404-id-ubuntu-1404-a">
+<h3>Ubuntu 14.04 <a href="ubuntu_1404" id="ubuntu_1404"></a><a class="headerlink" href="#ubuntu-14-04-a-href-ubuntu-1404-id-ubuntu-1404-a" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">virtualbox</span><span class="o">-</span><span class="n">guest</span><span class="o">-</span><span class="n">additions</span><span class="o">-</span><span class="n">iso</span>
+</pre></div>
+</div>
+<p>Once installed, click on <strong>Devices &gt; Insert Guest Additions CD Image…</strong>, then reload VM.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By NeuroPoly<br/>
+        
+            &copy; Copyright 2021, NeuroPoly.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

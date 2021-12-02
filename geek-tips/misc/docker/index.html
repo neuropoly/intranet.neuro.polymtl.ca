@@ -1,0 +1,770 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docker &#8212; NeuroPoly Lab Manual</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/theme.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <link rel="shortcut icon" href="../../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NeuroPoly Lab Manual</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://neuro.polymtl.ca">
+   NeuroPoly Website
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../onboarding/README.html">
+   <span>
+    👋
+   </span>
+   Onboarding
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/getting-started.html">
+     Getting Started
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/accounts.html">
+     Accounts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/campus-access.html">
+     Campus Access
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/infrastructure.html">
+     Infrastructure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/dropbox-google-drive.html">
+     Dropbox/Google Drive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/computer-setup.html">
+     Computer Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/developer-setup.html">
+     Developer Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/consultants-ra.html">
+     Consultants and RA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/postdoc.html">
+     Postdoctoral fellows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../onboarding/acronyms-jargon.html">
+     Acronyms &amp; Jargon
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../agenda-and-calendar.html">
+   <span>
+    📅
+   </span>
+   Calendar
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../mri-scanning/README.html">
+   <span>
+    🧲
+   </span>
+   MRI Scanning
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../mri-scanning/unf-3t-prisma.html">
+     UNF (3T Prisma)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../mri-scanning/mni-mcgill-7t-terra.html">
+     MNI/McGill (7T Terra)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../mri-scanning/mhi-7t-agilent.html">
+     MHI (7T Agilent)
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../mri-scanning/coils/README.html">
+     Coils
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../mri-scanning/coils/3d-printing/README.html">
+       3D Printing
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../mri-scanning/coils/3d-printing/octoprint.html">
+         OctoPrint
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mri-scanning/coils/faq.html">
+       FAQ
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mri-scanning/coils/pcb-manufacturing.html">
+       PCB Manufacturing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mri-scanning/coils/cnc-machine-genmitsu-3018-prover.html">
+       CNC machine - Genmitsu 3018-PROVer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../mri-scanning/phantoms/README.html">
+     Phantoms
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../mri-scanning/phantoms/phantom-recipes-for-mri.html">
+       Phantom Recipes for MRI
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../writing-articles.html">
+   <span>
+    ✍️
+   </span>
+   Academic Writing
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../computing-resources/README.html">
+   <span>
+    🖥
+   </span>
+   Computing Resources
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../../computing-resources/neuropoly/README.html">
+     NeuroPoly
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../../computing-resources/neuropoly/data/README.html">
+       Data
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../computing-resources/neuropoly/data/home.html">
+         /home
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../computing-resources/neuropoly/data/git-datasets.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           data
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../computing-resources/neuropoly/data/duke.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           duke
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../computing-resources/neuropoly/data/django.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           django
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../../computing-resources/neuropoly/data/git-annex.html">
+         git-annex
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../computing-resources/neuropoly/cpus2.html">
+       CPUS2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../../computing-resources/neuropoly/gpus.html">
+       GPUs
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../computing-resources/compute-canada.html">
+     Compute Canada
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../computing-resources/clusters-at-criugm.html">
+     CRIUGM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../computing-resources/printer.html">
+     <span>
+      🖨
+     </span>
+     Printer
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../courses.html">
+   <span>
+    🎓
+   </span>
+   University Courses
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../bibliography/README.html">
+   <span>
+    📚
+   </span>
+   Bibliography
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../bibliography/deep-learning.html">
+     Deep Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../bibliography/histology.html">
+     Histology
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../bibliography/untitled.html">
+     MRI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../bibliography/shared-paperpile-folder.html">
+     Paperpile Folder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../conferences.html">
+   <span>
+    ✈️
+   </span>
+   Conferences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../ideas-for-cool-projects.html">
+   <span>
+    💡
+   </span>
+   Ideas for Cool Projects
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../practical-information/README.html">
+   <span>
+    📎
+   </span>
+   Practical Information
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../practical-information/visa.html">
+     VISAs and Work Permits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../practical-information/moving-to-montreal.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       🇨🇦
+      </span>
+     </code>
+     Living in Montreal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../practical-information/scholarships-and-bursaries.html">
+     Scholarships &amp; Bursaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../practical-information/purchasing-hardware-and-lab-supplies.html">
+     Purchasing Supplies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../contact.html">
+   <span>
+    📞
+   </span>
+   Contact
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+
+
+<!-- only one Github button activated, so collapse it into the main button, saving a click for users -->
+        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/misc/docker/README.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fab fa-github"></i></button></a>
+
+
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Page Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#docker-terminology">
+   Docker Terminology
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-docker">
+   Using Docker
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#search-for-remote-image">
+     Search for remote image
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install-run-linux-distribution-a-id-install-run-linux-distribution-a">
+     Install &amp; Run Linux distribution
+     <a id="install_run_linux_distribution">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-local-docker-images-a-id-list-local-docker-images-a">
+     List local Docker images
+     <a id="list_local_docker_images">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#run-docker-image-a-id-run-docker-image-a">
+     Run Docker image
+     <a id="run_docker_image">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remove-docker-image-or-containers-force-deletion-a-id-remove-docker-image-or-containers-force-deletion-a">
+     Remove Docker image or containers (force deletion)
+     <a id="remove_docker_image_or_containers_force_deletion">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#save-a-docker-image-a-id-save-a-docker-image-a">
+     Save a Docker image
+     <a id="save_a_docker_image">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-docker-container-from-dockerfile-a-id-build-docker-container-from-dockerfile-a">
+     Build Docker container from Dockerfile
+     <a id="build_docker_container_from_dockerfile">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#run-with-display-redirection-a-id-run-with-display-redirection-a">
+     Run with DISPLAY redirection
+     <a id="run_with_display_redirection">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#copy-file-into-container-a-id-copy-file-into-container-a">
+     Copy file into container
+     <a id="copy_file_into_container">
+     </a>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="docker">
+<h1>Docker<a class="headerlink" href="#docker" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="docker-terminology">
+<h2>Docker Terminology<a class="headerlink" href="#docker-terminology" title="Permalink to this headline">¶</a></h2>
+<p><strong>Images</strong> - The blueprints of our application which form the basis of containers.</p>
+<p><strong>Containers</strong> - Created from Docker images and run the actual application. A list of running containers can be seen using the docker ps command. <strong>Docker Daemon</strong> - The background service running on the host that manages building, running and distributing Docker containers. The daemon is the process that runs in the operating system to which clients talk to.</p>
+<p><strong>Docker Client</strong> - The command line tool that allows the user to interact with the daemon.</p>
+<p><strong>Docker Hub</strong> - A registry of Docker images. You can think of the registry as a directory of all available Docker images. If required, one can host their own Docker registries and can use them for pulling images.</p>
+</div>
+<div class="section" id="using-docker">
+<h2>Using Docker<a class="headerlink" href="#using-docker" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="search-for-remote-image">
+<h3>Search for remote image<a class="headerlink" href="#search-for-remote-image" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>docker search ubuntu  # will search for ubuntu distrib
+</pre></div>
+</div>
+<p><a class="reference external" href="https://hub.docker.com/_/ubuntu">List of Ubuntu images</a></p>
+</div>
+<div class="section" id="install-run-linux-distribution-a-id-install-run-linux-distribution-a">
+<h3>Install &amp; Run Linux distribution <a id="install_run_linux_distribution"></a><a class="headerlink" href="#install-run-linux-distribution-a-id-install-run-linux-distribution-a" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>docker pull debian  # will install debian
+docker pull ubuntu:16.04
+docker pull centos
+</pre></div>
+</div>
+</div>
+<div class="section" id="list-local-docker-images-a-id-list-local-docker-images-a">
+<h3>List local Docker images <a id="list_local_docker_images"></a><a class="headerlink" href="#list-local-docker-images-a-id-list-local-docker-images-a" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>docker images
+</pre></div>
+</div>
+</div>
+<div class="section" id="run-docker-image-a-id-run-docker-image-a">
+<h3>Run Docker image <a id="run_docker_image"></a><a class="headerlink" href="#run-docker-image-a-id-run-docker-image-a" title="Permalink to this headline">¶</a></h3>
+<p>To run in interactive mode, use flag <code class="docutils literal notranslate"><span class="pre">-i</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it IMAGE /bin/bash
+docker run -it ubuntu:trusty /bin/bash
+docker run -it ubuntu:16.04
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove-docker-image-or-containers-force-deletion-a-id-remove-docker-image-or-containers-force-deletion-a">
+<h3>Remove Docker image or containers (force deletion) <a id="remove_docker_image_or_containers_force_deletion"></a><a class="headerlink" href="#remove-docker-image-or-containers-force-deletion-a-id-remove-docker-image-or-containers-force-deletion-a" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>docker rmi -f IMAGE_ID
+docker rmi $(docker images -a -q)  # WARNING!!! This will remove all images
+docker rm $(docker ps -a -f status=exited -q)  # WARNING!!! This will remove all containers
+</pre></div>
+</div>
+</div>
+<div class="section" id="save-a-docker-image-a-id-save-a-docker-image-a">
+<h3>Save a Docker image <a id="save_a_docker_image"></a><a class="headerlink" href="#save-a-docker-image-a-id-save-a-docker-image-a" title="Permalink to this headline">¶</a></h3>
+<p>The example below shows how to install useful items on a standard ubuntu image, and then save the image locally.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># launch docker
+docker pull ubuntu:16.04
+docker run ubuntu:16.04
+# inside image
+apt-get update
+yes | apt install git curl bzip2
+# open another Terminal
+# list current docker images
+docker ps -a
+# save container as new image
+docker commit &lt;container_id&gt; your_name/ubuntu:16.04
+</pre></div>
+</div>
+</div>
+<div class="section" id="build-docker-container-from-dockerfile-a-id-build-docker-container-from-dockerfile-a">
+<h3>Build Docker container from Dockerfile <a id="build_docker_container_from_dockerfile"></a><a class="headerlink" href="#build-docker-container-from-dockerfile-a-id-build-docker-container-from-dockerfile-a" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Create a Dockerfile by running `touch Dockerfile`</p></li>
+<li><p>Inside the Dockerfile write the following (items below are just given as an example):</p></li>
+</ol>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">FROM centos:latest</span>
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>RUN yum -y update \
+&amp;&amp; yum -y install git bzip2 gcc wget which mesa-libGL unzip \
+&amp;&amp; yum clean all 
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># Fetch SCT from source and install (at root directory)
+RUN git clone https://github.com/neuropoly/spinalcordtoolbox.git sct; \
+  cd sct; \
+  yes | ./install_sct
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># Add SCT executable to the system env 
+ENV PATH &quot;/sct/bin:${PATH}&quot;
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Build docker image: `docker build -t &lt;container_id&gt; .`</p></li>
+<li><p>Run it: `docker run -it &lt;container_id&gt;`</p></li>
+</ol>
+</div>
+<div class="section" id="run-with-display-redirection-a-id-run-with-display-redirection-a">
+<h3>Run with DISPLAY redirection <a id="run_with_display_redirection"></a><a class="headerlink" href="#run-with-display-redirection-a-id-run-with-display-redirection-a" title="Permalink to this headline">¶</a></h3>
+<p>In order to run scripts with GUI you need to allow X11 redirection:</p>
+<ol class="simple">
+<li><p>Install XQuartz X11 server and run it.</p></li>
+<li><p>In preferences, check ‘Allow connections from network clientsoption inXQuartz` settings.</p></li>
+<li><p>Quit and restart XQuartz.</p></li>
+<li><p>In XQuartz window xhost + 127.0.0.1</p></li>
+<li><p>In your other Terminal window, run:</p>
+<ol class="simple">
+<li><p>On OSX: `docker run -e DISPLAY=host.docker.internal:0 -it &lt;CONTAINER_ID&gt;`</p></li>
+<li><p>On Linux: `docker run -ti –rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix &lt;CONTAINER_ID&gt;`</p></li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="section" id="copy-file-into-container-a-id-copy-file-into-container-a">
+<h3>Copy file into container <a id="copy_file_into_container"></a><a class="headerlink" href="#copy-file-into-container-a-id-copy-file-into-container-a" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># list container</span>
+docker ps
+<span class="c1"># copy file</span>
+docker cp &lt;file&gt; &lt;CONTAINER ID&gt;:&lt;PATH_DEST&gt;/&lt;file&gt;
+</pre></div>
+</div>
+<p>Examples of Docker builder:</p>
+<ol class="simple">
+<li><p><a class="reference external" href="https://github.com/neuropoly/docker">https://github.com/neuropoly/docker</a></p></li>
+</ol>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By NeuroPoly<br/>
+        
+            &copy; Copyright 2021, NeuroPoly.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

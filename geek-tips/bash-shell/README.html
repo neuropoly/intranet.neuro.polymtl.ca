@@ -1,0 +1,1236 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bash/Shell &#8212; NeuroPoly Lab Manual</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <link rel="shortcut icon" href="../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NeuroPoly Lab Manual</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://neuro.polymtl.ca">
+   NeuroPoly Website
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../onboarding/README.html">
+   <span>
+    👋
+   </span>
+   Onboarding
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/getting-started.html">
+     Getting Started
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/accounts.html">
+     Accounts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/campus-access.html">
+     Campus Access
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/infrastructure.html">
+     Infrastructure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/dropbox-google-drive.html">
+     Dropbox/Google Drive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/computer-setup.html">
+     Computer Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/developer-setup.html">
+     Developer Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/consultants-ra.html">
+     Consultants and RA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/postdoc.html">
+     Postdoctoral fellows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/acronyms-jargon.html">
+     Acronyms &amp; Jargon
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../agenda-and-calendar.html">
+   <span>
+    📅
+   </span>
+   Calendar
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../mri-scanning/README.html">
+   <span>
+    🧲
+   </span>
+   MRI Scanning
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mri-scanning/unf-3t-prisma.html">
+     UNF (3T Prisma)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mri-scanning/mni-mcgill-7t-terra.html">
+     MNI/McGill (7T Terra)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mri-scanning/mhi-7t-agilent.html">
+     MHI (7T Agilent)
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../mri-scanning/coils/README.html">
+     Coils
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../mri-scanning/coils/3d-printing/README.html">
+       3D Printing
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../mri-scanning/coils/3d-printing/octoprint.html">
+         OctoPrint
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/coils/faq.html">
+       FAQ
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/coils/pcb-manufacturing.html">
+       PCB Manufacturing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/coils/cnc-machine-genmitsu-3018-prover.html">
+       CNC machine - Genmitsu 3018-PROVer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../mri-scanning/phantoms/README.html">
+     Phantoms
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/phantoms/phantom-recipes-for-mri.html">
+       Phantom Recipes for MRI
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../writing-articles.html">
+   <span>
+    ✍️
+   </span>
+   Academic Writing
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../computing-resources/README.html">
+   <span>
+    🖥
+   </span>
+   Computing Resources
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../computing-resources/neuropoly/README.html">
+     NeuroPoly
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../computing-resources/neuropoly/data/README.html">
+       Data
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../computing-resources/neuropoly/data/home.html">
+         /home
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../computing-resources/neuropoly/data/git-datasets.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           data
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../computing-resources/neuropoly/data/duke.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           duke
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../computing-resources/neuropoly/data/django.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           django
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../computing-resources/neuropoly/data/git-annex.html">
+         git-annex
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing-resources/neuropoly/cpus2.html">
+       CPUS2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing-resources/neuropoly/gpus.html">
+       GPUs
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing-resources/compute-canada.html">
+     Compute Canada
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing-resources/clusters-at-criugm.html">
+     CRIUGM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing-resources/printer.html">
+     <span>
+      🖨
+     </span>
+     Printer
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../courses.html">
+   <span>
+    🎓
+   </span>
+   University Courses
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../bibliography/README.html">
+   <span>
+    📚
+   </span>
+   Bibliography
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/deep-learning.html">
+     Deep Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/histology.html">
+     Histology
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/untitled.html">
+     MRI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/shared-paperpile-folder.html">
+     Paperpile Folder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../conferences.html">
+   <span>
+    ✈️
+   </span>
+   Conferences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ideas-for-cool-projects.html">
+   <span>
+    💡
+   </span>
+   Ideas for Cool Projects
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../practical-information/README.html">
+   <span>
+    📎
+   </span>
+   Practical Information
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/visa.html">
+     VISAs and Work Permits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/moving-to-montreal.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       🇨🇦
+      </span>
+     </code>
+     Living in Montreal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/scholarships-and-bursaries.html">
+     Scholarships &amp; Bursaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/purchasing-hardware-and-lab-supplies.html">
+     Purchasing Supplies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../contact.html">
+   <span>
+    📞
+   </span>
+   Contact
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+
+
+<!-- only one Github button activated, so collapse it into the main button, saving a click for users -->
+        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/bash-shell/README.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fab fa-github"></i></button></a>
+
+
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Page Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#awesome-links">
+   Awesome links
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hdd-parameters">
+   HDD parameters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#file-folders">
+   File/Folders
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#copying">
+     Copying
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#copy-and-synchronize-with-rsync">
+       <strong>
+        Copy (and synchronize) with rsync
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#copy-from-remote-station-via-scp">
+       <strong>
+        Copy from remote station via scp
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deleting">
+     Deleting
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#delete-non-empty-folder">
+       <strong>
+        Delete non-empty folder
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#delete-a-bunch-of-files">
+       <strong>
+        Delete a bunch of files
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#renaming">
+     Renaming
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rename-files-with-a-given-extension">
+       Rename files with a given extension
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#size-of-a-disk-folder-a-href-size-of-a-diskfolder-id-size-of-a-diskfolder-a">
+       Size of a disk/folder
+       <a href="size_of_a_diskfolder" id="size_of_a_diskfolder">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#number-of-files-a-href-number-of-files-id-number-of-files-a">
+       Number of files
+       <a href="number_of_files" id="number_of_files">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#permissions">
+     Permissions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#change-permissions">
+       <strong>
+        Change permissions
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#change-owner-of-a-file">
+       <strong>
+        Change owner of a file
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#look-for-group-owner-permission">
+       <strong>
+        Look for group owner &amp; permission
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#stdout-stderr-a-href-stdoutstderr-id-stdoutstderr-a">
+       Stdout / Stderr
+       <a href="stdoutstderr" id="stdoutstderr">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compression-extraction">
+   Compression/Extraction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tar">
+     <strong>
+      tar
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zip">
+     <strong>
+      zip
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#checksum-a-href-checksum-id-checksum-a">
+       Checksum
+       <a href="checksum" id="checksum">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#remove-files-from-tmp-a-href-remove-files-from-tmp-id-remove-files-from-tmp-a">
+       Remove files from tmp
+       <a href="remove_files_from_tmp" id="remove_files_from_tmp">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bash-profile">
+   .bash_profile
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#emails">
+   Emails
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#processes">
+   Processes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#check-processes">
+     <strong>
+      Check Processes
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#killing-processes">
+     <strong>
+      Killing Processes
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#kill-a-process-based-on-pid">
+       <strong>
+        kill a process based on PID
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#kill-a-process-from-a-user">
+       <strong>
+        kill a process from a user
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#internet-network">
+   Internet / Network
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-file-from-internet">
+     Download file from internet
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Copying
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#copy-file-between-computers">
+       Copy file between computers
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#copy-from-a-remote-station">
+       <strong>
+        Copy from a remote station
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#network-dns">
+     Network/DNS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#screen-for-background-processes">
+   Screen (for background processes)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ssh-public-key">
+   SSH Public Key
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vim-text-editor">
+   VIM Text Editor
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="bash-shell">
+<h1>Bash/Shell<a class="headerlink" href="#bash-shell" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="awesome-links">
+<h2>Awesome links<a class="headerlink" href="#awesome-links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://devhints.io/bash">Bash scripting cheatsheet</a></p></li>
+</ul>
+</div>
+<div class="section" id="hdd-parameters">
+<h2>HDD parameters<a class="headerlink" href="#hdd-parameters" title="Permalink to this headline">¶</a></h2>
+<p>Check disk space:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">-</span><span class="n">h</span>
+</pre></div>
+</div>
+<p>To list all block devices, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lsblk</span>
+</pre></div>
+</div>
+<p>To list all partitions, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">fdisk</span> <span class="o">-</span><span class="n">l</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="file-folders">
+<h2>File/Folders<a class="headerlink" href="#file-folders" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="copying">
+<h3>Copying<a class="headerlink" href="#copying" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="copy-and-synchronize-with-rsync">
+<h4><strong>Copy (and synchronize) with rsync</strong><a class="headerlink" href="#copy-and-synchronize-with-rsync" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rsync -azP &lt;FILE_SRC&gt; &lt;FILE_DEST&gt;
+rsync -azP &lt;FOLDER_SOURCE&gt; &lt;FOLDER_DEST&gt;  <span class="c1"># will create FOLDER_SOURCE inside FOLDER_DEST (if it does not exist), and will copy the content of FOLDER_SOURCE inside it</span>
+rsync -azP &lt;FOLDER_SOURCE&gt;/ &lt;FOLDER_DEST&gt;  <span class="c1"># will copy the content of FOLDER_SOURCE inside FOLDER_DEST</span>
+<span class="c1"># For nii.gz files, no need to further compress so -z can be dropped</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="copy-from-remote-station-via-scp">
+<h4><strong>Copy from remote station via scp</strong><a class="headerlink" href="#copy-from-remote-station-via-scp" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp username@hostname:&lt;/PATH_TO_FILE&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="deleting">
+<h3>Deleting<a class="headerlink" href="#deleting" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="delete-non-empty-folder">
+<h4><strong>Delete non-empty folder</strong><a class="headerlink" href="#delete-non-empty-folder" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm -rf &lt;FOLDER&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete-a-bunch-of-files">
+<h4><strong>Delete a bunch of files</strong><a class="headerlink" href="#delete-a-bunch-of-files" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -name <span class="s2">&quot;dti*&quot;</span> -delete
+</pre></div>
+</div>
+<p>or the more complicated version:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -name <span class="s2">&quot;dti*&quot;</span> <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> F<span class="p">;</span> <span class="k">do</span> rm <span class="nv">$F</span><span class="p">;</span> <span class="k">done</span>
+</pre></div>
+</div>
+<p>When you are trying to delete too many files using <code class="docutils literal notranslate"><span class="pre">rm</span></code>, you may get error message: <code class="docutils literal notranslate"><span class="pre">/bin/rm</span> <span class="pre">Argument</span> <span class="pre">list</span> <span class="pre">too</span> <span class="pre">long</span></code>. Use <code class="docutils literal notranslate"><span class="pre">xargs</span></code> to avoid this problem.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find ~ -name ‘*.log’ -print0 <span class="p">|</span> xargs -0 rm -f
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="renaming">
+<h3>Renaming<a class="headerlink" href="#renaming" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="rename-files-with-a-given-extension">
+<h4>Rename files with a given extension<a class="headerlink" href="#rename-files-with-a-given-extension" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls *.&lt;EXT&gt; <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> F<span class="p">;</span> <span class="k">do</span> mv <span class="nv">$F</span> &lt;NEW_FILE_NAME&gt;_<span class="nv">$F</span><span class="p">;</span> <span class="k">done</span>
+</pre></div>
+</div>
+<p>Do it recursively:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -name <span class="s2">&quot;t2_seg.nii.gz&quot;</span> -exec bash -c <span class="s1">&#39;mv $(dirname $1)/$(basename $1) $(dirname $1)/t2_seg_manual.nii.gz&#39;</span> -- <span class="o">{}</span> <span class="se">\;</span>
+</pre></div>
+</div>
+<p><strong>Do something on files modified for the past 10 days</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -type f -name <span class="s1">&#39;*.*&#39;</span> -mtime +10 -exec <span class="nb">echo</span> <span class="s2">&quot;do something on this file: {}&quot;</span> <span class="se">\;</span>
+</pre></div>
+</div>
+<p><strong>Set created/modification date on a file</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch -mt YYYYMMDDhhmm &lt;FILE&gt;
+</pre></div>
+</div>
+<p>On Maverick and later, the creation date is not updated if newer than the existing. So you should use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>SetFile -d <span class="s1">&#39;DD/MM/YYYY HH:MM:SS&#39;</span> &lt;FILE&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="size-of-a-disk-folder-a-href-size-of-a-diskfolder-id-size-of-a-diskfolder-a">
+<h4>Size of a disk/folder <a href="size_of_a_diskfolder" id="size_of_a_diskfolder"></a><a class="headerlink" href="#size-of-a-disk-folder-a-href-size-of-a-diskfolder-id-size-of-a-diskfolder-a" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>du -sh &lt;FOLDER&gt;
+</pre></div>
+</div>
+<p>or for all folders in the path</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">du</span> <span class="o">-</span><span class="n">sh</span> <span class="o">*</span>
+<span class="n">du</span> <span class="o">-</span><span class="n">sm</span> <span class="o">*</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">nr</span>  <span class="c1"># in MB and reverse-ordered by size</span>
+</pre></div>
+</div>
+<p><strong>Get space on a disk</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">-</span><span class="n">h</span> <span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="number-of-files-a-href-number-of-files-id-number-of-files-a">
+<h4>Number of files <a href="number_of_files" id="number_of_files"></a><a class="headerlink" href="#number-of-files-a-href-number-of-files-id-number-of-files-a" title="Permalink to this headline">¶</a></h4>
+<p>== Get number of files that match a pattern</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">dq</span> <span class="o">*</span><span class="n">pattern</span><span class="o">*</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
+</pre></div>
+</div>
+<p><strong>Get number of files in a folder (recursively)</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>find .//. ! -name . -print | grep -c //
+</pre></div>
+</div>
+<p>only counts files modified for the past 24h:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>find .//. ! -name . -mtime -1 -print | grep -c //
+</pre></div>
+</div>
+<p><strong>List files modified for the past 24h</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="n">mtime</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="nb">print</span>
+</pre></div>
+</div>
+<p>List number of files per folder</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="n">maxdepth</span> <span class="mi">1</span> <span class="o">-</span><span class="n">mindepth</span> <span class="mi">1</span> <span class="o">-</span><span class="nb">type</span> <span class="n">d</span> <span class="o">-</span><span class="n">exec</span> <span class="n">sh</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;echo &quot;</span><span class="si">{}</span><span class="s1"> : $(find &quot;</span><span class="si">{}</span><span class="s1">&quot; -type f | wc -l)&quot; file\(s\)&#39;</span> \<span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="permissions">
+<h3>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="change-permissions">
+<h4><strong>Change permissions</strong><a class="headerlink" href="#change-permissions" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod <span class="m">644</span>  <span class="c1"># make a file readable by anyone and writable by the owner only.</span>
+chmod <span class="m">755</span>	 <span class="c1"># make a file readable/executable by everyone and writable by the owner only.</span>
+chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no access for everyone</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="change-owner-of-a-file">
+<h4><strong>Change owner of a file</strong><a class="headerlink" href="#change-owner-of-a-file" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo chown &lt;OWNER&gt; &lt;FILE&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="look-for-group-owner-permission">
+<h4><strong>Look for group owner &amp; permission</strong><a class="headerlink" href="#look-for-group-owner-permission" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls -le@a
+</pre></div>
+</div>
+<p><strong>Find most recently changed files (less than 1 day ago)</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span>  <span class="o">-</span><span class="n">mtime</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="n">ls</span>
+</pre></div>
+</div>
+<p><strong>Search files</strong></p>
+<p>Files with specific string inside:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;string&quot;</span>
+</pre></div>
+</div>
+<p>Files that have been modified for the past 24 hours:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">~/</span><span class="n">Documents</span> <span class="o">-</span><span class="nb">type</span> <span class="n">f</span> <span class="o">-</span><span class="n">ctime</span> <span class="o">-</span><span class="mi">0</span> <span class="o">|</span> <span class="n">more</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="stdout-stderr-a-href-stdoutstderr-id-stdoutstderr-a">
+<h4>Stdout / Stderr <a href="stdoutstderr" id="stdoutstderr"></a><a class="headerlink" href="#stdout-stderr-a-href-stdoutstderr-id-stdoutstderr-a" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file">https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file</a>Edit</p>
+</div>
+</div>
+</div>
+<div class="section" id="compression-extraction">
+<h2>Compression/Extraction<a class="headerlink" href="#compression-extraction" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tar">
+<h3><strong>tar</strong><a class="headerlink" href="#tar" title="Permalink to this headline">¶</a></h3>
+<p>compress:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">czf</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">folder</span><span class="o">/</span><span class="n">filename</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">folder</span>
+</pre></div>
+</div>
+<p>extract:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">zxvf</span> <span class="n">filename</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="zip">
+<h3><strong>zip</strong><a class="headerlink" href="#zip" title="Permalink to this headline">¶</a></h3>
+<p>compress folder:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">zip</span> <span class="o">-</span><span class="n">r</span> <span class="n">archive</span><span class="o">.</span><span class="n">zip</span> <span class="n">folder</span><span class="o">/</span>
+
+<span class="c1"># Exclude a sub-folder:</span>
+<span class="nb">zip</span> <span class="o">-</span><span class="n">r</span> <span class="n">archive</span><span class="o">.</span><span class="n">zip</span> <span class="n">folder</span><span class="o">/</span> <span class="o">-</span><span class="n">x</span> <span class="s1">&#39;*subfoldertoexclude*&#39;</span>
+</pre></div>
+</div>
+<p>extract:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">unzip</span> <span class="n">archive</span><span class="o">.</span><span class="n">zip</span>
+</pre></div>
+</div>
+<p><strong>copie de fichiers ds une directory</strong></p>
+<p>find -name sica*.png | xargs -t -i /bin/cp ./{} ./imagesEdit</p>
+<div class="section" id="checksum-a-href-checksum-id-checksum-a">
+<h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">¶</a></h4>
+<p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="68db7ab0-9734-410f-86e6-a540792d442f" name="99a12d9a-460d-4497-b76f-949f806f2515" type="radio">
+</input><label class="tabbed-label" for="68db7ab0-9734-410f-86e6-a540792d442f">
+Linux</label><div class="tabbed-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
+</pre></div>
+</div>
+</div>
+<input id="896f0127-60a3-4d9d-8c4c-8a65a4e117ce" name="99a12d9a-460d-4497-b76f-949f806f2515" type="radio">
+</input><label class="tabbed-label" for="896f0127-60a3-4d9d-8c4c-8a65a4e117ce">
+Mac</label><div class="tabbed-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
+find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="remove-files-from-tmp-a-href-remove-files-from-tmp-id-remove-files-from-tmp-a">
+<h4>Remove files from tmp <a href="remove_files_from_tmp" id="remove_files_from_tmp"></a><a class="headerlink" href="#remove-files-from-tmp-a-href-remove-files-from-tmp-id-remove-files-from-tmp-a" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -name <span class="s2">&quot;tmp.*&quot;</span> -type d -print0 <span class="p">|</span> xargs -0 /bin/rm -rf
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="bash-profile">
+<h2>.bash_profile<a class="headerlink" href="#bash-profile" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> file is launched when you open a new terminal. You can configure your environment variables from there. It is located in your home folder (<code class="docutils literal notranslate"><span class="pre">$HOME</span></code>).</p>
+<p>To load it:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> ~/.bash_profile
+</pre></div>
+</div>
+</div>
+<div class="section" id="emails">
+<h2>Emails<a class="headerlink" href="#emails" title="Permalink to this headline">¶</a></h2>
+<p><strong>send email</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;something&quot;</span> <span class="p">|</span> mailx -s <span class="s2">&quot;subject&quot;</span> someone@email.com
+</pre></div>
+</div>
+</div>
+<div class="section" id="processes">
+<h2>Processes<a class="headerlink" href="#processes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="check-processes">
+<h3><strong>Check Processes</strong><a class="headerlink" href="#check-processes" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ps aux
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">top</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="killing-processes">
+<h3><strong>Killing Processes</strong><a class="headerlink" href="#killing-processes" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="kill-a-process-based-on-pid">
+<h4><strong>kill a process based on PID</strong><a class="headerlink" href="#kill-a-process-based-on-pid" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">kill</span> -9 &lt;<span class="s2">&quot;PID&quot;</span>&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="kill-a-process-from-a-user">
+<h4><strong>kill a process from a user</strong><a class="headerlink" href="#kill-a-process-from-a-user" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pkill -U &lt;USER&gt; 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="internet-network">
+<h2>Internet / Network<a class="headerlink" href="#internet-network" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="download-file-from-internet">
+<h3>Download file from internet<a class="headerlink" href="#download-file-from-internet" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -o filename -L &lt;URL&gt;
+<span class="c1"># Example for OSF file (note the &quot;?action=download&quot; added after the URL):</span>
+curl -o data.zip -L https://osf.io/76jkx/?action<span class="o">=</span>download
+</pre></div>
+</div>
+<p>Alternatively:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget -O data &lt;URL&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Copying<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="copy-file-between-computers">
+<h4>Copy file between computers<a class="headerlink" href="#copy-file-between-computers" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference external" href="https://magic-wormhole.readthedocs.io/en/latest/">https://magic-wormhole.readthedocs.io/en/latest/</a></p></li>
+<li><p><a class="reference external" href="https://clbin.com">https://clbin.com/</a> (featuring CLI uploading) ( running <a class="reference external" href="http://github.com/rupa/sprunge">http://github.com/rupa/sprunge</a> )</p></li>
+<li><p><a class="reference external" href="https://paste.fossdaily.xyz">https://paste.fossdaily.xyz/</a> (running privatebin)</p></li>
+<li><p><a class="reference external" href="https://paste.tildeverse.org">https://paste.tildeverse.org/</a> (running privatebin)</p></li>
+<li><p><a class="reference external" href="https://bin.snopyta.org">https://bin.snopyta.org/</a> (running privatebin)</p></li>
+<li><p><a class="reference external" href="https://pb.envs.net">https://pb.envs.net/</a> (running privatebin)</p></li>
+<li><p><a class="reference external" href="https://sebsauvage.net/paste/">https://sebsauvage.net/paste/</a> (running zerobin; an unmaintained forerunner of privatebin)</p></li>
+<li><p><a class="reference external" href="https://0bin.net">https://0bin.net/</a> (running <a class="reference external" href="https://github.com/sametmax/0bin">https://github.com/sametmax/0bin</a>)</p></li>
+<li><p><a class="reference external" href="https://demo.lufi.io">https://demo.lufi.io/</a> (running <a class="reference external" href="https://lufi.io">https://lufi.io</a>)</p></li>
+<li><p><a class="reference external" href="https://ybits.io">https://ybits.io/</a> (closed source but oh well)</p></li>
+<li><p><a class="reference external" href="https://upload.disroot.org">https://upload.disroot.org/</a> (running <a class="reference external" href="https://lufi.io">https://lufi.io/</a>)</p></li>
+<li><p><a class="reference external" href="https://framadrop.org">https://framadrop.org</a> (running lufi.io)</p></li>
+<li><p><a class="reference external" href="https://ttm.sh">https://ttm.sh/</a> (featuring cli uploading) (edited)</p></li>
+</ul>
+<p>Using gist.github.com (only for files &lt;100MB):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1. make a new gist
+2. note its ID in its URL (something like 3daa207ea45c75722bd0e3bc914dce3a)
+3. `git clone git@github.com:3daa207ea45c75722bd0e3bc914dce3a`
+4. `cd 3daa207ea45c75722bd0e3bc914dce3a`
+5. add your large file;
+6. `git add .; git commit; git push`
+</pre></div>
+</div>
+</div>
+<div class="section" id="copy-from-a-remote-station">
+<h4><strong>Copy from a remote station</strong><a class="headerlink" href="#copy-from-a-remote-station" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp username@station.domain: &lt;/PATH/FILE&gt; . <span class="c1"># copy file</span>
+scp username@station.domain: &lt;/PATH/&gt; . -r <span class="c1"># copy folder</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="network-dns">
+<h3>Network/DNS<a class="headerlink" href="#network-dns" title="Permalink to this headline">¶</a></h3>
+<p><strong>List all stations on the network (only works on a server)</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">findsmb</span>
+</pre></div>
+</div>
+<p><strong>find DNS</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">resolv</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
+<p><strong>lookup DNS</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">host</span> <span class="n">HOST_NAME</span>
+<span class="n">host</span> <span class="n">IP_ADDRESS</span>
+</pre></div>
+</div>
+<p><strong>Clear DNS cache (on OSX 10.8 and later)</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">killall</span> <span class="o">-</span><span class="n">HUP</span> <span class="n">mDNSResponder</span>
+</pre></div>
+</div>
+<p><strong>Connect to another station</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">IP</span>
+<span class="ow">or</span><span class="p">:</span>
+<span class="n">ssh</span> <span class="n">username</span><span class="nd">@station</span><span class="o">.</span><span class="n">domain</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="screen-for-background-processes">
+<h2>Screen (for background processes)<a class="headerlink" href="#screen-for-background-processes" title="Permalink to this headline">¶</a></h2>
+<p>Let’s say you connect to a station from your laptop and you wish to launch a script that will run for several hours. If you close your laptop, the remote script will stop. To prevent this, use <code class="docutils literal notranslate"><span class="pre">screen</span></code>. It opens a virtual environment from a remote station, so that any script launched within this environment will continue running even if you close your laptop.</p>
+<p>Step-by-step procedure:</p>
+<ol class="simple">
+<li><p>Connect to a station via <code class="docutils literal notranslate"><span class="pre">ssh</span></code></p></li>
+<li><p>Launch <code class="docutils literal notranslate"><span class="pre">screen</span></code>. It will create a new screen attached to the station.</p></li>
+<li><p>Do whatever you want (e.g., launch a long process).</p></li>
+</ol>
+<p>Detach from the screen:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen -d
+<span class="c1"># or</span>
+CTRL+a d
+</pre></div>
+</div>
+<p>Attach to a detached screen:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen -r
+</pre></div>
+</div>
+<p>Attach to a not detached screen. (Multi display mode).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen -x
+</pre></div>
+</div>
+<p>List of your screens</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen -ls
+</pre></div>
+</div>
+<p>Kill a screen</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen -X <span class="nb">kill</span>  <span class="c1"># (if you only have one screen running)</span>
+screen -X -S <span class="o">[</span>session <span class="c1"># you want to kill] kill</span>
+</pre></div>
+</div>
+<p>Give specific name to a screen session</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen -S &lt;NAME_OF_SESSION&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="ssh-public-key">
+<h2>SSH Public Key<a class="headerlink" href="#ssh-public-key" title="Permalink to this headline">¶</a></h2>
+<p>Create key on the client (do this only once):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen -t rsa
+</pre></div>
+</div>
+<p>Copy key on server:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-copy-id demo@198.51.100.0
+</pre></div>
+</div>
+</div>
+<div class="section" id="vim-text-editor">
+<h2>VIM Text Editor<a class="headerlink" href="#vim-text-editor" title="Permalink to this headline">¶</a></h2>
+<p>Simple but great editor. Usually installed everywhere.</p>
+<blockquote>
+<div><p>:w = save<br />
+:q = quit<br />
+:wq = quit and save</p>
+</div></blockquote>
+<p>Coloured syntax:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vi ~/.vimrc
+add: syntax on
+</pre></div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By NeuroPoly<br/>
+        
+            &copy; Copyright 2021, NeuroPoly.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

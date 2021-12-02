@@ -1,0 +1,1454 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MacOSX &#8212; NeuroPoly Lab Manual</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <link rel="shortcut icon" href="../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NeuroPoly Lab Manual</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://neuro.polymtl.ca">
+   NeuroPoly Website
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../onboarding/README.html">
+   <span>
+    👋
+   </span>
+   Onboarding
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/getting-started.html">
+     Getting Started
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/accounts.html">
+     Accounts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/campus-access.html">
+     Campus Access
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/infrastructure.html">
+     Infrastructure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/dropbox-google-drive.html">
+     Dropbox/Google Drive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/computer-setup.html">
+     Computer Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/developer-setup.html">
+     Developer Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/consultants-ra.html">
+     Consultants and RA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/postdoc.html">
+     Postdoctoral fellows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/acronyms-jargon.html">
+     Acronyms &amp; Jargon
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../agenda-and-calendar.html">
+   <span>
+    📅
+   </span>
+   Calendar
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../mri-scanning/README.html">
+   <span>
+    🧲
+   </span>
+   MRI Scanning
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mri-scanning/unf-3t-prisma.html">
+     UNF (3T Prisma)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mri-scanning/mni-mcgill-7t-terra.html">
+     MNI/McGill (7T Terra)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mri-scanning/mhi-7t-agilent.html">
+     MHI (7T Agilent)
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../mri-scanning/coils/README.html">
+     Coils
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../mri-scanning/coils/3d-printing/README.html">
+       3D Printing
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../mri-scanning/coils/3d-printing/octoprint.html">
+         OctoPrint
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/coils/faq.html">
+       FAQ
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/coils/pcb-manufacturing.html">
+       PCB Manufacturing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/coils/cnc-machine-genmitsu-3018-prover.html">
+       CNC machine - Genmitsu 3018-PROVer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../mri-scanning/phantoms/README.html">
+     Phantoms
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/phantoms/phantom-recipes-for-mri.html">
+       Phantom Recipes for MRI
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../writing-articles.html">
+   <span>
+    ✍️
+   </span>
+   Academic Writing
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../computing-resources/README.html">
+   <span>
+    🖥
+   </span>
+   Computing Resources
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../computing-resources/neuropoly/README.html">
+     NeuroPoly
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../computing-resources/neuropoly/data/README.html">
+       Data
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../computing-resources/neuropoly/data/home.html">
+         /home
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../computing-resources/neuropoly/data/git-datasets.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           data
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../computing-resources/neuropoly/data/duke.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           duke
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../computing-resources/neuropoly/data/django.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           django
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../computing-resources/neuropoly/data/git-annex.html">
+         git-annex
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing-resources/neuropoly/cpus2.html">
+       CPUS2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing-resources/neuropoly/gpus.html">
+       GPUs
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing-resources/compute-canada.html">
+     Compute Canada
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing-resources/clusters-at-criugm.html">
+     CRIUGM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing-resources/printer.html">
+     <span>
+      🖨
+     </span>
+     Printer
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../courses.html">
+   <span>
+    🎓
+   </span>
+   University Courses
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../bibliography/README.html">
+   <span>
+    📚
+   </span>
+   Bibliography
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/deep-learning.html">
+     Deep Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/histology.html">
+     Histology
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/untitled.html">
+     MRI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/shared-paperpile-folder.html">
+     Paperpile Folder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../conferences.html">
+   <span>
+    ✈️
+   </span>
+   Conferences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ideas-for-cool-projects.html">
+   <span>
+    💡
+   </span>
+   Ideas for Cool Projects
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../practical-information/README.html">
+   <span>
+    📎
+   </span>
+   Practical Information
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/visa.html">
+     VISAs and Work Permits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/moving-to-montreal.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       🇨🇦
+      </span>
+     </code>
+     Living in Montreal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/scholarships-and-bursaries.html">
+     Scholarships &amp; Bursaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/purchasing-hardware-and-lab-supplies.html">
+     Purchasing Supplies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../contact.html">
+   <span>
+    📞
+   </span>
+   Contact
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+
+
+<!-- only one Github button activated, so collapse it into the main button, saving a click for users -->
+        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/os-guides/macosx.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fab fa-github"></i></button></a>
+
+
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Page Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#booting-options">
+   Booting Options
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nice-software">
+   Nice Software
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general">
+   General
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#global-default-config-a-id-global-default-config-a">
+     Global default config
+     <a id="global_default_config">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#maintenance">
+     Maintenance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#files-and-folders">
+     Files and Folders
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#change-folder-icon-a-id-change-folder-icon-a">
+       Change Folder Icon
+       <a id="change_folder_icon">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#copy-make-a-disk-image-from-cd-dvd-iso-format-a-id-copymake-a-disk-image-from-cddvd-iso-format-a">
+       Copy/Make a disk image from CD/DVD (ISO format)
+       <a id="copymake_a_disk_image_from_cddvd_iso_format">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recovery">
+     Recovery
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#create-recovery-partition-a-id-create-recovery-partition-a">
+       Create recovery partition
+       <a id="create_recovery_partition">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#displays">
+     Displays
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lock-screen-a-id-lock-screen-a">
+       Lock screen
+       <a id="lock_screen">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lock-screen-upon-sleep-a-id-lock-screen-upon-sleep-a">
+       Lock screen upon sleep
+       <a id="lock_screen_upon_sleep">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notifications">
+     Notifications
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#disable-notification-center-a-id-disable-notification-center-a">
+       Disable Notification Center
+       <a id="disable_notification_center">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keyboard">
+     Keyboard
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dialog-box-select-option-with-tab-a-id-dialog-boxselect-option-with-tab-a">
+       Dialog box: select option with Tab
+       <a id="dialog_boxselect_option_with_tab">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#misc">
+     <strong>
+      Misc
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dock-in-2d-a-id-dock-in-2d-a">
+       Dock in 2d
+       <a id="dock_in_2d">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#make-hidden-applications-icons-transparent-a-id-make-hidden-applications-icons-transparent-a">
+       Make Hidden Applications Icons Transparent
+       <a id="make_hidden_applications_icons_transparent">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#set-the-expanded-print-dialogue-as-default-a-id-set-the-expanded-print-dialogue-as-default-a">
+       Set The Expanded Print Dialogue As Default
+       <a id="set_the_expanded_print_dialogue_as_default">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reboot-station-with-terminal-a-id-reboot-station-with-terminal-a">
+       Reboot station with Terminal
+       <a id="reboot_station_with_terminal">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#set-the-expanded-save-dialogue-as-default-a-id-set-the-expanded-save-dialogue-as-default-a">
+       Set The Expanded Save Dialogue As Default
+       <a id="set_the_expanded_save_dialogue_as_default">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#screenshot-in-desired-format-a-id-screenshot-in-desired-format-a">
+       Screenshot in desired format
+       <a id="screenshot_in_desired_format">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#servers">
+   Servers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#software-specific">
+   Software-specific
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matlab">
+     MATLAB
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#automator">
+     Automator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fsl-and-fsleyes">
+     FSL and FSLeyes
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#launch-fslview-via-double-click">
+       <strong>
+        Launch fslview via double click
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#generate-dwi-mean-in-same-folder">
+       <strong>
+        generate dwi_mean in same folder
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-a-service">
+     <strong>
+      Use a service
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#chrome">
+     Chrome
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dropbox">
+     Dropbox
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finder">
+     Finder
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#image-capture">
+     Image Capture
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keynote">
+     Keynote
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#microsoft-word">
+     Microsoft Word
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#papers">
+     Papers
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#port-papers-to-another-mac">
+       <strong>
+        Port Papers to another mac
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preview">
+     Preview
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quicklook">
+     QuickLook
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#terminal">
+     Terminal
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#let-terminal-talk">
+       <strong>
+        Let Terminal Talk
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#display-log">
+       <strong>
+        display log
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#textmate">
+     TextMate
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#troubleshooting">
+   Troubleshooting
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#right-click-sharing-for-google-drive">
+     Right-click sharing for Google Drive
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fslview-opening-out-of-screen">
+     fslview opening out of screen
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#archive-utility-permanent-loading">
+     Archive Utility: Permanent loading
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trash-stuck-when-being-emptied">
+     Trash: Stuck when being emptied
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#error-disk-quota-exceeded">
+     Error: “disk quota exceeded”
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cannot-repair-permission">
+     Cannot repair permission
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#password-prompts-finder-wants-to-make-changes">
+     Password prompts: “Finder wants to make changes”
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solution-1">
+       <strong>
+        Solution 1
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solution-2">
+       <strong>
+        Solution 2
+       </strong>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solution-3">
+       <strong>
+        Solution 3
+       </strong>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="macosx">
+<h1>MacOSX<a class="headerlink" href="#macosx" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="booting-options">
+<h2>Booting Options<a class="headerlink" href="#booting-options" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Key</p></th>
+<th class="text-align:left head"><p>Action</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>cmd+R</p></td>
+<td class="text-align:left"><p>Recovery</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>alt</p></td>
+<td class="text-align:left"><p>Boot from External Device</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="nice-software">
+<h2>Nice Software<a class="headerlink" href="#nice-software" title="Permalink to this headline">¶</a></h2>
+<p><strong>Recommended</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://qsapp.com/">Quicksilver</a>. Do stuff using keyboard instead of mouse (e.g., open applications, Google search, send email, etc.).</p></li>
+<li><p>Textpander. Use abbreviation to call useful text e.g. email address, phone, etc. that you write 10 times a day.</p>
+<ul>
+<li><p>Cheaper alternative: atext</p></li>
+</ul>
+</li>
+<li><p>Time Machine. User-friendly backup solution. To track backups you can use TimeTracker</p></li>
+<li><p><a class="reference external" href="https://slack.com/intl/en-ca/downloads/instructions/mac">Slack</a></p></li>
+<li><p><a class="reference external" href="https://evernote.com/">Evernote</a> Note management</p></li>
+<li><p><a class="reference external" href="https://github.com/MonitorControl/MonitorControl">MonitorControl: Monitor brightness in 2nd monitor (without touching the buttons)</a></p></li>
+</ul>
+<p><strong>Image</strong></p>
+<ul class="simple">
+<li><p>Pixelmator. Image editor that fully took advantage of the Mac OS (Open GL, Automator, ColorSync etc.).</p></li>
+<li><p>Seashore. Image editor - Simpler than Pixelmator. Good for quick fix.</p></li>
+<li><p><a class="reference external" href="http://www.imagemagick.org/index.php">ImageMagick</a>. Command line processing tools for images. E.g., can create GIF. <a class="reference external" href="https://www.neuro.polymtl.ca/tips_and_tricks/mac/imagemagick_installation">Tips for installation and usage</a></p></li>
+</ul>
+<p><strong>Audio/Video</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://obsproject.com/">https://obsproject.com/</a>: Free and open source software for video recording and live streaming.</p></li>
+<li><p>EasyWMA. Convert WMA format into MP3, M4A, WAV or AIFF</p></li>
+<li><p>MacTheRipper. Extract your DVD into TS_VIDEO/TS_AUDIO folder (then use HandBrake to compress).</p></li>
+<li><p>HandBrake. Convert DVD into DivX. Also convert various video formats (MOV, MP4, AVI, etc.)</p></li>
+<li><p><a class="reference external" href="https://www.videolan.org/vlc/index.fr.html">VLC</a>. Nice video player (can be used for DVD as well).</p></li>
+<li><p>Camtasia. Record videos</p></li>
+</ul>
+<p><strong>3D objects</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://meshlab.sourceforge.net/">MeshLab</a>. Read STL, OBJ, 3DS, etc., convert, resample.</p></li>
+</ul>
+<p><strong>Figures</strong></p>
+<ul class="simple">
+<li><p>InkScape …………. Free equivalent of Illustrator: do vectorial figures. One disadvantage: the application has been developed under X11 so the GUI is sometimes “hesitating”…</p></li>
+<li><p>ShapeOnYou ……. Generate 3D shapes for Keynote</p></li>
+<li><p>Organigram ……… OmniGraffle.app</p></li>
+<li><p><a class="reference external" href="http://www.graphviz.org/">graphviz</a>. Generate nice diagrams.</p></li>
+</ul>
+<p><strong>MRI</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.horosproject.org/">Horos</a>: Free DICOM/NIFTI viewer (replaces OsiriX)</p></li>
+<li><p>MITK workbench</p></li>
+<li><p>ITKSNAP</p></li>
+</ul>
+<p><strong>Programming</strong></p>
+<ul class="simple">
+<li><p>Pycharm. Great IDE For Python.</p></li>
+<li><p><a class="reference external" href="http://www.sourcetreeapp.com/">SourceTree</a>. Manages git repository.</p></li>
+</ul>
+<p><strong>Internet stuff</strong></p>
+<ul class="simple">
+<li><p>Transmission. Torrent manager (by default the one from OSX is Opera - which is not that cool)</p></li>
+<li><p><a class="reference external" href="http://cyberduck.io/?l=en">Cyberduck</a>. FTP/SFTP protocol handler with nice GUI.</p></li>
+<li><p>adblock. block adds</p></li>
+</ul>
+<p><strong>Misc</strong></p>
+<ul class="simple">
+<li><p>Pdfshrink: Very convenient, because the default ‘save pdf’ option of Word, etc. does not compress pictures</p></li>
+<li><p>Mailplane: Gmail-dedicated application that makes life easier: drag/drop stuff, get notifications, etc.</p></li>
+<li><p><a class="reference external" href="https://www.ragingmenace.com/software/menumeters/index.html">MenuMeters</a>: System monitoring (free).</p></li>
+<li><p>Caffeine: Allows to avoid entering into sleep mode, e.g., while you’re showing a funny clip on youtube</p></li>
+<li><p>xGestures: Allows you to perform common functions using quick mouse movements (e.g. close window, previous page on Safari, etc.)</p></li>
+<li><p>MultiClutch: Allows you to perform common functions using touchpad movements (e.g. previous page on Firefox, etc.).</p></li>
+<li><p>Expandrive: Create a virtual FTP disk</p></li>
+<li><p>Capture Me: For screen recording</p></li>
+<li><p><a class="reference external" href="http://www.telestream.net/screenflow/overview.htm">ScreenFlow</a>: Create demo videos for software</p></li>
+</ul>
+<p><strong>QuickLook modules</strong></p>
+<ul class="simple">
+<li><p>NIFTI: <a class="reference external" href="http://www.nitrc.org/projects/dtitk">dtitk</a></p></li>
+<li><p>DICOM &amp; NIFTI: <a class="reference external" href="https://www.rogue-research.com/downloads/">Brainsight-quicklook</a></p>
+<ul>
+<li><p>NOTE: The Brainsight plugin is not working (at least on my station) with Mojave.</p></li>
+</ul>
+</li>
+<li><p>DICOM: <a class="reference external" href="http://macappstore.org/osirix-quicklook/">Osirix</a></p></li>
+</ul>
+<p>Full list of QuickLook modules <a class="reference external" href="https://www.quicklookplugins.com/page/2/">here</a>)</p>
+<p><strong>Science</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.macupdate.com/app/mac/24037/g-power">G*Power</a>: power calculation for statistics</p></li>
+</ul>
+<p><strong>Programming</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.jetbrains.com/pycharm/download/#section=mac">Pycharm</a> IDE</p></li>
+<li><p><a class="reference external" href="https://atom.io/">Atom</a> Enhanced editor</p></li>
+</ul>
+</div>
+<div class="section" id="general">
+<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="global-default-config-a-id-global-default-config-a">
+<h3>Global default config <a id="global_default_config"></a><a class="headerlink" href="#global-default-config-a-id-global-default-config-a" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://gist.github.com/brandonb927/3195465">https://gist.github.com/brandonb927/3195465</a></p>
+</div>
+<div class="section" id="maintenance">
+<h3>Maintenance<a class="headerlink" href="#maintenance" title="Permalink to this headline">¶</a></h3>
+<p>Clean cache:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>~/Library/Caches
+/Library/Caches
+</pre></div>
+</div>
+</div>
+<div class="section" id="files-and-folders">
+<h3>Files and Folders<a class="headerlink" href="#files-and-folders" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="change-folder-icon-a-id-change-folder-icon-a">
+<h4>Change Folder Icon <a id="change_folder_icon"></a><a class="headerlink" href="#change-folder-icon-a-id-change-folder-icon-a" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Find an icon you like. A good place is interface lift.</p></li>
+<li><p>Once you have found your icon, right click and “Get Info” on both your icon file and the folder you wish to change. Click on the small icon in the top left hand corner. There will be a blue outline around the icon. Now press Command + C, this will copy the icon to your clip board.</p></li>
+<li><p>On your folder icon that you want to change, click it again and press <code class="docutils literal notranslate"><span class="pre">CMD</span> <span class="pre">+</span> <span class="pre">V</span></code>. This will paste the icon.</p></li>
+</ol>
+</div>
+<div class="section" id="copy-make-a-disk-image-from-cd-dvd-iso-format-a-id-copymake-a-disk-image-from-cddvd-iso-format-a">
+<h4>Copy/Make a disk image from CD/DVD (ISO format) <a id="copymake_a_disk_image_from_cddvd_iso_format"></a><a class="headerlink" href="#copy-make-a-disk-image-from-cd-dvd-iso-format-a-id-copymake-a-disk-image-from-cddvd-iso-format-a" title="Permalink to this headline">¶</a></h4>
+<p>Open Disk Utility, click on “create new image”, then save as DVD/CD .cdr format. Then you can convert your CDR into ISO using the following Terminal command:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>hdiutil makehybrid -iso -joliet -o Master.iso Master.cdr
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="recovery">
+<h3>Recovery<a class="headerlink" href="#recovery" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="create-recovery-partition-a-id-create-recovery-partition-a">
+<h4>Create recovery partition <a id="create_recovery_partition"></a><a class="headerlink" href="#create-recovery-partition-a-id-create-recovery-partition-a" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="http://www.macworld.co.uk/how-to/mac-software/downgrade-mavericks-mountain-lion-3494785/">http://www.macworld.co.uk/how-to/mac-software/downgrade-mavericks-mountain-lion-3494785/</a></p>
+<p>For Mavericks: <a class="reference external" href="http://support.apple.com/kb/HT5856">http://support.apple.com/kb/HT5856</a></p>
+<p>Is it possible to downgrade to Mountain Lion on a Mac with native Mavericks installation? ANSWER: <a class="reference external" href="https://discussions.apple.com/thread/5595780">no.</a></p>
+</div>
+</div>
+<div class="section" id="displays">
+<h3>Displays<a class="headerlink" href="#displays" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="lock-screen-a-id-lock-screen-a">
+<h4>Lock screen <a id="lock_screen"></a><a class="headerlink" href="#lock-screen-a-id-lock-screen-a" title="Permalink to this headline">¶</a></h4>
+<p>In order to run a script overnight:</p>
+<ul class="simple">
+<li><p>Keyboard Shortcut: <code class="docutils literal notranslate"><span class="pre">Ctrl+Shift+Eject</span></code></p></li>
+<li><p>Icon in your menu bar: Keychain Access &gt; Preferences &gt; General tab &gt; select the Show Status in Menu Bar option.</p></li>
+</ul>
+</div>
+<div class="section" id="lock-screen-upon-sleep-a-id-lock-screen-upon-sleep-a">
+<h4>Lock screen upon sleep <a id="lock_screen_upon_sleep"></a><a class="headerlink" href="#lock-screen-upon-sleep-a-id-lock-screen-upon-sleep-a" title="Permalink to this headline">¶</a></h4>
+<p>Looking through this site, I found part of the solution in this hint. The trick was getting this script to activate on Sleep (or wake up). After some searching, I found Bernhard Baehr’s excellent Sleepwatcher. Sleepwatcher is a daemon that calls a pair of scripts, ~/.sleep and ~/.wakeup, upon sleep and wakeup. Combining these two, I installed Sleepwatcher, and used the code below as my .sleep file (the /System… line is shown on two lines; enter it as one line without any added spaces):</p>
+<p>#!/bin/sh /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend</p>
+<p>Restart, and your Mac will fast-user switch itself to the log in screen when you close the lid! Hope this helps other paranoid PowerBook owners! Note: You can also put this script in your .wakeup file, but there’s a few (three to five) seconds’ delay between wake and the script call, leaving the system wide open for a few seconds, and looking a bit tacky to boot.</p>
+<p>To download sleepwatcher: <a class="reference external" href="http://www.bernhard-baehr.de/">http://www.bernhard-baehr.de/</a></p>
+<p>Source of this tips: <a class="reference external" href="http://hints.macworld.com/article.php?story=20040724203315798&amp;query=CGSession">http://hints.macworld.com/article.php?story=20040724203315798&amp;query=CGSession</a></p>
+</div>
+</div>
+<div class="section" id="notifications">
+<h3>Notifications<a class="headerlink" href="#notifications" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="disable-notification-center-a-id-disable-notification-center-a">
+<h4>Disable Notification Center <a id="disable_notification_center"></a><a class="headerlink" href="#disable-notification-center-a-id-disable-notification-center-a" title="Permalink to this headline">¶</a></h4>
+<p>If you don’t need the Notification Center feature introduced in OS X Mountain Lion, you can easily disable it with a Terminal command.</p>
+<p>Open Terminal by searching for it in Spotlight or opening it from the Applications &gt; Utilities folder. Enter the following command</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
+</pre></div>
+</div>
+<p>Next you have to close Notification Center. Enter the following command:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>killall NotificationCenter
+</pre></div>
+</div>
+<p>If you see an error reading that there was no process, don’t worry.</p>
+<p>And right away, you will see that the Notification Center icon is gone from the menu bar! If you need to get it back:</p>
+<p>Enter the following command in Terminal</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>launchctl load -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
+</pre></div>
+</div>
+<p>Hit Command+Shift+G in Finder and go to /System/Library/CoreServices/ then find “Notification Center” and double-click it to launch it.</p>
+</div>
+</div>
+<div class="section" id="keyboard">
+<h3>Keyboard<a class="headerlink" href="#keyboard" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="dialog-box-select-option-with-tab-a-id-dialog-boxselect-option-with-tab-a">
+<h4>Dialog box: select option with Tab <a id="dialog_boxselect_option_with_tab"></a><a class="headerlink" href="#dialog-box-select-option-with-tab-a-id-dialog-boxselect-option-with-tab-a" title="Permalink to this headline">¶</a></h4>
+<p>After Snow Leopard, this useful feature was removed by default. To put it back: System Preferences &gt; Keyboard &gt; Shortcuts &gt; select “All Controls”</p>
+</div>
+</div>
+<div class="section" id="misc">
+<h3><strong>Misc</strong><a class="headerlink" href="#misc" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="dock-in-2d-a-id-dock-in-2d-a">
+<h4>Dock in 2d <a id="dock_in_2d"></a><a class="headerlink" href="#dock-in-2d-a-id-dock-in-2d-a" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>defaults write com.apple.dock no-glass -boolean YES
+killall Dock
+</pre></div>
+</div>
+</div>
+<div class="section" id="make-hidden-applications-icons-transparent-a-id-make-hidden-applications-icons-transparent-a">
+<h4>Make Hidden Applications Icons Transparent <a id="make_hidden_applications_icons_transparent"></a><a class="headerlink" href="#make-hidden-applications-icons-transparent-a-id-make-hidden-applications-icons-transparent-a" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>defaults write com.apple.Dock showhidden -bool YES
+killall Dock
+</pre></div>
+</div>
+</div>
+<div class="section" id="set-the-expanded-print-dialogue-as-default-a-id-set-the-expanded-print-dialogue-as-default-a">
+<h4>Set The Expanded Print Dialogue As Default <a id="set_the_expanded_print_dialogue_as_default"></a><a class="headerlink" href="#set-the-expanded-print-dialogue-as-default-a-id-set-the-expanded-print-dialogue-as-default-a" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>defaults write -g PMPrintingExpandedStateForPrint -bool TRUE
+</pre></div>
+</div>
+</div>
+<div class="section" id="reboot-station-with-terminal-a-id-reboot-station-with-terminal-a">
+<h4>Reboot station with Terminal <a id="reboot_station_with_terminal"></a><a class="headerlink" href="#reboot-station-with-terminal-a-id-reboot-station-with-terminal-a" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo shutdown -r now
+</pre></div>
+</div>
+</div>
+<div class="section" id="set-the-expanded-save-dialogue-as-default-a-id-set-the-expanded-save-dialogue-as-default-a">
+<h4>Set The Expanded Save Dialogue As Default <a id="set_the_expanded_save_dialogue_as_default"></a><a class="headerlink" href="#set-the-expanded-save-dialogue-as-default-a-id-set-the-expanded-save-dialogue-as-default-a" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>defaults write -g NSNavPanelExpandedStateForSaveMode -bool TRUE
+</pre></div>
+</div>
+</div>
+<div class="section" id="screenshot-in-desired-format-a-id-screenshot-in-desired-format-a">
+<h4>Screenshot in desired format <a id="screenshot_in_desired_format"></a><a class="headerlink" href="#screenshot-in-desired-format-a-id-screenshot-in-desired-format-a" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>defaults write com.apple.screencapture <span class="nb">type</span> jpg
+</pre></div>
+</div>
+<p>needs re-logging</p>
+</div>
+</div>
+</div>
+<div class="section" id="servers">
+<h2>Servers<a class="headerlink" href="#servers" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.neuro.polymtl.ca/tips_and_tricks/mac/server">How to manage a server</a></p>
+</div>
+<div class="section" id="software-specific">
+<h2>Software-specific<a class="headerlink" href="#software-specific" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="matlab">
+<h3>MATLAB<a class="headerlink" href="#matlab" title="Permalink to this headline">¶</a></h3>
+<p>help crash. use this command in matlab : <code class="docutils literal notranslate"><span class="pre">com.mathworks.mlwidgets.html.HtmlComponentFactory.setDefaultType('HTMLRENDERER');</span></code></p>
+</div>
+<div class="section" id="automator">
+<h3>Automator<a class="headerlink" href="#automator" title="Permalink to this headline">¶</a></h3>
+<p>Launch app automator –&gt; New app OR service –&gt; add “Run shell script” module –&gt; select module Option: Pass input “as argument” –&gt; write you script</p>
+</div>
+<div class="section" id="fsl-and-fsleyes">
+<h3>FSL and FSLeyes<a class="headerlink" href="#fsl-and-fsleyes" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="launch-fslview-via-double-click">
+<h4><strong>Launch fslview via double click</strong><a class="headerlink" href="#launch-fslview-via-double-click" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FSLDIR</span><span class="o">=</span>/usr/local/fsl . <span class="si">${</span><span class="nv">FSLDIR</span><span class="si">}</span>/etc/fslconf/fsl.sh <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/usr/local/fsl/bin fslview “<span class="nv">$@</span>” <span class="p">&amp;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="generate-dwi-mean-in-same-folder">
+<h4><strong>generate dwi_mean in same folder</strong><a class="headerlink" href="#generate-dwi-mean-in-same-folder" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FSLDIR</span><span class="o">=</span>/usr/local/fsl . <span class="si">${</span><span class="nv">FSLDIR</span><span class="si">}</span>/etc/fslconf/fsl.sh <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/usr/local/fsl/bin <span class="nv">fold</span><span class="o">=</span><span class="k">$(</span>dirname “<span class="nv">$1</span>”<span class="k">)</span> <span class="nv">NAME</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> “<span class="k">$(</span>basename “<span class="nv">$1</span>”<span class="k">)</span>” <span class="p">|</span> cut -d<span class="s1">&#39;.&#39;</span> -f1<span class="sb">`</span> fslmaths “<span class="nv">$1</span>” -Tmean <span class="nv">$fold</span>“/“<span class="nv">$NAME</span>”_mean”
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="use-a-service">
+<h3><strong>Use a service</strong><a class="headerlink" href="#use-a-service" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>select a file or text (depending on your service input)</p></li>
+<li><p>application menu (e.g. finder) → Services → your service. (Or specify a keyboard shortcut in “Services preferences”)</p></li>
+</ul>
+</div>
+<div class="section" id="chrome">
+<h3>Chrome<a class="headerlink" href="#chrome" title="Permalink to this headline">¶</a></h3>
+<p><strong>Won’t launch</strong></p>
+<ul class="simple">
+<li><p>Terminal –&gt; go to folder:</p>
+<ul>
+<li><p>~/Library/Application\ Support/Google/Chrome/</p></li>
+<li><p>~/Library/Application\ Support/Skype/</p></li>
+<li><p>Remove user folder or even everything</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="dropbox">
+<h3>Dropbox<a class="headerlink" href="#dropbox" title="Permalink to this headline">¶</a></h3>
+<p><strong>Sync is stuck</strong></p>
+<p><strong>Solution 1</strong></p>
+<p>Remove the ACL manually. Go to the problematic folder(s) and type:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>chmod -N foldername
+chmod -RN foldername  --&gt; do do it for all files/folders recursively
+</pre></div>
+</div>
+<p><strong>Solution 2</strong></p>
+<ul class="simple">
+<li><p>Terminal –&gt; cd ~ –&gt; rm -rf .dropbox/</p></li>
+</ul>
+</div>
+<div class="section" id="finder">
+<h3>Finder<a class="headerlink" href="#finder" title="Permalink to this headline">¶</a></h3>
+<p><strong>Enable The Path View</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
+</pre></div>
+</div>
+<p><strong>Show Hidden Files</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>defaults write com.apple.finder AppleShowAllFiles TRUE
+</pre></div>
+</div>
+<p>N.B. Must restart: <a class="reference external" href="http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/">http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/</a></p>
+<p><strong>Display full path</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
+</pre></div>
+</div>
+<p><strong>Sort Folders first</strong></p>
+<p><a class="reference external" href="http://fahmiesalleh.blogspot.com/2008/04/mac-os-x-finder-sort-folder-before-file.html">http://fahmiesalleh.blogspot.com/2008/04/mac-os-x-finder-sort-folder-before-file.html</a></p>
+</div>
+<div class="section" id="image-capture">
+<h3>Image Capture<a class="headerlink" href="#image-capture" title="Permalink to this headline">¶</a></h3>
+<p><strong>iPhone or scanner is no more recognized</strong></p>
+<p>Close Image capture. Delete (or rename) the plist files:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>cd ~/Library/Preferences
+mv com.apple.Image_Capture.plist com.apple.Image_Capture.plist__old
+mv com.apple.ImageCaptureExtension2.plist com.apple.ImageCaptureExtension2.plist__old
+</pre></div>
+</div>
+<p>Open Image Capture and plug your device.</p>
+</div>
+<div class="section" id="keynote">
+<h3>Keynote<a class="headerlink" href="#keynote" title="Permalink to this headline">¶</a></h3>
+<p>In the new version of Keynote (6.2), files are now saved as packages instead of files. This creates huge problems with Dropbox, git, etc. I did not find any workaround so far, so had to install the older version (not possible to downgrade from Apple Store– you need to manually install the previous version inside the Applications/ folder).</p>
+</div>
+<div class="section" id="microsoft-word">
+<h3>Microsoft Word<a class="headerlink" href="#microsoft-word" title="Permalink to this headline">¶</a></h3>
+<p><strong>Word freezes after copy/paste</strong></p>
+<p>Solutions:</p>
+<ol class="simple">
+<li><p>work with .docx, not .doc</p></li>
+<li><p><a class="reference external" href="http://word.mvps.org/Mac/fontweeding.html">http://word.mvps.org/Mac/fontweeding.html</a></p></li>
+</ol>
+<p><strong>Error: A COM Exception has occurred</strong></p>
+<p>Related to EndNote. Solution:</p>
+<ol class="simple">
+<li><p>Go to ~/Library/</p></li>
+<li><p>Rename <strong>Saved Application State</strong> as <strong>Saved Application State_old</strong></p></li>
+</ol>
+<p><strong>Error: “Microsoft Word has encountered a problem and needs to close”</strong></p>
+<p>Try rebooting.</p>
+<p><strong>Hyperlinks are lost when saving as pdf</strong></p>
+<p>This is a <a class="reference external" href="http://msgroups.net/microsoft.public.mac.office.word/links-lost-on-conversion-to/63190">known bug</a>. Solution: convert your word document using <a class="reference external" href="https://www.freepdfconvert.com/">freepdfconvert</a></p>
+</div>
+<div class="section" id="papers">
+<h3>Papers<a class="headerlink" href="#papers" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="port-papers-to-another-mac">
+<h4><strong>Port Papers to another mac</strong><a class="headerlink" href="#port-papers-to-another-mac" title="Permalink to this headline">¶</a></h4>
+<p>This only applies to Papers 1. Not possible to do with Papers 2+ for security reasons (at least I haven’t figured out how to do it).</p>
+<p>Copy these files to another mac:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>/Applications/Papers
+~/Library/Application Support/Papers
+</pre></div>
+</div>
+<p>Open Papers and register.</p>
+<p>Your library is managed by the file <strong>Library.papers</strong>. To port your existing library, do the following:</p>
+<ol class="simple">
+<li><p>Go to menu Papers &gt; Preferences &gt; Library</p></li>
+<li><p>Edit the folder <strong>PDF Library Location</strong></p></li>
+<li><p>When it says “Papers library found already”, click <strong>switch</strong></p></li>
+<li><p>Restart Papers.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="preview">
+<h3>Preview<a class="headerlink" href="#preview" title="Permalink to this headline">¶</a></h3>
+<p><strong>Add a signature</strong></p>
+<p>To avoid having to click multiple times to add a signature, here is an awesome AppleScript + QuickSilver combo:</p>
+<p>Create this AppleScript:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>tell application &quot;Preview&quot; to activate
+  tell application &quot;System Events&quot; to tell process &quot;Preview&quot;
+    click menu item 1 of menu 1 of menu item &quot;Signature&quot; of menu 1 of menu item &quot;Annotate&quot; of menu 1 of menu bar item &quot;Tools&quot; of menu bar 1
+end tell
+</pre></div>
+</div>
+<p>Then drag/drop this script as a “Trigger” in <a class="reference external" href="https://qsapp.com/">quicksilver</a>, add a specific keyboard shortcut (e.g. alt+cmd+s) and make the scope specific to “Preview”.</p>
+<p>To create other AppleScript, you can use this UI inspector: <a class="reference external" href="https://pfiddlesoft.com/uibrowser/index-downloads.html">UI Browser</a>.</p>
+<p>If you want to run the above script without QuickSilver:</p>
+<ol class="simple">
+<li><p>Open Automator.</p></li>
+<li><p>Make a new Quick Action.</p></li>
+<li><p>Make sure it receives ‘no input’ at all programs.</p></li>
+<li><p>Select Run Apple Script (the script from above) and type in your code.</p></li>
+<li><p>Save!</p></li>
+<li><p>Now go to System Preferences &gt; Keyboard &gt; Shortcuts. Select Services from the sidebar and find your service. Add a shortcut by double clicking (none).</p></li>
+<li><p>Finally go to System Preferences &gt; Security &gt; Privacy &gt; Accessibility and add Automator and the preferred app to run the shortcut.</p></li>
+</ol>
+</div>
+<div class="section" id="quicklook">
+<h3>QuickLook<a class="headerlink" href="#quicklook" title="Permalink to this headline">¶</a></h3>
+<p>Reload cache</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>qlmanage -r
+</pre></div>
+</div>
+<p>List all plugins</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>qlmanage -m
+</pre></div>
+</div>
+<p>Debug</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>qlmanage -p &quot;path_to_plugin&quot;
+Example: qlmanage -p /Library/QuickLook/DTITK_QuickLookPlugin.qlgenerator
+</pre></div>
+</div>
+<p>Nice plugins</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.nitrc.org/projects/dtitk">http://www.nitrc.org/projects/dtitk</a></p></li>
+</ul>
+</div>
+<div class="section" id="terminal">
+<h3>Terminal<a class="headerlink" href="#terminal" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="let-terminal-talk">
+<h4><strong>Let Terminal Talk</strong><a class="headerlink" href="#let-terminal-talk" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>say hola
+</pre></div>
+</div>
+<p>for more UNIX commands, see <a class="reference external" href="http://www.neuro.polymtl.ca/doku.php?id=tips_and_tricks:unix">http://www.neuro.polymtl.ca/doku.php?id=tips_and_tricks:unix</a></p>
+</div>
+<div class="section" id="display-log">
+<h4><strong>display log</strong><a class="headerlink" href="#display-log" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>syslog
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="textmate">
+<h3>TextMate<a class="headerlink" href="#textmate" title="Permalink to this headline">¶</a></h3>
+<p>If TextMate does not open, delete folder <code class="docutils literal notranslate"><span class="pre">~/Library/Application</span> <span class="pre">Support/TextMate</span></code> .</p>
+</div>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="right-click-sharing-for-google-drive">
+<h3>Right-click sharing for Google Drive<a class="headerlink" href="#right-click-sharing-for-google-drive" title="Permalink to this headline">¶</a></h3>
+<p>The Share menu might not show one or more sharing options—such as Email This Page, AirDrop, or Facebook—or the Markup feature might be missing.</p>
+<p>Follow these steps if the issue occurred immediately after upgrading to Yosemite or El Capitan. Open the Terminal app, and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -seed
+</pre></div>
+</div>
+<p>source: <a class="reference external" href="https://support.apple.com/en-us/HT203129">https://support.apple.com/en-us/HT203129</a></p>
+</div>
+<div class="section" id="fslview-opening-out-of-screen">
+<h3>fslview opening out of screen<a class="headerlink" href="#fslview-opening-out-of-screen" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>try to restart the application.</p></li>
+<li><p>try to restart the computer.</p></li>
+<li><p>Try this:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm ~/Library/Preferences/org.macosforge.xquartz.X11.plist
+rm ~/Library/Preferences/uk.fmrib.ox.ac.fslview.plist
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>open AppleScript Editor and run:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tell application <span class="s2">&quot;fslview&quot;</span>
+  <span class="nb">set</span> bounds of windows to <span class="o">{</span><span class="m">100</span>, <span class="m">100</span>, <span class="m">800</span>, <span class="m">800</span><span class="o">}</span>
+end tell
+</pre></div>
+</div>
+</div>
+<div class="section" id="archive-utility-permanent-loading">
+<h3>Archive Utility: Permanent loading<a class="headerlink" href="#archive-utility-permanent-loading" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Restart Computer</p></li>
+<li><p>Use other program: <a class="reference external" href="http://wakaba.c3.cx/s/apps/unarchiver">http://wakaba.c3.cx/s/apps/unarchiver</a></p></li>
+</ul>
+</div>
+<div class="section" id="trash-stuck-when-being-emptied">
+<h3>Trash: Stuck when being emptied<a class="headerlink" href="#trash-stuck-when-being-emptied" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Terminal –&gt; killall Finder –&gt; <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">~/.Trash/*</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="error-disk-quota-exceeded">
+<h3>Error: “disk quota exceeded”<a class="headerlink" href="#error-disk-quota-exceeded" title="Permalink to this headline">¶</a></h3>
+<p>ONLY APPLIES TO PEOPLE AT NEUROPOLY: If you see this message, try to unmount <strong>django</strong>: from the Finder, click on the eject button. If you still have problems, ask an administrator system.</p>
+</div>
+<div class="section" id="cannot-repair-permission">
+<h3>Cannot repair permission<a class="headerlink" href="#cannot-repair-permission" title="Permalink to this headline">¶</a></h3>
+<p>Probably some ACL issues. Download and run this: <a class="reference external" href="http://nomulous.com/goodies/ACLr8/">http://nomulous.com/goodies/ACLr8/</a></p>
+</div>
+<div class="section" id="password-prompts-finder-wants-to-make-changes">
+<h3>Password prompts: “Finder wants to make changes”<a class="headerlink" href="#password-prompts-finder-wants-to-make-changes" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="solution-1">
+<h4><strong>Solution 1</strong><a class="headerlink" href="#solution-1" title="Permalink to this headline">¶</a></h4>
+<p>Remove the ACL manually. Go to the problematic folder(s) and type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod -N &lt;FOLDER&gt;
+chmod -RN &lt;FOLDER&gt;  <span class="c1"># --&gt; do do it for all files/folders recursively</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="solution-2">
+<h4><strong>Solution 2</strong><a class="headerlink" href="#solution-2" title="Permalink to this headline">¶</a></h4>
+<ol class="simple">
+<li><p>Open Applications &gt; Utilities &gt; Disk Utility.</p></li>
+<li><p>Select your hard drive in the left column. Most likely it will be named “Macintosh HD.”</p></li>
+<li><p>Click on “Repair Disk Permissions.”</p></li>
+<li><p>Close Disk Utility. Check if the problem is still there.</p></li>
+</ol>
+</div>
+<div class="section" id="solution-3">
+<h4><strong>Solution 3</strong><a class="headerlink" href="#solution-3" title="Permalink to this headline">¶</a></h4>
+<p>If it is still not resolved:</p>
+<ol class="simple">
+<li><p>Restart and hold down the Command and R keys. You will boot into the Repair Utilities screen. On top, in the Menu Bar click the Utilities item then select Terminal.</p></li>
+<li><p>In the Terminal window, type <code class="docutils literal notranslate"><span class="pre">resetpassword</span></code> and hit Return. The Password reset utility launches, but you’re not going to reset the password.</p></li>
+<li><p>Instead, click on the icon for your Mac’s hard drive at the top. From the drop-down below it, select the user account where you are having issues. At the bottom of the window, you’ll see a button labeled ‘Reset Home Directory Permissions and ACLs’. Click the Reset button there.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By NeuroPoly<br/>
+        
+            &copy; Copyright 2021, NeuroPoly.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

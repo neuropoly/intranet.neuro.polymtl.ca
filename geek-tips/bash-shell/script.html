@@ -1,0 +1,935 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Script &#8212; NeuroPoly Lab Manual</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <link rel="shortcut icon" href="../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">NeuroPoly Lab Manual</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://neuro.polymtl.ca">
+   NeuroPoly Website
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../onboarding/README.html">
+   <span>
+    👋
+   </span>
+   Onboarding
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/getting-started.html">
+     Getting Started
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/accounts.html">
+     Accounts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/campus-access.html">
+     Campus Access
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/infrastructure.html">
+     Infrastructure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/dropbox-google-drive.html">
+     Dropbox/Google Drive
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/computer-setup.html">
+     Computer Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/developer-setup.html">
+     Developer Setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/consultants-ra.html">
+     Consultants and RA
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/postdoc.html">
+     Postdoctoral fellows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../onboarding/acronyms-jargon.html">
+     Acronyms &amp; Jargon
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../agenda-and-calendar.html">
+   <span>
+    📅
+   </span>
+   Calendar
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../mri-scanning/README.html">
+   <span>
+    🧲
+   </span>
+   MRI Scanning
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mri-scanning/unf-3t-prisma.html">
+     UNF (3T Prisma)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mri-scanning/mni-mcgill-7t-terra.html">
+     MNI/McGill (7T Terra)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../mri-scanning/mhi-7t-agilent.html">
+     MHI (7T Agilent)
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../mri-scanning/coils/README.html">
+     Coils
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../mri-scanning/coils/3d-printing/README.html">
+       3D Printing
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../mri-scanning/coils/3d-printing/octoprint.html">
+         OctoPrint
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/coils/faq.html">
+       FAQ
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/coils/pcb-manufacturing.html">
+       PCB Manufacturing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/coils/cnc-machine-genmitsu-3018-prover.html">
+       CNC machine - Genmitsu 3018-PROVer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../mri-scanning/phantoms/README.html">
+     Phantoms
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../mri-scanning/phantoms/phantom-recipes-for-mri.html">
+       Phantom Recipes for MRI
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../writing-articles.html">
+   <span>
+    ✍️
+   </span>
+   Academic Writing
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../computing-resources/README.html">
+   <span>
+    🖥
+   </span>
+   Computing Resources
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../computing-resources/neuropoly/README.html">
+     NeuroPoly
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="../../computing-resources/neuropoly/data/README.html">
+       Data
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../computing-resources/neuropoly/data/home.html">
+         /home
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../computing-resources/neuropoly/data/git-datasets.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           data
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../computing-resources/neuropoly/data/duke.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           duke
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../computing-resources/neuropoly/data/django.html">
+         <code class="docutils literal notranslate">
+          <span class="pre">
+           django
+          </span>
+         </code>
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="../../computing-resources/neuropoly/data/git-annex.html">
+         git-annex
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing-resources/neuropoly/cpus2.html">
+       CPUS2
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing-resources/neuropoly/gpus.html">
+       GPUs
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing-resources/compute-canada.html">
+     Compute Canada
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing-resources/clusters-at-criugm.html">
+     CRIUGM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../computing-resources/printer.html">
+     <span>
+      🖨
+     </span>
+     Printer
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../courses.html">
+   <span>
+    🎓
+   </span>
+   University Courses
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../bibliography/README.html">
+   <span>
+    📚
+   </span>
+   Bibliography
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/deep-learning.html">
+     Deep Learning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/histology.html">
+     Histology
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/untitled.html">
+     MRI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/shared-paperpile-folder.html">
+     Paperpile Folder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../conferences.html">
+   <span>
+    ✈️
+   </span>
+   Conferences
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ideas-for-cool-projects.html">
+   <span>
+    💡
+   </span>
+   Ideas for Cool Projects
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../practical-information/README.html">
+   <span>
+    📎
+   </span>
+   Practical Information
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/visa.html">
+     VISAs and Work Permits
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/moving-to-montreal.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       🇨🇦
+      </span>
+     </code>
+     Living in Montreal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/scholarships-and-bursaries.html">
+     Scholarships &amp; Bursaries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../practical-information/purchasing-hardware-and-lab-supplies.html">
+     Purchasing Supplies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../contact.html">
+   <span>
+    📞
+   </span>
+   Contact
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+
+
+<!-- only one Github button activated, so collapse it into the main button, saving a click for users -->
+        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/bash-shell/script.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fab fa-github"></i></button></a>
+
+
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Page Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tutorials-links">
+   Tutorials/Links
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-a-script">
+   Creating a Script
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arrays">
+   Arrays
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#strings">
+   Strings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dates">
+   Dates
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-loop">
+   FOR Loop
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#if-statements">
+   IF Statements
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#if-and">
+     IF - AND
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#if-or">
+     IF - OR
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#csv-files">
+   CSV Files
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parse-csv-file">
+     Parse CSV File
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#command-line-input">
+   Command Line Input
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#log-files">
+   Log Files
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generate-log-file-a-id-generate-log-file-a">
+     Generate log file
+     <a id="generate_log_file">
+     </a>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#colors">
+   Colors
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ansi-escape-codes-for-colours">
+     ANSI Escape Codes for Colours
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#misc">
+   Misc
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="script">
+<h1>Script<a class="headerlink" href="#script" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="tutorials-links">
+<h2>Tutorials/Links<a class="headerlink" href="#tutorials-links" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://linuxconfig.org/bash-scripting-tutorial">http://linuxconfig.org/bash-scripting-tutorial</a></p>
+<p><a class="reference external" href="https://devhints.io/bash">Bash scripting cheatsheet</a></p>
+</div>
+<div class="section" id="creating-a-script">
+<h2>Creating a Script<a class="headerlink" href="#creating-a-script" title="Permalink to this headline">¶</a></h2>
+<p>First, create a file with the <code class="docutils literal notranslate"><span class="pre">*.sh</span></code> extension.</p>
+<p>Next, open your script and put the following at the top:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="arrays">
+<h2>Arrays<a class="headerlink" href="#arrays" title="Permalink to this headline">¶</a></h2>
+<p>Create array from list of files</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FILES</span><span class="o">=(</span><span class="k">$(</span>ls -r data*.*<span class="k">)</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>Use array (just an example)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="si">${</span><span class="nv">FILES</span><span class="p">[2]</span><span class="si">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="strings">
+<h2>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
+<p><strong>Get the first 2 characters of a string</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">my_string</span><span class="o">=</span><span class="s2">&quot;hola&quot;</span>
+<span class="nb">echo</span> <span class="si">${</span><span class="nv">my_string</span><span class="p">:</span><span class="nv">0</span><span class="p">:</span><span class="nv">2</span><span class="si">}</span>
+</pre></div>
+</div>
+<p><strong>Get the last 2 characters of a string</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="si">${</span><span class="nv">my_string</span><span class="p">: -2</span><span class="si">}</span>
+</pre></div>
+</div>
+<p><strong>Remove the first character of a string</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="si">${</span><span class="nv">my_string</span><span class="p">:</span><span class="nv">1</span><span class="si">}</span>
+</pre></div>
+</div>
+<p><strong>Remove the last 2 characters of a string</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="si">${</span><span class="nv">my_string</span><span class="p">%??</span><span class="si">}</span>
+</pre></div>
+</div>
+<p><strong>Display the first line where a pattern is found (here dim3), and remove the first characters that matches a given string</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fslhd t1w.nii.gz <span class="p">|</span> grep -m <span class="m">1</span> dim3 <span class="p">|</span> sed -e <span class="s2">&quot;s/^dim3           //&quot;</span>
+</pre></div>
+</div>
+<p><strong>Batch actions with grep</strong></p>
+<p>`grep` is powerful for creating an action based on a series of input (e.g. multiple files). Below is an example to delete several branches in git, based on their prefix name:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git branch -D <span class="sb">`</span>git branch <span class="p">|</span> grep -E <span class="s1">&#39;BRANCH_PREFIX*&#39;</span><span class="sb">`</span>
+</pre></div>
+</div>
+<p><strong>Check if substring is in string</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">my_string</span><span class="o">=</span><span class="s1">&#39;My long string&#39;</span>
+<span class="k">if</span> <span class="o">[[</span> <span class="nv">$my_string</span> <span class="o">==</span> *<span class="s2">&quot;My long&quot;</span>* <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> <span class="s2">&quot;It&#39;s there!&quot;</span>
+<span class="k">fi</span>
+</pre></div>
+</div>
+<p>More info here: <a class="reference external" href="http://tldp.org/LDP/abs/html/string-manipulation.html">http://tldp.org/LDP/abs/html/string-manipulation.html</a></p>
+</div>
+<div class="section" id="dates">
+<h2>Dates<a class="headerlink" href="#dates" title="Permalink to this headline">¶</a></h2>
+<p>To list the date every week for the next five weeks, starting in 2 days:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> i <span class="k">in</span> <span class="o">{</span><span class="m">1</span>..5<span class="o">}</span><span class="p">;</span> <span class="k">do</span> <span class="nb">echo</span> <span class="k">$(</span>date -v +<span class="si">${</span><span class="nv">i</span><span class="si">}</span>w -v +2d <span class="s2">&quot;+%Y-%m-%d&quot;</span><span class="k">)</span><span class="p">;</span> <span class="k">done</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="for-loop">
+<h2>FOR Loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h2>
+<p><strong>Loop across list elements</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">ARRAY</span><span class="o">=(</span>element1 element2 element3<span class="o">)</span>
+<span class="k">for</span> i <span class="k">in</span> <span class="si">${</span><span class="nv">ARRAY</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
+  <span class="nb">echo</span> <span class="nv">$i</span>
+<span class="k">done</span>
+</pre></div>
+</div>
+<p><strong>Loop across list elements (using indices)</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">ARRAY</span><span class="o">=(</span>element1 element2 element3<span class="o">)</span>
+<span class="k">for</span> i <span class="k">in</span> <span class="si">${</span><span class="p">!ARRAY[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
+  <span class="nb">echo</span> <span class="s2">&quot;Element: </span><span class="k">$((</span>i+1<span class="k">))</span><span class="s2">/</span><span class="si">${#</span><span class="nv">ARRAY</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
+  <span class="nb">echo</span> <span class="si">${</span><span class="nv">ARRAY</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span>
+<span class="k">done</span>
+</pre></div>
+</div>
+<p><strong>Loop across a series of files</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> filename <span class="k">in</span> im1 im2 im3 <span class="p">;</span> <span class="k">do</span>
+  bet <span class="nv">$filename</span> <span class="si">${</span><span class="nv">filename</span><span class="si">}</span>_brain <span class="p">;</span>
+<span class="k">done</span>
+</pre></div>
+</div>
+<p><strong>Using ls</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FILES</span><span class="o">=</span><span class="sb">`</span>ls folder/*.nii<span class="sb">`</span>
+<span class="k">for</span> file <span class="k">in</span> <span class="nv">$FILES</span><span class="p">;</span> <span class="k">do</span>
+  <span class="nb">echo</span> <span class="nv">$file</span>
+<span class="k">done</span>
+</pre></div>
+</div>
+<p>Do it in a single line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FILES</span><span class="o">=</span><span class="sb">`</span>ls folder/*.nii<span class="sb">`</span><span class="p">;</span> <span class="k">for</span> file <span class="k">in</span> <span class="nv">$FILES</span><span class="p">;</span> <span class="k">do</span> <span class="nb">echo</span> <span class="nv">$file</span><span class="p">;</span> <span class="k">done</span>
+</pre></div>
+</div>
+<p><strong>Using find (recursive)</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FILES</span><span class="o">=</span><span class="sb">`</span>find . -name *.nii<span class="sb">`</span><span class="p">;</span> <span class="k">for</span> file <span class="k">in</span> <span class="nv">$FILES</span><span class="p">;</span> <span class="k">do</span> <span class="nb">echo</span> <span class="nv">$file</span><span class="p">;</span> <span class="k">done</span>
+</pre></div>
+</div>
+<p><strong>Using a list of string</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">SUBJECT_LIST</span><span class="o">=</span><span class="s2">&quot;subject_a subject_b&quot;</span>
+
+<span class="k">for</span> subject <span class="k">in</span> <span class="nv">$SUBJECT_LIST</span><span class="p">;</span> <span class="k">do</span>
+  <span class="nb">echo</span> <span class="nv">$subject</span>
+<span class="k">done</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="if-statements">
+<h2>IF Statements<a class="headerlink" href="#if-statements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="if-and">
+<h3>IF - AND<a class="headerlink" href="#if-and" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> ! -z <span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="o">[</span> -e <span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="k">do</span> something ...
+<span class="k">else</span>
+  <span class="k">do</span> something <span class="k">else</span>...
+<span class="k">fi</span>
+</pre></div>
+</div>
+<p>alternative:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span> ! -z <span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span> -a  -e <span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span> <span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="if-or">
+<h3>IF - OR<a class="headerlink" href="#if-or" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> ! -z <span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> -e <span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+  <span class="k">do</span> something ...
+<span class="k">fi</span>
+</pre></div>
+</div>
+<p>alternative:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span> ! -z <span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span> -o  -e <span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span> <span class="o">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="csv-files">
+<h2>CSV Files<a class="headerlink" href="#csv-files" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="parse-csv-file">
+<h3>Parse CSV File<a class="headerlink" href="#parse-csv-file" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span>, <span class="nb">read</span> col1 col2 col3 col4 col5
+  <span class="k">do</span>
+    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$col2</span><span class="s2">&quot;</span>
+  <span class="k">done</span> &lt; &lt;FILE&gt;.csv
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="command-line-input">
+<h2>Command Line Input<a class="headerlink" href="#command-line-input" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1"># use predefined variables to access passed arguments</span>
+<span class="c1"># echo arguments to the shell</span>
+<span class="nb">echo</span> <span class="nv">$1</span> <span class="nv">$2</span> <span class="nv">$3</span> <span class="s1">&#39; -&gt; echo $1 $2 $3&#39;</span>
+<span class="c1"># list all arguments:</span>
+<span class="nb">echo</span> <span class="nv">$@</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># We can also store arguments from bash command line in special array</span>
+<span class="nv">args</span><span class="o">=(</span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span><span class="o">)</span>
+<span class="c1"># echo arguments to the shell</span>
+<span class="nb">echo</span> <span class="si">${</span><span class="nv">args</span><span class="p">[0]</span><span class="si">}</span> <span class="si">${</span><span class="nv">args</span><span class="p">[1]</span><span class="si">}</span> <span class="si">${</span><span class="nv">args</span><span class="p">[2]</span><span class="si">}</span> <span class="s1">&#39; -&gt; args=(&quot;$@&quot;); echo ${args[0]} ${args[1]} ${args[2]}&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># use $@ to print out all arguments at once</span>
+<span class="nb">echo</span> <span class="nv">$@</span> <span class="s1">&#39; -&gt; echo $@&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># use $# variable to print out number of arguments passed to the bash script</span>
+<span class="nb">echo</span> Number of arguments passed: <span class="nv">$#</span> <span class="s1">&#39; -&gt; echo Number of arguments passed: $#&#39;</span>  
+</pre></div>
+</div>
+<p>also see: <a class="reference external" href="https://www.neuro.polymtl.ca/tips_and_tricks/bash_parsing_arguments_with_getopts">Bash: parsing arguments with ‘getopts’</a></p>
+</div>
+<div class="section" id="log-files">
+<h2>Log Files<a class="headerlink" href="#log-files" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="generate-log-file-a-id-generate-log-file-a">
+<h3>Generate log file <a id="generate_log_file"></a><a class="headerlink" href="#generate-log-file-a-id-generate-log-file-a" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">LOGFILE</span><span class="o">=</span>&lt;FILE_NAME&gt;.log
+<span class="o">{</span>
+    <span class="c1"># bash commands...</span>
+    
+<span class="o">}</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> tee <span class="nv">$LOGFILE</span>
+</pre></div>
+</div>
+<p>Generate a log file of a script directly in terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>script.<span class="nv">$$</span> <span class="o">[</span>options<span class="o">]</span> <span class="p">|</span> tee &lt;FILE_NAME&gt;.log
+</pre></div>
+</div>
+<p>Add date to log file: log_file_name_$(date +%Y%m%d).logEdit</p>
+</div>
+</div>
+<div class="section" id="colors">
+<h2>Colors<a class="headerlink" href="#colors" title="Permalink to this headline">¶</a></h2>
+<p>The Mountain Lion Terminal does not support the command <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">-e</span></code> therefore the following has to be used:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">printf</span> <span class="s2">&quot;\e[0;32mText here\e[0m&quot;</span>
+</pre></div>
+</div>
+<div class="section" id="ansi-escape-codes-for-colours">
+<h3>ANSI Escape Codes for Colours<a class="headerlink" href="#ansi-escape-codes-for-colours" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Colour</p></th>
+<th class="text-align:left head"><p>ANSI Escape Code</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Black</p></td>
+<td class="text-align:left"><p>0;30</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Red</p></td>
+<td class="text-align:left"><p>0;31</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Green</p></td>
+<td class="text-align:left"><p>0;32</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Brown/Orange</p></td>
+<td class="text-align:left"><p>0;33</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Blue</p></td>
+<td class="text-align:left"><p>0;34</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Purple</p></td>
+<td class="text-align:left"><p>0;35</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Cyan</p></td>
+<td class="text-align:left"><p>0;36</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Light Grey</p></td>
+<td class="text-align:left"><p>0;37</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Yellow</p></td>
+<td class="text-align:left"><p>1;33</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>White</p></td>
+<td class="text-align:left"><p>1;37</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>No Colour</p></td>
+<td class="text-align:left"><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BLACK</span><span class="o">=</span><span class="s1">&#39;\033[0;30m&#39;</span>
+<span class="nv">RED</span><span class="o">=</span><span class="s1">&#39;\033[0;31m&#39;</span>
+<span class="nv">NC</span><span class="o">=</span><span class="s1">&#39;\033[0m&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="misc">
+<h2>Misc<a class="headerlink" href="#misc" title="Permalink to this headline">¶</a></h2>
+<p><strong>Pass argument from file</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mycommand <span class="s2">&quot;</span><span class="k">$(</span>&lt; file.txt<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p><strong>Test existence of a file</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> -e <span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By NeuroPoly<br/>
+        
+            &copy; Copyright 2021, NeuroPoly.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
