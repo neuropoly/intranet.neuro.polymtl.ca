@@ -10,6 +10,7 @@ dropbox-google-drive
 computer-setup
 developer-setup
 consultants-ra
+postdoc
 acronyms-jargon
 ```
 
