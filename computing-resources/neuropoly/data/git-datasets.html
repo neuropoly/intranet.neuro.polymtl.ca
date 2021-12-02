@@ -1055,12 +1055,15 @@ list of remote commands available:
 <div class="section" id="list">
 <h3>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h3>
 <p>To see what datasets you have available, use <code class="docutils literal notranslate"><span class="pre">info</span></code>, for example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh git@data.neuro.polymtl.ca info
-hello zamboni, this is git@data running gitolite3 3.6.11-2 (Debian) on git 2.27.0
- R W C  CREATOR/..*
- R W C  datasets/..*
- R W    datasets/sct-testing-large
- R W    datasets/uk-biobank
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">info</span>
+</pre></div>
+</div>
+<p>And the output would look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hello</span> <span class="n">zamboni</span><span class="p">,</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">git</span><span class="nd">@data</span> <span class="n">running</span> <span class="n">gitolite3</span> <span class="mf">3.6.11</span><span class="o">-</span><span class="mi">2</span> <span class="p">(</span><span class="n">Debian</span><span class="p">)</span> <span class="n">on</span> <span class="n">git</span> <span class="mf">2.27.0</span>
+ <span class="n">R</span> <span class="n">W</span> <span class="n">C</span>  <span class="n">CREATOR</span><span class="o">/..*</span>
+ <span class="n">R</span> <span class="n">W</span> <span class="n">C</span>  <span class="n">datasets</span><span class="o">/..*</span>
+ <span class="n">R</span> <span class="n">W</span>    <span class="n">datasets</span><span class="o">/</span><span class="n">sct</span><span class="o">-</span><span class="n">testing</span><span class="o">-</span><span class="n">large</span>
+ <span class="n">R</span> <span class="n">W</span>    <span class="n">datasets</span><span class="o">/</span><span class="n">uk</span><span class="o">-</span><span class="n">biobank</span>
 </pre></div>
 </div>
 <p>You are identified to the server by your ssh keys, butNotice that this tells you the username you are known to</p>
@@ -1068,13 +1071,13 @@ hello zamboni, this is git@data running gitolite3 3.6.11-2 (Debian) on git 2.27.
 <div class="section" id="download">
 <h3>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h3>
 <p>To download an existing repository use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone git@data.neuro.polymtl.ca:datasets/sct-testing-large # download folders and metadata
-$ cd sct-testing-large
-$ git annex get .                                                # download images
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span><span class="p">:</span><span class="n">datasets</span><span class="o">/</span><span class="n">sct</span><span class="o">-</span><span class="n">testing</span><span class="o">-</span><span class="n">large</span> <span class="c1"># download folders and metadata</span>
+<span class="n">cd</span> <span class="n">sct</span><span class="o">-</span><span class="n">testing</span><span class="o">-</span><span class="n">large</span>
+<span class="n">git</span> <span class="n">annex</span> <span class="n">get</span> <span class="o">.</span>                                                <span class="c1"># download images</span>
 </pre></div>
 </div>
 <p>If you just want to explore, you can opt for a portion of the image files by specifying paths instead of the last step, for example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git annex get sub-karo*                                        # download images under any of sub-karo*/*
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">annex</span> <span class="n">get</span> <span class="n">sub</span><span class="o">-</span><span class="n">karo</span><span class="o">*</span>                                        <span class="c1"># download images under any of sub-karo*/*</span>
 </pre></div>
 </div>
 </div>
@@ -1089,23 +1092,26 @@ $ git annex get .                                                # download imag
 <h3>Upload<a class="headerlink" href="#upload" title="Permalink to this headline">¶</a></h3>
 <p>Despite not being hosted on Github, we are still using a <a class="reference external" href="https://guides.github.com/introduction/flow/">pull-request workflow</a>.
 So, to make changes to a dataset, first ask its owner to <a class="reference internal" href="#permissions"><span class="std std-doc">grant you upload rights</span></a>, then make a working branch for your changes:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git checkout -b working-branch
-$ # edit your files, add new ones, etc
-$ git add -p
-$ git add path/to/new/file
-$ git commit # and write a useful commit message
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">working</span><span class="o">-</span><span class="n">branch</span>
+<span class="c1"># edit your files, add new ones, etc</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">-</span><span class="n">p</span>
+<span class="n">git</span> <span class="n">add</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">new</span><span class="o">/</span><span class="n">file</span>
+<span class="n">git</span> <span class="n">commit</span>  <span class="c1"># and write a useful commit message</span>
 </pre></div>
 </div>
 <p>The <em>first</em> time before uploading, verify you have access with <code class="docutils literal notranslate"><span class="pre">info</span></code>. You need “W” (for “Write”) permission, like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh git@localhost info datasets/uk-biobank
-hello zamboni, this is git@data running gitolite3 3.6.11-2 (Debian) on git 2.27.0
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">git</span><span class="nd">@localhost</span> <span class="n">info</span> <span class="n">datasets</span><span class="o">/</span><span class="n">uk</span><span class="o">-</span><span class="n">biobank</span>
+</pre></div>
+</div>
+<p>The output would look like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hello</span> <span class="n">zamboni</span><span class="p">,</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">git</span><span class="nd">@data</span> <span class="n">running</span> <span class="n">gitolite3</span> <span class="mf">3.6.11</span><span class="o">-</span><span class="mi">2</span> <span class="p">(</span><span class="n">Debian</span><span class="p">)</span> <span class="n">on</span> <span class="n">git</span> <span class="mf">2.27.0</span>
 
- R W    datasets/uk-biobank
+ <span class="n">R</span> <span class="n">W</span>    <span class="n">datasets</span><span class="o">/</span><span class="n">uk</span><span class="o">-</span><span class="n">biobank</span>
 </pre></div>
 </div>
 <p>Once you have access you can:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git annex copy --to=origin
-$ git push
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">annex</span> <span class="n">copy</span> <span class="o">--</span><span class="n">to</span><span class="o">=</span><span class="n">origin</span>
+<span class="n">git</span> <span class="n">push</span>
 </pre></div>
 </div>
 <p>Finally, ask one of that dataset’s reviewers to <span class="xref myst">look at your pull request</span>.</p>
@@ -1165,17 +1171,17 @@ $ git push
 <h3>New repository<a class="headerlink" href="#new-repository" title="Permalink to this headline">¶</a></h3>
 <p>To make a new repo, follow this <a class="reference internal" href="git-annex.html#new-repo"><span class="std std-doc">recipe</span></a>.</p>
 <p>Then, to upload it, pick a name under <code class="docutils literal notranslate"><span class="pre">datasets/</span></code>, e.g. “my-new-repo”, and do</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git remote add origin git@data.neuro.polymtl.ca:datasets/my-new-repo
-$ git push origin                           # initialize remote and upload metadata
-$ git annex sync --cleanup -a --no-content  # initialize remote annex
-$ git annex copy --to origin                # upload images to remote annex
-$ # verify your .nii.gz files were annexed and uploaded
-$ git annex whereis
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span><span class="p">:</span><span class="n">datasets</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">repo</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span>                           <span class="c1"># initialize remote and upload metadata</span>
+<span class="n">git</span> <span class="n">annex</span> <span class="n">sync</span> <span class="o">--</span><span class="n">cleanup</span> <span class="o">-</span><span class="n">a</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">content</span>  <span class="c1"># initialize remote annex</span>
+<span class="n">git</span> <span class="n">annex</span> <span class="n">copy</span> <span class="o">--</span><span class="n">to</span> <span class="n">origin</span>                <span class="c1"># upload images to remote annex</span>
+<span class="c1"># verify your .nii.gz files were annexed and uploaded</span>
+<span class="n">git</span> <span class="n">annex</span> <span class="n">whereis</span>
 </pre></div>
 </div>
 <p>Note that you have personal space under “CREATOR”, so if your username is “zamboni” then you can:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git remote add origin git@data.neuro.polymtl.ca:zamboni/project1
-$ git push origin
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span><span class="p">:</span><span class="n">zamboni</span><span class="o">/</span><span class="n">project1</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span>
 </pre></div>
 </div>
 </div>
@@ -1183,23 +1189,23 @@ $ git push origin
 <h3>Releases<a class="headerlink" href="#releases" title="Permalink to this headline">¶</a></h3>
 <p>To make a release, use an <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Basics-Tagging#_annotated_tags">annotated git tag</a>. Use tag name as the name of the release, and the annotation for the release notes. Our naming convention for datasets is “rYYYYMMDD”.</p>
 <p>For example, if today is September 8th, 2019, then to create a release do:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git tag -a r20190908
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">a</span> <span class="n">r20190908</span>
 </pre></div>
 </div>
 <p>To view available releases, first <a class="reference internal" href="#download"><span class="std std-doc">download</span></a> a dataset, then run</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git tag -l
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">l</span>
 </pre></div>
 </div>
 <p>To see the release notes for a specific release, use</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git show r20190908
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">show</span> <span class="n">r20190908</span>
 </pre></div>
 </div>
 <p>To use a specific release, either <a class="reference internal" href="#download"><span class="std std-doc">download</span></a> the dataset and then</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git checkout r20190908
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">r20190908</span>
 </pre></div>
 </div>
 <p><em>or</em>, for example in a reproducible processing script, you can use <code class="docutils literal notranslate"><span class="pre">clone</span> <span class="pre">-b</span></code> to download only that specific release:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone --depth 1 -b r20190908 git@data.neuro.polymtl.ca:datasets/example.git
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">depth</span> <span class="mi">1</span> <span class="o">-</span><span class="n">b</span> <span class="n">r20190908</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span><span class="p">:</span><span class="n">datasets</span><span class="o">/</span><span class="n">example</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 </div>
@@ -1258,11 +1264,14 @@ It is compatible with <a class="reference external" href="https://www.datalad.or
 </pre></div>
 </div>
 <p>You can also paste the key in, followed by <code class="docutils literal notranslate"><span class="pre">ctrl-d</span></code>; this looks like:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh git@data.neuro.polymtl.ca keys add zamboni
-Enter passphrase for key &#39;/home/kousu/.ssh/id_rsa.github&#39;: 
-please supply the new key on STDIN (e.g. cat you.pub | ssh gitolite@git.example.com keys add @laptop).
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID11N3hQpJP4Okivd5xO3N0CuO24ioMwXYv+l/1PM/+z zamboni@laptop
-Added SHA256:hwil2tmaw/prgIBX5odO8vOAj2i38gPrUGjGZnnkVvo : zamboni.pub
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">keys</span> <span class="n">add</span> <span class="n">zamboni</span>
+</pre></div>
+</div>
+<p>The output looks like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">passphrase</span> <span class="k">for</span> <span class="n">key</span> <span class="s1">&#39;/home/kousu/.ssh/id_rsa.github&#39;</span><span class="p">:</span> 
+<span class="n">please</span> <span class="n">supply</span> <span class="n">the</span> <span class="n">new</span> <span class="n">key</span> <span class="n">on</span> <span class="n">STDIN</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">cat</span> <span class="n">you</span><span class="o">.</span><span class="n">pub</span> <span class="o">|</span> <span class="n">ssh</span> <span class="n">gitolite</span><span class="nd">@git</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span> <span class="n">keys</span> <span class="n">add</span> <span class="nd">@laptop</span><span class="p">)</span><span class="o">.</span>
+<span class="n">ssh</span><span class="o">-</span><span class="n">ed25519</span> <span class="n">AAAAC3NzaC1lZDI1NTE5AAAAID11N3hQpJP4Okivd5xO3N0CuO24ioMwXYv</span><span class="o">+</span><span class="n">l</span><span class="o">/</span><span class="mi">1</span><span class="n">PM</span><span class="o">/+</span><span class="n">z</span> <span class="n">zamboni</span><span class="nd">@laptop</span>
+<span class="n">Added</span> <span class="n">SHA256</span><span class="p">:</span><span class="n">hwil2tmaw</span><span class="o">/</span><span class="n">prgIBX5odO8vOAj2i38gPrUGjGZnnkVvo</span> <span class="p">:</span> <span class="n">zamboni</span><span class="o">.</span><span class="n">pub</span>
 </pre></div>
 </div>
 <p>You <strong>should</strong> use the person’s &#64;polymtl.ca email address as their username. However <a class="reference external" href="https://github.com/kousu/gitolite-mods/issues/3">there is a bug</a>, so just use “firstname.lastname”. Once someone is inscribed they can add and remove their own keys without having to know their username. We will migrate all the usernames when that bug is fixed; it won’t affect much, since these usernames are entirely server-side. The only time users see them is when they run <code class="docutils literal notranslate"><span class="pre">info</span></code> or use <code class="docutils literal notranslate"><span class="pre">perms</span></code>.</p>
