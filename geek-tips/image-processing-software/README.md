@@ -1,4 +1,4 @@
-# Image Processing
+# Image Processing Software
 
 ```{toctree}
 :hidden:
