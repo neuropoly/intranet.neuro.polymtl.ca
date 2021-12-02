@@ -83,7 +83,11 @@ You should also make sure to [configure git annex](./git-annex.md#global-git-con
 To see what datasets you have available, use `info`, for example:
 
 ```
-$ ssh git@data.neuro.polymtl.ca info
+ssh git@data.neuro.polymtl.ca info
+```
+
+And the output would look like this:
+```
 hello zamboni, this is git@data running gitolite3 3.6.11-2 (Debian) on git 2.27.0
  R W C  CREATOR/..*
  R W C  datasets/..*
@@ -98,15 +102,15 @@ You are identified to the server by your ssh keys, butNotice that this tells you
 To download an existing repository use `git clone`:
 
 ```
-$ git clone git@data.neuro.polymtl.ca:datasets/sct-testing-large # download folders and metadata
-$ cd sct-testing-large
-$ git annex get .                                                # download images
+git clone git@data.neuro.polymtl.ca:datasets/sct-testing-large # download folders and metadata
+cd sct-testing-large
+git annex get .                                                # download images
 ```
 
 If you just want to explore, you can opt for a portion of the image files by specifying paths instead of the last step, for example:
 
 ```
-$ git annex get sub-karo*                                        # download images under any of sub-karo*/*
+git annex get sub-karo*                                        # download images under any of sub-karo*/*
 ```
 
 ### Update
@@ -123,17 +127,21 @@ Despite not being hosted on Github, we are still using a [pull-request workflow]
 So, to make changes to a dataset, first ask its owner to [grant you upload rights](#permissions), then make a working branch for your changes:
 
 ```
-$ git checkout -b working-branch
-$ # edit your files, add new ones, etc
-$ git add -p
-$ git add path/to/new/file
-$ git commit # and write a useful commit message
+git checkout -b working-branch
+# edit your files, add new ones, etc
+git add -p
+git add path/to/new/file
+git commit  # and write a useful commit message
 ```
 
 The *first* time before uploading, verify you have access with `info`. You need "W" (for "Write") permission, like this:
 
 ```
-$ ssh git@localhost info datasets/uk-biobank
+ssh git@localhost info datasets/uk-biobank
+```
+
+The output would look like:
+```
 hello zamboni, this is git@data running gitolite3 3.6.11-2 (Debian) on git 2.27.0
 
  R W    datasets/uk-biobank
@@ -142,8 +150,8 @@ hello zamboni, this is git@data running gitolite3 3.6.11-2 (Debian) on git 2.27.
 Once you have access you can:
 
 ```
-$ git annex copy --to=origin
-$ git push
+git annex copy --to=origin
+git push
 ```
 
 Finally, ask one of that dataset's reviewers to [look at your pull request](#Reviewing-Pull-Requests).
@@ -224,19 +232,19 @@ To make a new repo, follow this [recipe](./git-annex.md#new-repo).
 Then, to upload it, pick a name under `datasets/`, e.g. "my-new-repo", and do
 
 ```
-$ git remote add origin git@data.neuro.polymtl.ca:datasets/my-new-repo
-$ git push origin                           # initialize remote and upload metadata
-$ git annex sync --cleanup -a --no-content  # initialize remote annex
-$ git annex copy --to origin                # upload images to remote annex
-$ # verify your .nii.gz files were annexed and uploaded
-$ git annex whereis
+git remote add origin git@data.neuro.polymtl.ca:datasets/my-new-repo
+git push origin                           # initialize remote and upload metadata
+git annex sync --cleanup -a --no-content  # initialize remote annex
+git annex copy --to origin                # upload images to remote annex
+# verify your .nii.gz files were annexed and uploaded
+git annex whereis
 ```
 
 Note that you have personal space under "CREATOR", so if your username is "zamboni" then you can:
 
 ```
-$ git remote add origin git@data.neuro.polymtl.ca:zamboni/project1
-$ git push origin
+git remote add origin git@data.neuro.polymtl.ca:zamboni/project1
+git push origin
 ```
 
 ### Releases
@@ -246,31 +254,31 @@ To make a release, use an [annotated git tag](https://git-scm.com/book/en/v2/Git
 For example, if today is September 8th, 2019, then to create a release do:
 
 ```
-$ git tag -a r20190908
+git tag -a r20190908
 ```
 
 To view available releases, first [download](#download) a dataset, then run
 
 ```
-$ git tag -l
+git tag -l
 ```
 
 To see the release notes for a specific release, use
 
 ```
-$ git show r20190908
+git show r20190908
 ```
 
 To use a specific release, either [download](#download) the dataset and then
 
 ```
-$ git checkout r20190908
+git checkout r20190908
 ```
 
 *or*, for example in a reproducible processing script, you can use `clone -b` to download only that specific release:
 
 ```
-$ git clone --depth 1 -b r20190908 git@data.neuro.polymtl.ca:datasets/example.git
+git clone --depth 1 -b r20190908 git@data.neuro.polymtl.ca:datasets/example.git
 ```
 
 ### Permissions
@@ -347,7 +355,11 @@ cat id_rsa.zamboni.pub | ssh git@data.neuro.polymtl.ca keys add zamboni
 You can also paste the key in, followed by `ctrl-d`; this looks like:
 
 ```
-$ ssh git@data.neuro.polymtl.ca keys add zamboni
+ssh git@data.neuro.polymtl.ca keys add zamboni
+```
+
+The output looks like:
+```
 Enter passphrase for key '/home/kousu/.ssh/id_rsa.github': 
 please supply the new key on STDIN (e.g. cat you.pub | ssh gitolite@git.example.com keys add @laptop).
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID11N3hQpJP4Okivd5xO3N0CuO24ioMwXYv+l/1PM/+z zamboni@laptop
