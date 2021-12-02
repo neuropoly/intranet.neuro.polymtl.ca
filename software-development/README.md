@@ -1,7 +1,8 @@
-# <span>🐍</span> Software Development
+# <span>🤓</span> Geek tips
 
 ```{toctree}
 :hidden:
+useful-links
 bash-shell/README
 git
 untitled
@@ -12,4 +13,3 @@ programming-languages/README
 image-processing-software/README
 deep-learning/README
 ```
-
