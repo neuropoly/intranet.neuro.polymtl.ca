@@ -85,6 +85,7 @@ To see what datasets you have available, use `info`, for example:
 ```
 ssh git@data.neuro.polymtl.ca info
 ```
+
 And the output would look like this:
 ```
 hello zamboni, this is git@data running gitolite3 3.6.11-2 (Debian) on git 2.27.0
