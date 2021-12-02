@@ -1,4 +1,4 @@
-# Other Software & Tools
+# Various Software & Tools
 
 ```{toctree}
 :hidden:
