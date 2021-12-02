@@ -22,6 +22,7 @@ List of useful sites for miscellaneous tasks.
 
 | Purpose | URL |
 | :--- | :--- |
+| Find cool acronym | https://acronymify.com/ |
 | Send password | [https://privnote.com/](https://privnote.com/) |
 | Share lines of code | [https://gist.github.com/](https://gist.github.com/) |
 | Compare PDF | [https://draftable.com/compare](https://draftable.com/compare) |
