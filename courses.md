@@ -87,7 +87,6 @@ Also see this list of [Bio-imaging courses offered by Quebec Universities](https
 | Code                                                                                          | Title / Notes                                                                                                                                                                                     | Lang.    | Prof.           |
 | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | --------------- |
 | [GBM6700](https://www.polymtl.ca/programmes/cours/reconstruction-3d-partir-dimages-medicales) | <p>Reconstruction 3D à partir d'images médicales</p><p><a href="https://www.neuro.polymtl.ca/_media/links/gbm_6700_3d_reconstruction_from_medical_images_curriculum_.pdf">Curriculum 2013</a></p> | Français | Cheriet         |
-| INF6953E                                                                                      | Traitement et analyse de données multimédias                                                                                                                                                      | Français | Christopher Pal |
 
 ### **Université de Montréal**
 
