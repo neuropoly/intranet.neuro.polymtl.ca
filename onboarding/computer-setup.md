@@ -12,8 +12,8 @@ Go under:
 
 You can edit your shell profile (usually called `.bash_profile`, but some newer versions of Mac use `.zsh_profile` ) to create custom commands and make the colours in your terminal look nice.
 
-{% tabs %}
-{% tab title=".bash_profile" %}
+
+````{tabbed} .bash_profile
 To edit, navigate to `$HOME/.bash_profile`
 
 ```bash
@@ -71,9 +71,9 @@ export PATH=${PATH}:/Applications/CMake.app/Contents/bin
 export PATH="$HOME/miniconda3/bin:$PATH"  # commented out by conda initialize
 source ~/miniconda3/etc/profile.d/conda.sh
 ```
-{% endtab %}
+````
 
-{% tab title=".zsh_profile" %}
+````{tabbed} .zsh_profile
 To edit, navigate to `$HOME/.zsh_profile` 
 
 ```bash
@@ -129,8 +129,8 @@ export PATH=${PATH}:/Applications/CMake.app/Contents/bin
 export PATH="$HOME/miniconda3/bin:$PATH"  # commented out by conda initialize
 source ~/miniconda3/etc/profile.d/conda.sh
 ```
-{% endtab %}
-{% endtabs %}
+````
+
 
 ## niftiviewer.app <a href="niftiviewerapp" id="niftiviewerapp"></a>
 

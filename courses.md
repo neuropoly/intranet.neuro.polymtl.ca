@@ -1,4 +1,4 @@
-# 🎓 University Courses
+# <span>🎓</span> University Courses
 
 ## Requirements for Polytechnique Montréal
 
@@ -11,7 +11,7 @@
 
 ## Medical imaging
 
-Also see this list of [Bio-imaging courses offered by Quebec Universities](https://www.rbiq-qbin.qc.ca/Imaging_Courses).
+Also see this list of [Bio-imaging courses offered by Quebec Universities](https://www.rbiq-qbin.qc.ca/Imaging\_Courses).
 
 ### Polytechnique Montréal
 
@@ -66,13 +66,19 @@ Also see this list of [Bio-imaging courses offered by Quebec Universities](https
 
 ### Université de Montréal
 
-| Code                                                                                    | Title / Notes                                                                                                                                                                                                                                                    | Lang.    | Prof                 |
-| --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | -------------------- |
-| [BIO 2043B](https://www.neuro.polymtl.ca/\_media/internal_resources/pcbio2043b_a16.pdf) | <p>Statistique pratique pour sciences de la vie</p><p><em>First 4 courses not really relevant</em></p><p><em>Last 4 courses interesting</em></p><p><em>(Pearson correlation, Kendall correlation,</em></p><p><em>Simple and Multiple Regression, ANOVA)</em></p> | Français |                      |
-| [IFT6268](https://sites.google.com/view/ift6268-a2020/course-description?authuser=0)    | Self-Supervised Representation Learning                                                                                                                                                                                                                          | English  | Aaron Courville      |
-| [IFT6269](https://www.iro.umontreal.ca/\~slacoste/teaching/ift6269/A20/)                | <p>Probabilistic Graphical Models</p><p><em>(Given in Fall. Math heavy, assignment with proofs + coding exercises. Really interesting course! Who took: Naga Karthik)</em> </p>                                                                                  | English  | Simon Lacoste-Julien |
-| [IFT6135](https://sites.google.com/view/ift6135-h2021)                                  | <p>Learning Representations</p><p><em>(Given in Winter. Intense course but very rewarding. Who took: Naga Karthik)</em></p>                                                                                                                                      | English  | Aaron Courville      |
-| IFT6145                                                                                 | 3D Vision (Vision tridimensionnelle)                                                                                                                                                                                                                             | French   | Sebastien Roy        |
+| Code                                                                                      | Title / Notes                                                                                                                                                                                                                                                    | Lang.    | Prof                 |
+| ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | -------------------- |
+| [BIO 2043B](https://www.neuro.polymtl.ca/\_media/internal\_resources/pcbio2043b\_a16.pdf) | <p>Statistique pratique pour sciences de la vie</p><p><em>First 4 courses not really relevant</em></p><p><em>Last 4 courses interesting</em></p><p><em>(Pearson correlation, Kendall correlation,</em></p><p><em>Simple and Multiple Regression, ANOVA)</em></p> | Français |                      |
+| [IFT6268](https://sites.google.com/view/ift6268-a2020/course-description?authuser=0)      | Self-Supervised Representation Learning                                                                                                                                                                                                                          | English  | Aaron Courville      |
+| [IFT6269](https://www.iro.umontreal.ca/\~slacoste/teaching/ift6269/A20/)                  | <p>Probabilistic Graphical Models</p><p><em>(Given in Fall. Math heavy, assignment with proofs + coding exercises. Really interesting course! Who took: Naga Karthik)</em> </p>                                                                                  | English  | Simon Lacoste-Julien |
+| [IFT6135](https://sites.google.com/view/ift6135-h2021)                                    | <p>Learning Representations</p><p><em>(Given in Winter. Intense course but very rewarding. Who took: Naga Karthik)</em></p>                                                                                                                                      | English  | Aaron Courville      |
+| IFT6145                                                                                   | 3D Vision (Vision tridimensionnelle)                                                                                                                                                                                                                             | French   | Sebastien Roy        |
+
+### Mcgill
+
+| Code                                                               | Title / Notes                        | Lang.   | Prof.        |
+| ------------------------------------------------------------------ | ------------------------------------ | ------- | ------------ |
+| [BMDE 520](https://www.mcgill.ca/study/2021-2022/courses/bmde-520) | Machine Learning for Biomedical Data | English | Danilo Bzdok |
 
 ## **Computer Vision**
 
@@ -81,7 +87,6 @@ Also see this list of [Bio-imaging courses offered by Quebec Universities](https
 | Code                                                                                          | Title / Notes                                                                                                                                                                                     | Lang.    | Prof.           |
 | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | --------------- |
 | [GBM6700](https://www.polymtl.ca/programmes/cours/reconstruction-3d-partir-dimages-medicales) | <p>Reconstruction 3D à partir d'images médicales</p><p><a href="https://www.neuro.polymtl.ca/_media/links/gbm_6700_3d_reconstruction_from_medical_images_curriculum_.pdf">Curriculum 2013</a></p> | Français | Cheriet         |
-| INF6953E                                                                                      | Traitement et analyse de données multimédias                                                                                                                                                      | Français | Christopher Pal |
 
 ### **Université de Montréal**
 
@@ -93,14 +98,14 @@ Also see this list of [Bio-imaging courses offered by Quebec Universities](https
 
 Electrical and Computer Engineering Course List: [http://www.mcgill.ca/ece/programs/coursesoffered/500](http://www.mcgill.ca/ece/programs/coursesoffered/500)
 
-| Code                                                                                                                         | Title / Notes                                                              | Lang.   | Prof.          |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | ------- | -------------- |
-| ECSE 683                                                                                                                     | <p>Topics in Vision and Robotics</p><p><em>(Fall 2013)</em></p>            | English | Frank Ferrie   |
-| ECSE 626                                                                                                                     | <p>Statistical Methods in Computer Vision</p><p><em>(Winter 2014)</em></p> | English | Tal Arbel      |
-| [COMP 424](https://www.cs.mcgill.ca/\~dprecup/courses/AI/Lectures/ai-lecture01.pdf)                                          | Introduction to Artificial Intelligence                                    | English | Doina Precup   |
-| COMP 558                                                                                                                     | <p>Fundamentals of Computer Vision</p><p><em>(Fall 2013)</em></p>          | English | Kaleem Siddiqi |
-| COMP 766                                                                                                                     | <p>Shape Analysis in Computer Vision</p><p><em>(Winter 2014)</em></p>      | English | Kaleem Siddiqi |
-| [COMP 551](https://horizon.mcgill.ca/pban1/bwckschd.p_disp_listcrse?term_in=201701\&subj_in=COMP\&crse_in=551\&crn_in=17135) | Applied Machine Learning                                                   | English | Joelle Pineau  |
+| Code                                                                                                                               | Title / Notes                                                              | Lang.   | Prof.          |
+| ---------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | ------- | -------------- |
+| ECSE 683                                                                                                                           | <p>Topics in Vision and Robotics</p><p><em>(Fall 2013)</em></p>            | English | Frank Ferrie   |
+| ECSE 626                                                                                                                           | <p>Statistical Methods in Computer Vision</p><p><em>(Winter 2014)</em></p> | English | Tal Arbel      |
+| [COMP 424](https://www.cs.mcgill.ca/\~dprecup/courses/AI/Lectures/ai-lecture01.pdf)                                                | Introduction to Artificial Intelligence                                    | English | Doina Precup   |
+| COMP 558                                                                                                                           | <p>Fundamentals of Computer Vision</p><p><em>(Fall 2013)</em></p>          | English | Kaleem Siddiqi |
+| COMP 766                                                                                                                           | <p>Shape Analysis in Computer Vision</p><p><em>(Winter 2014)</em></p>      | English | Kaleem Siddiqi |
+| [COMP 551](https://horizon.mcgill.ca/pban1/bwckschd.p\_disp\_listcrse?term\_in=201701\&subj\_in=COMP\&crse\_in=551\&crn\_in=17135) | Applied Machine Learning                                                   | English | Joelle Pineau  |
 
 ## Programming & Software
 

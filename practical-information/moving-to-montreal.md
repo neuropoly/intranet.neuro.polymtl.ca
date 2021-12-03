@@ -1,4 +1,4 @@
-# 🇨🇦  Living in Montreal
+# `🇨🇦` Living in Montreal
 
 ## 🏠 Accommodation <a href="accommodation" id="accommodation"></a>
 

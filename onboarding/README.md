@@ -1,4 +1,17 @@
-# 👋 Onboarding
+# <span>👋</span> Onboarding
+
+```{toctree}
+:hidden:
+getting-started
+campus-access
+infrastructure
+dropbox-google-drive
+computer-setup
+developer-setup
+consultants-ra
+postdoc
+acronyms-jargon
+```
 
 Welcome to NeuroPoly Lab!
 

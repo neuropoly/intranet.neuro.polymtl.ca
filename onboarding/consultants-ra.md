@@ -15,7 +15,7 @@ Please consult [this](https://docs.google.com/document/d/1tmVIZkXPTF224KmgLpaQWq
 
 Link to the RA association at Polytechnique \(contains various documents about your rights as an employee\): 
 
-{% embed url="http://aarep.polymtl.ca/" %}
+[http://aarep.polymtl.ca/](http://aarep.polymtl.ca/)
 
 
 
