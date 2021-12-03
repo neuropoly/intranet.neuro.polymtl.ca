@@ -1098,8 +1098,8 @@
 <p>Contact Alexandru Foias to request VPN access be activated for your CAS account. When activated, <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a> will report “VPN_* = Actif”.</p>
 <p>The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing <code class="docutils literal notranslate"><span class="pre">openconnect</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="9ece217d-04ce-4f36-943e-c306133b1a68" name="05c09056-7815-4741-bfa7-f66052239289" type="radio">
-</input><label class="tabbed-label" for="9ece217d-04ce-4f36-943e-c306133b1a68">
+<input checked="checked" id="6183549e-e4cc-4c59-92ff-5ec49547f78a" name="c3468eae-c6a9-47d8-b075-f08b234e35f6" type="radio">
+</input><label class="tabbed-label" for="6183549e-e4cc-4c59-92ff-5ec49547f78a">
 MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1123,8 +1123,8 @@ MacOS</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="a41c6a1d-44a9-4907-b78f-36b898d07065" name="05c09056-7815-4741-bfa7-f66052239289" type="radio">
-</input><label class="tabbed-label" for="a41c6a1d-44a9-4907-b78f-36b898d07065">
+<input id="90c28e95-3546-453b-a93a-f2f8d30f6782" name="c3468eae-c6a9-47d8-b075-f08b234e35f6" type="radio">
+</input><label class="tabbed-label" for="90c28e95-3546-453b-a93a-f2f8d30f6782">
 PC/Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1172,6 +1172,8 @@ PC/Linux</label><div class="tabbed-content docutils">
 <span class="s"># data servers</span>
 <span class="s">Match Host data</span>
 <span class="s">HostName %h.neuro.polymtl.ca</span>
+
+<span class="s">Match Host data.neuro.polymtl.ca</span>
 <span class="s">User git</span>
 <span class="s">PreferredAuthentications publickey</span>
 
@@ -1198,15 +1200,15 @@ PC/Linux</label><div class="tabbed-content docutils">
 <p>The best way to do this is <code class="docutils literal notranslate"><span class="pre">sshfs</span></code>, which makes them appear as if they were a drive on your computer:</p>
 <p>Install sshfs, if not yet installed:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="cde6ebeb-793e-4f2a-92b4-5a9e34aa2ae5" name="d6799d44-1406-4773-bc87-93202a944b51" type="radio">
-</input><label class="tabbed-label" for="cde6ebeb-793e-4f2a-92b4-5a9e34aa2ae5">
+<input checked="checked" id="6d3289b7-4897-4d65-a06e-b0af49e63650" name="40d1d535-47fe-44c0-8b8e-fe983d44f5df" type="radio">
+</input><label class="tabbed-label" for="6d3289b7-4897-4d65-a06e-b0af49e63650">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">sshfs</span>
 </pre></div>
 </div>
 </div>
-<input id="54b9cfea-6869-4da1-a207-b301cd5ebeda" name="d6799d44-1406-4773-bc87-93202a944b51" type="radio">
-</input><label class="tabbed-label" for="54b9cfea-6869-4da1-a207-b301cd5ebeda">
+<input id="c7fd16a1-4164-49d7-9498-d1e8e74e34ca" name="40d1d535-47fe-44c0-8b8e-fe983d44f5df" type="radio">
+</input><label class="tabbed-label" for="c7fd16a1-4164-49d7-9498-d1e8e74e34ca">
 mac</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="o">--</span><span class="n">cask</span> <span class="n">osxfuse</span>
 <span class="n">brew</span> <span class="n">install</span> <span class="n">sshfs</span>
@@ -1237,8 +1239,8 @@ mac</label><div class="tabbed-content docutils">
 <div class="section" id="vnc-graphical-interface">
 <h3>VNC (graphical interface)<a class="headerlink" href="#vnc-graphical-interface" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="f83819dc-8819-4999-9d39-4b9a68fdd21e" name="74fe8767-4d48-46f3-96b4-a7c16641dbca" type="radio">
-</input><label class="tabbed-label" for="f83819dc-8819-4999-9d39-4b9a68fdd21e">
+<input checked="checked" id="318860f1-bfca-4d48-b668-10b220ed86aa" name="977fc2c2-9a3f-4504-8646-16306971f799" type="radio">
+</input><label class="tabbed-label" for="318860f1-bfca-4d48-b668-10b220ed86aa">
 macOS</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open Finder</p></li>
@@ -1247,8 +1249,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p>You can use your local/network account information or the <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg">shared account credentials</a></p></li>
 </ol>
 </div>
-<input id="3d12e232-3b7b-433d-8f92-31dd54cda85d" name="74fe8767-4d48-46f3-96b4-a7c16641dbca" type="radio">
-</input><label class="tabbed-label" for="3d12e232-3b7b-433d-8f92-31dd54cda85d">
+<input id="9d75b066-05e8-45ed-bdf7-e0b2b550d451" name="977fc2c2-9a3f-4504-8646-16306971f799" type="radio">
+</input><label class="tabbed-label" for="9d75b066-05e8-45ed-bdf7-e0b2b550d451">
 PC/Linux</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Establish a VNC connection using <a class="reference external" href="https://wiki.gnome.org/Apps/Vinagre/">vinaigre</a>.</p></li>
