@@ -7,4 +7,4 @@ of the steps needed for access to the various accounts and services you will use
 ## Key People
 
 If ever you need help with accounts or onboarding, feel free to reach out to
-Alexandru \(Alex\) Foias or Taowa Rosetwig.
+Alexandru \(Alex\) Foias or Taowa Rosetwig via Slack.
