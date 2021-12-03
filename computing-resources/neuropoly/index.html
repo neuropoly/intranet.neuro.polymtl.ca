@@ -867,6 +867,18 @@
   <a class="reference internal nav-link" href="#list-of-computers-at-neuropoly">
    List of Computers at NeuroPoly
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vpn">
+     VPN
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#update-password">
+     Update password
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#connect-to-neuropoly-computers">
@@ -876,11 +888,6 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#locally">
      Locally
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#vpn">
-     VPN
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1084,13 +1091,6 @@
 <h2>List of Computers at NeuroPoly<a class="headerlink" href="#list-of-computers-at-neuropoly" title="Permalink to this headline">¶</a></h2>
 <p>Are you new to NeuroPoly and looking for a desk and a station? Please check the <a class="reference external" href="https://docs.google.com/document/d/11GEh5YvYRnWnERv26TezcyvyPF2W5KF0uoI2U6p7XsM/edit">list of Desktop/Server/Clusters computers and Printers</a> so you can pick one that is free. If you’d like a particular desk and someone else is using a station remotely, please ask the admins to move the station to another location.</p>
 <p>If you prefer to work on your laptop, please let the admins know and we will give you a screen you can connect your laptop to.</p>
-</div>
-<div class="section" id="connect-to-neuropoly-computers">
-<h2>Connect to NeuroPoly Computers<a class="headerlink" href="#connect-to-neuropoly-computers" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="locally">
-<h3>Locally<a class="headerlink" href="#locally" title="Permalink to this headline">¶</a></h3>
-<p>To log into a local station at NeuroPoly use your GRAMES account.</p>
-</div>
 <div class="section" id="vpn">
 <h3>VPN<a class="headerlink" href="#vpn" title="Permalink to this headline">¶</a></h3>
 <p>When working remotely from off-campus you need to use the <a class="reference external" href="http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn">VPN</a>.</p>
@@ -1098,8 +1098,8 @@
 <p>Contact Alexandru Foias to request VPN access be activated for your CAS account. When activated, <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a> will report “VPN_* = Actif”.</p>
 <p>The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing <code class="docutils literal notranslate"><span class="pre">openconnect</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="0b3b26ec-b9a5-4990-b241-67310994f8e5" name="17f740eb-1fd0-4340-88d6-fcaaa5c13e53" type="radio">
-</input><label class="tabbed-label" for="0b3b26ec-b9a5-4990-b241-67310994f8e5">
+<input checked="checked" id="247574f7-e310-4541-9c0d-ef295e7158e3" name="16539a0b-8b05-4b62-bb63-5a2b19feaed3" type="radio">
+</input><label class="tabbed-label" for="247574f7-e310-4541-9c0d-ef295e7158e3">
 MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1123,8 +1123,8 @@ MacOS</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="9e53619a-b32f-4d61-9401-c72e33e55ee6" name="17f740eb-1fd0-4340-88d6-fcaaa5c13e53" type="radio">
-</input><label class="tabbed-label" for="9e53619a-b32f-4d61-9401-c72e33e55ee6">
+<input id="fa6df29d-30c8-49ea-b45a-b360f35c652d" name="16539a0b-8b05-4b62-bb63-5a2b19feaed3" type="radio">
+</input><label class="tabbed-label" for="fa6df29d-30c8-49ea-b45a-b360f35c652d">
 PC/Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1147,6 +1147,17 @@ PC/Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">vpn</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="update-password">
+<h3>Update password<a class="headerlink" href="#update-password" title="Permalink to this headline">¶</a></h3>
+<p>To update your password, go to https://codes.si.polymtl.ca</p>
+</div>
+</div>
+<div class="section" id="connect-to-neuropoly-computers">
+<h2>Connect to NeuroPoly Computers<a class="headerlink" href="#connect-to-neuropoly-computers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="locally">
+<h3>Locally<a class="headerlink" href="#locally" title="Permalink to this headline">¶</a></h3>
+<p>To log into a local station at NeuroPoly use your GRAMES account.</p>
 </div>
 <div class="section" id="ssh-command-line">
 <h3>SSH (command line)<a class="headerlink" href="#ssh-command-line" title="Permalink to this headline">¶</a></h3>
@@ -1200,15 +1211,15 @@ PC/Linux</label><div class="tabbed-content docutils">
 <p>The best way to do this is <code class="docutils literal notranslate"><span class="pre">sshfs</span></code>, which makes them appear as if they were a drive on your computer:</p>
 <p>Install sshfs, if not yet installed:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="e15d732e-f68a-4fe0-901c-ec1e3414a17a" name="43e9d621-99f7-4391-ae3b-45a7a2775aca" type="radio">
-</input><label class="tabbed-label" for="e15d732e-f68a-4fe0-901c-ec1e3414a17a">
+<input checked="checked" id="826ef793-8a05-457b-af2f-e82e4bbe1177" name="22c83d38-728b-432c-baab-24c4371df91d" type="radio">
+</input><label class="tabbed-label" for="826ef793-8a05-457b-af2f-e82e4bbe1177">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">sshfs</span>
 </pre></div>
 </div>
 </div>
-<input id="4cf81e2d-5b6d-43ec-9f31-609e39330dfc" name="43e9d621-99f7-4391-ae3b-45a7a2775aca" type="radio">
-</input><label class="tabbed-label" for="4cf81e2d-5b6d-43ec-9f31-609e39330dfc">
+<input id="06f9a7bd-992c-4aa8-be86-688d9b993730" name="22c83d38-728b-432c-baab-24c4371df91d" type="radio">
+</input><label class="tabbed-label" for="06f9a7bd-992c-4aa8-be86-688d9b993730">
 mac</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="o">--</span><span class="n">cask</span> <span class="n">osxfuse</span>
 <span class="n">brew</span> <span class="n">install</span> <span class="n">sshfs</span>
@@ -1239,8 +1250,8 @@ mac</label><div class="tabbed-content docutils">
 <div class="section" id="vnc-graphical-interface">
 <h3>VNC (graphical interface)<a class="headerlink" href="#vnc-graphical-interface" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="72b99fdc-47db-4f72-a95d-79c4da5a22c5" name="fee7a876-f6c6-4bf4-9873-ca1f69dcf082" type="radio">
-</input><label class="tabbed-label" for="72b99fdc-47db-4f72-a95d-79c4da5a22c5">
+<input checked="checked" id="895098ca-e887-4a46-b088-86d05cdbc180" name="ad74692f-9227-4393-8652-f8ebcc907ae8" type="radio">
+</input><label class="tabbed-label" for="895098ca-e887-4a46-b088-86d05cdbc180">
 macOS</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open Finder</p></li>
@@ -1249,8 +1260,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p>You can use your local/network account information or the <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg">shared account credentials</a></p></li>
 </ol>
 </div>
-<input id="857e5da8-4a95-48e4-bace-cf7a649d1714" name="fee7a876-f6c6-4bf4-9873-ca1f69dcf082" type="radio">
-</input><label class="tabbed-label" for="857e5da8-4a95-48e4-bace-cf7a649d1714">
+<input id="466b3d8d-bfbc-4aa9-a582-c51a22bb4aa8" name="ad74692f-9227-4393-8652-f8ebcc907ae8" type="radio">
+</input><label class="tabbed-label" for="466b3d8d-bfbc-4aa9-a582-c51a22bb4aa8">
 PC/Linux</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Establish a VNC connection using <a class="reference external" href="https://wiki.gnome.org/Apps/Vinagre/">vinaigre</a>.</p></li>

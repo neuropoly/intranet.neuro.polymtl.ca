@@ -45,12 +45,6 @@ Are you new to NeuroPoly and looking for a desk and a station? Please check the 
 
 If you prefer to work on your laptop, please let the admins know and we will give you a screen you can connect your laptop to.
 
-## Connect to NeuroPoly Computers
-
-### Locally
-
-To log into a local station at NeuroPoly use your GRAMES account.
-
 ### VPN
 
 When working remotely from off-campus you need to use the [VPN](http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn).
@@ -112,6 +106,16 @@ To connect to the VPN, you need to run:
 ./vpn.sh
 ```
 
+### Update password
+
+To update your password, go to https://codes.si.polymtl.ca
+
+
+## Connect to NeuroPoly Computers
+
+### Locally
+
+To log into a local station at NeuroPoly use your GRAMES account.
 
 ### SSH (command line)
 
