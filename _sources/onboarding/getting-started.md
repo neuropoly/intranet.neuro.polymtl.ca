@@ -1,17 +1,10 @@
 # Getting Started
 
-## Checklist
-
-These are the things to do once you join the lab:
-
-* [ ] Add yourself to the [list of people](https://app.gitbook.com/@neuropoly/s/workspace/people)
-* [ ] Make sure you have permissions for all the required [accounts](accounts.md)
+When you join the lab, a GitHub issue in our [onboarding repository](https://github.com/neuropoly/onboarding/issues?q=is%3Aopen+is%3Aissue+label%3A%22onboarding+%F0%9F%9A%80%22)
+will be created to track your onboarding progress. That issue will contain all
+of the steps needed for access to the various accounts and services you will use.
 
 ## Key People
 
-* ​[List of people in the lab](https://neuropoly.gitbook.io/workspace/people/overview). Please add yourself to this list on the wiki so it is up-to-date.
-* **Access Person:** Alexandru \(Alex\) Foias
-* **Internal Server Admin:** Alex Foias
-
-**Admin**: Julien Cohen-Adad & Nikola Stikov
-
+If ever you need help with accounts or onboarding, feel free to reach out to
+Alexandru \(Alex\) Foias or Taowa Rosetwig via Slack.
