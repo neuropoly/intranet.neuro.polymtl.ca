@@ -142,6 +142,8 @@ HostName %h.neuro.polymtl.ca
 # data servers
 Match Host data
 HostName %h.neuro.polymtl.ca
+
+Match Host data.neuro.polymtl.ca
 User git
 PreferredAuthentications publickey
 
