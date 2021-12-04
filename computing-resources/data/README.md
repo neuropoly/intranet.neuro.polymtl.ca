@@ -1,9 +1,9 @@
 # `💾` Data
 
-These are the data sources and storage options available to lab members:
+MRI, microscopy and other research data are stored in the following servers:
 
 ```{toctree}
-:hidden:
+:maxdepth: 1
 git-datasets
 duke
 django
