@@ -1,6 +1,10 @@
 # `django`
 
-`{smb,afp}://django.neuro.polymtl.ca` is our old server. This server is only maintained for old projects. Please **DO NOT** use it if you are starting a new project.
+```{important}
+This server is only maintained for old projects. Please **DO NOT** use it if you are starting a new project.
+```
+
+Full address: `{smb,afp}://django.neuro.polymtl.ca`. 
 
 The shared folders \(hosted on **django**\) are:
 
