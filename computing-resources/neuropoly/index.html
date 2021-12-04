@@ -867,13 +867,6 @@
   <a class="reference internal nav-link" href="#vpn">
    VPN
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#update-password">
-     Update password
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#connect-to-neuropoly-computers">
@@ -1090,12 +1083,12 @@
 <div class="section" id="vpn">
 <h2>VPN<a class="headerlink" href="#vpn" title="Permalink to this headline">¶</a></h2>
 <p>When working remotely from off-campus you need to use the <a class="reference external" href="http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn">VPN</a>.</p>
-<p>To connect to the VPN, you need to have an account with École Polytechnique, specifically with <a class="reference external" href="https://cas5.polymtl.ca/cas/login">CAS</a>. Students should already have this. Consultants and Research Associates will need to have an account created for them.</p>
-<p>Contact Alexandru Foias to request VPN access be activated for your CAS account. When activated, <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a> will report “VPN_* = Actif”.</p>
+<p>To connect to the VPN, you need to have an account with École Polytechnique, specifically with <a class="reference external" href="https://cas5.polymtl.ca/cas/login">CAS</a>. Students should already have this. Consultants and Research Associates will need to have an account created for them. This should have happened during your onboarding.</p>
+<p>You can change your password at <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a>. Also, you can double-check you have VPN access by looking for <code class="docutils literal notranslate"><span class="pre">VPN_*</span> <span class="pre">=</span> <span class="pre">Actif</span></code> here.</p>
 <p>The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing <code class="docutils literal notranslate"><span class="pre">openconnect</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="5aef6ba6-57f1-4754-b9dd-b06d4c1bef3c" name="726f2c1f-126f-4a64-8422-481f29e33a07" type="radio">
-</input><label class="tabbed-label" for="5aef6ba6-57f1-4754-b9dd-b06d4c1bef3c">
+<input checked="checked" id="9abb0543-b01d-46ca-868e-b18acc93654d" name="c514d31b-ac67-4868-bfd3-053507e3bd85" type="radio">
+</input><label class="tabbed-label" for="9abb0543-b01d-46ca-868e-b18acc93654d">
 MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1119,8 +1112,8 @@ MacOS</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="c6751d1b-bb07-49ca-aca9-71bc577a4fda" name="726f2c1f-126f-4a64-8422-481f29e33a07" type="radio">
-</input><label class="tabbed-label" for="c6751d1b-bb07-49ca-aca9-71bc577a4fda">
+<input id="3324eb7a-d511-4be5-9e7a-020bd6fc7d34" name="c514d31b-ac67-4868-bfd3-053507e3bd85" type="radio">
+</input><label class="tabbed-label" for="3324eb7a-d511-4be5-9e7a-020bd6fc7d34">
 PC/Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1142,10 +1135,6 @@ PC/Linux</label><div class="tabbed-content docutils">
 <p>To connect to the VPN, you need to run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">vpn</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
-</div>
-<div class="section" id="update-password">
-<h3>Update password<a class="headerlink" href="#update-password" title="Permalink to this headline">¶</a></h3>
-<p>To update your password, go to https://codes.si.polymtl.ca</p>
 </div>
 </div>
 <div class="section" id="connect-to-neuropoly-computers">
@@ -1206,15 +1195,15 @@ PC/Linux</label><div class="tabbed-content docutils">
 <p>The best way to do this is <code class="docutils literal notranslate"><span class="pre">sshfs</span></code>, which makes them appear as if they were a drive on your computer:</p>
 <p>Install sshfs, if not yet installed:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="d690c399-e2ef-49cf-97d9-70436171bf32" name="ac74fb2d-4948-4fff-876e-d2bee334e7f9" type="radio">
-</input><label class="tabbed-label" for="d690c399-e2ef-49cf-97d9-70436171bf32">
+<input checked="checked" id="3e9f57b3-ed10-4107-b156-8f0c6b8ee81a" name="9e5adf21-9e61-482e-a7a2-503a87bc0c5c" type="radio">
+</input><label class="tabbed-label" for="3e9f57b3-ed10-4107-b156-8f0c6b8ee81a">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">sshfs</span>
 </pre></div>
 </div>
 </div>
-<input id="f4bf01c8-5d62-4125-9678-3a14933914eb" name="ac74fb2d-4948-4fff-876e-d2bee334e7f9" type="radio">
-</input><label class="tabbed-label" for="f4bf01c8-5d62-4125-9678-3a14933914eb">
+<input id="5b7d372e-9593-415e-b0b1-e5dd1c5c9f4b" name="9e5adf21-9e61-482e-a7a2-503a87bc0c5c" type="radio">
+</input><label class="tabbed-label" for="5b7d372e-9593-415e-b0b1-e5dd1c5c9f4b">
 mac</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="o">--</span><span class="n">cask</span> <span class="n">osxfuse</span>
 <span class="n">brew</span> <span class="n">install</span> <span class="n">sshfs</span>
@@ -1245,8 +1234,8 @@ mac</label><div class="tabbed-content docutils">
 <div class="section" id="vnc-graphical-interface">
 <h3>VNC (graphical interface)<a class="headerlink" href="#vnc-graphical-interface" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="9580e666-0d70-4832-a4a2-ff59b7815c47" name="53d1c304-9d96-4863-9448-f2fcbfcfe444" type="radio">
-</input><label class="tabbed-label" for="9580e666-0d70-4832-a4a2-ff59b7815c47">
+<input checked="checked" id="19b8e1b4-028f-4daf-882b-924793ea9bbd" name="a18576af-5c18-4699-a048-75ad5556afb5" type="radio">
+</input><label class="tabbed-label" for="19b8e1b4-028f-4daf-882b-924793ea9bbd">
 macOS</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Open Finder</p></li>
@@ -1255,8 +1244,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p>You can use your local/network account information or the <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg">shared account credentials</a></p></li>
 </ol>
 </div>
-<input id="91f31f17-ca46-479d-81cf-95fc2c98ba92" name="53d1c304-9d96-4863-9448-f2fcbfcfe444" type="radio">
-</input><label class="tabbed-label" for="91f31f17-ca46-479d-81cf-95fc2c98ba92">
+<input id="baaf710f-39a9-44f3-90ee-78ae20272f2f" name="a18576af-5c18-4699-a048-75ad5556afb5" type="radio">
+</input><label class="tabbed-label" for="baaf710f-39a9-44f3-90ee-78ae20272f2f">
 PC/Linux</label><div class="tabbed-content docutils">
 <ol class="simple">
 <li><p>Establish a VNC connection using <a class="reference external" href="https://wiki.gnome.org/Apps/Vinagre/">vinaigre</a>.</p></li>
