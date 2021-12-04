@@ -63,6 +63,7 @@ html_css_files = ["theme.css"]
 html_title = "NeuroPoly Lab Manual"
 html_logo = "_static/logo.png"
 html_favicon = "_static/logo.png"
+panels_add_bootstrap_css = False
 
 html_sourcelink_suffix = ".md" # our sources are in markdown; but this only has an effect if "use_download_button": True
 
