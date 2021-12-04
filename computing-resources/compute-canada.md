@@ -1,4 +1,4 @@
-# Compute Canada
+# `🖥` Compute Canada
 
 ## Create Account
 

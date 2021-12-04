@@ -1,4 +1,4 @@
-# NeuroPoly
+# `🖥` Computers \@NeuroPoly
 
 ```{toctree}
 :hidden:
@@ -23,6 +23,19 @@ If you want to find out who is behind u/pXXXXXX Grames account, type this:
 ```
 getent passwd <GRAMES_ACCOUNT>
 ```
+
+### Home folder
+
+Every [GRAMES](../#poly-grames) account has a school-wide personal home folder. It is backed-up nightly.
+
+````{tabbed} macOS
+1. Open Finder
+2. CMD+K
+3. for students:
+   1. `smb://hvclusterfs.grames.polymtl.ca/usagers/etudiants/USERNAME`
+4. for personnel:
+   1. `smb://hvclusterfs.grames.polymtl.ca/usagers/personnels/USERNAME`
+````
 
 ### Poly-Grames Groups <a href="polygrames_groups" id="polygrames_groups"></a>
 

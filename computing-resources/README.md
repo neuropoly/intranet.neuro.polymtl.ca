@@ -3,8 +3,8 @@
 ```{toctree}
 :hidden:
 neuropoly/README
-compute-canada
 clusters-at-criugm
+compute-canada
 data/README
 printer
 ```
