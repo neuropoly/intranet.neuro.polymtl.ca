@@ -2,7 +2,6 @@
 
 ```{toctree}
 :hidden:
-data/README
 cpus2
 gpus
 ```

@@ -5,6 +5,7 @@
 neuropoly/README
 compute-canada
 clusters-at-criugm
+data/README
 printer
 ```
 
