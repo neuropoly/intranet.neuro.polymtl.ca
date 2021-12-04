@@ -3,7 +3,6 @@
 ```{toctree}
 :hidden:
 getting-started
-accounts
 campus-access
 infrastructure
 dropbox-google-drive

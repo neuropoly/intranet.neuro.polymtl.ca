@@ -8,7 +8,7 @@ agenda-and-calendar
 mri-scanning/README
 writing-articles
 computing-resources/README
-software-development/README
+geek-tips/README
 courses
 bibliography/README
 conferences

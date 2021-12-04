@@ -45,19 +45,13 @@ Are you new to NeuroPoly and looking for a desk and a station? Please check the 
 
 If you prefer to work on your laptop, please let the admins know and we will give you a screen you can connect your laptop to.
 
-## Connect to NeuroPoly Computers
-
-### Locally
-
-To log into a local station at NeuroPoly use your GRAMES account.
-
-### VPN
+## VPN
 
 When working remotely from off-campus you need to use the [VPN](http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn).
 
-To connect to the VPN, you need to have an account with École Polytechnique, specifically with [CAS](https://cas5.polymtl.ca/cas/login). Students should already have this. Consultants and Research Associates will need to have an account created for them.
+To connect to the VPN, you need to have an account with École Polytechnique, specifically with [CAS](https://cas5.polymtl.ca/cas/login). Students should already have this. Consultants and Research Associates will need to have an account created for them. This should have happened during your onboarding.
 
-Contact Alexandru Foias to request VPN access be activated for your CAS account. When activated, [Gestion des Codes](https://codes.si.polymtl.ca/gestion/) will report "VPN_\* = Actif".
+You can change your password at [Gestion des Codes](https://codes.si.polymtl.ca/gestion/). Also, you can double-check you have VPN access by looking for `VPN_* = Actif` here.
 
 The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing `openconnect`:
 
@@ -113,6 +107,12 @@ To connect to the VPN, you need to run:
 ```
 
 
+## Connect to NeuroPoly Computers
+
+### Locally
+
+To log into a local station at NeuroPoly use your GRAMES account.
+
 ### SSH (command line)
 
 Once the VPN connection established, connect via ssh using the `STATION` you want:
@@ -142,6 +142,8 @@ HostName %h.neuro.polymtl.ca
 # data servers
 Match Host data
 HostName %h.neuro.polymtl.ca
+
+Match Host data.neuro.polymtl.ca
 User git
 PreferredAuthentications publickey
 
