@@ -4,7 +4,7 @@ description: >-
   (CRIUGM) has computing clusters which members of NeuroPoly Lab have access to.
 ---
 
-# CRIUGM
+# `🖥` Computers \@CRIUGM
 
 ## CPU Clusters
 

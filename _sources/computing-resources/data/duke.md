@@ -1,8 +1,10 @@
 # `duke`
 
+This server includes a variety of data: raw MRI and histology data, project data (processed and non-processed), temporary data to share with colleagues.
+
 `{smb,afp}://duke.neuro.polymtl.ca` has a max size of ~15TB and is backed up nightly at two different locations.
 
-The shared folders \(hosted on **Poly-Grames**\) are:
+The shared folders are:
 
 * **histology** –&gt; Raw histology files
 * **mri** –&gt; Raw MRI files \(restricted access\)
@@ -11,7 +13,10 @@ The shared folders \(hosted on **Poly-Grames**\) are:
 * **sct\_testing** –&gt; Data for testing SCT
 * **temp** –&gt; Use for temporary files, to share between you. Files are deleted after 15 days.
 
-**NOTE: duke is not accessible when using SSH key login to linux stations.**
+```{note}
+`duke` is not accessible when using SSH key login to linux stations.
+```
+
 
 ## Access from stations
 
@@ -33,17 +38,6 @@ drwxr-xr-x 2 u108545 domain users  4096 Jun  8 16:44 temp
 
 When working on campus or [over the VPN](../../#vpn), you can connect your computer to `duke`:
 
-````{tabbed} Windows 10
-
-1. Open Windows explorer
-2. Right click This PC
-3. Map Network Drive
-4. Address: `\\duke.neuro.polymtl.ca\<FOLDER>`
-5. Check "Connect using different credentials".
-6. Username: `grames\<POLYGRAMES_USERNAME>`
-7. Password: `<POLYGRAMES_PASSWORD>`.
-````
-
 ````{tabbed} macOS
 1. Open Finder
 2. CMD+K
@@ -56,11 +50,24 @@ When working on campus or [over the VPN](../../#vpn), you can connect your compu
 3. `smb://duke.neuro.polymtl.ca/`
 ````
 
+````{tabbed} Windows 10
 
-Note: some root folders are restricted \(e.g. **mri**\), so you need to write the URL to the destination folder you have access to. Example: `duke.neuro.polymtl.ca/mri/unf`
+1. Open Windows explorer
+2. Right click This PC
+3. Map Network Drive
+4. Address: `\\duke.neuro.polymtl.ca\<FOLDER>`
+5. Check "Connect using different credentials".
+6. Username: `grames\<POLYGRAMES_USERNAME>`
+7. Password: `<POLYGRAMES_PASSWORD>`.
+````
 
+```{note}
+Some root folders are restricted \(e.g. **mri**\), so you need to write the URL to the destination folder you have access to. Example: `duke.neuro.polymtl.ca/mri/unf`
+```
+
+```{note}
 If you get the message “There are no shares available…”, then there might be a bug with the OS. Instead, try to mount on a local folder within the home directory \(to have write permission\).
-
+```
 
 ## Mount with Terminal
 

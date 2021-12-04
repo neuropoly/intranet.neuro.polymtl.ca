@@ -1,15 +1,14 @@
-# NeuroPoly
+# `🖥` Computers \@NeuroPoly
 
 ```{toctree}
 :hidden:
-data/README
 cpus2
 gpus
 ```
 
 ## Poly-Grames
 
-### Poly-Grames Network Account <a href="polygrames_network_account" id="polygrames_network_account"></a>
+### Poly-Grames Network Account
 
 A **Poly-Grames** network account is required to have access to various computation resources available in the laboratory.
 
@@ -25,7 +24,20 @@ If you want to find out who is behind u/pXXXXXX Grames account, type this:
 getent passwd <GRAMES_ACCOUNT>
 ```
 
-### Poly-Grames Groups <a href="polygrames_groups" id="polygrames_groups"></a>
+### Home folder
+
+Every [GRAMES](../#poly-grames) account has a school-wide personal home folder. It is backed-up nightly.
+
+````{tabbed} macOS
+1. Open Finder
+2. CMD+K
+3. for students:
+   1. `smb://hvclusterfs.grames.polymtl.ca/usagers/etudiants/USERNAME`
+4. for personnel:
+   1. `smb://hvclusterfs.grames.polymtl.ca/usagers/personnels/USERNAME`
+````
+
+### Poly-Grames Groups
 
 The list permissions for shared folders on `duke` are available [here](https://docs.google.com/document/d/1ZJUUBpiZPl0wxFsUPxkkR6vXZgfSAd3YBK5vlIpf_aA/edit).
 
@@ -281,7 +293,7 @@ After starting the vncserver, connect to it as above.
 ```
 
 
-## CPU/GPU Clusters <a href="computingprogramming_stations" id="computingprogramming_stations"></a>
+## CPU/GPU Clusters
 
 The following CPU and GPU clusters are available for internal use at **NeuroPoly**.
 
@@ -444,11 +456,11 @@ Then enter your ID and password at poly.
 
 **duke** (/mri, /projects, /sct_testing) is backed up on **grappelli** every evening at 21:00 EST. In order to retrieve old backup you have to contact Jean-Sébastien Décarie.
 
-## Software Installed <a href="software_installed_at_neuropoly" id="software_installed_at_neuropoly"></a>
+## Software Installed
 
-### Installed on each station (local) <a href="installed_on_each_station_local" id="installed_on_each_station_local"></a>
+### Installed on each station (local)
 
-#### MRI <a href="mri" id="mri"></a>
+#### MRI
 
 * FSL
 * ANTS
@@ -459,7 +471,7 @@ Then enter your ID and password at poly.
 * MITKworkbench
 * Diffusion Toolkit (with quicklook plugin) + Trackvis
 
-#### Programming <a href="programming" id="programming"></a>
+#### Programming
 
 * git
 * source tree –> visualiser of git
@@ -467,7 +479,7 @@ Then enter your ID and password at poly.
 * PyCharm (Python editor)
 * Sublime Text (code editor)
 
-#### Misc <a href="misc" id="misc"></a>
+#### Misc
 
 * Google Sketchup
 * Google Chrome

@@ -264,7 +264,12 @@
   <ul>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../computing-resources/neuropoly/README.html">
-     NeuroPoly
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       🖥
+      </span>
+     </code>
+     Computers @NeuroPoly
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
     <label for="toctree-checkbox-7">
@@ -272,55 +277,6 @@
      </i>
     </label>
     <ul>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../../computing-resources/neuropoly/data/README.html">
-       Data
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-      <label for="toctree-checkbox-8">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../../computing-resources/neuropoly/data/home.html">
-         /home
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../../computing-resources/neuropoly/data/git-datasets.html">
-         <code class="docutils literal notranslate">
-          <span class="pre">
-           data
-          </span>
-         </code>
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../../computing-resources/neuropoly/data/duke.html">
-         <code class="docutils literal notranslate">
-          <span class="pre">
-           duke
-          </span>
-         </code>
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../../computing-resources/neuropoly/data/django.html">
-         <code class="docutils literal notranslate">
-          <span class="pre">
-           django
-          </span>
-         </code>
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../../computing-resources/neuropoly/data/git-annex.html">
-         git-annex
-        </a>
-       </li>
-      </ul>
-     </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../../computing-resources/neuropoly/cpus2.html">
        CPUS2
@@ -334,20 +290,76 @@
     </ul>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../computing-resources/clusters-at-criugm.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       🖥
+      </span>
+     </code>
+     Computers @CRIUGM
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../computing-resources/compute-canada.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       🖥
+      </span>
+     </code>
      Compute Canada
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../computing-resources/clusters-at-criugm.html">
-     CRIUGM
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../computing-resources/data/README.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       💾
+      </span>
+     </code>
+     Data
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing-resources/data/git-datasets.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         data
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing-resources/data/duke.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         duke
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../computing-resources/data/django.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         django
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../computing-resources/printer.html">
-     <span>
-      🖨
-     </span>
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       🖨
+      </span>
+     </code>
      Printer
     </a>
    </li>
@@ -888,8 +900,8 @@ sudo mkdir /mnt/data_shared
 <p>2. Edit mount table, type : <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">nano</span> <span class="pre">/etc/fstab</span></code></p>
 <p>3. For the following operating systems:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="668b455d-9c03-4980-8257-d451711f8473" name="8ce078a8-2600-45c7-88c0-a256dcd8bbc7" type="radio">
-</input><label class="tabbed-label" for="668b455d-9c03-4980-8257-d451711f8473">
+<input checked="checked" id="bb28a709-61d7-4d72-b842-ec5146cbd5ab" name="c68e0b4f-cbcc-49c9-a766-51dae409afa1" type="radio">
+</input><label class="tabbed-label" for="bb28a709-61d7-4d72-b842-ec5146cbd5ab">
 Ubuntu 14.04 LTS</label><div class="tabbed-content docutils">
 <p>Add the following lines at the bottom of the file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#data_processing @SERVER</span>
@@ -900,8 +912,8 @@ Ubuntu 14.04 LTS</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="6d7dda76-96f4-4d9b-8815-50f33d7da450" name="8ce078a8-2600-45c7-88c0-a256dcd8bbc7" type="radio">
-</input><label class="tabbed-label" for="6d7dda76-96f4-4d9b-8815-50f33d7da450">
+<input id="f258f0e5-5c77-4837-9587-887931fe2bfa" name="c68e0b4f-cbcc-49c9-a766-51dae409afa1" type="radio">
+</input><label class="tabbed-label" for="f258f0e5-5c77-4837-9587-887931fe2bfa">
 Debian Wheezy 8</label><div class="tabbed-content docutils">
 <p>Add the following lines at the bottom of the file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#data_processing @SERVER</span>
