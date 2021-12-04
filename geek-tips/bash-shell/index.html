@@ -449,6 +449,11 @@
      git &amp; Github
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../git-annex.html">
+     git-annex
+    </a>
+   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../os-guides/README.html">
      OS Guides
@@ -1313,15 +1318,15 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 <h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">¶</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="1cd3aff0-f887-446d-ad57-76670b6084cc" name="cb7f6a17-c3bb-48f0-ba5a-230ef549ebaa" type="radio">
-</input><label class="tabbed-label" for="1cd3aff0-f887-446d-ad57-76670b6084cc">
+<input checked="checked" id="a884d21f-fdc4-48e5-b6e0-e37ea6432701" name="08d7958b-4612-4ee5-a175-9211b6564e66" type="radio">
+</input><label class="tabbed-label" for="a884d21f-fdc4-48e5-b6e0-e37ea6432701">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
 </pre></div>
 </div>
 </div>
-<input id="d7d37dc5-e88f-4b1c-9f7d-df08ef7759cc" name="cb7f6a17-c3bb-48f0-ba5a-230ef549ebaa" type="radio">
-</input><label class="tabbed-label" for="d7d37dc5-e88f-4b1c-9f7d-df08ef7759cc">
+<input id="a60424d0-7a88-4659-83b6-6a008d995f8b" name="08d7958b-4612-4ee5-a175-9211b6564e66" type="radio">
+</input><label class="tabbed-label" for="a60424d0-7a88-4659-83b6-6a008d995f8b">
 Mac</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
 find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5

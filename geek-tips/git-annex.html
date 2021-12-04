@@ -38,6 +38,8 @@
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="OS Guides" href="os-guides/README.html" />
+    <link rel="prev" title="git &amp; Github" href="git.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -74,7 +76,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference external" href="https://neuro.polymtl.ca">
    NeuroPoly Website
@@ -363,19 +365,19 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="README.html">
    <span>
     🤓
    </span>
    Geek tips
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
   <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="useful-links.html">
      Useful links 🔗
@@ -445,6 +447,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="git.html">
      git &amp; Github
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     git-annex
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -943,8 +950,8 @@
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>You must have a unix OS. <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> is simply not compatible with anything else.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="06fc6cca-c28d-4b9e-bff0-e16e1645fbfe" name="c9fe1d09-414e-4b89-a444-befa06f21d6d" type="radio">
-</input><label class="tabbed-label" for="06fc6cca-c28d-4b9e-bff0-e16e1645fbfe">
+<input checked="checked" id="4e82db30-14be-4fea-b8f3-d9c6a6265f7a" name="648167c1-8584-4374-8f14-5e8f581b0c69" type="radio">
+</input><label class="tabbed-label" for="4e82db30-14be-4fea-b8f3-d9c6a6265f7a">
 Linux</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p><strong>Arch</strong>: <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-Sy</span> <span class="pre">git-annex</span></code></p></li>
@@ -954,15 +961,15 @@ Linux</label><div class="tabbed-content docutils">
 <li><p>if on an older system and can’t upgrade, you can try <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">installing <code class="docutils literal notranslate"><span class="pre">conda</span></code></a> (or <a class="reference external" href="https://github.com/conda-forge/miniforge/">miniforge</a> and then using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-f</span> <span class="pre">conda-forge</span> <span class="pre">git-annex</span></code>.</p></li>
 </ul>
 </div>
-<input id="0dec02f3-5f84-4a51-b9f2-c8e7c0492128" name="c9fe1d09-414e-4b89-a444-befa06f21d6d" type="radio">
-</input><label class="tabbed-label" for="0dec02f3-5f84-4a51-b9f2-c8e7c0492128">
+<input id="3bfbbf5b-b0a4-46eb-a794-06dde84fcd7e" name="648167c1-8584-4374-8f14-5e8f581b0c69" type="radio">
+</input><label class="tabbed-label" for="3bfbbf5b-b0a4-46eb-a794-06dde84fcd7e">
 macOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">git</span><span class="o">-</span><span class="n">annex</span>
 </pre></div>
 </div>
 </div>
-<input id="c752def7-556a-4694-94d0-8f1533d07011" name="c9fe1d09-414e-4b89-a444-befa06f21d6d" type="radio">
-</input><label class="tabbed-label" for="c752def7-556a-4694-94d0-8f1533d07011">
+<input id="a78187c7-991c-4ccb-af74-15c81957477e" name="648167c1-8584-4374-8f14-5e8f581b0c69" type="radio">
+</input><label class="tabbed-label" for="a78187c7-991c-4ccb-af74-15c81957477e">
 Windows 10 (via WSL)</label><div class="tabbed-content docutils">
 <p>Install <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a>, pick a distro, and then run one of:</p>
 <ul class="simple">
@@ -971,8 +978,8 @@ Windows 10 (via WSL)</label><div class="tabbed-content docutils">
 <li><p>The <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions">other distros</a> are supported.</p></li>
 </ul>
 </div>
-<input id="c1c1bfb8-7003-4c21-bd04-fa8b9c9ba1ce" name="c9fe1d09-414e-4b89-a444-befa06f21d6d" type="radio">
-</input><label class="tabbed-label" for="c1c1bfb8-7003-4c21-bd04-fa8b9c9ba1ce">
+<input id="5aa32c48-bb32-420c-8b70-32d0a4d872f1" name="648167c1-8584-4374-8f14-5e8f581b0c69" type="radio">
+</input><label class="tabbed-label" for="5aa32c48-bb32-420c-8b70-32d0a4d872f1">
 Windows 10 (via VirtualBox)</label><div class="tabbed-content docutils">
 <p>Install <a class="reference external" href="https://virtualbox.org/">VirtualBox</a>, install a Linux distro inside of it, and then follow the Linux instructions.</p>
 </div>
@@ -1153,7 +1160,21 @@ $ rm -rf data-single-subject/
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="git.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">git &amp; Github</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="os-guides/README.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">OS Guides</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
