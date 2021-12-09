@@ -144,6 +144,10 @@ Incorporate figure in article:
 * Save figure
 * Import your figure into Word and use “crop” tool.
 
+## Check grammar
+
+https://www.grammarly.com/
+
 ## Affiliations
 
 **For everyone:**
