@@ -878,7 +878,7 @@
 <div class="section" id="ssh">
 <h2>SSH<a class="headerlink" href="#ssh" title="Permalink to this headline">¶</a></h2>
 <p>To get the display in an ssh connection:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><a class="reference external" href="https://www.xquartz.org/">Download XQuartz</a></p></li>
 <li><p>Open XQuartz</p></li>
 <li><p>Connect with X forwarding: <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-X</span> <span class="pre">&lt;URL&gt;</span></code></p></li>
@@ -888,7 +888,7 @@
 <div class="section" id="xquartz-terminal">
 <h2>XQuartz Terminal<a class="headerlink" href="#xquartz-terminal" title="Permalink to this headline">¶</a></h2>
 <p>To allow pasting inside the XQuartz terminal:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Create the file <code class="docutils literal notranslate"><span class="pre">~/.Xdefaults</span></code></p></li>
 <li><p>Edit it and add the line: <code class="docutils literal notranslate"><span class="pre">*VT100.translations:</span> <span class="pre">#override</span> <span class="pre">Meta</span> <span class="pre">&lt;KeyPress&gt;</span> <span class="pre">V:</span> <span class="pre">insert-selection(PRIMARY,</span> <span class="pre">CUT_BUFFER0)</span> <span class="pre">\n</span></code></p></li>
 <li><p>run: <code class="docutils literal notranslate"><span class="pre">xrdb</span> <span class="pre">-merge</span> <span class="pre">~/.Xdefaults</span></code></p></li>

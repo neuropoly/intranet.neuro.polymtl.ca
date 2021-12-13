@@ -1002,7 +1002,7 @@ docker commit &lt;container_id&gt; your_name/ubuntu:16.04
 </div>
 <div class="section" id="build-docker-container-from-dockerfile-a-id-build-docker-container-from-dockerfile-a">
 <h3>Build Docker container from Dockerfile <a id="build_docker_container_from_dockerfile"></a><a class="headerlink" href="#build-docker-container-from-dockerfile-a-id-build-docker-container-from-dockerfile-a" title="Permalink to this headline">¶</a></h3>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Create a Dockerfile by running `touch Dockerfile`</p></li>
 <li><p>Inside the Dockerfile write the following (items below are just given as an example):</p></li>
 </ol>
@@ -1024,7 +1024,7 @@ RUN git clone https://github.com/neuropoly/spinalcordtoolbox.git sct; \
 ENV PATH &quot;/sct/bin:${PATH}&quot;
 </pre></div>
 </div>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Build docker image: `docker build -t &lt;container_id&gt; .`</p></li>
 <li><p>Run it: `docker run -it &lt;container_id&gt;`</p></li>
 </ol>
@@ -1032,13 +1032,13 @@ ENV PATH &quot;/sct/bin:${PATH}&quot;
 <div class="section" id="run-with-display-redirection-a-id-run-with-display-redirection-a">
 <h3>Run with DISPLAY redirection <a id="run_with_display_redirection"></a><a class="headerlink" href="#run-with-display-redirection-a-id-run-with-display-redirection-a" title="Permalink to this headline">¶</a></h3>
 <p>In order to run scripts with GUI you need to allow X11 redirection:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Install XQuartz X11 server and run it.</p></li>
 <li><p>In preferences, check ‘Allow connections from network clientsoption inXQuartz` settings.</p></li>
 <li><p>Quit and restart XQuartz.</p></li>
 <li><p>In XQuartz window xhost + 127.0.0.1</p></li>
 <li><p>In your other Terminal window, run:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>On OSX: `docker run -e DISPLAY=host.docker.internal:0 -it &lt;CONTAINER_ID&gt;`</p></li>
 <li><p>On Linux: `docker run -ti –rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix &lt;CONTAINER_ID&gt;`</p></li>
 </ol>
@@ -1054,7 +1054,7 @@ docker cp &lt;file&gt; &lt;CONTAINER ID&gt;:&lt;PATH_DEST&gt;/&lt;file&gt;
 </pre></div>
 </div>
 <p>Examples of Docker builder:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><a class="reference external" href="https://github.com/neuropoly/docker">https://github.com/neuropoly/docker</a></p></li>
 </ol>
 </div>

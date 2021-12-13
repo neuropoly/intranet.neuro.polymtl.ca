@@ -1007,7 +1007,7 @@ It is locked behind a <span class="xref myst">VPN</span> because much of our dat
 <h2>Initial setup<a class="headerlink" href="#initial-setup" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="prerequisites">
 <h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h3>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>You must have a *nix OS with <code class="docutils literal notranslate"><span class="pre">git-annex&gt;=8</span></code> installed. See <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">git-annex</span></code> installation</span>.</p></li>
 <li><p>Make sure you have an ssh key.</p>
 <ul class="simple">
@@ -1109,10 +1109,12 @@ list of remote commands available:
 <p>Despite not being hosted on Github, we are still using a <a class="reference external" href="https://guides.github.com/introduction/flow/">pull-request workflow</a>.
 So, to make changes to a dataset, first ask its owner to <a class="reference internal" href="#permissions"><span class="std std-doc">grant you upload rights</span></a>, then make a working branch for your changes:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">working</span><span class="o">-</span><span class="n">branch</span>
-<span class="c1"># edit your files, add new ones, etc</span>
-<span class="n">git</span> <span class="n">add</span> <span class="o">-</span><span class="n">p</span>
-<span class="n">git</span> <span class="n">add</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">new</span><span class="o">/</span><span class="n">file</span>
-<span class="n">git</span> <span class="n">commit</span>  <span class="c1"># and write a useful commit message</span>
+<span class="c1"># Edit your files, add new ones, etc. </span>
+<span class="c1"># Add all modified files to be commited</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="c1"># To add specific files, do: git add path/to/new/file</span>
+<span class="c1"># Commit and write a useful commit message</span>
+<span class="n">git</span> <span class="n">commit</span>
 </pre></div>
 </div>
 <p>The <em>first</em> time before uploading, verify you have access with <code class="docutils literal notranslate"><span class="pre">info</span></code>. You need “W” (for “Write”) permission, like this:</p>

@@ -902,15 +902,15 @@
 <h1>OpenNeuro<a class="headerlink" href="#openneuro" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://openneuro.org/">OpenNeuro</a> is a free and open platform for sharing MRI, MEG, EEG, iEEG, ECoG, ASL, and PET data. Below, we describe how to integrate OpenNeuro data with <a class="reference external" href="https://www.datalad.org/">DataLad</a> and <a class="reference external" href="https://aws.amazon.com/free/?trk=ps_a134p000003yhMrAAI&amp;trkCampaign=acq_paid_search_brand&amp;sc_channel=ps&amp;sc_campaign=acquisition_CA&amp;sc_publisher=google&amp;sc_category=core-main&amp;sc_country=CA&amp;sc_geo=NAMER&amp;sc_outcome=Acquisition&amp;sc_detail=aws&amp;sc_content=Brand_Core_aws_e&amp;sc_matchtype=e&amp;sc_segment=453053794209&amp;sc_medium=ACQ-P%7CPS-GO%7CBrand%7CDesktop%7CSU%7CCore-Main%7CCore%7CCA%7CEN%7CText&amp;s_kwcid=AL%214422%213%21453053794209%21e%21%21g%21%21aws&amp;ef_id=Cj0KCQjwk4yGBhDQARIsACGfAesxE-q-wc05cyshZskHgQCJf2Kl3oKHVVmkSNkzHI7F_s2TFOOEre0aAl5KEALw_wcB:G:s&amp;s_kwcid=AL%214422%213%21453053794209%21e%21%21g%21%21aws&amp;all-free-tier.sort-by=item.additionalFields.SortRank&amp;all-free-tier.sort-order=asc&amp;awsf.Free%20Tier%20Types=*all&amp;awsf.Free%20Tier%20Categories=*all">AWS</a>.</p>
+<p><a class="reference external" href="https://openneuro.org/">OpenNeuro</a> is a free and open platform for sharing MRI, MEG, EEG, iEEG, ECoG, ASL, and PET data. Below, we describe how to integrate OpenNeuro data with <a class="reference external" href="https://www.datalad.org/">DataLad</a> and <a class="reference external" href="https://aws.amazon.com/free/?trk=ps_a134p000003yhMrAAI&amp;trkCampaign=acq_paid_search_brand&amp;sc_channel=ps&amp;sc_campaign=acquisition_CA&amp;sc_publisher=google&amp;sc_category=core-main&amp;sc_country=CA&amp;sc_geo=NAMER&amp;sc_outcome=Acquisition&amp;sc_detail=aws&amp;sc_content=Brand_Core_aws_e&amp;sc_matchtype=e&amp;sc_segment=453053794209&amp;sc_medium=ACQ-P%7CPS-GO%7CBrand%7CDesktop%7CSU%7CCore-Main%7CCore%7CCA%7CEN%7CText&amp;s_kwcid=AL!4422!3!453053794209!e!!g!!aws&amp;ef_id=Cj0KCQjwk4yGBhDQARIsACGfAesxE-q-wc05cyshZskHgQCJf2Kl3oKHVVmkSNkzHI7F_s2TFOOEre0aAl5KEALw_wcB:G:s&amp;s_kwcid=AL!4422!3!453053794209!e!!g!!aws&amp;all-free-tier.sort-by=item.additionalFields.SortRank&amp;all-free-tier.sort-order=asc&amp;awsf.Free%20Tier%20Types=*all&amp;awsf.Free%20Tier%20Categories=*all">AWS</a>.</p>
 </div>
 <div class="section" id="datalad">
 <h2>DataLad<a class="headerlink" href="#datalad" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="installation">
 <h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="eafdf2b5-0ed6-4eb5-b06a-e5e98e040b96" name="ccd2a479-e455-4b53-87f5-28474381f752" type="radio">
-</input><label class="tabbed-label" for="eafdf2b5-0ed6-4eb5-b06a-e5e98e040b96">
+<input checked="checked" id="5dc685ba-709d-439b-8ecd-c2c489bdff87" name="c00623bc-8c76-4c7c-8614-0b6dfecc9157" type="radio">
+</input><label class="tabbed-label" for="5dc685ba-709d-439b-8ecd-c2c489bdff87">
 Debian/Ubuntu</label><div class="tabbed-content docutils">
 <p>Install <code class="docutils literal notranslate"><span class="pre">datalad</span></code> using <code class="docutils literal notranslate"><span class="pre">conda</span></code> :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> miniconda3/etc/profile.d/conda.sh
@@ -930,8 +930,8 @@ apt-get install git-annex
 </pre></div>
 </div>
 </div>
-<input id="24e49ad4-0282-4b20-b06f-25518afa0802" name="ccd2a479-e455-4b53-87f5-28474381f752" type="radio">
-</input><label class="tabbed-label" for="24e49ad4-0282-4b20-b06f-25518afa0802">
+<input id="fc547b31-6f3a-462c-b0e2-3331ad21ea84" name="c00623bc-8c76-4c7c-8614-0b6dfecc9157" type="radio">
+</input><label class="tabbed-label" for="fc547b31-6f3a-462c-b0e2-3331ad21ea84">
 MacOS</label><div class="tabbed-content docutils">
 <p>Install <code class="docutils literal notranslate"><span class="pre">datalad</span></code> using <code class="docutils literal notranslate"><span class="pre">conda</span></code> :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> miniconda3/etc/profile.d/conda.sh
@@ -978,18 +978,18 @@ brew install git-annex
 <div class="section" id="id1">
 <h3>Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="1de0770c-0bea-4f87-89cc-9bceea69638c" name="0e9ac8d1-e2ff-44ea-9477-8e7307cb86cc" type="radio">
-</input><label class="tabbed-label" for="1de0770c-0bea-4f87-89cc-9bceea69638c">
+<input checked="checked" id="44a2f5bb-121e-485e-96bb-852bc365321c" name="f98b5532-9991-427d-97e2-f267c722a931" type="radio">
+</input><label class="tabbed-label" for="44a2f5bb-121e-485e-96bb-852bc365321c">
 Linux</label><div class="tabbed-content docutils">
 <p>Follow the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/userguide/install-linux.html">AWS Installation Instructions for Linux</a>.</p>
 </div>
-<input id="e08c1149-0cc6-44ae-92a5-7b87401006a6" name="0e9ac8d1-e2ff-44ea-9477-8e7307cb86cc" type="radio">
-</input><label class="tabbed-label" for="e08c1149-0cc6-44ae-92a5-7b87401006a6">
+<input id="505b820f-329f-40b1-8ed9-825410d0a2bf" name="f98b5532-9991-427d-97e2-f267c722a931" type="radio">
+</input><label class="tabbed-label" for="505b820f-329f-40b1-8ed9-825410d0a2bf">
 MacOS</label><div class="tabbed-content docutils">
 <p>Follow the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/userguide/install-macos.html">AWS Installation Instructions for MacOS</a>.</p>
 </div>
-<input id="fb3dd22d-3984-4045-9da4-fed66e523fc3" name="0e9ac8d1-e2ff-44ea-9477-8e7307cb86cc" type="radio">
-</input><label class="tabbed-label" for="fb3dd22d-3984-4045-9da4-fed66e523fc3">
+<input id="1612d606-e16e-4892-aee7-937f907127fe" name="f98b5532-9991-427d-97e2-f267c722a931" type="radio">
+</input><label class="tabbed-label" for="1612d606-e16e-4892-aee7-937f907127fe">
 Windows</label><div class="tabbed-content docutils">
 <p>Follow the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html">AWS Installation Instructions for Windows</a>.</p>
 </div>

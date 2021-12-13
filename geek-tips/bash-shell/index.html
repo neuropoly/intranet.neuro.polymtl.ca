@@ -1318,15 +1318,15 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 <h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">¶</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="607e6c49-a594-4f91-9cff-644f42e5a233" name="f68cef73-f002-41a3-b538-226bfa376d70" type="radio">
-</input><label class="tabbed-label" for="607e6c49-a594-4f91-9cff-644f42e5a233">
+<input checked="checked" id="a636ef4a-922c-4e09-844e-3293da200546" name="ca3bfdac-2aed-442b-8730-4e9e7b644e51" type="radio">
+</input><label class="tabbed-label" for="a636ef4a-922c-4e09-844e-3293da200546">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
 </pre></div>
 </div>
 </div>
-<input id="132b2d0b-c931-4e46-9a66-ed11eaefee36" name="f68cef73-f002-41a3-b538-226bfa376d70" type="radio">
-</input><label class="tabbed-label" for="132b2d0b-c931-4e46-9a66-ed11eaefee36">
+<input id="1f149009-8702-4109-90d5-bbdc7f3deb20" name="ca3bfdac-2aed-442b-8730-4e9e7b644e51" type="radio">
+</input><label class="tabbed-label" for="1f149009-8702-4109-90d5-bbdc7f3deb20">
 Mac</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
 find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5
@@ -1467,7 +1467,7 @@ scp username@station.domain: &lt;/PATH/&gt; . -r <span class="c1"># copy folder<
 <h2>Screen (for background processes)<a class="headerlink" href="#screen-for-background-processes" title="Permalink to this headline">¶</a></h2>
 <p>Let’s say you connect to a station from your laptop and you wish to launch a script that will run for several hours. If you close your laptop, the remote script will stop. To prevent this, use <code class="docutils literal notranslate"><span class="pre">screen</span></code>. It opens a virtual environment from a remote station, so that any script launched within this environment will continue running even if you close your laptop.</p>
 <p>Step-by-step procedure:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Connect to a station via <code class="docutils literal notranslate"><span class="pre">ssh</span></code></p></li>
 <li><p>Launch <code class="docutils literal notranslate"><span class="pre">screen</span></code>. It will create a new screen attached to the station.</p></li>
 <li><p>Do whatever you want (e.g., launch a long process).</p></li>
