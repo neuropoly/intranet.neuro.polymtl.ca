@@ -128,10 +128,12 @@ So, to make changes to a dataset, first ask its owner to [grant you upload right
 
 ```
 git checkout -b working-branch
-# edit your files, add new ones, etc
-git add -p
-git add path/to/new/file
-git commit  # and write a useful commit message
+# Edit your files, add new ones, etc. 
+# Add all modified files to be commited
+git add .
+# To add specific files, do: git add path/to/new/file
+# Commit and write a useful commit message
+git commit
 ```
 
 The *first* time before uploading, verify you have access with `info`. You need "W" (for "Write") permission, like this:
