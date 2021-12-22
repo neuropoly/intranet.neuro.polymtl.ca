@@ -25,3 +25,7 @@ Google map link: [https://goo.gl/maps/Kqj3JimAtPWZowc1A](https://goo.gl/maps/Kqj
 ## Download the data
 
 See info here: [https://unf-montreal.ca/documentation/your\_data/download\_data/](https://unf-montreal.ca/documentation/your\_data/download\_data/)
+
+## Reconstruct raw data
+
+[GitHub NeuroPoly: Siemens Recon](https://github.com/neuropoly/siemens-recon)
