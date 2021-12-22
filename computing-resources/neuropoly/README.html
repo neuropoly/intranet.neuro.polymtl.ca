@@ -38,7 +38,7 @@
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="GPUs" href="gpus.html" />
+    <link rel="next" title="CPU Clusters" href="cpus.html" />
     <link rel="prev" title="🖥 Computing Resources" href="../README.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -266,8 +266,13 @@
     </label>
     <ul>
      <li class="toctree-l3">
+      <a class="reference internal" href="cpus.html">
+       CPU Clusters
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="gpus.html">
-       GPUs
+       GPU Clusters
       </a>
      </li>
     </ul>
@@ -1043,8 +1048,8 @@
 <h3>Home folder<a class="headerlink" href="#home-folder" title="Permalink to this headline">¶</a></h3>
 <p>Every <span class="xref myst">GRAMES</span> account has a school-wide personal home folder. It is backed-up nightly.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="039f0a92-3a19-4aa2-803a-43f7faccb23d" name="cbca00e3-df41-497f-8f1e-e967f7dd1315" type="radio">
-</input><label class="tabbed-label" for="039f0a92-3a19-4aa2-803a-43f7faccb23d">
+<input checked="checked" id="680a311f-65c4-4067-be31-a50f94b4cf86" name="fbbc03fd-e417-4db6-8fad-d19c6ce29870" type="radio">
+</input><label class="tabbed-label" for="680a311f-65c4-4067-be31-a50f94b4cf86">
 macOS</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Finder</p></li>
@@ -1087,8 +1092,8 @@ macOS</label><div class="tabbed-content docutils">
 <p>You can change your password at <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a>. Also, you can double-check you have VPN access by looking for <code class="docutils literal notranslate"><span class="pre">VPN_*</span> <span class="pre">=</span> <span class="pre">Actif</span></code> here.</p>
 <p>The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing <code class="docutils literal notranslate"><span class="pre">openconnect</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="78bc024b-2c60-4b73-bd5b-ff66607d8435" name="c709422d-e437-42a3-bacd-a41c2b838fea" type="radio">
-</input><label class="tabbed-label" for="78bc024b-2c60-4b73-bd5b-ff66607d8435">
+<input checked="checked" id="cf337d4a-fd25-4a94-a304-acf772003f11" name="c9c44e50-5a66-446e-9bf0-6496de40c2c4" type="radio">
+</input><label class="tabbed-label" for="cf337d4a-fd25-4a94-a304-acf772003f11">
 MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1112,8 +1117,8 @@ MacOS</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="e9371273-ac03-44dd-b364-7cce80d3ffee" name="c709422d-e437-42a3-bacd-a41c2b838fea" type="radio">
-</input><label class="tabbed-label" for="e9371273-ac03-44dd-b364-7cce80d3ffee">
+<input id="e551e7b9-a7bf-4d24-875d-cfaebe2b2bbc" name="c9c44e50-5a66-446e-9bf0-6496de40c2c4" type="radio">
+</input><label class="tabbed-label" for="e551e7b9-a7bf-4d24-875d-cfaebe2b2bbc">
 PC/Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1195,15 +1200,15 @@ PC/Linux</label><div class="tabbed-content docutils">
 <p>The best way to do this is <code class="docutils literal notranslate"><span class="pre">sshfs</span></code>, which makes them appear as if they were a drive on your computer:</p>
 <p>Install sshfs, if not yet installed:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="82bce1af-3349-43cf-994e-3f08cd51d308" name="61d68451-6a20-434e-be3d-f82735aa6dbe" type="radio">
-</input><label class="tabbed-label" for="82bce1af-3349-43cf-994e-3f08cd51d308">
+<input checked="checked" id="12561714-d156-4015-a683-6b4f8528878d" name="9f60e812-177d-4bde-81f3-477dbeb163ef" type="radio">
+</input><label class="tabbed-label" for="12561714-d156-4015-a683-6b4f8528878d">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">sshfs</span>
 </pre></div>
 </div>
 </div>
-<input id="7613b7e2-89a5-4df3-9032-9bc7d373a2ef" name="61d68451-6a20-434e-be3d-f82735aa6dbe" type="radio">
-</input><label class="tabbed-label" for="7613b7e2-89a5-4df3-9032-9bc7d373a2ef">
+<input id="284a1c25-9d60-4315-ae7f-7cea4a3f2ca6" name="9f60e812-177d-4bde-81f3-477dbeb163ef" type="radio">
+</input><label class="tabbed-label" for="284a1c25-9d60-4315-ae7f-7cea4a3f2ca6">
 mac</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="o">--</span><span class="n">cask</span> <span class="n">osxfuse</span>
 <span class="n">brew</span> <span class="n">install</span> <span class="n">sshfs</span>
@@ -1234,8 +1239,8 @@ mac</label><div class="tabbed-content docutils">
 <div class="section" id="vnc-graphical-interface">
 <h3>VNC (graphical interface)<a class="headerlink" href="#vnc-graphical-interface" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="f7379cfd-8176-4e6f-9ef3-0b25c9274f5a" name="a7797d08-4f34-4fd3-98b9-9f794a9caf79" type="radio">
-</input><label class="tabbed-label" for="f7379cfd-8176-4e6f-9ef3-0b25c9274f5a">
+<input checked="checked" id="b34bc623-939f-4da5-ba42-5f8c38d0f765" name="d6fe2b72-c7c0-4546-ab11-32b971c7fbee" type="radio">
+</input><label class="tabbed-label" for="b34bc623-939f-4da5-ba42-5f8c38d0f765">
 macOS</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Finder</p></li>
@@ -1244,8 +1249,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p>You can use your local/network account information or the <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg">shared account credentials</a></p></li>
 </ol>
 </div>
-<input id="5b52a9c0-89b3-4ec2-86d3-f1243d40cea9" name="a7797d08-4f34-4fd3-98b9-9f794a9caf79" type="radio">
-</input><label class="tabbed-label" for="5b52a9c0-89b3-4ec2-86d3-f1243d40cea9">
+<input id="c0b68bfa-53d1-44df-8fe1-4c9916a34c87" name="d6fe2b72-c7c0-4546-ab11-32b971c7fbee" type="radio">
+</input><label class="tabbed-label" for="c0b68bfa-53d1-44df-8fe1-4c9916a34c87">
 PC/Linux</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Establish a VNC connection using <a class="reference external" href="https://wiki.gnome.org/Apps/Vinagre/">vinaigre</a>.</p></li>
@@ -1663,10 +1668,10 @@ PC/Linux</label><div class="tabbed-content docutils">
             <p class="prev-next-title"><span>🖥</span> Computing Resources</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="gpus.html" title="next page">
+    <a class='right-next' id="next-link" href="cpus.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">GPUs</p>
+        <p class="prev-next-title">CPU Clusters</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

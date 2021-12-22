@@ -6,9 +6,9 @@
     background-color: transparent;
 }
 
-#main-content {
+/* #main-content {
     font-size: 14px;
-}
+} */
 
 #site-navigation {
     background: #f3f5f6;
@@ -61,7 +61,7 @@ li.toctree-l1 > a > span:nth-child(1) {
 
 /* space out lists */
 #main-content .section li {
-  padding: .4em 0;
+  padding: .1em 0;
 }
 
 /* make FontAwesome icons accessible to screen reader/plain text browsers

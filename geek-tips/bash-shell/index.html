@@ -266,8 +266,13 @@
     </label>
     <ul>
      <li class="toctree-l3">
+      <a class="reference internal" href="../../computing-resources/neuropoly/cpus.html">
+       CPU Clusters
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="../../computing-resources/neuropoly/gpus.html">
-       GPUs
+       GPU Clusters
       </a>
      </li>
     </ul>
@@ -1301,15 +1306,15 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 <h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">¶</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="ffeed1ae-3b54-4bef-9d12-2c0e755796f8" name="d623096f-a197-4f05-b033-a9ed8ecfc69e" type="radio">
-</input><label class="tabbed-label" for="ffeed1ae-3b54-4bef-9d12-2c0e755796f8">
+<input checked="checked" id="44d52e22-83a2-4a12-aa4d-4113d2c5c368" name="825daaac-64a7-443d-8d08-b6b674a6e938" type="radio">
+</input><label class="tabbed-label" for="44d52e22-83a2-4a12-aa4d-4113d2c5c368">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
 </pre></div>
 </div>
 </div>
-<input id="febb3bef-a060-42c4-b460-6280ff73684d" name="d623096f-a197-4f05-b033-a9ed8ecfc69e" type="radio">
-</input><label class="tabbed-label" for="febb3bef-a060-42c4-b460-6280ff73684d">
+<input id="6202b60d-19d4-4b41-acce-a03f5eb7113d" name="825daaac-64a7-443d-8d08-b6b674a6e938" type="radio">
+</input><label class="tabbed-label" for="6202b60d-19d4-4b41-acce-a03f5eb7113d">
 Mac</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
 find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5

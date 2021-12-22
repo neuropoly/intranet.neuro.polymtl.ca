@@ -1,8 +1,8 @@
 ---
-description: How to use GPU Servers at Neuropoly
+description: How to use GPU Clusters at Neuropoly
 ---
 
-# GPUs
+# GPU Clusters
 
 This document is being ported from [here](https://docs.google.com/document/d/1X--A2kql4GypfI6fNFIOYA_b6uQdeu2_Kue7n8KkTOU/edit#).
 

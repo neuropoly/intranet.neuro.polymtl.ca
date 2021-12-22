@@ -2,7 +2,7 @@
 
 ```{toctree}
 :hidden:
-cpus2
+cpus
 gpus
 ```
 

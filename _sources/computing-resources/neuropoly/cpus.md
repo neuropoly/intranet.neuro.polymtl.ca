@@ -2,7 +2,7 @@
 description: How to use CPU clusters at Neuropoly
 ---
 
-# CPU Servers
+# CPU Clusters
 
 Unless otherwise stated, use your [connect with your polygrames credentials](./computing-resources-neuropoly.md#TODO)
 
