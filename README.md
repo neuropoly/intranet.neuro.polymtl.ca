@@ -6,6 +6,7 @@ NeuroPoly Website <https://neuro.polymtl.ca>
 onboarding/README
 agenda-and-calendar
 mri-scanning/README
+rf-lab/README
 writing-articles
 computing-resources/README
 geek-tips/README

@@ -429,18 +429,6 @@ This computer is to be used for programming pulse sequences within the Siemens I
 
 This computer is to be used for CST simulations. The station is bound to the **Poly-Grames** domain.
 
-## Printers
-
-### Modix
-
-| Spec            | Description                                                                                                                                                          |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Model**       | Raspberry Pi                                                                                                                                                         |
-| **OS**          | OctoPrint                                                                                                                                                            |
-| **Hostname**    | `http://132.207.154.91`                                                                                                                                              |
-| **Credentials** | [NeuroPoly Internal Document: Modix Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.125uuajyox5y) |
-
-The Modix 3D printer is remotely controlled using [OctoPrint](https://octoprint.org). To access the control interface go to the hostname and use the credentials provided above.
 
 ## Connect to the Polytechnique public disk
 
