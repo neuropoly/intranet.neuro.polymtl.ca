@@ -1156,28 +1156,29 @@ mkdir -p <span class="nv">$TMPDIR</span>
 tensorboard --logdir PATH_TO_MODEL --port PORTNUMBER
 </pre></div>
 </div>
-</li>
+<p>with:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">PATH_TO_MODEL</span></code>: Is the path to the folder that contains the file <code class="docutils literal notranslate"><span class="pre">*.tfevents.*</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PORTNUMBER</span></code>: Pick one number that is different from the port number that other people might be using on the same station. Examples: 6008, 6009, etc.</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Choose your own <code class="docutils literal notranslate"><span class="pre">PORTNUMBER</span></code>, not the default one, because it cannot be used by two people at the same time. Examples of port numbers: 6008, 6009, etc.</p>
-</div>
-<p>Create an <a class="reference internal" href="#ssh-tunnelling"><span class="std std-ref">SSH tunnelling</span></a> between your local station and the remote server.</p>
-<p>Then, open a browser and go to: <a class="reference external" href="http://localhost:8080/">http://localhost:8080/</a>.</p>
+</li>
+<li><p>Create an <a class="reference internal" href="#ssh-tunnelling"><span class="std std-ref">SSH tunnelling</span></a> between your local station and the remote server.</p></li>
+<li><p>Open a browser and go to: <a class="reference external" href="http://localhost:8080/">http://localhost:8080/</a>.</p></li>
+</ul>
 </div>
 <div class="section" id="ssh-tunnelling">
 <span id="id1"></span><h2>SSH tunnelling<a class="headerlink" href="#ssh-tunnelling" title="Permalink to this headline">¶</a></h2>
 <p>If you want to run a Jupyter notebook from a remote server, or monitor a model training using tensorboard, you will need to do an SSH tunnelling to be able to pass the display from the remote cluster to your local station.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="6afc94ab-0051-44d5-9d85-ed075959388c" name="b4ee99ef-4aac-43ba-83ca-9f68972bea00" type="radio">
-</input><label class="tabbed-label" for="6afc94ab-0051-44d5-9d85-ed075959388c">
+<input checked="checked" id="1b8aab08-1500-4467-896e-3f8971e3e19f" name="d857d139-124c-4f03-a768-d8cec415ca23" type="radio">
+</input><label class="tabbed-label" for="1b8aab08-1500-4467-896e-3f8971e3e19f">
 Secure pipes</label><div class="tabbed-content docutils">
 <p>Install secure pipes and configure it as follows:
 with port_rosenber as the “Port” of the screen session and port_local is a random number (see screenshot below):</p>
 <p><img alt="" src="../../_images/tunnelling_macos.png" /></p>
 </div>
-<input id="98161960-8325-4961-bb4a-d7b8d699eddf" name="b4ee99ef-4aac-43ba-83ca-9f68972bea00" type="radio">
-</input><label class="tabbed-label" for="98161960-8325-4961-bb4a-d7b8d699eddf">
+<input id="c87dd4e4-7bbd-4709-9e5c-8da1e72b0cd4" name="d857d139-124c-4f03-a768-d8cec415ca23" type="radio">
+</input><label class="tabbed-label" for="c87dd4e4-7bbd-4709-9e5c-8da1e72b0cd4">
 Terminal</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh -N -f -L localhost:8080:localhost:PORTNUMBER username@CLUSTER.neuro.polymtl.ca
 </pre></div>
