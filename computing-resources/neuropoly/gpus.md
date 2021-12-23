@@ -257,14 +257,13 @@ To do on the remote GPU cluster:
   mkdir -p $TMPDIR
   tensorboard --logdir PATH_TO_MODEL --port PORTNUMBER
 	```
+  with:
+  - `PATH_TO_MODEL`: Is the path to the folder that contains the file `*.tfevents.*`
+  - `PORTNUMBER`: Pick one number that is different from the port number that other people might be using on the same station. Examples: 6008, 6009, etc.
 
-```{note}
-Choose your own `PORTNUMBER`, not the default one, because it cannot be used by two people at the same time. Examples of port numbers: 6008, 6009, etc.
-```
+- Create an {ref}`ssh-tunnelling` between your local station and the remote server. 
 
-Create an {ref}`ssh-tunnelling` between your local station and the remote server. 
-
-Then, open a browser and go to: [http://localhost:8080/](http://localhost:8080/).
+- Open a browser and go to: [http://localhost:8080/](http://localhost:8080/).
 
 (ssh-tunnelling)=
 ## SSH tunnelling
