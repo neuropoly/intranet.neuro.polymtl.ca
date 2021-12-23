@@ -234,3 +234,74 @@ Monitoring these metrics during training will help you make more efficient batch
 
 ## Tensorboard
 
+![](../../_media/tensorboard.png)
+
+This feature allows you to monitor various training and validation metrics across epochs. If training is happening on a remote station (typically the case), you need to run tensorboard on the remote station and establish an SSH tunnel to be able to see the TensorBoard on your local browser.
+
+To do on the remote GPU cluster:
+- Source virtual environment
+- Open a terminal session:
+
+  ```bash
+  screen
+  # If there is already a SINGLE screen session, reopen it:
+  screen -dr
+  # if there are more than one screen sessions, see which ones are active:
+  screen -ls
+  # Then select the one you like:
+  screen -r PID
+  ```
+- Launch tensorboard:
+  ```bash
+  export TMPDIR=/tmp/$USER
+  mkdir -p $TMPDIR
+  tensorboard --logdir PATH_TO_MODEL --port PORTNUMBER
+	```
+
+```{note}
+Choose your own `PORTNUMBER`, not the default one, because it cannot be used by two people at the same time. Examples of port numbers: 6008, 6009, etc.
+```
+
+Create an {ref}`ssh-tunnelling` between your local station and the remote server. 
+
+Then, open a browser and go to: [http://localhost:8080/](http://localhost:8080/).
+
+(ssh-tunnelling)=
+## SSH tunnelling
+
+If you want to run a Jupyter notebook from a remote server, or monitor a model training using tensorboard, you will need to do an SSH tunnelling to be able to pass the display from the remote cluster to your local station. 
+
+````{tabbed} Secure pipes
+
+Install secure pipes and configure it as follows: 
+with port_rosenber as the “Port” of the screen session and port_local is a random number (see screenshot below):
+
+![](../../_media/tunnelling_macos.png)
+
+````
+
+````{tabbed} Terminal
+
+```bash
+ssh -N -f -L localhost:8080:localhost:PORTNUMBER username@CLUSTER.neuro.polymtl.ca
+```
+
+Once the SSH tunnel is established, open a browser and go to: [http://localhost:8080/](http://localhost:8080/). 
+
+```{warning}
+If you get the following error: 
+
+~~~ 
+bind: Address already in use
+channel_setup_fwd_listener_tcpip: cannot listen to port: 8080
+Could not request local forwarding.
+~~~
+You need to kill whatever application is using that port:
+~~~ 
+lsof -ti:8080 | xargs kill -9
+~~~
+```
+
+Reference: https://fizzylogic.nl/2017/11/06/edit-jupyter-notebooks-over-ssh/
+
+````
