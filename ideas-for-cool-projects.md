@@ -93,6 +93,7 @@ description: >-
 ## Pulse Sequence Programming
 
 * qMT on 7T scanner at ICM (6 months)
+* Create a "spinal cord dot engine" on Siemens scanners to automatically segment the spinal cord.
 
 ## RF Coil
 
