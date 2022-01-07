@@ -34,7 +34,7 @@
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <link rel="shortcut icon" href="../../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -829,7 +829,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Page Contents
@@ -902,7 +902,83 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Vagrant</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Page Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installing-a-href-installing-id-installing-a">
+   Installing
+   <a href="installing" id="installing">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-started-basic-commands-a-href-getting-started-and-basic-commands-id-getting-started-and-basic-commands-a">
+   Getting Started &amp; Basic Commands
+   <a href="getting-started-and-basic-commands" id="getting-started-and-basic-commands">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ssh-into-box-a-href-ssh-into-box-id-ssh-into-box-a">
+   SSH into Box
+   <a href="ssh-into-box" id="ssh-into-box">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vagrantfile-a-href-vagrantfile-id-vagrantfile-a">
+   Vagrantfile
+   <a href="vagrantfile" id="vagrantfile">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#memory-and-cpu-settings-a-href-memory-and-cpu-settings-id-memory-and-cpu-settings-a">
+     Memory and CPU Settings
+     <a href="memory-and-cpu-settings" id="memory-and-cpu-settings">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#folder-settings-a-href-folder-settings-id-folder-settings-a">
+     Folder Settings
+     <a href="folder-settings" id="folder-settings">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#startup-provision-settings-a-href-startup-provision-settings-id-startup-provision-settings-a">
+     Startup/Provision Settings
+     <a href="startup-provision-settings" id="startup-provision-settings">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#running-macos-a-href-running-macos-id-running-macos-a">
+     Running MacOS
+     <a href="running-macos" id="running-macos">
+     </a>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="vagrant">
@@ -1019,8 +1095,8 @@ reboot
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="virtualbox.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1037,19 +1113,17 @@ reboot
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By NeuroPoly<br/>
-        
-            &copy; Copyright 2021, NeuroPoly.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By NeuroPoly<br/>
+    
+        &copy; Copyright 2021, NeuroPoly.<br/>
+  </p>
+</footer>
 </main>
 
 

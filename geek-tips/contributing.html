@@ -34,7 +34,7 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -829,7 +829,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Page Contents
@@ -1037,7 +1037,218 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Contributing Guidelines</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Page Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-a-href-introduction-id-introduction-a">
+   Introduction
+   <a href="introduction" id="introduction">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-specific-guidance">
+   Project-Specific Guidance
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#opening-an-issue-on-github-a-href-opening-an-issue-on-github-id-opening-an-issue-on-github-a">
+   Opening an Issue on GitHub
+   <a href="opening-an-issue-on-github" id="opening-an-issue-on-github">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#issue-title-a-href-issue-title-id-issue-title-a">
+     Issue Title
+     <a href="issue-title" id="issue-title">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#issue-body-a-href-issue-body-id-issue-body-a">
+     Issue Body
+     <a href="issue-body" id="issue-body">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#issue-labels-a-href-issue-labels-id-issue-labels-a">
+     Issue Labels
+     <a href="issue-labels" id="issue-labels">
+     </a>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mandatory-labels">
+       Mandatory Labels
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#optional-recommended-labels">
+       Optional (Recommended) Labels
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#developing-code-a-href-developing-id-developing-a">
+   Developing Code
+   <a href="developing" id="developing">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#opening-a-branch-a-href-opening-a-branch-id-opening-a-branch-a">
+     Opening a Branch
+     <a href="opening-a-branch" id="opening-a-branch">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#branch-conflicts-a-href-conflicts-id-conflicts-a">
+     Branch Conflicts
+     <a href="conflicts" id="conflicts">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code-style-a-href-code-style-id-code-style-a">
+     Code Style
+     <a href="code-style" id="code-style">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documentation-and-docstrings-a-href-documentation-and-docstrings-id-documentation-and-docstrings-a">
+     Documentation and Docstrings
+     <a href="documentation-and-docstrings" id="documentation-and-docstrings">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#testing-a-href-testing-id-testing-a">
+     Testing
+     <a href="testing" id="testing">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#licensing-a-href-licensing-id-licensing-a">
+     Licensing
+     <a href="licensing" id="licensing">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#committing-a-href-committing-id-committing-a">
+     Committing
+     <a href="committing" id="committing">
+     </a>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#commit-titles-a-href-commit-titles-id-commit-titles-a">
+       Commit Titles
+       <a href="commit-titles" id="commit-titles">
+       </a>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#commit-sequences-a-href-commit-sequences-id-commit-sequences-a">
+       Commit Sequences
+       <a href="commit-sequences" id="commit-sequences">
+       </a>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submitting-a-pull-request-a-href-submitting-a-pull-request-id-submitting-a-pull-request-a">
+   Submitting a Pull Request
+   <a href="submitting-a-pull-request" id="submitting-a-pull-request">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pr-title-a-href-pr-title-id-pr-title-a">
+     PR Title
+     <a href="pr-title" id="pr-title">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pr-body-a-href-pr-body-id-pr-body-a">
+     PR Body
+     <a href="pr-body" id="pr-body">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pr-labels-a-href-pr-labels-id-pr-labels-a">
+     PR Labels
+     <a href="pr-labels" id="pr-labels">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#work-in-progress-a-href-work-in-progress-id-work-in-progress-a">
+     Work in Progress
+     <a href="work-in-progress" id="work-in-progress">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#continuous-integration-a-href-continuous-integration-id-continuous-integration-a">
+     Continuous Integration
+     <a href="continuous-integration" id="continuous-integration">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reviewers-a-href-reviewers-id-reviewers-a">
+     Reviewers
+     <a href="reviewers" id="reviewers">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#working-on-epic-changes-a-href-working-on-epic-changes-id-working-on-epic-changes-a">
+     Working on “Epic” Changes
+     <a href="working-on-epic-changes" id="working-on-epic-changes">
+     </a>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#versioning-a-href-versioning-id-versioning-a">
+   Versioning
+   <a href="versioning" id="versioning">
+   </a>
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="contributing-guidelines">
@@ -1326,8 +1537,8 @@ model: add HeMIS network</p>
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="os-guides/macosx.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1344,19 +1555,17 @@ model: add HeMIS network</p>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By NeuroPoly<br/>
-        
-            &copy; Copyright 2021, NeuroPoly.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By NeuroPoly<br/>
+    
+        &copy; Copyright 2021, NeuroPoly.<br/>
+  </p>
+</footer>
 </main>
 
 

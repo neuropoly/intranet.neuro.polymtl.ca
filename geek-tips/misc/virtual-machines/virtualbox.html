@@ -34,7 +34,7 @@
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <link rel="shortcut icon" href="../../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -829,7 +829,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Page Contents
@@ -904,7 +904,85 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>VirtualBox</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Page Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-a-ova-file-a-href-import-a-ova-file-id-import-a-ova-file-a">
+   Import a .ova file
+   <a href="import_a_ova_file" id="import_a_ova_file">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shared-folder-a-href-shared-folder-id-shared-folder-a">
+   Shared folder
+   <a href="shared_folder" id="shared_folder">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-guest-additions-recommended-a-href-using-guest-additions-recommended-id-using-guest-additions-recommended-a">
+     Using Guest Additions (recommended)
+     <a href="using_guest_additions_recommended" id="using_guest_additions_recommended">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manual-method-a-href-manual-method-id-manual-method-a">
+     Manual method
+     <a href="manual_method" id="manual_method">
+     </a>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-a-virtual-machine-vm-with-debian-a-href-create-a-virtual-machine-vm-with-debian-id-create-a-virtual-machine-vm-with-debian-a">
+   Create a Virtual Machine (VM) with Debian
+   <a href="create_a_virtual_machine_vm_with_debian" id="create_a_virtual_machine_vm_with_debian">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reduce-the-size-of-the-vm-a-href-reduce-the-size-of-the-vm-id-reduce-the-size-of-the-vm-a">
+   Reduce the size of the VM
+   <a href="reduce_the_size_of_the_vm" id="reduce_the_size_of_the_vm">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-guest-additions-a-href-install-guest-additions-id-install-guest-additions-a">
+   Install guest additions
+   <a href="install_guest_additions" id="install_guest_additions">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ubuntu-14-04-a-href-ubuntu-1404-id-ubuntu-1404-a">
+     Ubuntu 14.04
+     <a href="ubuntu_1404" id="ubuntu_1404">
+     </a>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="virtualbox">
@@ -1019,8 +1097,8 @@
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="README.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1037,19 +1115,17 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By NeuroPoly<br/>
-        
-            &copy; Copyright 2021, NeuroPoly.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By NeuroPoly<br/>
+    
+        &copy; Copyright 2021, NeuroPoly.<br/>
+  </p>
+</footer>
 </main>
 
 

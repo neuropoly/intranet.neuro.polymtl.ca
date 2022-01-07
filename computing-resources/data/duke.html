@@ -34,7 +34,7 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -829,7 +829,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Page Contents
@@ -859,7 +859,40 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>duke</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Page Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access-from-stations">
+   Access from stations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mount-with-gui">
+   Mount with GUI
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mount-with-terminal">
+   Mount with Terminal
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="duke">
@@ -897,8 +930,8 @@ drwxr-xr-x 2 u108545 domain users  4096 Jun  8 16:44 temp
 <h2>Mount with GUI<a class="headerlink" href="#mount-with-gui" title="Permalink to this headline">¶</a></h2>
 <p>When working on campus or <span class="xref myst">over the VPN</span>, you can connect your computer to <code class="docutils literal notranslate"><span class="pre">duke</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="8ab52b60-eecd-4d39-9089-c0301890847d" name="63e88ce2-7bf8-4753-b991-9f24faabc614" type="radio">
-</input><label class="tabbed-label" for="8ab52b60-eecd-4d39-9089-c0301890847d">
+<input checked="checked" id="b3c7ccf5-2270-4601-8b30-f38cdd2c3653" name="2ab4f926-7e55-429e-94f9-df816be94233" type="radio">
+</input><label class="tabbed-label" for="b3c7ccf5-2270-4601-8b30-f38cdd2c3653">
 macOS</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Finder</p></li>
@@ -906,8 +939,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p><code class="docutils literal notranslate"><span class="pre">afp://duke.neuro.polymtl.ca/</span></code></p></li>
 </ol>
 </div>
-<input id="f590ae68-cee4-4527-96bf-c9bf5fd0741d" name="63e88ce2-7bf8-4753-b991-9f24faabc614" type="radio">
-</input><label class="tabbed-label" for="f590ae68-cee4-4527-96bf-c9bf5fd0741d">
+<input id="e35ad98c-1d6c-4575-85bc-5063f6872499" name="2ab4f926-7e55-429e-94f9-df816be94233" type="radio">
+</input><label class="tabbed-label" for="e35ad98c-1d6c-4575-85bc-5063f6872499">
 Linux</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open File Browser</p></li>
@@ -915,8 +948,8 @@ Linux</label><div class="tabbed-content docutils">
 <li><p><code class="docutils literal notranslate"><span class="pre">smb://duke.neuro.polymtl.ca/</span></code></p></li>
 </ol>
 </div>
-<input id="6bb5ab39-1975-4967-b182-18238cb7a34f" name="63e88ce2-7bf8-4753-b991-9f24faabc614" type="radio">
-</input><label class="tabbed-label" for="6bb5ab39-1975-4967-b182-18238cb7a34f">
+<input id="1cbc3d90-0a80-4b69-bfd0-9ca5be57c73f" name="2ab4f926-7e55-429e-94f9-df816be94233" type="radio">
+</input><label class="tabbed-label" for="1cbc3d90-0a80-4b69-bfd0-9ca5be57c73f">
 Windows 10</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Windows explorer</p></li>
@@ -942,8 +975,8 @@ Windows 10</label><div class="tabbed-content docutils">
 <h2>Mount with Terminal<a class="headerlink" href="#mount-with-terminal" title="Permalink to this headline">¶</a></h2>
 <p>You can also connect your computer from the CLI, or with a script, which might be more efficient in the long run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="c84973ef-e811-4d41-9dda-6829081929b8" name="7c9de425-efd4-40d6-a324-bcb4707d099a" type="radio">
-</input><label class="tabbed-label" for="c84973ef-e811-4d41-9dda-6829081929b8">
+<input checked="checked" id="04808c37-3e2b-4183-aff2-06de81f56516" name="596ed1a7-0436-4d36-945d-aca200636ad1" type="radio">
+</input><label class="tabbed-label" for="04808c37-3e2b-4183-aff2-06de81f56516">
 Mac OSX</label><div class="tabbed-content docutils">
 <p>Create folder for the mount point on a location (your home directory) where you have read and write access:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir &lt;FOLDER_NAME&gt; <span class="c1"># (e.g. &lt;FOLDER_NAME&gt;=sct_testing)</span>
@@ -954,8 +987,8 @@ sudo umount &lt;FOLDER_NAME&gt;/
 </pre></div>
 </div>
 </div>
-<input id="ee054caa-580f-48b9-9b60-33e8b757c39d" name="7c9de425-efd4-40d6-a324-bcb4707d099a" type="radio">
-</input><label class="tabbed-label" for="ee054caa-580f-48b9-9b60-33e8b757c39d">
+<input id="7f8baa8f-fc22-4a82-a066-51a8bada9196" name="596ed1a7-0436-4d36-945d-aca200636ad1" type="radio">
+</input><label class="tabbed-label" for="7f8baa8f-fc22-4a82-a066-51a8bada9196">
 Linux</label><div class="tabbed-content docutils">
 <p>To mount:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mount -t cifs //duke.neuro.polymtl.ca/&lt;FOLDER_NAME&gt; /mnt/duke/&lt;FOLDER_NAME&gt; -o <span class="nv">username</span><span class="o">=</span>&lt;GRAMES_USERNAME&gt;,noexec
@@ -969,8 +1002,8 @@ Linux</label><div class="tabbed-content docutils">
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="git-datasets.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -987,19 +1020,17 @@ Linux</label><div class="tabbed-content docutils">
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By NeuroPoly<br/>
-        
-            &copy; Copyright 2021, NeuroPoly.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By NeuroPoly<br/>
+    
+        &copy; Copyright 2021, NeuroPoly.<br/>
+  </p>
+</footer>
 </main>
 
 

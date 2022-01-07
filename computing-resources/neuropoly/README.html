@@ -34,7 +34,7 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -829,7 +829,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Page Contents
@@ -1023,7 +1023,204 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>🖥 Computers @NeuroPoly</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Page Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#poly-grames">
+   Poly-Grames
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#poly-grames-network-account">
+     Poly-Grames Network Account
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#home-folder">
+     Home folder
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#poly-grames-groups">
+     Poly-Grames Groups
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#connect-to-poly-grames-server">
+     Connect to Poly-Grames Server
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#list-of-computers-at-neuropoly">
+   List of Computers at NeuroPoly
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vpn">
+   VPN
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connect-to-neuropoly-computers">
+   Connect to NeuroPoly Computers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#locally">
+     Locally
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ssh-command-line">
+     SSH (command line)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sftp-mount-a-remote-station">
+     SFTP (Mount a remote station)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vnc-graphical-interface">
+     VNC (graphical interface)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#linux-stations">
+       Linux stations
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cpu-gpu-clusters">
+   CPU/GPU Clusters
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rosenberg">
+     rosenberg
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bireli">
+     bireli
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#joplin">
+     joplin
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#abbey">
+     abbey
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fitzgerald">
+     fitzgerald
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tristano">
+     tristano
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vnmrj">
+     vnmrj
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#idea3t-siemens-pulse-sequence-programming-for-ve11c-prisma">
+     idea3t - Siemens Pulse sequence programming for VE11C (Prisma)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#troubleshooting">
+       Troubleshooting
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#idea7t-siemens-pulse-sequence-programming-for-ve12u-terra">
+     idea7t - Siemens Pulse sequence programming for VE12U (Terra)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#peterson-cst-simulations">
+     peterson - CST simulations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connect-to-the-polytechnique-public-disk">
+   Connect to the Polytechnique public disk
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#retrieve-an-old-backup">
+   Retrieve an old backup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#software-installed">
+   Software Installed
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installed-on-each-station-local">
+     Installed on each station (local)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mri">
+       MRI
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#programming">
+       Programming
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#misc">
+       Misc
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#admin">
+   Admin
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="computers-neuropoly">
@@ -1048,8 +1245,8 @@
 <h3>Home folder<a class="headerlink" href="#home-folder" title="Permalink to this headline">¶</a></h3>
 <p>Every <span class="xref myst">GRAMES</span> account has a school-wide personal home folder. It is backed-up nightly.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="1d551c61-7aee-4910-824e-aebd3fa03c50" name="05718716-5f7a-4508-aaf3-3d65195f9fd3" type="radio">
-</input><label class="tabbed-label" for="1d551c61-7aee-4910-824e-aebd3fa03c50">
+<input checked="checked" id="5a402960-d8ac-492a-a207-dc7ff69b1937" name="66940c39-7127-44af-b549-169e10633f1f" type="radio">
+</input><label class="tabbed-label" for="5a402960-d8ac-492a-a207-dc7ff69b1937">
 macOS</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Finder</p></li>
@@ -1092,8 +1289,8 @@ macOS</label><div class="tabbed-content docutils">
 <p>You can change your password at <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a>. Also, you can double-check you have VPN access by looking for <code class="docutils literal notranslate"><span class="pre">VPN_*</span> <span class="pre">=</span> <span class="pre">Actif</span></code> here.</p>
 <p>The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing <code class="docutils literal notranslate"><span class="pre">openconnect</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="2fd94644-2941-4a52-abc8-8d82164a43e6" name="66394b3c-1160-4323-8cd4-a5bd2b5f89fb" type="radio">
-</input><label class="tabbed-label" for="2fd94644-2941-4a52-abc8-8d82164a43e6">
+<input checked="checked" id="0dd21ac3-01a6-411d-8133-00f8b26f5460" name="9ee49e2a-60d4-406a-993b-acb857e50340" type="radio">
+</input><label class="tabbed-label" for="0dd21ac3-01a6-411d-8133-00f8b26f5460">
 MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1117,8 +1314,8 @@ MacOS</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="ada5394a-1911-4c58-afeb-26e7ee7b968c" name="66394b3c-1160-4323-8cd4-a5bd2b5f89fb" type="radio">
-</input><label class="tabbed-label" for="ada5394a-1911-4c58-afeb-26e7ee7b968c">
+<input id="6171278a-bdc9-42df-9d43-8cb822772c96" name="9ee49e2a-60d4-406a-993b-acb857e50340" type="radio">
+</input><label class="tabbed-label" for="6171278a-bdc9-42df-9d43-8cb822772c96">
 PC/Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1200,15 +1397,15 @@ PC/Linux</label><div class="tabbed-content docutils">
 <p>The best way to do this is <code class="docutils literal notranslate"><span class="pre">sshfs</span></code>, which makes them appear as if they were a drive on your computer:</p>
 <p>Install sshfs, if not yet installed:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="6ee0be48-d50c-4cfc-ad95-b2356fc56349" name="15ef7e06-866c-4e5f-894e-ab60321ff7e5" type="radio">
-</input><label class="tabbed-label" for="6ee0be48-d50c-4cfc-ad95-b2356fc56349">
+<input checked="checked" id="f79d7761-7aa1-4a84-abf3-29c43017f910" name="d38f48a1-ecc3-453b-b579-58537eb92ca9" type="radio">
+</input><label class="tabbed-label" for="f79d7761-7aa1-4a84-abf3-29c43017f910">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">sshfs</span>
 </pre></div>
 </div>
 </div>
-<input id="8c992595-7202-4175-b409-6a5c4a18a6de" name="15ef7e06-866c-4e5f-894e-ab60321ff7e5" type="radio">
-</input><label class="tabbed-label" for="8c992595-7202-4175-b409-6a5c4a18a6de">
+<input id="f178ff83-33a5-4f10-94ae-5241bbf89388" name="d38f48a1-ecc3-453b-b579-58537eb92ca9" type="radio">
+</input><label class="tabbed-label" for="f178ff83-33a5-4f10-94ae-5241bbf89388">
 mac</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="o">--</span><span class="n">cask</span> <span class="n">osxfuse</span>
 <span class="n">brew</span> <span class="n">install</span> <span class="n">sshfs</span>
@@ -1239,8 +1436,8 @@ mac</label><div class="tabbed-content docutils">
 <div class="section" id="vnc-graphical-interface">
 <h3>VNC (graphical interface)<a class="headerlink" href="#vnc-graphical-interface" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="fe5e7d90-80a0-40ac-9723-46ac5feecd45" name="623b34c7-ea1c-4997-a543-040d20466c46" type="radio">
-</input><label class="tabbed-label" for="fe5e7d90-80a0-40ac-9723-46ac5feecd45">
+<input checked="checked" id="3da87819-43ea-4198-acf8-3f209605d2b2" name="cc4c147c-07f0-4545-be66-4ef9e6d0b9e3" type="radio">
+</input><label class="tabbed-label" for="3da87819-43ea-4198-acf8-3f209605d2b2">
 macOS</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Finder</p></li>
@@ -1249,8 +1446,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p>You can use your local/network account information or the <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg">shared account credentials</a></p></li>
 </ol>
 </div>
-<input id="bacc3ce2-ee5a-4a2f-8bc7-bfd151e54156" name="623b34c7-ea1c-4997-a543-040d20466c46" type="radio">
-</input><label class="tabbed-label" for="bacc3ce2-ee5a-4a2f-8bc7-bfd151e54156">
+<input id="251962d7-5a79-4b86-92d2-fe3eccffd4f4" name="cc4c147c-07f0-4545-be66-4ef9e6d0b9e3" type="radio">
+</input><label class="tabbed-label" for="251962d7-5a79-4b86-92d2-fe3eccffd4f4">
 PC/Linux</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Establish a VNC connection using <a class="reference external" href="https://wiki.gnome.org/Apps/Vinagre/">vinaigre</a>.</p></li>
@@ -1658,8 +1855,8 @@ PC/Linux</label><div class="tabbed-content docutils">
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="../README.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1676,19 +1873,17 @@ PC/Linux</label><div class="tabbed-content docutils">
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By NeuroPoly<br/>
-        
-            &copy; Copyright 2021, NeuroPoly.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By NeuroPoly<br/>
+    
+        &copy; Copyright 2021, NeuroPoly.<br/>
+  </p>
+</footer>
 </main>
 
 

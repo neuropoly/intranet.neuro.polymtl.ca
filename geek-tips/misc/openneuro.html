@@ -34,7 +34,7 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -829,7 +829,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Page Contents
@@ -883,7 +883,64 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>OpenNeuro</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Page Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datalad">
+   DataLad
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installation">
+     Installation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#usage">
+     Usage
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aws">
+   AWS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Installation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#download-openneuro-dataset">
+     Download OpenNeuro Dataset
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="openneuro">
@@ -897,8 +954,8 @@
 <div class="section" id="installation">
 <h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="6d8bee99-1e2f-4bfd-8a4c-c0dbeb979fd8" name="16655726-01ba-4441-ba27-dffc97bd916c" type="radio">
-</input><label class="tabbed-label" for="6d8bee99-1e2f-4bfd-8a4c-c0dbeb979fd8">
+<input checked="checked" id="5e6fba5c-9ca7-467a-a1f7-b62496c22950" name="efeb5e8b-2ff4-4bf0-abe7-0d70ba78e54e" type="radio">
+</input><label class="tabbed-label" for="5e6fba5c-9ca7-467a-a1f7-b62496c22950">
 Debian/Ubuntu</label><div class="tabbed-content docutils">
 <p>Install <code class="docutils literal notranslate"><span class="pre">datalad</span></code> using <code class="docutils literal notranslate"><span class="pre">conda</span></code> :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> miniconda3/etc/profile.d/conda.sh
@@ -918,8 +975,8 @@ apt-get install git-annex
 </pre></div>
 </div>
 </div>
-<input id="b705bbf4-d38e-488e-88a5-26323eaf2e92" name="16655726-01ba-4441-ba27-dffc97bd916c" type="radio">
-</input><label class="tabbed-label" for="b705bbf4-d38e-488e-88a5-26323eaf2e92">
+<input id="7e8327fa-11c8-4823-b1c4-4bd48923b7ec" name="efeb5e8b-2ff4-4bf0-abe7-0d70ba78e54e" type="radio">
+</input><label class="tabbed-label" for="7e8327fa-11c8-4823-b1c4-4bd48923b7ec">
 MacOS</label><div class="tabbed-content docutils">
 <p>Install <code class="docutils literal notranslate"><span class="pre">datalad</span></code> using <code class="docutils literal notranslate"><span class="pre">conda</span></code> :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> miniconda3/etc/profile.d/conda.sh
@@ -966,18 +1023,18 @@ brew install git-annex
 <div class="section" id="id1">
 <h3>Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="3499c20a-5453-4cd7-bbb6-fac1c979de81" name="c17db51d-61c8-44de-8218-451e40f10238" type="radio">
-</input><label class="tabbed-label" for="3499c20a-5453-4cd7-bbb6-fac1c979de81">
+<input checked="checked" id="1e9c6323-658c-4c80-8e91-615d02ec6a2c" name="063e6ae2-46bf-4efc-b3d2-cff79261ed83" type="radio">
+</input><label class="tabbed-label" for="1e9c6323-658c-4c80-8e91-615d02ec6a2c">
 Linux</label><div class="tabbed-content docutils">
 <p>Follow the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/userguide/install-linux.html">AWS Installation Instructions for Linux</a>.</p>
 </div>
-<input id="70e1125f-23af-489a-9c3a-7b77765f86ae" name="c17db51d-61c8-44de-8218-451e40f10238" type="radio">
-</input><label class="tabbed-label" for="70e1125f-23af-489a-9c3a-7b77765f86ae">
+<input id="0c7f6ef3-354a-4365-8b1f-bd413dd1a37c" name="063e6ae2-46bf-4efc-b3d2-cff79261ed83" type="radio">
+</input><label class="tabbed-label" for="0c7f6ef3-354a-4365-8b1f-bd413dd1a37c">
 MacOS</label><div class="tabbed-content docutils">
 <p>Follow the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/userguide/install-macos.html">AWS Installation Instructions for MacOS</a>.</p>
 </div>
-<input id="d123d25f-9295-41bb-9988-c329c3d749c8" name="c17db51d-61c8-44de-8218-451e40f10238" type="radio">
-</input><label class="tabbed-label" for="d123d25f-9295-41bb-9988-c329c3d749c8">
+<input id="da61dee2-3dde-4523-a10d-c7af14479c86" name="063e6ae2-46bf-4efc-b3d2-cff79261ed83" type="radio">
+</input><label class="tabbed-label" for="da61dee2-3dde-4523-a10d-c7af14479c86">
 Windows</label><div class="tabbed-content docutils">
 <p>Follow the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html">AWS Installation Instructions for Windows</a>.</p>
 </div>
@@ -996,8 +1053,8 @@ Windows</label><div class="tabbed-content docutils">
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="microsoft-word.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1014,19 +1071,17 @@ Windows</label><div class="tabbed-content docutils">
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By NeuroPoly<br/>
-        
-            &copy; Copyright 2021, NeuroPoly.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By NeuroPoly<br/>
+    
+        &copy; Copyright 2021, NeuroPoly.<br/>
+  </p>
+</footer>
 </main>
 
 

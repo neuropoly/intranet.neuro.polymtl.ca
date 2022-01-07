@@ -34,7 +34,7 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -829,7 +829,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Page Contents
@@ -921,7 +921,102 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>git-annex</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Page Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation">
+   Installation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#global-git-config">
+     Global
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       git
+      </span>
+     </code>
+     config
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#new-repo">
+   New repo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#annex-thin-hardlinks-a-id-hardlinks">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     annex.thin
+    </span>
+   </code>
+   Hardlinks
+   <a id="hardlinks">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#troubleshooting">
+   Troubleshooting
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#version-problems">
+     version problems
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checking-annex-file-locations">
+     checking annex file locations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-cosmetic-problem-affecting-git-status">
+     “a cosmetic problem affecting git status”
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resetting">
+     Resetting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rm-cannot-remove">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       rm:
+      </span>
+      <span class="pre">
+       cannot
+      </span>
+      <span class="pre">
+       remove
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="git-annex">
@@ -938,8 +1033,8 @@
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>You must have a unix OS. <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> is simply not compatible with anything else.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="142f35b7-f4ef-43d5-a157-bd2cc6e2bd2b" name="3836455f-65a7-45e4-8f56-5d6db9b2ca4f" type="radio">
-</input><label class="tabbed-label" for="142f35b7-f4ef-43d5-a157-bd2cc6e2bd2b">
+<input checked="checked" id="4e365d5f-07d9-4c29-8991-b8ae2706c3e2" name="18cd5ea1-e452-4afa-8d83-80fbe5f6a0ec" type="radio">
+</input><label class="tabbed-label" for="4e365d5f-07d9-4c29-8991-b8ae2706c3e2">
 Linux</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p><strong>Arch</strong>: <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-Sy</span> <span class="pre">git-annex</span></code></p></li>
@@ -949,15 +1044,15 @@ Linux</label><div class="tabbed-content docutils">
 <li><p>if on an older system and can’t upgrade, you can try <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">installing <code class="docutils literal notranslate"><span class="pre">conda</span></code></a> (or <a class="reference external" href="https://github.com/conda-forge/miniforge/">miniforge</a> and then using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-f</span> <span class="pre">conda-forge</span> <span class="pre">git-annex</span></code>.</p></li>
 </ul>
 </div>
-<input id="1ca3a3a3-e959-4400-8df8-085dec1fe4cf" name="3836455f-65a7-45e4-8f56-5d6db9b2ca4f" type="radio">
-</input><label class="tabbed-label" for="1ca3a3a3-e959-4400-8df8-085dec1fe4cf">
+<input id="6eae5e3e-2fbb-46b9-968b-5adf9402feee" name="18cd5ea1-e452-4afa-8d83-80fbe5f6a0ec" type="radio">
+</input><label class="tabbed-label" for="6eae5e3e-2fbb-46b9-968b-5adf9402feee">
 macOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">git</span><span class="o">-</span><span class="n">annex</span>
 </pre></div>
 </div>
 </div>
-<input id="0406e983-7a30-4a55-999b-1d222b4c591e" name="3836455f-65a7-45e4-8f56-5d6db9b2ca4f" type="radio">
-</input><label class="tabbed-label" for="0406e983-7a30-4a55-999b-1d222b4c591e">
+<input id="7d92cfb2-c47a-4c6c-b725-24b59264ab24" name="18cd5ea1-e452-4afa-8d83-80fbe5f6a0ec" type="radio">
+</input><label class="tabbed-label" for="7d92cfb2-c47a-4c6c-b725-24b59264ab24">
 Windows 10 (via WSL)</label><div class="tabbed-content docutils">
 <p>Install <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a>, pick a distro, and then run one of:</p>
 <ul class="simple">
@@ -966,8 +1061,8 @@ Windows 10 (via WSL)</label><div class="tabbed-content docutils">
 <li><p>The <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions">other distros</a> are supported.</p></li>
 </ul>
 </div>
-<input id="8ae3ce93-744b-42ee-973b-1d7c2b5b4f01" name="3836455f-65a7-45e4-8f56-5d6db9b2ca4f" type="radio">
-</input><label class="tabbed-label" for="8ae3ce93-744b-42ee-973b-1d7c2b5b4f01">
+<input id="8e5fbb94-2f2c-4d3d-9a21-8be1267ad0fc" name="18cd5ea1-e452-4afa-8d83-80fbe5f6a0ec" type="radio">
+</input><label class="tabbed-label" for="8e5fbb94-2f2c-4d3d-9a21-8be1267ad0fc">
 Windows 10 (via VirtualBox)</label><div class="tabbed-content docutils">
 <p>Install <a class="reference external" href="https://virtualbox.org/">VirtualBox</a>, install a Linux distro inside of it, and then follow the Linux instructions.</p>
 </div>
@@ -1146,8 +1241,8 @@ $ rm -rf data-single-subject/
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="git.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1164,19 +1259,17 @@ $ rm -rf data-single-subject/
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By NeuroPoly<br/>
-        
-            &copy; Copyright 2021, NeuroPoly.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By NeuroPoly<br/>
+    
+        &copy; Copyright 2021, NeuroPoly.<br/>
+  </p>
+</footer>
 </main>
 
 

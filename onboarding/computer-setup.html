@@ -34,7 +34,7 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -829,7 +829,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Page Contents
@@ -884,7 +884,65 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Computer Setup</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Page Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modify-user-template">
+   Modify User Template
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shell-profile-a-href-bash-profile-id-bash-profile-a">
+   Shell Profile
+   <a href="bash_profile" id="bash_profile">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#niftiviewer-app-a-href-niftiviewerapp-id-niftiviewerapp-a">
+   niftiviewer.app
+   <a href="niftiviewerapp" id="niftiviewerapp">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-linux-machine-to-grames-a-href-add-linux-machine-to-grames-id-add-linux-machine-to-grames-a">
+   Add LINUX machine to GRAMES
+   <a href="add_linux_machine_to_grames" id="add_linux_machine_to_grames">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#configure-virtualenvwrapper-under-linux-a-href-configure-virtualenvwrapper-under-linux-id-configure-virtualenvwrapper-under-linux-a">
+   Configure virtualenvwrapper under LINUX
+   <a href="configure_virtualenvwrapper_under_linux" id="configure_virtualenvwrapper_under_linux">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#update-debian-7-to-8-a-href-update-debian-7-to-8-id-update-debian-7-to-8-a">
+   Update debian 7 to 8
+   <a href="update_debian_7_to_8" id="update_debian_7_to_8">
+   </a>
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="computer-setup">
@@ -900,8 +958,8 @@
 <h2>Shell Profile <a href="bash_profile" id="bash_profile"></a><a class="headerlink" href="#shell-profile-a-href-bash-profile-id-bash-profile-a" title="Permalink to this headline">¶</a></h2>
 <p>You can edit your shell profile (usually called <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code>, but some newer versions of Mac use <code class="docutils literal notranslate"><span class="pre">.zsh_profile</span></code> ) to create custom commands and make the colours in your terminal look nice.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="8dd336ca-23e6-4f30-ac1c-bdf62815aa12" name="65884e2b-ead0-4987-bfe3-43432770e098" type="radio">
-</input><label class="tabbed-label" for="8dd336ca-23e6-4f30-ac1c-bdf62815aa12">
+<input checked="checked" id="921ee5df-cb14-42d0-8394-6b5c31b87f5b" name="eb326134-71e7-4b64-a60f-e71bda3f0f21" type="radio">
+</input><label class="tabbed-label" for="921ee5df-cb14-42d0-8394-6b5c31b87f5b">
 .bash_profile</label><div class="tabbed-content docutils">
 <p>To edit, navigate to <code class="docutils literal notranslate"><span class="pre">$HOME/.bash_profile</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Nice .bash_profile</span>
@@ -960,8 +1018,8 @@
 </pre></div>
 </div>
 </div>
-<input id="901d56b1-23cc-4a47-a9d3-be5876ab3a93" name="65884e2b-ead0-4987-bfe3-43432770e098" type="radio">
-</input><label class="tabbed-label" for="901d56b1-23cc-4a47-a9d3-be5876ab3a93">
+<input id="c3c9ce7b-00ff-4de5-ad72-21b2de0dc162" name="eb326134-71e7-4b64-a60f-e71bda3f0f21" type="radio">
+</input><label class="tabbed-label" for="c3c9ce7b-00ff-4de5-ad72-21b2de0dc162">
 .zsh_profile</label><div class="tabbed-content docutils">
 <p>To edit, navigate to <code class="docutils literal notranslate"><span class="pre">$HOME/.zsh_profile</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># COLOR</span>
@@ -1056,8 +1114,8 @@
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="dropbox-google-drive.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1074,19 +1132,17 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By NeuroPoly<br/>
-        
-            &copy; Copyright 2021, NeuroPoly.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By NeuroPoly<br/>
+    
+        &copy; Copyright 2021, NeuroPoly.<br/>
+  </p>
+</footer>
 </main>
 
 

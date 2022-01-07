@@ -34,7 +34,7 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -829,7 +829,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Page Contents
@@ -877,7 +877,58 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Linux</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Page Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#automatic-mount-on-startup">
+   <strong>
+    Automatic
+    <strong>
+     M
+    </strong>
+    ount on Startup
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#centos-fedora-red-hat">
+   CentOS/Fedora/Red Hat
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ants-c3d">
+     Ants &amp; c3d
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fsl">
+     FSL
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#miniconda">
+     Miniconda
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="linux">
@@ -893,8 +944,8 @@ sudo mkdir /mnt/data_shared
 <p>2. Edit mount table, type : <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">nano</span> <span class="pre">/etc/fstab</span></code></p>
 <p>3. For the following operating systems:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="605ef005-9d31-445f-b9e7-54303780588b" name="cb391eda-5251-4934-b46d-7cbf92d8c9c1" type="radio">
-</input><label class="tabbed-label" for="605ef005-9d31-445f-b9e7-54303780588b">
+<input checked="checked" id="3a0ccd3e-a01c-4109-81e2-bfefbd718f5c" name="045cdd76-5e52-498a-8c9b-abb2bc7e1f28" type="radio">
+</input><label class="tabbed-label" for="3a0ccd3e-a01c-4109-81e2-bfefbd718f5c">
 Ubuntu 14.04 LTS</label><div class="tabbed-content docutils">
 <p>Add the following lines at the bottom of the file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#data_processing @SERVER</span>
@@ -905,8 +956,8 @@ Ubuntu 14.04 LTS</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="04323b0e-2e3d-4146-a61c-f6d1554bfb8c" name="cb391eda-5251-4934-b46d-7cbf92d8c9c1" type="radio">
-</input><label class="tabbed-label" for="04323b0e-2e3d-4146-a61c-f6d1554bfb8c">
+<input id="a2bfffa3-d14c-411d-9746-892084c30cbd" name="045cdd76-5e52-498a-8c9b-abb2bc7e1f28" type="radio">
+</input><label class="tabbed-label" for="a2bfffa3-d14c-411d-9746-892084c30cbd">
 Debian Wheezy 8</label><div class="tabbed-content docutils">
 <p>Add the following lines at the bottom of the file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#data_processing @SERVER</span>
@@ -962,8 +1013,8 @@ PATH=${PATH}:${SCT_DIR}/install/debian/c3d
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="README.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -980,19 +1031,17 @@ PATH=${PATH}:${SCT_DIR}/install/debian/c3d
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By NeuroPoly<br/>
-        
-            &copy; Copyright 2021, NeuroPoly.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By NeuroPoly<br/>
+    
+        &copy; Copyright 2021, NeuroPoly.<br/>
+  </p>
+</footer>
 </main>
 
 

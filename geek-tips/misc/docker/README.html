@@ -34,7 +34,7 @@
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <link rel="shortcut icon" href="../../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -829,7 +829,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Page Contents
@@ -917,7 +917,98 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Docker</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Page Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#docker-terminology">
+   Docker Terminology
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-docker">
+   Using Docker
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#search-for-remote-image">
+     Search for remote image
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install-run-linux-distribution-a-id-install-run-linux-distribution-a">
+     Install &amp; Run Linux distribution
+     <a id="install_run_linux_distribution">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-local-docker-images-a-id-list-local-docker-images-a">
+     List local Docker images
+     <a id="list_local_docker_images">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#run-docker-image-a-id-run-docker-image-a">
+     Run Docker image
+     <a id="run_docker_image">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remove-docker-image-or-containers-force-deletion-a-id-remove-docker-image-or-containers-force-deletion-a">
+     Remove Docker image or containers (force deletion)
+     <a id="remove_docker_image_or_containers_force_deletion">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#save-a-docker-image-a-id-save-a-docker-image-a">
+     Save a Docker image
+     <a id="save_a_docker_image">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-docker-container-from-dockerfile-a-id-build-docker-container-from-dockerfile-a">
+     Build Docker container from Dockerfile
+     <a id="build_docker_container_from_dockerfile">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#run-with-display-redirection-a-id-run-with-display-redirection-a">
+     Run with DISPLAY redirection
+     <a id="run_with_display_redirection">
+     </a>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#copy-file-into-container-a-id-copy-file-into-container-a">
+     Copy file into container
+     <a id="copy_file_into_container">
+     </a>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="docker">
@@ -994,7 +1085,7 @@ docker commit &lt;container_id&gt; your_name/ubuntu:16.04
 <li><p>Create a Dockerfile by running `touch Dockerfile`</p></li>
 <li><p>Inside the Dockerfile write the following (items below are just given as an example):</p></li>
 </ol>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">FROM centos:latest</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">FROM centos:latest</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>RUN yum -y update \
@@ -1052,8 +1143,8 @@ docker cp &lt;file&gt; &lt;CONTAINER ID&gt;:&lt;PATH_DEST&gt;/&lt;file&gt;
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="../bitbucket.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1070,19 +1161,17 @@ docker cp &lt;file&gt; &lt;CONTAINER ID&gt;:&lt;PATH_DEST&gt;/&lt;file&gt;
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By NeuroPoly<br/>
-        
-            &copy; Copyright 2021, NeuroPoly.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By NeuroPoly<br/>
+    
+        &copy; Copyright 2021, NeuroPoly.<br/>
+  </p>
+</footer>
 </main>
 
 
