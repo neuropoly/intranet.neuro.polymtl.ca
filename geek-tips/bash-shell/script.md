@@ -171,6 +171,12 @@ alternative:
 ### IF - OR
 
 ```bash
+if [[ "$s1" == "$s2" ]]; then
+  do something...
+fi
+```
+
+```bash
 if [ ! -z "$var" ] || [ -e "$var" ]; then
   do something ...
 fi
