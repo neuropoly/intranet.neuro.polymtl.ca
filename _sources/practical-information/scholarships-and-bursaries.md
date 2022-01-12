@@ -26,6 +26,7 @@ For students in neurosciences:
 * [Consulat France/Quebec \(pour co-tutelles uniquement\)](http://www.consulfrance-quebec.org/Frontenac-aide-a-la-mobilite-pour)
 * [Vanier \(HIGHLY COMPETITIVE!\)](http://vanier.gc.ca/eng/scholarship_details-renseignements_generaux.aspx)
 * [FRQNT \* \[\[http://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/BellandPostgrad-BelletSuperieures\_eng.asp\|NSERC - Alexander Bell \(for canadians\)](http://www.frqnt.gouv.qc.ca/en/bourses-et-subventions/consulter-les-programmes-remplir-une-demande?program=1&group=1&submit=Search)
+* Jeton BSFD from EE department at Polytechinque (ask a faculty)
 * [Fondation Polytechnique \(mostly for canadians](http://www.polymtl.ca/aidefinanciere/chrono/internes-sup.php)
 * [Scholarship for anglophone student: Bourse de la Fondation Richard J. Schmeelk \(For canadians + anglophones only\)](http://schmeelkca.globat.com/wp-content/uploads/2013/06/Schmeelk_applicationform_EN.pdf)
 * [MITACS accelerate](http://www.mitacs.ca/accelerate/apply-now/mitacs-accelerate-phd-fellowships)
