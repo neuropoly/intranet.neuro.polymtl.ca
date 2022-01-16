@@ -48,6 +48,28 @@ rsync -azP <FOLDER_SOURCE>/ <FOLDER_DEST>  # will copy the content of FOLDER_SOU
 scp username@hostname:</PATH_TO_FILE>
 ```
 
+### Finding
+
+```bash
+find . -name "dti*"
+```
+
+To be case-insensitive, use:
+```bash
+find . -iname "dti*"
+```
+
+To only look for folders/directories:
+```bash
+find . -type d -iname "dti*"
+```
+
+To only look for files:
+```bash
+find . -type f -iname "dti*.*"
+```
+
+
 ### Deleting
 
 #### **Delete non-empty folder**
