@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
@@ -34,7 +34,7 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -56,7 +56,12 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
@@ -791,22 +796,22 @@
 
 
           
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
     <div class="topbar container-xl fixed-top">
     <div class="topbar-contents row">
         <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
         <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
             
             <!-- Source interaction buttons -->
 
@@ -871,6 +876,11 @@
       </a>
      </li>
     </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finding">
+     Finding
+    </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#deleting">
@@ -1148,6 +1158,11 @@
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#finding">
+     Finding
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#deleting">
      Deleting
     </a>
@@ -1420,6 +1435,24 @@ rsync -azP &lt;FOLDER_SOURCE&gt;/ &lt;FOLDER_DEST&gt;  <span class="c1"># will c
 </div>
 </div>
 </div>
+<div class="section" id="finding">
+<h3>Finding<a class="headerlink" href="#finding" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -name <span class="s2">&quot;dti*&quot;</span>
+</pre></div>
+</div>
+<p>To be case-insensitive, use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -iname <span class="s2">&quot;dti*&quot;</span>
+</pre></div>
+</div>
+<p>To only look for folders/directories:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -type d -iname <span class="s2">&quot;dti*&quot;</span>
+</pre></div>
+</div>
+<p>To only look for files:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -type f -iname <span class="s2">&quot;dti*.*&quot;</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="deleting">
 <h3>Deleting<a class="headerlink" href="#deleting" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="delete-non-empty-folder">
@@ -1579,15 +1612,15 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 <h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">¶</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="c4a6e881-354c-4420-bfc8-8c2f80889c60" name="175b16a4-257e-4448-b710-887c9748dd77" type="radio">
-</input><label class="tabbed-label" for="c4a6e881-354c-4420-bfc8-8c2f80889c60">
+<input checked="checked" id="9ed0d769-80cb-4fe6-8138-ff2a267adecb" name="613ac0cb-f54e-4190-80ad-2367e82ed4cc" type="radio">
+</input><label class="tabbed-label" for="9ed0d769-80cb-4fe6-8138-ff2a267adecb">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
 </pre></div>
 </div>
 </div>
-<input id="723228c8-43db-409b-8887-7aa7ff9158e5" name="175b16a4-257e-4448-b710-887c9748dd77" type="radio">
-</input><label class="tabbed-label" for="723228c8-43db-409b-8887-7aa7ff9158e5">
+<input id="9bafabe9-7eff-4e7a-b8d3-071fdfe59255" name="613ac0cb-f54e-4190-80ad-2367e82ed4cc" type="radio">
+</input><label class="tabbed-label" for="9bafabe9-7eff-4e7a-b8d3-071fdfe59255">
 Mac</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
 find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5

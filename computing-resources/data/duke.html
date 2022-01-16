@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
@@ -34,7 +34,7 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -56,7 +56,12 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
@@ -791,22 +796,22 @@
 
 
           
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
     <div class="topbar container-xl fixed-top">
     <div class="topbar-contents row">
         <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
         <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
             
             <!-- Source interaction buttons -->
 
@@ -930,8 +935,8 @@ drwxr-xr-x 2 u108545 domain users  4096 Jun  8 16:44 temp
 <h2>Mount with GUI<a class="headerlink" href="#mount-with-gui" title="Permalink to this headline">¶</a></h2>
 <p>When working on campus or <span class="xref myst">over the VPN</span>, you can connect your computer to <code class="docutils literal notranslate"><span class="pre">duke</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="8dd4b267-4ff8-4007-9092-be74cf980ed7" name="86f84bd2-092a-491b-841c-2c3956594ee3" type="radio">
-</input><label class="tabbed-label" for="8dd4b267-4ff8-4007-9092-be74cf980ed7">
+<input checked="checked" id="11544c38-3f96-4563-9637-100a42e4d8a1" name="6d911e66-6f75-4657-874e-3fbfaec961cd" type="radio">
+</input><label class="tabbed-label" for="11544c38-3f96-4563-9637-100a42e4d8a1">
 macOS</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Finder</p></li>
@@ -939,8 +944,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p><code class="docutils literal notranslate"><span class="pre">afp://duke.neuro.polymtl.ca/</span></code></p></li>
 </ol>
 </div>
-<input id="8fdd0d8b-4d14-4e91-946f-3e501c056bd0" name="86f84bd2-092a-491b-841c-2c3956594ee3" type="radio">
-</input><label class="tabbed-label" for="8fdd0d8b-4d14-4e91-946f-3e501c056bd0">
+<input id="3e885557-e154-4e14-83af-6fb254e534d3" name="6d911e66-6f75-4657-874e-3fbfaec961cd" type="radio">
+</input><label class="tabbed-label" for="3e885557-e154-4e14-83af-6fb254e534d3">
 Linux</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open File Browser</p></li>
@@ -948,8 +953,8 @@ Linux</label><div class="tabbed-content docutils">
 <li><p><code class="docutils literal notranslate"><span class="pre">smb://duke.neuro.polymtl.ca/</span></code></p></li>
 </ol>
 </div>
-<input id="ebe24c49-471c-4c19-a694-41c1a4623161" name="86f84bd2-092a-491b-841c-2c3956594ee3" type="radio">
-</input><label class="tabbed-label" for="ebe24c49-471c-4c19-a694-41c1a4623161">
+<input id="98c4e12b-f3bc-4983-8cc2-9fa2a9e86291" name="6d911e66-6f75-4657-874e-3fbfaec961cd" type="radio">
+</input><label class="tabbed-label" for="98c4e12b-f3bc-4983-8cc2-9fa2a9e86291">
 Windows 10</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Windows explorer</p></li>
@@ -975,8 +980,8 @@ Windows 10</label><div class="tabbed-content docutils">
 <h2>Mount with Terminal<a class="headerlink" href="#mount-with-terminal" title="Permalink to this headline">¶</a></h2>
 <p>You can also connect your computer from the CLI, or with a script, which might be more efficient in the long run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="c2e67491-7339-4006-b033-de1e3a8c2e21" name="3b58e979-a2fe-4a27-b06a-5f97d4bd7d68" type="radio">
-</input><label class="tabbed-label" for="c2e67491-7339-4006-b033-de1e3a8c2e21">
+<input checked="checked" id="66035eac-ec63-4e0c-897b-44b8cee66df6" name="3d2b4f58-de5f-4cb4-8f9c-fb4dfbc8a247" type="radio">
+</input><label class="tabbed-label" for="66035eac-ec63-4e0c-897b-44b8cee66df6">
 Mac OSX</label><div class="tabbed-content docutils">
 <p>Create folder for the mount point on a location (your home directory) where you have read and write access:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir &lt;FOLDER_NAME&gt; <span class="c1"># (e.g. &lt;FOLDER_NAME&gt;=sct_testing)</span>
@@ -987,8 +992,8 @@ sudo umount &lt;FOLDER_NAME&gt;/
 </pre></div>
 </div>
 </div>
-<input id="ae710d1a-76c2-41c3-9647-8cd6bc537106" name="3b58e979-a2fe-4a27-b06a-5f97d4bd7d68" type="radio">
-</input><label class="tabbed-label" for="ae710d1a-76c2-41c3-9647-8cd6bc537106">
+<input id="e16e7678-6116-429d-b7ae-df8fa0d8db48" name="3d2b4f58-de5f-4cb4-8f9c-fb4dfbc8a247" type="radio">
+</input><label class="tabbed-label" for="e16e7678-6116-429d-b7ae-df8fa0d8db48">
 Linux</label><div class="tabbed-content docutils">
 <p>To mount:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mount -t cifs //duke.neuro.polymtl.ca/&lt;FOLDER_NAME&gt; /mnt/duke/&lt;FOLDER_NAME&gt; -o <span class="nv">username</span><span class="o">=</span>&lt;GRAMES_USERNAME&gt;,noexec
