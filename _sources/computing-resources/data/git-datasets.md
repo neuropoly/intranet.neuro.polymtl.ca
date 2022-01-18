@@ -156,7 +156,7 @@ git annex copy --to=origin
 git push
 ```
 
-Finally, ask one of that dataset's reviewers to [look at your pull request](#Reviewing-Pull-Requests).
+Finally, ask one of that dataset's reviewers to [look at your pull request](#Reviewing-Pull-Requests) by opening an issue on [neuropoly/data-management](https://github.com/neuropoly/data-management).
 
 
 ### Reviewing Pull Requests
