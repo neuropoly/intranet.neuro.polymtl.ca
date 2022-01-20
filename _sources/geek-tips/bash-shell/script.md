@@ -227,7 +227,7 @@ echo $@ ' -> echo $@'
 echo Number of arguments passed: $# ' -> echo Number of arguments passed: $#'  
 ```
 
-also see: [Bash: parsing arguments with 'getopts'](https://www.neuro.polymtl.ca/tips_and_tricks/bash_parsing_arguments_with_getopts)
+also see: [Bash: parsing arguments with 'getopts'](https://www.shellscript.sh/tips/getopts/)
 
 ## Log Files
 
