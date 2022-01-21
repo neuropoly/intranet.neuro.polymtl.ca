@@ -2,7 +2,7 @@
 
 ## Create Account
 
-Register here: [https://ccdb.computecanada.ca/account\_application](https://ccdb.computecanada.ca/account_application). Members of the NeuroPoly lab can use [Julien Cohen-Adad's sponsor number](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.g1khl9eioopm).
+Register here: [https://ccdb.computecanada.ca/account\_application](https://ccdb.computecanada.ca/account_application). Members of the NeuroPoly lab can use [Julien Cohen-Adad's sponsor number](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.g1khl9eioopm). Please use the following information - Home institution: Polytechnique Montreal ; Department: Electrical Engineering.
 
 Links to Compute Canada:
 
