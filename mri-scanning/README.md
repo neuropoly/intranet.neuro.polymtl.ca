@@ -23,6 +23,7 @@ If you book the MRI, please use the “[Neuropoly - MRI](https://calendar.google
 
 During scanning, please keep a log of your experiment:
 
+* [MRI Acquisition Log 2022](https://docs.google.com/document/d/1TdBOc2zbDAyLAB5ps7Ls6vB4iISlsonbDusjUKxeYUc/edit)
 * [MRI Acquisition Log 2021](https://docs.google.com/document/d/1NXUi0mshi7qaN\_Ge3A0J4dU4HSWhsBFGWA10gcXPphg/edit)
 * [MRI Acquisition Log 2020](https://docs.google.com/document/d/1YqSS7ZC2LcPiDEyRfaXpCNyvHEjOPbB5OpELdMt9S1M/edit)
 * [MRI Acquisition Log 2019](https://docs.google.com/document/d/1g8H2KxZ5NNIPmhCu9VIDr34VgskPOHVJBfOqMX7BHR8/edit)
