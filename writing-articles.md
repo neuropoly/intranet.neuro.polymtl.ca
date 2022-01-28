@@ -168,7 +168,7 @@ https://www.grammarly.com/
 
 For all articles/abstracts, please add the following:
 
-> Funded by the Canada Research Chair in Quantitative Magnetic Resonance Imaging \[950-230815], the Canadian Institute of Health Research \[CIHR FDN-143263], the Canada Foundation for Innovation \[32454, 34824], the Fonds de Recherche du Québec - Santé \[322736], the Natural Sciences and Engineering Research Council of Canada \[RGPIN-2019-07244], the Canada First Research Excellence Fund (IVADO and TransMedTech), the Courtois NeuroMod project and the Quebec BioImaging Network \[5886, 35450], INSPIRED (Spinal Research, UK; Wings for Life, Austria; Craig H. Neilsen Foundation, USA), Mila - Tech Transfer Funding Program.
+> Funded by the Canada Research Chair in Quantitative Magnetic Resonance Imaging \[950-230815], the Canadian Institute of Health Research \[CIHR FDN-143263], the Canada Foundation for Innovation \[32454, 34824], the Fonds de Recherche du Québec - Santé \[322736], the Natural Sciences and Engineering Research Council of Canada \[RGPIN-2019-07244], the Canada First Research Excellence Fund (IVADO and TransMedTech), the Courtois NeuroMod project, the Quebec BioImaging Network \[5886, 35450], INSPIRED (Spinal Research, UK; Wings for Life, Austria; Craig H. Neilsen Foundation, USA), Mila - Tech Transfer Funding Program.
 
 For projects involving SEM, please add:
 
