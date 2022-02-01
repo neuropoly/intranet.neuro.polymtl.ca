@@ -2,6 +2,7 @@
 
 ```{toctree}
 :hidden:
+spinal-cord-injury
 deep-learning
 histology
 untitled
