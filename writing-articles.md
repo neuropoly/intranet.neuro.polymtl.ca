@@ -87,7 +87,7 @@ manuscripts/
                |- responses_to_reviews --> copy/paste reviewers comments, above each comment, indicate a sub-section 'RXCY' with X: reviewer numbers and Y: comment number. Then, in the manuscript, add a comment with this tag. Example: R1C4.
 ```
 
-You can start from [this template](https://www.neuro.polymtl.ca/\_media/internal\_resources/template\_paper.docx).
+[Here](https://drive.google.com/drive/folders/1bIZCpsyqr2RBlJLq_WvP0xcmkHxMOeiS?usp=sharing) is an example of manuscript folder/files organization.
 
 
 ## Cover letter
