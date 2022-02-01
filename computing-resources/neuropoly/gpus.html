@@ -710,11 +710,6 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../bibliography/untitled.html">
-     MRI
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../../bibliography/shared-paperpile-folder.html">
      Paperpile Folder
     </a>
@@ -1279,15 +1274,15 @@ tensorboard --logdir PATH_TO_MODEL --port PORTNUMBER
 <span id="id1"></span><h2>SSH tunnelling<a class="headerlink" href="#ssh-tunnelling" title="Permalink to this headline">¶</a></h2>
 <p>If you want to run a Jupyter notebook from a remote server, or monitor a model training using tensorboard, you will need to do an SSH tunnelling to be able to pass the display from the remote cluster to your local station.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="0130bf5d-2b0b-4e54-a5ff-4038f4d3a201" name="bf5aaacb-ec14-4498-a95e-7573c6684d4d" type="radio">
-</input><label class="tabbed-label" for="0130bf5d-2b0b-4e54-a5ff-4038f4d3a201">
+<input checked="checked" id="8de162f8-3684-4695-af63-662494086394" name="a2288113-141f-436e-bde6-b57a57311fc7" type="radio">
+</input><label class="tabbed-label" for="8de162f8-3684-4695-af63-662494086394">
 Secure pipes</label><div class="tabbed-content docutils">
 <p>Install secure pipes and configure it as follows:
 with port_rosenber as the “Port” of the screen session and port_local is a random number (see screenshot below):</p>
 <p><img alt="" src="../../_images/tunnelling_macos.png" /></p>
 </div>
-<input id="444c0fac-340f-4355-a439-fa7b9a2cb9e8" name="bf5aaacb-ec14-4498-a95e-7573c6684d4d" type="radio">
-</input><label class="tabbed-label" for="444c0fac-340f-4355-a439-fa7b9a2cb9e8">
+<input id="c12d0606-753e-40bb-aa4f-de4d303669bb" name="a2288113-141f-436e-bde6-b57a57311fc7" type="radio">
+</input><label class="tabbed-label" for="c12d0606-753e-40bb-aa4f-de4d303669bb">
 Terminal</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh -N -f -L localhost:8080:localhost:PORTNUMBER username@CLUSTER.neuro.polymtl.ca
 </pre></div>
