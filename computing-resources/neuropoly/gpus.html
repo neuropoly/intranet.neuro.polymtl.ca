@@ -695,6 +695,11 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/spinal-cord-injury.html">
+     Pathophysiology
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../bibliography/deep-learning.html">
      Deep Learning
     </a>
@@ -1274,15 +1279,15 @@ tensorboard --logdir PATH_TO_MODEL --port PORTNUMBER
 <span id="id1"></span><h2>SSH tunnelling<a class="headerlink" href="#ssh-tunnelling" title="Permalink to this headline">¶</a></h2>
 <p>If you want to run a Jupyter notebook from a remote server, or monitor a model training using tensorboard, you will need to do an SSH tunnelling to be able to pass the display from the remote cluster to your local station.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="db566825-4d05-483c-aedb-b8767e33fd41" name="578cd2df-9e84-4be3-8fc2-c2f78e9aed68" type="radio">
-</input><label class="tabbed-label" for="db566825-4d05-483c-aedb-b8767e33fd41">
+<input checked="checked" id="0130bf5d-2b0b-4e54-a5ff-4038f4d3a201" name="bf5aaacb-ec14-4498-a95e-7573c6684d4d" type="radio">
+</input><label class="tabbed-label" for="0130bf5d-2b0b-4e54-a5ff-4038f4d3a201">
 Secure pipes</label><div class="tabbed-content docutils">
 <p>Install secure pipes and configure it as follows:
 with port_rosenber as the “Port” of the screen session and port_local is a random number (see screenshot below):</p>
 <p><img alt="" src="../../_images/tunnelling_macos.png" /></p>
 </div>
-<input id="c67ee175-be06-4584-946b-316821eb812d" name="578cd2df-9e84-4be3-8fc2-c2f78e9aed68" type="radio">
-</input><label class="tabbed-label" for="c67ee175-be06-4584-946b-316821eb812d">
+<input id="444c0fac-340f-4355-a439-fa7b9a2cb9e8" name="bf5aaacb-ec14-4498-a95e-7573c6684d4d" type="radio">
+</input><label class="tabbed-label" for="444c0fac-340f-4355-a439-fa7b9a2cb9e8">
 Terminal</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh -N -f -L localhost:8080:localhost:PORTNUMBER username@CLUSTER.neuro.polymtl.ca
 </pre></div>
