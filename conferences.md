@@ -69,6 +69,11 @@ NeuroPoly's conference folder is on [google drive](https://drive.google.com/driv
 
 * [2016 May 29-31, Ottawa, Canada](http://sites.ieee.org/embs-isc-2016/)
 
+## List of Online Conferences From Various Universities<a id="online_conferences"></a>
+* [MILA Tea Talks](https://sites.google.com/lisa.iro.umontreal.ca/tea-talks/home)
+* [McGill Biomedical Engineering](https://www.mcgill.ca/bme/seminars)
+* [UdeM - Groupe De Recherche Sur La Signalisation Neurale Et La Circuiterie (SNC)](https://www.grsnc.org/seminairesetudiants)
+
 ## Abstracts <a id="abstracts"></a>
 
 ### Create Draft <a id="create_your_draft"></a>
