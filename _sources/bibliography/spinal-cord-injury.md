@@ -1,3 +1,9 @@
+---
+description:
+  Bibliography on Spinal cord injury.
+---
+
+# Spinal Cord Injury
 
 ## Pathophysiology
 
