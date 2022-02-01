@@ -700,6 +700,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../bibliography/mri.html">
+     MRI
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../bibliography/deep-learning.html">
      Deep Learning
     </a>
@@ -1274,15 +1279,15 @@ tensorboard --logdir PATH_TO_MODEL --port PORTNUMBER
 <span id="id1"></span><h2>SSH tunnelling<a class="headerlink" href="#ssh-tunnelling" title="Permalink to this headline">¶</a></h2>
 <p>If you want to run a Jupyter notebook from a remote server, or monitor a model training using tensorboard, you will need to do an SSH tunnelling to be able to pass the display from the remote cluster to your local station.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="8de162f8-3684-4695-af63-662494086394" name="a2288113-141f-436e-bde6-b57a57311fc7" type="radio">
-</input><label class="tabbed-label" for="8de162f8-3684-4695-af63-662494086394">
+<input checked="checked" id="aec7fe8f-f127-49ef-9640-9f063f7835f3" name="b6297e31-ec9f-4965-951c-77bb153535c2" type="radio">
+</input><label class="tabbed-label" for="aec7fe8f-f127-49ef-9640-9f063f7835f3">
 Secure pipes</label><div class="tabbed-content docutils">
 <p>Install secure pipes and configure it as follows:
 with port_rosenber as the “Port” of the screen session and port_local is a random number (see screenshot below):</p>
 <p><img alt="" src="../../_images/tunnelling_macos.png" /></p>
 </div>
-<input id="c12d0606-753e-40bb-aa4f-de4d303669bb" name="a2288113-141f-436e-bde6-b57a57311fc7" type="radio">
-</input><label class="tabbed-label" for="c12d0606-753e-40bb-aa4f-de4d303669bb">
+<input id="101f770c-a044-4e65-a0d4-b085f442b1f2" name="b6297e31-ec9f-4965-951c-77bb153535c2" type="radio">
+</input><label class="tabbed-label" for="101f770c-a044-4e65-a0d4-b085f442b1f2">
 Terminal</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh -N -f -L localhost:8080:localhost:PORTNUMBER username@CLUSTER.neuro.polymtl.ca
 </pre></div>
