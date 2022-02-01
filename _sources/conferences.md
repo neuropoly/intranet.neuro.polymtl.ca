@@ -71,7 +71,7 @@ NeuroPoly's conference folder is on [google drive](https://drive.google.com/driv
 
 ## List of Online Conferences From Various Universities<a id="online_conferences"></a>
 * [MILA Tea Talks](https://sites.google.com/lisa.iro.umontreal.ca/tea-talks/home)
-* [McGill Biomedical Engineering](https://www.mcgill.ca/bme/seminars)
+* [McGill Biomedical Engineering Seminars](https://www.mcgill.ca/bme/seminars)
 * [UdeM - Groupe De Recherche Sur La Signalisation Neurale Et La Circuiterie (SNC)](https://www.grsnc.org/seminairesetudiants)
 
 ## Abstracts <a id="abstracts"></a>
