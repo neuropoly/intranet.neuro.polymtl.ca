@@ -1,4 +1,4 @@
-# Dropbox/Google Drive
+# Google Drive
 
 This is the organization of each student's folder, hosted on Google Drive. Please organize folders as follows:
 
