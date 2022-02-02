@@ -1,6 +1,6 @@
 # Dropbox/Google Drive
 
-This is the organization of each student's folder with Nikola and/or Julien. You can use Dropbox or Google Drive, but not both (to avoid duplication). Please let us know which one you want to use, then please organize folders as follows:
+This is the organization of each student's folder, hosted on Google Drive. Please organize folders as follows:
 
 | Folder        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
