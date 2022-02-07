@@ -948,6 +948,11 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-users">
+     List users
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-users">
      Add users
     </a>
@@ -1105,6 +1110,11 @@
    Admin Guide
   </a>
   <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-users">
+     List users
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-users">
      Add users
@@ -1429,6 +1439,12 @@ You can <a class="reference internal" href="#id2"><span class="std std-doc">ask 
 It is compatible with <a class="reference external" href="https://www.datalad.org/"><code class="docutils literal notranslate"><span class="pre">datalad</span></code></a> but to reduce the fragility we only support the basics.</p>
 <p>Datasets are stored as git repositories on the server, with the bulk of their data <em>also</em> stored on the server in each repo’s “annex” folder. Using <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> enables data on-demand – in our default configuration, only the data needed for the active branch is actually downloaded by a user, and it is also possible for the user to choose specific folders to focus on. Datasets are <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> <a class="reference external" href="https://git-annex.branchable.com/walkthrough/#index11h2">ssh remotes</a>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">gitolite</span></code> manages users and their permissions. Each user has a namespace to themselves where they can make repos named <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca:$user/$repo.git</span></code> (like Github), and there is also a shared space <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca:datasets/*</span></code> intended for lab-wide datasets.</p>
+<div class="section" id="list-users">
+<h3>List users<a class="headerlink" href="#list-users" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span> <span class="n">keys</span> <span class="nb">list</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="add-users">
 <h3>Add users<a class="headerlink" href="#add-users" title="Permalink to this headline">¶</a></h3>
 <p>To grant access to a lab member, <a class="reference internal" href="#add-extra-devices"><span class="std std-doc">as above</span></a>, ask the lab member to generate an ssh key using <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code> and have them send you the <em>public key</em>. Save it to a file <code class="docutils literal notranslate"><span class="pre">id_rsa.zamboni.pub</span></code> and add them with</p>
