@@ -79,12 +79,11 @@ manuscripts/
                |- figures.key (or pptx) --> all your figures, one per slide
            |- r0/
                |- cover_letter_r0.docx --> this is a microsoft Word
-               |- manuscript_r0 --> google doc document, other co-authors can edit with 'suggestion' mode
-               |- manuscript_r0_v1_JCA.docx
-               |- reviewer_suggestions
+               |- awesome_study_manuscript_r0 --> google doc document, other co-authors can edit with 'suggestion' mode
+               |- awesome_study_reviewer_suggestions
            |- r1/
-               |- manuscript_r1 --> copy manuscript_r0 into this 'r1' folder and 'lock' manuscript_r0 for edition. Now, everyone should work on this version r1.
-               |- responses_to_reviews --> copy/paste reviewers comments, above each comment, indicate a sub-section 'RXCY' with X: reviewer numbers and Y: comment number. Then, in the manuscript, add a comment with this tag. Example: R1C4.
+               |- awesome_study_manuscript_r1 --> copy awesome_study_manuscript_r0 into this 'r1' folder and 'lock' manuscript_r0 for edition. Now, everyone should work on this version r1.
+               |- awesome_study_responses_to_reviews --> copy/paste reviewers comments, above each comment, indicate a sub-section 'RXCY' with X: reviewer numbers and Y: comment number. Then, in the manuscript, add a comment with this tag. Example: R1C4.
 ```
 
 [Here](https://drive.google.com/drive/folders/1bIZCpsyqr2RBlJLq_WvP0xcmkHxMOeiS?usp=sharing) is an example of manuscript folder/files organization.
