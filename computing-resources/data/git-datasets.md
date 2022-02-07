@@ -346,6 +346,12 @@ Datasets are stored as git repositories on the server, with the bulk of their da
 
 `gitolite` manages users and their permissions. Each user has a namespace to themselves where they can make repos named `data.neuro.polymtl.ca:$user/$repo.git` (like Github), and there is also a shared space `data.neuro.polymtl.ca:datasets/*` intended for lab-wide datasets.
 
+### List users
+
+```
+ssh git@data keys list
+```
+
 ### Add users
 
 To grant access to a lab member, [as above](#add-extra-devices), ask the lab member to generate an ssh key using `ssh-keygen` and have them send you the *public key*. Save it to a file `id_rsa.zamboni.pub` and add them with
