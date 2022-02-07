@@ -1,13 +1,19 @@
 # <span>🎓</span> University Courses
 
-## Requirements for Polytechnique Montréal
+## Requirements for Polytechnique Montreal
 
-* Your study plan must contain at least 8 GBM credits at Polytechnique Montréal
+* Your study plan must contain at least 8 GBM credits at Polytechnique Montreal
 * For Master's, you should not have no more than 6 credits from undergrad courses
-* For PhD: you cannot get credited from undergrad courses
+* For PhD: you can get credited from MSc courses, but not from undergrad courses
 * For exemption of additional fees as foreign student for master's, you need at least 6 credits completed, of grad courses at Polytechnique Montréal
 * JURY:
   * MSC: President (from Poly), Member (could be external).
+
+```{important}
+There exist an agreement between universities across Quebec, called [CREPUQ](https://www.bci-qc.ca/en/aehe/agreement/), that allow students to transfer academic credits between institutions. So for example, you could attend a course at UdeM or McGill and receive the credits at Polytechnique Montreal as part of your gradutate program.
+```
+
+
 
 ## Medical imaging
 
