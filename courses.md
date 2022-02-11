@@ -1,19 +1,22 @@
-# <span>🎓</span> University Courses
+# `🎓` University Courses
 
 ## Requirements for Polytechnique Montreal
 
-* Your study plan must contain at least 8 GBM credits at Polytechnique Montreal
-* For Master's, you should not have no more than 6 credits from undergrad courses
-* For PhD: you can get credited from MSc courses, but not from undergrad courses
+### MSc program
+
+* Details of the program on the [Polymtl website](https://www.polymtl.ca/programmes/programmes/maitrise-professionnelle-ou-recherche-en-genie-biomedical-programme-conjoint).
+* The rules say that "At most 6 credits can be undergraduate courses and at least 8 credits must be courses in the field of biomedical engineering or other and approved by the CPÉS", but this is a relaxed rules. Courses in computer science, deep learning, etc. are accepted. 
 * For exemption of additional fees as foreign student for master's, you need at least 6 credits completed, of grad courses at Polytechnique Montréal
-* JURY:
-  * MSC: President (from Poly), Member (could be external).
+* Jury: President (from Poly), Member (could be external).
+
+### PhD program
+
+* Details of the program on the [Polymtl website](https://www.polymtl.ca/programmes/programmes/doctorat-en-genie-biomedical-programme-conjoint#).
+* Candidates who already hold a graduate degree may obtain an exemption from all or part of their graduate course credits according to the procedures specified in article 73.1.2 of the specific regulations for graduate studies.
 
 ```{important}
 There exist an agreement between universities across Quebec, called [CREPUQ](https://www.bci-qc.ca/en/aehe/agreement/), that allow students to transfer academic credits between institutions. So for example, you could attend a course at UdeM or McGill and receive the credits at Polytechnique Montreal as part of your gradutate program.
 ```
-
-
 
 ## Medical imaging
 
