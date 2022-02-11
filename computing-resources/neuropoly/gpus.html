@@ -675,9 +675,11 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../courses.html">
-   <span>
-    🎓
-   </span>
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     🎓
+    </span>
+   </code>
    University Courses
   </a>
  </li>
@@ -1037,7 +1039,7 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="gpu-clusters">
+  <div class="section" id="gpu-clusters">
 <h1>GPU Clusters<a class="headerlink" href="#gpu-clusters" title="Permalink to this headline">¶</a></h1>
 <p>This document is being ported from <a class="reference external" href="https://docs.google.com/document/d/1X--A2kql4GypfI6fNFIOYA_b6uQdeu2_Kue7n8KkTOU/edit#">here</a>.</p>
 <p>Neuropoly has several GPUs available for training deep learning models.</p>
@@ -1279,15 +1281,15 @@ tensorboard --logdir PATH_TO_MODEL --port PORTNUMBER
 <span id="id1"></span><h2>SSH tunnelling<a class="headerlink" href="#ssh-tunnelling" title="Permalink to this headline">¶</a></h2>
 <p>If you want to run a Jupyter notebook from a remote server, or monitor a model training using tensorboard, you will need to do an SSH tunnelling to be able to pass the display from the remote cluster to your local station.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="c7f88525-c4ea-4312-bba7-f6235f1a4c2a" name="c725d6fe-2abb-4de7-82a6-9bdadb8db0bf" type="radio">
-</input><label class="tabbed-label" for="c7f88525-c4ea-4312-bba7-f6235f1a4c2a">
+<input checked="checked" id="486235af-9fd6-4cda-b315-3c49221d82e5" name="eb9d1438-d91b-46d7-85b1-70e5286b8941" type="radio">
+</input><label class="tabbed-label" for="486235af-9fd6-4cda-b315-3c49221d82e5">
 Secure pipes</label><div class="tabbed-content docutils">
 <p>Install secure pipes and configure it as follows:
 with port_rosenber as the “Port” of the screen session and port_local is a random number (see screenshot below):</p>
 <p><img alt="" src="../../_images/tunnelling_macos.png" /></p>
 </div>
-<input id="de6e4e28-515e-4ef2-9893-09746aee9c32" name="c725d6fe-2abb-4de7-82a6-9bdadb8db0bf" type="radio">
-</input><label class="tabbed-label" for="de6e4e28-515e-4ef2-9893-09746aee9c32">
+<input id="0573acd8-a597-4f6c-9317-fda2b7211cac" name="eb9d1438-d91b-46d7-85b1-70e5286b8941" type="radio">
+</input><label class="tabbed-label" for="0573acd8-a597-4f6c-9317-fda2b7211cac">
 Terminal</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh -N -f -L localhost:8080:localhost:PORTNUMBER username@CLUSTER.neuro.polymtl.ca
 </pre></div>

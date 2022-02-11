@@ -675,9 +675,11 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../courses.html">
-   <span>
-    🎓
-   </span>
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     🎓
+    </span>
+   </code>
    University Courses
   </a>
  </li>
@@ -1395,7 +1397,7 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="bash-shell">
+  <div class="section" id="bash-shell">
 <h1>Bash/Shell<a class="headerlink" href="#bash-shell" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
@@ -1617,15 +1619,15 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 <h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">¶</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="3b300a9d-162b-4a1d-b9c1-97dc415d6523" name="8b995366-1204-4e35-81fb-6c878b57eae5" type="radio">
-</input><label class="tabbed-label" for="3b300a9d-162b-4a1d-b9c1-97dc415d6523">
+<input checked="checked" id="7e2730e3-32a1-4cd1-a477-deacbacc7e68" name="dfc56013-be5c-48f8-b24a-37e3d934b54c" type="radio">
+</input><label class="tabbed-label" for="7e2730e3-32a1-4cd1-a477-deacbacc7e68">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
 </pre></div>
 </div>
 </div>
-<input id="b6a32a0c-c328-4045-bd2d-183536e7568d" name="8b995366-1204-4e35-81fb-6c878b57eae5" type="radio">
-</input><label class="tabbed-label" for="b6a32a0c-c328-4045-bd2d-183536e7568d">
+<input id="93692a84-35ba-41dd-98c0-c7818db2bbbe" name="dfc56013-be5c-48f8-b24a-37e3d934b54c" type="radio">
+</input><label class="tabbed-label" for="93692a84-35ba-41dd-98c0-c7818db2bbbe">
 Mac</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
 find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5
