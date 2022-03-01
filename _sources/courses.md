@@ -25,7 +25,11 @@ Please refer to the [Règlements généraux des études supérieures ](https://w
 There exist an agreement between universities across Quebec, called [CREPUQ](https://www.bci-qc.ca/en/aehe/agreement/), that allow students to transfer academic credits between institutions. So for example, you could attend a course at UdeM or McGill and receive the credits at Polytechnique Montreal as part of your gradutate program.
 ```
 
-**Jury**
+### Writing your thesis
+
+See [this link](https://etudiant.polymtl.ca/etudes/en/graduate-studies/thesis-and-dissertation).
+
+### Jury
 
 Please refer to the [Règlements généraux des études supérieures ](https://www.polymtl.ca/renseignements-generaux/documents-officiels/5-affaires-academiques-et-vie-etudiante) (76.4 COMPOSITION ET NOMINATION DU JURY).
 ````
