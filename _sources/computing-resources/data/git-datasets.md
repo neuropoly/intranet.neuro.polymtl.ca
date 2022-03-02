@@ -153,6 +153,7 @@ Once you have access you can:
 
 ```
 git annex copy --to=origin
+git annex sync --no-content --only-annex
 git push
 ```
 
