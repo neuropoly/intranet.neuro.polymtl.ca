@@ -2,7 +2,7 @@
 
 [Netherlands eScience Center Guide](https://guide.esciencecenter.nl/)
 
-List of useful sites for miscellaneous tasks.
+## websites
 
 | Purpose | URL |
 | :--- | :--- |
@@ -15,13 +15,14 @@ List of useful sites for miscellaneous tasks.
 | Art with ASCII | [https://patorjk.com/software/taag](https://patorjk.com/software/taag) \(good ones: Doom, Slant, ANSI Regular, Larry 3D\) |
 | Create a favicon | [https://www.favicon-generator.org/](https://www.favicon-generator.org/) |
 
-List of cool Unix software
+## Software
 
 | Purpose | URL | Notes |
 | :--- | :--- | :--- |
 | Record terminal \(for demo\) | [https://showterm.io/](https://showterm.io/) | Currently [buggy](https://github.com/ConradIrwin/showterm/issues/48); use [this patched version](https://gist.github.com/kousu/855c164979af078f623fd44f0e1b5350) in the meantime. |
+| Gantt diagram | https://www.ganttproject.biz/ |
 
-Services
+## Services
 
 | Purpose | URL |
 | :--- | :--- |
