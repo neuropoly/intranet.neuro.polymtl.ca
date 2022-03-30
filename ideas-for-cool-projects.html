@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>💡 Ideas for Cool Projects &#8212; NeuroPoly Lab Manual</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,23 +20,20 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="_static/theme.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <link rel="shortcut icon" href="_static/logo.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -47,7 +46,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -56,14 +69,10 @@
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -790,64 +799,88 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
-<div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">Toggle navigation</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
             </div>
             
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-
-
-<!-- only one Github button activated, so collapse it into the main button, saving a click for users -->
-        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/ideas-for-cool-projects.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fab fa-github"></i></button></a>
-
-
-</div>
-
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-            <!-- Launch buttons -->
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Page Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right"><a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/ideas-for-cool-projects.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Page Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#good-internship-projects">
    Good Internship Projects
@@ -900,12 +933,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1><span>💡</span> Ideas for Cool Projects</h1>
@@ -974,18 +1006,19 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="span-span-ideas-for-cool-projects">
-<h1><span>💡</span> Ideas for Cool Projects<a class="headerlink" href="#span-span-ideas-for-cool-projects" title="Permalink to this headline">¶</a></h1>
+  <section id="span-span-ideas-for-cool-projects">
+<h1><span>💡</span> Ideas for Cool Projects<a class="headerlink" href="#span-span-ideas-for-cool-projects" title="Permalink to this headline">#</a></h1>
 <ul class="simple">
 <li><p>Please indicate the author of the idea in brackets (to get more info if necessary)</p></li>
 <li><p><em>Italic</em>: idea being investigated / work in progress</p></li>
 <li><p><strong>Bold</strong>: Top priority</p></li>
 </ul>
-<div class="section" id="good-internship-projects">
-<h2>Good Internship Projects<a class="headerlink" href="#good-internship-projects" title="Permalink to this headline">¶</a></h2>
+<section id="good-internship-projects">
+<h2>Good Internship Projects<a class="headerlink" href="#good-internship-projects" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://drive.google.com/drive/folders/1_LuA1rKbHq6sgacGRvw3_Er7sCWND0wt">Projects GBM3100</a></p></li>
 <li><p>Look at ethnical background for normalizing spinal cord CSA using spine-generic database</p></li>
@@ -995,9 +1028,9 @@
 <li><p><a class="reference external" href="https://github.com/shimming-toolbox/shimming-toolbox/labels/good%20internship%20project">Shimming Toolbox projects</a></p></li>
 <li><p>qMRLab</p></li>
 </ul>
-</div>
-<div class="section" id="deep-learning">
-<h2>Deep Learning<a class="headerlink" href="#deep-learning" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="deep-learning">
+<h2>Deep Learning<a class="headerlink" href="#deep-learning" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://arxiv.org/pdf/1902.09383v1.pdf">Data augmentation for one-shot image segmentation</a></p></li>
 <li><p><a class="reference external" href="https://arxiv.org/abs/2003.01995">Data augmentation, contrast agnostic segmentation with synthetic images</a> (Marie-Helene)</p></li>
@@ -1021,9 +1054,9 @@
 <li><p><a class="reference external" href="https://github.com/neuropoly/ml-phase-unwrapping">phase-unwrapping</a> (Olivier, Uzay)</p></li>
 <li><p>Shimming project: real-time prediction of B0 shift based on resp. training period.</p></li>
 </ul>
-</div>
-<div class="section" id="spinal-cord-toolbox">
-<h2>Spinal Cord Toolbox<a class="headerlink" href="#spinal-cord-toolbox" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="spinal-cord-toolbox">
+<h2>Spinal Cord Toolbox<a class="headerlink" href="#spinal-cord-toolbox" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>SoftSeg for computing CSA. Using Paul’s pipeline.</p></li>
 <li><p>Compute realistic model for cord atrophy by estimation a transformation between SC mask and eroded SC mask.</p>
@@ -1057,9 +1090,9 @@
 </li>
 <li><p>Calculate angle between mpMRI slice and cord, and estimate bias caused by partial volume effect (see Allan’s email from July 8th)</p></li>
 </ul>
-</div>
-<div class="section" id="myelin-imaging">
-<h2>Myelin Imaging<a class="headerlink" href="#myelin-imaging" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="myelin-imaging">
+<h2>Myelin Imaging<a class="headerlink" href="#myelin-imaging" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>look into selective inversion recovery myelin mapping (exchange effects), see Smith et al.</p></li>
 <li><p>build a myelin phantom</p>
@@ -1083,18 +1116,18 @@
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="histology">
-<h2>Histology<a class="headerlink" href="#histology" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="histology">
+<h2>Histology<a class="headerlink" href="#histology" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>AxonDeepSeg: <a class="reference external" href="http://neuroinformatics.be/modular-machine-learning-classification-toolbox-imagej-2/">http://neuroinformatics.be/modular-machine-learning-classification-toolbox-imagej-2/</a></p></li>
 <li><p>**Framework for registering MRI and histology using 3d-printed frame: **<a class="reference external" href="https://www.slideshare.net/KlausSchmierer/neuropathological-correlates-imperialcollege4slsh2feb2018"><strong>https://www.slideshare.net/KlausSchmierer/neuropathological-correlates-imperialcollege4slsh2feb2018</strong></a>*</p></li>
 <li><p><strong>CARS imaging of fixed vs. unfixed and see how shrinking affect each sub-region (myelin, axon, etc.)</strong></p></li>
 <li><p>phantom emulsion</p></li>
 </ul>
-</div>
-<div class="section" id="acquisition">
-<h2>Acquisition<a class="headerlink" href="#acquisition" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="acquisition">
+<h2>Acquisition<a class="headerlink" href="#acquisition" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><strong>compensation of cardiac-related cord motion in spinal cord DTI (julien)</strong></p>
 <ul>
@@ -1105,16 +1138,16 @@
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="pulse-sequence-programming">
-<h2>Pulse Sequence Programming<a class="headerlink" href="#pulse-sequence-programming" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="pulse-sequence-programming">
+<h2>Pulse Sequence Programming<a class="headerlink" href="#pulse-sequence-programming" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>qMT on 7T scanner at ICM (6 months)</p></li>
 <li><p>Create a “spinal cord dot engine” on Siemens scanners to automatically segment the spinal cord.</p></li>
 </ul>
-</div>
-<div class="section" id="rf-coil">
-<h2>RF Coil<a class="headerlink" href="#rf-coil" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="rf-coil">
+<h2>RF Coil<a class="headerlink" href="#rf-coil" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>cushion for reducing inhomogeneities</p>
 <ul>
@@ -1143,9 +1176,9 @@
 </li>
 <li><p>Simulation of B1+ with/without dielectric pad to check if there are “hot spots” caused by the pad.</p></li>
 </ul>
-</div>
-<div class="section" id="shimming">
-<h2>Shimming<a class="headerlink" href="#shimming" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="shimming">
+<h2>Shimming<a class="headerlink" href="#shimming" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><strong>Simulate susceptibility variation owing to O2 in lungs for real-time shimming</strong></p>
 <ul>
@@ -1192,22 +1225,24 @@
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="simulators">
-<h2>Simulators<a class="headerlink" href="#simulators" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="simulators">
+<h2>Simulators<a class="headerlink" href="#simulators" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>qMTLab software for simulating and fitting magnetization transfer data (Nikola)</p></li>
 <li><p>dSim software for simulating diffusion sequences in realistic fibre/myelin arrangements (Nikola)</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="conferences.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1223,24 +1258,28 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By NeuroPoly<br/>
+  
+      &copy; Copyright 2021, NeuroPoly.<br/>
+</p>
+        </footer>
+    </div>
     
-      By NeuroPoly<br/>
-    
-        &copy; Copyright 2021, NeuroPoly.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

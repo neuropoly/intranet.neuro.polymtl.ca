@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>🖥 Computers @NeuroPoly &#8212; NeuroPoly Lab Manual</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,23 +20,20 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -47,7 +46,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -56,14 +69,10 @@
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -790,64 +799,88 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
-<div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">Toggle navigation</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
             </div>
             
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-
-
-<!-- only one Github button activated, so collapse it into the main button, saving a click for users -->
-        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/computing-resources/neuropoly/README.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fab fa-github"></i></button></a>
-
-
-</div>
-
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-            <!-- Launch buttons -->
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Page Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right"><a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/computing-resources/neuropoly/README.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Page Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#poly-grames">
    Poly-Grames
@@ -1029,12 +1062,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>🖥 Computers @NeuroPoly</h1>
@@ -1232,17 +1264,18 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="computers-neuropoly">
-<h1><code class="docutils literal notranslate"><span class="pre">🖥</span></code> Computers &#64;NeuroPoly<a class="headerlink" href="#computers-neuropoly" title="Permalink to this headline">¶</a></h1>
+  <section id="computers-neuropoly">
+<h1><code class="docutils literal notranslate"><span class="pre">🖥</span></code> Computers &#64;NeuroPoly<a class="headerlink" href="#computers-neuropoly" title="Permalink to this headline">#</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="poly-grames">
-<h2>Poly-Grames<a class="headerlink" href="#poly-grames" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="poly-grames-network-account">
-<h3>Poly-Grames Network Account<a class="headerlink" href="#poly-grames-network-account" title="Permalink to this headline">¶</a></h3>
+<section id="poly-grames">
+<h2>Poly-Grames<a class="headerlink" href="#poly-grames" title="Permalink to this headline">#</a></h2>
+<section id="poly-grames-network-account">
+<h3>Poly-Grames Network Account<a class="headerlink" href="#poly-grames-network-account" title="Permalink to this headline">#</a></h3>
 <p>A <strong>Poly-Grames</strong> network account is required to have access to various computation resources available in the laboratory.</p>
 <p>In order to request a <strong>Poly-Grames</strong> network account you need to have your Polytechnique ID number.</p>
 <p>You can <a class="reference external" href="https://www.grames.polymtl.ca/facilities/servers-information/create_account/">request a Poly-Grames network account here</a>.<br />
@@ -1252,13 +1285,13 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">getent</span> <span class="n">passwd</span> <span class="o">&lt;</span><span class="n">GRAMES_ACCOUNT</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="home-folder">
-<h3>Home folder<a class="headerlink" href="#home-folder" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="home-folder">
+<h3>Home folder<a class="headerlink" href="#home-folder" title="Permalink to this headline">#</a></h3>
 <p>Every <span class="xref myst">GRAMES</span> account has a school-wide personal home folder. It is backed-up nightly.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="7c64d4f2-b419-4fde-919d-5f30be054d8f" name="964f021b-d4ad-484d-b293-61b18d03c5a3" type="radio">
-</input><label class="tabbed-label" for="7c64d4f2-b419-4fde-919d-5f30be054d8f">
+<input checked="checked" id="ccd6f278-66fd-4faf-a3e7-24cb134376d7" name="1eb26da9-a761-48fb-8ba5-309b268a6f87" type="radio">
+</input><label class="tabbed-label" for="ccd6f278-66fd-4faf-a3e7-24cb134376d7">
 macOS</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Finder</p></li>
@@ -1276,33 +1309,33 @@ macOS</label><div class="tabbed-content docutils">
 </ol>
 </div>
 </div>
-</div>
-<div class="section" id="poly-grames-groups">
-<h3>Poly-Grames Groups<a class="headerlink" href="#poly-grames-groups" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="poly-grames-groups">
+<h3>Poly-Grames Groups<a class="headerlink" href="#poly-grames-groups" title="Permalink to this headline">#</a></h3>
 <p>The list permissions for shared folders on <code class="docutils literal notranslate"><span class="pre">duke</span></code> are available <a class="reference external" href="https://docs.google.com/document/d/1ZJUUBpiZPl0wxFsUPxkkR6vXZgfSAd3YBK5vlIpf_aA/edit">here</a>.</p>
-</div>
-<div class="section" id="connect-to-poly-grames-server">
-<h3>Connect to Poly-Grames Server<a class="headerlink" href="#connect-to-poly-grames-server" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="connect-to-poly-grames-server">
+<h3>Connect to Poly-Grames Server<a class="headerlink" href="#connect-to-poly-grames-server" title="Permalink to this headline">#</a></h3>
 <p>Use Microsoft Remote Desktop Connection on creer51, creer52, creer53.</p>
 <p>Computer : creer51.grames.polymtl.ca</p>
 <p>Username: grames\your_polygrames_username</p>
 <p>Password: your_polygrames_password</p>
-</div>
-</div>
-<div class="section" id="list-of-computers-at-neuropoly">
-<h2>List of Computers at NeuroPoly<a class="headerlink" href="#list-of-computers-at-neuropoly" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="list-of-computers-at-neuropoly">
+<h2>List of Computers at NeuroPoly<a class="headerlink" href="#list-of-computers-at-neuropoly" title="Permalink to this headline">#</a></h2>
 <p>Are you new to NeuroPoly and looking for a desk and a station? Please check the <a class="reference external" href="https://docs.google.com/document/d/11GEh5YvYRnWnERv26TezcyvyPF2W5KF0uoI2U6p7XsM/edit">list of Desktop/Server/Clusters computers and Printers</a> so you can pick one that is free. If you’d like a particular desk and someone else is using a station remotely, please ask the admins to move the station to another location.</p>
 <p>If you prefer to work on your laptop, please let the admins know and we will give you a screen you can connect your laptop to.</p>
-</div>
-<div class="section" id="vpn">
-<h2>VPN<a class="headerlink" href="#vpn" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="vpn">
+<h2>VPN<a class="headerlink" href="#vpn" title="Permalink to this headline">#</a></h2>
 <p>When working remotely from off-campus you need to use the <a class="reference external" href="http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn">VPN</a>.</p>
 <p>To connect to the VPN, you need to have an account with École Polytechnique, specifically with <a class="reference external" href="https://cas5.polymtl.ca/cas/login">CAS</a>. Students should already have this. Consultants and Research Associates will need to have an account created for them. This should have happened during your onboarding.</p>
 <p>You can change your password at <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a>. Also, you can double-check you have VPN access by looking for <code class="docutils literal notranslate"><span class="pre">VPN_*</span> <span class="pre">=</span> <span class="pre">Actif</span></code> here.</p>
 <p>The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing <code class="docutils literal notranslate"><span class="pre">openconnect</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="30f5df2f-69c2-4a32-9395-916a84444a87" name="2654af11-e0c4-47ec-a105-b4e7311e13a5" type="radio">
-</input><label class="tabbed-label" for="30f5df2f-69c2-4a32-9395-916a84444a87">
+<input checked="checked" id="ff349214-15f2-4c96-b61c-c2be51415713" name="7af99f2c-9165-4bd9-b77c-d0b33b66164e" type="radio">
+</input><label class="tabbed-label" for="ff349214-15f2-4c96-b61c-c2be51415713">
 MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1326,8 +1359,8 @@ MacOS</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="364a4869-6d69-4577-a074-07ebeb90bf17" name="2654af11-e0c4-47ec-a105-b4e7311e13a5" type="radio">
-</input><label class="tabbed-label" for="364a4869-6d69-4577-a074-07ebeb90bf17">
+<input id="fae95d1f-6879-4257-9e0f-b294ecb8372b" name="7af99f2c-9165-4bd9-b77c-d0b33b66164e" type="radio">
+</input><label class="tabbed-label" for="fae95d1f-6879-4257-9e0f-b294ecb8372b">
 PC/Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1350,15 +1383,15 @@ PC/Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">vpn</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="connect-to-neuropoly-computers">
-<h2>Connect to NeuroPoly Computers<a class="headerlink" href="#connect-to-neuropoly-computers" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="locally">
-<h3>Locally<a class="headerlink" href="#locally" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="connect-to-neuropoly-computers">
+<h2>Connect to NeuroPoly Computers<a class="headerlink" href="#connect-to-neuropoly-computers" title="Permalink to this headline">#</a></h2>
+<section id="locally">
+<h3>Locally<a class="headerlink" href="#locally" title="Permalink to this headline">#</a></h3>
 <p>To log into a local station at NeuroPoly use your GRAMES account.</p>
-</div>
-<div class="section" id="ssh-command-line">
-<h3>SSH (command line)<a class="headerlink" href="#ssh-command-line" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="ssh-command-line">
+<h3>SSH (command line)<a class="headerlink" href="#ssh-command-line" title="Permalink to this headline">#</a></h3>
 <p>Once the VPN connection established, connect via ssh using the <code class="docutils literal notranslate"><span class="pre">STATION</span></code> you want:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ssh &lt;POLYGRAMES_USERNAME&gt;@&lt;STATION&gt;.neuro.polymtl.ca
 </pre></div>
@@ -1402,22 +1435,22 @@ PC/Linux</label><div class="tabbed-content docutils">
 <span class="n">ControlPersist</span> <span class="mi">3</span><span class="n">s</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="sftp-mount-a-remote-station">
-<h3>SFTP (Mount a remote station)<a class="headerlink" href="#sftp-mount-a-remote-station" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="sftp-mount-a-remote-station">
+<h3>SFTP (Mount a remote station)<a class="headerlink" href="#sftp-mount-a-remote-station" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">ssh</span></code> also allows accessing remote files, via <a class="reference external" href="https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol"><code class="docutils literal notranslate"><span class="pre">sftp</span></code></a>.</p>
 <p>The best way to do this is <code class="docutils literal notranslate"><span class="pre">sshfs</span></code>, which makes them appear as if they were a drive on your computer:</p>
 <p>Install sshfs, if not yet installed:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="6850590f-d42f-447c-90b9-bb8e30a2180c" name="13d43c4a-2911-40a1-a988-324367d97bc6" type="radio">
-</input><label class="tabbed-label" for="6850590f-d42f-447c-90b9-bb8e30a2180c">
+<input checked="checked" id="d2249045-9e0a-45e9-add1-b1db8cf9bbf8" name="5d8c6575-a278-4d03-83f8-888854c41701" type="radio">
+</input><label class="tabbed-label" for="d2249045-9e0a-45e9-add1-b1db8cf9bbf8">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">sshfs</span>
 </pre></div>
 </div>
 </div>
-<input id="a1f0af7b-631a-4f9d-9a18-60c04ecbff85" name="13d43c4a-2911-40a1-a988-324367d97bc6" type="radio">
-</input><label class="tabbed-label" for="a1f0af7b-631a-4f9d-9a18-60c04ecbff85">
+<input id="7154739a-d66d-419e-b77a-9eceb1dd6051" name="5d8c6575-a278-4d03-83f8-888854c41701" type="radio">
+</input><label class="tabbed-label" for="7154739a-d66d-419e-b77a-9eceb1dd6051">
 mac</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="o">--</span><span class="n">cask</span> <span class="n">osxfuse</span>
 <span class="n">brew</span> <span class="n">install</span> <span class="n">sshfs</span>
@@ -1444,12 +1477,12 @@ mac</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 <p>will attach the remote <code class="docutils literal notranslate"><span class="pre">/tmp/</span></code> to the local <code class="docutils literal notranslate"><span class="pre">./cluster_folder</span></code></p>
-</div>
-<div class="section" id="vnc-graphical-interface">
-<h3>VNC (graphical interface)<a class="headerlink" href="#vnc-graphical-interface" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="vnc-graphical-interface">
+<h3>VNC (graphical interface)<a class="headerlink" href="#vnc-graphical-interface" title="Permalink to this headline">#</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="a1d6f3b3-6f06-46db-8567-e242efa0da0f" name="93da0c0e-8e39-42c1-a479-439ca514f71d" type="radio">
-</input><label class="tabbed-label" for="a1d6f3b3-6f06-46db-8567-e242efa0da0f">
+<input checked="checked" id="10a6d47b-0249-41f0-9f75-858256e9c2df" name="3dbc1ca3-bdb9-4bab-af3e-027cfd391bc0" type="radio">
+</input><label class="tabbed-label" for="10a6d47b-0249-41f0-9f75-858256e9c2df">
 macOS</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Finder</p></li>
@@ -1458,8 +1491,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p>You can use your local/network account information or the <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg">shared account credentials</a></p></li>
 </ol>
 </div>
-<input id="8535a00f-56c4-450e-a15f-adf145bbf357" name="93da0c0e-8e39-42c1-a479-439ca514f71d" type="radio">
-</input><label class="tabbed-label" for="8535a00f-56c4-450e-a15f-adf145bbf357">
+<input id="4b39bb9b-c532-4872-8dcd-998abc3868a2" name="3dbc1ca3-bdb9-4bab-af3e-027cfd391bc0" type="radio">
+</input><label class="tabbed-label" for="4b39bb9b-c532-4872-8dcd-998abc3868a2">
 PC/Linux</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Establish a VNC connection using <a class="reference external" href="https://wiki.gnome.org/Apps/Vinagre/">vinaigre</a>.</p></li>
@@ -1468,8 +1501,8 @@ PC/Linux</label><div class="tabbed-content docutils">
 </ol>
 </div>
 </div>
-<div class="section" id="linux-stations">
-<h4>Linux stations<a class="headerlink" href="#linux-stations" title="Permalink to this headline">¶</a></h4>
+<section id="linux-stations">
+<h4>Linux stations<a class="headerlink" href="#linux-stations" title="Permalink to this headline">#</a></h4>
 <p>On Linux targets, a VNC server needs to be started manually before the above instructions will work.</p>
 <ol class="arabic simple">
 <li><p>Create configuration file under <code class="docutils literal notranslate"><span class="pre">~/.vnc/xstartup</span></code> with the following contents:</p></li>
@@ -1513,19 +1546,19 @@ PC/Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> vncserver -kill :&lt;PORT_NUMBER&gt;
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="cpu-gpu-clusters">
-<h2>CPU/GPU Clusters<a class="headerlink" href="#cpu-gpu-clusters" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="cpu-gpu-clusters">
+<h2>CPU/GPU Clusters<a class="headerlink" href="#cpu-gpu-clusters" title="Permalink to this headline">#</a></h2>
 <p>The following CPU and GPU clusters are available for internal use at <strong>NeuroPoly</strong>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>IMPORTANT:</strong> Indicate in the calendar below if you plan to launch intensive calculations on a computer (even if it is on your station, in case you leave for holidays but are still using your station). If you don’t have writing permission on this calendar please contact <a class="reference external" href="mailto:alexandrufoias&#37;&#52;&#48;gmail&#46;com">alexandrufoias<span>&#64;</span>gmail<span>&#46;</span>com</a>.</p>
 </div>
 <p><a class="reference external" href="https://calendar.google.com/calendar/u/0/embed?src=4mg6bgd9pv55thf9486t2miht8&#64;group.calendar.google.com">https://calendar.google.com/calendar/u/0/embed?src=4mg6bgd9pv55thf9486t2miht8&#64;group.calendar.google.com</a></p>
-<div class="section" id="rosenberg">
-<h3>rosenberg<a class="headerlink" href="#rosenberg" title="Permalink to this headline">¶</a></h3>
+<section id="rosenberg">
+<h3>rosenberg<a class="headerlink" href="#rosenberg" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Spec</p></th>
@@ -1557,9 +1590,9 @@ PC/Linux</label><div class="tabbed-content docutils">
 </li>
 </ul>
 <p><em>For system administrators</em>: Please log all the changes on the station by updating the ansible scripts from <a class="reference external" href="https://github.com/neuropoly/computers">https://github.com/neuropoly/computers</a>.</p>
-</div>
-<div class="section" id="bireli">
-<h3>bireli<a class="headerlink" href="#bireli" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="bireli">
+<h3>bireli<a class="headerlink" href="#bireli" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Spec</p></th>
@@ -1586,9 +1619,9 @@ PC/Linux</label><div class="tabbed-content docutils">
 <li><p>Use your <strong>Poly-Grames</strong> account to connect on the machine</p></li>
 <li><p><a class="reference external" href="https://intranet.neuro.polymtl.ca/computing-resources/computing-resources-neuropoly/gpus">How to use GPU Clusters at NeuroPoly</a></p></li>
 </ul>
-</div>
-<div class="section" id="joplin">
-<h3>joplin<a class="headerlink" href="#joplin" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="joplin">
+<h3>joplin<a class="headerlink" href="#joplin" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Spec</p></th>
@@ -1614,9 +1647,9 @@ PC/Linux</label><div class="tabbed-content docutils">
 <p>Connect to the server via ssh using the <strong>Poly-Grames</strong> account.</p>
 <p>To access the sct_testing_management development webpage use the username: sct_test_user; passwd: management.</p>
 <p>For fast I/O, use the NVMe hard drive, which is automatically mounted on your home at: <code class="docutils literal notranslate"><span class="pre">~/data_nvme_XXX</span></code> (XXX being your GRAMES matricule)</p>
-</div>
-<div class="section" id="abbey">
-<h3>abbey<a class="headerlink" href="#abbey" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="abbey">
+<h3>abbey<a class="headerlink" href="#abbey" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Spec</p></th>
@@ -1638,9 +1671,9 @@ PC/Linux</label><div class="tabbed-content docutils">
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="fitzgerald">
-<h3>fitzgerald<a class="headerlink" href="#fitzgerald" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="fitzgerald">
+<h3>fitzgerald<a class="headerlink" href="#fitzgerald" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Spec</p></th>
@@ -1662,9 +1695,9 @@ PC/Linux</label><div class="tabbed-content docutils">
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="tristano">
-<h3>tristano<a class="headerlink" href="#tristano" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="tristano">
+<h3>tristano<a class="headerlink" href="#tristano" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Spec</p></th>
@@ -1687,9 +1720,9 @@ PC/Linux</label><div class="tabbed-content docutils">
 </tbody>
 </table>
 <p>For SCT database interface use: <a class="reference external" href="http://tristano.neuro.polymtl.ca">SCT annotations</a></p>
-</div>
-<div class="section" id="vnmrj">
-<h3>vnmrj<a class="headerlink" href="#vnmrj" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="vnmrj">
+<h3>vnmrj<a class="headerlink" href="#vnmrj" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Spec</p></th>
@@ -1711,9 +1744,9 @@ PC/Linux</label><div class="tabbed-content docutils">
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="idea3t-siemens-pulse-sequence-programming-for-ve11c-prisma">
-<h3>idea3t - Siemens Pulse sequence programming for VE11C (Prisma)<a class="headerlink" href="#idea3t-siemens-pulse-sequence-programming-for-ve11c-prisma" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="idea3t-siemens-pulse-sequence-programming-for-ve11c-prisma">
+<h3>idea3t - Siemens Pulse sequence programming for VE11C (Prisma)<a class="headerlink" href="#idea3t-siemens-pulse-sequence-programming-for-ve11c-prisma" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Spec</p></th>
@@ -1736,17 +1769,17 @@ PC/Linux</label><div class="tabbed-content docutils">
 </tbody>
 </table>
 <p>This computer is to be used for programming pulse sequences within the Siemens IDEA environment for VE11C (Prisma).</p>
-<div class="section" id="troubleshooting">
-<h4>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h4>
+<section id="troubleshooting">
+<h4>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h4>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>Possible error:</strong> “The certificate or associated chain is not valid.”<br />
 <strong>Solution:</strong> Install remote Desktop v10 or higher (v8 does not work)</p>
 </div>
-</div>
-</div>
-<div class="section" id="idea7t-siemens-pulse-sequence-programming-for-ve12u-terra">
-<h3>idea7t - Siemens Pulse sequence programming for VE12U (Terra)<a class="headerlink" href="#idea7t-siemens-pulse-sequence-programming-for-ve12u-terra" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="idea7t-siemens-pulse-sequence-programming-for-ve12u-terra">
+<h3>idea7t - Siemens Pulse sequence programming for VE12U (Terra)<a class="headerlink" href="#idea7t-siemens-pulse-sequence-programming-for-ve12u-terra" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Spec</p></th>
@@ -1769,9 +1802,9 @@ PC/Linux</label><div class="tabbed-content docutils">
 </tbody>
 </table>
 <p>This computer is to be used for programming pulse sequences within the Siemens IDEA environment for VE12U (Terra).</p>
-</div>
-<div class="section" id="peterson-cst-simulations">
-<h3>peterson - CST simulations<a class="headerlink" href="#peterson-cst-simulations" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="peterson-cst-simulations">
+<h3>peterson - CST simulations<a class="headerlink" href="#peterson-cst-simulations" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Spec</p></th>
@@ -1794,26 +1827,26 @@ PC/Linux</label><div class="tabbed-content docutils">
 </tbody>
 </table>
 <p>This computer is to be used for CST simulations. The station is bound to the <strong>Poly-Grames</strong> domain.</p>
-</div>
-</div>
-<div class="section" id="connect-to-the-polytechnique-public-disk">
-<h2>Connect to the Polytechnique public disk<a class="headerlink" href="#connect-to-the-polytechnique-public-disk" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="connect-to-the-polytechnique-public-disk">
+<h2>Connect to the Polytechnique public disk<a class="headerlink" href="#connect-to-the-polytechnique-public-disk" title="Permalink to this headline">#</a></h2>
 <p>Finder –&gt; Go –&gt; Connect to server Server address:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">smb</span><span class="p">:</span><span class="o">//</span><span class="n">genie06</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span><span class="o">/</span><span class="n">public</span>
 </pre></div>
 </div>
 <p>Then enter your ID and password at poly.</p>
-</div>
-<div class="section" id="retrieve-an-old-backup">
-<h2>Retrieve an old backup<a class="headerlink" href="#retrieve-an-old-backup" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="retrieve-an-old-backup">
+<h2>Retrieve an old backup<a class="headerlink" href="#retrieve-an-old-backup" title="Permalink to this headline">#</a></h2>
 <p><strong>duke</strong> (/mri, /projects, /sct_testing) is backed up on <strong>grappelli</strong> every evening at 21:00 EST. In order to retrieve old backup you have to contact Jean-Sébastien Décarie.</p>
-</div>
-<div class="section" id="software-installed">
-<h2>Software Installed<a class="headerlink" href="#software-installed" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="installed-on-each-station-local">
-<h3>Installed on each station (local)<a class="headerlink" href="#installed-on-each-station-local" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="mri">
-<h4>MRI<a class="headerlink" href="#mri" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="software-installed">
+<h2>Software Installed<a class="headerlink" href="#software-installed" title="Permalink to this headline">#</a></h2>
+<section id="installed-on-each-station-local">
+<h3>Installed on each station (local)<a class="headerlink" href="#installed-on-each-station-local" title="Permalink to this headline">#</a></h3>
+<section id="mri">
+<h4>MRI<a class="headerlink" href="#mri" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p>FSL</p></li>
 <li><p>ANTS</p></li>
@@ -1824,9 +1857,9 @@ PC/Linux</label><div class="tabbed-content docutils">
 <li><p>MITKworkbench</p></li>
 <li><p>Diffusion Toolkit (with quicklook plugin) + Trackvis</p></li>
 </ul>
-</div>
-<div class="section" id="programming">
-<h4>Programming<a class="headerlink" href="#programming" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="programming">
+<h4>Programming<a class="headerlink" href="#programming" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p>git</p></li>
 <li><p>source tree –&gt; visualiser of git</p></li>
@@ -1834,9 +1867,9 @@ PC/Linux</label><div class="tabbed-content docutils">
 <li><p>PyCharm (Python editor)</p></li>
 <li><p>Sublime Text (code editor)</p></li>
 </ul>
-</div>
-<div class="section" id="misc">
-<h4>Misc<a class="headerlink" href="#misc" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="misc">
+<h4>Misc<a class="headerlink" href="#misc" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p>Google Sketchup</p></li>
 <li><p>Google Chrome</p></li>
@@ -1855,21 +1888,23 @@ PC/Linux</label><div class="tabbed-content docutils">
 </li>
 <li><p>Tanguy’s app to open Nifti files with FSLview</p></li>
 </ul>
-</div>
-</div>
-</div>
-<div class="section" id="admin">
-<h2>Admin<a class="headerlink" href="#admin" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="admin">
+<h2>Admin<a class="headerlink" href="#admin" title="Permalink to this headline">#</a></h2>
 <p>Technical details about station management and documentation is found on <a class="reference external" href="https://github.com/neuropoly/computers">this repository</a>.</p>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../README.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1885,24 +1920,28 @@ PC/Linux</label><div class="tabbed-content docutils">
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By NeuroPoly<br/>
+  
+      &copy; Copyright 2021, NeuroPoly.<br/>
+</p>
+        </footer>
+    </div>
     
-      By NeuroPoly<br/>
-    
-        &copy; Copyright 2021, NeuroPoly.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

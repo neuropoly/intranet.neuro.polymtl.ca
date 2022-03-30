@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Git &amp; GitHub &#8212; NeuroPoly Lab Manual</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,23 +20,20 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -47,7 +46,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -56,14 +69,10 @@
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -790,64 +799,88 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
-<div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">Toggle navigation</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
             </div>
             
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-
-
-<!-- only one Github button activated, so collapse it into the main button, saving a click for users -->
-        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/misc/git-and-github.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fab fa-github"></i></button></a>
-
-
-</div>
-
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-            <!-- Launch buttons -->
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Page Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right"><a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/misc/git-and-github.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Page Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tutorials-courses">
    Tutorials &amp; Courses
@@ -1201,12 +1234,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Git & GitHub</h1>
@@ -1576,13 +1608,14 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="git-github">
-<h1>Git &amp; GitHub<a class="headerlink" href="#git-github" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="tutorials-courses">
-<h2>Tutorials &amp; Courses<a class="headerlink" href="#tutorials-courses" title="Permalink to this headline">¶</a></h2>
+  <section id="git-github">
+<h1>Git &amp; GitHub<a class="headerlink" href="#git-github" title="Permalink to this headline">#</a></h1>
+<section id="tutorials-courses">
+<h2>Tutorials &amp; Courses<a class="headerlink" href="#tutorials-courses" title="Permalink to this headline">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Everyone working with <code class="docutils literal notranslate"><span class="pre">git</span></code> at NeuroPoly Lab: Please take 2+ hours of your time and learn how to use <code class="docutils literal notranslate"><span class="pre">git</span></code> before using it.</strong></p>
@@ -1643,36 +1676,36 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
 <p>Full instructions to install <code class="docutils literal notranslate"><span class="pre">git</span></code> <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">here</a>. We have a quick-start below:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="1d15bc25-f012-49b6-886d-924511fff320" name="2adb2725-6194-4dd6-923f-c4f85466e3f2" type="radio">
-</input><label class="tabbed-label" for="1d15bc25-f012-49b6-886d-924511fff320">
+<input checked="checked" id="f62e9884-89f6-4304-a576-396ef5128a32" name="5ec5dc0c-cab0-4d93-921b-4ba1eefde305" type="radio">
+</input><label class="tabbed-label" for="f62e9884-89f6-4304-a576-396ef5128a32">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get update
 apt-get install git-all
 </pre></div>
 </div>
 </div>
-<input id="f3146207-4da1-4ed7-9b1e-c98144bb6f93" name="2adb2725-6194-4dd6-923f-c4f85466e3f2" type="radio">
-</input><label class="tabbed-label" for="f3146207-4da1-4ed7-9b1e-c98144bb6f93">
+<input id="edf19b71-6aaa-40c9-8406-c85494492749" name="5ec5dc0c-cab0-4d93-921b-4ba1eefde305" type="radio">
+</input><label class="tabbed-label" for="edf19b71-6aaa-40c9-8406-c85494492749">
 MacOSX</label><div class="tabbed-content docutils">
 <p>Probably the easiest way to install on MacOSX is to install via <a class="reference external" href="https://developer.apple.com/downloads/">XCode Command Line Tools</a>. To check if <code class="docutils literal notranslate"><span class="pre">git</span></code> is installed:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git --version
 </pre></div>
 </div>
 </div>
-<input id="c6ee129d-c0e8-4b72-b64f-36f0089f7f1f" name="2adb2725-6194-4dd6-923f-c4f85466e3f2" type="radio">
-</input><label class="tabbed-label" for="c6ee129d-c0e8-4b72-b64f-36f0089f7f1f">
+<input id="f2529bea-252e-4b22-bbf5-62a025bb12e6" name="5ec5dc0c-cab0-4d93-921b-4ba1eefde305" type="radio">
+</input><label class="tabbed-label" for="f2529bea-252e-4b22-bbf5-62a025bb12e6">
 Windows</label><div class="tabbed-content docutils">
 <p>Recommended install: Go to <a class="reference external" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a> and the download will start automatically.</p>
 </div>
 </div>
-</div>
-<div class="section" id="contribute-to-a-project">
-<h2>Contribute to a Project<a class="headerlink" href="#contribute-to-a-project" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="contribute-to-a-project">
+<h2>Contribute to a Project<a class="headerlink" href="#contribute-to-a-project" title="Permalink to this headline">#</a></h2>
 <p>Basic steps are:</p>
 <ol class="arabic simple">
 <li><p>Fork the repository</p></li>
@@ -1680,8 +1713,8 @@ Windows</label><div class="tabbed-content docutils">
 <li><p>Create new features while updating your branch from the Master</p></li>
 <li><p>Submit a pull request</p></li>
 </ol>
-<div class="section" id="fork-the-repository">
-<h3>1. Fork the repository<a class="headerlink" href="#fork-the-repository" title="Permalink to this headline">¶</a></h3>
+<section id="fork-the-repository">
+<h3>1. Fork the repository<a class="headerlink" href="#fork-the-repository" title="Permalink to this headline">#</a></h3>
 <ol class="arabic simple">
 <li><p>Log in to your GitHub account</p></li>
 <li><p>Fork the project repository: click on the ‘Fork’ button near the top of the page. This creates a copy of the code under your account on the GitHub server.</p></li>
@@ -1701,8 +1734,8 @@ fatal: Could not read from remote repository.<br />
 Please make sure you have the correct access rights and the repository exists.</p>
 </div></blockquote>
 </div>
-<div class="section" id="keep-your-branch-up-to-date-a-href-maintain-your-branch-up-to-date-id-maintain-your-branch-up-to-date-a">
-<h4>Keep your branch up-to-date <a href="maintain_your_branch_up-to-date" id="maintain_your_branch_up-to-date"></a><a class="headerlink" href="#keep-your-branch-up-to-date-a-href-maintain-your-branch-up-to-date-id-maintain-your-branch-up-to-date-a" title="Permalink to this headline">¶</a></h4>
+<section id="keep-your-branch-up-to-date-a-href-maintain-your-branch-up-to-date-id-maintain-your-branch-up-to-date-a">
+<h4>Keep your branch up-to-date <a href="maintain_your_branch_up-to-date" id="maintain_your_branch_up-to-date"></a><a class="headerlink" href="#keep-your-branch-up-to-date-a-href-maintain-your-branch-up-to-date-id-maintain-your-branch-up-to-date-a" title="Permalink to this headline">#</a></h4>
 <p>Once the clone is complete your repo will have a remote named “origin” that points to your fork on GitHub. Don’t let the name confuse you, this does not point to the original repo you forked from. To help you keep track of that repo you need to add another remote named “upstream”:</p>
 <ul class="simple">
 <li><p>open a terminal, go to your repos and type:</p></li>
@@ -1722,10 +1755,10 @@ Please make sure you have the correct access rights and the repository exists.</
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">–rebase</span></code> option can be used to ensure a linear history by preventing unnecessary merge commits. Many developers prefer rebasing over merging, since it’s like saying, “I want to put my changes on top of what everybody else has done.”</p>
-</div>
-</div>
-<div class="section" id="submit-a-pull-request">
-<h3>4. Submit a Pull Request<a class="headerlink" href="#submit-a-pull-request" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="submit-a-pull-request">
+<h3>4. Submit a Pull Request<a class="headerlink" href="#submit-a-pull-request" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>In a Terminal window, go to your git repository and type:</p></li>
 </ul>
@@ -1738,8 +1771,8 @@ Please make sure you have the correct access rights and the repository exists.</
 <li><p>Click on “Create a pull request”.</p></li>
 </ul>
 <p>Now you need to wait that the person in charge of the project accepts your modifications; if this person finds problems in your code, you can still push new changes to your code and they will be added to your pull request.Edit</p>
-<div class="section" id="how-to-merge-specific-files-from-another-branch-a-href-how-to-merge-specific-files-from-another-branch-id-how-to-merge-specific-files-from-another-branch-a">
-<h4>How to “merge” specific files from another branch <a href="how_to_merge_specific_files_from_another_branch" id="how_to_merge_specific_files_from_another_branch"></a><a class="headerlink" href="#how-to-merge-specific-files-from-another-branch-a-href-how-to-merge-specific-files-from-another-branch-id-how-to-merge-specific-files-from-another-branch-a" title="Permalink to this headline">¶</a></h4>
+<section id="how-to-merge-specific-files-from-another-branch-a-href-how-to-merge-specific-files-from-another-branch-id-how-to-merge-specific-files-from-another-branch-a">
+<h4>How to “merge” specific files from another branch <a href="how_to_merge_specific_files_from_another_branch" id="how_to_merge_specific_files_from_another_branch"></a><a class="headerlink" href="#how-to-merge-specific-files-from-another-branch-a-href-how-to-merge-specific-files-from-another-branch-id-how-to-merge-specific-files-from-another-branch-a" title="Permalink to this headline">#</a></h4>
 <p>The tool to use is “git checkout”:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">checkout</span> <span class="n">source_branch</span> <span class="o">&lt;</span><span class="n">paths</span><span class="o">&gt;...</span>
 </pre></div>
@@ -1765,25 +1798,25 @@ Please make sure you have the correct access rights and the repository exists.</
 <p>See the page <a class="reference external" href="http://jasonrudolph.com/blog/2009/02/25/git-tip-how-to-merge-specific-files-from-another-branch/">git tip how to merge specific files from another branch</a> for more details.</p>
 <p>It is not possible to do this on SourceTree yet but an issue was opened on July 17th 2013 and is not closed yet. See <a class="reference external" href="https://jira.atlassian.com/browse/SRCTREEWIN-827?jql=text%20~%20%22merge%20specific%20files%22%20AND%20created%20%3E%3D%202013-07-17%20AND%20created%20%3C%3D%202013-07-18">the issue here</a>.</p>
 <p>See also the interesting page <a class="reference external" href="http://blog.sourcetreeapp.com/2012/08/01/smart-branching-with-sourcetree-and-git-flow/">Smart branching with sourcetree and git flow</a> about using Git flow to set the right strategy to gang up to contribute to your project.</p>
-</div>
-</div>
-</div>
-<div class="section" id="branches">
-<h2>Branches<a class="headerlink" href="#branches" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="list-remote-branches">
-<h3>List remote branches<a class="headerlink" href="#list-remote-branches" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+</section>
+<section id="branches">
+<h2>Branches<a class="headerlink" href="#branches" title="Permalink to this headline">#</a></h2>
+<section id="list-remote-branches">
+<h3>List remote branches<a class="headerlink" href="#list-remote-branches" title="Permalink to this headline">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">remote</span> <span class="n">show</span> <span class="n">origin</span>
 </pre></div>
 </div>
-<div class="section" id="track-remote-branch-a-href-track-remote-branch-id-track-remote-branch-a">
-<h4>Track remote branch <a href="track_remote_branch" id="track_remote_branch"></a><a class="headerlink" href="#track-remote-branch-a-href-track-remote-branch-id-track-remote-branch-a" title="Permalink to this headline">¶</a></h4>
+<section id="track-remote-branch-a-href-track-remote-branch-id-track-remote-branch-a">
+<h4>Track remote branch <a href="track_remote_branch" id="track_remote_branch"></a><a class="headerlink" href="#track-remote-branch-a-href-track-remote-branch-id-track-remote-branch-a" title="Permalink to this headline">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">remote</span> <span class="n">update</span>
   <span class="n">git</span> <span class="n">fetch</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="checkout-existing-branch-a-href-checkout-existing-branch-id-checkout-existing-branch-a">
-<h4>Checkout existing branch <a href="checkout_existing_branch" id="checkout_existing_branch"></a><a class="headerlink" href="#checkout-existing-branch-a-href-checkout-existing-branch-id-checkout-existing-branch-a" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="checkout-existing-branch-a-href-checkout-existing-branch-id-checkout-existing-branch-a">
+<h4>Checkout existing branch <a href="checkout_existing_branch" id="checkout_existing_branch"></a><a class="headerlink" href="#checkout-existing-branch-a-href-checkout-existing-branch-id-checkout-existing-branch-a" title="Permalink to this headline">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git checkout &lt;branch_name&gt;
 </pre></div>
 </div>
@@ -1807,28 +1840,28 @@ Please make sure you have the correct access rights and the repository exists.</
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">remote</span> <span class="n">show</span> <span class="n">origin</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="clone-specific-branch-a-href-clone-specific-branch-id-clone-specific-branch-a">
-<h4>Clone specific branch <a href="clone_specific_branch" id="clone_specific_branch"></a><a class="headerlink" href="#clone-specific-branch-a-href-clone-specific-branch-id-clone-specific-branch-a" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="clone-specific-branch-a-href-clone-specific-branch-id-clone-specific-branch-a">
+<h4>Clone specific branch <a href="clone_specific_branch" id="clone_specific_branch"></a><a class="headerlink" href="#clone-specific-branch-a-href-clone-specific-branch-id-clone-specific-branch-a" title="Permalink to this headline">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">-</span><span class="n">b</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">remote_repo</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">depth</span> <span class="mi">1</span> 
 </pre></div>
 </div>
-</div>
-<div class="section" id="create-a-branch-a-href-create-a-branch-id-create-a-branch-a">
-<h4>Create a branch <a href="create_a_branch" id="create_a_branch"></a><a class="headerlink" href="#create-a-branch-a-href-create-a-branch-id-create-a-branch-a" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="create-a-branch-a-href-create-a-branch-id-create-a-branch-a">
+<h4>Create a branch <a href="create_a_branch" id="create_a_branch"></a><a class="headerlink" href="#create-a-branch-a-href-create-a-branch-id-create-a-branch-a" title="Permalink to this headline">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="o">&lt;</span><span class="n">branch_name</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="push-to-remote-a-href-push-to-remote-id-push-to-remote-a">
-<h4>Push to remote <a href="push_to_remote" id="push_to_remote"></a><a class="headerlink" href="#push-to-remote-a-href-push-to-remote-id-push-to-remote-a" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="push-to-remote-a-href-push-to-remote-id-push-to-remote-a">
+<h4>Push to remote <a href="push_to_remote" id="push_to_remote"></a><a class="headerlink" href="#push-to-remote-a-href-push-to-remote-id-push-to-remote-a" title="Permalink to this headline">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span>
 <span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">branch_name</span><span class="o">&gt;</span>  <span class="c1"># push to specific branch</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="remove-a-branch-a-href-remove-a-branch-id-remove-a-branch-a">
-<h4>Remove a branch <a href="remove_a_branch" id="remove_a_branch"></a><a class="headerlink" href="#remove-a-branch-a-href-remove-a-branch-id-remove-a-branch-a" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="remove-a-branch-a-href-remove-a-branch-id-remove-a-branch-a">
+<h4>Remove a branch <a href="remove_a_branch" id="remove_a_branch"></a><a class="headerlink" href="#remove-a-branch-a-href-remove-a-branch-id-remove-a-branch-a" title="Permalink to this headline">#</a></h4>
 <p>To remove a local branch</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git branch -D &lt;branch_name&gt;
 </pre></div>
@@ -1837,12 +1870,12 @@ Please make sure you have the correct access rights and the repository exists.</
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="p">:</span><span class="o">&lt;</span><span class="n">branch_name</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="general-usage-a-href-general-usage-id-general-usage-a">
-<h3>General usage <a href="general_usage" id="general_usage"></a><a class="headerlink" href="#general-usage-a-href-general-usage-id-general-usage-a" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="upload-local-repository-for-the-first-time-a-href-upload-local-repository-for-the-first-time-id-upload-local-repository-for-the-first-time-a">
-<h4>Upload local repository for the first time <a href="upload_local_repository_for_the_first_time" id="upload_local_repository_for_the_first_time"></a><a class="headerlink" href="#upload-local-repository-for-the-first-time-a-href-upload-local-repository-for-the-first-time-id-upload-local-repository-for-the-first-time-a" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="general-usage-a-href-general-usage-id-general-usage-a">
+<h3>General usage <a href="general_usage" id="general_usage"></a><a class="headerlink" href="#general-usage-a-href-general-usage-id-general-usage-a" title="Permalink to this headline">#</a></h3>
+<section id="upload-local-repository-for-the-first-time-a-href-upload-local-repository-for-the-first-time-id-upload-local-repository-for-the-first-time-a">
+<h4>Upload local repository for the first time <a href="upload_local_repository_for_the_first_time" id="upload_local_repository_for_the_first_time"></a><a class="headerlink" href="#upload-local-repository-for-the-first-time-a-href-upload-local-repository-for-the-first-time-id-upload-local-repository-for-the-first-time-a" title="Permalink to this headline">#</a></h4>
 <p>First, create repository in github or bitbucket. Then, open a Terminal and run:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> &lt;/path/to/your/project&gt;
 git init  <span class="c1"># initialize local git repos</span>
@@ -1852,31 +1885,31 @@ git commit -m <span class="s1">&#39;First commit&#39;</span>
 git push -u origin master
 </pre></div>
 </div>
-</div>
-<div class="section" id="switch-local-repository-to-another-branch-a-href-switch-local-repository-to-another-branch-id-switch-local-repository-to-another-branch-a">
-<h4>Switch local repository to another branch <a href="switch_local_repository_to_another_branch" id="switch_local_repository_to_another_branch"></a><a class="headerlink" href="#switch-local-repository-to-another-branch-a-href-switch-local-repository-to-another-branch-id-switch-local-repository-to-another-branch-a" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="switch-local-repository-to-another-branch-a-href-switch-local-repository-to-another-branch-id-switch-local-repository-to-another-branch-a">
+<h4>Switch local repository to another branch <a href="switch_local_repository_to_another_branch" id="switch_local_repository_to_another_branch"></a><a class="headerlink" href="#switch-local-repository-to-another-branch-a-href-switch-local-repository-to-another-branch-id-switch-local-repository-to-another-branch-a" title="Permalink to this headline">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout &lt;BRANCH_NAME&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="check-which-branch-you-are-currently-working-on-a-href-check-which-branch-you-are-currently-working-on-id-check-which-branch-you-are-currently-working-on-a">
-<h4>Check which branch you are currently working on <a href="check_which_branch_you_are_currently_working_on" id="check_which_branch_you_are_currently_working_on"></a><a class="headerlink" href="#check-which-branch-you-are-currently-working-on-a-href-check-which-branch-you-are-currently-working-on-id-check-which-branch-you-are-currently-working-on-a" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="check-which-branch-you-are-currently-working-on-a-href-check-which-branch-you-are-currently-working-on-id-check-which-branch-you-are-currently-working-on-a">
+<h4>Check which branch you are currently working on <a href="check_which_branch_you_are_currently_working_on" id="check_which_branch_you_are_currently_working_on"></a><a class="headerlink" href="#check-which-branch-you-are-currently-working-on-a-href-check-which-branch-you-are-currently-working-on-id-check-which-branch-you-are-currently-working-on-a" title="Permalink to this headline">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git branch
 </pre></div>
 </div>
-</div>
-<div class="section" id="create-repository-inside-repository-a-href-create-repository-inside-repository-id-create-repository-inside-repository-a">
-<h4>Create repository inside repository <a href="create_repository_inside_repository" id="create_repository_inside_repository"></a><a class="headerlink" href="#create-repository-inside-repository-a-href-create-repository-inside-repository-id-create-repository-inside-repository-a" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="create-repository-inside-repository-a-href-create-repository-inside-repository-id-create-repository-inside-repository-a">
+<h4>Create repository inside repository <a href="create_repository_inside_repository" id="create_repository_inside_repository"></a><a class="headerlink" href="#create-repository-inside-repository-a-href-create-repository-inside-repository-id-create-repository-inside-repository-a" title="Permalink to this headline">#</a></h4>
 <p>Use submodules:</p>
 <ol class="arabic simple">
 <li><p><a class="reference external" href="http://git-scm.com/book/en/Git-Tools-Submodules">http://git-scm.com/book/en/Git-Tools-Submodules</a></p></li>
 <li><p><a class="reference external" href="http://www.arlocarreon.com/blog/git/git-repo-inside-a-git-repo/">http://www.arlocarreon.com/blog/git/git-repo-inside-a-git-repo/</a></p></li>
 </ol>
-</div>
-</div>
-</div>
-<div class="section" id="commits">
-<h2>Commits<a class="headerlink" href="#commits" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="commits">
+<h2>Commits<a class="headerlink" href="#commits" title="Permalink to this headline">#</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Term</p></th>
@@ -1898,8 +1931,8 @@ git push -u origin master
 </tr>
 </tbody>
 </table>
-<div class="section" id="commit-messages">
-<h3>Commit Messages<a class="headerlink" href="#commit-messages" title="Permalink to this headline">¶</a></h3>
+<section id="commit-messages">
+<h3>Commit Messages<a class="headerlink" href="#commit-messages" title="Permalink to this headline">#</a></h3>
 <p>Your commit must be accompanied by a message. For short, simple commits, this can be achieved via:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit -m <span class="s2">&quot;A message describing your commit&quot;</span>
 </pre></div>
@@ -1934,9 +1967,9 @@ git push -u origin master
 <p><a class="reference external" href="https://commit.style">https://commit.style/</a></p>
 <p><a class="reference external" href="https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message">https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message</a></p>
 <p><a class="reference external" href="https://github.com/neuropoly/spinalcordtoolbox/wiki/git_rules">https://github.com/neuropoly/spinalcordtoolbox/wiki/git_rules</a></p>
-</div>
-<div class="section" id="amending-commits">
-<h3>Amending Commits<a class="headerlink" href="#amending-commits" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="amending-commits">
+<h3>Amending Commits<a class="headerlink" href="#amending-commits" title="Permalink to this headline">#</a></h3>
 <p>If you made a mistake in your last commit, want to add something, or change the commit message, you can do so with the –amend flag:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit --amend
 </pre></div>
@@ -1946,9 +1979,9 @@ git push -u origin master
 </pre></div>
 </div>
 <p>This will add the changes you have added to the most recent commit. Make sure to only use this on local commits (i.e. commits that have not been pushed).</p>
-</div>
-<div class="section" id="rollbacks">
-<h3>Rollbacks<a class="headerlink" href="#rollbacks" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="rollbacks">
+<h3>Rollbacks<a class="headerlink" href="#rollbacks" title="Permalink to this headline">#</a></h3>
 <p>What if you made a commit that you need to revert? The revert command allows for you to fix this. It undoes your last commit by performing the inverse of everything in the last commit. That way, you still have all the correct history, and you will be able to still see the commit you reverted.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git revert HEAD
 </pre></div>
@@ -1957,9 +1990,9 @@ git push -u origin master
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git revert &lt;COMMIT_ID&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="reset-commit">
-<h3>Reset Commit<a class="headerlink" href="#reset-commit" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="reset-commit">
+<h3>Reset Commit<a class="headerlink" href="#reset-commit" title="Permalink to this headline">#</a></h3>
 <p>If you want to go back to a previous commit and ignore the latest ones:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git reset --hard &lt;COMMIT_NUMBER&gt;
 git push -f
@@ -1969,12 +2002,12 @@ git push -f
 <p class="admonition-title">Warning</p>
 <p><strong>WARNING:</strong> This will erase the latest commits!</p>
 </div>
-</div>
-</div>
-<div class="section" id="how-to">
-<h2>HOW TO<a class="headerlink" href="#how-to" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="configure-git-a-href-configure-git-id-configure-git-a">
-<h3>Configure git <a href="configure_git" id="configure_git"></a><a class="headerlink" href="#configure-git-a-href-configure-git-id-configure-git-a" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="how-to">
+<h2>HOW TO<a class="headerlink" href="#how-to" title="Permalink to this headline">#</a></h2>
+<section id="configure-git-a-href-configure-git-id-configure-git-a">
+<h3>Configure git <a href="configure_git" id="configure_git"></a><a class="headerlink" href="#configure-git-a-href-configure-git-id-configure-git-a" title="Permalink to this headline">#</a></h3>
 <p>Before starting: configure git to identify you for each commit</p>
 <p>Define the author name to be used for all commits by the current user.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --global user.name &lt;YOUR_NAME&gt;
@@ -1985,9 +2018,9 @@ git push -f
 </pre></div>
 </div>
 <p>more info: <a class="reference external" href="http://www.atlassian.com/git/tutorial/git-basics#!config">http://www.atlassian.com/git/tutorial/git-basics#!config</a>Edit</p>
-</div>
-<div class="section" id="show-changed-files-between-two-commits-a-href-show-changed-files-between-two-commits-id-show-changed-files-between-two-commits-a">
-<h3>Show changed files between two commits <a href="show_changed_files_between_two_commits" id="show_changed_files_between_two_commits"></a><a class="headerlink" href="#show-changed-files-between-two-commits-a-href-show-changed-files-between-two-commits-id-show-changed-files-between-two-commits-a" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="show-changed-files-between-two-commits-a-href-show-changed-files-between-two-commits-id-show-changed-files-between-two-commits-a">
+<h3>Show changed files between two commits <a href="show_changed_files_between_two_commits" id="show_changed_files_between_two_commits"></a><a class="headerlink" href="#show-changed-files-between-two-commits-a-href-show-changed-files-between-two-commits-id-show-changed-files-between-two-commits-a" title="Permalink to this headline">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">diff</span> <span class="o">--</span><span class="n">name</span><span class="o">-</span><span class="n">only</span> <span class="n">SHA1</span> <span class="n">SHA2</span>
 </pre></div>
 </div>
@@ -2057,17 +2090,17 @@ git push -f
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rm</span> <span class="s2">&quot;file name&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="download-a-href-download-id-download-a">
-<h3>Download <a href="download" id="download"></a><a class="headerlink" href="#download-a-href-download-id-download-a" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="download-a-href-download-id-download-a">
+<h3>Download <a href="download" id="download"></a><a class="headerlink" href="#download-a-href-download-id-download-a" title="Permalink to this headline">#</a></h3>
 <p>Download (server → local station) a repository for the first time</p>
 <p>get address of repos, and type</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone git@bitbucket.org:neuropoly/spinalcordtoolbox_dev.git
 </pre></div>
 </div>
-</div>
-<div class="section" id="reset-your-branch-revert-your-local-commits-a-href-reset-your-branch-revert-your-local-commits-id-reset-your-branch-revert-your-local-commits-a">
-<h3>Reset your branch (revert your local commits) <a href="reset_your_branch_revert_your_local_commits" id="reset_your_branch_revert_your_local_commits"></a><a class="headerlink" href="#reset-your-branch-revert-your-local-commits-a-href-reset-your-branch-revert-your-local-commits-id-reset-your-branch-revert-your-local-commits-a" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="reset-your-branch-revert-your-local-commits-a-href-reset-your-branch-revert-your-local-commits-id-reset-your-branch-revert-your-local-commits-a">
+<h3>Reset your branch (revert your local commits) <a href="reset_your_branch_revert_your_local_commits" id="reset_your_branch_revert_your_local_commits"></a><a class="headerlink" href="#reset-your-branch-revert-your-local-commits-a-href-reset-your-branch-revert-your-local-commits-id-reset-your-branch-revert-your-local-commits-a" title="Permalink to this headline">#</a></h3>
 <p>Using the Terminal:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git fetch
 git reset --hard origin/master
@@ -2080,9 +2113,9 @@ git reset --hard origin/master
 <p>Warning: This comment effectively removes the N snapshots created from the project history. Remember that this kind of reset should only be used on unpublished commits. Never perform the above operation if you’ve already pushed your commits to a shared repository.</p>
 <p>Using Sourcetree:</p>
 <p>assume you are on the branch <code class="docutils literal notranslate"><span class="pre">example-fix</span></code>. Find the commit with <code class="docutils literal notranslate"><span class="pre">origin/example-fix</span></code>, and right click on it. Select in the menu <code class="docutils literal notranslate"><span class="pre">Reset</span> <span class="pre">example-fix</span> <span class="pre">to</span> <span class="pre">this</span> <span class="pre">commit</span></code> and a dialog will appear. If don’t want to keep the changes, you can select <code class="docutils literal notranslate"><span class="pre">Hard</span></code>, else select <code class="docutils literal notranslate"><span class="pre">Soft</span></code></p>
-</div>
-<div class="section" id="upload-a-href-upload-id-upload-a">
-<h3>Upload <a href="upload" id="upload"></a><a class="headerlink" href="#upload-a-href-upload-id-upload-a" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="upload-a-href-upload-id-upload-a">
+<h3>Upload <a href="upload" id="upload"></a><a class="headerlink" href="#upload-a-href-upload-id-upload-a" title="Permalink to this headline">#</a></h3>
 <p>Upload (local –&gt; server) a repository for the first time</p>
 <ul class="simple">
 <li><p>Create repository in github</p></li>
@@ -2100,9 +2133,9 @@ git reset --hard origin/master
 <span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="discard-local-changes-if-pull-doesn-t-work-a-href-discard-local-changes-if-pull-doesn-t-work-id-discard-local-changes-if-pull-doesn-t-work-a">
-<h3>Discard local changes (if pull doesn’t work) <a href="discard_local_changes_if_pull_doesn_t_work" id="discard_local_changes_if_pull_doesn_t_work"></a><a class="headerlink" href="#discard-local-changes-if-pull-doesn-t-work-a-href-discard-local-changes-if-pull-doesn-t-work-id-discard-local-changes-if-pull-doesn-t-work-a" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="discard-local-changes-if-pull-doesn-t-work-a-href-discard-local-changes-if-pull-doesn-t-work-id-discard-local-changes-if-pull-doesn-t-work-a">
+<h3>Discard local changes (if pull doesn’t work) <a href="discard_local_changes_if_pull_doesn_t_work" id="discard_local_changes_if_pull_doesn_t_work"></a><a class="headerlink" href="#discard-local-changes-if-pull-doesn-t-work-a-href-discard-local-changes-if-pull-doesn-t-work-id-discard-local-changes-if-pull-doesn-t-work-a" title="Permalink to this headline">#</a></h3>
 <p>For a specific file use:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">file</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">revert</span>
 </pre></div>
@@ -2111,38 +2144,38 @@ git reset --hard origin/master
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">--</span> <span class="o">.</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="todo">
-<h2>TODO<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="ignore-file-mode-a-href-ignore-file-mode-id-ignore-file-mode-a">
-<h3>Ignore file mode <a href="ignore_file_mode" id="ignore_file_mode"></a><a class="headerlink" href="#ignore-file-mode-a-href-ignore-file-mode-id-ignore-file-mode-a" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="todo">
+<h2>TODO<a class="headerlink" href="#todo" title="Permalink to this headline">#</a></h2>
+<section id="ignore-file-mode-a-href-ignore-file-mode-id-ignore-file-mode-a">
+<h3>Ignore file mode <a href="ignore_file_mode" id="ignore_file_mode"></a><a class="headerlink" href="#ignore-file-mode-a-href-ignore-file-mode-id-ignore-file-mode-a" title="Permalink to this headline">#</a></h3>
 <p>If you cannot do a pull due to a change of file mode, you can ignore it:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="n">core</span><span class="o">.</span><span class="n">fileMode</span> <span class="n">false</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="a-href-come-back-to-previous-commit-ignore-latest-ones-id-come-back-to-previous-commit-ignore-latest-ones-a">
-<h3><a href="come_back_to_previous_commit_ignore_latest_ones" id="come_back_to_previous_commit_ignore_latest_ones"></a><a class="headerlink" href="#a-href-come-back-to-previous-commit-ignore-latest-ones-id-come-back-to-previous-commit-ignore-latest-ones-a" title="Permalink to this headline">¶</a></h3>
-</div>
-</div>
-<div class="section" id="rebase">
-<h2>Rebase<a class="headerlink" href="#rebase" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="fix-conflicts-during-rebasing">
-<h3>Fix conflicts during rebasing<a class="headerlink" href="#fix-conflicts-during-rebasing" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="a-href-come-back-to-previous-commit-ignore-latest-ones-id-come-back-to-previous-commit-ignore-latest-ones-a">
+<h3><a href="come_back_to_previous_commit_ignore_latest_ones" id="come_back_to_previous_commit_ignore_latest_ones"></a><a class="headerlink" href="#a-href-come-back-to-previous-commit-ignore-latest-ones-id-come-back-to-previous-commit-ignore-latest-ones-a" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="rebase">
+<h2>Rebase<a class="headerlink" href="#rebase" title="Permalink to this headline">#</a></h2>
+<section id="fix-conflicts-during-rebasing">
+<h3>Fix conflicts during rebasing<a class="headerlink" href="#fix-conflicts-during-rebasing" title="Permalink to this headline">#</a></h3>
 <p>When doing <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">rebase</span> <span class="pre">master</span></code> to update a working branch, if there are any conflicts,Edit</p>
-</div>
-<div class="section" id="recover-lost-commits-after-rebase">
-<h3>Recover lost commits after rebase<a class="headerlink" href="#recover-lost-commits-after-rebase" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="recover-lost-commits-after-rebase">
+<h3>Recover lost commits after rebase<a class="headerlink" href="#recover-lost-commits-after-rebase" title="Permalink to this headline">#</a></h3>
 <p>If rebasing caused commits to be lost, use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reflog</span></code> to find the commits that were deleted, and then do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">–hard</span> <span class="pre">HEAD&#64;{XX}</span></code>, XX being the commit that comes right before the merge (the one that says: <code class="docutils literal notranslate"><span class="pre">checkout:</span> <span class="pre">moving</span> <span class="pre">from</span> <span class="pre">master</span> <span class="pre">to</span> <span class="pre">YOUR_BRANCH</span></code>)</p>
-</div>
-<div class="section" id="a-href-commit-message-convention-id-commit-message-convention-a">
-<h3><a href="commit_message_convention" id="commit_message_convention"></a><a class="headerlink" href="#a-href-commit-message-convention-id-commit-message-convention-a" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="github-a-href-github-id-github-a">
-<h3>GitHub <a href="github" id="github"></a><a class="headerlink" href="#github-a-href-github-id-github-a" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="add-ssh-key-a-href-add-ssh-key-id-add-ssh-key-a">
-<h4>Add SSH key <a href="add_ssh_key" id="add_ssh_key"></a><a class="headerlink" href="#add-ssh-key-a-href-add-ssh-key-id-add-ssh-key-a" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="a-href-commit-message-convention-id-commit-message-convention-a">
+<h3><a href="commit_message_convention" id="commit_message_convention"></a><a class="headerlink" href="#a-href-commit-message-convention-id-commit-message-convention-a" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="github-a-href-github-id-github-a">
+<h3>GitHub <a href="github" id="github"></a><a class="headerlink" href="#github-a-href-github-id-github-a" title="Permalink to this headline">#</a></h3>
+<section id="add-ssh-key-a-href-add-ssh-key-id-add-ssh-key-a">
+<h4>Add SSH key <a href="add_ssh_key" id="add_ssh_key"></a><a class="headerlink" href="#add-ssh-key-a-href-add-ssh-key-id-add-ssh-key-a" title="Permalink to this headline">#</a></h4>
 <ol class="arabic simple">
 <li><p>Log in to your Github account and click on the button at the top right-hand corner called “Account settings”.</p></li>
 <li><p>Click on “SSH keys in the left panel”.</p></li>
@@ -2157,9 +2190,9 @@ git reset --hard origin/master
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">t</span> <span class="n">rsa</span> <span class="o">-</span><span class="n">C</span> <span class="n">your_email</span><span class="nd">@example</span><span class="o">.</span><span class="n">com</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="port-22-connection-refused-a-href-port-22connection-refused-id-port-22connection-refused-a">
-<h4>port 22: Connection refused <a href="port_22connection_refused" id="port_22connection_refused"></a><a class="headerlink" href="#port-22-connection-refused-a-href-port-22connection-refused-id-port-22connection-refused-a" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="port-22-connection-refused-a-href-port-22connection-refused-id-port-22connection-refused-a">
+<h4>port 22: Connection refused <a href="port_22connection_refused" id="port_22connection_refused"></a><a class="headerlink" href="#port-22-connection-refused-a-href-port-22connection-refused-id-port-22connection-refused-a" title="Permalink to this headline">#</a></h4>
 <p>If you get this message, try this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vim</span> <span class="o">~/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">config</span>
 </pre></div>
@@ -2170,15 +2203,15 @@ git reset --hard origin/master
   <span class="n">Port</span> <span class="mi">443</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="compare-commits-branches-tags-a-href-compare-commitsbranchestags-id-compare-commitsbranchestags-a">
-<h4>Compare commits/branches/tags <a href="compare_commitsbranchestags" id="compare_commitsbranchestags"></a><a class="headerlink" href="#compare-commits-branches-tags-a-href-compare-commitsbranchestags-id-compare-commitsbranchestags-a" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="compare-commits-branches-tags-a-href-compare-commitsbranchestags-id-compare-commitsbranchestags-a">
+<h4>Compare commits/branches/tags <a href="compare_commitsbranchestags" id="compare_commitsbranchestags"></a><a class="headerlink" href="#compare-commits-branches-tags-a-href-compare-commitsbranchestags-id-compare-commitsbranchestags-a" title="Permalink to this headline">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ORGANIZATION</span><span class="o">/</span><span class="n">REPOSITORY</span><span class="o">/</span><span class="n">compare</span><span class="o">/</span><span class="n">TAG1</span><span class="o">...</span><span class="n">TAG2</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="connection-closed-by-remote-host-a-href-connection-closed-by-remote-host-id-connection-closed-by-remote-host-a">
-<h4>Connection closed by remote host <a href="connection_closed_by_remote_host" id="connection_closed_by_remote_host"></a><a class="headerlink" href="#connection-closed-by-remote-host-a-href-connection-closed-by-remote-host-id-connection-closed-by-remote-host-a" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="connection-closed-by-remote-host-a-href-connection-closed-by-remote-host-id-connection-closed-by-remote-host-a">
+<h4>Connection closed by remote host <a href="connection_closed_by_remote_host" id="connection_closed_by_remote_host"></a><a class="headerlink" href="#connection-closed-by-remote-host-a-href-connection-closed-by-remote-host-id-connection-closed-by-remote-host-a" title="Permalink to this headline">#</a></h4>
 <p>If you get this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh_exchange_identification</span><span class="p">:</span> <span class="n">Connection</span> <span class="n">closed</span> <span class="n">by</span> <span class="n">remote</span> <span class="n">host</span>
 <span class="n">fatal</span><span class="p">:</span> <span class="n">Could</span> <span class="ow">not</span> <span class="n">read</span> <span class="kn">from</span> <span class="nn">remote</span> <span class="n">repository</span><span class="o">.</span>
@@ -2196,20 +2229,20 @@ git reset --hard origin/master
 <span class="n">git</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">USERNAME</span><span class="o">/</span><span class="n">OTHERREPOSITORY</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="search-file-name-a-href-search-file-name-id-search-file-name-a">
-<h4>Search file name <a href="search_file_name" id="search_file_name"></a><a class="headerlink" href="#search-file-name-a-href-search-file-name-id-search-file-name-a" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="search-file-name-a-href-search-file-name-id-search-file-name-a">
+<h4>Search file name <a href="search_file_name" id="search_file_name"></a><a class="headerlink" href="#search-file-name-a-href-search-file-name-id-search-file-name-a" title="Permalink to this headline">#</a></h4>
 <p>Go to search and type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">:</span><span class="n">my_file</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="tags">
-<h2>Tags<a class="headerlink" href="#tags" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="checkout-specific-tag-or-commit-a-href-checkout-specific-tag-or-commit-id-checkout-specific-tag-or-commit-a">
-<h3>Checkout specific tag or commit <a href="checkout_specific_tag_or_commit" id="checkout_specific_tag_or_commit"></a><a class="headerlink" href="#checkout-specific-tag-or-commit-a-href-checkout-specific-tag-or-commit-id-checkout-specific-tag-or-commit-a" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+</section>
+<section id="tags">
+<h2>Tags<a class="headerlink" href="#tags" title="Permalink to this headline">#</a></h2>
+<section id="checkout-specific-tag-or-commit-a-href-checkout-specific-tag-or-commit-id-checkout-specific-tag-or-commit-a">
+<h3>Checkout specific tag or commit <a href="checkout_specific_tag_or_commit" id="checkout_specific_tag_or_commit"></a><a class="headerlink" href="#checkout-specific-tag-or-commit-a-href-checkout-specific-tag-or-commit-id-checkout-specific-tag-or-commit-a" title="Permalink to this headline">#</a></h3>
 <p>List all tags</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git tag
 </pre></div>
@@ -2231,24 +2264,24 @@ git reset --hard origin/master
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git pull --depth<span class="o">=</span>X  <span class="c1"># with X=number of commit back in time</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="add-tag">
-<h3>Add Tag<a class="headerlink" href="#add-tag" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="add-tag">
+<h3>Add Tag<a class="headerlink" href="#add-tag" title="Permalink to this headline">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git tag -a vx.y.z <span class="c1">#COMMIT -m &quot;added tag for vx.y.z&quot;</span>
 git push --tag origin master
 </pre></div>
 </div>
-</div>
-<div class="section" id="remove-tag">
-<h3>Remove Tag<a class="headerlink" href="#remove-tag" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="remove-tag">
+<h3>Remove Tag<a class="headerlink" href="#remove-tag" title="Permalink to this headline">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push --delete origin &lt;TAGNAME&gt;
 git tag -d &lt;TAGNAME&gt;
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="useful-aliases">
-<h2>Useful aliases<a class="headerlink" href="#useful-aliases" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="useful-aliases">
+<h2>Useful aliases<a class="headerlink" href="#useful-aliases" title="Permalink to this headline">#</a></h2>
 <p>Here are useful aliases that you could add to your <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">gs</span><span class="o">=</span><span class="s2">&quot;git status -s&quot;</span>
 <span class="n">alias</span> <span class="n">gc</span><span class="o">=</span><span class="s2">&quot;git commit -a&quot;</span>
@@ -2259,15 +2292,15 @@ git tag -d &lt;TAGNAME&gt;
 <span class="n">alias</span> <span class="n">gb</span><span class="o">=</span><span class="s2">&quot;git branch&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="git-software">
-<h2>Git Software<a class="headerlink" href="#git-software" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="pycharm-a-href-pycharm-id-pycharm-a">
-<h3>Pycharm <a href="pycharm" id="pycharm"></a><a class="headerlink" href="#pycharm-a-href-pycharm-id-pycharm-a" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="git-software">
+<h2>Git Software<a class="headerlink" href="#git-software" title="Permalink to this headline">#</a></h2>
+<section id="pycharm-a-href-pycharm-id-pycharm-a">
+<h3>Pycharm <a href="pycharm" id="pycharm"></a><a class="headerlink" href="#pycharm-a-href-pycharm-id-pycharm-a" title="Permalink to this headline">#</a></h3>
 <p>Interactive squash, rebase: <a class="reference external" href="https://www.jetbrains.com/help/pycharm/edit-project-history.html">https://www.jetbrains.com/help/pycharm/edit-project-history.html</a></p>
-</div>
-<div class="section" id="sourcetree-a-href-sourcetree-id-sourcetree-a">
-<h3>SourceTree <a href="sourcetree" id="sourcetree"></a><a class="headerlink" href="#sourcetree-a-href-sourcetree-id-sourcetree-a" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="sourcetree-a-href-sourcetree-id-sourcetree-a">
+<h3>SourceTree <a href="sourcetree" id="sourcetree"></a><a class="headerlink" href="#sourcetree-a-href-sourcetree-id-sourcetree-a" title="Permalink to this headline">#</a></h3>
 <p><strong>Select default branches for pushing</strong></p>
 <p>Preferences &gt; “Git” &gt; Push branches: select “current”</p>
 <p><strong>Switch to another branch</strong></p>
@@ -2278,16 +2311,18 @@ git tag -d &lt;TAGNAME&gt;
 git rebase master
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="openneuro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -2303,24 +2338,28 @@ git rebase master
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By NeuroPoly<br/>
+  
+      &copy; Copyright 2021, NeuroPoly.<br/>
+</p>
+        </footer>
+    </div>
     
-      By NeuroPoly<br/>
-    
-        &copy; Copyright 2021, NeuroPoly.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

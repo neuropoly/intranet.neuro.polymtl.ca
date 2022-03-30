@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>🎓 University Courses &#8212; NeuroPoly Lab Manual</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,23 +20,20 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="_static/theme.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <link rel="shortcut icon" href="_static/logo.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -47,7 +46,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -56,14 +69,10 @@
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -790,64 +799,88 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
-<div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">Toggle navigation</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
             </div>
             
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-
-
-<!-- only one Github button activated, so collapse it into the main button, saving a click for users -->
-        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/courses.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fab fa-github"></i></button></a>
-
-
-</div>
-
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-            <!-- Launch buttons -->
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Page Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right"><a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/courses.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Page Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#requirements-for-polytechnique">
    Requirements for Polytechnique
@@ -976,12 +1009,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>🎓 University Courses</h1>
@@ -1126,16 +1158,17 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="university-courses">
-<h1><code class="docutils literal notranslate"><span class="pre">🎓</span></code> University Courses<a class="headerlink" href="#university-courses" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="requirements-for-polytechnique">
-<h2>Requirements for Polytechnique<a class="headerlink" href="#requirements-for-polytechnique" title="Permalink to this headline">¶</a></h2>
+  <section id="university-courses">
+<h1><code class="docutils literal notranslate"><span class="pre">🎓</span></code> University Courses<a class="headerlink" href="#university-courses" title="Permalink to this headline">#</a></h1>
+<section id="requirements-for-polytechnique">
+<h2>Requirements for Polytechnique<a class="headerlink" href="#requirements-for-polytechnique" title="Permalink to this headline">#</a></h2>
 <div class="tabbed-set docutils">
-<input checked="checked" id="68b864f0-a08c-472b-9387-a0c8ae1f574d" name="d03c638e-0993-4195-98fe-f80f0f7394bd" type="radio">
-</input><label class="tabbed-label" for="68b864f0-a08c-472b-9387-a0c8ae1f574d">
+<input checked="checked" id="8e19665a-9d8b-44a9-8d20-e6ec8d2142b6" name="ecbb1edc-0899-43e9-9e6a-f455f7f6fff6" type="radio">
+</input><label class="tabbed-label" for="8e19665a-9d8b-44a9-8d20-e6ec8d2142b6">
 MSc</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Details of the program on the <a class="reference external" href="https://www.polymtl.ca/programmes/programmes/maitrise-professionnelle-ou-recherche-en-genie-biomedical-programme-conjoint">Polymtl website</a>.</p></li>
@@ -1147,8 +1180,8 @@ MSc</label><div class="tabbed-content docutils">
 <p class="rubric">Jury</p>
 <p>Please refer to the <a class="reference external" href="https://www.polymtl.ca/renseignements-generaux/documents-officiels/5-affaires-academiques-et-vie-etudiante">Règlements généraux des études supérieures </a> (53.4 COMPOSITION ET NOMINATION DU JURY).</p>
 </div>
-<input id="868eae1a-4c96-4291-9a41-0785cc2eb844" name="d03c638e-0993-4195-98fe-f80f0f7394bd" type="radio">
-</input><label class="tabbed-label" for="868eae1a-4c96-4291-9a41-0785cc2eb844">
+<input id="a2a0b5f1-b6f0-4802-b0b1-31303e7605f1" name="ecbb1edc-0899-43e9-9e6a-f455f7f6fff6" type="radio">
+</input><label class="tabbed-label" for="a2a0b5f1-b6f0-4802-b0b1-31303e7605f1">
 PhD</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Details of the program on the <a class="reference external" href="https://www.polymtl.ca/programmes/programmes/doctorat-en-genie-biomedical-programme-conjoint#">Polymtl website</a>.</p></li>
@@ -1164,12 +1197,12 @@ PhD</label><div class="tabbed-content docutils">
 <p>Please refer to the <a class="reference external" href="https://www.polymtl.ca/renseignements-generaux/documents-officiels/5-affaires-academiques-et-vie-etudiante">Règlements généraux des études supérieures </a> (76.4 COMPOSITION ET NOMINATION DU JURY).</p>
 </div>
 </div>
-</div>
-<div class="section" id="medical-imaging">
-<h2>Medical imaging<a class="headerlink" href="#medical-imaging" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="medical-imaging">
+<h2>Medical imaging<a class="headerlink" href="#medical-imaging" title="Permalink to this headline">#</a></h2>
 <p>Also see this list of <a class="reference external" href="https://www.rbiq-qbin.qc.ca/Imaging_Courses">Bio-imaging courses offered by Quebec Universities</a>.</p>
-<div class="section" id="polytechnique-montreal">
-<h3>Polytechnique Montréal<a class="headerlink" href="#polytechnique-montreal" title="Permalink to this headline">¶</a></h3>
+<section id="polytechnique-montreal">
+<h3>Polytechnique Montréal<a class="headerlink" href="#polytechnique-montreal" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
@@ -1206,9 +1239,9 @@ PhD</label><div class="tabbed-content docutils">
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="universite-de-montreal">
-<h3>Université de Montréal<a class="headerlink" href="#universite-de-montreal" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="universite-de-montreal">
+<h3>Université de Montréal<a class="headerlink" href="#universite-de-montreal" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
@@ -1255,9 +1288,9 @@ PhD</label><div class="tabbed-content docutils">
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="mcgill">
-<h3>McGill<a class="headerlink" href="#mcgill" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="mcgill">
+<h3>McGill<a class="headerlink" href="#mcgill" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
@@ -1314,12 +1347,12 @@ PhD</label><div class="tabbed-content docutils">
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="machine-learning-statistics">
-<h2>Machine Learning / Statistics<a class="headerlink" href="#machine-learning-statistics" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3>Polytechnique Montréal<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="machine-learning-statistics">
+<h2>Machine Learning / Statistics<a class="headerlink" href="#machine-learning-statistics" title="Permalink to this headline">#</a></h2>
+<section id="id1">
+<h3>Polytechnique Montréal<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
@@ -1371,9 +1404,9 @@ PhD</label><div class="tabbed-content docutils">
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="id2">
-<h3>Université de Montréal<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id2">
+<h3>Université de Montréal<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
@@ -1410,9 +1443,9 @@ PhD</label><div class="tabbed-content docutils">
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="id3">
-<h3>Mcgill<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id3">
+<h3>Mcgill<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
@@ -1429,12 +1462,12 @@ PhD</label><div class="tabbed-content docutils">
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="computer-vision">
-<h2><strong>Computer Vision</strong><a class="headerlink" href="#computer-vision" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id4">
-<h3>Polytechnique Montréal<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="computer-vision">
+<h2><strong>Computer Vision</strong><a class="headerlink" href="#computer-vision" title="Permalink to this headline">#</a></h2>
+<section id="id4">
+<h3>Polytechnique Montréal<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
@@ -1451,9 +1484,9 @@ PhD</label><div class="tabbed-content docutils">
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="id5">
-<h3><strong>Université de Montréal</strong><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id5">
+<h3><strong>Université de Montréal</strong><a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
@@ -1470,9 +1503,9 @@ PhD</label><div class="tabbed-content docutils">
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="id6">
-<h3>McGill<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id6">
+<h3>McGill<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
 <p>Electrical and Computer Engineering Course List: <a class="reference external" href="http://www.mcgill.ca/ece/programs/coursesoffered/500">http://www.mcgill.ca/ece/programs/coursesoffered/500</a></p>
 <table class="colwidths-auto table">
 <thead>
@@ -1515,18 +1548,18 @@ PhD</label><div class="tabbed-content docutils">
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="programming-software">
-<h2>Programming &amp; Software<a class="headerlink" href="#programming-software" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="programming-software">
+<h2>Programming &amp; Software<a class="headerlink" href="#programming-software" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>INF1010 - Programmation orienté objet (C++)</p></li>
 </ul>
-</div>
-<div class="section" id="biomedical">
-<h2>Biomedical<a class="headerlink" href="#biomedical" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id7">
-<h3>Polytechnique Montréal<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="biomedical">
+<h2>Biomedical<a class="headerlink" href="#biomedical" title="Permalink to this headline">#</a></h2>
+<section id="id7">
+<h3>Polytechnique Montréal<a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
@@ -1558,12 +1591,12 @@ PhD</label><div class="tabbed-content docutils">
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="instrumentation-rf-coils">
-<h2>Instrumentation / RF Coils<a class="headerlink" href="#instrumentation-rf-coils" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id8">
-<h3>Polytechnique Montréal<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="instrumentation-rf-coils">
+<h2>Instrumentation / RF Coils<a class="headerlink" href="#instrumentation-rf-coils" title="Permalink to this headline">#</a></h2>
+<section id="id8">
+<h3>Polytechnique Montréal<a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
@@ -1605,9 +1638,9 @@ PhD</label><div class="tabbed-content docutils">
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="id9">
-<h3>McGill<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id9">
+<h3>McGill<a class="headerlink" href="#id9" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
@@ -1629,12 +1662,12 @@ PhD</label><div class="tabbed-content docutils">
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="language-courses">
-<h2>Language Courses<a class="headerlink" href="#language-courses" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id10">
-<h3>Polytechnique Montréal<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="language-courses">
+<h2>Language Courses<a class="headerlink" href="#language-courses" title="Permalink to this headline">#</a></h2>
+<section id="id10">
+<h3>Polytechnique Montréal<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
@@ -1656,25 +1689,27 @@ PhD</label><div class="tabbed-content docutils">
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="ethics">
-<h2>Ethics<a class="headerlink" href="#ethics" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="ethics">
+<h2>Ethics<a class="headerlink" href="#ethics" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.polymtl.ca/etudes/cours/details.php?sigle=SSH5503">SSH5503</a> - Éthique appliquée au génie biomédical (Bernard Lapierre)</p></li>
 <li><p><a class="reference external" href="http://ethique.msss.gouv.qc.ca/didacticiel/">Formation en ligne - Québec</a></p></li>
 <li><p><a class="reference external" href="http://pre.ethics.gc.ca/fra/education/tutorial-didacticiel/">Formation en ligne - Canada</a></p></li>
 <li><p><a class="reference external" href="https://phrp.nihtraining.com/users/login.php">Formation en ligne - États-Unis - NIH</a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="geek-tips/deep-learning/misc.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1690,24 +1725,28 @@ PhD</label><div class="tabbed-content docutils">
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By NeuroPoly<br/>
+  
+      &copy; Copyright 2021, NeuroPoly.<br/>
+</p>
+        </footer>
+    </div>
     
-      By NeuroPoly<br/>
-    
-        &copy; Copyright 2021, NeuroPoly.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

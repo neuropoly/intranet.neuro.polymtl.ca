@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>GPU Clusters &#8212; NeuroPoly Lab Manual</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,23 +20,20 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -47,7 +46,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -56,14 +69,10 @@
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -790,64 +799,88 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
-<div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">Toggle navigation</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
             </div>
             
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-
-
-<!-- only one Github button activated, so collapse it into the main button, saving a click for users -->
-        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/computing-resources/neuropoly/gpus.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fab fa-github"></i></button></a>
-
-
-</div>
-
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-            <!-- Launch buttons -->
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Page Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right"><a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/computing-resources/neuropoly/gpus.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Page Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#connecting">
    Connecting
@@ -931,12 +964,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>GPU Clusters</h1>
@@ -1036,11 +1068,12 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="gpu-clusters">
-<h1>GPU Clusters<a class="headerlink" href="#gpu-clusters" title="Permalink to this headline">¶</a></h1>
+  <section id="gpu-clusters">
+<h1>GPU Clusters<a class="headerlink" href="#gpu-clusters" title="Permalink to this headline">#</a></h1>
 <p>This document is being ported from <a class="reference external" href="https://docs.google.com/document/d/1X--A2kql4GypfI6fNFIOYA_b6uQdeu2_Kue7n8KkTOU/edit#">here</a>.</p>
 <p>Neuropoly has several GPUs available for training deep learning models.</p>
 <ul class="simple">
@@ -1049,12 +1082,12 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">romane.neuro.polymtl.ca</span></code> - 4 x <a class="reference external" href="https://www.nvidia.com/en-us/design-visualization/rtx-a6000/">RTX A6000</a> (released 2020)</p></li>
 </ul>
 <p>We have spent money and time on this infrastructure for it to push science forward, so please take advantage of it!</p>
-<div class="section" id="connecting">
-<h2>Connecting<a class="headerlink" href="#connecting" title="Permalink to this headline">¶</a></h2>
+<section id="connecting">
+<h2>Connecting<a class="headerlink" href="#connecting" title="Permalink to this headline">#</a></h2>
 <p>Like <span class="xref myst">other machines</span>, connect with ssh using your <a class="reference external" href="https://github.com/neuropoly/neuropoly-internal-docs/tree/24a8cfb83736a4325aa342ece74a89846c1f700d/computing-resources/onboarding/accounts.md#polygrames">polygrames</a> account.</p>
-</div>
-<div class="section" id="hardware">
-<h2>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="hardware">
+<h2>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">#</a></h2>
 <p>You can inspect the available GPUs on machine, and their current state, with <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ nvidia-smi
 Fri Jun  4 01:26:14 2021       
@@ -1101,14 +1134,14 @@ Fri Jun  4 01:26:14 2021
 +-----------------------------------------------------------------------------+
 </pre></div>
 </div>
-</div>
-<div class="section" id="software">
-<h2>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="software">
+<h2>Software<a class="headerlink" href="#software" title="Permalink to this headline">#</a></h2>
 <p>Both <a class="reference external" href="https://tensorflow.org"><code class="docutils literal notranslate"><span class="pre">tensorflow</span></code></a> and <a class="reference external" href="https://pytorch.org/"><code class="docutils literal notranslate"><span class="pre">torch</span></code></a> are supported on all of these machines.</p>
 <p>You can …</p>
 <p>To get your software onto these servers, download it with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code>.</p>
-<div class="section" id="gpu-agnostic-code">
-<h3>GPU-Agnostic code<a class="headerlink" href="#gpu-agnostic-code" title="Permalink to this headline">¶</a></h3>
+<section id="gpu-agnostic-code">
+<h3>GPU-Agnostic code<a class="headerlink" href="#gpu-agnostic-code" title="Permalink to this headline">#</a></h3>
 <p>For the benefit of being able to test code out locally, without the GPU servers, it’s helpful to write device-agnostic code, code that falls back to running on slower CPU emulation if GPUs are not available.</p>
 <p>For tensorflow, this</p>
 <p>For pytorch, this <a class="reference external" href="https://pytorch.org/docs/stable/notes/cuda.html#device-agnostic-code">looks like this</a></p>
@@ -1123,28 +1156,28 @@ X = torch.empty((8, 42), device=device)
 model = Network(...).to(device=device)
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="data">
-<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">#</a></h2>
 <p>As with the <a class="reference external" href="https://github.com/neuropoly/neuropoly-internal-docs/tree/24a8cfb83736a4325aa342ece74a89846c1f700d/computing-resources/computing-resources-neuropoly/stations.md#data">other stations</a>, you should prefer getting data in via <a class="reference external" href="https://github.com/neuropoly/data-management/blob/master/internal-server.md"><code class="docutils literal notranslate"><span class="pre">git-annex</span></code></a>, but you can it via <a class="reference external" href="https://github.com/neuropoly/neuropoly-internal-docs/tree/24a8cfb83736a4325aa342ece74a89846c1f700d/computing-resources/computing-resources-neuropoly/stations.md#duke"><code class="docutils literal notranslate"><span class="pre">duke</span></code></a> (which is available to you at <code class="docutils literal notranslate"><span class="pre">~/duke/temp</span></code>) or any other method (<code class="docutils literal notranslate"><span class="pre">scp</span></code>, <code class="docutils literal notranslate"><span class="pre">curl</span></code>, <code class="docutils literal notranslate"><span class="pre">wget</span></code>, etc).</p>
-</div>
-<div class="section" id="storage">
-<h2>Storage<a class="headerlink" href="#storage" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="long-term-slow-access-with-backup">
-<h3>Long term, slow access (with backup)<a class="headerlink" href="#long-term-slow-access-with-backup" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="storage">
+<h2>Storage<a class="headerlink" href="#storage" title="Permalink to this headline">#</a></h2>
+<section id="long-term-slow-access-with-backup">
+<h3>Long term, slow access (with backup)<a class="headerlink" href="#long-term-slow-access-with-backup" title="Permalink to this headline">#</a></h3>
 <p>For projects and permanent storage: <code class="docutils literal notranslate"><span class="pre">~/duke</span></code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Please, do not use space on duke while training your models. If you need more local space, post a request on slack #computers.</p>
 </div>
-</div>
-<div class="section" id="mid-term-rapid-access-no-backup">
-<h3>Mid-term, rapid access (no backup)<a class="headerlink" href="#mid-term-rapid-access-no-backup" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="mid-term-rapid-access-no-backup">
+<h3>Mid-term, rapid access (no backup)<a class="headerlink" href="#mid-term-rapid-access-no-backup" title="Permalink to this headline">#</a></h3>
 <p>This corresponds to your home <code class="docutils literal notranslate"><span class="pre">~/</span></code>. This is where you keep your software (conda envs, virtualenvs, etc.).</p>
-</div>
-<div class="section" id="short-term-very-rapid-access-no-backup">
-<h3>Short-term, very rapid access (no backup)<a class="headerlink" href="#short-term-very-rapid-access-no-backup" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="short-term-very-rapid-access-no-backup">
+<h3>Short-term, very rapid access (no backup)<a class="headerlink" href="#short-term-very-rapid-access-no-backup" title="Permalink to this headline">#</a></h3>
 <p>This is where you run your experiments (eg: deep learning training). On <code class="docutils literal notranslate"><span class="pre">rosenberg</span></code>, go to <code class="docutils literal notranslate"><span class="pre">~/data_nvme_$USER</span></code>or <code class="docutils literal notranslate"><span class="pre">~/data_extrassd_$USER</span></code>. On <code class="docutils literal notranslate"><span class="pre">bireli</span></code> and <code class="docutils literal notranslate"><span class="pre">romane</span></code> , go to your home <code class="docutils literal notranslate"><span class="pre">~/</span></code> .</p>
 <p>To keep track of your disk space, you can run <code class="docutils literal notranslate"><span class="pre">df</span></code>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u108545@rosenberg:~$ # to see how much space is available on the spare disk
@@ -1157,10 +1190,10 @@ u108545@rosenberg:~$ du -hs data_extrassd_u108545/miniconda3/
 18G    data_extrassd_u108545/miniconda3/
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="good-training-habits">
-<h2>Good Training Habits<a class="headerlink" href="#good-training-habits" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="good-training-habits">
+<h2>Good Training Habits<a class="headerlink" href="#good-training-habits" title="Permalink to this headline">#</a></h2>
 <p>Instead of loading the whole dataset to memory:</p>
 <ul class="simple">
 <li><p>Use HDF5Matrix: <a class="reference external" href="https://gist.github.com/jfsantos/e2ef822c744357a4ed16ec0c885100a3">https://gist.github.com/jfsantos/e2ef822c744357a4ed16ec0c885100a3</a></p></li>
@@ -1170,9 +1203,9 @@ u108545@rosenberg:~$ du -hs data_extrassd_u108545/miniconda3/
 <ul class="simple">
 <li><p>Store data as float32 rather than float64</p></li>
 </ul>
-</div>
-<div class="section" id="bookings">
-<h2>Bookings<a class="headerlink" href="#bookings" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="bookings">
+<h2>Bookings<a class="headerlink" href="#bookings" title="Permalink to this headline">#</a></h2>
 <p>Please allocate your GPUs cooperatively on the <a class="reference external" href="https://calendar.google.com/calendar?cid=NG1nNmJnZDlwdjU1dGhmOTQ4NnQybWlodDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">computer resource calendar</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1189,9 +1222,9 @@ u108545@rosenberg:~$ du -hs data_extrassd_u108545/miniconda3/
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ CUDA_VISIBLE_DEVICES=&quot;2,3,5&quot; ./train.sh
 </pre></div>
 </div>
-</div>
-<div class="section" id="monitoring">
-<h2>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="monitoring">
+<h2>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this headline">#</a></h2>
 <p>You can monitor what the system is doing with</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>htop   # CPU processes
 </pre></div>
@@ -1223,8 +1256,8 @@ u108545@rosenberg:~$ hddtemp /dev/sda2
 <li><p><a class="reference external" href="https://monitor.neuro.polymtl.ca/host/rosenberg.neuro.polymtl.ca/">https://monitor.neuro.polymtl.ca/host/rosenberg.neuro.polymtl.ca/</a></p></li>
 <li><p><a class="reference external" href="https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/">https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/</a></p></li>
 </ul>
-<div class="section" id="monitoring-gpus">
-<h3>Monitoring GPUs<a class="headerlink" href="#monitoring-gpus" title="Permalink to this headline">¶</a></h3>
+<section id="monitoring-gpus">
+<h3>Monitoring GPUs<a class="headerlink" href="#monitoring-gpus" title="Permalink to this headline">#</a></h3>
 <p>As above, you can see the computation amount, allocated RAM, temperature, fan speed of the GPUs on the command line with</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>nvidia-smi
 </pre></div>
@@ -1241,10 +1274,10 @@ u108545@rosenberg:~$ hddtemp /dev/sda2
 <li><p><code class="docutils literal notranslate"><span class="pre">romane</span></code> GPU 3: <a class="reference external" href="https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/#menu_nvidia_smi_submenu_gpu3_RTX_A6000">https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/#menu_nvidia_smi_submenu_gpu3_RTX_A6000</a></p></li>
 </ul>
 <p>Monitoring these metrics during training will help you make more efficient batch sizes and other optimizations.</p>
-</div>
-</div>
-<div class="section" id="tensorboard">
-<h2>Tensorboard<a class="headerlink" href="#tensorboard" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="tensorboard">
+<h2>Tensorboard<a class="headerlink" href="#tensorboard" title="Permalink to this headline">#</a></h2>
 <p><img alt="" src="../../_images/tensorboard.png" /></p>
 <p>This feature allows you to monitor various training and validation metrics across epochs. If training is happening on a remote station (typically the case), you need to run tensorboard on the remote station and establish an SSH tunnel to be able to see the TensorBoard on your local browser.</p>
 <p>To do on the remote GPU cluster:</p>
@@ -1276,20 +1309,20 @@ tensorboard --logdir PATH_TO_MODEL --port PORTNUMBER
 <li><p>Create an <a class="reference internal" href="#ssh-tunnelling"><span class="std std-ref">SSH tunnelling</span></a> between your local station and the remote server.</p></li>
 <li><p>Open a browser and go to: <a class="reference external" href="http://localhost:8080/">http://localhost:8080/</a>.</p></li>
 </ul>
-</div>
-<div class="section" id="ssh-tunnelling">
-<span id="id1"></span><h2>SSH tunnelling<a class="headerlink" href="#ssh-tunnelling" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="ssh-tunnelling">
+<span id="id1"></span><h2>SSH tunnelling<a class="headerlink" href="#ssh-tunnelling" title="Permalink to this headline">#</a></h2>
 <p>If you want to run a Jupyter notebook from a remote server, or monitor a model training using tensorboard, you will need to do an SSH tunnelling to be able to pass the display from the remote cluster to your local station.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="97e494fc-d61b-45f3-a8fe-c35d41d1b673" name="7b2df349-4995-4c63-b5fd-f9bc1f64e5d5" type="radio">
-</input><label class="tabbed-label" for="97e494fc-d61b-45f3-a8fe-c35d41d1b673">
+<input checked="checked" id="f69163a0-0e81-43c6-86cd-13d213c8c7f6" name="3df8847d-16cf-4784-9c2e-ae14014b1352" type="radio">
+</input><label class="tabbed-label" for="f69163a0-0e81-43c6-86cd-13d213c8c7f6">
 Secure pipes</label><div class="tabbed-content docutils">
 <p>Install secure pipes and configure it as follows:
 with port_rosenber as the “Port” of the screen session and port_local is a random number (see screenshot below):</p>
 <p><img alt="" src="../../_images/tunnelling_macos.png" /></p>
 </div>
-<input id="7b3f2254-bd2e-4e85-8c15-9466b1defe90" name="7b2df349-4995-4c63-b5fd-f9bc1f64e5d5" type="radio">
-</input><label class="tabbed-label" for="7b3f2254-bd2e-4e85-8c15-9466b1defe90">
+<input id="e3684546-6ade-4298-8abe-d5b3d7565a34" name="3df8847d-16cf-4784-9c2e-ae14014b1352" type="radio">
+</input><label class="tabbed-label" for="e3684546-6ade-4298-8abe-d5b3d7565a34">
 Terminal</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh -N -f -L localhost:8080:localhost:PORTNUMBER username@CLUSTER.neuro.polymtl.ca
 </pre></div>
@@ -1311,15 +1344,17 @@ Terminal</label><div class="tabbed-content docutils">
 <p>Reference: https://fizzylogic.nl/2017/11/06/edit-jupyter-notebooks-over-ssh/</p>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="cpus.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1335,24 +1370,28 @@ Terminal</label><div class="tabbed-content docutils">
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By NeuroPoly<br/>
+  
+      &copy; Copyright 2021, NeuroPoly.<br/>
+</p>
+        </footer>
+    </div>
     
-      By NeuroPoly<br/>
-    
-        &copy; Copyright 2021, NeuroPoly.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>git-annex &#8212; NeuroPoly Lab Manual</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,23 +20,20 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -47,7 +46,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -56,14 +69,10 @@
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -790,64 +799,88 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
-<div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">Toggle navigation</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
             </div>
             
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-
-
-<!-- only one Github button activated, so collapse it into the main button, saving a click for users -->
-        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/git-annex.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fab fa-github"></i></button></a>
-
-
-</div>
-
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-            <!-- Launch buttons -->
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Page Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right"><a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/git-annex.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Page Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#installation">
    Installation
@@ -927,12 +960,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>git-annex</h1>
@@ -1028,11 +1060,12 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="git-annex">
-<h1>git-annex<a class="headerlink" href="#git-annex" title="Permalink to this headline">¶</a></h1>
+  <section id="git-annex">
+<h1>git-annex<a class="headerlink" href="#git-annex" title="Permalink to this headline">#</a></h1>
 <p><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">annex</span></code></span> is an extension to git that lets it handle large repos spread in pieces across multiple servers/disks/accounts.</p>
 <p>We are using it because</p>
 <ol class="arabic simple">
@@ -1041,12 +1074,12 @@
 </ol>
 <p>It has about a thousand variants and options. This covers only the parts we use.</p>
 <p><code class="docutils literal notranslate"><span class="pre">git-annex</span></code> brings with it all the power of <code class="docutils literal notranslate"><span class="pre">git</span></code>. You should be somewhat familiar with branches, tags,. Please read <a class="reference external" href="https://git-scm.com/book/en/v2">the git book</a>. The <a class="reference external" href="https://handbook.datalad.org/">datalad handbook</a> also has useful perspective, though not all of it is relevant to how we do things.</p>
-<div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
 <p>You must have a unix OS. <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> is simply not compatible with anything else.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="7aee1961-bcc5-41af-9b84-0c343bf600f5" name="467b94dc-bc70-4a08-8fe6-09a9e6bb8e7a" type="radio">
-</input><label class="tabbed-label" for="7aee1961-bcc5-41af-9b84-0c343bf600f5">
+<input checked="checked" id="3ea74bf0-d45d-4a14-9929-a655e185feaf" name="a607d2b4-d530-4834-988e-4c9950334b46" type="radio">
+</input><label class="tabbed-label" for="3ea74bf0-d45d-4a14-9929-a655e185feaf">
 Linux</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p><strong>Arch</strong>: <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-Sy</span> <span class="pre">git-annex</span></code></p></li>
@@ -1056,15 +1089,15 @@ Linux</label><div class="tabbed-content docutils">
 <li><p>if on an older system and can’t upgrade, you can try <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">installing <code class="docutils literal notranslate"><span class="pre">conda</span></code></a> (or <a class="reference external" href="https://github.com/conda-forge/miniforge/">miniforge</a> and then using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-f</span> <span class="pre">conda-forge</span> <span class="pre">git-annex</span></code>.</p></li>
 </ul>
 </div>
-<input id="1a59b04b-62e1-4f06-b7dc-9e5db3044b46" name="467b94dc-bc70-4a08-8fe6-09a9e6bb8e7a" type="radio">
-</input><label class="tabbed-label" for="1a59b04b-62e1-4f06-b7dc-9e5db3044b46">
+<input id="3c728bb8-d982-444c-94e2-2a71ae13aaf6" name="a607d2b4-d530-4834-988e-4c9950334b46" type="radio">
+</input><label class="tabbed-label" for="3c728bb8-d982-444c-94e2-2a71ae13aaf6">
 macOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">git</span><span class="o">-</span><span class="n">annex</span>
 </pre></div>
 </div>
 </div>
-<input id="5b0b9d75-21c6-4354-8163-80643428de14" name="467b94dc-bc70-4a08-8fe6-09a9e6bb8e7a" type="radio">
-</input><label class="tabbed-label" for="5b0b9d75-21c6-4354-8163-80643428de14">
+<input id="ad2b1dae-df61-42b4-b9cc-9132396e3f43" name="a607d2b4-d530-4834-988e-4c9950334b46" type="radio">
+</input><label class="tabbed-label" for="ad2b1dae-df61-42b4-b9cc-9132396e3f43">
 Windows 10 (via WSL)</label><div class="tabbed-content docutils">
 <p>Install <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a>, pick a distro, and then run one of:</p>
 <ul class="simple">
@@ -1073,8 +1106,8 @@ Windows 10 (via WSL)</label><div class="tabbed-content docutils">
 <li><p>The <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions">other distros</a> are supported.</p></li>
 </ul>
 </div>
-<input id="3d4d4b46-b1e4-4d26-a719-f98dfff47242" name="467b94dc-bc70-4a08-8fe6-09a9e6bb8e7a" type="radio">
-</input><label class="tabbed-label" for="3d4d4b46-b1e4-4d26-a719-f98dfff47242">
+<input id="0688a5b3-82cb-4014-ab50-126999ef3c31" name="a607d2b4-d530-4834-988e-4c9950334b46" type="radio">
+</input><label class="tabbed-label" for="0688a5b3-82cb-4014-ab50-126999ef3c31">
 Windows 10 (via VirtualBox)</label><div class="tabbed-content docutils">
 <p>Install <a class="reference external" href="https://virtualbox.org/">VirtualBox</a>, install a Linux distro inside of it, and then follow the Linux instructions.</p>
 </div>
@@ -1094,8 +1127,8 @@ upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 </pre></div>
 </div>
 </div>
-<div class="section" id="global-git-config">
-<h3>Global <code class="docutils literal notranslate"><span class="pre">git</span></code> config<a class="headerlink" href="#global-git-config" title="Permalink to this headline">¶</a></h3>
+<section id="global-git-config">
+<h3>Global <code class="docutils literal notranslate"><span class="pre">git</span></code> config<a class="headerlink" href="#global-git-config" title="Permalink to this headline">#</a></h3>
 <p>For smooth operation, everyone should do on all of their machines:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">push</span><span class="o">.</span><span class="n">default</span> <span class="n">current</span>
 </pre></div>
@@ -1105,10 +1138,10 @@ upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 </pre></div>
 </div>
 <p>See <span class="xref myst">below</span> to understand what this setting offers.</p>
-</div>
-</div>
-<div class="section" id="new-repo">
-<h2>New repo<a class="headerlink" href="#new-repo" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="new-repo">
+<h2>New repo<a class="headerlink" href="#new-repo" title="Permalink to this headline">#</a></h2>
 <p>Use this recipe to make new datasets:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">my</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">repo</span>
 <span class="n">cd</span> <span class="n">my</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">repo</span>
@@ -1148,9 +1181,9 @@ upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 </pre></div>
 </div>
 <p>If you are working on a private, internal dataset, continue by <span class="xref myst">uploading to <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code></span>.</p>
-</div>
-<div class="section" id="annex-thin-hardlinks-a-id-hardlinks">
-<h2><code class="docutils literal notranslate"><span class="pre">annex.thin</span></code> Hardlinks <a id="hardlinks"><a class="headerlink" href="#annex-thin-hardlinks-a-id-hardlinks" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="annex-thin-hardlinks-a-id-hardlinks">
+<h2><code class="docutils literal notranslate"><span class="pre">annex.thin</span></code> Hardlinks <a id="hardlinks"><a class="headerlink" href="#annex-thin-hardlinks-a-id-hardlinks" title="Permalink to this headline">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">annex.thin</span></code> saves a lot of space by deduplicating file content via <a class="reference external" href="https://wiki.debian.org/ln">hard links</a>:
 the files your checkout <code class="docutils literal notranslate"><span class="pre">repo/</span></code> will be physically the same content as their sources in <code class="docutils literal notranslate"><span class="pre">repo/.git/annex/objects/</span></code>, instead of copies.</p>
 <p>To confirm this is working, you can compare the size of the content with the annex.
@@ -1181,15 +1214,15 @@ nguenther@data:~/datasets/uk-biobank-processed$ du -hs uk-biobank-processed/.git
  ./.git/annex/objects/6V/X3/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
 </pre></div>
 </div>
-</div>
-<div class="section" id="troubleshooting">
-<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="version-problems">
-<h3>version problems<a class="headerlink" href="#version-problems" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h2>
+<section id="version-problems">
+<h3>version problems<a class="headerlink" href="#version-problems" title="Permalink to this headline">#</a></h3>
 <p>If you have any error at all, the first thing to check is that you have <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> version 8, <a class="reference internal" href="#installation"><span class="std std-doc">as explained above</span></a>.</p>
-</div>
-<div class="section" id="checking-annex-file-locations">
-<h3>checking annex file locations<a class="headerlink" href="#checking-annex-file-locations" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="checking-annex-file-locations">
+<h3>checking annex file locations<a class="headerlink" href="#checking-annex-file-locations" title="Permalink to this headline">#</a></h3>
 <p>The content of annexed files that have been downloaded locally is stored under <code class="docutils literal notranslate"><span class="pre">repo/.git/annex/objects/</span></code>. You can find which specific file corresponds to by using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">show</span></code> or <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">-p</span></code> to see the content that <code class="docutils literal notranslate"><span class="pre">git</span></code> has recorded for the file – which will be a string giving the “annex pointer”:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git show HEAD:derivatives/labels/sub-1140317/anat/sub-1140317_T1w_seg-manual.nii.gz
 /annex/objects/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
@@ -1201,9 +1234,9 @@ nguenther@data:~/datasets/uk-biobank-processed$ du -hs uk-biobank-processed/.git
 .git/annex/objects/6V/X3/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
 </pre></div>
 </div>
-</div>
-<div class="section" id="a-cosmetic-problem-affecting-git-status">
-<h3>“a cosmetic problem affecting git status”<a class="headerlink" href="#a-cosmetic-problem-affecting-git-status" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="a-cosmetic-problem-affecting-git-status">
+<h3>“a cosmetic problem affecting git status”<a class="headerlink" href="#a-cosmetic-problem-affecting-git-status" title="Permalink to this headline">#</a></h3>
 <p>Sometimes the <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> filter will glitch, particularly during long uploads or downloads.
 It will usually – but not always – give you a warning in these cases saying “a cosmetic problem affecting git status”.
 Despite the innocuous sounded warning, this glitch prevents git operating.
@@ -1214,9 +1247,9 @@ A symptom of this glitch is that <code class="docutils literal notranslate"><spa
 </div>
 <p>This doesn’t touch file contents, so it should be safe to run anytime.</p>
 <p>The issue is that git-annex v8 uses a filter to expand the small pointers committed to git to full files and vice versa, and if interrupted while doing its work, it can leave files with full annexed contents that do not match the annex pointers git is expecting to see. <code class="docutils literal notranslate"><span class="pre">update-index</span></code> gives git a kickstart to fix it.</p>
-</div>
-<div class="section" id="resetting">
-<h3>Resetting<a class="headerlink" href="#resetting" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="resetting">
+<h3>Resetting<a class="headerlink" href="#resetting" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">git-annex</span> <span class="pre">init</span></code> writes to a lot of places: the <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> branch,
 <code class="docutils literal notranslate"><span class="pre">.git/annex</span></code> (including several sqlite databases?), <code class="docutils literal notranslate"><span class="pre">.git</span></code>/config,
 and, sometimes, <code class="docutils literal notranslate"><span class="pre">.git/info/attributes</span></code>.</p>
@@ -1230,9 +1263,9 @@ complete repo, you can use</p>
 <span class="c1">#  then git annex init again? or what?</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="rm-cannot-remove">
-<h3><code class="docutils literal notranslate"><span class="pre">rm:</span> <span class="pre">cannot</span> <span class="pre">remove</span></code><a class="headerlink" href="#rm-cannot-remove" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="rm-cannot-remove">
+<h3><code class="docutils literal notranslate"><span class="pre">rm:</span> <span class="pre">cannot</span> <span class="pre">remove</span></code><a class="headerlink" href="#rm-cannot-remove" title="Permalink to this headline">#</a></h3>
 <p>When trying to get rid of a git-annex dataset, you will run into, for example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rm -rf data-single-subject/
 [...]
@@ -1246,16 +1279,18 @@ rm: cannot remove &#39;data-single-subject/.git/annex/objects/79/G6/SHA256E-s718
 $ rm -rf data-single-subject/
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="git.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1271,24 +1306,28 @@ $ rm -rf data-single-subject/
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By NeuroPoly<br/>
+  
+      &copy; Copyright 2021, NeuroPoly.<br/>
+</p>
+        </footer>
+    </div>
     
-      By NeuroPoly<br/>
-    
-        &copy; Copyright 2021, NeuroPoly.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

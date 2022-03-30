@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Bash/Shell &#8212; NeuroPoly Lab Manual</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,23 +20,20 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -47,7 +46,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -56,14 +69,10 @@
     <div class="container-xl">
       <div class="row">
           
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -790,64 +799,88 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
-<div class="sbt-scroll-pixel-helper"></div>
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            <div class="topbar-left">
-                
-                <label class="nav-toggle-button" for="__navigation">
-                    <div class="visually-hidden">Toggle navigation</div>
-                    <i class="fas fa-bars"></i>
-                </label>
-                
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
             </div>
             
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-
-
-<!-- only one Github button activated, so collapse it into the main button, saving a click for users -->
-        <a class="edit-button" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/bash-shell/README.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fab fa-github"></i></button></a>
-
-
-</div>
-
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-            <!-- Launch buttons -->
-
         </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Page Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right"><a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/bash-shell/README.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+
+</a>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Page Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#awesome-links">
    Awesome links
@@ -1110,12 +1143,11 @@
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Bash/Shell</h1>
@@ -1394,21 +1426,22 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="bash-shell">
-<h1>Bash/Shell<a class="headerlink" href="#bash-shell" title="Permalink to this headline">¶</a></h1>
+  <section id="bash-shell">
+<h1>Bash/Shell<a class="headerlink" href="#bash-shell" title="Permalink to this headline">#</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<div class="section" id="awesome-links">
-<h2>Awesome links<a class="headerlink" href="#awesome-links" title="Permalink to this headline">¶</a></h2>
+<section id="awesome-links">
+<h2>Awesome links<a class="headerlink" href="#awesome-links" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://devhints.io/bash">Bash scripting cheatsheet</a></p></li>
 </ul>
-</div>
-<div class="section" id="hdd-parameters">
-<h2>HDD parameters<a class="headerlink" href="#hdd-parameters" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="hdd-parameters">
+<h2>HDD parameters<a class="headerlink" href="#hdd-parameters" title="Permalink to this headline">#</a></h2>
 <p>Check disk space:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">-</span><span class="n">h</span>
 </pre></div>
@@ -1421,29 +1454,29 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">fdisk</span> <span class="o">-</span><span class="n">l</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="file-folders">
-<h2>File/Folders<a class="headerlink" href="#file-folders" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="copying">
-<h3>Copying<a class="headerlink" href="#copying" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="copy-and-synchronize-with-rsync">
-<h4><strong>Copy (and synchronize) with rsync</strong><a class="headerlink" href="#copy-and-synchronize-with-rsync" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="file-folders">
+<h2>File/Folders<a class="headerlink" href="#file-folders" title="Permalink to this headline">#</a></h2>
+<section id="copying">
+<h3>Copying<a class="headerlink" href="#copying" title="Permalink to this headline">#</a></h3>
+<section id="copy-and-synchronize-with-rsync">
+<h4><strong>Copy (and synchronize) with rsync</strong><a class="headerlink" href="#copy-and-synchronize-with-rsync" title="Permalink to this headline">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rsync -azP &lt;FILE_SRC&gt; &lt;FILE_DEST&gt;
 rsync -azP &lt;FOLDER_SOURCE&gt; &lt;FOLDER_DEST&gt;  <span class="c1"># will create FOLDER_SOURCE inside FOLDER_DEST (if it does not exist), and will copy the content of FOLDER_SOURCE inside it</span>
 rsync -azP &lt;FOLDER_SOURCE&gt;/ &lt;FOLDER_DEST&gt;  <span class="c1"># will copy the content of FOLDER_SOURCE inside FOLDER_DEST</span>
 <span class="c1"># For nii.gz files, no need to further compress so -z can be dropped</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="copy-from-remote-station-via-scp">
-<h4><strong>Copy from remote station via scp</strong><a class="headerlink" href="#copy-from-remote-station-via-scp" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="copy-from-remote-station-via-scp">
+<h4><strong>Copy from remote station via scp</strong><a class="headerlink" href="#copy-from-remote-station-via-scp" title="Permalink to this headline">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp username@hostname:&lt;/PATH_TO_FILE&gt;
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="finding">
-<h3>Finding<a class="headerlink" href="#finding" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="finding">
+<h3>Finding<a class="headerlink" href="#finding" title="Permalink to this headline">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -name <span class="s2">&quot;dti*&quot;</span>
 </pre></div>
 </div>
@@ -1459,17 +1492,17 @@ rsync -azP &lt;FOLDER_SOURCE&gt;/ &lt;FOLDER_DEST&gt;  <span class="c1"># will c
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -type f -iname <span class="s2">&quot;dti*.*&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="deleting">
-<h3>Deleting<a class="headerlink" href="#deleting" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="delete-non-empty-folder">
-<h4><strong>Delete non-empty folder</strong><a class="headerlink" href="#delete-non-empty-folder" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="deleting">
+<h3>Deleting<a class="headerlink" href="#deleting" title="Permalink to this headline">#</a></h3>
+<section id="delete-non-empty-folder">
+<h4><strong>Delete non-empty folder</strong><a class="headerlink" href="#delete-non-empty-folder" title="Permalink to this headline">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm -rf &lt;FOLDER&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="delete-a-bunch-of-files">
-<h4><strong>Delete a bunch of files</strong><a class="headerlink" href="#delete-a-bunch-of-files" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="delete-a-bunch-of-files">
+<h4><strong>Delete a bunch of files</strong><a class="headerlink" href="#delete-a-bunch-of-files" title="Permalink to this headline">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -name <span class="s2">&quot;dti*&quot;</span> -delete
 </pre></div>
 </div>
@@ -1481,12 +1514,12 @@ rsync -azP &lt;FOLDER_SOURCE&gt;/ &lt;FOLDER_DEST&gt;  <span class="c1"># will c
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find ~ -name ‘*.log’ -print0 <span class="p">|</span> xargs -0 rm -f
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="renaming">
-<h3>Renaming<a class="headerlink" href="#renaming" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="rename-files-with-a-given-extension">
-<h4>Rename files with a given extension<a class="headerlink" href="#rename-files-with-a-given-extension" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="renaming">
+<h3>Renaming<a class="headerlink" href="#renaming" title="Permalink to this headline">#</a></h3>
+<section id="rename-files-with-a-given-extension">
+<h4>Rename files with a given extension<a class="headerlink" href="#rename-files-with-a-given-extension" title="Permalink to this headline">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls *.&lt;EXT&gt; <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> F<span class="p">;</span> <span class="k">do</span> mv <span class="nv">$F</span> &lt;NEW_FILE_NAME&gt;_<span class="nv">$F</span><span class="p">;</span> <span class="k">done</span>
 </pre></div>
 </div>
@@ -1506,9 +1539,9 @@ rsync -azP &lt;FOLDER_SOURCE&gt;/ &lt;FOLDER_DEST&gt;  <span class="c1"># will c
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>SetFile -d <span class="s1">&#39;DD/MM/YYYY HH:MM:SS&#39;</span> &lt;FILE&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="size-of-a-disk-folder-a-href-size-of-a-diskfolder-id-size-of-a-diskfolder-a">
-<h4>Size of a disk/folder <a href="size_of_a_diskfolder" id="size_of_a_diskfolder"></a><a class="headerlink" href="#size-of-a-disk-folder-a-href-size-of-a-diskfolder-id-size-of-a-diskfolder-a" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="size-of-a-disk-folder-a-href-size-of-a-diskfolder-id-size-of-a-diskfolder-a">
+<h4>Size of a disk/folder <a href="size_of_a_diskfolder" id="size_of_a_diskfolder"></a><a class="headerlink" href="#size-of-a-disk-folder-a-href-size-of-a-diskfolder-id-size-of-a-diskfolder-a" title="Permalink to this headline">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>du -sh &lt;FOLDER&gt;
 </pre></div>
 </div>
@@ -1521,9 +1554,9 @@ rsync -azP &lt;FOLDER_SOURCE&gt;/ &lt;FOLDER_DEST&gt;  <span class="c1"># will c
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">-</span><span class="n">h</span> <span class="o">.</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="number-of-files-a-href-number-of-files-id-number-of-files-a">
-<h4>Number of files <a href="number_of_files" id="number_of_files"></a><a class="headerlink" href="#number-of-files-a-href-number-of-files-id-number-of-files-a" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="number-of-files-a-href-number-of-files-id-number-of-files-a">
+<h4>Number of files <a href="number_of_files" id="number_of_files"></a><a class="headerlink" href="#number-of-files-a-href-number-of-files-id-number-of-files-a" title="Permalink to this headline">#</a></h4>
 <p>== Get number of files that match a pattern</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">dq</span> <span class="o">*</span><span class="n">pattern</span><span class="o">*</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
 </pre></div>
@@ -1544,26 +1577,26 @@ rsync -azP &lt;FOLDER_SOURCE&gt;/ &lt;FOLDER_DEST&gt;  <span class="c1"># will c
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="n">maxdepth</span> <span class="mi">1</span> <span class="o">-</span><span class="n">mindepth</span> <span class="mi">1</span> <span class="o">-</span><span class="nb">type</span> <span class="n">d</span> <span class="o">-</span><span class="n">exec</span> <span class="n">sh</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;echo &quot;</span><span class="si">{}</span><span class="s1"> : $(find &quot;</span><span class="si">{}</span><span class="s1">&quot; -type f | wc -l)&quot; file\(s\)&#39;</span> \<span class="p">;</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="permissions">
-<h3>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="change-permissions">
-<h4><strong>Change permissions</strong><a class="headerlink" href="#change-permissions" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="permissions">
+<h3>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">#</a></h3>
+<section id="change-permissions">
+<h4><strong>Change permissions</strong><a class="headerlink" href="#change-permissions" title="Permalink to this headline">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod <span class="m">644</span>  <span class="c1"># make a file readable by anyone and writable by the owner only.</span>
 chmod <span class="m">755</span>	 <span class="c1"># make a file readable/executable by everyone and writable by the owner only.</span>
 chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no access for everyone</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="change-owner-of-a-file">
-<h4><strong>Change owner of a file</strong><a class="headerlink" href="#change-owner-of-a-file" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="change-owner-of-a-file">
+<h4><strong>Change owner of a file</strong><a class="headerlink" href="#change-owner-of-a-file" title="Permalink to this headline">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo chown &lt;OWNER&gt; &lt;FILE&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="look-for-group-owner-permission">
-<h4><strong>Look for group owner &amp; permission</strong><a class="headerlink" href="#look-for-group-owner-permission" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="look-for-group-owner-permission">
+<h4><strong>Look for group owner &amp; permission</strong><a class="headerlink" href="#look-for-group-owner-permission" title="Permalink to this headline">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls -le@a
 </pre></div>
 </div>
@@ -1580,17 +1613,17 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">~/</span><span class="n">Documents</span> <span class="o">-</span><span class="nb">type</span> <span class="n">f</span> <span class="o">-</span><span class="n">ctime</span> <span class="o">-</span><span class="mi">0</span> <span class="o">|</span> <span class="n">more</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="stdout-stderr-a-href-stdoutstderr-id-stdoutstderr-a">
-<h4>Stdout / Stderr <a href="stdoutstderr" id="stdoutstderr"></a><a class="headerlink" href="#stdout-stderr-a-href-stdoutstderr-id-stdoutstderr-a" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="stdout-stderr-a-href-stdoutstderr-id-stdoutstderr-a">
+<h4>Stdout / Stderr <a href="stdoutstderr" id="stdoutstderr"></a><a class="headerlink" href="#stdout-stderr-a-href-stdoutstderr-id-stdoutstderr-a" title="Permalink to this headline">#</a></h4>
 <p><a class="reference external" href="https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file">https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file</a>Edit</p>
-</div>
-</div>
-</div>
-<div class="section" id="compression-extraction">
-<h2>Compression/Extraction<a class="headerlink" href="#compression-extraction" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="tar">
-<h3><strong>tar</strong><a class="headerlink" href="#tar" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+</section>
+<section id="compression-extraction">
+<h2>Compression/Extraction<a class="headerlink" href="#compression-extraction" title="Permalink to this headline">#</a></h2>
+<section id="tar">
+<h3><strong>tar</strong><a class="headerlink" href="#tar" title="Permalink to this headline">#</a></h3>
 <p>compress:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">czf</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">folder</span><span class="o">/</span><span class="n">filename</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">folder</span>
 </pre></div>
@@ -1599,9 +1632,9 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">zxvf</span> <span class="n">filename</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="zip">
-<h3><strong>zip</strong><a class="headerlink" href="#zip" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="zip">
+<h3><strong>zip</strong><a class="headerlink" href="#zip" title="Permalink to this headline">#</a></h3>
 <p>compress folder:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">zip</span> <span class="o">-</span><span class="n">r</span> <span class="n">archive</span><span class="o">.</span><span class="n">zip</span> <span class="n">folder</span><span class="o">/</span>
 
@@ -1615,19 +1648,19 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 </div>
 <p><strong>copie de fichiers ds une directory</strong></p>
 <p>find -name sica*.png | xargs -t -i /bin/cp ./{} ./imagesEdit</p>
-<div class="section" id="checksum-a-href-checksum-id-checksum-a">
-<h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">¶</a></h4>
+<section id="checksum-a-href-checksum-id-checksum-a">
+<h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">#</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="1347ac54-b902-4a30-9336-4a971f90b60d" name="665f06a3-2bd0-459e-a0c0-e8ff2c550355" type="radio">
-</input><label class="tabbed-label" for="1347ac54-b902-4a30-9336-4a971f90b60d">
+<input checked="checked" id="559f5fc5-7fb1-4e16-802c-27d292cdbf88" name="9802c335-a8e4-4155-acfc-0bd8b76f94e3" type="radio">
+</input><label class="tabbed-label" for="559f5fc5-7fb1-4e16-802c-27d292cdbf88">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
 </pre></div>
 </div>
 </div>
-<input id="519be9fa-8707-4680-93b7-f293503483ad" name="665f06a3-2bd0-459e-a0c0-e8ff2c550355" type="radio">
-</input><label class="tabbed-label" for="519be9fa-8707-4680-93b7-f293503483ad">
+<input id="e9553eae-2818-46cf-86db-5a80b1707d7b" name="9802c335-a8e4-4155-acfc-0bd8b76f94e3" type="radio">
+</input><label class="tabbed-label" for="e9553eae-2818-46cf-86db-5a80b1707d7b">
 Mac</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
 find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5
@@ -1635,61 +1668,61 @@ find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="remove-files-from-tmp-a-href-remove-files-from-tmp-id-remove-files-from-tmp-a">
-<h4>Remove files from tmp <a href="remove_files_from_tmp" id="remove_files_from_tmp"></a><a class="headerlink" href="#remove-files-from-tmp-a-href-remove-files-from-tmp-id-remove-files-from-tmp-a" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="remove-files-from-tmp-a-href-remove-files-from-tmp-id-remove-files-from-tmp-a">
+<h4>Remove files from tmp <a href="remove_files_from_tmp" id="remove_files_from_tmp"></a><a class="headerlink" href="#remove-files-from-tmp-a-href-remove-files-from-tmp-id-remove-files-from-tmp-a" title="Permalink to this headline">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -name <span class="s2">&quot;tmp.*&quot;</span> -type d -print0 <span class="p">|</span> xargs -0 /bin/rm -rf
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="bash-profile">
-<h2>.bash_profile<a class="headerlink" href="#bash-profile" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="bash-profile">
+<h2>.bash_profile<a class="headerlink" href="#bash-profile" title="Permalink to this headline">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> file is launched when you open a new terminal. You can configure your environment variables from there. It is located in your home folder (<code class="docutils literal notranslate"><span class="pre">$HOME</span></code>).</p>
 <p>To load it:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> ~/.bash_profile
 </pre></div>
 </div>
-</div>
-<div class="section" id="emails">
-<h2>Emails<a class="headerlink" href="#emails" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="emails">
+<h2>Emails<a class="headerlink" href="#emails" title="Permalink to this headline">#</a></h2>
 <p><strong>send email</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;something&quot;</span> <span class="p">|</span> mailx -s <span class="s2">&quot;subject&quot;</span> someone@email.com
 </pre></div>
 </div>
-</div>
-<div class="section" id="processes">
-<h2>Processes<a class="headerlink" href="#processes" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="check-processes">
-<h3><strong>Check Processes</strong><a class="headerlink" href="#check-processes" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="processes">
+<h2>Processes<a class="headerlink" href="#processes" title="Permalink to this headline">#</a></h2>
+<section id="check-processes">
+<h3><strong>Check Processes</strong><a class="headerlink" href="#check-processes" title="Permalink to this headline">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ps aux
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">top</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="killing-processes">
-<h3><strong>Killing Processes</strong><a class="headerlink" href="#killing-processes" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="kill-a-process-based-on-pid">
-<h4><strong>kill a process based on PID</strong><a class="headerlink" href="#kill-a-process-based-on-pid" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="killing-processes">
+<h3><strong>Killing Processes</strong><a class="headerlink" href="#killing-processes" title="Permalink to this headline">#</a></h3>
+<section id="kill-a-process-based-on-pid">
+<h4><strong>kill a process based on PID</strong><a class="headerlink" href="#kill-a-process-based-on-pid" title="Permalink to this headline">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">kill</span> -9 &lt;<span class="s2">&quot;PID&quot;</span>&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="kill-a-process-from-a-user">
-<h4><strong>kill a process from a user</strong><a class="headerlink" href="#kill-a-process-from-a-user" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="kill-a-process-from-a-user">
+<h4><strong>kill a process from a user</strong><a class="headerlink" href="#kill-a-process-from-a-user" title="Permalink to this headline">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pkill -U &lt;USER&gt; 
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="internet-network">
-<h2>Internet / Network<a class="headerlink" href="#internet-network" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="download-file-from-internet">
-<h3>Download file from internet<a class="headerlink" href="#download-file-from-internet" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+</section>
+<section id="internet-network">
+<h2>Internet / Network<a class="headerlink" href="#internet-network" title="Permalink to this headline">#</a></h2>
+<section id="download-file-from-internet">
+<h3>Download file from internet<a class="headerlink" href="#download-file-from-internet" title="Permalink to this headline">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -o filename -L &lt;URL&gt;
 <span class="c1"># Example for OSF file (note the &quot;?action=download&quot; added after the URL):</span>
 curl -o data.zip -L https://osf.io/76jkx/?action<span class="o">=</span>download
@@ -1699,11 +1732,11 @@ curl -o data.zip -L https://osf.io/76jkx/?action<span class="o">=</span>download
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget -O data &lt;URL&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="id1">
-<h3>Copying<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="copy-file-between-computers">
-<h4>Copy file between computers<a class="headerlink" href="#copy-file-between-computers" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="id1">
+<h3>Copying<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<section id="copy-file-between-computers">
+<h4>Copy file between computers<a class="headerlink" href="#copy-file-between-computers" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p><a class="reference external" href="https://magic-wormhole.readthedocs.io/en/latest/">https://magic-wormhole.readthedocs.io/en/latest/</a></p></li>
 <li><p><a class="reference external" href="https://clbin.com">https://clbin.com/</a> (featuring CLI uploading) ( running <a class="reference external" href="http://github.com/rupa/sprunge">http://github.com/rupa/sprunge</a> )</p></li>
@@ -1728,17 +1761,17 @@ curl -o data.zip -L https://osf.io/76jkx/?action<span class="o">=</span>download
 6. `git add .; git commit; git push`
 </pre></div>
 </div>
-</div>
-<div class="section" id="copy-from-a-remote-station">
-<h4><strong>Copy from a remote station</strong><a class="headerlink" href="#copy-from-a-remote-station" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="copy-from-a-remote-station">
+<h4><strong>Copy from a remote station</strong><a class="headerlink" href="#copy-from-a-remote-station" title="Permalink to this headline">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp username@station.domain: &lt;/PATH/FILE&gt; . <span class="c1"># copy file</span>
 scp username@station.domain: &lt;/PATH/&gt; . -r <span class="c1"># copy folder</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="network-dns">
-<h3>Network/DNS<a class="headerlink" href="#network-dns" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="network-dns">
+<h3>Network/DNS<a class="headerlink" href="#network-dns" title="Permalink to this headline">#</a></h3>
 <p><strong>List all stations on the network (only works on a server)</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">findsmb</span>
 </pre></div>
@@ -1762,10 +1795,10 @@ scp username@station.domain: &lt;/PATH/&gt; . -r <span class="c1"># copy folder<
 <span class="n">ssh</span> <span class="n">username</span><span class="nd">@station</span><span class="o">.</span><span class="n">domain</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="screen-for-background-processes">
-<h2>Screen (for background processes)<a class="headerlink" href="#screen-for-background-processes" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="screen-for-background-processes">
+<h2>Screen (for background processes)<a class="headerlink" href="#screen-for-background-processes" title="Permalink to this headline">#</a></h2>
 <p>Let’s say you connect to a station from your laptop and you wish to launch a script that will run for several hours. If you close your laptop, the remote script will stop. To prevent this, use <code class="docutils literal notranslate"><span class="pre">screen</span></code>. It opens a virtual environment from a remote station, so that any script launched within this environment will continue running even if you close your laptop.</p>
 <p>Step-by-step procedure:</p>
 <ol class="arabic simple">
@@ -1800,9 +1833,9 @@ screen -X -S <span class="o">[</span>session <span class="c1"># you want to kill
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen -S &lt;NAME_OF_SESSION&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="ssh-public-key">
-<h2>SSH Public Key<a class="headerlink" href="#ssh-public-key" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="ssh-public-key">
+<h2>SSH Public Key<a class="headerlink" href="#ssh-public-key" title="Permalink to this headline">#</a></h2>
 <p>Create key on the client (do this only once):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen -t rsa
 </pre></div>
@@ -1811,9 +1844,9 @@ screen -X -S <span class="o">[</span>session <span class="c1"># you want to kill
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-copy-id demo@198.51.100.0
 </pre></div>
 </div>
-</div>
-<div class="section" id="vim-text-editor">
-<h2>VIM Text Editor<a class="headerlink" href="#vim-text-editor" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="vim-text-editor">
+<h2>VIM Text Editor<a class="headerlink" href="#vim-text-editor" title="Permalink to this headline">#</a></h2>
 <p>Simple but great editor. Usually installed everywhere.</p>
 <blockquote>
 <div><p>:w = save<br />
@@ -1825,15 +1858,17 @@ screen -X -S <span class="o">[</span>session <span class="c1"># you want to kill
 add: syntax on
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../useful-links.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1849,24 +1884,28 @@ add: syntax on
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By NeuroPoly<br/>
+  
+      &copy; Copyright 2021, NeuroPoly.<br/>
+</p>
+        </footer>
+    </div>
     
-      By NeuroPoly<br/>
-    
-        &copy; Copyright 2021, NeuroPoly.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
