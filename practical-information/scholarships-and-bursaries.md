@@ -9,6 +9,7 @@
 * [IVADO](https://ivado.ca/en/ivado-scholarships/excellence-scholarships-msc/)
 * [TransMedTech](https://www.polymtl.ca/transmedtech/programmes-de-financement-et-daccompagnement)
 * QBIN
+* [UNIQUE research group](https://www.unique.quebec/funding)
 
 For students in neurosciences:
 
