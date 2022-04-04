@@ -22,10 +22,14 @@
 
 ## B0 Shimming
 
-@Alex todo
+@Alex todo (notably list talks from UHF meeting)
 
 ## **B1 Shimming**
+
 * [Jupyter book](https://shimming-toolbox.github.io/B1-shimming/) covering the basics of static B1+ shimming
+* [🔒 🎥 Universal Pulse]() TODO
+* [🔒 VOP creation (internal documentation)](https://docs.google.com/document/d/1uqr4UX4VY8H8cZ_DB9zaj12o0xrswRj44AxE3FZauHM/edit#heading=h.uf4xboevl4xa)
+@Gaspard todo: (notably list talks from UHF meeting)
 
 ## MRI Hardware
 
