@@ -32,6 +32,9 @@
 * [Understanding MRI: basic MR physics for physicians](https://pmj.bmj.com/content/postgradmedj/89/1050/209.full.pdf)
 * [AAPM/RSNA Physics: Tutorial for Residents - Fundamental Physics of MR Imaging](https://pubs.rsna.org/doi/10.1148/rg.254055027?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%3dpubmed)
 
+### **B1+ shimming**
+* [Jupyter book](https://shimming-toolbox.github.io/B1-shimming/) covering the basics of static B1+ shimming
+
 ## MRI Hardware
 
 * [Open source hardware at 7T from UMCU](https://github.com/umcu7tcoillab)
