@@ -24,7 +24,7 @@
 
 @Alex todo (notably list talks from UHF meeting)
 
-## **B1 Shimming**
+## B1 Shimming
 
 * [Jupyter book](https://shimming-toolbox.github.io/B1-shimming/) covering the basics of static B1+ shimming
 * [🔒 🎥 Universal Pulse]() TODO
