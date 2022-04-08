@@ -128,7 +128,6 @@ For the visibility of the lab, please use this template in [Keynote](https://dri
 
 * [http://colinpurrington.com/tips/academic/posterdesign](http://colinpurrington.com/tips/academic/posterdesign)
 * [http://betterposters.blogspot.co.uk/](http://betterposters.blogspot.co.uk/)
-* [http://www.bandwidthonline.org/howdoi/effective\_poster.asp](http://www.bandwidthonline.org/howdoi/effective_poster.asp)
 * [http://www.makesigns.com/tutorials/](http://www.makesigns.com/tutorials/)
 * [http://www.scientifica.uk.com/neurowire/how-to-make-your-scientific-posters-stand-out](http://www.scientifica.uk.com/neurowire/how-to-make-your-scientific-posters-stand-out)
 
