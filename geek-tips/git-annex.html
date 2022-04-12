@@ -1078,8 +1078,8 @@ title="Edit this page"
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
 <p>You must have a unix OS. <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> is simply not compatible with anything else.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="a46f614f-e4ab-487d-80d1-92294a8d2eea" name="575b9d82-2610-416a-9e7d-feb6dd417d46" type="radio">
-</input><label class="tabbed-label" for="a46f614f-e4ab-487d-80d1-92294a8d2eea">
+<input checked="checked" id="6a0b5fd7-3d2d-4aae-ae1f-6b24dbf45d03" name="3e390167-1849-4c0a-a9cc-cd8d89b52a18" type="radio">
+</input><label class="tabbed-label" for="6a0b5fd7-3d2d-4aae-ae1f-6b24dbf45d03">
 Linux</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p><strong>Arch</strong>: <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-Sy</span> <span class="pre">git-annex</span></code></p></li>
@@ -1089,15 +1089,15 @@ Linux</label><div class="tabbed-content docutils">
 <li><p>if on an older system and can’t upgrade, you can try <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">installing <code class="docutils literal notranslate"><span class="pre">conda</span></code></a> (or <a class="reference external" href="https://github.com/conda-forge/miniforge/">miniforge</a> and then using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-f</span> <span class="pre">conda-forge</span> <span class="pre">git-annex</span></code>.</p></li>
 </ul>
 </div>
-<input id="3627c25f-8bf2-4f1c-9182-35823fe7d1ed" name="575b9d82-2610-416a-9e7d-feb6dd417d46" type="radio">
-</input><label class="tabbed-label" for="3627c25f-8bf2-4f1c-9182-35823fe7d1ed">
+<input id="c47edf62-1004-4d60-80b5-414bc5e97511" name="3e390167-1849-4c0a-a9cc-cd8d89b52a18" type="radio">
+</input><label class="tabbed-label" for="c47edf62-1004-4d60-80b5-414bc5e97511">
 macOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">git</span><span class="o">-</span><span class="n">annex</span>
 </pre></div>
 </div>
 </div>
-<input id="55e46bb0-48bf-41ce-9dbe-cbd3b6c28722" name="575b9d82-2610-416a-9e7d-feb6dd417d46" type="radio">
-</input><label class="tabbed-label" for="55e46bb0-48bf-41ce-9dbe-cbd3b6c28722">
+<input id="f84f13b2-08f5-4279-bc95-427990142273" name="3e390167-1849-4c0a-a9cc-cd8d89b52a18" type="radio">
+</input><label class="tabbed-label" for="f84f13b2-08f5-4279-bc95-427990142273">
 Windows 10 (via WSL)</label><div class="tabbed-content docutils">
 <p>Install <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a>, pick a distro, and then run one of:</p>
 <ul class="simple">
@@ -1106,8 +1106,8 @@ Windows 10 (via WSL)</label><div class="tabbed-content docutils">
 <li><p>The <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions">other distros</a> are supported.</p></li>
 </ul>
 </div>
-<input id="1596a438-2156-475e-af9b-fb502f663ffa" name="575b9d82-2610-416a-9e7d-feb6dd417d46" type="radio">
-</input><label class="tabbed-label" for="1596a438-2156-475e-af9b-fb502f663ffa">
+<input id="f103376c-9805-4369-adf2-70ad673d1603" name="3e390167-1849-4c0a-a9cc-cd8d89b52a18" type="radio">
+</input><label class="tabbed-label" for="f103376c-9805-4369-adf2-70ad673d1603">
 Windows 10 (via VirtualBox)</label><div class="tabbed-content docutils">
 <p>Install <a class="reference external" href="https://virtualbox.org/">VirtualBox</a>, install a Linux distro inside of it, and then follow the Linux instructions.</p>
 </div>
@@ -1162,10 +1162,10 @@ upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 <span class="c1"># by default git-annex sets * filter=annex, but that is very slow:</span>
 <span class="c1"># it copies even non-annexed files through git-annex even though it will decide not to handle them.</span>
 <span class="c1"># this overrides that behaviour so that only annexed files must be processed.</span>
-<span class="o">*</span>             <span class="n">annex</span><span class="o">.</span><span class="n">largefiles</span><span class="o">=</span><span class="n">anything</span>
-<span class="o">*.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>      <span class="nb">filter</span><span class="o">=</span><span class="n">annex</span>
-<span class="o">*.</span><span class="n">nii</span>         <span class="nb">filter</span><span class="o">=</span><span class="n">annex</span>
-<span class="o">*.</span><span class="n">tif</span>         <span class="nb">filter</span><span class="o">=</span><span class="n">annex</span>
+<span class="o">*</span>             <span class="n">annex</span><span class="o">.</span><span class="n">largefiles</span><span class="o">=</span><span class="n">nothing</span>
+<span class="o">*.</span><span class="n">nii</span><span class="o">.</span><span class="n">gz</span>      <span class="nb">filter</span><span class="o">=</span><span class="n">annex</span> <span class="n">annex</span><span class="o">.</span><span class="n">largefiles</span><span class="o">=</span><span class="n">anything</span>
+<span class="o">*.</span><span class="n">nii</span>         <span class="nb">filter</span><span class="o">=</span><span class="n">annex</span> <span class="n">annex</span><span class="o">.</span><span class="n">largefiles</span><span class="o">=</span><span class="n">anything</span>
+<span class="o">*.</span><span class="n">tif</span>         <span class="nb">filter</span><span class="o">=</span><span class="n">annex</span> <span class="n">annex</span><span class="o">.</span><span class="n">largefiles</span><span class="o">=</span><span class="n">anything</span>
 <span class="n">EOF</span>
 
 <span class="n">git</span> <span class="n">add</span> <span class="o">.</span><span class="n">gitignore</span> <span class="o">.</span><span class="n">gitattributes</span> <span class="o">&amp;&amp;</span> <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Configure git-annex&quot;</span>
