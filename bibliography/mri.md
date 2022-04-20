@@ -22,7 +22,9 @@
 
 ## B0 Shimming
 
-@Alex todo (notably list talks from UHF meeting)
+* [🎥 ISMRM MR Academy - Magnetic Field B0 Shimming](https://www.youtube.com/watch?v=yRr5eUHcchs)
+* [🎥 ISMRM MR Academy - Magnetic Field B0 Shimming - Advanced](https://www.youtube.com/watch?v=8MinOsuqrYE)
+* [MRI Questions](https://mriquestions.com/active-shimming.html)
 
 ## B1 Shimming
 
