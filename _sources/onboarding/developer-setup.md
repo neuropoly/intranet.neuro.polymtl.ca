@@ -2,19 +2,11 @@
 
 For Python Dev environment setup, check the wiki of respective projects.
 
-## SCT <a id="sct"></a>
+## SCT
 
 Wiki: [https://github.com/neuropoly/spinalcordtoolbox/wiki/Contributing%3A-Installing-SCT-for-development](https://github.com/neuropoly/spinalcordtoolbox/wiki/Contributing%3A-Installing-SCT-for-development)
 
-TensorFlow 1.5 required because [https://github.com/neuropoly/spinalcordtoolbox/pull/2618](https://github.com/neuropoly/spinalcordtoolbox/pull/2618)
-
-**SCT**: [https://hub.docker.com/r/neuropoly/sct](https://hub.docker.com/r/neuropoly/sct)
-
-```{warning}
-Note: DockerHub not up to date as of 2021-03-08
-```
-
-## IvadoMed <a id="ivadomed"></a>
+## Ivadomed
 
 Wiki: [https://ivadomed.org/en/latest/installation.html](https://ivadomed.org/en/latest/installation.html)
 
@@ -22,11 +14,11 @@ Make sure to read this page from beginning to END, especially the [pre-commit ho
 
 PyTorch 1.6 because: 1.7 soon [https://github.com/ivadomed/ivadomed/issues/492](https://github.com/ivadomed/ivadomed/issues/492)
 
-## AxonDeepSeg <a id="axondeepseg"></a>
+## AxonDeepSeg
 
 Wiki: [https://github.com/neuropoly/axondeepseg/wiki/Installation-for-development](https://github.com/neuropoly/axondeepseg/wiki/Installation-for-development)​
 
-## Shimming Toolbox <a id="shimming-toolbox"></a>
+## Shimming Toolbox
 
-Wiki: [https://shimming-toolbox.org/en/latest/getting\_started/installation.html\#development-version](https://shimming-toolbox.org/en/latest/getting_started/installation.html#development-version)​
+Wiki: [https://shimming-toolbox.org/en/latest/contributing/CONTRIBUTING.html](https://shimming-toolbox.org/en/latest/contributing/CONTRIBUTING.html)​
 
