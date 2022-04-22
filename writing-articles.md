@@ -69,32 +69,25 @@
 
 ![](.gitbook/assets/phd101212s.gif)
 
-Recommended file structure:
+Recommended file structure (hosted under google drive):
 
 ```
 manuscripts/
      |- 2017_MRM/
+           |- README --> google document that indicates everything that needs to be known in order to be able to reproduce results, figures, etc. that includes: link to GitHub repository (which itself should have a README with 'getting started' instructions), link to data repository (if exists) and the version of the data used (ideally this should be indicated in the article itself).
            |- fig/
                |- figures.key (or pptx) --> all your figures, one per slide
            |- r0/
-               |- cover_letter_r0_v0.docx
-               |- manuscript_r0_v0.docx
-               |- manuscript_r0_v1.docx
-               |- manuscript_r0_v1_JCA.docx
-               |- manuscript_r0_v2.docx
-               |- reviewer_suggestions.docx
+               |- cover_letter_r0.docx --> this is a microsoft Word
+               |- awesome_study_manuscript_r0 --> google doc document, other co-authors can edit with 'suggestion' mode
+               |- awesome_study_reviewer_suggestions
            |- r1/
-               |- manuscript_r1_v0.docx
-               |- manuscript_r1_v1.docx
+               |- awesome_study_manuscript_r1 --> copy awesome_study_manuscript_r0 into this 'r1' folder and 'lock' manuscript_r0 for edition. Now, everyone should work on this version r1.
+               |- awesome_study_responses_to_reviews --> copy/paste reviewers comments, above each comment, indicate a sub-section 'RXCY' with X: reviewer numbers and Y: comment number. Then, in the manuscript, add a comment with this tag. Example: R1C4.
 ```
 
-You can start from [this template](https://www.neuro.polymtl.ca/\_media/internal\_resources/template\_paper.docx).
+[Here](https://drive.google.com/drive/folders/1bIZCpsyqr2RBlJLq_WvP0xcmkHxMOeiS?usp=sharing) is an example of manuscript folder/files organization.
 
-* First version: **my\_paper\_r0\_v0.docx**
-* Version Corrected by Paul Smith: **my\_paper\_r0\_v0\_PS.docx**
-* Then your new version (accept all Track Changes otherwise it's messy!): **my\_paper\_r0\_v1.docx**
-* After first submission to the journal, you receive comments. New name: **my\_paper\_r1\_v0.docx**
-* and so on…
 
 ## Cover letter
 
@@ -168,7 +161,7 @@ https://www.grammarly.com/
 
 For all articles/abstracts, please add the following:
 
-> Funded by the Canada Research Chair in Quantitative Magnetic Resonance Imaging \[950-230815], the Canadian Institute of Health Research \[CIHR FDN-143263], the Canada Foundation for Innovation \[32454, 34824], the Fonds de Recherche du Québec - Santé \[28826], the Natural Sciences and Engineering Research Council of Canada \[RGPIN-2019-07244], the Canada First Research Excellence Fund (IVADO and TransMedTech), the Courtois NeuroMod project and the Quebec BioImaging Network \[5886, 35450], INSPIRED (Spinal Research, UK; Wings for Life, Austria; Craig H. Neilsen Foundation, USA).
+> Funded by the Canada Research Chair in Quantitative Magnetic Resonance Imaging \[950-230815], the Canadian Institute of Health Research \[CIHR FDN-143263], the Canada Foundation for Innovation \[32454, 34824], the Fonds de Recherche du Québec - Santé \[322736], the Natural Sciences and Engineering Research Council of Canada \[RGPIN-2019-07244], the Canada First Research Excellence Fund (IVADO and TransMedTech), the Courtois NeuroMod project, the Quebec BioImaging Network \[5886, 35450], INSPIRED (Spinal Research, UK; Wings for Life, Austria; Craig H. Neilsen Foundation, USA), Mila - Tech Transfer Funding Program.
 
 For projects involving SEM, please add:
 

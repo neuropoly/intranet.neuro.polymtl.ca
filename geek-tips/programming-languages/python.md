@@ -82,6 +82,7 @@ Suggest workflow via Github Actions:
 ## Resources
 
 * [https://www.geeksforgeeks.org/command-line-scripts-python-packaging/](https://www.geeksforgeeks.org/command-line-scripts-python-packaging/)
+* [Problem Solving with Algorithms and Data Structures using Python](https://runestone.academy/ns/books/published//pythonds/index.html)
 
 ## Tips and Tricks
 

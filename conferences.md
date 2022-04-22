@@ -69,6 +69,11 @@ NeuroPoly's conference folder is on [google drive](https://drive.google.com/driv
 
 * [2016 May 29-31, Ottawa, Canada](http://sites.ieee.org/embs-isc-2016/)
 
+## List of Online Conferences From Various Universities<a id="online_conferences"></a>
+* [MILA Tea Talks](https://sites.google.com/lisa.iro.umontreal.ca/tea-talks/home)
+* [McGill Biomedical Engineering Seminars](https://www.mcgill.ca/bme/seminars)
+* [UdeM - Groupe De Recherche Sur La Signalisation Neurale Et La Circuiterie (SNC)](https://www.grsnc.org/seminairesetudiants)
+
 ## Abstracts <a id="abstracts"></a>
 
 ### Create Draft <a id="create_your_draft"></a>
@@ -123,7 +128,6 @@ For the visibility of the lab, please use this template in [Keynote](https://dri
 
 * [http://colinpurrington.com/tips/academic/posterdesign](http://colinpurrington.com/tips/academic/posterdesign)
 * [http://betterposters.blogspot.co.uk/](http://betterposters.blogspot.co.uk/)
-* [http://www.bandwidthonline.org/howdoi/effective\_poster.asp](http://www.bandwidthonline.org/howdoi/effective_poster.asp)
 * [http://www.makesigns.com/tutorials/](http://www.makesigns.com/tutorials/)
 * [http://www.scientifica.uk.com/neurowire/how-to-make-your-scientific-posters-stand-out](http://www.scientifica.uk.com/neurowire/how-to-make-your-scientific-posters-stand-out)
 

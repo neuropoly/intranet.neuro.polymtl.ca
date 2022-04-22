@@ -2,9 +2,10 @@
 
 ```{toctree}
 :hidden:
+spinal-cord-injury
+mri
 deep-learning
 histology
-untitled
 shared-paperpile-folder
 ```
 

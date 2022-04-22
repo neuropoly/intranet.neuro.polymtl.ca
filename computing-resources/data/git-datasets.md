@@ -153,10 +153,11 @@ Once you have access you can:
 
 ```
 git annex copy --to=origin
+git annex sync --no-content --only-annex
 git push
 ```
 
-Finally, ask one of that dataset's reviewers to [look at your pull request](#Reviewing-Pull-Requests).
+Finally, ask one of that dataset's reviewers to [look at your pull request](#Reviewing-Pull-Requests) by opening an issue on [neuropoly/data-management](https://github.com/neuropoly/data-management).
 
 
 ### Reviewing Pull Requests
@@ -345,6 +346,12 @@ It is compatible with [`datalad`](https://www.datalad.org/) but to reduce the fr
 Datasets are stored as git repositories on the server, with the bulk of their data *also* stored on the server in each repo's "annex" folder. Using `git-annex` enables data on-demand -- in our default configuration, only the data needed for the active branch is actually downloaded by a user, and it is also possible for the user to choose specific folders to focus on. Datasets are `git-annex` [ssh remotes](https://git-annex.branchable.com/walkthrough/#index11h2).
 
 `gitolite` manages users and their permissions. Each user has a namespace to themselves where they can make repos named `data.neuro.polymtl.ca:$user/$repo.git` (like Github), and there is also a shared space `data.neuro.polymtl.ca:datasets/*` intended for lab-wide datasets.
+
+### List users
+
+```
+ssh git@data keys list
+```
 
 ### Add users
 

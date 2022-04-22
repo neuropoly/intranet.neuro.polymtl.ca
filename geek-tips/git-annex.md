@@ -98,10 +98,10 @@ cat <<EOF > .gitattributes
 # by default git-annex sets * filter=annex, but that is very slow:
 # it copies even non-annexed files through git-annex even though it will decide not to handle them.
 # this overrides that behaviour so that only annexed files must be processed.
-*             annex.largefiles=anything
-*.nii.gz      filter=annex
-*.nii         filter=annex
-*.tif         filter=annex
+*             annex.largefiles=nothing
+*.nii.gz      filter=annex annex.largefiles=anything
+*.nii         filter=annex annex.largefiles=anything
+*.tif         filter=annex annex.largefiles=anything
 EOF
 
 git add .gitignore .gitattributes && git commit -m "Configure git-annex"

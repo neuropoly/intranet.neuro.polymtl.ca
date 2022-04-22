@@ -205,9 +205,9 @@ u108545@rosenberg:~$ hddtemp /dev/sda2
 
 You can also see all this information plotted over time for each machine at
 
-* [https://monitor.neuro.polymtl.ca/host/bireli.neuro.polymtl.ca](https://monitor.neuro.polymtl.ca/host/bireli.neuro.polymtl.ca)
-* [https://monitor.neuro.polymtl.ca/host/rosenberg.neuro.polymtl.ca](https://monitor.neuro.polymtl.ca/host/rosenberg.neuro.polymtl.ca)
-* [https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca](https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca)
+* [https://monitor.neuro.polymtl.ca/host/bireli.neuro.polymtl.ca/](https://monitor.neuro.polymtl.ca/host/bireli.neuro.polymtl.ca/)
+* [https://monitor.neuro.polymtl.ca/host/rosenberg.neuro.polymtl.ca/](https://monitor.neuro.polymtl.ca/host/rosenberg.neuro.polymtl.ca/)
+* [https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/](https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/)
 
 #### Monitoring GPUs
 

@@ -93,6 +93,7 @@ description: >-
 ## Pulse Sequence Programming
 
 * qMT on 7T scanner at ICM (6 months)
+* Create a "spinal cord dot engine" on Siemens scanners to automatically segment the spinal cord.
 
 ## RF Coil
 
@@ -109,6 +110,7 @@ description: >-
   * for moving excitation (metamaterial can be controled with DC current, inducing movement of transmitted wave)
 * metasurface (Nibardo):
   * Receive array made with Surface-Circuit-Surface (SCS) metasurface (receive element in inner Surface - low noise transistor stage, or complete preamp, integrated in Circuit layer - other antenna in outer Surface)
+* Simulation of B1+ with/without dielectric pad to check if there are "hot spots" caused by the pad.
 
 ## Shimming
 
