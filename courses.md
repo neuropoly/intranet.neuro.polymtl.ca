@@ -19,7 +19,7 @@ Please refer to the [Règlements généraux des études supérieures ](https://w
 
 ````{tabbed} PhD
 * Details of the program on the [Polymtl website](https://www.polymtl.ca/programmes/programmes/doctorat-en-genie-biomedical-programme-conjoint#).
-* Candidates who already hold a graduate degree may obtain an exemption from all or part of their graduate course credits according to the procedures specified in article 73.1.2 of the specific regulations for graduate studies.
+* Candidates who already hold a graduate degree may obtain an exemption from all or part of their graduate course credits according to the procedures specified in article 73.1.1 of the specific regulations for graduate studies.
 
 ```{important}
 There exist an agreement between universities across Quebec, called [CREPUQ](https://www.bci-qc.ca/en/aehe/agreement/), that allow students to transfer academic credits between institutions. So for example, you could attend a course at UdeM or McGill and receive the credits at Polytechnique Montreal as part of your gradutate program.
@@ -98,7 +98,9 @@ Also see this list of [Bio-imaging courses offered by Quebec Universities](https
 | [IFT6268](https://sites.google.com/view/ift6268-a2020/course-description?authuser=0)      | Self-Supervised Representation Learning                                                                                                                                                                                                                          | English  | Aaron Courville      |
 | [IFT6269](https://www.iro.umontreal.ca/\~slacoste/teaching/ift6269/A20/)                  | <p>Probabilistic Graphical Models</p><p><em>(Given in Fall. Math heavy, assignment with proofs + coding exercises. Really interesting course! Who took: Naga Karthik)</em> </p>                                                                                  | English  | Simon Lacoste-Julien |
 | [IFT6135](https://sites.google.com/view/ift6135-h2021)                                    | <p>Learning Representations</p><p><em>(Given in Winter. Intense course but very rewarding. Who took: Naga Karthik)</em></p>                                                                                                                                      | English  | Aaron Courville      |
-| IFT6145                                                                                   | 3D Vision (Vision tridimensionnelle)                                                                                                                                                                                                                             | French   | Sebastien Roy        |
+| [IFT6145](https://admission.umontreal.ca/cours-et-horaires/cours/ift-6145/)               | Computer vision / Vision tridimensionnelle                                                                                                                                                                                                                       | French   | Sebastien Roy        |
+| [IFT6167](https://admission.umontreal.ca/cours-et-horaires/cours/ift-6167/)               | Continual Learning                                                                                                                                                                                                                                               | ?        | ?                    |
+| [IFT6760](https://admission.umontreal.ca/rechercher/?q=ift+6760&target=admission&cx=011926736769028447783%3Aqlpu3so2kqq&ie=UTF-8) | Seminars in deep learning                                                                                                                                                                                                | ?        | ?                    |
 
 ### Mcgill
 
