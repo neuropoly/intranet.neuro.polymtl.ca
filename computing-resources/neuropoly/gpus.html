@@ -149,11 +149,6 @@
      Postdoctoral fellows
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../onboarding/acronyms-jargon.html">
-     Acronyms &amp; Jargon
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -1314,15 +1309,15 @@ tensorboard --logdir PATH_TO_MODEL --port PORTNUMBER
 <span id="id1"></span><h2>SSH tunnelling<a class="headerlink" href="#ssh-tunnelling" title="Permalink to this headline">#</a></h2>
 <p>If you want to run a Jupyter notebook from a remote server, or monitor a model training using tensorboard, you will need to do an SSH tunnelling to be able to pass the display from the remote cluster to your local station.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="8ebf8e92-5f35-4aca-9142-c9e09304cfa6" name="45750b17-5dfd-474e-9940-ce209f1c7459" type="radio">
-</input><label class="tabbed-label" for="8ebf8e92-5f35-4aca-9142-c9e09304cfa6">
+<input checked="checked" id="7067fb30-ec6d-483a-b81b-39e39342ac8e" name="79cf1028-c5e5-4170-a849-7563fae232b8" type="radio">
+</input><label class="tabbed-label" for="7067fb30-ec6d-483a-b81b-39e39342ac8e">
 Secure pipes</label><div class="tabbed-content docutils">
 <p>Install secure pipes and configure it as follows:
 with port_rosenber as the “Port” of the screen session and port_local is a random number (see screenshot below):</p>
 <p><img alt="" src="../../_images/tunnelling_macos.png" /></p>
 </div>
-<input id="f3eeb57c-4a46-4792-86fd-62932327e44a" name="45750b17-5dfd-474e-9940-ce209f1c7459" type="radio">
-</input><label class="tabbed-label" for="f3eeb57c-4a46-4792-86fd-62932327e44a">
+<input id="1a6ec747-dcf4-4c19-b74a-96e6a161986c" name="79cf1028-c5e5-4170-a849-7563fae232b8" type="radio">
+</input><label class="tabbed-label" for="1a6ec747-dcf4-4c19-b74a-96e6a161986c">
 Terminal</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh -N -f -L localhost:8080:localhost:PORTNUMBER username@CLUSTER.neuro.polymtl.ca
 </pre></div>
