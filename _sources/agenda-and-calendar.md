@@ -4,11 +4,12 @@
 
 The following google calendars are available. In order to subscribe to any of these calendar, click the "+GoogleCalendar" at the bottom right of the browser after clicking on the calendar.
 
-* [**NeuroPoly**](https://calendar.google.com/calendar/embed?src=h4tfirrturtt83oamhht396uv8%40group.calendar.google.com&ctz=America%2FToronto): This is the main calendar that lists all internal meetings. 
-* \*\*\*\*[**Conference**](https://calendar.google.com/calendar/embed?src=min92rurvg89o5bci90qs5iqc0%40group.calendar.google.com&ctz=America%2FToronto): Lists all relevant conferences and workshop. If you know of any important conference event, please feel free to add it to the calendar.
-* \*\*\*\*[**Computer Resource**](https://calendar.google.com/calendar/embed?src=4mg6bgd9pv55thf9486t2miht8%40group.calendar.google.com&ctz=America%2FToronto): If you would like to use a CPU or GPU shared cluster in the lab, please indicate it here so your lab mates know what resources are available. More info [here](https://intranet.neuro.polymtl.ca/computing-resources/computing-resources-neuropoly#computingprogramming_stations).  
-* \*\*\*\*[**MRI**](https://calendar.google.com/calendar/embed?src=k4moiei5d2lh84iokouk6lt84o%40group.calendar.google.com&ctz=America%2FToronto): If you book an MRI experiment, please indicate it here. 
-* \*\*\*\*[**Holiday**](https://calendar.google.com/calendar/embed?src=qtrbj6k5msf69q65gtiv0fnogc%40group.calendar.google.com&ctz=America%2FToronto): If you are planning to go on vacation, please add your dates here so your lab mates know when you are not available. 
+| [**NeuroPoly**](https://calendar.google.com/calendar/embed?src=h4tfirrturtt83oamhht396uv8%40group.calendar.google.com&ctz=America%2FToronto) | This is the main calendar that lists all internal meetings. | 
+| --- | --- |
+| [**Conference**](https://calendar.google.com/calendar/embed?src=min92rurvg89o5bci90qs5iqc0%40group.calendar.google.com&ctz=America%2FToronto) | Lists all relevant conferences and workshop. If you know of any important conference event, please feel free to add it to the calendar. |
+| [**Computer Resource**](https://calendar.google.com/calendar/embed?src=4mg6bgd9pv55thf9486t2miht8%40group.calendar.google.com&ctz=America%2FToronto) | If you would like to use a CPU or GPU shared cluster in the lab, please indicate it here so your lab mates know what resources are available. More info [here](https://intranet.neuro.polymtl.ca/computing-resources/computing-resources-neuropoly#computingprogramming_stations). |
+| [**MRI**](https://calendar.google.com/calendar/embed?src=k4moiei5d2lh84iokouk6lt84o%40group.calendar.google.com&ctz=America%2FToronto) | If you book an MRI experiment, please indicate it here. |
+| [**Holiday**](https://calendar.google.com/calendar/embed?src=qtrbj6k5msf69q65gtiv0fnogc%40group.calendar.google.com&ctz=America%2FToronto) | If you are planning to go on vacation, please add your dates here so your lab mates know when you are not available. |
 
 ## Minutes/Agenda
 
