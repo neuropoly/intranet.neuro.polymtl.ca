@@ -14,7 +14,7 @@ This is the organization of each student's folder, hosted on Google Drive. Pleas
 | `results`     | Snapshots/results of your experiments. Prefix should start with YYYYMMDD. Example: **`20150120_dmri_nogse/`**                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 ```{note}
-**Note for Intern Students: **You will only need to create the `admin`, `biblio`, and `reports` folders.
+For students doing an internship, you will only need to create the `admin`, `biblio`, and `reports` folders.
 ```
 
 **GENERAL RULES:**
@@ -24,6 +24,6 @@ This is the organization of each student's folder, hosted on Google Drive. Pleas
 
 ![](../.gitbook/assets/psa.png)
 
-Thank you ![:-)](https://www.neuro.polymtl.ca/lib/images/smileys/icon_smile.gif)
+Thank you ! 😊
 
 P.S. For projects involving multiple students, a “project” folder is created under **`Google Drive/NeuroPoly/Projects`**.
