@@ -4,7 +4,7 @@ When you join the lab, a GitHub issue in our [onboarding repository](https://git
 will be created to track your onboarding progress. That issue will contain all
 of the steps needed for access to the various accounts and services you will use.
 
-## Key People
+## Get help
 
 If ever you need help with accounts or onboarding, feel free to reach out to
-Alexandru \(Alex\) Foias or Taowa Rosetwig via Slack.
+Joshua Newton or Noel Rignon via Slack.
