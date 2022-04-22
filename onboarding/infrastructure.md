@@ -1,22 +1,21 @@
 # Infrastructure
 
-### Computers <a id="computers"></a>
+### Computers
 
 * [Computer facilities - Neuropoly](https://intranet.neuro.polymtl.ca/computing-resources/neuropoly/README.html#cpu-gpu-clusters)
-  * [Documentation on how to use CPU/GPU clusters](https://docs.google.com/document/u/0/d/1X--A2kql4GypfI6fNFIOYA_b6uQdeu2_Kue7n8KkTOU/edit).
 * [Computer facilities - Compute Canada](https://intranet.neuro.polymtl.ca/computing-resources/compute-canada.html)
 
-### Data <a id="data"></a>
+### Data
 
 Internal database managed with git-annex.
 
-Contact persons: Nick & Alex.
+Contact persons: Nick & Mathieu.
 
-👉 [How to get data?](https://github.com/neuropoly/data-management/blob/master/internal-server.md)
+👉 [How to get data?](https://intranet.neuro.polymtl.ca/computing-resources/data/git-datasets.html)
 
-### MRI <a id="mri"></a>
+### MRI
 
-[MRI and Lab facilities](https://www.neuro.polymtl.ca/facilities)
+[MRI scanning procedures](https://intranet.neuro.polymtl.ca/mri-scanning/README.html)
 
 If you book the MRI, please use the [NeuroPoly - MRI Google Calendar](https://calendar.google.com/calendar/u/0/embed?src=k4moiei5d2lh84iokouk6lt84o@group.calendar.google.com&ctz=America/Toronto).
 
