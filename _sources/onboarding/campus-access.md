@@ -23,7 +23,7 @@ There are also separate rooms for servers (L-7944.A) and printers (L-5619). Some
 
 ### Desk/computer access
 
-Desk access is given on a first-come-first-serve basis. Once you find a seat that you like, please put your name somewhere \(e.g. on a sheet of paper\) so we know that a desk has been claimed.
+Desk access is given on a first-come-first-serve basis. Once you find a seat that you like, please put your name somewhere (e.g. on a sheet of paper) so we know that a desk has been claimed.
 
 If you work on a personal laptop and need desktop equipment (a monitor, mouse, keyboard, etc.) please contact your supervisor. If instead you need to be provided a workstation (e.g. iMac), please consult the [List of Computing Resources](https://intranet.neuro.polymtl.ca/computing-resources/neuropoly/README.html) document, then pick a workstation that is not being used by another lab member. 
 
