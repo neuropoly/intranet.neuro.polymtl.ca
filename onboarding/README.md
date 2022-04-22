@@ -10,7 +10,6 @@ computer-setup
 developer-setup
 consultants-ra
 postdoc
-acronyms-jargon
 ```
 
 Welcome to NeuroPoly Lab!
