@@ -13,13 +13,6 @@ Please consult [this](https://docs.google.com/document/d/1tmVIZkXPTF224KmgLpaQWq
 
 ## Research Associates
 
-Link to the RA association at Polytechnique \(contains various documents about your rights as an employee\): 
+Link to the RA association at Polytechnique (contains various documents about your rights as an employee): 
 
 [http://aarep.polymtl.ca/](http://aarep.polymtl.ca/)
-
-
-
-## PolyMtl Portal Login
-
-TODO
-
