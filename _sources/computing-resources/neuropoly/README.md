@@ -12,17 +12,16 @@ gpus
 
 A **Poly-Grames** network account is required to have access to various computation resources available in the laboratory.
 
-In order to request a **Poly-Grames** network account you need to have your Polytechnique ID number.
+In order to request a **Poly-Grames** network account you need to have your Polytechnique ID number, which you get during your [onboarding](https://github.com/neuropoly/onboarding/issues).
 
-You can [request a Poly-Grames network account here](https://www.grames.polymtl.ca/facilities/servers-information/create_account/).\
-**Program:** Biomedical Engineering\
-**Director:** Julien Cohen-Adad
 
+```{note}
 If you want to find out who is behind u/pXXXXXX Grames account, type this:
-
-```
+~~~
 getent passwd <GRAMES_ACCOUNT>
+~~~
 ```
+
 
 ### Home folder
 
