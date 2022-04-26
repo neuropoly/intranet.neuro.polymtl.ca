@@ -184,10 +184,10 @@ We recommend you install (and use) the following Adds-on:
 | [Cross Reference](https://workspace.google.com/marketplace/app/cross\_reference/269114033347)   | Cross-referencing figures on Google Docs                                             |
 | [Markdown Tools](https://workspace.google.com/u/0/marketplace/app/markdown\_tools/788541604518) | Enables adding heading numbers and the creation of a table of contents for markdown. |
 
-### Overleaf <a href="overleaf" id="overleaf"></a>
+### Overleaf
 
-1. We have a lab account for Overleaf. It is important to use it, otherwise you won't be able to share the document with all collaborators.
-2. Connect to [Overleaf](https://www.overleaf.com) with the NeuroPoly Google account. Sometimes if you only have a single Google account logged in, you will have to add another account here: [https://accounts.google.com/AccountChooser?service=lso](https://accounts.google.com/AccountChooser?service=lso)
+1. We have a lab paid license for [Overleaf](https://www.overleaf.com). The advantage of a paid license is the possibility to use track change on a document, which is very convenient for writing with multiple co-authors. 
+2. To get the credentials, please contact Julien Cohen-Adad.
 
 ## Tips for writing scientific articles
 
