@@ -64,7 +64,7 @@ To connect to the VPN, you need to have an account with École Polytechnique, sp
 
 You can change your password at [Gestion des Codes](https://codes.si.polymtl.ca/gestion/). Also, you can double-check you have VPN access by looking for `VPN_* = Actif` here.
 
-The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing `openconnect`:
+The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing a VPN client such as `openconnect` (recommended) or `Cisco AnyConnect Secure Mobility Client` (if `openconnect` is not available):
 
 
 ````{tabbed} MacOS
@@ -90,9 +90,14 @@ GROUP=PolySSL # or PolyInvites, depending on your account's status
 echo -n "$PASS" | sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-stdin ssl.vpn.polymtl.ca
 ```
 
+To connect to the VPN, you need to run:
+```
+./vpn.sh
+```
+
 ````
 
-````{tabbed} PC/Linux
+````{tabbed} Linux
 ```
 apt install openconnect
 ```
@@ -110,12 +115,30 @@ GROUP=PolySSL # or PolyInvites, depending on your account's status
 echo -n "$PASS" | sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-stdin ssl.vpn.polymtl.ca
 ```
 
-````
-
 To connect to the VPN, you need to run:
 ```
 ./vpn.sh
 ```
+
+````
+
+
+````{tabbed} Windows
+
+Please follow the official steps from PolyMTL ([French](https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/rentree/documentLibrary/Aide-m%C3%A9moire%20tutoriels%20A2020/Aide-Memoire_VPN.pdf?a=true&guest=true) or [English](https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/rentree/documentLibrary/Aide-m%C3%A9moire%20tutoriels%20A2020/Checklist_VPN.pdf?a=true&guest=true).
+
+In case the above links ever break, the steps are:
+
+1. Install "Cisco AnyConnect Secure Mobility Client".
+    - NB: This software is licensed to organizations, so the download page will typically be behind some sort of authentication. Right now, you have to download it from the "Utilisation du Service" section of [this page](https://www.polymtl.ca/si/acces-securise-rvp-ou-vpn), which requries you to sign in with your CAS account.
+2. Run the newly-installed Cisco AnyConnect Secure Mobility Client program.
+3. Configure the VPN:
+   * Enter the server address: ssl.vpn.polymtl.ca
+   * In the “Group” drop-down list, choose the profile: PolySSL
+   * Identify yourself with the username and password of your CAS account (e.g. p123123)
+4. Click "Accept". You're connected! :)
+
+````
 
 
 ## Connect to NeuroPoly Computers
