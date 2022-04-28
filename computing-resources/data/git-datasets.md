@@ -2,7 +2,7 @@
 
 This server includes private MRI and microscopy datasets, which have been curated and organized according to the [BIDS](https://bids.neuroimaging.io/) convention.
 
-`git+ssh://data.neuro.polymtl.ca` has a max size of ~1TB and is [currently not backed up](https://github.com/neuropoly/computers/issues/65).
+`git+ssh://data.neuro.polymtl.ca` has a max size of ~1TB.
 
 It hosts [BIDS](https://bids-specification.readthedocs.io) datasets, version-controlled using [`git-annex`](git-annex.branchable.com/).
 It is locked behind a [VPN](../../#vpn) because much of our data is under medical ethics protections, and needs to be kept off the general internet.
