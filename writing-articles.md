@@ -2,6 +2,8 @@
 
 ## Journals
 
+(*) the impact factor is not up to date, but is just given as a 'ballpark' for ranking journal.
+
 ### General
 
 | Journal                                                                                                                                                  | Impact Factor | Open |
