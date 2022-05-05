@@ -1,7 +1,7 @@
 # <span>👋</span> Onboarding
 
 ```{toctree}
-:hidden:
+:maxdepth: 1
 getting-started
 campus-access
 infrastructure
