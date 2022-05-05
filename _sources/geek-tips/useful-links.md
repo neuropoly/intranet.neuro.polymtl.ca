@@ -6,7 +6,7 @@
 
 | Purpose | URL |
 | :--- | :--- |
-| Find cool acronym | https://acronymify.com/ |
+| Find cool acronym | [https://acronymify.com/](https://acronymify.com/) |
 | Send password | [https://privnote.com/](https://privnote.com/) |
 | Share lines of code | [https://gist.github.com/](https://gist.github.com/) |
 | Compare PDF | [https://draftable.com/compare](https://draftable.com/compare) |
@@ -22,7 +22,7 @@
 | Purpose | URL | Notes |
 | :--- | :--- | :--- |
 | Record terminal \(for demo\) | [https://showterm.io/](https://showterm.io/) | Currently [buggy](https://github.com/ConradIrwin/showterm/issues/48); use [this patched version](https://gist.github.com/kousu/855c164979af078f623fd44f0e1b5350) in the meantime. |
-| Gantt diagram | https://www.ganttproject.biz/ |
+| Gantt diagram | [https://www.ganttproject.biz/](https://www.ganttproject.biz/) |
 
 ## Services
 
