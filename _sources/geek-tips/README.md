@@ -1,7 +1,7 @@
 # <span>🤓</span> Geek tips
 
 ```{toctree}
-:hidden:
+:maxdepth: 1
 useful-links
 bash-shell/README
 programming-languages/README
