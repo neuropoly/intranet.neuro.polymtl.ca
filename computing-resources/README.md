@@ -1,7 +1,7 @@
 # <span>🖥</span> Computing Resources
 
 ```{toctree}
-:tocdepth: 2
+:maxdepth: 1
 neuropoly/README
 clusters-at-criugm
 compute-canada
