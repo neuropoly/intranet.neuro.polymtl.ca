@@ -8,7 +8,7 @@ In this section you will find anything that has to do with MRI coil building,
 MRI phantoms, 3D printing, etc.
 
 ```{toctree}
-:hidden:
+:maxdepth: 1
 mri-coils-at-neuropoly
 misc
 mri-phantoms
