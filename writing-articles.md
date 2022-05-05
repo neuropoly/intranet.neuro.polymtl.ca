@@ -142,23 +142,23 @@ Incorporate figure in article:
 
 ## Check grammar
 
-https://www.grammarly.com/
+[https://www.grammarly.com/](https://www.grammarly.com/)
 
 ## Affiliations
 
 **For everyone:**
 
-> NeuroPoly Lab, Institute of Biomedical Engineering, Polytechnique Montreal, Montreal, QC, Canada
+> NeuroPoly Lab, Institute of Biomedical Engineering, Polytechnique Montréal, Montréal, QC, Canada
 
 **Affiliation for Julien Cohen-Adad:**
 
-> Functional Neuroimaging Unit, CRIUGM, Université de Montréal, Montreal, QC, Canada
+> Functional Neuroimaging Unit, CRIUGM, Université de Montréal, Montréal, QC, Canada
 
-> Mila - Quebec AI Institute, Montreal, QC, Canada
+> Mila - Quebec AI Institute, Montréal, QC, Canada
 
 **Affiliation for Nikola Stikov:**
 
-> Montreal Heart Institute, Montreal, QC, Canada
+> Montreal Heart Institute, Montréal, QC, Canada
 
 ## Acknowledgements
 
