@@ -64,7 +64,7 @@ To connect to the VPN, you need to have an account with École Polytechnique, sp
 
 You can change your password at [Gestion des Codes](https://codes.si.polymtl.ca/gestion/). Also, you can double-check you have VPN access by looking for `VPN_* = Actif` here.
 
-The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing a VPN client such as `openconnect` (recommended) or `Cisco AnyConnect Secure Mobility Client` (if `openconnect` is not available):
+The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing a VPN client such as `openconnect` (recommended) or `Cisco AnyConnect Secure Mobility Client` (if `openconnect` is not available for your OS/distro):
 
 
 ````{tabbed} MacOS
@@ -87,7 +87,7 @@ set -eo pipefail
 USER="<YOUR_CAS_USERNAME>"
 PASS="$(security find-generic-password -a "${USER}" -s poly-vpn -w)"
 GROUP=PolySSL # or PolyInvites, depending on your account's status
-echo -n "$PASS" | sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-stdin ssl.vpn.polymtl.ca
+echo -n "$PASS" | sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-stdin --reconnect-timeout 20 ssl.vpn.polymtl.ca
 ```
 
 To connect to the VPN, you need to run:
