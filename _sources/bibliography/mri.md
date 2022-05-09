@@ -23,7 +23,7 @@
 ## B0 Shimming
 
 * [🎥 ISMRM MR Academy - Magnetic Field B0 Shimming](https://www.youtube.com/watch?v=8MinOsuqrYE)
-* [Shimming Toolbox overview](https://docs.google.com/document/d/1jNm3qS9L3Wv330jYdoXdwHwhJ5fQlDgukkXZcf_ceJA/edit#heading=h.sm4w5da4nf61)
+* [Shimming Toolbox overview](https://docs.google.com/document/d/1jNm3qS9L3Wv330jYdoXdwHwhJ5fQlDgukkXZcf_ceJA)
 * [MRI Questions](https://mriquestions.com/active-shimming.html)
 
 ## B1 Shimming
