@@ -7,37 +7,18 @@
 * [git official documentation](https://git-scm.com/book/en/v2)
 * TUTORIAL: 
   * [Learn By Doing](https://githowto.com)
-  *   \[Coursera: Introduction to
-
-      git/github]\([https://www.coursera.org/learn/introduction-git-github](https://www.coursera.org/learn/introduction-git-github))
+  *   [Coursera: Introduction to git/github](https://www.coursera.org/learn/introduction-git-github)
   * [Github's Learn By Doing](https://try.github.io)
   * [sr.ht's Learn By Doing](https://git-send-email.io)
-  *   \[Ramp up on Git and GitHub (Github
-
-      Lab)]\([https://lab.github.com/githubtraining/ramp-up-on-git-and-github](https://lab.github.com/githubtraining/ramp-up-on-git-and-github))
-  *   \[Managing merge conflicts (Github
-
-      Lab)]\([https://lab.github.com/githubtraining/managing-merge-conflicts](https://lab.github.com/githubtraining/managing-merge-conflicts))
+  *   [Ramp up on Git and GitHub (Github Lab)](https://lab.github.com/githubtraining/ramp-up-on-git-and-github)
+  *   [Managing merge conflicts (Github Lab)](https://lab.github.com/githubtraining/managing-merge-conflicts)
   * [http://www.atlassian.com/git](http://www.atlassian.com/git)
-*   \[A guide to managing git mistakes by
-
-    @jvns]\([https://wizardzines.com/zines/oh-shit-git/](https://wizardzines.com/zines/oh-shit-git/))
-*   \[Excellent notes from Matthew
-
-    Brett]\([https://matthew-brett.github.io/curious-git/index.html](https://matthew-brett.github.io/curious-git/index.html))
-*   \[Another great tutorial from Elizabeth
-
-    DuPre]\([http://emdupre.github.io/git-course/](http://emdupre.github.io/git-course/)), and a video
-
-    [here](https://neurohackademy.org/course/collaborating-with-git-and-github/)
-*
-* Excellent infos here: [https://gist.github.com/hofmannsven/6814451](https://gist.github.com/hofmannsven/6814451)
-*   \[git - the simple guide (Roger
-
-    Dudler)]\([https://rogerdudler.github.io/git-guide/](https://rogerdudler.github.io/git-guide/))
-*   Snapshot of all commands:
-
-    [http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf)
+*   [A guide to managing git mistakes by @jvns](https://wizardzines.com/zines/oh-shit-git/)
+*   [Excellent notes from Matthew Brett](https://matthew-brett.github.io/curious-git/index.html)
+*   [Another great tutorial from Elizabeth DuPre](http://emdupre.github.io/git-course/), and a [video](https://neurohackademy.org/course/collaborating-with-git-and-github/)
+* [Excellent infos](https://gist.github.com/hofmannsven/6814451)
+*   [git - the simple guide (Roger Dudler)](https://rogerdudler.github.io/git-guide/)
+*   Snapshot of all commands: [cheat sheet](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf)
 
 ## Install git
 
