@@ -62,7 +62,7 @@ Basic steps are:
 1. Log in to your Github account
 2.  Fork the project repository: click on the
 
-    `Fork`button near the top of the page.
+    `Fork` button near the top of the page.
 
     This creates a copy of the code under your account on the GitHub
 
@@ -88,7 +88,7 @@ N.B. If you get the following error message, [create a SSH key](http://www.neuro
 
 ### Maintain your branch up-to-date
 
-Once the clone is complete your repo will have a remote named âoriginâ that points to your fork on GitHub. Donât let the name confuse you, this does not point to the original repo you forked from. To help you keep track of that repo you need to add another remote named âupstreamâ:
+Once the clone is complete your repo will have a remote named `origin` that points to your fork on GitHub. Don't let the name confuse you, this does not point to the original repo you forked from. To help you keep track of that repo you need to add another remote named `upstream`:
 
 * open a terminal, go to your repos and type:
 
@@ -97,7 +97,7 @@ Once the clone is complete your repo will have a remote named âoriginâ
   git fetch upstream
 ```
 
-* Then (like "git pull" which is fetch + merge):
+* Then (like `git pull` which is fetch + merge):
 
 ```
   git merge upstream/master master
@@ -105,13 +105,13 @@ Once the clone is complete your repo will have a remote named âoriginâ
 
 *   Or if you want, replace your local work on top of the fetched branch
 
-    (like a "git pull --rebase")
+    (like a `git pull --rebase`)
 
 ```
   git rebase upstream/master
 ```
 
-The `--rebase` option can be used to ensure a linear history by preventing unnecessary merge commits. Many developers prefer rebasing over merging, since itâs like saying, "I want to put my changes on top of what everybody else has done."
+The `--rebase` option can be used to ensure a linear history by preventing unnecessary merge commits. Many developers prefer rebasing over merging, since it's like saying, "I want to put my changes on top of what everybody else has done."
 
 ### Send a pull request
 
@@ -131,15 +131,15 @@ The `--rebase` option can be used to ensure a linear history by preventing unnec
 
 Now you need to wait that the person in charge of the project accepts your modifications; if this person finds problems in your code, you can still push new changes to your code and they will be added to your pull request.
 
-### How to "merge" specific files from another branch
+### How to `merge` specific files from another branch
 
-The tool to use is "git checkout":
+The tool to use is `git checkout`:
 
 ```
   git checkout source_branch <paths>...
 ```
 
-You simply need to give "git checkout" the name of the feature branch and the paths to the specific files that we want to add to your master branch as follows:
+You simply need to give `git checkout` the name of the feature branch and the paths to the specific files that we want to add to your `master` branch as follows:
 
 ```
   $ git branch
@@ -156,9 +156,9 @@ You simply need to give "git checkout" the name of the feature branch and the pa
   #   new file:   <path_to_file_1>
   #   new file:   <path_to_file_2>
   #   ...
+  
+  $ git commit -m "explanation of the commit you are doing"
 ```
-
-$ git commit -m "explanation of the commit you are doing"
 
 See the page [git tip how to merge specific files from another branch](http://jasonrudolph.com/blog/2009/02/25/git-tip-how-to-merge-specific-files-from-another-branch/) for more details.
 
@@ -187,19 +187,19 @@ See also the interesting page [Smart branching with sourcetree and git flow](htt
   git checkout <branch_name>
 ```
 
-If branch is not tracked (use \`\`\`git remote show origin\`\`\` to check if branch is listed), then use:
+If branch is not tracked (use `git remote show origin` to check if branch is listed), then use:
 
 ```
   git fetch
 ```
 
-If you still don't see the branch listed, maybe your local git repository does not allow to fetch all branches on master. This happens if you clone with --depth=X. To check if this is the case, run:
+If you still don't see the branch listed, maybe your local git repository does not allow to fetch all branches on `master`. This happens if you `clone` with `--depth=X`. To check if this is the case, run:
 
 ```
   git config --get remote.origin.fetch
 ```
 
-If result is not "+refs/heads/\*:refs/remotes/origin/\*", then update the remote.origin.fetch variable using:
+If result is not `+refs/heads/\*:refs/remotes/origin/\*`, then update the `remote.origin.fetch` variable using:
 
 ```
   git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
@@ -394,7 +394,7 @@ git config --global user.name 'Your Name'
 git config --global user.email you@somedomain.com
 ```
 
-Cancel a "git add"
+Cancel a `git add`
 
 ```
 git reset <file_name>
@@ -408,7 +408,9 @@ git status -s
 
 Update changes to your repos
 
+```
 git push path_to_my_repos/my_repos.git master
+```
 
 example:
 
@@ -485,7 +487,7 @@ git commit -m "First commit"
 git push -u origin master
 ```
 
-### Discard local changes (if pull doesn't work)
+### Discard local changes (if `pull` doesn't work)
 
 For a specific file use:
 
