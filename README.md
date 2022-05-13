@@ -1,7 +1,7 @@
 # <span>⚗️</span> Lab Manual
 
 ```{toctree}
-:hidden:
+:maxdepth: 2
 NeuroPoly Website <https://neuro.polymtl.ca>
 onboarding/README
 agenda-and-calendar
