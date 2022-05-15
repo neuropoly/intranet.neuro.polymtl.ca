@@ -26,7 +26,7 @@ Google map link: [https://goo.gl/maps/Kqj3JimAtPWZowc1A](https://goo.gl/maps/Kqj
 
 See info here: [https://unf-montreal.ca/documentation/your\_data/download\_data/](https://unf-montreal.ca/documentation/your\_data/download\_data/)
 
-Data for NeuroPoly group are located under: `/unf/dicoms/by_groups/neuropoly/`
+Data for NeuroPoly group are located under: `elm:/unf/dicoms/by_groups/neuropoly/`
 
 ## Reconstruct raw data
 
