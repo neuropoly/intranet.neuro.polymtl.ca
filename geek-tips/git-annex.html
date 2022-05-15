@@ -1078,8 +1078,8 @@ title="Edit this page"
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
 <p>You must have a unix OS. <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> is simply not compatible with anything else.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="bfd89f73-4b56-4fb8-a977-81f059858cb1" name="8355c062-1b7f-4f10-a9a4-f136dd50324f" type="radio">
-</input><label class="tabbed-label" for="bfd89f73-4b56-4fb8-a977-81f059858cb1">
+<input checked="checked" id="1563a9be-6a98-4c08-9dd1-b1c43047f31b" name="73155039-93c1-49b7-8f64-f03abe8b0a23" type="radio">
+</input><label class="tabbed-label" for="1563a9be-6a98-4c08-9dd1-b1c43047f31b">
 Linux</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p><strong>Arch</strong>: <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-Sy</span> <span class="pre">git-annex</span></code></p></li>
@@ -1089,15 +1089,15 @@ Linux</label><div class="tabbed-content docutils">
 <li><p>if on an older system and can’t upgrade, you can try <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">installing <code class="docutils literal notranslate"><span class="pre">conda</span></code></a> (or <a class="reference external" href="https://github.com/conda-forge/miniforge/">miniforge</a> and then using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-f</span> <span class="pre">conda-forge</span> <span class="pre">git-annex</span></code>.</p></li>
 </ul>
 </div>
-<input id="24f0cb17-2230-4e99-83bc-2a43d5c4e249" name="8355c062-1b7f-4f10-a9a4-f136dd50324f" type="radio">
-</input><label class="tabbed-label" for="24f0cb17-2230-4e99-83bc-2a43d5c4e249">
+<input id="68f4998c-7117-4b8a-8af8-8bd317b43d2b" name="73155039-93c1-49b7-8f64-f03abe8b0a23" type="radio">
+</input><label class="tabbed-label" for="68f4998c-7117-4b8a-8af8-8bd317b43d2b">
 macOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">git</span><span class="o">-</span><span class="n">annex</span>
 </pre></div>
 </div>
 </div>
-<input id="0c9b40b4-4a80-4a8e-b741-7844c19ff1d6" name="8355c062-1b7f-4f10-a9a4-f136dd50324f" type="radio">
-</input><label class="tabbed-label" for="0c9b40b4-4a80-4a8e-b741-7844c19ff1d6">
+<input id="133f07df-35b2-480c-9ce6-8b10f44a605f" name="73155039-93c1-49b7-8f64-f03abe8b0a23" type="radio">
+</input><label class="tabbed-label" for="133f07df-35b2-480c-9ce6-8b10f44a605f">
 Windows 10 (via WSL)</label><div class="tabbed-content docutils">
 <p>Install <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a>, pick a distro, and then run one of:</p>
 <ul class="simple">
@@ -1106,8 +1106,8 @@ Windows 10 (via WSL)</label><div class="tabbed-content docutils">
 <li><p>The <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions">other distros</a> are supported.</p></li>
 </ul>
 </div>
-<input id="c6979f62-10cc-459e-a8f6-68f0dadbca3e" name="8355c062-1b7f-4f10-a9a4-f136dd50324f" type="radio">
-</input><label class="tabbed-label" for="c6979f62-10cc-459e-a8f6-68f0dadbca3e">
+<input id="db996941-d7fc-43eb-9cd3-a354222592ba" name="73155039-93c1-49b7-8f64-f03abe8b0a23" type="radio">
+</input><label class="tabbed-label" for="db996941-d7fc-43eb-9cd3-a354222592ba">
 Windows 10 (via VirtualBox)</label><div class="tabbed-content docutils">
 <p>Install <a class="reference external" href="https://virtualbox.org/">VirtualBox</a>, install a Linux distro inside of it, and then follow the Linux instructions.</p>
 </div>
@@ -1274,7 +1274,7 @@ rm: cannot remove &#39;data-single-subject/.git/annex/objects/Vq/vF/SHA256E-s155
 rm: cannot remove &#39;data-single-subject/.git/annex/objects/79/G6/SHA256E-s7183853--3262ac5d6c5f573720c5e508da47608bd9fa49d6cd4dd547f75046c1a2f0d5b6.nii.gz/SHA256E-s7183853--3262ac5d6c5f573720c5e508da47608bd9fa49d6cd4dd547f75046c1a2f0d5b6.nii.gz&#39;: Permission denied
 </pre></div>
 </div>
-<p>This is because git-annex tries extra hard to make it hard to lose data, by marking its contents read-only. If you really intend to erase the dataset the invocation is:</p>
+<p>This is because git-annex <a class="reference external" href="https://git-annex.branchable.com/internals/lockdown/">tries extra hard</a> to make it hard to lose data, by marking its contents read-only. If you really intend to erase the dataset you need to open the permissions first with <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">-R</span> <span class="pre">+w</span></code>, for example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ chmod -R +w data-single-subject/.git/annex/
 $ rm -rf data-single-subject/
 </pre></div>
