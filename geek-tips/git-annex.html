@@ -1078,8 +1078,8 @@ title="Edit this page"
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
 <p>You must have a unix OS. <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> is simply not compatible with anything else.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="179f4e77-064b-4e1e-9364-680092004af3" name="b07beb6f-0163-499d-80a6-7c1e6416b506" type="radio">
-</input><label class="tabbed-label" for="179f4e77-064b-4e1e-9364-680092004af3">
+<input checked="checked" id="1a65e64f-d372-4fcd-8be4-379cf22c564d" name="a7cbbb34-c553-4194-bcc9-2e3d9552e7d5" type="radio">
+</input><label class="tabbed-label" for="1a65e64f-d372-4fcd-8be4-379cf22c564d">
 Linux</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p><strong>Arch</strong>: <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-Sy</span> <span class="pre">git-annex</span></code></p></li>
@@ -1089,15 +1089,15 @@ Linux</label><div class="tabbed-content docutils">
 <li><p>if on an older system and can’t upgrade, you can try <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">installing <code class="docutils literal notranslate"><span class="pre">conda</span></code></a> (or <a class="reference external" href="https://github.com/conda-forge/miniforge/">miniforge</a> and then using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-f</span> <span class="pre">conda-forge</span> <span class="pre">git-annex</span></code>.</p></li>
 </ul>
 </div>
-<input id="28fd4928-fc3e-44a0-aab8-d6daf8ff1141" name="b07beb6f-0163-499d-80a6-7c1e6416b506" type="radio">
-</input><label class="tabbed-label" for="28fd4928-fc3e-44a0-aab8-d6daf8ff1141">
+<input id="0beae6ce-8e79-4237-991d-f23050738241" name="a7cbbb34-c553-4194-bcc9-2e3d9552e7d5" type="radio">
+</input><label class="tabbed-label" for="0beae6ce-8e79-4237-991d-f23050738241">
 macOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">git</span><span class="o">-</span><span class="n">annex</span>
 </pre></div>
 </div>
 </div>
-<input id="7fce638d-448b-4422-ace9-fc83616d5922" name="b07beb6f-0163-499d-80a6-7c1e6416b506" type="radio">
-</input><label class="tabbed-label" for="7fce638d-448b-4422-ace9-fc83616d5922">
+<input id="9144d5d4-7dcf-44fc-9608-8d7c7cf47a2a" name="a7cbbb34-c553-4194-bcc9-2e3d9552e7d5" type="radio">
+</input><label class="tabbed-label" for="9144d5d4-7dcf-44fc-9608-8d7c7cf47a2a">
 Windows 10 (via WSL)</label><div class="tabbed-content docutils">
 <p>Install <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a>, pick a distro, and then run one of:</p>
 <ul class="simple">
@@ -1106,8 +1106,8 @@ Windows 10 (via WSL)</label><div class="tabbed-content docutils">
 <li><p>The <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions">other distros</a> are supported.</p></li>
 </ul>
 </div>
-<input id="24b17f5b-db1a-44d2-8237-6f425f2dedf3" name="b07beb6f-0163-499d-80a6-7c1e6416b506" type="radio">
-</input><label class="tabbed-label" for="24b17f5b-db1a-44d2-8237-6f425f2dedf3">
+<input id="91015af2-330d-45b5-89ff-3840c026b297" name="a7cbbb34-c553-4194-bcc9-2e3d9552e7d5" type="radio">
+</input><label class="tabbed-label" for="91015af2-330d-45b5-89ff-3840c026b297">
 Windows 10 (via VirtualBox)</label><div class="tabbed-content docutils">
 <p>Install <a class="reference external" href="https://virtualbox.org/">VirtualBox</a>, install a Linux distro inside of it, and then follow the Linux instructions.</p>
 </div>
@@ -1172,8 +1172,8 @@ upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 
 <span class="n">git</span> <span class="n">annex</span> <span class="n">init</span>
 <span class="n">git</span> <span class="n">annex</span> <span class="n">dead</span> <span class="n">here</span> <span class="c1"># make sure *this* copy isn&#39;t shared to others; the repo should be shared via the server</span>
-<span class="n">git</span> <span class="n">annex</span> <span class="n">config</span> <span class="n">annex</span><span class="o">.</span><span class="n">addunlocked</span> <span class="n">true</span> <span class="c1"># .gitattributes runs the filter on &#39;git add&#39;, which leaves files &#39;unlocked&#39;;</span>
-                                        <span class="c1"># this ensures files added with &#39;git annex add&#39; are also &#39;unlocked&#39;.</span>
+<span class="n">git</span> <span class="n">annex</span> <span class="n">config</span> <span class="o">--</span><span class="nb">set</span> <span class="n">annex</span><span class="o">.</span><span class="n">addunlocked</span> <span class="n">true</span> <span class="c1"># .gitattributes runs the filter on &#39;git add&#39;, which leaves files &#39;unlocked&#39;;</span>
+                                              <span class="c1"># this ensures files added with &#39;git annex add&#39; are also &#39;unlocked&#39;.</span>
                                         
 <span class="c1"># Here, copy in or create initial files, wherever they are from:</span>
 <span class="c1"># rsync, wget, curl, tar, dropbox, etc &lt;...&gt;</span>
