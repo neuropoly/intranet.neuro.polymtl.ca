@@ -1242,14 +1242,6 @@ Core 0:        +25.0°C  (high = +80.0°C, crit = +90.0°C)
 Core 1:        +25.0°C  (high = +80.0°C, crit = +90.0°C)
 </pre></div>
 </div>
-<p>You can see how hot its disks are running by finding out the name of the disk in /dev and running</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ df -h .
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda2       439G  412G  4.9G  99% /
-u108545@rosenberg:~$ hddtemp /dev/sda2
-/dev/sda2: PNY CS1311 480GB SSD: 30°C
-</pre></div>
-</div>
 <p>You can also see all this information plotted over time for each machine at</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://monitor.neuro.polymtl.ca/host/bireli.neuro.polymtl.ca/">https://monitor.neuro.polymtl.ca/host/bireli.neuro.polymtl.ca/</a></p></li>
@@ -1314,15 +1306,15 @@ tensorboard --logdir PATH_TO_MODEL --port PORTNUMBER
 <span id="id1"></span><h2>SSH tunnelling<a class="headerlink" href="#ssh-tunnelling" title="Permalink to this headline">#</a></h2>
 <p>If you want to run a Jupyter notebook from a remote server, or monitor a model training using tensorboard, you will need to do an SSH tunnelling to be able to pass the display from the remote cluster to your local station.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="fefec2d6-b53a-47b9-a1db-62d6b252e5fc" name="074ffc38-78c3-4c3d-92a2-3d173130d91d" type="radio">
-</input><label class="tabbed-label" for="fefec2d6-b53a-47b9-a1db-62d6b252e5fc">
+<input checked="checked" id="ad265d98-b7ef-43bc-ba98-ebecd46b4c57" name="5517e49d-e99e-4934-8f7b-e5f6202040dc" type="radio">
+</input><label class="tabbed-label" for="ad265d98-b7ef-43bc-ba98-ebecd46b4c57">
 Secure pipes</label><div class="tabbed-content docutils">
 <p>Install secure pipes and configure it as follows:
 with port_rosenber as the “Port” of the screen session and port_local is a random number (see screenshot below):</p>
 <p><img alt="" src="../../_images/tunnelling_macos.png" /></p>
 </div>
-<input id="cb492495-2592-4991-8ceb-0dd37bd9cdb3" name="074ffc38-78c3-4c3d-92a2-3d173130d91d" type="radio">
-</input><label class="tabbed-label" for="cb492495-2592-4991-8ceb-0dd37bd9cdb3">
+<input id="70eb6efa-b6e2-458d-a38b-4db23b70c981" name="5517e49d-e99e-4934-8f7b-e5f6202040dc" type="radio">
+</input><label class="tabbed-label" for="70eb6efa-b6e2-458d-a38b-4db23b70c981">
 Terminal</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh -N -f -L localhost:8080:localhost:PORTNUMBER username@CLUSTER.neuro.polymtl.ca
 </pre></div>

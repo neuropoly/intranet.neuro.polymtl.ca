@@ -193,16 +193,6 @@ Core 0:        +25.0°C  (high = +80.0°C, crit = +90.0°C)
 Core 1:        +25.0°C  (high = +80.0°C, crit = +90.0°C)
 ```
 
-You can see how hot its disks are running by finding out the name of the disk in /dev and running
-
-```text
-u918374@rosenberg:~$ df -h .
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda2       439G  412G  4.9G  99% /
-u108545@rosenberg:~$ hddtemp /dev/sda2
-/dev/sda2: PNY CS1311 480GB SSD: 30°C
-```
-
 You can also see all this information plotted over time for each machine at
 
 * [https://monitor.neuro.polymtl.ca/host/bireli.neuro.polymtl.ca/](https://monitor.neuro.polymtl.ca/host/bireli.neuro.polymtl.ca/)
