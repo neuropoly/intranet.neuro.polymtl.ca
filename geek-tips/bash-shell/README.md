@@ -312,6 +312,10 @@ echo "something" | mailx -s "subject" someone@email.com
 ### **Check Processes**
 
 ```bash
+pstree -ap
+```
+
+```bash
 ps aux
 ```
 
