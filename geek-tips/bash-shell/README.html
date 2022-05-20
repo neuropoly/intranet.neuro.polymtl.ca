@@ -1652,15 +1652,15 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 <h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">#</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="9a81369a-cc5c-4153-b795-e61742fb21eb" name="8f5f31bb-7d94-4e36-8df6-4bb2b3312da7" type="radio">
-</input><label class="tabbed-label" for="9a81369a-cc5c-4153-b795-e61742fb21eb">
+<input checked="checked" id="98becfbf-f632-4327-9ea8-7b4557ef6084" name="97ea4d55-f232-422e-ba36-49c331f99041" type="radio">
+</input><label class="tabbed-label" for="98becfbf-f632-4327-9ea8-7b4557ef6084">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
 </pre></div>
 </div>
 </div>
-<input id="cbe3fcca-b09f-4037-90b5-9de868b4c41a" name="8f5f31bb-7d94-4e36-8df6-4bb2b3312da7" type="radio">
-</input><label class="tabbed-label" for="cbe3fcca-b09f-4037-90b5-9de868b4c41a">
+<input id="81f0570c-622d-4fce-986a-65b9a812dd2e" name="97ea4d55-f232-422e-ba36-49c331f99041" type="radio">
+</input><label class="tabbed-label" for="81f0570c-622d-4fce-986a-65b9a812dd2e">
 Mac</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
 find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5
@@ -1696,6 +1696,9 @@ find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</
 <h2>Processes<a class="headerlink" href="#processes" title="Permalink to this headline">#</a></h2>
 <section id="check-processes">
 <h3><strong>Check Processes</strong><a class="headerlink" href="#check-processes" title="Permalink to this headline">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pstree -ap
+</pre></div>
+</div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ps aux
 </pre></div>
 </div>
