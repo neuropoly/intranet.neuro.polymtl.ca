@@ -2,7 +2,6 @@
 
 ```{toctree}
 :hidden:
-NeuroPoly Website <https://neuro.polymtl.ca>
 onboarding/README
 agenda-and-calendar
 mri-scanning/README
@@ -16,6 +15,7 @@ conferences
 ideas-for-cool-projects
 practical-information/README
 contact
+NeuroPoly Website <https://neuro.polymtl.ca>
 ```
 
 Welcome to the [NeuroPoly Lab](https://www.neuro.polymtl.ca/)! This wiki is intended for students, faculty, researchers, associates, and developers of **NeuroPoly**. Here you can find information about onboarding, software, best practices, and more :\)
