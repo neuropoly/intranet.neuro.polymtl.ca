@@ -10,7 +10,7 @@ They live on the strength of someone taking the lead to organize them each week.
 
 Find a restaurant that does delivery in the neighbourhood. You can look on [Google Maps](https://www.google.com/maps/search/Restaurants/@45.4933376,-73.6229251,14z/data=!3m1!4b1) to help you decide, or get creative and pick one from a word-of-mouth recommendation.
 
-We budget 15$/person, so make sure the place is in that price range.
+We budget 10$/person, so make sure the place is in that price range.
 
 ## Announce
 
@@ -51,7 +51,7 @@ To make it easier and a bit more fun, you can try using Chwazi
 
 ## Reimbursements
 
-Again, save your receipts! If the restuarant sent you a confirmation email or gave you an order confirmation webpage, save that too.
+Again, save your receipts! If the restaurant sent you a confirmation email or gave you an order confirmation webpage, save that too.
 When you get the final paper receipt, immediately take a photo of it, and save.
 
 Submit copies the receipt and any other documentation to dge.sec-biomedical@polymtl.ca, CC'ing your PI, with the subject "Demande de remboursement"
