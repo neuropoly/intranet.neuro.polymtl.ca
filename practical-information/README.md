@@ -6,6 +6,7 @@ This section provides useful information for applicants to NeuroPoly Lab and new
 :maxdepth: 1
 visa
 moving-to-montreal
+purchasing-weekly-lunch
 scholarships-and-bursaries
 purchasing-hardware-and-lab-supplies
 ```
