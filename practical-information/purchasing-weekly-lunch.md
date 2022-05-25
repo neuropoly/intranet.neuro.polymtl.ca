@@ -26,7 +26,7 @@ For example:
 
 The next morning, or perhaps the night before depending on the restaurant,
 put in an order to arrive half an hour early -- at about 12:00.
-Ask them to deliver to Polytechnique's upper Lassonde / Pavillion Principal entrance.
+Ask them to deliver to Polytechnique's upper Lassonde / Pavillion Principal entrance, at 2500 Chemin de Polytechnique, Montréal.
 Order as many meals as you have emojis, plus one as a spare.
 
 When it arrives, pay with your personal funds. Make sure to get and save a receipt.
