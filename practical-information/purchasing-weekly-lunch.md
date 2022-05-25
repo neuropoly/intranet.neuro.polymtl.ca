@@ -15,8 +15,8 @@ We budget 10$/person, so make sure the place is in that price range.
 ## Announce
 
 24 hours before, go onto [#general](https://app.slack.com/client/T034UD4QN/C034UD4QW) and announce where you will order from.
-Usually we pick two or three dishes, including at least one meat and at least one vegetarian option, from the menu,
-and add some emojis to let people vote on what they would like.
+Usually we pick two or three dishes from the menu, including at least one meat and at least one vegetarian option.
+Add emojis to your announcement to let people vote on what they would like.
 
 For example:
 
