@@ -2,6 +2,7 @@
 
 ```{toctree}
 :hidden:
+lab-theses
 spinal-cord-injury
 mri
 deep-learning
