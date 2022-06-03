@@ -56,9 +56,7 @@ When you get the final paper receipt, immediately take a photo of it, and save e
 
 Submit copies the receipt and any other documentation to dge.sec-biomedical@polymtl.ca. Your email should explain what the reimbursement is for, which PI is covering the costs and which account will be used. Contact your PI to ask about the latter and CC them in any correspondance.
 
-It will take them about a month to process your request; they will fill out a [Demande de Paiement](https://share.polymtl.ca/alfresco/guestDownload/attach?path=/Company%20Home/Sites/si-formulaires/documentLibrary/Finances/Demande%20de%20paiement-Safirh.xlsm) for you and return it to you for signing.
-
-After signing, it will be countersigned by your PI.
+It will take them about a month to process your request.
 
 If you are salaried, the payment will be added to your next paycheque.
 If you are consultant, it should be added to your next invoice.
