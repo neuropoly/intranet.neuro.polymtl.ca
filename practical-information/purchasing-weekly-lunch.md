@@ -54,7 +54,7 @@ To make it easier and a bit more fun, you can try using Chwazi
 Again, save your receipts! If the restaurant sent you a confirmation email or gave you an order confirmation webpage, save that too.
 When you get the final paper receipt, immediately take a photo of it, and save everything in a safe digital place like your email or a cloud account, and save the paper copies just in case.
 
-Submit copies the receipt and any other documentation to dge.sec-biomedical@polymtl.ca, CC'ing your PI, with the subject "Demande de remboursement"
+Submit copies the receipt and any other documentation to dge.sec-biomedical@polymtl.ca. Your email should explain what the reimbursement is for, which PI is covering the costs and which account will be used. Contact your PI to ask about the latter and CC them in any correspondance.
 
 It will take them about a month to process your request; they will fill out a [Demande de Paiement](https://share.polymtl.ca/alfresco/guestDownload/attach?path=/Company%20Home/Sites/si-formulaires/documentLibrary/Finances/Demande%20de%20paiement-Safirh.xlsm) for you and return it to you for signing.
 
