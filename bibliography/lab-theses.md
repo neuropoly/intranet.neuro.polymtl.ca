@@ -24,7 +24,10 @@
 * Atef Badji (2017). Impact de la rigidité vasculaire sur la microstructure de la substance blanche du cerveau.
 * Ariane Saliani (2017). [Construction d’un atlas de la microstructure de la matière blanche de la moelle épinière chez le rat à partir d’acquisitions histologiques](https://publications.polymtl.ca/2734/).
 * Manh Tung Vuong (2017). [Comparison of Myelin Imaging Techniques in Ex Vivo Spinal Cord](https://publications.polymtl.ca/2683/).
+* Grégoire Germain (2017). [Une antenne hybride RF/shimming pour l’IRM de la moelle épinière](https://publications.polymtl.ca/2623/).
 * Gabriel Mangeat (2016). [Study of Human Cortical Microstructure Using Magnetization Transfer and T2* Mapping with Application in Multiple Sclerosis](https://publications.polymtl.ca/2079/). 
+* Simon Lévy (2016). [Caractérisation de la microstructure des voies spinales humaines par IRM multiparamétrique](https://publications.polymtl.ca/2068/). 
+* Alexandru Foias (2015). [Design and Construction of a Highly Sensitive Coil for MRI of the Spinal Cord](https://publications.polymtl.ca/2001/). 
 * Benjamin De Leener (2014). [Segmentation automatique de la moelle épinière sur des images de résonance magnétique par propagation de modèles déformables](https://publications.polymtl.ca/1471/).
 
 ## Nikola students
