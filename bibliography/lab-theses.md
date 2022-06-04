@@ -34,6 +34,9 @@
 
 ### PhD
 
+* Agah Karakuzu (2022). Bringing quantitative magnetic resonance imaging under one umbrella.
+* Tommy Boshkovski (2021). [The Myelin-Weighted Connectome: A Multiplex Approach to Characterize Brain Function and Structure](https://publications.polymtl.ca/6324/). 
+
 ### MSc
 
 * Manh Tung Vuong (2017). [Comparison of Myelin Imaging Techniques in Ex Vivo Spinal Cord](https://publications.polymtl.ca/2683/).
