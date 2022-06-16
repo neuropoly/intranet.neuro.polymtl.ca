@@ -15,7 +15,7 @@ mhi-7t-agilent
 
 A list of MRI facilities accessible to NeuroPoly members is available [here](https://neuropoly.gitbook.io/workspace/facilities#mri-facilities).&#x20;
 
-## **Book the scanner and log in the google calendar **
+## **Book the scanner and log in the google calendar**
 
 If you book the MRI, please use the “[Neuropoly - MRI](https://calendar.google.com/calendar/embed?src=k4moiei5d2lh84iokouk6lt84o%40group.calendar.google.com\&ctz=America%2FToronto)” google cal. 
 Create an event in the gcal, with:
