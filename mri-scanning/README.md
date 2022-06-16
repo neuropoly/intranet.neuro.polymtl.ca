@@ -15,9 +15,15 @@ mhi-7t-agilent
 
 A list of MRI facilities accessible to NeuroPoly members is available [here](https://neuropoly.gitbook.io/workspace/facilities#mri-facilities).&#x20;
 
-## **Book the scanner**
+## **Book the scanner and log in the google calendar **
 
-If you book the MRI, please use the “[Neuropoly - MRI](https://calendar.google.com/calendar/embed?src=k4moiei5d2lh84iokouk6lt84o%40group.calendar.google.com\&ctz=America%2FToronto)” google cal. Details to book an MRI scanner is given in the specific MRI sub-section.&#x20;
+If you book the MRI, please use the “[Neuropoly - MRI](https://calendar.google.com/calendar/embed?src=k4moiei5d2lh84iokouk6lt84o%40group.calendar.google.com\&ctz=America%2FToronto)” google cal. 
+Create an event in the gcal, with:
+* Event name = scan session name, as will be entered on the console (eg, if your scan is acdc_spine_7t_033p, call the even the same)
+* Event description: Write a description into rthe logbook (see below) and link that entry, then add location (MNI, UNF, etc)
+* Invities: if other people are joining you in the scan session, invite them as a courtesy/reminder 
+
+Details to book an MRI scanner is given in the specific MRI sub-section.&#x20;
 
 ## **Log book**
 
