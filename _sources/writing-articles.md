@@ -152,9 +152,11 @@ Incorporate figure in article:
 
 **Affiliation for Julien Cohen-Adad:**
 
-> Functional Neuroimaging Unit, CRIUGM, Université de Montréal, Montréal, QC, Canada
+> Functional Neuroimaging Unit, CRIUGM, Université de Montréal, Montreal, QC, Canada
 
 > Mila - Quebec AI Institute, Montréal, QC, Canada
+
+> Department of Pediatrics, CHU Sainte-Justine, Université de Montréal, Montreal, QC, Canada
 
 **Affiliation for Nikola Stikov:**
 
