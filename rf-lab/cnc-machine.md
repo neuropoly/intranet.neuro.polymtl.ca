@@ -4,4 +4,4 @@
 
 Documentation here: [https://docs.sainsmart.com/article/x6sr565m5g-3018-prover](https://docs.sainsmart.com/article/x6sr565m5g-3018-prover)
 
-![](../../.gitbook/assets/unnamed.jpg)
+![](../.gitbook/assets/unnamed.jpg)
