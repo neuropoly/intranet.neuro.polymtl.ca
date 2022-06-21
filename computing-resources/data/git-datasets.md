@@ -36,9 +36,11 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJwsjlem+acuTOZGyNQKjyI7kJe9ULkhZo7N04QfC/tA
 Current **server admins** are:
 
 * jcohen@polymtl.ca
-* alexandru.foias@polymtl.ca
+* eva.alonso-ortiz@polymtl.ca
 * nick.guenther@polymtl.ca
 * taowa.rosetwig@polymtl.ca
+* noel.rignon@polymtl.ca
+* mathieu.guay-paquet@polymtl.ca
 
 The admins should follow [Admin Guide > Add Users](#add-users) to create your account.
 
