@@ -15,6 +15,7 @@
 | UML diagram | [http://www.umlet.com/umletino/umletino.html](http://www.umlet.com/umletino/umletino.html) |
 | Art with ASCII | [https://patorjk.com/software/taag](https://patorjk.com/software/taag) \(good ones: Doom, Slant, ANSI Regular, Larry 3D\) |
 | Create a favicon | [https://www.favicon-generator.org/](https://www.favicon-generator.org/) |
+| Writing good research code | [https://goodresearch.dev/index.html](https://goodresearch.dev/index.html) |
 
 
 ## Software
