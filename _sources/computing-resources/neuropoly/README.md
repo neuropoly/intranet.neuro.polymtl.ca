@@ -250,6 +250,12 @@ sshfs <STATION>:/tmp/ cluster_folder
 
 will attach the remote `/tmp/` to the local `./cluster_folder`
 
+
+```{note}
+If you are experiencing mounting issues on macOs, [this]([url](https://github.com/neuropoly/intranet.neuro.polymtl.ca/issues/57)) might help.
+```
+
+
 ### VNC (graphical interface)
 
 
