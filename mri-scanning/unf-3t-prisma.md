@@ -6,6 +6,15 @@ description: 3T Siemens Prisma at the Unité de Neuroimagerie Fonctionnelle (UNF
 
 More details on the UNF website: [https://unf-montreal.ca/en/documentation/facility/mri/](https://unf-montreal.ca/en/documentation/facility/mri/)
 
+## Booking the scanner
+
+Details about the booking system [here]([url](https://unf-montreal.ca/en/documentation/facility/reservation/)). 
+
+```{note}
+Under the `session name` you will need to enter a study suffix that is listed in this [JSON file]([url](https://github.com/UNFmontreal/bids_configs/blob/master/studies.json)). Look for the fields that start with `neuropoly`.
+```
+
+
 ## Finding participants
 
 Check our [internal list of participants](https://docs.google.com/spreadsheets/d/1S0v-YWxYrILJmqb3PtaSTgwBECKEbnljoDfnfIROoSk/edit?usp=sharing) (requires NeuroPoly credentials).
