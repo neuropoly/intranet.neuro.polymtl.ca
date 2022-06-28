@@ -10,6 +10,7 @@
 * [TransMedTech](https://www.polymtl.ca/transmedtech/programmes-de-financement-et-daccompagnement)
 * QBIN
 * [UNIQUE research group](https://www.unique.quebec/funding)
+* [Fondation Arbour](https://www.fondationarbour.com/en/bourses-d-etudes-doctoract-phd-dba/maitrise/#content)
 
 For students in neurosciences:
 
@@ -34,6 +35,7 @@ For students in neurosciences:
 
 FOUNDATIONS
 
+* [Fondation Arbour](https://www.fondationarbour.com/en/bourses-d-etudes-doctoract-phd-dba/)
 * [ISRT \(Spinal Research\)](http://www.spinal-research.org/)
 * [Rick Hansen Institute](http://www.rickhanseninstitute.org/)
 * [Wings for Life](http://www.wingsforlife.com/en/)
