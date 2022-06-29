@@ -103,3 +103,12 @@ Fomblin:
 
 * [Cutting Mats](http://www.cutting-mats.net/index.html)
 
+
+
+## Reimbursements
+
+If you purchase supplies for the lab, scan/take a photo/save a PDF of your receipts (and keep any paper copies safe).
+
+Submit a request with the scanned/PDF receipts attached to dge.demandes@polymtl.ca. If you are an employee or student make sure to mention your matricule.
+
+If you are an employee, it should be added to your next paycheque, given a week's notice. That is, to receive on your thursday pay, it must be submitted by the preceeding Friday. If you are a consultant, it should be paid on your next invoice.
