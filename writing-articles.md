@@ -148,15 +148,15 @@ Incorporate figure in article:
 
 **For everyone:**
 
-> NeuroPoly Lab, Institute of Biomedical Engineering, Polytechnique Montréal, Montréal, QC, Canada
+> NeuroPoly Lab, Institute of Biomedical Engineering, Polytechnique Montreal, Montreal, QC, Canada
 
 **Affiliation for Julien Cohen-Adad:**
 
 > Functional Neuroimaging Unit, CRIUGM, Université de Montréal, Montreal, QC, Canada
 
-> Mila - Quebec AI Institute, Montréal, QC, Canada
+> Mila - Quebec AI Institute, Montreal, QC, Canada
 
-> Department of Pediatrics, CHU Sainte-Justine, Université de Montréal, Montreal, QC, Canada
+> Centre de recherche du CHU Sainte-Justine, Université de Montréal, Montreal, QC, Canada
 
 **Affiliation for Nikola Stikov:**
 
