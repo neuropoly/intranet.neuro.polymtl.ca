@@ -1667,15 +1667,15 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 <h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">#</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="01ecadc6-d27a-414a-9796-5f1c0d6032b4" name="cb20c8c7-2ade-4d3b-8881-6d9f8787c6bd" type="radio">
-</input><label class="tabbed-label" for="01ecadc6-d27a-414a-9796-5f1c0d6032b4">
+<input checked="checked" id="a35be3fa-dd58-4e35-8873-753ec55c5f7c" name="3271bc5d-3d4c-4949-9589-a97b7f6b5824" type="radio">
+</input><label class="tabbed-label" for="a35be3fa-dd58-4e35-8873-753ec55c5f7c">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
 </pre></div>
 </div>
 </div>
-<input id="d33f5cf4-58ec-4c7a-ba04-19ae9d19bab6" name="cb20c8c7-2ade-4d3b-8881-6d9f8787c6bd" type="radio">
-</input><label class="tabbed-label" for="d33f5cf4-58ec-4c7a-ba04-19ae9d19bab6">
+<input id="1a0f6ffd-4f0c-4925-9c75-7d446c25c510" name="3271bc5d-3d4c-4949-9589-a97b7f6b5824" type="radio">
+</input><label class="tabbed-label" for="1a0f6ffd-4f0c-4925-9c75-7d446c25c510">
 Mac</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
 find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5
