@@ -469,7 +469,7 @@ This computer is to be used for CST simulations. The station is bound to the **P
                                                                                                                                                           
 This computer has CST installed. 
 
-### node007
+### node007 (Poly-Grames)
 
 | Spec            | Description                                                                                                                                                             |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
