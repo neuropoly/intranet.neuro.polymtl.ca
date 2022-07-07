@@ -476,7 +476,7 @@ This computer has CST installed.
 | **Model**       | PC                                                                                                                                                                      |
 | **OS**          | Windows 10                                                                                                                                                              |
 | **Hostname**    | `node007.grames.polymtl.ca`                                                                                                                                            |
-| **Credentials** | [NeuroPoly Internal Document: Peterson Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ovkq2tj4p4hz) |
+| **Credentials** | [NeuroPoly Internal Document: node007 Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ovkq2tj4p4hz) |
 | **GPU**       | NVIDIA Tesla V100S-PCIE-32GB
 
 This computer has CST installed. 
