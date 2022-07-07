@@ -457,7 +457,7 @@ This computer is to be used for programming pulse sequences within the Siemens I
 
 This computer is to be used for CST simulations. The station is bound to the **Poly-Grames** domain.
 
-### node006
+### node006 (Poly-Grames)
 
 | Spec            | Description                                                                                                                                                             |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
