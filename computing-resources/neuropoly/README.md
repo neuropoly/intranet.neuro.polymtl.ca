@@ -464,7 +464,7 @@ This computer is to be used for CST simulations. The station is bound to the **P
 | **Model**       | PC                                                                                                                                                                      |
 | **OS**          | Windows 10                                                                                                                                                              |
 | **Hostname**    | `node006.grames.polymtl.ca`                                                                                                                                            |
-| **Credentials** | [NeuroPoly Internal Document: Peterson Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.3ssvul9a335m) |
+| **Credentials** | [NeuroPoly Internal Document: node006 Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.3ssvul9a335m) |
 | **GPU**       | NVIDIA Tesla V100S-PCIE-32GB 
                                                                                                                                                           
 This computer has CST installed. 
