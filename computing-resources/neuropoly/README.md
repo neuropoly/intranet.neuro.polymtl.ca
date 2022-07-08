@@ -449,7 +449,7 @@ For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.
 | **Purpose** | EM simulation with CST |
 | **Model** | PC, NVIDIA RTX A6000 (1x) |
 | **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
-| **Hostname**    | `peterson.neuro.polymtl.ca` |
+| **Hostname**    | `peterson.grames.polymtl.ca` |
 | **Credentials** | <GRAMES_USERNAME>/<GRAMES_PASSWORD> |
 
 
@@ -460,7 +460,7 @@ For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.
 | **Purpose** | EM simulation with CST |
 | **Model** | PC, NVIDIA Tesla V100S-PCIE-32GB (1x) |
 | **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
-| **Hostname**    | `node006.neuro.polymtl.ca` |
+| **Hostname**    | `node006.grames.polymtl.ca` |
 | **Credentials** | <GRAMES_USERNAME>/<GRAMES_PASSWORD> |
 
 
@@ -471,7 +471,7 @@ For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.
 | **Purpose** | EM simulation with CST |
 | **Model** | PC, NVIDIA Tesla V100S-PCIE-32GB (1x) |
 | **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
-| **Hostname**    | `node007.neuro.polymtl.ca` |
+| **Hostname**    | `node007.grames.polymtl.ca` |
 | **Credentials** | <GRAMES_USERNAME>/<GRAMES_PASSWORD> |
 
 
