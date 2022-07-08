@@ -416,70 +416,64 @@ For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.
 | **Credentials** | [NeuroPoly Internal Document: VNMRJ VNC Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.jzew4w9jgpfp) |
 
 
-### idea3t - Siemens Pulse sequence programming for VE11C (Prisma)
+### idea3t
 
-
-| Spec            | Description                                                                                                                                                           |
-| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Model**       | PC                                                                                                                                                                    |
-| **OS**          | Windows 10                                                                                                                                                            |
-| **Hostname**    | `idea3t.neuro.polymtl.ca`                                                                                                                                             |
+| Spec | Description |
+| --------------- | -------------- |
+| **Purpose** | Programming pulse sequences within the Siemens IDEA environment for VE11C (Prisma) |
+| **Model** | PC |
+| **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
+| **Hostname**    | `idea3t.neuro.polymtl.ca` |
 | **Credentials** | [NeuroPoly Internal Document: Idea3t Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.d65wz45n6ho7) |
-
-This computer is to be used for programming pulse sequences within the Siemens IDEA environment for VE11C (Prisma).
-
-#### Troubleshooting
 
 ```{warning}
 **Possible error:** “The certificate or associated chain is not valid.”\
 **Solution:** Install remote Desktop v10 or higher (v8 does not work)
 ```
 
-### idea7t - Siemens Pulse sequence programming for VE12U (Terra)
+### idea7t
 
-| Spec            | Description                                                                                                                                                           |
-| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Model**       | PC                                                                                                                                                                    |
-| **OS**          | Windows 10                                                                                                                                                            |
-| **Hostname**    | `idea7t.neuro.polymtl.ca`                                                                                                                                             |
-| **Credentials** | [NeuroPoly Internal Document: Idea7t Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.n9kbx2oyojzg) |
+| Spec | Description |
+| --------------- | -------------- |
+| **Purpose** | Programming pulse sequences within the Siemens IDEA environment for VE12U (Terra) |
+| **Model** | PC |
+| **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
+| **Hostname**    | `idea7t.neuro.polymtl.ca` |
+| **Credentials** | [NeuroPoly Internal Document: Idea3t Remote Credentials](BROKEN) |
 
-This computer is to be used for programming pulse sequences within the Siemens IDEA environment for VE12U (Terra).
 
-### peterson - CST simulations
+### peterson
 
-| Spec            | Description                                                                                                                                                             |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Model**       | PC                                                                                                                                                                      |
-| **OS**          | Windows 10                                                                                                                                                              |
-| **Hostname**    | `peterson.grames.polymtl.ca`                                                                                                                                            |
-| **Credentials** | [NeuroPoly Internal Document: Peterson Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.x9gy1qxtkals) |
+| Spec | Description |
+| --------------- | -------------- |
+| **Purpose** | EM simulation with CST |
+| **Model** | PC, NVIDIA RTX A6000 (1x) |
+| **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
+| **Hostname**    | `peterson.neuro.polymtl.ca` |
+| **Credentials** | <GRAMES_USERNAME>/<GRAMES_PASSWORD> |
 
-This computer is to be used for CST simulations. The station is bound to the **Poly-Grames** domain.
 
 ### node006 (Poly-Grames)
 
-| Spec            | Description                                                                                                                                                             |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Model**       | PC                                                                                                                                                                      |
-| **OS**          | Windows 10                                                                                                                                                              |
-| **Hostname**    | `node006.grames.polymtl.ca`                                                                                                                                            |
-| **Credentials** | [NeuroPoly Internal Document: node006 Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.3ssvul9a335m) |
-| **GPU**       | NVIDIA Tesla V100S-PCIE-32GB 
-                                                                                                                                                          
-This computer has CST installed. 
+| Spec | Description |
+| --------------- | -------------- |
+| **Purpose** | EM simulation with CST |
+| **Model** | PC, NVIDIA Tesla V100S-PCIE-32GB (1x) |
+| **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
+| **Hostname**    | `node006.neuro.polymtl.ca` |
+| **Credentials** | <GRAMES_USERNAME>/<GRAMES_PASSWORD> |
+
 
 ### node007 (Poly-Grames)
 
-| Spec            | Description                                                                                                                                                             |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Model**       | PC                                                                                                                                                                      |
-| **OS**          | Windows 10                                                                                                                                                              |
-| **Hostname**    | `node007.grames.polymtl.ca`                                                                                                                                            |
-| **Credentials** | [NeuroPoly Internal Document: node007 Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ovkq2tj4p4hz) |
-| **GPU**       | NVIDIA Tesla V100S-PCIE-32GB
+| Spec | Description |
+| --------------- | -------------- |
+| **Purpose** | EM simulation with CST |
+| **Model** | PC, NVIDIA Tesla V100S-PCIE-32GB (1x) |
+| **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
+| **Hostname**    | `node007.neuro.polymtl.ca` |
+| **Credentials** | <GRAMES_USERNAME>/<GRAMES_PASSWORD> |
 
-This computer has CST installed. 
 
 ## Connect to the Polytechnique public disk
 
