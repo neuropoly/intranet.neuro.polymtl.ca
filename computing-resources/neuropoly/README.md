@@ -439,7 +439,7 @@ For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.
 | **Model** | PC |
 | **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
 | **Hostname**    | `idea7t.neuro.polymtl.ca` |
-| **Credentials** | [NeuroPoly Internal Document: Idea3t Remote Credentials](BROKEN) |
+| **Credentials** | [NeuroPoly Internal Document: Idea7t Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.i6g9qdkw050o) |
 
 
 ### peterson
