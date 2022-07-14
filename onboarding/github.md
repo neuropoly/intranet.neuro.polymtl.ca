@@ -1,4 +1,4 @@
-# Github
+# GitHub
 
 #### Organisation
 
@@ -8,11 +8,11 @@ https://github.com/neuropoly
 #### Purpose
 
 
-The purpose of this organization is to host repos that are related to neuropoly's projects. Eg: if you publish a paper, you could put the code+data there and link to it in your paper.
+The purpose of this organization is to host repos that are related to NeuroPoly's projects. Eg: if you publish a paper, you could put the code+data there and link to it in your paper.
 
 #### Philosophy
 
-The philosophy of neuropoly's lab is to do open science, which means that repos should be public. There are some exception: confidential data/credentials, highly-top-secret scientific research, etc.
+The philosophy of NeuroPoly's lab is to do open science, which means that repos should be public. There are some exception: confidential data/credentials, highly-top-secret scientific research, etc.
 
 #### Usage
 
