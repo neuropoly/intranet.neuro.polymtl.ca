@@ -6,6 +6,7 @@ getting-started
 campus-access
 infrastructure
 dropbox-google-drive
+gitHub
 computer-setup
 developer-setup
 consultants-ra
