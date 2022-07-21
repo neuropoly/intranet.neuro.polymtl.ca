@@ -15,6 +15,7 @@ setup(
     name="intranet.neuro.polymtl.ca",
     python_requires=">=3.6",
     author="NeuroPoly",
+    packages=[],
     extras_require={
         "sphinx": [
             "myst-parser",
