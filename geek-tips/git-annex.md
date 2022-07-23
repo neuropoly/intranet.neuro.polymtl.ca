@@ -70,6 +70,7 @@ And specifically for `git-annex`:
 
 ```
 git config --global annex.thin true # save disk space by de-duplicating checked out and annexed copies
+git config --global annex.private true # prevent attempting to share your local copy of the annex, which is impossible when working in a team
 ```
 
 See [below](#hardlinks) to understand what this setting offers.
@@ -107,9 +108,9 @@ EOF
 git add .gitignore .gitattributes && git commit -m "Configure git-annex"
 
 git annex init
-git annex dead here # make sure *this* copy isn't shared to others; the repo should be shared via the server
 git annex config --set annex.addunlocked true # .gitattributes runs the filter on 'git add', which leaves files 'unlocked';
-                                              # this ensures files added with 'git annex add' are also 'unlocked'.
+                                              # i.e. as themselves, instead of as symlinks into .git/annex/objects;
+                                              # this setting ensures files added with 'git annex add' are also 'unlocked'.
                                         
 # Here, copy in or create initial files, wherever they are from:
 # rsync, wget, curl, tar, dropbox, etc <...>
