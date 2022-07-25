@@ -13,6 +13,7 @@ mri-coils-at-neuropoly
 misc
 mri-phantoms
 3d-printing/README
+3d-printing/octoprint
 pcb-manufacturing
 cnc-machine
 ```
