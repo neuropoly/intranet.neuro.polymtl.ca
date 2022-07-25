@@ -1311,8 +1311,8 @@ title="Edit this page"
 <h3>Home folder<a class="headerlink" href="#home-folder" title="Permalink to this headline">#</a></h3>
 <p>Every <span class="xref myst">GRAMES</span> account has a school-wide personal home folder. It is backed-up nightly.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="9dd8d48c-4701-4290-9658-0221e4d21839" name="08cdb762-272e-4c3e-987d-ee668861a67a" type="radio">
-</input><label class="tabbed-label" for="9dd8d48c-4701-4290-9658-0221e4d21839">
+<input checked="checked" id="f59ff598-fd99-497a-9730-d0127f90687e" name="80ed0678-7d65-431c-aaaf-ee0b22a0b105" type="radio">
+</input><label class="tabbed-label" for="f59ff598-fd99-497a-9730-d0127f90687e">
 macOS</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Finder</p></li>
@@ -1355,8 +1355,8 @@ macOS</label><div class="tabbed-content docutils">
 <p>You can change your password at <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a>. Also, you can double-check you have VPN access by looking for <code class="docutils literal notranslate"><span class="pre">VPN_*</span> <span class="pre">=</span> <span class="pre">Actif</span></code> here.</p>
 <p>The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing a VPN client such as <code class="docutils literal notranslate"><span class="pre">openconnect</span></code> (recommended) or <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">AnyConnect</span> <span class="pre">Secure</span> <span class="pre">Mobility</span> <span class="pre">Client</span></code> (if <code class="docutils literal notranslate"><span class="pre">openconnect</span></code> is not available for your OS/distro):</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="37d4c0a7-3c56-4ed3-bf1e-f710e184d207" name="0d579a88-580c-499e-ba33-729d708dcf94" type="radio">
-</input><label class="tabbed-label" for="37d4c0a7-3c56-4ed3-bf1e-f710e184d207">
+<input checked="checked" id="305ca723-c67c-4000-b96f-61a704018f6c" name="5f5b4b99-b7cd-4169-80eb-d53db2a94512" type="radio">
+</input><label class="tabbed-label" for="305ca723-c67c-4000-b96f-61a704018f6c">
 MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1376,7 +1376,7 @@ MacOS</label><div class="tabbed-content docutils">
 <span class="nv">USER</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR_CAS_USERNAME&gt;&quot;</span>
 <span class="nv">PASS</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>security find-generic-password -a <span class="s2">&quot;</span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span><span class="s2">&quot;</span> -s poly-vpn -w<span class="k">)</span><span class="s2">&quot;</span>
 <span class="nv">GROUP</span><span class="o">=</span>PolySSL <span class="c1"># or PolyInvites, depending on your account&#39;s status</span>
-<span class="nb">echo</span> -n <span class="s2">&quot;</span><span class="nv">$PASS</span><span class="s2">&quot;</span> <span class="p">|</span> sudo openconnect -u <span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span> --authgroup <span class="s2">&quot;</span><span class="nv">$GROUP</span><span class="s2">&quot;</span> --passwd-on-stdin --reconnect-timeout <span class="m">20</span> ssl.vpn.polymtl.ca
+<span class="nb">echo</span> -n <span class="s2">&quot;</span><span class="nv">$PASS</span><span class="s2">&quot;</span> <span class="p">|</span> sudo openconnect -u <span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span> --authgroup <span class="s2">&quot;</span><span class="nv">$GROUP</span><span class="s2">&quot;</span> --passwd-on-stdin --reconnect-timeout <span class="m">20</span> --servercert pin-sha256:xpOY2XHGB/dcVtLnGyaZnJfrUsqUbb2e1hhPNzIkmY0<span class="o">=</span> ssl.vpn.polymtl.ca
 </pre></div>
 </div>
 <p>To connect to the VPN, you need to run:</p>
@@ -1384,8 +1384,8 @@ MacOS</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="9e50301b-3768-4bfb-b127-96b78b5e5264" name="0d579a88-580c-499e-ba33-729d708dcf94" type="radio">
-</input><label class="tabbed-label" for="9e50301b-3768-4bfb-b127-96b78b5e5264">
+<input id="9974fe87-9b1f-42d1-9ee1-e388ff44b0a9" name="5f5b4b99-b7cd-4169-80eb-d53db2a94512" type="radio">
+</input><label class="tabbed-label" for="9974fe87-9b1f-42d1-9ee1-e388ff44b0a9">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1407,8 +1407,8 @@ Linux</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="6c7154d3-e692-48da-865b-134034df5822" name="0d579a88-580c-499e-ba33-729d708dcf94" type="radio">
-</input><label class="tabbed-label" for="6c7154d3-e692-48da-865b-134034df5822">
+<input id="eaba91d7-4e31-42ec-a187-bb159482d668" name="5f5b4b99-b7cd-4169-80eb-d53db2a94512" type="radio">
+</input><label class="tabbed-label" for="eaba91d7-4e31-42ec-a187-bb159482d668">
 Windows</label><div class="tabbed-content docutils">
 <p>Please follow the official steps from PolyMTL (<a class="reference external" href="https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/rentree/documentLibrary/Aide-m%C3%A9moire%20tutoriels%20A2020/Aide-Memoire_VPN.pdf?a=true&amp;guest=true">French</a> or <a class="reference external" href="https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/rentree/documentLibrary/Aide-m%C3%A9moire%20tutoriels%20A2020/Checklist_VPN.pdf?a=true&amp;guest=true">English</a>.</p>
 <p>In case the above links ever break, the steps are:</p>
@@ -1489,15 +1489,15 @@ Windows</label><div class="tabbed-content docutils">
 <p>The best way to do this is <code class="docutils literal notranslate"><span class="pre">sshfs</span></code>, which makes them appear as if they were a drive on your computer:</p>
 <p>Install sshfs, if not yet installed:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="92ad6a4c-7a1b-40d1-8aa1-cd7ae5cb4901" name="4e4ed9fe-175b-47ac-822e-288c3a24d9b1" type="radio">
-</input><label class="tabbed-label" for="92ad6a4c-7a1b-40d1-8aa1-cd7ae5cb4901">
+<input checked="checked" id="ffc21e79-3b7e-4fbf-bf31-854e5533cc8f" name="d3005c7f-b39b-46af-9ded-acc0fbd2df1e" type="radio">
+</input><label class="tabbed-label" for="ffc21e79-3b7e-4fbf-bf31-854e5533cc8f">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">sshfs</span>
 </pre></div>
 </div>
 </div>
-<input id="cf6ac6cf-8f6b-46ff-a1dc-9313e3e20ac9" name="4e4ed9fe-175b-47ac-822e-288c3a24d9b1" type="radio">
-</input><label class="tabbed-label" for="cf6ac6cf-8f6b-46ff-a1dc-9313e3e20ac9">
+<input id="b34ecd50-5710-48cf-bcb5-d763b7608942" name="d3005c7f-b39b-46af-9ded-acc0fbd2df1e" type="radio">
+</input><label class="tabbed-label" for="b34ecd50-5710-48cf-bcb5-d763b7608942">
 mac</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="o">--</span><span class="n">cask</span> <span class="n">osxfuse</span>
 <span class="n">brew</span> <span class="n">install</span> <span class="n">sshfs</span>
@@ -1532,8 +1532,8 @@ mac</label><div class="tabbed-content docutils">
 <section id="vnc-graphical-interface">
 <h3>VNC (graphical interface)<a class="headerlink" href="#vnc-graphical-interface" title="Permalink to this headline">#</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="ed08a90f-765d-4412-9f56-25172e6efb74" name="a6e6aa88-87d3-48da-a60e-aaa79bafba2b" type="radio">
-</input><label class="tabbed-label" for="ed08a90f-765d-4412-9f56-25172e6efb74">
+<input checked="checked" id="e94268b1-73f2-4c60-841b-eff5feed1952" name="94cc7298-0330-425d-a73c-a743c0074055" type="radio">
+</input><label class="tabbed-label" for="e94268b1-73f2-4c60-841b-eff5feed1952">
 macOS</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Finder</p></li>
@@ -1542,8 +1542,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p>You can use your local/network account information or the <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg">shared account credentials</a></p></li>
 </ol>
 </div>
-<input id="580094eb-93ee-419e-96f3-8fb21a76b5cc" name="a6e6aa88-87d3-48da-a60e-aaa79bafba2b" type="radio">
-</input><label class="tabbed-label" for="580094eb-93ee-419e-96f3-8fb21a76b5cc">
+<input id="c34e8333-96f3-4a1d-bbc2-ae416243008e" name="94cc7298-0330-425d-a73c-a743c0074055" type="radio">
+</input><label class="tabbed-label" for="c34e8333-96f3-4a1d-bbc2-ae416243008e">
 PC/Linux</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Establish a VNC connection using <a class="reference external" href="https://wiki.gnome.org/Apps/Vinagre/">vinaigre</a>.</p></li>
