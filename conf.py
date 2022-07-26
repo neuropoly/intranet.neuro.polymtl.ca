@@ -34,6 +34,7 @@ root_doc = 'README'
 extensions = [
         'myst_parser', # there's also myst_nb, which supports embedding Jupyter notebooks, but is heavier.
         'sphinx_panels',
+        'sphinx_inline_tabs',
 ]
 
 myst_heading_anchors = 4 # enable #section links: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-header-anchors
