@@ -1,6 +1,6 @@
 # VirtualBox
 
-### Import a .ova file <a href="import_a_ova_file" id="import_a_ova_file"></a>
+## Import a .ova file <a href="import_a_ova_file" id="import_a_ova_file"></a>
 
 If you have a Virtual Machine (VM) that has a .ova extension here's what to do to use it with Virtualbox
 
@@ -10,15 +10,15 @@ If you have a Virtual Machine (VM) that has a .ova extension here's what to do t
 * It may take several minutes to import
 * Once it's done just select your machine and click on Show to run it
 
-### Shared folder <a href="shared_folder" id="shared_folder"></a>
+## Shared folder <a href="shared_folder" id="shared_folder"></a>
 
-#### Using Guest Additions (recommended) <a href="using_guest_additions_recommended" id="using_guest_additions_recommended"></a>
+### Using Guest Additions (recommended) <a href="using_guest_additions_recommended" id="using_guest_additions_recommended"></a>
 
 [https://www.virtualbox.org/manual/ch04.html#idp91444064](https://www.virtualbox.org/manual/ch04.html#idp91444064)
 
 On Linux: once you ran all the instructions here, a CD-ROM will be mounted on the guest. Then, go to /mnt/ and run the file ./VBoxLinuxAdditions.run in a terminal.
 
-#### Manual method <a href="manual_method" id="manual_method"></a>
+### Manual method <a href="manual_method" id="manual_method"></a>
 
 [https://www.virtualbox.org/manual/ch04.html#idp91444064](https://www.virtualbox.org/manual/ch04.html#idp91444064) If you want to transfer files between your computer (host) and your Virtual Machine (guest) you'll need a shared folder.
 

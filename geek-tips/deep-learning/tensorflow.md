@@ -12,7 +12,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY
 export CUDA_HOME=/usr/local/cuda
 ```
 
-### Install tensorflow <a id="install_tensorflow"></a>
+## Install tensorflow <a id="install_tensorflow"></a>
 
 ```bash
 # This is for install tensorflow with GTX1080 drvier.
@@ -72,7 +72,7 @@ python test_tensorflow.py
 echo ------------------- End script -------------------
 ```
 
-### Fix CUDA driver version <a id="fix_cuda_driver_version"></a>
+## Fix CUDA driver version <a id="fix_cuda_driver_version"></a>
 
 ```bash
 sudo add-apt-repository ppa:graphics-drivers/ppa
@@ -80,14 +80,14 @@ sudo apt-get update
 sudo apt-get install nvidia-367
 ```
 
-### Fix module tensorflow import error <a id="fix_module_tensorflow_import_error"></a>
+## Fix module tensorflow import error <a id="fix_module_tensorflow_import_error"></a>
 
 ```bash
 sudo pip uninstall six
 sudo pip install six --upgrade --target="/usr/lib/python2.7/dist-packages"
 ```
 
-### Reference <a id="reference"></a>
+## Reference <a id="reference"></a>
 
 [Install with GPU support](https://github.com/uher/InstallGpuEnableTensorflow)
 

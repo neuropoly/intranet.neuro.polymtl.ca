@@ -4,12 +4,12 @@
 
 Tutorial: [https://www.youtube.com/watch?v=vBreXjkizgo](https://www.youtube.com/watch?v=vBreXjkizgo)​
 
-### Installing <a href="installing" id="installing"></a>
+## Installing <a href="installing" id="installing"></a>
 
 1. To use **Vagrant**, you will first need to install **VirtualBox**: [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)​
 2. Install Vagrant from here: [https://learn.hashicorp.com/tutorials/vagrant/getting-started-index?in=vagrant/getting-started](https://learn.hashicorp.com/tutorials/vagrant/getting-started-index?in=vagrant/getting-started)​
 
-### Getting Started & Basic Commands <a href="getting-started-and-basic-commands" id="getting-started-and-basic-commands"></a>
+## Getting Started & Basic Commands <a href="getting-started-and-basic-commands" id="getting-started-and-basic-commands"></a>
 
 To create a box:
 

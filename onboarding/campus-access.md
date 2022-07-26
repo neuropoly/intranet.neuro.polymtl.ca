@@ -6,13 +6,13 @@ description: >-
 
 # Campus Access
 
-### Please advise one of the PIs before arriving for the first time on campus in order to organize the logistics together.
+## Please advise one of the PIs before arriving for the first time on campus in order to organize the logistics together.
 
-### Campus Map
+## Campus Map
 
 [http://www.polymtl.ca/rensgen/en/coordonnees/campus.php](http://www.polymtl.ca/rensgen/en/coordonnees/campus.php)
 
-### Lab rooms at Polytechnique
+## Lab rooms at Polytechnique
 
 As a NeuroPoly lab member, the majority of your time at Polytechnique will be spent in one of two main rooms, depending on the focus of your work:
 
@@ -21,17 +21,17 @@ As a NeuroPoly lab member, the majority of your time at Polytechnique will be sp
 
 There are also separate rooms for servers (L-7944.A) and printers (L-5619). Some of these doors require codes to access, these can be found in the [Internal Document](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.o24dt0r1154g).
 
-### Desk/computer access
+## Desk/computer access
 
 Desk access is given on a first-come-first-serve basis. Once you find a seat that you like, please put your name somewhere (e.g. on a sheet of paper) so we know that a desk has been claimed.
 
 If you work on a personal laptop and need desktop equipment (a monitor, mouse, keyboard, etc.) please contact your supervisor. If instead you need to be provided a workstation (e.g. iMac), please consult the [List of Computing Resources](https://intranet.neuro.polymtl.ca/computing-resources/neuropoly/README.html) document, then pick a workstation that is not being used by another lab member. 
 
-### Requirements for room access
+## Requirements for room access
 
 To be able to access the lab rooms, you will need a Polytechnique card and to activate it for the specific rooms you wish to access. To activate it, please follow the onboarding procedure.
 
-### COVID-19 Protocol
+## COVID-19 Protocol
 
 In addition to the above requirement, please also complete the following steps specific to COVID-19:
 

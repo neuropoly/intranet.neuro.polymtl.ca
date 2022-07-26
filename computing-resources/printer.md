@@ -7,7 +7,7 @@ IP address: See [NeuroPoly Internal Document: Printer](https://docs.google.com/d
 
 ## Troubleshooting
 
-#### Brother HL-3170CDW - Error: "low toner" <a id="misc_-_brother_hl-3170cdw_-_errorlow_toner"></a>
+### Brother HL-3170CDW - Error: "low toner" <a id="misc_-_brother_hl-3170cdw_-_errorlow_toner"></a>
 
 If it doesn't print and it says “low toner” on the printer, do the following:
 

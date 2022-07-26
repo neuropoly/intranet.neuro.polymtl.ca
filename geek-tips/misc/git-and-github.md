@@ -374,7 +374,7 @@ git push -f
 
 ## HOW TO
 
-#### Configure git <a href="configure_git" id="configure_git"></a>
+### Configure git <a href="configure_git" id="configure_git"></a>
 
 Before starting: configure git to identify you for each commit
 
@@ -392,7 +392,7 @@ git config --global alias.<alias-name> <git-command>
 
 more info: [http://www.atlassian.com/git/tutorial/git-basics#!config](http://www.atlassian.com/git/tutorial/git-basics#!config)Edit
 
-#### Show changed files between two commits <a href="show_changed_files_between_two_commits" id="show_changed_files_between_two_commits"></a>
+### Show changed files between two commits <a href="show_changed_files_between_two_commits" id="show_changed_files_between_two_commits"></a>
 
 ```
 git diff --name-only SHA1 SHA2
@@ -501,7 +501,7 @@ Removed tracked files
 git rm "file name"
 ```
 
-#### Download <a href="download" id="download"></a>
+### Download <a href="download" id="download"></a>
 
 Download (server → local station) a repository for the first time
 
@@ -511,7 +511,7 @@ get address of repos, and type
 git clone git@bitbucket.org:neuropoly/spinalcordtoolbox_dev.git
 ```
 
-#### Reset your branch (revert your local commits) <a href="reset_your_branch_revert_your_local_commits" id="reset_your_branch_revert_your_local_commits"></a>
+### Reset your branch (revert your local commits) <a href="reset_your_branch_revert_your_local_commits" id="reset_your_branch_revert_your_local_commits"></a>
 
 Using the Terminal:
 
@@ -532,7 +532,7 @@ Using Sourcetree:
 
 assume you are on the branch `example-fix`. Find the commit with `origin/example-fix`, and right click on it. Select in the menu `Reset example-fix to this commit` and a dialog will appear. If don't want to keep the changes, you can select `Hard`, else select `Soft`
 
-#### Upload <a href="upload" id="upload"></a>
+### Upload <a href="upload" id="upload"></a>
 
 Upload (local –> server) a repository for the first time
 
@@ -552,7 +552,7 @@ git commit -m "First commit"
 git push -u origin master
 ```
 
-#### Discard local changes (if pull doesn't work) <a href="discard_local_changes_if_pull_doesn_t_work" id="discard_local_changes_if_pull_doesn_t_work"></a>
+### Discard local changes (if pull doesn't work) <a href="discard_local_changes_if_pull_doesn_t_work" id="discard_local_changes_if_pull_doesn_t_work"></a>
 
 For a specific file use:
 
@@ -568,7 +568,7 @@ git checkout -- .
 
 ## TODO
 
-#### Ignore file mode <a href="ignore_file_mode" id="ignore_file_mode"></a>
+### Ignore file mode <a href="ignore_file_mode" id="ignore_file_mode"></a>
 
 If you cannot do a pull due to a change of file mode, you can ignore it:
 
@@ -576,7 +576,7 @@ If you cannot do a pull due to a change of file mode, you can ignore it:
 git config core.fileMode false
 ```
 
-####  <a href="come_back_to_previous_commit_ignore_latest_ones" id="come_back_to_previous_commit_ignore_latest_ones"></a>
+###  <a href="come_back_to_previous_commit_ignore_latest_ones" id="come_back_to_previous_commit_ignore_latest_ones"></a>
 
 ## Rebase
 
@@ -663,7 +663,7 @@ filename:my_file
 
 ## Tags
 
-#### Checkout specific tag or commit <a href="checkout_specific_tag_or_commit" id="checkout_specific_tag_or_commit"></a>
+### Checkout specific tag or commit <a href="checkout_specific_tag_or_commit" id="checkout_specific_tag_or_commit"></a>
 
 List all tags
 
@@ -727,11 +727,11 @@ alias gb="git branch"
 
 ## Git Software
 
-#### Pycharm <a href="pycharm" id="pycharm"></a>
+### Pycharm <a href="pycharm" id="pycharm"></a>
 
 Interactive squash, rebase: [https://www.jetbrains.com/help/pycharm/edit-project-history.html](https://www.jetbrains.com/help/pycharm/edit-project-history.html)
 
-#### SourceTree <a href="sourcetree" id="sourcetree"></a>
+### SourceTree <a href="sourcetree" id="sourcetree"></a>
 
 **Select default branches for pushing**
 

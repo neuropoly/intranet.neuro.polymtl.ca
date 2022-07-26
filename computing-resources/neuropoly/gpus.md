@@ -1035,7 +1035,7 @@ You can also see all this information plotted over time for each machine at
 * [https://monitor.neuro.polymtl.ca/host/rosenberg.neuro.polymtl.ca/](https://monitor.neuro.polymtl.ca/host/rosenberg.neuro.polymtl.ca/)
 * [https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/](https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/)
 
-#### Monitoring GPUs
+### Monitoring GPUs
 
 As above, you can see the computation amount, allocated RAM, temperature, fan speed of the GPUs on the command line with
 

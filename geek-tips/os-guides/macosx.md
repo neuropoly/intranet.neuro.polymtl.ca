@@ -94,7 +94,7 @@ Full list of QuickLook modules [here](https://www.quicklookplugins.com/page/2/)\
 
 ## General
 
-#### Global default config <a id="global_default_config"></a>
+### Global default config <a id="global_default_config"></a>
 
 [https://gist.github.com/brandonb927/3195465](https://gist.github.com/brandonb927/3195465)
 
