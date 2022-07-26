@@ -222,6 +222,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../../rf-lab/3d-printing/octoprint.html">
+     OctoPrint
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../../rf-lab/pcb-manufacturing.html">
      PCB Manufacturing
     </a>
@@ -990,8 +995,8 @@ drwxr-xr-x 2 u108545 domain users  4096 Jun  8 16:44 temp
 <h2>Mount with GUI<a class="headerlink" href="#mount-with-gui" title="Permalink to this headline">#</a></h2>
 <p>When working on campus or <span class="xref myst">over the VPN</span>, you can connect your computer to <code class="docutils literal notranslate"><span class="pre">duke</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="3d0ebc2f-ed96-439a-b0d4-8ed8cb7d7d10" name="649e4b59-e7b9-4b4c-a303-03ace168682e" type="radio">
-</input><label class="tabbed-label" for="3d0ebc2f-ed96-439a-b0d4-8ed8cb7d7d10">
+<input checked="checked" id="89f37b6a-51f9-4e0c-b74e-0dc53cfc5dcb" name="8a678d08-a5f2-4d55-8498-d7a732fb57aa" type="radio">
+</input><label class="tabbed-label" for="89f37b6a-51f9-4e0c-b74e-0dc53cfc5dcb">
 macOS</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Finder</p></li>
@@ -999,8 +1004,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p><code class="docutils literal notranslate"><span class="pre">afp://duke.neuro.polymtl.ca/</span></code></p></li>
 </ol>
 </div>
-<input id="689473bf-acbc-435d-bdba-1bf8a1358bdb" name="649e4b59-e7b9-4b4c-a303-03ace168682e" type="radio">
-</input><label class="tabbed-label" for="689473bf-acbc-435d-bdba-1bf8a1358bdb">
+<input id="224bb9e1-f63a-434e-b096-b46eea765b64" name="8a678d08-a5f2-4d55-8498-d7a732fb57aa" type="radio">
+</input><label class="tabbed-label" for="224bb9e1-f63a-434e-b096-b46eea765b64">
 Linux</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open File Browser</p></li>
@@ -1008,8 +1013,8 @@ Linux</label><div class="tabbed-content docutils">
 <li><p><code class="docutils literal notranslate"><span class="pre">smb://duke.neuro.polymtl.ca/</span></code></p></li>
 </ol>
 </div>
-<input id="bb37847a-e9a0-4a64-967a-664c41dccdc1" name="649e4b59-e7b9-4b4c-a303-03ace168682e" type="radio">
-</input><label class="tabbed-label" for="bb37847a-e9a0-4a64-967a-664c41dccdc1">
+<input id="a1c83807-7788-4767-8592-de3851bff702" name="8a678d08-a5f2-4d55-8498-d7a732fb57aa" type="radio">
+</input><label class="tabbed-label" for="a1c83807-7788-4767-8592-de3851bff702">
 Windows 10</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Windows explorer</p></li>
@@ -1035,8 +1040,8 @@ Windows 10</label><div class="tabbed-content docutils">
 <h2>Mount with Terminal<a class="headerlink" href="#mount-with-terminal" title="Permalink to this headline">#</a></h2>
 <p>You can also connect your computer from the CLI, or with a script, which might be more efficient in the long run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="ab31239a-a5be-4ec4-9684-bf5aeecc1c2c" name="17662c70-d3cb-4afb-8f29-7ab4ae88b96b" type="radio">
-</input><label class="tabbed-label" for="ab31239a-a5be-4ec4-9684-bf5aeecc1c2c">
+<input checked="checked" id="85d31dcf-8f10-45b8-94fc-ac8f7aedd169" name="f49b7d54-2617-4372-b59b-7bf95b48ea2d" type="radio">
+</input><label class="tabbed-label" for="85d31dcf-8f10-45b8-94fc-ac8f7aedd169">
 Mac OSX</label><div class="tabbed-content docutils">
 <p>Create folder for the mount point on a location (your home directory) where you have read and write access:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir &lt;FOLDER_NAME&gt; <span class="c1"># (e.g. &lt;FOLDER_NAME&gt;=sct_testing)</span>
@@ -1047,8 +1052,8 @@ sudo umount &lt;FOLDER_NAME&gt;/
 </pre></div>
 </div>
 </div>
-<input id="0f921378-2a4e-4c41-9f06-bbdcceb54be5" name="17662c70-d3cb-4afb-8f29-7ab4ae88b96b" type="radio">
-</input><label class="tabbed-label" for="0f921378-2a4e-4c41-9f06-bbdcceb54be5">
+<input id="6f511cea-f7c4-48d9-ba9a-b58465182213" name="f49b7d54-2617-4372-b59b-7bf95b48ea2d" type="radio">
+</input><label class="tabbed-label" for="6f511cea-f7c4-48d9-ba9a-b58465182213">
 Linux</label><div class="tabbed-content docutils">
 <p>To mount:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mount -t cifs //duke.neuro.polymtl.ca/&lt;FOLDER_NAME&gt; /mnt/duke/&lt;FOLDER_NAME&gt; -o <span class="nv">username</span><span class="o">=</span>&lt;GRAMES_USERNAME&gt;,noexec
