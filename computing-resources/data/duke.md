@@ -20,7 +20,7 @@ The shared folders are:
 
 ## Access from stations
 
-When [connecting with `ssh`](../../#ssh-command-line), `duke` is available at `/mnt/duke/`, e.g.:
+When [connecting with `ssh`](../neuropoly/README.md#ssh-command-line), `duke` is available at `/mnt/duke/`, e.g.:
 
 ```
 u932945@joplin:~$ ls -l /mnt/duke
@@ -36,7 +36,7 @@ drwxr-xr-x 2 u108545 domain users  4096 Jun  8 16:44 temp
 
 ## Mount with GUI
 
-When working on campus or [over the VPN](../../#vpn), you can connect your computer to `duke`:
+When working on campus or [over the VPN](../neuropoly/README.md#vpn), you can connect your computer to `duke`:
 
 ````{tabbed} macOS
 1. Open Finder

@@ -4,8 +4,8 @@ This server includes private MRI and microscopy datasets, which have been curate
 
 `git+ssh://data.neuro.polymtl.ca` has a max size of ~1TB.
 
-It hosts [BIDS](https://bids-specification.readthedocs.io) datasets, version-controlled using [`git-annex`](git-annex.branchable.com/).
-It is locked behind a [VPN](../../#vpn) because much of our data is under medical ethics protections, and needs to be kept off the general internet.
+It hosts [BIDS](https://bids-specification.readthedocs.io) datasets, version-controlled using [`git-annex`](https://git-annex.branchable.com/).
+It is locked behind a [VPN](../neuropoly/README.md#vpn) because much of our data is under medical ethics protections, and needs to be kept off the general internet.
 
 
 Initial setup
@@ -13,7 +13,7 @@ Initial setup
 
 ### Prerequisites
 
-0. You must have a \*nix OS with `git-annex>=8` installed. See [`git-annex` installation](./git-annex.md#installation).
+0. You must have a \*nix OS with `git-annex>=8` installed. See [`git-annex` installation](../../geek-tips/git-annex.md#installation).
 2. Make sure you have an ssh key.
     * If not, run `ssh-keygen -t ed25519 -C your.name@polymtl.ca`. Your keys will be in the hidden folder `~/.ssh/`.
 
@@ -50,7 +50,7 @@ Because this server contains private medical data, you need to be on campus, con
 
 *If connecting from off-campus*, connect to [polyvpn](http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn).
 
-> 🏚️ Verify connectivity by `ping data.neuro.polymtl.ca`. If **you cannot ping** then you need to double-check your VPN connection; make sure it is connected, make sure you can reach `joplin`, and if it still isn't working *ask the [Poly network admins](dge.informatique@polymtl.ca)* to unblock your account from this server.
+> 🏚️ Verify connectivity by `ping data.neuro.polymtl.ca`. If **you cannot ping** then you need to double-check your VPN connection; make sure it is connected, make sure you can reach `joplin`, and if it still isn't working *ask the [Poly network admins](mailto:dge.informatique@polymtl.ca)* to unblock your account from this server.
  
 Verify you can use the server by `ssh git@data.neuro.polymtl.ca help`. If it hangs, triple-check again your VPN. If it rejects you, your account is not created yet, or you have switched machines. A successful connection looks like:
 
@@ -78,7 +78,7 @@ Usage
 
 During daily usage, you will need to be [*on the polyvpn network*](#connection).
 
-You should also make sure to [configure git annex](./git-annex.md#global-git-config) for the best performance.
+You should also make sure to [configure git annex](../../geek-tips/git-annex.md#global-git-config) for the best performance.
 
 ### List
 
@@ -159,7 +159,7 @@ git annex sync --no-content --only-annex
 git push
 ```
 
-Finally, ask one of that dataset's reviewers to [look at your pull request](#Reviewing-Pull-Requests) by opening an issue on [neuropoly/data-management](https://github.com/neuropoly/data-management).
+Finally, ask one of that dataset's reviewers to [look at your pull request](#reviewing-pull-requests) by opening an issue on [neuropoly/data-management](https://github.com/neuropoly/data-management).
 
 
 ### Reviewing Pull Requests
@@ -232,7 +232,7 @@ git push origin :synced/xy/branchname
 
 ### New repository
 
-To make a new repo, follow this [recipe](./git-annex.md#new-repo).
+To make a new repo, follow this [recipe](../../geek-tips/git-annex.md#new-repo).
 
 Then, to upload it, pick a name under `datasets/`, e.g. "my-new-repo", and do
 

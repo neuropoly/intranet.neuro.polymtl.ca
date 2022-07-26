@@ -25,7 +25,7 @@ getent passwd <GRAMES_ACCOUNT>
 
 ### Home folder
 
-Every [GRAMES](../#poly-grames) account has a school-wide personal home folder. It is backed-up nightly.
+Every GRAMES account has a school-wide personal home folder. It is backed-up nightly.
 
 ````{tabbed} macOS
 1. Open Finder
@@ -252,7 +252,7 @@ will attach the remote `/tmp/` to the local `./cluster_folder`
 
 
 ```{note}
-If you are experiencing mounting issues on macOs, [this]([url](https://github.com/neuropoly/intranet.neuro.polymtl.ca/issues/57)) might help.
+If you are experiencing mounting issues on macOs, [this](https://github.com/neuropoly/intranet.neuro.polymtl.ca/issues/57) might help.
 ```
 
 

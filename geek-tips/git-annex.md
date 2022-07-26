@@ -1,6 +1,6 @@
 # git-annex
 
-[`git annex`](git-annex.branchable.com/) is an extension to git that lets it handle large repos spread in pieces across multiple servers/disks/accounts.
+[`git annex`](https://git-annex.branchable.com/) is an extension to git that lets it handle large repos spread in pieces across multiple servers/disks/accounts.
 
 We are using it because
 
@@ -73,7 +73,7 @@ git config --global annex.thin true # save disk space by de-duplicating checked 
 git config --global annex.private true # prevent attempting to share your local copy of the annex, which is impossible when working in a team
 ```
 
-See [below](#hardlinks) to understand what this setting offers.
+See [below](#annexthin-hardlinks) to understand what this setting offers.
 
 ## New repo
 

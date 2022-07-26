@@ -4,7 +4,7 @@ description: How to use CPU clusters at Neuropoly
 
 # CPU Clusters
 
-Unless otherwise stated, use your [connect with your polygrames credentials](./computing-resources-neuropoly.md#TODO)
+Unless otherwise stated, use your [connect with your polygrames credentials](README.md)
 
 ## `joplin`
 

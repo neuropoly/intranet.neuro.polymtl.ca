@@ -8,10 +8,10 @@ More details on the UNF website: [https://unf-montreal.ca/en/documentation/facil
 
 ## Booking the scanner
 
-Details about the booking system [here]([url](https://unf-montreal.ca/en/documentation/facility/reservation/)). 
+Details about the booking system [here](https://unf-montreal.ca/en/documentation/facility/reservation/). 
 
 ```{note}
-Under the `session name` you will need to enter a study suffix that is listed in this [JSON file]([url](https://github.com/UNFmontreal/bids_configs/blob/master/studies.json)). Look for the fields that start with `neuropoly`.
+Under the `session name` you will need to enter a study suffix that is listed in this [JSON file](https://github.com/UNFmontreal/bids_configs/blob/master/studies.json). Look for the fields that start with `neuropoly`.
 ```
 
 
