@@ -52,7 +52,7 @@ exclude_patterns = ['_build', '.venv', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_book_theme'
+html_theme = 'furo'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -68,15 +68,9 @@ panels_add_bootstrap_css = False
 html_sourcelink_suffix = ".md" # our sources are in markdown; but this only has an effect if "use_download_button": True
 
 html_theme_options = {
-    "toc_title": "Page Contents",
-    "search_bar_text": "Search...",
-
-    "repository_url": "https://github.com/neuropoly/intranet.neuro.polymtl.ca",
-    "use_fullscreen_button": False,
-    "use_edit_page_button": True,
-    "use_download_button": False,
-
-    #"logo_only": True, # hides html_title and just shows html_logo
+    "sidebar_hide_name": False,
+    "source_repository": "https://github.com/neuropoly/intranet.neuro.polymtl.ca",
+    "source_branch": "master",
 }
 
 
