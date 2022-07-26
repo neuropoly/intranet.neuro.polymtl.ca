@@ -72,6 +72,28 @@ html_theme_options = {
     "sidebar_hide_name": False,
     "source_repository": "https://github.com/neuropoly/intranet.neuro.polymtl.ca",
     "source_branch": "master",
+    "light_css_variables": {
+        "color-background-primary": "#fcfcfc",
+        "color-sidebar-background": "#d0d0d0",
+        "color-sidebar-item-background--hover": "#5a5a58",
+        "color-sidebar-link-text": "#fcfcfc",
+        "color-sidebar-link-text--top-level": "#000000",
+        "color-content-foreground": "#000000",
+        "color-foreground-primary": "#000000",
+        "color-sidebar-search-foreground": "#000000",
+    },
+    "dark_css_variables": {
+        "color-sidebar-brand-text": "#FFFFFF",
+        "color-sidebar-background": "#3d3d3c",
+        "color-sidebar-search-foreground": "#FFFFFF",
+        "color-sidebar-item-background--hover": "#5a5a58",
+        "color-sidebar-link-text": "#fcfcfc",
+        "color-sidebar-link-text--top-level": "#FFFFFF",
+        "color-foreground-primary": "#FFFFFF",
+        "color-content-foreground": "#FFFFFF",
+        "color-admonition-title--note": "#0054af",
+        "color-admonition-title-background--note": "#0054af5c",
+    }
 }
 
 

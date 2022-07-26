@@ -163,3 +163,18 @@ div.pdf-container > div > object[type="application/pdf"] {
   width: 100%;
   height: 100%;
 }
+
+.sidebar-drawer {
+    justify-content: center;
+    min-width: 15em;
+    max-width: 18rem;
+    color: #fcfcfc;
+}
+
+.main {
+    display: flex;
+}
+
+.content {
+    flex: 1;
+}
