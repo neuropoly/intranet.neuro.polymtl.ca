@@ -54,7 +54,7 @@ To make it easier and a bit more fun, you can try using Chwazi
 Again, save your receipts! If the restaurant sent you a confirmation email or gave you an order confirmation webpage, save that too.
 When you get the final paper receipt, immediately take a photo of it, and save everything in a safe digital place like your email or a cloud account, and save the paper copies just in case.
 
-Submit copies the receipt and any other documentation to dge.sec-biomedical@polymtl.ca. Your email should explain what the reimbursement is for and which PI is covering the costs. CC the PI in any correspondance.
+Submit copies the receipt, a proof of payment (for example, the card records) and any other documentation to dge.sec-biomedical@polymtl.ca. Your email should explain what the reimbursement is for and which PI is covering the costs. CC the PI in any correspondance.
 
 It will take them about a month to process your request.
 
