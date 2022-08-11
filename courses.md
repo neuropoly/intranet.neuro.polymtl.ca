@@ -47,7 +47,7 @@ Also see this list of [Bio-imaging courses offered by Quebec Universities](https
 | [GBM6103A](https://www.polymtl.ca/programmes/cours/traitement-dimages-et-signaux-biomedicaux) | Traitement d'images et signaux biomédicaux                             | Français | Goussard           |
 | [GBM8770](https://www.polymtl.ca/programmes/cours/traitement-numerique-dimages-medicales-0)   | Traitement numérique d'images médicales                                | Français | Benjamin De Leener |
 | [GBM6330](https://www.polymtl.ca/programmes/cours/technologies-biomedicales-emergentes)       | <p>Technologies biomédicales émergentes</p><p><em>(3 credits)</em></p> | Français | Nikola Stikov      |
-| [ELE8812](https://www.polymtl.ca/programmes/cours/traitement-et-analyse-dimages)              | <p>Traitement et analyse d'images</p><p><em>(3 credits)</em></p>       | Français | Julien Cohen-Adad  |
+| [ELE8812](https://www.polymtl.ca/programmes/cours/traitement-et-analyse-dimages)              | <p>Traitement et analyse d'images</p><p><em>(3 credits)</em></p>       | Français | Eva Alonso Ortiz  |
 
 ### Université de Montréal
 
