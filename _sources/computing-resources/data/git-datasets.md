@@ -141,7 +141,7 @@ git commit
 The *first* time before uploading, verify you have access with `info`. You need "W" (for "Write") permission, like this:
 
 ```
-ssh git@localhost info datasets/uk-biobank
+ssh git@data.neuro.polymtl.ca info datasets/uk-biobank
 ```
 
 The output would look like:
