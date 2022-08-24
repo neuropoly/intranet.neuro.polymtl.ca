@@ -1201,6 +1201,16 @@ title="Edit this page"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mds-stores-using-high-cpu-load">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       mds_stores
+      </span>
+     </code>
+     using high CPU load
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#right-click-sharing-for-google-drive">
      Right-click sharing for Google Drive
     </a>
@@ -1578,6 +1588,16 @@ title="Edit this page"
    Troubleshooting
   </a>
   <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mds-stores-using-high-cpu-load">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       mds_stores
+      </span>
+     </code>
+     using high CPU load
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#right-click-sharing-for-google-drive">
      Right-click sharing for Google Drive
@@ -2093,6 +2113,18 @@ Example: qlmanage -p /Library/QuickLook/DTITK_QuickLookPlugin.qlgenerator
 </section>
 <section id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h2>
+<section id="mds-stores-using-high-cpu-load">
+<h3><code class="docutils literal notranslate"><span class="pre">mds_stores</span></code> using high CPU load<a class="headerlink" href="#mds-stores-using-high-cpu-load" title="Permalink to this headline">#</a></h3>
+<p>There are many forums about this issue. The <a class="reference external" href="https://apple.stackexchange.com/questions/388882/how-to-disable-spotlight-and-mds-stores-on-mac-os-catalina">one that worked</a> for me is:</p>
+<p>Turn off the indexing for all of my Volumes</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mdutil -d /Volumes/Macintosh <span class="se">\H</span>D
+</pre></div>
+</div>
+<p>Re-enable Spotlight with following command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mdutil -Ei on &lt;Path&gt;
+</pre></div>
+</div>
+</section>
 <section id="right-click-sharing-for-google-drive">
 <h3>Right-click sharing for Google Drive<a class="headerlink" href="#right-click-sharing-for-google-drive" title="Permalink to this headline">#</a></h3>
 <p>The Share menu might not show one or more sharing options—such as Email This Page, AirDrop, or Facebook—or the Markup feature might be missing.</p>
