@@ -457,6 +457,21 @@ If TextMate does not open, delete folder `~/Library/Application Support/TextMate
 
 ## Troubleshooting
 
+### `mds_stores` using high CPU load
+
+There are many forums about this issue. The [one that worked](https://apple.stackexchange.com/questions/388882/how-to-disable-spotlight-and-mds-stores-on-mac-os-catalina) for me is: 
+
+Turn off the indexing for all of my Volumes
+```bash
+sudo mdutil -d /Volumes/Macintosh \HD
+```
+
+Re-enable Spotlight with following command
+
+```bash
+sudo mdutil -Ei on <Path>
+``` 
+
 ### Right-click sharing for Google Drive
 
 The Share menu might not show one or more sharing options—such as Email This Page, AirDrop, or Facebook—or the Markup feature might be missing.
