@@ -178,6 +178,13 @@ Electrical and Computer Engineering Course List: [http://www.mcgill.ca/ece/progr
 | [SSH3351](https://www.polymtl.ca/programmes/cours/anglais-pour-ingenieurs-1) | Anglais pour ingenieurs 1 | Français |       |
 | [SSH3352](https://www.polymtl.ca/programmes/cours/anglais-pour-ingenieurs-2) | Anglais pour ingenieurs 2 | Français |       |
 
+### McGill
+
+| Code                                                                         | Title / Notes             | Lang.    | Prof. |
+| ---------------------------------------------------------------------------- | ------------------------- | -------- | ----- |
+| [Graphos](https://www.mcgill.ca/graphos/) | Academic writing | English |       |
+
+
 ## Ethics
 
 * [SSH5503](http://www.polymtl.ca/etudes/cours/details.php?sigle=SSH5503) - Éthique appliquée au génie biomédical (Bernard Lapierre)
