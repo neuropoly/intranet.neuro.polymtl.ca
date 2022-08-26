@@ -43,7 +43,7 @@ Also see this list of [Bio-imaging courses offered by Quebec Universities](https
 
 | Code                                                                                          | Title / Notes                                                          | Lang.    | Prof.              |
 | --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | -------- | ------------------ |
-| [GBM3318](https://www.polymtl.ca/programmes/cours/principes-dimagerie-biomedicale)            | <p>Principes d'imagerie biomédicale</p><p><em>(3 credits)</em></p>     | Français | Julien Cohen-Adad  |
+| [GBM8378](https://www.polymtl.ca/programmes/cours/principes-dimagerie-biomedicale)            | <p>Principes d'imagerie biomédicale</p><p><em>(3 credits)</em></p>     | Français | Julien Cohen-Adad  |
 | [GBM6103A](https://www.polymtl.ca/programmes/cours/traitement-dimages-et-signaux-biomedicaux) | Traitement d'images et signaux biomédicaux                             | Français | Goussard           |
 | [GBM8770](https://www.polymtl.ca/programmes/cours/traitement-numerique-dimages-medicales-0)   | Traitement numérique d'images médicales                                | Français | Benjamin De Leener |
 | [GBM6330](https://www.polymtl.ca/programmes/cours/technologies-biomedicales-emergentes)       | <p>Technologies biomédicales émergentes</p><p><em>(3 credits)</em></p> | Français | Nikola Stikov      |
