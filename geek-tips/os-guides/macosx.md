@@ -463,13 +463,13 @@ There are many forums about this issue. The [one that worked](https://apple.stac
 
 Turn off the indexing for all of my Volumes
 ```bash
-sudo mdutil -d /Volumes/Macintosh \HD
+sudo mdutil -d /Volumes/Macintosh\ HD
 ```
 
 Re-enable Spotlight with following command
 
 ```bash
-sudo mdutil -Ei on <Path>
+sudo mdutil -Ei on /Volumes/Macintosh\ HD
 ``` 
 
 ### Right-click sharing for Google Drive
