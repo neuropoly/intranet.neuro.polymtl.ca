@@ -87,7 +87,7 @@ set -eo pipefail
 USER="<YOUR_CAS_USERNAME>"
 PASS="$(security find-generic-password -a "${USER}" -s poly-vpn -w)"
 GROUP=PolySSL # or PolyInvites, depending on your account's status
-echo -n "$PASS" | sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-stdin --reconnect-timeout 20 --servercert pin-sha256:xpOY2XHGB/dcVtLnGyaZnJfrUsqUbb2e1hhPNzIkmY0= ssl.vpn.polymtl.ca
+echo -n "$PASS" | sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-stdin --reconnect-timeout 20 ssl.vpn.polymtl.ca
 ```
 
 To connect to the VPN, you need to run:
