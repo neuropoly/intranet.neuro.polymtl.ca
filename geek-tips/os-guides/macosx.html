@@ -2117,11 +2117,11 @@ Example: qlmanage -p /Library/QuickLook/DTITK_QuickLookPlugin.qlgenerator
 <h3><code class="docutils literal notranslate"><span class="pre">mds_stores</span></code> using high CPU load<a class="headerlink" href="#mds-stores-using-high-cpu-load" title="Permalink to this headline">#</a></h3>
 <p>There are many forums about this issue. The <a class="reference external" href="https://apple.stackexchange.com/questions/388882/how-to-disable-spotlight-and-mds-stores-on-mac-os-catalina">one that worked</a> for me is:</p>
 <p>Turn off the indexing for all of my Volumes</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mdutil -d /Volumes/Macintosh <span class="se">\H</span>D
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mdutil -d /Volumes/Macintosh<span class="se">\ </span>HD
 </pre></div>
 </div>
 <p>Re-enable Spotlight with following command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mdutil -Ei on &lt;Path&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mdutil -Ei on /Volumes/Macintosh<span class="se">\ </span>HD
 </pre></div>
 </div>
 </section>
