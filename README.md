@@ -14,6 +14,7 @@ bibliography/README
 conferences
 ideas-for-cool-projects
 practical-information/README
+edi
 contact
 NeuroPoly Website <https://neuro.polymtl.ca>
 ```
