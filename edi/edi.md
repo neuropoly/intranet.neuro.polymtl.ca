@@ -13,4 +13,7 @@ You can choose to take an IAT from a list of various topics (ex: skin tone, gend
 The Westcoast Women in Engineering, Science and Technology (WWEST) of Simon Fraser University has created various infographics/posters to educate the STEM community on a range of issues, such as; how to create a more diverse and empowered STEM workforce and issues of EDI in STEM. 
 Below are a few examples. For more, visit: https://www.sfu.ca/wwest/resources/White-Papers/diversity-101.html
 
-![](.gitbook/assets/fig_home.png)
+![](Bias_Busting_Strategies_for_Individuals.jpeg)
+![](Microaggressions.jpeg)
+![](Social_Identity_Threat.jpeg)
+
