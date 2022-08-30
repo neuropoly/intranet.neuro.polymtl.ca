@@ -1,6 +1,6 @@
 # Equity | Diversity | Inclusion
 
-NeuroPoly is deeply committed to equity, diversity and inclusion (EDI). Accordingly, we encourage lab members to explore the literature regarding EDI, consult relevant educational materials, and to raise these topics for discussion during group meetings!
+NeuroPoly is deeply committed to equity, diversity and inclusion (EDI). Accordingly, we encourage lab members to explore the literature regarding EDI, consult relevant educational materials, and to raise these topics for discussion during group meetings.
 Below you will find a list of resources/materials. If you come across others that you would like to see listed here, please add them by editing this page on GitHub.  
 
 ## Harvard Implicit Association Test
