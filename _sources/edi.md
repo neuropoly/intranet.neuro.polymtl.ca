@@ -6,12 +6,12 @@ Below you will find a list of resources/materials. If you come across others tha
 ## Harvard Implicit Association Test
 
 This is a tool that allows us to discover hidden cognitive biases. The Implicit Association Test (IAT) was developed by [Project Implicit](https://www.projectimplicit.net/), a non-profit organization and international, collaborative, network of researchers that study implicit social cognition (thoughts or feelings that are largely outside of conscious awareness and control).
-You can choose to take an IAT from a list of various topics (ex: skin tone, gender-career, disability) by visiting the following page: https://implicit.harvard.edu/implicit/takeatest.html
+You can choose to take an IAT from a list of various topics (ex: skin tone, gender-career, disability) by visiting the following page: [](https://implicit.harvard.edu/implicit/takeatest.html)
 
 ## White Papers
 
 The Westcoast Women in Engineering, Science and Technology (WWEST) of Simon Fraser University has created various infographics/posters to educate the STEM community on a range of issues, such as; how to create a more diverse and empowered STEM workforce and issues of EDI in STEM. 
-Below is an example. For more, visit: https://www.sfu.ca/wwest/resources/White-Papers/diversity-101.html
+Below is an example. For more, visit: [](https://www.sfu.ca/wwest/resources/White-Papers/diversity-101.html)
 
 ![](_media/Bias_Busting_Strategies_for_Individuals.jpeg)
 
