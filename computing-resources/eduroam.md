@@ -4,7 +4,7 @@
 
 As a student or employee of Polytechnique Montreal, you are granted access to the ['eduroam'](https://eduroam.org/what-is-eduroam/) network. 
 
-> What is eduroam?
+> ### What is eduroam?
 > 
 > eduroam (education roaming) is the secure, world-wide roaming access service developed for the international research and education community.
 > 
@@ -14,7 +14,7 @@ When on campus, you may see a WiFi network called 'eduroam'. However, to use thi
 
 ## Setup
 
-PolyMTL recommends using the ["Eduroam CAT tool"](https://cat.eduroam.org/) to set up the network connection on each of your devices. This tool is available for Windows, macOS, and Linux, as well as Android and iOS.
+PolyMTL [recommends](https://www.polymtl.ca/si/reseaux/reseau-sans-fil#WIFI_Personnel_Etudiant) using the ["Eduroam CAT tool"](https://cat.eduroam.org/) to set up the network connection on each of your devices. This tool is available for Windows, macOS, and Linux, as well as Android and iOS.
 
 Before downloading and installing the tool, make sure that you delete any previously saved profiles for the 'eduroam' network. You can do this by going into your device's WiFi settings and looking for the "Saved networks" or "Known WiFi networks" menu option, or similar.
 
@@ -22,10 +22,10 @@ If you are using a tool for computers, you will need to select your institution 
 
 Once you download and run the tool, it will prompt for a username and password.
 
-* **User ID**: This will depend on whether you are an employee, student, or guest.
+* **User ID**: This will depend on whether you are an [employee, student, or guest](https://www.polymtl.ca/si/reseaux/reseau-sans-fil#WIFI_Personnel_Etudiant).
   * pMatricule@polymtl.ca -> Employés
   * abcde@polymtl.ca -> Étudiants
-  * uNuméro@polymtl.ca -> Invités
+  * uNumero@polymtl.ca -> Invités
 * **Password**: This will be your CAS account password (i.e. the same password used for your `@polymtl.ca` email, VPN access, etc.)
 
 Once entered, the tool will create a wireless connection profile for 'eduroam' on your behalf, so you should be able to connect to the network without needing to do anything else. 
@@ -36,7 +36,8 @@ The tool is meant to help set up some additional login information beyond your u
 
 * **Authentication**: Protected EAP (PEAP)
 * **Inner/Phase 2 authentication**: MSCHAPv2
-* **CA Certificate**: Instructions vary depending on device. (Some say "Use system certificates", others will create a custom certificate just for 'eduroam'.)
+* **CA Certificate**: Entrust Root Certification Authority - G2
+    * Setting this certificate will vary depending on device. (Some instructions say "Use system certificates", others will create a custom certificate just for 'eduroam'.)
 * **Anonymous identity**: anonymous#####@polymtl.ca
 
 It's possible to set some or all of these yourself if you know what you're doing, but using the tool helps to automate this procedure.
