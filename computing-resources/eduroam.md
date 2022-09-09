@@ -1,4 +1,4 @@
-# Using the 'eduroam' network
+# <span>📶</span> Eduroam
 
 ## Overview
 
