@@ -7,6 +7,7 @@ clusters-at-criugm
 compute-canada
 data/README
 printer
+eduroam
 youtube
 ```
 
