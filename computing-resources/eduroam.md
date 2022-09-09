@@ -18,7 +18,7 @@ PolyMTL [recommends](https://www.polymtl.ca/si/reseaux/reseau-sans-fil#WIFI_Pers
 
 Before downloading and installing the tool, make sure that you delete any previously saved profiles for the 'eduroam' network. You can do this by going into your device's WiFi settings and looking for the "Saved networks" or "Known WiFi networks" menu option, or similar.
 
-If you are using a tool for computers, you will need to select your institution before downloading. If you are using a smartphone app, you will need to enter your institution in the  it will prompt you for your institution (in this case, École Polytechnique de Montréal).
+If you are using a tool for computers, you will need to select your institution on the download page. If you are using a smartphone app, then the app itself will prompt you for your institution. In either case, choose "École Polytechnique de Montréal", which you can find by searching "Polytechnique".
 
 Once you download and run the tool, it will prompt for a username and password.
 
