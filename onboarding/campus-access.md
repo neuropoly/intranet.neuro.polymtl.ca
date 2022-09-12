@@ -38,3 +38,7 @@ In addition to the above requirement, please also complete the following steps s
 * Check-in with your supervisor if you have any plans to come on campus, as you will need to be authorized first.
 * Read over the [NeuroPoly Lab Reopening guide](https://docs.google.com/presentation/d/1JtJLcgdA7aXuxRHIzu1hN_lLjYK8PI0BKa0OK-155TE/edit#slide=id.p1) to learn about the mandatory training procedures that are necessary for returning to the lab.
 * Check the pinned messages in the [\#covid-19 ](https://app.slack.com/client/T034UD4QN/C015YFVFWJC) channel on NeuroPoly's Slack for the most up-to-date info, as the situation is likely to change as the pandemic evolves.
+
+### WiFi Access: Eduroam
+
+As part of your PolyMTL CAS account (`@polymtl.ca`), you are granted access to the 'eduroam' network across campuses internationally. Setting up a connection to this network requires additional steps beyond just logging in. For more information on how to log into eduroam, please visit the ['Computing Resources - Eduroam'](https://intranet.neuro.polymtl.ca/computing-resources/eduroam.html) page.
