@@ -4,6 +4,7 @@
 
 * [🎥 Paul Callaghan explaining NMR](http://www.magritek.com/support/videos/#01)
 * [🎥 Introduction to MRI Physics](https://www.youtube.com/watch?v=Ok9ILIYzmaY)
+* [🎥 How MRI works / Fourier encoding (check out Parts 1, 2, 3, etc.)](https://www.youtube.com/watch?v=TQegSF4ZiIQ&t=0s&ab_channel=thePIRL)
 * [Questions and Answers in MRI](https://mriquestions.com/index.html)
 * [🇫🇷 MRI Online Course (in French)](https://www.imaios.com/fr/e-Cours/e-MRI)
 
