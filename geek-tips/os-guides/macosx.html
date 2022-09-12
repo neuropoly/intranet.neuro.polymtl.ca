@@ -1219,6 +1219,18 @@ title="Edit this page"
      </code>
      using high CPU load
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solution-1">
+       Solution 1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solution-2">
+       Solution 2
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#right-click-sharing-for-google-drive">
@@ -1256,14 +1268,14 @@ title="Edit this page"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-1">
+      <a class="reference internal nav-link" href="#id1">
        <strong>
         Solution 1
        </strong>
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-2">
+      <a class="reference internal nav-link" href="#id2">
        <strong>
         Solution 2
        </strong>
@@ -1607,6 +1619,18 @@ title="Edit this page"
      </code>
      using high CPU load
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solution-1">
+       Solution 1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#solution-2">
+       Solution 2
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#right-click-sharing-for-google-drive">
@@ -1644,14 +1668,14 @@ title="Edit this page"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-1">
+      <a class="reference internal nav-link" href="#id1">
        <strong>
         Solution 1
        </strong>
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-2">
+      <a class="reference internal nav-link" href="#id2">
        <strong>
         Solution 2
        </strong>
@@ -2125,7 +2149,16 @@ Example: qlmanage -p /Library/QuickLook/DTITK_QuickLookPlugin.qlgenerator
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h2>
 <section id="mds-stores-using-high-cpu-load">
 <h3><code class="docutils literal notranslate"><span class="pre">mds_stores</span></code> using high CPU load<a class="headerlink" href="#mds-stores-using-high-cpu-load" title="Permalink to this headline">#</a></h3>
-<p>There are many forums about this issue. The <a class="reference external" href="https://apple.stackexchange.com/questions/388882/how-to-disable-spotlight-and-mds-stores-on-mac-os-catalina">one that worked</a> for me is:</p>
+<p>There are many forums about this issue. Below are some that sometimes work.</p>
+<section id="solution-1">
+<h4>Solution 1<a class="headerlink" href="#solution-1" title="Permalink to this headline">#</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mdutil -a -i off
+</pre></div>
+</div>
+<p><a class="reference external" href="https://apple.stackexchange.com/questions/388882/how-to-disable-spotlight-and-mds-stores-on-mac-os-catalina">Source</a>.</p>
+</section>
+<section id="solution-2">
+<h4>Solution 2<a class="headerlink" href="#solution-2" title="Permalink to this headline">#</a></h4>
 <p>Turn off the indexing for all of my Volumes</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mdutil -d /Volumes/Macintosh<span class="se">\ </span>HD
 </pre></div>
@@ -2134,6 +2167,8 @@ Example: qlmanage -p /Library/QuickLook/DTITK_QuickLookPlugin.qlgenerator
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mdutil -Ei on /Volumes/Macintosh<span class="se">\ </span>HD
 </pre></div>
 </div>
+<p><a class="reference external" href="https://apple.stackexchange.com/questions/388882/how-to-disable-spotlight-and-mds-stores-on-mac-os-catalina">Source</a>.</p>
+</section>
 </section>
 <section id="right-click-sharing-for-google-drive">
 <h3>Right-click sharing for Google Drive<a class="headerlink" href="#right-click-sharing-for-google-drive" title="Permalink to this headline">#</a></h3>
@@ -2187,16 +2222,16 @@ end tell
 </section>
 <section id="password-prompts-finder-wants-to-make-changes">
 <h3>Password prompts: “Finder wants to make changes”<a class="headerlink" href="#password-prompts-finder-wants-to-make-changes" title="Permalink to this headline">#</a></h3>
-<section id="solution-1">
-<h4><strong>Solution 1</strong><a class="headerlink" href="#solution-1" title="Permalink to this headline">#</a></h4>
+<section id="id1">
+<h4><strong>Solution 1</strong><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
 <p>Remove the ACL manually. Go to the problematic folder(s) and type:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod -N &lt;FOLDER&gt;
 chmod -RN &lt;FOLDER&gt;  <span class="c1"># --&gt; do do it for all files/folders recursively</span>
 </pre></div>
 </div>
 </section>
-<section id="solution-2">
-<h4><strong>Solution 2</strong><a class="headerlink" href="#solution-2" title="Permalink to this headline">#</a></h4>
+<section id="id2">
+<h4><strong>Solution 2</strong><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
 <ol class="arabic simple">
 <li><p>Open Applications &gt; Utilities &gt; Disk Utility.</p></li>
 <li><p>Select your hard drive in the left column. Most likely it will be named “Macintosh HD.”</p></li>

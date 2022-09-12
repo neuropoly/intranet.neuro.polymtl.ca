@@ -459,7 +459,17 @@ If TextMate does not open, delete folder `~/Library/Application Support/TextMate
 
 ### `mds_stores` using high CPU load
 
-There are many forums about this issue. The [one that worked](https://apple.stackexchange.com/questions/388882/how-to-disable-spotlight-and-mds-stores-on-mac-os-catalina) for me is: 
+There are many forums about this issue. Below are some that sometimes work.
+
+#### Solution 1
+
+```bash
+sudo mdutil -a -i off
+```
+
+[Source](https://apple.stackexchange.com/questions/388882/how-to-disable-spotlight-and-mds-stores-on-mac-os-catalina).
+
+#### Solution 2
 
 Turn off the indexing for all of my Volumes
 ```bash
@@ -471,6 +481,9 @@ Re-enable Spotlight with following command
 ```bash
 sudo mdutil -Ei on /Volumes/Macintosh\ HD
 ``` 
+
+[Source](https://apple.stackexchange.com/questions/388882/how-to-disable-spotlight-and-mds-stores-on-mac-os-catalina).
+
 
 ### Right-click sharing for Google Drive
 
