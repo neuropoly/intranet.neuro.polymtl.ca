@@ -350,6 +350,9 @@ Datasets are stored as git repositories on the server, with the bulk of their da
 
 `gitolite` manages users and their permissions. Each user has a namespace to themselves where they can make repos named `data.neuro.polymtl.ca:$user/$repo.git` (like Github), and there is also a shared space `data.neuro.polymtl.ca:datasets/*` intended for lab-wide datasets.
 
+The VM is monitored [here](https://monitor.neuro.polymtl.ca/host/data.neuro.polymtl.ca/#menu_system_submenu_cpu;after=0;before=0;theme=slate;help=true;utc=America/Toronto) (requires VPN to connect to the dashboard monitor).
+
+
 ### List users
 
 ```
