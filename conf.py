@@ -60,6 +60,15 @@ html_theme = 'sphinx_book_theme'
 html_static_path = ['_static']
 html_css_files = ["theme.css"]
 
+html_sidebars = {
+    "**": [
+        "sidebar-logo.html",
+        "gtranslate.html",
+        "search-field.html",
+        "sbt-sidebar-nav.html",
+    ]
+}
+
 html_title = "NeuroPoly Lab Manual"
 html_logo = "_static/logo.png"
 html_favicon = "_static/logo.png"
