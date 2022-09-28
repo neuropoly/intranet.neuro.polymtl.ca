@@ -14,15 +14,29 @@ description: >-
   * For phantom scanning, indicate that it is a "development scan / phantom scan" in the “Other pertinent information or instructions to this study” field when booking your scan request. This is **very important** because the rate is reduced by a factor two. 
 * Add the session to the MRI log book (see [MRI scanning](./)).
 
+## Fill out the screening form
+* Download the screening form [here](https://drive.google.com/file/d/1ezjUSRP9EYNM5zzqMNMIAwwkhevagay6/view?usp=sharing)
+* Ask your participant to fill it out
+* Send it to [Bic-Finance](mailto:bic-finance.mni@mcgill.ca) at least 24h before your scan
+
 ## Download the data
 
-Extensive list of BIC how-to information: [https://forum.bic.mni.mcgill.ca/c/general/howto](https://forum.bic.mni.mcgill.ca/c/general/howto)
+Extensive list of BIC how-to information: [https://forum.bic.mni.mcgill.ca/t/how-to-retrieve-download-mri-dicom-data/1657](https://forum.bic.mni.mcgill.ca/t/how-to-retrieve-download-mri-dicom-data/1657)
 
+Short version:
 1. Login to BIC server (you need to ask for an account in the first place): [http://www.bic.mni.mcgill.ca/Services/HowToLogin](http://www.bic.mni.mcgill.ca/Services/HowToLogin)
-2.  Locate the name of the scanning session that you would like to transfer on _/data/transfer/dicom/. _You can type the following command in your local terminal to get the list of the existing sessions (you will be prompted for your BIC password):&#x20;
+2. Type "find_mri sessionname", where MRIID is the name of your scan session (for example acdc_spine_7t_049p)
+3. Note down the full path of the sessionname under _/data/transfer/dicom/sessionname_X_X_ (for example, `/data/dicom/acdc_spine_7t_049p_20220923_111852672`)
+4. Claim the data as yours: "find_mri -claim sessionname"
+5. Exit the ssh session
+6. Use scp or rsync or Filezilla to download that data. 
 
-    `ssh username@login.bic.mni.mcgill.ca ls /data/transfer/dicom `
-3.  Use_ rsync_ or Filezilla to transfer the archive to your computer. Alternatively, you can type(you will be prompted for your BIC password):
-
-    `scp -r username@login.bic.mni.mcgill.ca:/data/transfer/dicom/sessionname ~/local/direction/path`
-4. Zip the data and put them on duke under `mri/projectname` if not already there.
+   Using scp:
+   ```
+   scp -r username@login.bic.mni.mcgill.ca:/data/transfer/dicom/sessionname_X_X ~/local/direction/path
+   ```
+   For our example, that would be:
+   ```
+   scp -r unsername@login.bic.mni.mcgill.ca:/data/transfer/dicom/acdc_spine_7t_049p_20220923_111852672 /Users/username/local/path/to/data
+   ```
+7. Zip the data and put them on duke under `mri/projectname` if not already there.
