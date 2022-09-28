@@ -728,6 +728,16 @@
    University Courses
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../scholarships.html">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     💰
+    </span>
+   </code>
+   Scholarships
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../bibliography/README.html">
    <span>
@@ -825,11 +835,6 @@
       </span>
      </code>
      Social Lunch
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../practical-information/scholarships-and-bursaries.html">
-     Scholarships &amp; Bursaries
     </a>
    </li>
    <li class="toctree-l2">
@@ -2205,15 +2210,15 @@ tensorboard --logdir PATH_TO_MODEL --port PORTNUMBER
 <span id="id1"></span><h2>SSH tunnelling<a class="headerlink" href="#ssh-tunnelling" title="Permalink to this headline">#</a></h2>
 <p>If you want to run a Jupyter notebook from a remote server, or monitor a model training using tensorboard, you will need to do an SSH tunnelling to be able to pass the display from the remote cluster to your local station.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="a2ea2d6e-d1fe-47d5-96c3-1691fb02f77f" name="b72cd52d-22c9-4a9f-bf73-51ffdf723728" type="radio">
-</input><label class="tabbed-label" for="a2ea2d6e-d1fe-47d5-96c3-1691fb02f77f">
+<input checked="checked" id="bb9d01f9-596b-40b6-988e-86b43dcb7f4d" name="58a33584-9c85-40fc-8b6c-81efdbae654f" type="radio">
+</input><label class="tabbed-label" for="bb9d01f9-596b-40b6-988e-86b43dcb7f4d">
 Secure pipes</label><div class="tabbed-content docutils">
 <p>Install secure pipes and configure it as follows:
 with port_rosenber as the “Port” of the screen session and port_local is a random number (see screenshot below):</p>
 <p><img alt="" src="../../_images/tunnelling_macos.png" /></p>
 </div>
-<input id="657d96f9-1abd-41a3-9bac-519bafdf6ab6" name="b72cd52d-22c9-4a9f-bf73-51ffdf723728" type="radio">
-</input><label class="tabbed-label" for="657d96f9-1abd-41a3-9bac-519bafdf6ab6">
+<input id="4b3c8923-3d51-4733-aa01-957970480b8b" name="58a33584-9c85-40fc-8b6c-81efdbae654f" type="radio">
+</input><label class="tabbed-label" for="4b3c8923-3d51-4733-aa01-957970480b8b">
 Terminal</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh -N -f -L localhost:8080:localhost:PORTNUMBER username@CLUSTER.neuro.polymtl.ca
 </pre></div>

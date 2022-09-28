@@ -1,10 +1,14 @@
-# Scholarships & Bursaries
+---
+description: List of scholarships and bursaries students can apply to.
+---
+
+# `💰` Scholarships
 
 ```{important}
 If you decide to apply, please let your supervisor know at an early stage (several weeks in advance). Make sure to provide a first version of your application at least **2 weeks** before the deadline, so there is time for iterating on the proposal. Please organize your files in the shared Google Drive under the `fellowship/` folder as instructed [here](https://intranet.neuro.polymtl.ca/onboarding/dropbox-google-drive.html#google-drive).
 ```
 
-## Masters \(MSc\)
+## Masters (MSc)
 
 * [NSERC](http://www.nserc-crsng.gc.ca/students-etudiants/pg-cs/cgsm-bescm_fra.asp) \(need to be Canadian or PR\)
 * [FRQS](http://www.frqs.gouv.qc.ca/en/bourses-et-subventions/consulter-les-programmes-remplir-une-demande/bourse/master-s-training-gfw44gha1560262422777)
@@ -22,7 +26,7 @@ For students in neurosciences:
 * Neurosciences
 * GRSNC
 
-## Doctorate \(PhD\)
+## Doctorate (PhD)
 
 * NSERC
 * [FRSQ \(for canadians\)](http://www.frsq.gouv.qc.ca/fr/financement/Programmes_2013_2014/f02_fiche_2et3_cycle.shtml#l-01)
@@ -66,8 +70,7 @@ Non-Canadians \(and Canadians\):
 * [MITACS \(partnership with industry\)](http://www.mitacs.ca/elevate)
 * For research in Deep learning: NVIDIA: [https://research.nvidia.com/graduate-fellowships](https://research.nvidia.com/graduate-fellowships)
 
-## Other \(Travel Grant\)
+## Travel awards
 
 * [http://www.bwfund.org/grant-programs/biomedical-sciences/collaborative-research-travel-grants](http://www.bwfund.org/grant-programs/biomedical-sciences/collaborative-research-travel-grants)
 * [https://www.omnicompete.com/cpnchallenge.html](https://www.omnicompete.com/cpnchallenge.html)
-
