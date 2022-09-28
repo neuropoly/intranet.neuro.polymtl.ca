@@ -10,6 +10,7 @@ writing-articles
 computing-resources/README
 geek-tips/README
 courses
+scholarships
 bibliography/README
 conferences
 ideas-for-cool-projects
