@@ -1,20 +1,31 @@
 # <span>⚗️</span> Lab Manual
 
 ```{toctree}
+:caption: Ressources
 :hidden:
 onboarding/README
 agenda-and-calendar
+computing-resources/README
 mri-scanning/README
 rf-lab/README
-writing-articles
-computing-resources/README
-geek-tips/README
+```
+
+```{toctree}
+:caption: Academic Life
+:hidden:
 courses
 scholarships
-bibliography/README
 conferences
+bibliography/README
 ideas-for-cool-projects
+writing-articles
+```
+
+```{toctree}
+:caption: Miscellaneous
+:hidden:
 practical-information/README
+geek-tips/README
 edi
 contact
 NeuroPoly Website <https://neuro.polymtl.ca>
