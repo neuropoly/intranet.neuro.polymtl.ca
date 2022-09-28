@@ -1,4 +1,4 @@
-# Scholarships & Bursaries
+# Scholarships
 
 ```{important}
 If you decide to apply, please let your supervisor know at an early stage (several weeks in advance). Make sure to provide a first version of your application at least **2 weeks** before the deadline, so there is time for iterating on the proposal. Please organize your files in the shared Google Drive under the `fellowship/` folder as instructed [here](https://intranet.neuro.polymtl.ca/onboarding/dropbox-google-drive.html#google-drive).
