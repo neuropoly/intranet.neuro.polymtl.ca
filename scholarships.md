@@ -19,6 +19,7 @@ If you decide to apply, please let your supervisor know at an early stage (sever
 * QBIN
 * [UNIQUE research group](https://www.unique.quebec/funding)
 * [Fondation Arbour](https://www.fondationarbour.com/en/bourses-d-etudes-doctoract-phd-dba/maitrise/#content)
+* [Polytechnique Montreal](https://www.polymtl.ca/aide-financiere/bourses/recherche)
 
 For students in neurosciences:
 
@@ -53,6 +54,7 @@ FOUNDATIONS
 * [ALS Canada](https://www.als.ca/fr)
 * [MSFHR](http://www.msfhr.org/funding)
 * [Reeve Foundation](http://www.christopherreeve.org/site/c.ddJFKRNoFiG/b.4343879/k.D323/Research.htm)
+* [Polytechnique Montreal](https://www.polymtl.ca/aide-financiere/bourses/recherche)
 
 ## Postdoctorate
 
