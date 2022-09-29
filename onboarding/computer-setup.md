@@ -1,13 +1,5 @@
 # Computer Setup
 
-## Modify User Template
-
-Go under:
-
-```bash
- /System/Library/User\ Template/English.lproj
-```
-
 ## Shell Profile <a href="bash_profile" id="bash_profile"></a>
 
 You can edit your shell profile (usually called `.bash_profile`, but some newer versions of Mac use `.zsh_profile` ) to create custom commands and make the colours in your terminal look nice.
@@ -132,7 +124,7 @@ source ~/miniconda3/etc/profile.d/conda.sh
 ````
 
 
-## niftiviewer.app <a href="niftiviewerapp" id="niftiviewerapp"></a>
+## niftiviewer.app (MacOS) <a href="niftiviewerapp" id="niftiviewerapp"></a>
 
 UPDATE: NO NEED TO DO THE THING BELOW ANYMORE WITH NIFTI. Instead, right click > “get info” > Open with > change all… > select fsleyes
 
@@ -162,7 +154,3 @@ export PROJECT_HOME=$HOME/
 source /usr/local/bin/virtualenvwrapper.sh #centos
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh #ubuntu
 ```
-
-## Update debian 7 to 8 <a href="update_debian_7_to_8" id="update_debian_7_to_8"></a>
-
-[https://www.prado.lt/how-to-upgrade-debian-7-wheezy-to-10-buster-safely](https://www.prado.lt/how-to-upgrade-debian-7-wheezy-to-10-buster-safely)
