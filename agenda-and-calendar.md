@@ -24,5 +24,5 @@ The following google calendars are available. In order to subscribe to any of th
 | qMRLab | TODO | [#qmrlab_general](https://neuropoly.slack.com/archives/C72MGA2RW) |
 
 ```{note}
-To book a conference room at Polytechnique, you need to use [http://zimbra.polymtl.ca/](http://zimbra.polymtl.ca/)
+To book a conference room at Polytechnique, you need to use [http://zimbra.polymtl.ca/](http://zimbra.polymtl.ca/). Go to 'Calendrier', create the event, and edit the tag 'Endroit', search in building 'Lassonde' and select a preferred room (M5517 or M5519 are good).
 ```
