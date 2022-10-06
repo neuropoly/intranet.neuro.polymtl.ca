@@ -22,3 +22,7 @@ The following google calendars are available. In order to subscribe to any of th
 | ivadomed | [Agenda/Minutes](https://docs.google.com/document/d/19mEHKOZKFdprb3UPQYxmfO46mn0bPQfOgE-WPdeF7AQ/edit#) | [#ivado-medical-imaging](https://neuropoly.slack.com/archives/C8JM2P004) |
 | Shimming Toolbox | [Agenda/Minutes](https://docs.google.com/document/d/1CKpGLPcQ133hNdVa-Hzk5AINkJiQ13-uBEiDogpE8sg/edit#) | [#shimming-toolbox​](https://neuropoly.slack.com/archives/CQXMSG4UU) |
 | qMRLab | TODO | [#qmrlab_general](https://neuropoly.slack.com/archives/C72MGA2RW) |
+
+```{note}
+To book a conference room at Polytechnique, you need to use [http://zimbra.polymtl.ca/](http://zimbra.polymtl.ca/)
+```
