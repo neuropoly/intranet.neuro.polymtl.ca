@@ -65,8 +65,8 @@ source ~/miniconda3/etc/profile.d/conda.sh
 ```
 ````
 
-````{tabbed} .zsh_profile
-To edit, navigate to `$HOME/.zsh_profile` 
+````{tabbed} .zprofile
+To edit, navigate to `$HOME/.zprofile` 
 
 ```bash
 # COLOR
