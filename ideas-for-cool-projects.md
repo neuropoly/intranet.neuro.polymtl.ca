@@ -10,7 +10,7 @@ description: >-
 * _Italic_: idea being investigated / work in progress
 * **Bold**: Top priority
 
-## Good Internship Projects
+## Good Internship Projects (Public)
 
 * [Projects GBM3100](https://drive.google.com/drive/folders/1\_LuA1rKbHq6sgacGRvw3\_Er7sCWND0wt)
 * Look at ethnical background for normalizing spinal cord CSA using spine-generic database
@@ -19,6 +19,10 @@ description: >-
 * [ADS projects](https://github.com/neuropoly/axondeepseg/labels/good%20internship%20project)
 * [Shimming Toolbox projects](https://github.com/shimming-toolbox/shimming-toolbox/labels/good%20internship%20project)
 * qMRLab
+
+## Internal projects (Private)
+
+ 👉 https://github.com/orgs/neuropoly/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D
 
 ## Deep Learning
 
