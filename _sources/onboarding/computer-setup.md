@@ -5,8 +5,7 @@
 You can edit your shell profile (usually called `.bash_profile`, but some newer versions of Mac use `.zsh_profile` ) to create custom commands and make the colours in your terminal look nice.
 
 
-````{tabbed} .bash_profile
-To edit, navigate to `$HOME/.bash_profile`
+````{tabbed} ~/.bash_profile
 
 ```bash
 # Nice .bash_profile
@@ -65,8 +64,7 @@ source ~/miniconda3/etc/profile.d/conda.sh
 ```
 ````
 
-````{tabbed} .zprofile
-To edit, navigate to `$HOME/.zprofile` 
+````{tabbed} ~/.zshrc
 
 ```bash
 # COLOR
