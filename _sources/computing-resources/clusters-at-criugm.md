@@ -6,6 +6,10 @@ description: >-
 
 # `🖥` Computers \@CRIUGM
 
+## Login
+
+To acess CRIUGM computer infrastructure you need a login. Ask Julien and he will redirect you to the right person to get a login.
+
 ## CPU Clusters
 
 ```bash
