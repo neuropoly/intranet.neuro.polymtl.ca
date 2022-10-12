@@ -22,7 +22,7 @@ description: >-
 
 ## Internal projects (Private)
 
- 👉 [NeuroPoly projects idea](https://github.com/orgs/neuropoly/projects/3/views/1)
+ 👉 [NeuroPoly projects idea](https://github.com/neuropoly/idea-projects)
 
 ## Deep Learning
 
