@@ -40,7 +40,7 @@ Current **server admins** are:
 * nick.guenther@polymtl.ca
 * noel.rignon@polymtl.ca
 * joshua.newton@polymtl.ca
-* Mathieu Boudreau
+* mathieu.boudreau@polymtl.ca
 * mathieu.guay-paquet@polymtl.ca
 
 The admins should follow [Admin Guide > Add Users](#add-users) to create your account.
