@@ -39,6 +39,7 @@ Current **server admins** are:
 * eva.alonso-ortiz@polymtl.ca
 * nick.guenther@polymtl.ca
 * noel.rignon@polymtl.ca
+* joshua.newton@polymtl.ca
 * Mathieu Boudreau
 * mathieu.guay-paquet@polymtl.ca
 
