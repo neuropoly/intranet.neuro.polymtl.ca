@@ -18,6 +18,7 @@
 * [Slack](https://slack.com/intl/en-ca/downloads/instructions/mac)
 * [Evernote](https://evernote.com/) Note management
 * [MonitorControl: Monitor brightness in 2nd monitor \(without touching the buttons\)](https://github.com/MonitorControl/MonitorControl)
+* [Disk Space Analyzer](https://apps.apple.com/us/app/disk-space-analyzer-inspector/id446243721?mt=12): Analyze hard drive space usage
 
 **Image**
 
