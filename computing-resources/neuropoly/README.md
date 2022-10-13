@@ -528,6 +528,11 @@ Then enter your ID and password at poly.
   * Nifti viewer
 * Tanguy's app to open Nifti files with FSLview
 
+To access software from the department (Matlab, Microsoft Office, etc.), connect to: 
+~~~
+smb://hcifst.grames.polymtl.ca/tools
+~~~
+
 ## Admin
 
 Technical details about station management and documentation is found on [this repository](https://github.com/neuropoly/computers).
