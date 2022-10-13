@@ -2,7 +2,7 @@
 
 ## Shell Profile <a href="bash_profile" id="bash_profile"></a>
 
-You can edit your shell profile (usually called `.bash_profile`, but some newer versions of Mac use `.zsh_profile` ) to create custom commands and make the colours in your terminal look nice.
+You can edit your shell profile to create custom commands and make the colours in your terminal look nice.
 
 
 ````{tabbed} ~/.bash_profile
