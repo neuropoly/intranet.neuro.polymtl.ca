@@ -357,7 +357,7 @@ The VM is monitored [here](https://monitor.neuro.polymtl.ca/host/data.neuro.poly
 ### List users
 
 ```
-ssh git@data keys list
+ssh git@data.neuro.polymtl.ca keys list
 ```
 
 ### Add users
