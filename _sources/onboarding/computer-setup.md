@@ -118,6 +118,8 @@ export PATH=${PATH}:/Applications/CMake.app/Contents/bin
 # MINICONDA
 export PATH="$HOME/miniconda3/bin:$PATH"  # commented out by conda initialize
 source ~/miniconda3/etc/profile.d/conda.sh
+# Remove "(base)" from the prompt added by miniconda
+PROMPT=$(echo $PROMPT | sed 's/(base) //')
 ```
 ````
 

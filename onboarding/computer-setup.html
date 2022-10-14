@@ -1062,8 +1062,8 @@ title="Edit this page"
 <h2>Shell Profile <a href="bash_profile" id="bash_profile"></a><a class="headerlink" href="#shell-profile-a-href-bash-profile-id-bash-profile-a" title="Permalink to this headline">#</a></h2>
 <p>You can edit your shell profile to create custom commands and make the colours in your terminal look nice.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="a4b4b991-8eec-4d06-ab2a-eaff7c01e809" name="66246b6b-3a4c-455b-a83d-f03b2f29fb74" type="radio">
-</input><label class="tabbed-label" for="a4b4b991-8eec-4d06-ab2a-eaff7c01e809">
+<input checked="checked" id="077b9a85-a48d-45de-bd37-cd3e184ecef4" name="6bbbd251-2e99-45d9-98a1-4c60ec7c600a" type="radio">
+</input><label class="tabbed-label" for="077b9a85-a48d-45de-bd37-cd3e184ecef4">
 ~/.bash_profile</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Nice .bash_profile</span>
  
@@ -1121,8 +1121,8 @@ title="Edit this page"
 </pre></div>
 </div>
 </div>
-<input id="f9cdbccf-2b16-427f-9845-c7e51f0d89b4" name="66246b6b-3a4c-455b-a83d-f03b2f29fb74" type="radio">
-</input><label class="tabbed-label" for="f9cdbccf-2b16-427f-9845-c7e51f0d89b4">
+<input id="daef6a4e-bcf5-4db1-beb2-331b31105b6b" name="6bbbd251-2e99-45d9-98a1-4c60ec7c600a" type="radio">
+</input><label class="tabbed-label" for="daef6a4e-bcf5-4db1-beb2-331b31105b6b">
 ~/.zshrc</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># COLOR</span>
 <span class="nb">export</span> <span class="nv">CLICOLOR</span><span class="o">=</span><span class="m">1</span>
@@ -1175,6 +1175,8 @@ title="Edit this page"
 <span class="c1"># MINICONDA</span>
 <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/miniconda3/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>  <span class="c1"># commented out by conda initialize</span>
 <span class="nb">source</span> ~/miniconda3/etc/profile.d/conda.sh
+<span class="c1"># Remove &quot;(base)&quot; from the prompt added by miniconda</span>
+<span class="nv">PROMPT</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$PROMPT</span> <span class="p">|</span> sed <span class="s1">&#39;s/(base) //&#39;</span><span class="k">)</span>
 </pre></div>
 </div>
 </div>
