@@ -27,6 +27,8 @@ Desk access is given on a first-come-first-serve basis. Once you find a seat tha
 
 If you work on a personal laptop and need desktop equipment (a monitor, mouse, keyboard, etc.) please contact your supervisor. If instead you need to be provided a workstation (e.g. iMac), please consult the [List of Computing Resources](https://intranet.neuro.polymtl.ca/computing-resources/neuropoly/README.html) document, then pick a workstation that is not being used by another lab member. 
 
+The list of free desks can be found [here](https://docs.google.com/document/d/11GEh5YvYRnWnERv26TezcyvyPF2W5KF0uoI2U6p7XsM/edit).
+
 ### Requirements for room access
 
 To be able to access the lab rooms, you will need a Polytechnique card and to activate it for the specific rooms you wish to access. To activate it, please follow the onboarding procedure.
