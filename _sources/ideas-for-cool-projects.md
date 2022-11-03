@@ -35,7 +35,7 @@ description: >-
   * 3D segmentation, looking at GoogleBrain method (Oumayma)
   * segment glia (contact: Nikola/Roken/Jason)
 * MRI/Spinal cord
-  * **detection of spinal cord compression point (collab: Valosek)**
+  * **automatic detection of spinal cord compression ([details](https://github.com/neuropoly/idea-projects/issues/2))**
   * **training multi-contrast models for MS lesion segmentation**
   * multi-modal training, MS lesion segmentation, without co-registration (model would learn that)
   * **neuroRx model training**
