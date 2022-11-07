@@ -131,6 +131,10 @@ For the visibility of the lab, please use this template in [Keynote](https://dri
 * [http://www.makesigns.com/tutorials/](http://www.makesigns.com/tutorials/)
 * [http://www.scientifica.uk.com/neurowire/how-to-make-your-scientific-posters-stand-out](http://www.scientifica.uk.com/neurowire/how-to-make-your-scientific-posters-stand-out)
 
+**Instituional Logos**
+
+Neuropoly, UNF, CHUM, etc logos can be found [here](https://drive.google.com/drive/u/0/folders/0Bx3A13n3Q_EAZHhQR2x6cXFOMHc?resourcekey=0-iHgFYODqFfzUnBHGtozngw)
+
 **What size should my poster be?**
 
 The template provided **might not be the right size for you**. The size of your poster depends on the conference requirements \(usually listed on their website, or given to you by email\). Typically you want to print ~ 5cm smaller to make sure it fits on the board.
