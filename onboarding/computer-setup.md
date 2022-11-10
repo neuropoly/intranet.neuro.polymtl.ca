@@ -159,7 +159,7 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh #ubuntu
 
 You can access your PolyMTL email account (@polymtl.ca) at https://zimbra.polymtl.ca, or you can add it to the macOS Mail app.
 
-## Add PolyMTL email to the macOS Mail app
+### Add PolyMTL email to the macOS Mail app
 
 Click on Apple logo () / System Preferences / Internet Accounts / Add Other Account / Mail account
 
