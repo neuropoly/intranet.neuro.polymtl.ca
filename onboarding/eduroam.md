@@ -1,4 +1,4 @@
-# <span>📶</span> Eduroam
+# Eduroam
 
 ## Overview
 

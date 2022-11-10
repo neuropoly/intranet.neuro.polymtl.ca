@@ -7,6 +7,7 @@ campus-access
 infrastructure
 dropbox-google-drive
 computer-setup
+eduroam
 developer-setup
 consultants-ra
 postdoc
