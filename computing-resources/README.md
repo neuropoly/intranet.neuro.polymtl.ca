@@ -8,6 +8,7 @@ compute-canada
 data/README
 printer
 eduroam
+macos-email
 youtube
 ```
 
