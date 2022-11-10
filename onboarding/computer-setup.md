@@ -155,7 +155,7 @@ source /usr/local/bin/virtualenvwrapper.sh #centos
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh #ubuntu
 ```
 
-## Email
+## `✉️` Email
 
 You can access your PolyMTL email account (@polymtl.ca) at https://zimbra.polymtl.ca, or you can add it to the macOS Mail app.
 
