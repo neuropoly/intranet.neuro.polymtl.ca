@@ -7,7 +7,6 @@ clusters-at-criugm
 compute-canada
 data/README
 printer
-macos-email
 youtube
 ```
 
