@@ -362,27 +362,27 @@ ssh git@data.neuro.polymtl.ca keys list
 
 ### Add users
 
-To grant access to a lab member, [as above](#add-extra-devices), ask the lab member to generate an ssh key using `ssh-keygen` and have them send you the *public key*. Save it to a file `id_rsa.zamboni.pub` and add them with
+To grant access to a lab member, [as above](#add-extra-devices), ask the lab member to generate an ssh key using `ssh-keygen` and have them send you the *public key*. Save it to a file `firstnamelastname.pub` and add them with
 
 ```
-cat id_rsa.zamboni.pub | ssh git@data.neuro.polymtl.ca keys add zamboni
+cat firstnamelastname.pub | ssh git@data.neuro.polymtl.ca keys add firstnamelastname
 ```
 
 You can also paste the key in, followed by `ctrl-d`; this looks like:
 
 ```
-ssh git@data.neuro.polymtl.ca keys add zamboni
+ssh git@data.neuro.polymtl.ca keys add firstnamelastname
 ```
 
 The output looks like:
 ```
 Enter passphrase for key '/home/kousu/.ssh/id_rsa.github': 
 please supply the new key on STDIN (e.g. cat you.pub | ssh gitolite@git.example.com keys add @laptop).
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID11N3hQpJP4Okivd5xO3N0CuO24ioMwXYv+l/1PM/+z zamboni@laptop
-Added SHA256:hwil2tmaw/prgIBX5odO8vOAj2i38gPrUGjGZnnkVvo : zamboni.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID11N3hQpJP4Okivd5xO3N0CuO24ioMwXYv+l/1PM/+z firstname.lastname@polymtl.ca
+Added SHA256:hwil2tmaw/prgIBX5odO8vOAj2i38gPrUGjGZnnkVvo : firstnamelastname.pub
 ```
 
-You **should** use the person's @polymtl.ca email address as their username. However [there is a bug](https://github.com/kousu/gitolite-mods/issues/3), so just use "firstname.lastname". Once someone is inscribed they can add and remove their own keys without having to know their username. We will migrate all the usernames when that bug is fixed; it won't affect much, since these usernames are entirely server-side. The only time users see them is when they run `info` or use `perms`.
+You should use the person's full name as their username, in the form `firstnamelastname`, with no spaces or periods or anything. It's essentially an arbitrary string that the user doesn't really need to know, since everyone is authenticated using just their public/private keys without supplying a username. The only time users see them is when they run `info` or use `perms`. We would **like** to use the format firstname.lastname@polymtl.ca, but [there is a bug](https://github.com/kousu/gitolite-mods/issues/3), so just use `firstnamelastname`. Once someone is registered they can add and remove their own keys without having to know their username.
 
 
 ### Permissions
