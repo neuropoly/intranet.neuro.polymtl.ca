@@ -6,7 +6,7 @@ getting-started
 campus-access
 infrastructure
 dropbox-google-drive
-computer-setup
+computer-setup/README
 eduroam
 developer-setup
 consultants-ra
