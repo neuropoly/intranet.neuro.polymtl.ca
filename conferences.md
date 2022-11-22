@@ -147,9 +147,9 @@ The reprography allows any size under 60 inches.
 
 **Where to print your poster?**
 
-Go to: Polytechnique Montreal Reprography, 2nd floor, main building. 
-
-Order directly online using the form \(pay upon receipt\): [http://www.polymtl.ca/reprographie/](http://www.polymtl.ca/reprographie/)
+- Polytechnique Montreal Reprography, 2nd floor, main building, Order directly online using the form \(pay upon receipt\): [http://www.polymtl.ca/reprographie/](http://www.polymtl.ca/reprographie/)
+- University of Montreal, http://www.sium.umontreal.ca/
+- https://www.graphiscan.com/ (complicated, asks for a quote, etc.)
 
 **How to pay?**
 
