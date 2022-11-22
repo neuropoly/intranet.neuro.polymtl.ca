@@ -72,10 +72,12 @@ The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by fi
 brew install openconnect
 ```
 
-Open your Keychain program and click '+' to add a new password:
+Open your Keychain program and click '+' to add a new item:
 - Name: `poly-vpn`
 - Account: your `YOUR_CAS_USERNAME` (corresponds to your GRAMES username)
 - Password: enter your password here.
+
+Note: the new item has to be added as an `application password` to your `login` Keychain (i.e., not to your `iCloud` Keychain).
 
 Then, create the following script:
 ```bash
