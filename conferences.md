@@ -151,6 +151,35 @@ The reprography allows any size under 60 inches.
 - University of Montreal, http://www.sium.umontreal.ca/
 - https://www.graphiscan.com/ (complicated, asks for a quote, etc.)
 
+**Detailed how-to guide when printing your poster at Poly**
+
+For first-timers printing a poster, there might be a lot of things to consider (file types: pngs, pdfs, dpi settings, etc.). This gives a quick how-to on what settings to use for quick hassle-free poster printing. Note: This guide of MacOS users, there are similar options in PowerPoint for Windows.
+
+Firstly, note that the images need to be at 300 dots/inch (DPI) to look good on a poster. When you're making a poster on Keynote, there are two options to save your poster: (1) Exporting it directly as a pdf and (2) Exporting it as "Images" in a PNG or any other image format. Depending on what on your conference requires, you might need to do both. 
+
+When exporting directly as a PDF (option 1):
+
+* Keynote, by default, saves your PDF in a very high resolution. So, when sending the poster for printing at Poly, you can directly upload this PDF and then specify the size of the poster you want it to be printed on. 
+
+  * One way to check whether the resolution of your PDF is good is the following: (i) Open the PDF on Preview, (ii) Go to Export and save it as a JPEG with highest quality, while also increasing the resolution to 300 DPI. This JPEG figure should contain crisp images when zoomed in to the actual size. 
+
+When exporting directly as an Image (option 2):
+
+* This option is useful only when the conference wants you upload a PNG (or any image format) of your poster. Note that with Keynote, when slides are converted to images, the resolution automatically is set to 72 DPI. 
+  
+  * **What NOT to do?** The actual poster should typically contain images with 300 DPI, so simplying changing the resolution by resampling from 72 to 300 DPI will make your figures look blurry when printed on paper. 
+  * So, to avoid this, refer to Option 1 and save your poster directly as a PDF instead.
+
+Options to choose when filling out Poly's [Service de la reprographie form](https://www.polymtl.ca/reprographie/formulaires/impression/):
+
+1. Type de client - etudiant
+2. Type d'assemblage - aucun assemblage (no assembly)
+3. Impression - en couleur (in colour)
+4. Choix d'impression - recto seulement (front only)
+5. Format - select "grand format" (this means the printing is for a poster)
+   * Type de papier - mat (for a matte, lightweight paper (the standard for posters))
+   * po. (i.e. pouces) - size of the poster (in inches). Check your conference's requirements for this.
+
 **How to pay?**
 
 They only accept cash. You have two payment options:
