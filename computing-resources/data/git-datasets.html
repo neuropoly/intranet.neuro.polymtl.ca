@@ -1021,13 +1021,18 @@ title="Edit this page"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#inscription">
-     Inscription
+    <a class="reference internal nav-link" href="#getting-an-account">
+     Getting an account
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#connection">
-     Connection
+    <a class="reference internal nav-link" href="#connecting-to-data-neuro-polymtl-ca">
+     Connecting to
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       data.neuro.polymtl.ca
+      </span>
+     </code>
     </a>
    </li>
   </ul>
@@ -1183,13 +1188,18 @@ title="Edit this page"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#inscription">
-     Inscription
+    <a class="reference internal nav-link" href="#getting-an-account">
+     Getting an account
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#connection">
-     Connection
+    <a class="reference internal nav-link" href="#connecting-to-data-neuro-polymtl-ca">
+     Connecting to
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       data.neuro.polymtl.ca
+      </span>
+     </code>
     </a>
    </li>
   </ul>
@@ -1344,8 +1354,8 @@ It is locked behind a <span class="xref myst">VPN</span> because much of our dat
 </li>
 </ol>
 </section>
-<section id="inscription">
-<h3>Inscription<a class="headerlink" href="#inscription" title="Permalink to this headline">#</a></h3>
+<section id="getting-an-account">
+<h3>Getting an account<a class="headerlink" href="#getting-an-account" title="Permalink to this headline">#</a></h3>
 <p>Send your ssh public key – that is, the contents of <code class="docutils literal notranslate"><span class="pre">~/.ssh/id_rsa.pub</span></code> or <code class="docutils literal notranslate"><span class="pre">~/.ssh/id_ed25519.pub</span></code> (the <strong>.pub</strong> file) – to one of the server admins and ask them to create your account.</p>
 <p>A <strong>pubkey</strong> should look like</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span><span class="o">-</span><span class="n">rsa</span> <span class="n">AAAAB3NzaC1yc2EAAAADAQABAAABAQDE</span><span class="o">+</span><span class="n">b5vj</span><span class="o">+</span><span class="n">WvS5l6j56NF</span><span class="o">/</span><span class="n">leMpC2xT7JUCMUWDAqvWoVmNZ7UR3dGXQeTPTlmPmxPGD2Hk9</span><span class="o">/</span><span class="n">zFzxO2kYOt9o4lHQ0QQSKLUmTyuieyJE26wL1ZiLilmTgvgMxxkxvInF</span><span class="o">/</span><span class="n">Vr78V5Ll72zAmXzUxVSvuDGY2GRjnLreYheiqg1F3xTuD68uWInX8ZwA7NDtKpoZ7Aat063vD79WBrtiCfvAMbM8QhC3294zxqAjjy9fxs</span><span class="o">+</span><span class="n">TMTqAxtKdaWCA</span><span class="o">/</span><span class="n">eCs7sx9uvtFcj2Q9jxCMB3br5HyPLotgJMoIMt</span><span class="o">+</span><span class="n">fywj</span><span class="o">+</span><span class="n">vQG907LODRcqm9J0</span><span class="o">+</span><span class="n">ih</span><span class="o">+</span><span class="mi">38</span><span class="o">/</span><span class="mi">3</span><span class="n">Y6aqECMkHA9WWIfFywwjeA7EGr</span> <span class="n">your</span><span class="o">.</span><span class="n">name</span><span class="nd">@polymtl</span><span class="o">.</span><span class="n">ca</span>
@@ -1360,21 +1370,20 @@ It is locked behind a <span class="xref myst">VPN</span> because much of our dat
 <li><p>jcohen&#64;polymtl.ca</p></li>
 <li><p>eva.alonso-ortiz&#64;polymtl.ca</p></li>
 <li><p>nick.guenther&#64;polymtl.ca</p></li>
-<li><p>noel.rignon&#64;polymtl.ca</p></li>
 <li><p>joshua.newton&#64;polymtl.ca</p></li>
 <li><p>mathieu.boudreau&#64;polymtl.ca</p></li>
 <li><p>mathieu.guay-paquet&#64;polymtl.ca</p></li>
 </ul>
 <p>The admins should follow <a class="reference internal" href="#add-users"><span class="std std-doc">Admin Guide &gt; Add Users</span></a> to create your account.</p>
 </section>
-<section id="connection">
-<h3>Connection<a class="headerlink" href="#connection" title="Permalink to this headline">#</a></h3>
+<section id="connecting-to-data-neuro-polymtl-ca">
+<h3>Connecting to <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code><a class="headerlink" href="#connecting-to-data-neuro-polymtl-ca" title="Permalink to this headline">#</a></h3>
 <p>Because this server contains private medical data, you need to be on campus, connected to the VPN, or working from a server on campus, like <code class="docutils literal notranslate"><span class="pre">joplin</span></code> or <code class="docutils literal notranslate"><span class="pre">rosenberg</span></code> to access it.</p>
 <p><em>If connecting from off-campus</em>, connect to <a class="reference external" href="http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn">polyvpn</a>.</p>
 <blockquote>
-<div><p>🏚️ Verify connectivity by <code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">data.neuro.polymtl.ca</span></code>. If <strong>you cannot ping</strong> then you need to double-check your VPN connection; make sure it is connected, make sure you can reach <code class="docutils literal notranslate"><span class="pre">joplin</span></code>, and if it still isn’t working <em>ask the <span class="xref myst">Poly network admins</span></em> to unblock your account from this server.</p>
+<div><p>🏚️ Verify connectivity by running <code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">data.neuro.polymtl.ca</span></code>. If <strong>you cannot ping</strong> then you need to double-check your VPN connection; make sure it is connected, make sure you can reach <code class="docutils literal notranslate"><span class="pre">joplin</span></code>, and if it still isn’t working <em>ask the <span class="xref myst">Poly network admins</span></em> to unblock your account from this server.</p>
 </div></blockquote>
-<p>Verify you can use the server by <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">git&#64;data.neuro.polymtl.ca</span> <span class="pre">help</span></code>. If it hangs, triple-check again your VPN. If it rejects you, your account is not created yet, or you have switched machines. A successful connection looks like:</p>
+<p>Verify you can use the server by running <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">git&#64;data.neuro.polymtl.ca</span> <span class="pre">help</span></code>. If it hangs, triple-check again your VPN. If it asks for <code class="docutils literal notranslate"><span class="pre">git&#64;data.neuro.polymtl.ca's</span> <span class="pre">password</span></code>, double-check that <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-la</span> <span class="pre">~/.ssh</span></code> shows permissions of <code class="docutils literal notranslate"><span class="pre">drwx------</span></code> for the <code class="docutils literal notranslate"><span class="pre">.</span></code> folder, and that the files <code class="docutils literal notranslate"><span class="pre">id_ed25519</span></code> and <code class="docutils literal notranslate"><span class="pre">id_ed25519.pub</span></code> (or <code class="docutils literal notranslate"><span class="pre">id_rsa</span></code> and <code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code>) exist with exactly those names. A successful connection looks like:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh git@data.neuro.polymtl.ca help
 Enter passphrase for key &#39;/home/kousu/.ssh/id_ed25519.neuropoly&#39;: 
 hello yourusername, this is git@data running gitolite3 3.6.11-2 (Debian) on git 2.27.0
@@ -1397,7 +1406,7 @@ list of remote commands available:
 </section>
 <section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
-<p>During daily usage, you will need to be <a class="reference internal" href="#connection"><span class="std std-doc"><em>on the polyvpn network</em></span></a>.</p>
+<p>During daily usage, you will need to be <span class="xref myst"><em>on the polyvpn network</em></span>.</p>
 <p>You should also make sure to <span class="xref myst">configure git annex</span> for the best performance.</p>
 <section id="list">
 <h3>List<a class="headerlink" href="#list" title="Permalink to this headline">#</a></h3>
@@ -1406,14 +1415,14 @@ list of remote commands available:
 </pre></div>
 </div>
 <p>And the output would look like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hello</span> <span class="n">zamboni</span><span class="p">,</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">git</span><span class="nd">@data</span> <span class="n">running</span> <span class="n">gitolite3</span> <span class="mf">3.6.11</span><span class="o">-</span><span class="mi">2</span> <span class="p">(</span><span class="n">Debian</span><span class="p">)</span> <span class="n">on</span> <span class="n">git</span> <span class="mf">2.27.0</span>
- <span class="n">R</span> <span class="n">W</span> <span class="n">C</span>  <span class="n">CREATOR</span><span class="o">/..*</span>
- <span class="n">R</span> <span class="n">W</span> <span class="n">C</span>  <span class="n">datasets</span><span class="o">/..*</span>
- <span class="n">R</span> <span class="n">W</span>    <span class="n">datasets</span><span class="o">/</span><span class="n">sct</span><span class="o">-</span><span class="n">testing</span><span class="o">-</span><span class="n">large</span>
- <span class="n">R</span> <span class="n">W</span>    <span class="n">datasets</span><span class="o">/</span><span class="n">uk</span><span class="o">-</span><span class="n">biobank</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hello</span> <span class="n">yourusername</span><span class="p">,</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">git</span><span class="nd">@data</span> <span class="n">running</span> <span class="n">gitolite3</span> <span class="mf">3.6.11</span><span class="o">-</span><span class="mi">2</span> <span class="p">(</span><span class="n">Debian</span><span class="p">)</span> <span class="n">on</span> <span class="n">git</span> <span class="mf">2.27.0</span>
+ <span class="n">R</span>      <span class="n">datasets</span><span class="o">/..*</span>
+ <span class="n">R</span>      <span class="n">datasets</span><span class="o">/</span><span class="n">basel</span><span class="o">-</span><span class="n">mp2rage</span>
+ <span class="n">R</span> <span class="n">W</span>    <span class="n">datasets</span><span class="o">/</span><span class="n">bavaria</span><span class="o">-</span><span class="n">quebec</span><span class="o">-</span><span class="n">spine</span><span class="o">-</span><span class="n">ms</span>
+<span class="o">...</span>
 </pre></div>
 </div>
-<p>You are identified to the server by your ssh keys, butNotice that this tells you the username you are known to</p>
+<p>You are identified to the server by your ssh keys, but notice that this tells you the username you are known as.</p>
 </section>
 <section id="download">
 <h3>Download<a class="headerlink" href="#download" title="Permalink to this headline">#</a></h3>
@@ -1438,8 +1447,8 @@ list of remote commands available:
 <section id="upload">
 <h3>Upload<a class="headerlink" href="#upload" title="Permalink to this headline">#</a></h3>
 <p>Despite not being hosted on Github, we are still using a <a class="reference external" href="https://guides.github.com/introduction/flow/">pull-request workflow</a>.
-So, to make changes to a dataset, first ask its owner to <a class="reference internal" href="#permissions"><span class="std std-doc">grant you upload rights</span></a>, then make a working branch for your changes:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">working</span><span class="o">-</span><span class="n">branch</span>
+So, to make changes to a dataset, first ask an admin to <a class="reference internal" href="#permissions"><span class="std std-doc">grant you upload rights</span></a>, then make a working branch for your changes. If your initials are <code class="docutils literal notranslate"><span class="pre">xy</span></code> and you are working on <code class="docutils literal notranslate"><span class="pre">some-topic</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">xy</span><span class="o">/</span><span class="n">some</span><span class="o">-</span><span class="n">topic</span>
 <span class="c1"># Edit your files, add new ones, etc. </span>
 <span class="c1"># Add all modified files to be commited</span>
 <span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
@@ -1453,7 +1462,7 @@ So, to make changes to a dataset, first ask its owner to <a class="reference int
 </pre></div>
 </div>
 <p>The output would look like:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hello</span> <span class="n">zamboni</span><span class="p">,</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">git</span><span class="nd">@data</span> <span class="n">running</span> <span class="n">gitolite3</span> <span class="mf">3.6.11</span><span class="o">-</span><span class="mi">2</span> <span class="p">(</span><span class="n">Debian</span><span class="p">)</span> <span class="n">on</span> <span class="n">git</span> <span class="mf">2.27.0</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">hello</span> <span class="n">yourusername</span><span class="p">,</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">git</span><span class="nd">@data</span> <span class="n">running</span> <span class="n">gitolite3</span> <span class="mf">3.6.11</span><span class="o">-</span><span class="mi">2</span> <span class="p">(</span><span class="n">Debian</span><span class="p">)</span> <span class="n">on</span> <span class="n">git</span> <span class="mf">2.27.0</span>
 
  <span class="n">R</span> <span class="n">W</span>    <span class="n">datasets</span><span class="o">/</span><span class="n">uk</span><span class="o">-</span><span class="n">biobank</span>
 </pre></div>
@@ -1468,8 +1477,9 @@ So, to make changes to a dataset, first ask its owner to <a class="reference int
 </section>
 <section id="reviewing-pull-requests">
 <h3>Reviewing Pull Requests<a class="headerlink" href="#reviewing-pull-requests" title="Permalink to this headline">#</a></h3>
-<p>If someone asks you to review their changes on branch <code class="docutils literal notranslate"><span class="pre">xy/branchname</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">xy</span><span class="o">/</span><span class="n">branchname</span>
+<p>If someone asks you to review their changes on branch <code class="docutils literal notranslate"><span class="pre">xy/some-topic</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">xy</span><span class="o">/</span><span class="n">some</span><span class="o">-</span><span class="n">topic</span>
 <span class="n">git</span> <span class="n">annex</span> <span class="n">get</span> <span class="o">.</span>
 </pre></div>
 </div>
@@ -1492,7 +1502,7 @@ So, to make changes to a dataset, first ask its owner to <a class="reference int
 <h4>Commit Rights<a class="headerlink" href="#commit-rights" title="Permalink to this headline">#</a></h4>
 <p>Each repo has its own <a class="reference internal" href="#permissions"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">OWNERS</span></code> group</span></a> attached. These are the people allowed to commit to <code class="docutils literal notranslate"><span class="pre">master</span></code>, and usually they should be the <a class="reference internal" href="#reviewing-pull-requests"><span class="std std-doc">reviewers</span></a> as well.</p>
 <p>In order to join this group, someone already in it needs to grant you access:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">perms</span> <span class="n">datasets</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">repo</span> <span class="o">+</span> <span class="n">OWNERS</span> <span class="n">yourname</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">perms</span> <span class="n">datasets</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">repo</span> <span class="o">+</span> <span class="n">OWNERS</span> <span class="n">yourusername</span>
 </pre></div>
 </div>
 <p>You can check if you have commit rights to a dataset “my-new-repo” by seeing if you appear in the group:</p>
@@ -1504,15 +1514,15 @@ So, to make changes to a dataset, first ask its owner to <a class="reference int
 <h4>Committing<a class="headerlink" href="#committing" title="Permalink to this headline">#</a></h4>
 <p>Once a branch is finalized:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
-<span class="n">git</span> <span class="n">merge</span> <span class="o">--</span><span class="n">ff</span><span class="o">-</span><span class="n">only</span> <span class="n">xy</span><span class="o">/</span><span class="n">branchname</span> <span class="c1"># or use git pull --squash xy/branchname</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="o">--</span><span class="n">ff</span><span class="o">-</span><span class="n">only</span> <span class="n">xy</span><span class="o">/</span><span class="n">some</span><span class="o">-</span><span class="n">topic</span> <span class="c1"># or use git pull --squash xy/some-topic</span>
 <span class="n">git</span> <span class="n">push</span>  <span class="c1"># no need for git-annex sync here, no annex files have been moved</span>
 </pre></div>
 </div>
 <p>(Optional) Clean up the branch:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">d</span> <span class="n">xy</span><span class="o">/</span><span class="n">branchname</span>
-<span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">d</span> <span class="n">synced</span><span class="o">/</span><span class="n">xy</span><span class="o">/</span><span class="n">branchname</span>   <span class="c1"># redundancy</span>
-<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="p">:</span><span class="n">xy</span><span class="o">/</span><span class="n">branchname</span>
-<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="p">:</span><span class="n">synced</span><span class="o">/</span><span class="n">xy</span><span class="o">/</span><span class="n">branchname</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">d</span> <span class="n">xy</span><span class="o">/</span><span class="n">some</span><span class="o">-</span><span class="n">topic</span>
+<span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">d</span> <span class="n">synced</span><span class="o">/</span><span class="n">xy</span><span class="o">/</span><span class="n">some</span><span class="o">-</span><span class="n">topic</span>   <span class="c1"># redundancy</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="p">:</span><span class="n">xy</span><span class="o">/</span><span class="n">some</span><span class="o">-</span><span class="n">topic</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="p">:</span><span class="n">synced</span><span class="o">/</span><span class="n">xy</span><span class="o">/</span><span class="n">some</span><span class="o">-</span><span class="n">topic</span>
 </pre></div>
 </div>
 </section>
@@ -1528,11 +1538,6 @@ So, to make changes to a dataset, first ask its owner to <a class="reference int
 <span class="n">git</span> <span class="n">annex</span> <span class="n">copy</span> <span class="o">--</span><span class="n">to</span> <span class="n">origin</span>                <span class="c1"># upload images to remote annex</span>
 <span class="c1"># verify your .nii.gz files were annexed and uploaded</span>
 <span class="n">git</span> <span class="n">annex</span> <span class="n">whereis</span>
-</pre></div>
-</div>
-<p>Note that you have personal space under “CREATOR”, so if your username is “zamboni” then you can:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span><span class="p">:</span><span class="n">zamboni</span><span class="o">/</span><span class="n">project1</span>
-<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span>
 </pre></div>
 </div>
 </section>
