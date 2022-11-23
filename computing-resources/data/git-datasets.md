@@ -17,7 +17,7 @@ Initial setup
 2. Make sure you have an ssh key.
     * If not, run `ssh-keygen -t ed25519 -C your.name@polymtl.ca`. Your keys will be in the hidden folder `~/.ssh/`.
 
-### Inscription
+### Getting an account
 
 Send your ssh public key -- that is, the contents of `~/.ssh/id_rsa.pub` or `~/.ssh/id_ed25519.pub` (the **.pub** file) -- to one of the server admins and ask them to create your account.
 
@@ -38,22 +38,21 @@ Current **server admins** are:
 * jcohen@polymtl.ca
 * eva.alonso-ortiz@polymtl.ca
 * nick.guenther@polymtl.ca
-* noel.rignon@polymtl.ca
 * joshua.newton@polymtl.ca
 * mathieu.boudreau@polymtl.ca
 * mathieu.guay-paquet@polymtl.ca
 
 The admins should follow [Admin Guide > Add Users](#add-users) to create your account.
 
-### Connection
+### Connecting to `data.neuro.polymtl.ca`
 
 Because this server contains private medical data, you need to be on campus, connected to the VPN, or working from a server on campus, like `joplin` or `rosenberg` to access it.
 
 *If connecting from off-campus*, connect to [polyvpn](http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn).
 
-> 🏚️ Verify connectivity by `ping data.neuro.polymtl.ca`. If **you cannot ping** then you need to double-check your VPN connection; make sure it is connected, make sure you can reach `joplin`, and if it still isn't working *ask the [Poly network admins](dge.informatique@polymtl.ca)* to unblock your account from this server.
- 
-Verify you can use the server by `ssh git@data.neuro.polymtl.ca help`. If it hangs, triple-check again your VPN. If it rejects you, your account is not created yet, or you have switched machines. A successful connection looks like:
+> 🏚️ Verify connectivity by running `ping data.neuro.polymtl.ca`. If **you cannot ping** then you need to double-check your VPN connection; make sure it is connected, make sure you can reach `joplin`, and if it still isn't working *ask the [Poly network admins](dge.informatique@polymtl.ca)* to unblock your account from this server.
+
+Verify you can use the server by running `ssh git@data.neuro.polymtl.ca help`. If it hangs, triple-check again your VPN. If it asks for `git@data.neuro.polymtl.ca's password`, double-check that `ls -la ~/.ssh` shows permissions of `drwx------` for the `.` folder, and that the files `id_ed25519` and `id_ed25519.pub` (or `id_rsa` and `id_rsa.pub`) exist with exactly those names. A successful connection looks like:
 
 ```
 $ ssh git@data.neuro.polymtl.ca help
@@ -91,14 +90,14 @@ ssh git@data.neuro.polymtl.ca info
 
 And the output would look like this:
 ```
-hello zamboni, this is git@data running gitolite3 3.6.11-2 (Debian) on git 2.27.0
- R W C  CREATOR/..*
- R W C  datasets/..*
- R W    datasets/sct-testing-large
- R W    datasets/uk-biobank
+hello yourusername, this is git@data running gitolite3 3.6.11-2 (Debian) on git 2.27.0
+ R      datasets/..*
+ R      datasets/basel-mp2rage
+ R W    datasets/bavaria-quebec-spine-ms
+...
 ```
 
-You are identified to the server by your ssh keys, butNotice that this tells you the username you are known to 
+You are identified to the server by your ssh keys, but notice that this tells you the username you are known as.
 
 ### Download
 
@@ -127,10 +126,10 @@ git pull && git annex sync --no-content && git annex get .
 ### Upload
 
 Despite not being hosted on Github, we are still using a [pull-request workflow](https://guides.github.com/introduction/flow/).
-So, to make changes to a dataset, first ask its owner to [grant you upload rights](#permissions), then make a working branch for your changes:
+So, to make changes to a dataset, first ask an admin to [grant you upload rights](#permissions), then make a working branch for your changes. If your initials are `xy` and you are working on `some-topic`:
 
 ```
-git checkout -b working-branch
+git checkout -b xy/some-topic
 # Edit your files, add new ones, etc. 
 # Add all modified files to be commited
 git add .
@@ -147,7 +146,7 @@ ssh git@data.neuro.polymtl.ca info datasets/uk-biobank
 
 The output would look like:
 ```
-hello zamboni, this is git@data running gitolite3 3.6.11-2 (Debian) on git 2.27.0
+hello yourusername, this is git@data running gitolite3 3.6.11-2 (Debian) on git 2.27.0
 
  R W    datasets/uk-biobank
 ```
@@ -165,10 +164,11 @@ Finally, ask one of that dataset's reviewers to [look at your pull request](#Rev
 
 ### Reviewing Pull Requests
 
-If someone asks you to review their changes on branch `xy/branchname`:
+If someone asks you to review their changes on branch `xy/some-topic`:
 
 ```
-git checkout xy/branchname
+git fetch
+git checkout xy/some-topic
 git annex get .
 ```
 
@@ -202,7 +202,7 @@ Each repo has its own [`OWNERS` group](#permissions) attached. These are the peo
 In order to join this group, someone already in it needs to grant you access:
 
 ```
-ssh git@data.neuro.polymtl.ca perms datasets/my-new-repo + OWNERS yourname
+ssh git@data.neuro.polymtl.ca perms datasets/my-new-repo + OWNERS yourusername
 ```
 
 You can check if you have commit rights to a dataset "my-new-repo" by seeing if you appear in the group:
@@ -217,17 +217,17 @@ Once a branch is finalized:
 
 ```
 git checkout master
-git merge --ff-only xy/branchname # or use git pull --squash xy/branchname
+git merge --ff-only xy/some-topic # or use git pull --squash xy/some-topic
 git push  # no need for git-annex sync here, no annex files have been moved
 ```
 
 (Optional) Clean up the branch:
 
 ```
-git branch -d xy/branchname
-git branch -d synced/xy/branchname   # redundancy
-git push origin :xy/branchname
-git push origin :synced/xy/branchname
+git branch -d xy/some-topic
+git branch -d synced/xy/some-topic   # redundancy
+git push origin :xy/some-topic
+git push origin :synced/xy/some-topic
 ```
 
 
@@ -245,13 +245,6 @@ git annex sync --cleanup -a --no-content  # initialize remote annex
 git annex copy --to origin                # upload images to remote annex
 # verify your .nii.gz files were annexed and uploaded
 git annex whereis
-```
-
-Note that you have personal space under "CREATOR", so if your username is "zamboni" then you can:
-
-```
-git remote add origin git@data.neuro.polymtl.ca:zamboni/project1
-git push origin
 ```
 
 ### Releases
