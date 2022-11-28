@@ -249,7 +249,7 @@ git annex whereis
 
 ### Releases
 
-To make a release, use an [annotated git tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging#_annotated_tags). Use tag name as the name of the release, and the annotation for the release notes. Our naming convention for datasets is "rYYYYMMDD".
+To make a release, use an [annotated git tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging#_annotated_tags). Use the tag name for the name of the release, and the annotation for the release notes. Our naming convention for datasets is "rYYYYMMDD".
 
 For example, if today is September 8th, 2019, then to create a release do:
 
@@ -342,7 +342,7 @@ It is compatible with [`datalad`](https://www.datalad.org/) but to reduce the fr
 
 Datasets are stored as git repositories on the server, with the bulk of their data *also* stored on the server in each repo's "annex" folder. Using `git-annex` enables data on-demand -- in our default configuration, only the data needed for the active branch is actually downloaded by a user, and it is also possible for the user to choose specific folders to focus on. Datasets are `git-annex` [ssh remotes](https://git-annex.branchable.com/walkthrough/#index11h2).
 
-`gitolite` manages users and their permissions. Each user has a namespace to themselves where they can make repos named `data.neuro.polymtl.ca:$user/$repo.git` (like Github), and there is also a shared space `data.neuro.polymtl.ca:datasets/*` intended for lab-wide datasets.
+`gitolite` manages users and their permissions. The repositories containing datasets are under `data.neuro.polymtl.ca:datasets/*`, and the server also contains a few admin-only repositories outside of `datasets/*`.
 
 The VM is monitored [here](https://monitor.neuro.polymtl.ca/host/data.neuro.polymtl.ca/#menu_system_submenu_cpu;after=0;before=0;theme=slate;help=true;utc=America/Toronto) (requires VPN to connect to the dashboard monitor).
 
@@ -436,7 +436,7 @@ TODO
 
 ### Troubleshooting
 
-If you are having a problem, please open an issue [here](https://github.com/neuropoly/data-management/issues). Pleae don't be shy, if you don't report the issue, we won't know about it and it will never be solved 😉 
+If you are having a problem, please open an issue [here](https://github.com/neuropoly/data-management/issues). Please don't be shy, if you don't report the issue, we won't know about it and it will never be solved 😉 
 
 If the server is doing something strange, contact someone with sysadmin-access to the server.
 
