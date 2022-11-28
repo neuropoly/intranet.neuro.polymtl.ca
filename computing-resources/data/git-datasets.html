@@ -1543,7 +1543,7 @@ So, to make changes to a dataset, first ask an admin to <a class="reference inte
 </section>
 <section id="releases">
 <h3>Releases<a class="headerlink" href="#releases" title="Permalink to this headline">#</a></h3>
-<p>To make a release, use an <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Basics-Tagging#_annotated_tags">annotated git tag</a>. Use tag name as the name of the release, and the annotation for the release notes. Our naming convention for datasets is “rYYYYMMDD”.</p>
+<p>To make a release, use an <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Basics-Tagging#_annotated_tags">annotated git tag</a>. Use the tag name for the name of the release, and the annotation for the release notes. Our naming convention for datasets is “rYYYYMMDD”.</p>
 <p>For example, if today is September 8th, 2019, then to create a release do:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">a</span> <span class="n">r20190908</span>
 </pre></div>
@@ -1612,7 +1612,7 @@ You can <a class="reference internal" href="#id2"><span class="std std-doc">ask 
 <p>We are using <a class="reference external" href="https://gitolite.com/"><code class="docutils literal notranslate"><span class="pre">Gitolite</span></code></a> with <a class="reference external" href="https://git-annex.branchable.com/"><code class="docutils literal notranslate"><span class="pre">git-annex</span></code></a> as our dataset server.
 It is compatible with <a class="reference external" href="https://www.datalad.org/"><code class="docutils literal notranslate"><span class="pre">datalad</span></code></a> but to reduce the fragility we only support the basics.</p>
 <p>Datasets are stored as git repositories on the server, with the bulk of their data <em>also</em> stored on the server in each repo’s “annex” folder. Using <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> enables data on-demand – in our default configuration, only the data needed for the active branch is actually downloaded by a user, and it is also possible for the user to choose specific folders to focus on. Datasets are <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> <a class="reference external" href="https://git-annex.branchable.com/walkthrough/#index11h2">ssh remotes</a>.</p>
-<p><code class="docutils literal notranslate"><span class="pre">gitolite</span></code> manages users and their permissions. Each user has a namespace to themselves where they can make repos named <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca:$user/$repo.git</span></code> (like Github), and there is also a shared space <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca:datasets/*</span></code> intended for lab-wide datasets.</p>
+<p><code class="docutils literal notranslate"><span class="pre">gitolite</span></code> manages users and their permissions. The repositories containing datasets are under <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca:datasets/*</span></code>, and the server also contains a few admin-only repositories outside of <code class="docutils literal notranslate"><span class="pre">datasets/*</span></code>.</p>
 <p>The VM is monitored <a class="reference external" href="https://monitor.neuro.polymtl.ca/host/data.neuro.polymtl.ca/#menu_system_submenu_cpu;after=0;before=0;theme=slate;help=true;utc=America/Toronto">here</a> (requires VPN to connect to the dashboard monitor).</p>
 <section id="list-users">
 <h3>List users<a class="headerlink" href="#list-users" title="Permalink to this headline">#</a></h3>
@@ -1686,7 +1686,7 @@ mv $dataset.git $new_name.git
 </section>
 <section id="troubleshooting">
 <h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h3>
-<p>If you are having a problem, please open an issue <a class="reference external" href="https://github.com/neuropoly/data-management/issues">here</a>. Pleae don’t be shy, if you don’t report the issue, we won’t know about it and it will never be solved 😉</p>
+<p>If you are having a problem, please open an issue <a class="reference external" href="https://github.com/neuropoly/data-management/issues">here</a>. Please don’t be shy, if you don’t report the issue, we won’t know about it and it will never be solved 😉</p>
 <p>If the server is doing something strange, contact someone with sysadmin-access to the server.</p>
 <p>These people can investigate by following the gitolote guide in the <a class="reference external" href="https://github.com/neuropoly/management/blob/master/docs/gitolite.md">sysadmin docs</a>.</p>
 </section>

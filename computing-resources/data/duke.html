@@ -1104,8 +1104,8 @@ drwxr-xr-x 2 u108545 domain users  4096 Jun  8 16:44 temp
 <h2>Mount with GUI<a class="headerlink" href="#mount-with-gui" title="Permalink to this headline">#</a></h2>
 <p>When working on campus or <span class="xref myst">over the VPN</span>, you can connect your computer to <code class="docutils literal notranslate"><span class="pre">duke</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="b57c6d85-e113-4cb2-bdaf-5b65a86ded7c" name="5f4e2540-48ba-44b4-a7b8-866835fcc2a8" type="radio">
-</input><label class="tabbed-label" for="b57c6d85-e113-4cb2-bdaf-5b65a86ded7c">
+<input checked="checked" id="78adf8ee-7b9d-42f7-b16c-d1ad95f5f5e6" name="831cecac-4be3-44b6-92e9-9c2ff17771c6" type="radio">
+</input><label class="tabbed-label" for="78adf8ee-7b9d-42f7-b16c-d1ad95f5f5e6">
 macOS</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Finder</p></li>
@@ -1113,8 +1113,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p><code class="docutils literal notranslate"><span class="pre">afp://duke.neuro.polymtl.ca/</span></code></p></li>
 </ol>
 </div>
-<input id="04b8f60a-3748-4b78-aa47-573cfffddd21" name="5f4e2540-48ba-44b4-a7b8-866835fcc2a8" type="radio">
-</input><label class="tabbed-label" for="04b8f60a-3748-4b78-aa47-573cfffddd21">
+<input id="75a0d04e-d963-4fe8-83e3-db210d34cb9e" name="831cecac-4be3-44b6-92e9-9c2ff17771c6" type="radio">
+</input><label class="tabbed-label" for="75a0d04e-d963-4fe8-83e3-db210d34cb9e">
 Linux</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open File Browser</p></li>
@@ -1122,8 +1122,8 @@ Linux</label><div class="tabbed-content docutils">
 <li><p><code class="docutils literal notranslate"><span class="pre">smb://duke.neuro.polymtl.ca/</span></code></p></li>
 </ol>
 </div>
-<input id="97d5ab05-4f55-4e44-a224-45fcf2fbf6f7" name="5f4e2540-48ba-44b4-a7b8-866835fcc2a8" type="radio">
-</input><label class="tabbed-label" for="97d5ab05-4f55-4e44-a224-45fcf2fbf6f7">
+<input id="42680ef6-e185-4b90-b673-c0abd2053006" name="831cecac-4be3-44b6-92e9-9c2ff17771c6" type="radio">
+</input><label class="tabbed-label" for="42680ef6-e185-4b90-b673-c0abd2053006">
 Windows 10</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Windows explorer</p></li>
@@ -1149,8 +1149,8 @@ Windows 10</label><div class="tabbed-content docutils">
 <h2>Mount with Terminal<a class="headerlink" href="#mount-with-terminal" title="Permalink to this headline">#</a></h2>
 <p>You can also connect your computer from the CLI, or with a script, which might be more efficient in the long run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="ec03626b-0876-44d7-8796-f9074c2d9c9c" name="24be4fd7-8600-4a6d-8d7d-be9fa674fcd3" type="radio">
-</input><label class="tabbed-label" for="ec03626b-0876-44d7-8796-f9074c2d9c9c">
+<input checked="checked" id="92360b22-5b3a-4512-95bb-241f4beeb9ff" name="993b53fa-8b1f-4607-abd3-fef67673228c" type="radio">
+</input><label class="tabbed-label" for="92360b22-5b3a-4512-95bb-241f4beeb9ff">
 Mac OSX</label><div class="tabbed-content docutils">
 <p>Create folder for the mount point on a location (your home directory) where you have read and write access:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir &lt;FOLDER_NAME&gt; <span class="c1"># (e.g. &lt;FOLDER_NAME&gt;=sct_testing)</span>
@@ -1161,8 +1161,8 @@ sudo umount &lt;FOLDER_NAME&gt;/
 </pre></div>
 </div>
 </div>
-<input id="9526d3a6-145e-46b2-8165-e84c69b3d920" name="24be4fd7-8600-4a6d-8d7d-be9fa674fcd3" type="radio">
-</input><label class="tabbed-label" for="9526d3a6-145e-46b2-8165-e84c69b3d920">
+<input id="ac87eacc-57b5-45b5-a023-084632d523b9" name="993b53fa-8b1f-4607-abd3-fef67673228c" type="radio">
+</input><label class="tabbed-label" for="ac87eacc-57b5-45b5-a023-084632d523b9">
 Linux</label><div class="tabbed-content docutils">
 <p>To mount:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mount -t cifs //duke.neuro.polymtl.ca/&lt;FOLDER_NAME&gt; /mnt/duke/&lt;FOLDER_NAME&gt; -o <span class="nv">username</span><span class="o">=</span>&lt;GRAMES_USERNAME&gt;,noexec
