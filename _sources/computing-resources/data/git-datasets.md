@@ -423,9 +423,9 @@ ssh git@data.neuro.polymtl.ca D rm datasets/<dataset>
 
 ### Backups
 
-Encrypted backups are sent daily to s3+https://s3.ca-central-1.amazonaws.com/data.neuro.polymtl.ca.restic and to sftp://narval.computecanada.ca:projects/def-jcohen/data.neuro.polymtl.ca.restic.
+Encrypted backups are sent daily to `s3+https://s3.ca-central-1.amazonaws.com/data.neuro.polymtl.ca.restic` and `sftp://narval.computecanada.ca:projects/def-jcohen/data.neuro.polymtl.ca.restic`. Daily backups are retained for the current week, weekly for the current month, and monthly for the current year. 
 
-To recover, you need to provide backup credentials, one set for either location. **It is your responsibility as a data server admin** to ensure you have generated and can protect these credentials.
+We use a backup tool called `restic` and to recover files you should [review its full recovery documentation](https://restic.readthedocs.io/en/stable/050_restore.html) to use it safely, but the quick version is that you need to provide backup credentials, one set for either location. **It is your responsibility as a data server admin** to ensure you have generated and can protect these credentials.
 
 ```
 # AWS
@@ -439,10 +439,10 @@ export AWS_SECRET_ACCESS_KEY="....."
 # ComputeCanada
 export RESTIC_REPOSITORY=sftp:narval.computecanada.ca:projects/def-jcohen/data.neuro.polymtl.ca.restic
 export RESTIC_PASSWORD="...."
-# you implicitly need an account that can `ssh narval.computecanada.ca`
+# you also implicitly need an account that can `ssh narval.computecanada.ca`
 ```
 
-The easiest way to recover files is `restic mount`:
+Once credentialed, the easiest way to recover files is `restic mount`:
 
 ```
 mkdir data-backups
@@ -454,9 +454,11 @@ ls -l backups/snapshots/latest/repositories/datasets/
 Then you can use `git clone` or `rsync` to recover specific old files/git objects/commits/etc
 
 <details><summary>For example</summary>
-	
+
+You can examine any old version of any git repo
+
 ```
-git@data:~$ git --git-dir=backups/snapshots/2022-06-30T02\:00\:02-04\:00/repositories/datasets/uk-biobank.git/ log HEAD~3..
+git@data:~$ cd backups/snapshots/2022-06-30T02\:00\:02-04\:00/repositories/datasets/uk-biobank.git/; git log HEAD~3..
 commit 96bdd193d0da999895734a57f8bbfa275db91ad1 (HEAD -> master)
 Author: Alexandru Foias <alexandrufoias@gmail.com>
 Date:   Fri Feb 12 15:24:04 2021 -0500

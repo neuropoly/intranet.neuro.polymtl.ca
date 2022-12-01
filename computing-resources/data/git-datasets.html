@@ -1691,8 +1691,8 @@ mv $dataset.git $new_name.git
 </section>
 <section id="backups">
 <h3>Backups<a class="headerlink" href="#backups" title="Permalink to this headline">#</a></h3>
-<p>Encrypted backups are sent daily to s3+https://s3.ca-central-1.amazonaws.com/data.neuro.polymtl.ca.restic and to sftp://narval.computecanada.ca:projects/def-jcohen/data.neuro.polymtl.ca.restic.</p>
-<p>To recover, you need to provide backup credentials, one set for either location. <strong>It is your responsibility as a data server admin</strong> to ensure you have generated and can protect these credentials.</p>
+<p>Encrypted backups are sent daily to <code class="docutils literal notranslate"><span class="pre">s3+https://s3.ca-central-1.amazonaws.com/data.neuro.polymtl.ca.restic</span></code> and <code class="docutils literal notranslate"><span class="pre">sftp://narval.computecanada.ca:projects/def-jcohen/data.neuro.polymtl.ca.restic</span></code>. Daily backups are retained for the current week, weekly for the current month, and monthly for the current year.</p>
+<p>We use a backup tool called <code class="docutils literal notranslate"><span class="pre">restic</span></code> and to recover files you should <a class="reference external" href="https://restic.readthedocs.io/en/stable/050_restore.html">review its full recovery documentation</a> to use it safely, but the quick version is that you need to provide backup credentials, one set for either location. <strong>It is your responsibility as a data server admin</strong> to ensure you have generated and can protect these credentials.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># AWS</span>
 <span class="n">export</span> <span class="n">RESTIC_REPOSITORY</span><span class="o">=</span><span class="n">s3</span><span class="p">:</span><span class="n">s3</span><span class="o">.</span><span class="n">ca</span><span class="o">-</span><span class="n">central</span><span class="o">-</span><span class="mf">1.</span><span class="n">amazonaws</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span><span class="o">.</span><span class="n">restic</span>
 <span class="n">export</span> <span class="n">RESTIC_PASSWORD</span><span class="o">=</span><span class="s2">&quot;....&quot;</span>
@@ -1703,10 +1703,10 @@ mv $dataset.git $new_name.git
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ComputeCanada</span>
 <span class="n">export</span> <span class="n">RESTIC_REPOSITORY</span><span class="o">=</span><span class="n">sftp</span><span class="p">:</span><span class="n">narval</span><span class="o">.</span><span class="n">computecanada</span><span class="o">.</span><span class="n">ca</span><span class="p">:</span><span class="n">projects</span><span class="o">/</span><span class="n">def</span><span class="o">-</span><span class="n">jcohen</span><span class="o">/</span><span class="n">data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span><span class="o">.</span><span class="n">restic</span>
 <span class="n">export</span> <span class="n">RESTIC_PASSWORD</span><span class="o">=</span><span class="s2">&quot;....&quot;</span>
-<span class="c1"># you implicitly need an account that can `ssh narval.computecanada.ca`</span>
+<span class="c1"># you also implicitly need an account that can `ssh narval.computecanada.ca`</span>
 </pre></div>
 </div>
-<p>The easiest way to recover files is <code class="docutils literal notranslate"><span class="pre">restic</span> <span class="pre">mount</span></code>:</p>
+<p>Once credentialed, the easiest way to recover files is <code class="docutils literal notranslate"><span class="pre">restic</span> <span class="pre">mount</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">data</span><span class="o">-</span><span class="n">backups</span>
 <span class="n">restic</span> <span class="n">mount</span> <span class="n">backups</span> <span class="o">&amp;</span>
 <span class="c1"># datasets are now in backups/snapshots/*/repositories/datasets/</span>
@@ -1715,7 +1715,8 @@ mv $dataset.git $new_name.git
 </div>
 <p>Then you can use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> or <code class="docutils literal notranslate"><span class="pre">rsync</span></code> to recover specific old files/git objects/commits/etc</p>
 <details><summary>For example</summary>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git@data:~$ git --git-dir=backups/snapshots/2022-06-30T02\:00\:02-04\:00/repositories/datasets/uk-biobank.git/ log HEAD~3..
+<p>You can examine any old version of any git repo</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git@data:~$ cd backups/snapshots/2022-06-30T02\:00\:02-04\:00/repositories/datasets/uk-biobank.git/; git log HEAD~3..
 commit 96bdd193d0da999895734a57f8bbfa275db91ad1 (HEAD -&gt; master)
 Author: Alexandru Foias &lt;alexandrufoias@gmail.com&gt;
 Date:   Fri Feb 12 15:24:04 2021 -0500
