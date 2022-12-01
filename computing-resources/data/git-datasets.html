@@ -1145,6 +1145,13 @@ title="Edit this page"
     <a class="reference internal nav-link" href="#backups">
      Backups
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#recovery-shortcut">
+       Recovery Shortcut
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#troubleshooting">
@@ -1312,6 +1319,13 @@ title="Edit this page"
     <a class="reference internal nav-link" href="#backups">
      Backups
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#recovery-shortcut">
+       Recovery Shortcut
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#troubleshooting">
@@ -1677,12 +1691,63 @@ mv $dataset.git $new_name.git
 </section>
 <section id="backups">
 <h3>Backups<a class="headerlink" href="#backups" title="Permalink to this headline">#</a></h3>
-<p>Backups are automatically made to MIC-UNF’s servers.</p>
-<p><em>except they’re not, yet: https://github.com/neuropoly/data-management/issues/20</em></p>
-<p>You can access these if you need to recover by:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TODO</span>
+<p>Encrypted backups are sent daily to s3+https://s3.ca-central-1.amazonaws.com/data.neuro.polymtl.ca.restic and to sftp://narval.computecanada.ca:projects/def-jcohen/data.neuro.polymtl.ca.restic.</p>
+<p>To recover, you need to provide backup credentials, one set for either location. <strong>It is your responsibility as a data server admin</strong> to ensure you have generated and can protect these credentials.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># AWS</span>
+<span class="n">export</span> <span class="n">RESTIC_REPOSITORY</span><span class="o">=</span><span class="n">s3</span><span class="p">:</span><span class="n">s3</span><span class="o">.</span><span class="n">ca</span><span class="o">-</span><span class="n">central</span><span class="o">-</span><span class="mf">1.</span><span class="n">amazonaws</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span><span class="o">.</span><span class="n">restic</span>
+<span class="n">export</span> <span class="n">RESTIC_PASSWORD</span><span class="o">=</span><span class="s2">&quot;....&quot;</span>
+<span class="n">export</span> <span class="n">AWS_ACCESS_KEY_ID</span><span class="o">=</span><span class="s2">&quot;....&quot;</span>
+<span class="n">export</span> <span class="n">AWS_SECRET_ACCESS_KEY</span><span class="o">=</span><span class="s2">&quot;.....&quot;</span>
 </pre></div>
 </div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ComputeCanada</span>
+<span class="n">export</span> <span class="n">RESTIC_REPOSITORY</span><span class="o">=</span><span class="n">sftp</span><span class="p">:</span><span class="n">narval</span><span class="o">.</span><span class="n">computecanada</span><span class="o">.</span><span class="n">ca</span><span class="p">:</span><span class="n">projects</span><span class="o">/</span><span class="n">def</span><span class="o">-</span><span class="n">jcohen</span><span class="o">/</span><span class="n">data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span><span class="o">.</span><span class="n">restic</span>
+<span class="n">export</span> <span class="n">RESTIC_PASSWORD</span><span class="o">=</span><span class="s2">&quot;....&quot;</span>
+<span class="c1"># you implicitly need an account that can `ssh narval.computecanada.ca`</span>
+</pre></div>
+</div>
+<p>The easiest way to recover files is <code class="docutils literal notranslate"><span class="pre">restic</span> <span class="pre">mount</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">data</span><span class="o">-</span><span class="n">backups</span>
+<span class="n">restic</span> <span class="n">mount</span> <span class="n">backups</span> <span class="o">&amp;</span>
+<span class="c1"># datasets are now in backups/snapshots/*/repositories/datasets/</span>
+<span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="n">backups</span><span class="o">/</span><span class="n">snapshots</span><span class="o">/</span><span class="n">latest</span><span class="o">/</span><span class="n">repositories</span><span class="o">/</span><span class="n">datasets</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Then you can use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> or <code class="docutils literal notranslate"><span class="pre">rsync</span></code> to recover specific old files/git objects/commits/etc</p>
+<details><summary>For example</summary>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git@data:~$ git --git-dir=backups/snapshots/2022-06-30T02\:00\:02-04\:00/repositories/datasets/uk-biobank.git/ log HEAD~3..
+commit 96bdd193d0da999895734a57f8bbfa275db91ad1 (HEAD -&gt; master)
+Author: Alexandru Foias &lt;alexandrufoias@gmail.com&gt;
+Date:   Fri Feb 12 15:24:04 2021 -0500
+
+    Add 650 subjects
+
+commit 3d55fe9a3b6f04f5a6bd1b50274108de1810fcc8
+Author: Nick Guenther &lt;nick.guenther@polymtl.ca&gt;
+Date:   Thu Feb 11 12:37:26 2021 -0500
+
+    bids-validator: missing }
+
+commit 892c030faef331591048f8b6487dd65f74afbea7
+Author: Nick Guenther &lt;nick.guenther@polymtl.ca&gt;
+Date:   Thu Feb 11 12:36:32 2021 -0500
+
+    bids-validator: README should be named just &#39;README&#39;
+</pre></div>
+</div>
+</details>
+<section id="recovery-shortcut">
+<h4>Recovery Shortcut<a class="headerlink" href="#recovery-shortcut" title="Permalink to this headline">#</a></h4>
+<p>If you are in a pinch, <em>and the server is still running</em>, you can use its credentials instead of loading your own.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">root</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span>
+<span class="n">su</span> <span class="o">-</span><span class="n">l</span> <span class="n">git</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
+<span class="nb">set</span> <span class="o">-</span><span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="o">.</span> <span class="o">.</span><span class="n">config</span><span class="o">/</span><span class="n">restic</span><span class="o">/</span><span class="n">s3</span>
+<span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="n">backups</span>
+<span class="n">restic</span> <span class="n">mount</span> <span class="n">backups</span> <span class="o">&amp;</span>
+<span class="c1"># datasets are now in backups/snapshots/*/repositories/datasets/</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="troubleshooting">
 <h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h3>
