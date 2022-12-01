@@ -23,6 +23,4 @@ For fast I/O, use the NVMe hard drive, which is automatically available: `~/data
 | **Model** | Xeon 12-core |
 | **OS** | Linux |
 | **Hostname** | `abbey.neuro.polymtl.ca` |
-| `ssh` | disabled |
-| **Credentials** | [NeuroPoly Internal Document: Abbey Teamviewer Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.mtnjvepco2an) |
 
