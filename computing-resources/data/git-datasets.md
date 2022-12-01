@@ -423,17 +423,76 @@ ssh git@data.neuro.polymtl.ca D rm datasets/<dataset>
 
 ### Backups
 
-Backups are automatically made to MIC-UNF's servers.
+Encrypted backups are sent daily to s3+https://s3.ca-central-1.amazonaws.com/data.neuro.polymtl.ca.restic and to sftp://narval.computecanada.ca:projects/def-jcohen/data.neuro.polymtl.ca.restic.
 
-*except they're not, yet: https://github.com/neuropoly/data-management/issues/20*
-
-You can access these if you need to recover by:
+To recover, you need to provide backup credentials, one set for either location. **It is your responsibility as a data server admin** to ensure you have generated and can protect these credentials.
 
 ```
-TODO
+# AWS
+export RESTIC_REPOSITORY=s3:s3.ca-central-1.amazonaws.com/data.neuro.polymtl.ca.restic
+export RESTIC_PASSWORD="...."
+export AWS_ACCESS_KEY_ID="...."
+export AWS_SECRET_ACCESS_KEY="....."
+```
+
+```
+# ComputeCanada
+export RESTIC_REPOSITORY=sftp:narval.computecanada.ca:projects/def-jcohen/data.neuro.polymtl.ca.restic
+export RESTIC_PASSWORD="...."
+# you implicitly need an account that can `ssh narval.computecanada.ca`
+```
+
+The easiest way to recover files is `restic mount`:
+
+```
+mkdir data-backups
+restic mount backups &
+# datasets are now in backups/snapshots/*/repositories/datasets/
+ls -l backups/snapshots/latest/repositories/datasets/
+```
+
+Then you can use `git clone` or `rsync` to recover specific old files/git objects/commits/etc
+
+<details><summary>For example</summary>
+	
+```
+git@data:~$ git --git-dir=backups/snapshots/2022-06-30T02\:00\:02-04\:00/repositories/datasets/uk-biobank.git/ log HEAD~3..
+commit 96bdd193d0da999895734a57f8bbfa275db91ad1 (HEAD -> master)
+Author: Alexandru Foias <alexandrufoias@gmail.com>
+Date:   Fri Feb 12 15:24:04 2021 -0500
+
+    Add 650 subjects
+
+commit 3d55fe9a3b6f04f5a6bd1b50274108de1810fcc8
+Author: Nick Guenther <nick.guenther@polymtl.ca>
+Date:   Thu Feb 11 12:37:26 2021 -0500
+
+    bids-validator: missing }
+
+commit 892c030faef331591048f8b6487dd65f74afbea7
+Author: Nick Guenther <nick.guenther@polymtl.ca>
+Date:   Thu Feb 11 12:36:32 2021 -0500
+
+    bids-validator: README should be named just 'README'
+```
+
+</details>
+
+#### Recovery Shortcut
+
+If you are in a pinch, _and the server is still running_, you can use its credentials instead of loading your own.
+
+```
+ssh root@data.neuro.polymtl.ca
+su -l git -s /bin/bash
+set -a && . .config/restic/s3
+mkdir -p backups
+restic mount backups &
+# datasets are now in backups/snapshots/*/repositories/datasets/
 ```
 
 
+	
 ### Troubleshooting
 
 If you are having a problem, please open an issue [here](https://github.com/neuropoly/data-management/issues). Please don't be shy, if you don't report the issue, we won't know about it and it will never be solved 😉 
