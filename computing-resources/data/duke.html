@@ -1104,28 +1104,32 @@ drwxr-xr-x 2 u108545 domain users  4096 Jun  8 16:44 temp
 <h2>Mount with GUI<a class="headerlink" href="#mount-with-gui" title="Permalink to this headline">#</a></h2>
 <p>When working on campus or <span class="xref myst">over the VPN</span>, you can connect your computer to <code class="docutils literal notranslate"><span class="pre">duke</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="aa74bef7-beb5-4da3-97d0-adfd2a507ef2" name="e000154d-d848-4304-87bc-a345a060a6d4" type="radio">
-</input><label class="tabbed-label" for="aa74bef7-beb5-4da3-97d0-adfd2a507ef2">
+<input checked="checked" id="c3c5b22c-0bb4-42f2-ba60-adf6151e5356" name="24292219-3e4d-41f7-8981-0fb7cfd39a13" type="radio">
+</input><label class="tabbed-label" for="c3c5b22c-0bb4-42f2-ba60-adf6151e5356">
 macOS</label><div class="tabbed-content docutils">
 <ol class="arabic">
 <li><p>Open Finder</p></li>
 <li><p>CMD+K</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">afp://duke.neuro.polymtl.ca/</span></code></p>
+<li><details><summary>Enter `afp://duke.neuro.polymtl.ca/`</summary>
 <p><img alt="Screenshot of Connect to Server dialog" src="../../_images/duke-macOS-01.png" /></p>
+ </details>
 </li>
-<li><p>Enter your <strong>GRAMES</strong> username and password.</p>
+<li><details><summary>Enter your **GRAMES** username and password.</summary>
 <p><img alt="Screenshot of password dialog" src="../../_images/duke-macOS-02.png" /></p>
+ </details>
 </li>
-<li><p>Pick the top-level folder to access</p>
+<li><details><summary>Pick the top-level folder to access</summary>
 <p><img alt="Screenshot of volume selector dialog" src="../../_images/duke-macOS-03.png" /></p>
+ </details>
 </li>
-<li><p>Finder should open with the chosen folder.</p>
+<li><details><summary>Finder should open with the chosen folder.</summary>
 <p><img alt="Screenshot of Finder with mounted volume" src="../../_images/duke-macOS-04.png" /></p>
+ </details>
 </li>
 </ol>
 </div>
-<input id="20450d46-0939-400f-8344-4183fc29fb19" name="e000154d-d848-4304-87bc-a345a060a6d4" type="radio">
-</input><label class="tabbed-label" for="20450d46-0939-400f-8344-4183fc29fb19">
+<input id="b6043527-5e59-4992-b017-f25e5317165c" name="24292219-3e4d-41f7-8981-0fb7cfd39a13" type="radio">
+</input><label class="tabbed-label" for="b6043527-5e59-4992-b017-f25e5317165c">
 Linux</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open File Browser</p></li>
@@ -1133,8 +1137,8 @@ Linux</label><div class="tabbed-content docutils">
 <li><p><code class="docutils literal notranslate"><span class="pre">smb://duke.neuro.polymtl.ca/</span></code></p></li>
 </ol>
 </div>
-<input id="0051330d-437e-4ead-ba2f-b766e35b3dbb" name="e000154d-d848-4304-87bc-a345a060a6d4" type="radio">
-</input><label class="tabbed-label" for="0051330d-437e-4ead-ba2f-b766e35b3dbb">
+<input id="8820ae6f-9a45-45d0-9282-51335e1d2b8e" name="24292219-3e4d-41f7-8981-0fb7cfd39a13" type="radio">
+</input><label class="tabbed-label" for="8820ae6f-9a45-45d0-9282-51335e1d2b8e">
 Windows 10</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Windows explorer</p></li>
@@ -1160,8 +1164,8 @@ Windows 10</label><div class="tabbed-content docutils">
 <h2>Mount with Terminal<a class="headerlink" href="#mount-with-terminal" title="Permalink to this headline">#</a></h2>
 <p>You can also connect your computer from the CLI, or with a script, which might be more efficient in the long run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="687bb0aa-cd18-4916-85c3-d6fc6a3bd8a2" name="c8c9ec29-656d-43b7-bd80-25d8a0fd67be" type="radio">
-</input><label class="tabbed-label" for="687bb0aa-cd18-4916-85c3-d6fc6a3bd8a2">
+<input checked="checked" id="27bf43ac-31b4-4495-ab3a-0ff58c4f05fa" name="3f05d49a-2657-4466-8ca2-4d04d1b4b98f" type="radio">
+</input><label class="tabbed-label" for="27bf43ac-31b4-4495-ab3a-0ff58c4f05fa">
 Mac OSX</label><div class="tabbed-content docutils">
 <p>Create folder for the mount point on a location (your home directory) where you have read and write access:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir &lt;FOLDER_NAME&gt; <span class="c1"># (e.g. &lt;FOLDER_NAME&gt;=sct_testing)</span>
@@ -1172,8 +1176,8 @@ sudo umount &lt;FOLDER_NAME&gt;/
 </pre></div>
 </div>
 </div>
-<input id="ed8a0fdb-e416-400b-8b34-e226de19600d" name="c8c9ec29-656d-43b7-bd80-25d8a0fd67be" type="radio">
-</input><label class="tabbed-label" for="ed8a0fdb-e416-400b-8b34-e226de19600d">
+<input id="54dcd2c4-35fd-4a8c-ad9e-f7e848979574" name="3f05d49a-2657-4466-8ca2-4d04d1b4b98f" type="radio">
+</input><label class="tabbed-label" for="54dcd2c4-35fd-4a8c-ad9e-f7e848979574">
 Linux</label><div class="tabbed-content docutils">
 <p>To mount:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mount -t cifs //duke.neuro.polymtl.ca/&lt;FOLDER_NAME&gt; /mnt/duke/&lt;FOLDER_NAME&gt; -o <span class="nv">username</span><span class="o">=</span>&lt;GRAMES_USERNAME&gt;,noexec
