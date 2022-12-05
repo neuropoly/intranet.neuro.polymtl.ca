@@ -46,7 +46,7 @@ When working on campus or [over the VPN](../../#vpn), you can connect your compu
     ![Screenshot of Connect to Server dialog](./duke-macOS-01.png)
     
     </details>
-4. <details><summary>Enter your **GRAMES** username and password</summary>
+4. <details><summary>Enter your <em>GRAMES</em> username and password</summary>
 
     ![Screenshot of password dialog](./duke-macOS-02.png)
     
