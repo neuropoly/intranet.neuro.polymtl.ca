@@ -42,6 +42,8 @@ When working on campus or [over the VPN](../../#vpn), you can connect your compu
 1. Open Finder
 2. CMD+K
 3. `afp://duke.neuro.polymtl.ca/`
+
+    
 ````
 
 ````{tabbed} Linux
