@@ -41,20 +41,28 @@ When working on campus or [over the VPN](../../#vpn), you can connect your compu
 ````{tabbed} macOS
 1. Open Finder
 2. CMD+K
-3. `afp://duke.neuro.polymtl.ca/`
+3. <details><summary>Enter `afp://duke.neuro.polymtl.ca/`</summary>
 
     ![Screenshot of Connect to Server dialog](./duke-macOS-01.png)
-4. Enter your **GRAMES** username and password.
+    
+    </details>
+4. <details><summary>Enter your **GRAMES** username and password.</summary>
 
     ![Screenshot of password dialog](./duke-macOS-02.png)
     
-5. Pick the top-level folder to access
+    </details>
+    
+5. <details><summary>Pick the top-level folder to access</summary>
 
     ![Screenshot of volume selector dialog](./duke-macOS-03.png)
     
-6. Finder should open with the chosen folder.
+    </details>
+    
+6. <details><summary>Finder should open with the chosen folder.</summary>
 
     ![Screenshot of Finder with mounted volume](./duke-macOS-04.png)
+    
+    </details>
 ````
 
 ````{tabbed} Linux
