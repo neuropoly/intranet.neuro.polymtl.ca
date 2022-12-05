@@ -46,7 +46,7 @@ When working on campus or [over the VPN](../../#vpn), you can connect your compu
     ![Screenshot of Connect to Server dialog](./duke-macOS-01.png)
     
     </details>
-4. <details><summary>Enter your **GRAMES** username and password.</summary>
+4. <details><summary>Enter your **GRAMES** username and password</summary>
 
     ![Screenshot of password dialog](./duke-macOS-02.png)
     
@@ -58,7 +58,7 @@ When working on campus or [over the VPN](../../#vpn), you can connect your compu
     
     </details>
     
-6. <details><summary>Finder should open with the chosen folder.</summary>
+6. <details><summary>Finder should open with the chosen folder</summary>
 
     ![Screenshot of Finder with mounted volume](./duke-macOS-04.png)
     
