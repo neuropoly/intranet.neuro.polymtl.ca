@@ -41,7 +41,7 @@ When working on campus or [over the VPN](../../#vpn), you can connect your compu
 ````{tabbed} macOS
 1. Open Finder
 2. CMD+K
-3. <details><summary>Enter `afp://duke.neuro.polymtl.ca/`</summary>
+3. <details><summary>Enter <code>afp://duke.neuro.polymtl.ca/</code></summary>
 
     ![Screenshot of Connect to Server dialog](./duke-macOS-01.png)
     
