@@ -29,6 +29,13 @@ If you work on a personal laptop and need desktop equipment (a monitor, mouse, k
 
 The list of free desks can be found [here](https://docs.google.com/document/d/11GEh5YvYRnWnERv26TezcyvyPF2W5KF0uoI2U6p7XsM/edit).
 
+### Affiliation with Mila
+
+For Julien's students working on AI projects, you could request an affiliation at Mila. Advantages include: French course, access to Mila facility (open space, infrastructure), and for networking with AI students. 
+
+To request an affiliation, ask Julien to fill up [this form](https://docs.google.com/forms/d/e/1FAIpQLSdChdq0LwkAal5CMc5oDAlacAjMr86xrxYNogqVXSnpT1bReA/viewform).
+
+
 ### Requirements for room access
 
 To be able to access the lab rooms, you will need a Polytechnique card and to activate it for the specific rooms you wish to access. To activate it, please follow the onboarding procedure.
