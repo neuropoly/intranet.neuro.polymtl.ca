@@ -84,7 +84,8 @@ mkdir my-new-repo
 cd my-new-repo
 
 git init
-vi README # write something useful in this
+vi README
+# write something useful in README
 git add README && git commit -m "Initial commit"
 
 cat <<EOF > .gitignore
@@ -108,12 +109,11 @@ EOF
 git add .gitignore .gitattributes && git commit -m "Configure git-annex"
 
 git annex init
-git annex config --set annex.addunlocked true # .gitattributes runs the filter on 'git add', which leaves files 'unlocked';
-                                              # i.e. as themselves, instead of as symlinks into .git/annex/objects;
-                                              # this setting ensures files added with 'git annex add' are also 'unlocked'.
+# .gitattributes runs the filter on 'git add', which leaves files 'unlocked'; i.e. as themselves, instead of as symlinks into .git/annex/objects; this setting ensures files added with 'git annex add' are also 'unlocked'.
+git annex config --set annex.addunlocked true 
                                         
 # Here, copy in or create initial files, wherever they are from:
-# rsync, wget, curl, tar, dropbox, etc <...>
+# rsync, wget, curl, tar, dropbox, etc <...>, then run the following commands.
 
 git add .
 git commit -m "Initial data"

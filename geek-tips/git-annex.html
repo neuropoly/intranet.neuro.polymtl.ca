@@ -1207,8 +1207,8 @@ title="Edit this page"
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
 <p>You must have a unix OS. <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> is simply not compatible with anything else.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="5260d8ab-151f-48c3-aeaf-7579ef08521b" name="e46e4b22-8e24-415c-9420-413e8ab49aaf" type="radio">
-</input><label class="tabbed-label" for="5260d8ab-151f-48c3-aeaf-7579ef08521b">
+<input checked="checked" id="31a4c568-92e0-492b-be29-da9d98da372d" name="4ce7e85b-7c11-4852-9f54-64f6ed3d9cc5" type="radio">
+</input><label class="tabbed-label" for="31a4c568-92e0-492b-be29-da9d98da372d">
 Linux</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p><strong>Arch</strong>: <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-Sy</span> <span class="pre">git-annex</span></code></p></li>
@@ -1218,15 +1218,15 @@ Linux</label><div class="tabbed-content docutils">
 <li><p>if on an older system and can’t upgrade, you can try <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">installing <code class="docutils literal notranslate"><span class="pre">conda</span></code></a> (or <a class="reference external" href="https://github.com/conda-forge/miniforge/">miniforge</a> and then using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-f</span> <span class="pre">conda-forge</span> <span class="pre">git-annex</span></code>.</p></li>
 </ul>
 </div>
-<input id="eaeaf7a3-cea4-4e5b-bb1c-40766dbca857" name="e46e4b22-8e24-415c-9420-413e8ab49aaf" type="radio">
-</input><label class="tabbed-label" for="eaeaf7a3-cea4-4e5b-bb1c-40766dbca857">
+<input id="d5c01355-f580-4d97-9c6b-877535e921cb" name="4ce7e85b-7c11-4852-9f54-64f6ed3d9cc5" type="radio">
+</input><label class="tabbed-label" for="d5c01355-f580-4d97-9c6b-877535e921cb">
 macOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">git</span><span class="o">-</span><span class="n">annex</span>
 </pre></div>
 </div>
 </div>
-<input id="4dab3aad-6217-49af-8e6d-07fabd6da934" name="e46e4b22-8e24-415c-9420-413e8ab49aaf" type="radio">
-</input><label class="tabbed-label" for="4dab3aad-6217-49af-8e6d-07fabd6da934">
+<input id="bcc87dd5-16dc-4073-8bce-d947e87476f1" name="4ce7e85b-7c11-4852-9f54-64f6ed3d9cc5" type="radio">
+</input><label class="tabbed-label" for="bcc87dd5-16dc-4073-8bce-d947e87476f1">
 Windows 10 (via WSL)</label><div class="tabbed-content docutils">
 <p>Install <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a>, pick a distro, and then run one of:</p>
 <ul class="simple">
@@ -1235,8 +1235,8 @@ Windows 10 (via WSL)</label><div class="tabbed-content docutils">
 <li><p>The <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions">other distros</a> are supported.</p></li>
 </ul>
 </div>
-<input id="9523f735-7e80-4a80-b2b4-844b964e35e4" name="e46e4b22-8e24-415c-9420-413e8ab49aaf" type="radio">
-</input><label class="tabbed-label" for="9523f735-7e80-4a80-b2b4-844b964e35e4">
+<input id="ee450d95-4bec-40d0-a0f4-33e824e46304" name="4ce7e85b-7c11-4852-9f54-64f6ed3d9cc5" type="radio">
+</input><label class="tabbed-label" for="ee450d95-4bec-40d0-a0f4-33e824e46304">
 Windows 10 (via VirtualBox)</label><div class="tabbed-content docutils">
 <p>Install <a class="reference external" href="https://virtualbox.org/">VirtualBox</a>, install a Linux distro inside of it, and then follow the Linux instructions.</p>
 </div>
@@ -1277,7 +1277,8 @@ upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 <span class="n">cd</span> <span class="n">my</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">repo</span>
 
 <span class="n">git</span> <span class="n">init</span>
-<span class="n">vi</span> <span class="n">README</span> <span class="c1"># write something useful in this</span>
+<span class="n">vi</span> <span class="n">README</span>
+<span class="c1"># write something useful in README</span>
 <span class="n">git</span> <span class="n">add</span> <span class="n">README</span> <span class="o">&amp;&amp;</span> <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Initial commit&quot;</span>
 
 <span class="n">cat</span> <span class="o">&lt;&lt;</span><span class="n">EOF</span> <span class="o">&gt;</span> <span class="o">.</span><span class="n">gitignore</span>
@@ -1301,12 +1302,11 @@ upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 <span class="n">git</span> <span class="n">add</span> <span class="o">.</span><span class="n">gitignore</span> <span class="o">.</span><span class="n">gitattributes</span> <span class="o">&amp;&amp;</span> <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Configure git-annex&quot;</span>
 
 <span class="n">git</span> <span class="n">annex</span> <span class="n">init</span>
-<span class="n">git</span> <span class="n">annex</span> <span class="n">config</span> <span class="o">--</span><span class="nb">set</span> <span class="n">annex</span><span class="o">.</span><span class="n">addunlocked</span> <span class="n">true</span> <span class="c1"># .gitattributes runs the filter on &#39;git add&#39;, which leaves files &#39;unlocked&#39;;</span>
-                                              <span class="c1"># i.e. as themselves, instead of as symlinks into .git/annex/objects;</span>
-                                              <span class="c1"># this setting ensures files added with &#39;git annex add&#39; are also &#39;unlocked&#39;.</span>
+<span class="c1"># .gitattributes runs the filter on &#39;git add&#39;, which leaves files &#39;unlocked&#39;; i.e. as themselves, instead of as symlinks into .git/annex/objects; this setting ensures files added with &#39;git annex add&#39; are also &#39;unlocked&#39;.</span>
+<span class="n">git</span> <span class="n">annex</span> <span class="n">config</span> <span class="o">--</span><span class="nb">set</span> <span class="n">annex</span><span class="o">.</span><span class="n">addunlocked</span> <span class="n">true</span> 
                                         
 <span class="c1"># Here, copy in or create initial files, wherever they are from:</span>
-<span class="c1"># rsync, wget, curl, tar, dropbox, etc &lt;...&gt;</span>
+<span class="c1"># rsync, wget, curl, tar, dropbox, etc &lt;...&gt;, then run the following commands.</span>
 
 <span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
 <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Initial data&quot;</span>
