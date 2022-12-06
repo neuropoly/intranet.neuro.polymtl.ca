@@ -386,7 +386,8 @@ Connect to the server via ssh using the **Poly-Grames** account.
 
 To access the sct_testing_management development webpage use the username: sct_test_user; passwd: management.
 
-For fast I/O, use the NVMe hard drive, which is automatically mounted on your home at: `~/data_nvme_XXX` (XXX being your GRAMES matricule)
+For fast I/O, use the NVMe hard drive, which is automatically mounted on your home at: `~/data_nvme_XXX` (XXX being your GRAMES matricule). If there is no more space on this disk, use `/mnt/extrassd1/`.
+
 
 ### abbey
 
