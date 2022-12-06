@@ -294,50 +294,6 @@
      Compute Canada
     </a>
    </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../computing-resources/data/README.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       💾
-      </span>
-     </code>
-     Data
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../computing-resources/data/git-datasets.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         data
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../computing-resources/data/duke.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         duke
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../computing-resources/data/django.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         django
-        </span>
-       </code>
-      </a>
-     </li>
-    </ul>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../computing-resources/printer.html">
      <code class="docutils literal notranslate">
@@ -351,6 +307,50 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../computing-resources/youtube.html">
      YouTube Procedure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../data/README.html">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     💾
+    </span>
+   </code>
+   Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data/git-datasets.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       data
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data/duke.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       duke
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data/django.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       django
+      </span>
+     </code>
     </a>
    </li>
   </ul>
@@ -1118,8 +1118,8 @@ sudo mkdir /mnt/data_shared
 <p>2. Edit mount table, type : <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">nano</span> <span class="pre">/etc/fstab</span></code></p>
 <p>3. For the following operating systems:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="e0029bbd-fdde-4cb3-a8b3-4d52b584a8f9" name="e719f55f-5628-4477-86c3-619125006163" type="radio">
-</input><label class="tabbed-label" for="e0029bbd-fdde-4cb3-a8b3-4d52b584a8f9">
+<input checked="checked" id="4c3bfcd4-3eb1-4218-827d-2267c3ae46eb" name="dabe800f-59e3-4a82-af4d-e53674525e3f" type="radio">
+</input><label class="tabbed-label" for="4c3bfcd4-3eb1-4218-827d-2267c3ae46eb">
 Ubuntu 14.04 LTS</label><div class="tabbed-content docutils">
 <p>Add the following lines at the bottom of the file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#data_processing @SERVER</span>
@@ -1130,8 +1130,8 @@ Ubuntu 14.04 LTS</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="0a0aade2-38ca-4802-9743-bae1792c7ec0" name="e719f55f-5628-4477-86c3-619125006163" type="radio">
-</input><label class="tabbed-label" for="0a0aade2-38ca-4802-9743-bae1792c7ec0">
+<input id="83c9673e-ec78-449f-bac0-211bf254f64a" name="dabe800f-59e3-4a82-af4d-e53674525e3f" type="radio">
+</input><label class="tabbed-label" for="83c9673e-ec78-449f-bac0-211bf254f64a">
 Debian Wheezy 8</label><div class="tabbed-content docutils">
 <p>Add the following lines at the bottom of the file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#data_processing @SERVER</span>

@@ -6,6 +6,7 @@
 onboarding/README
 agenda-and-calendar
 computing-resources/README
+data/README
 mri-scanning/README
 rf-lab/README
 ```

@@ -294,50 +294,6 @@
      Compute Canada
     </a>
    </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../computing-resources/data/README.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       💾
-      </span>
-     </code>
-     Data
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../computing-resources/data/git-datasets.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         data
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../computing-resources/data/duke.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         duke
-        </span>
-       </code>
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../computing-resources/data/django.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         django
-        </span>
-       </code>
-      </a>
-     </li>
-    </ul>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../computing-resources/printer.html">
      <code class="docutils literal notranslate">
@@ -351,6 +307,50 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../../computing-resources/youtube.html">
      YouTube Procedure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../data/README.html">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     💾
+    </span>
+   </code>
+   Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data/git-datasets.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       data
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data/duke.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       duke
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data/django.html">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       django
+      </span>
+     </code>
     </a>
    </li>
   </ul>
@@ -1781,15 +1781,15 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 <h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">#</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="8c6517cb-4ff2-45e6-87f0-af2b12970489" name="6e60e2ac-8b11-4ea3-8ebd-111c15077947" type="radio">
-</input><label class="tabbed-label" for="8c6517cb-4ff2-45e6-87f0-af2b12970489">
+<input checked="checked" id="695edde6-235f-461a-ab0d-a754129a4b00" name="f7613aa3-f48b-4150-a259-ceae9af5d825" type="radio">
+</input><label class="tabbed-label" for="695edde6-235f-461a-ab0d-a754129a4b00">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
 </pre></div>
 </div>
 </div>
-<input id="265b5c77-edbb-4d6a-b97c-72a6975e81db" name="6e60e2ac-8b11-4ea3-8ebd-111c15077947" type="radio">
-</input><label class="tabbed-label" for="265b5c77-edbb-4d6a-b97c-72a6975e81db">
+<input id="e4be7db7-e1af-4595-9b1e-88e564ab8e5e" name="f7613aa3-f48b-4150-a259-ceae9af5d825" type="radio">
+</input><label class="tabbed-label" for="e4be7db7-e1af-4595-9b1e-88e564ab8e5e">
 Mac</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
 find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5
