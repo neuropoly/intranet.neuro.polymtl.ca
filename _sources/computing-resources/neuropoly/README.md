@@ -221,7 +221,14 @@ sudo apt install -y sshfs
 brew install --cask osxfuse
 brew install sshfs
 ```
+
+```{note}
+**If you cannot install osxfuse via Homebrew (you get this error: `installer: Error - The FUSE for macOS installation package is not compatible with this version of macOS.`), try this: https://eengstrom.github.io/musings/install-macfuse-and-sshfs-on-macos-monterey
+
+```
+
 ````
+
 
 Then mount the folder
 
