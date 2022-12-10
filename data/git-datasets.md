@@ -156,7 +156,7 @@ Once you have access you can:
 ```
 git annex copy --to=origin
 git annex sync --no-content --only-annex
-git push
+git push --set-upstream origin xy/some-topic
 ```
 
 Finally, ask one of that dataset's reviewers to [look at your pull request](#Reviewing-Pull-Requests) by opening an issue on [neuropoly/data-management](https://github.com/neuropoly/data-management).
