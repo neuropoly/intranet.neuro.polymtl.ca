@@ -231,19 +231,19 @@ Then mount the folder
 
 ```
 mkdir cluster_folder
-sshfs <STATION>: cluster_folder
+sshfs <USERNAME>@<STATION>: cluster_folder
 ```
 
 If you use `~` or nothing (as shown) after the `:`, the connection will be relative to to your _remote_ home directory, e.g.
 
 ```
-sshfs <STATION>:~/project1/ cluster_folder
+sshfs <USERNAME>@<STATION>:~/project1/ cluster_folder
 ```
 
 will attach the remote `/home/GRAMES.POLYMTL.CA/$USER/project1/` to the local `./cluster_folder`, and
 
 ```
-sshfs <STATION>:project1/ cluster_folder
+sshfs <USERNAME>@<STATION>:project1/ cluster_folder
 ```
 
 will do the exact same.
@@ -251,14 +251,14 @@ will do the exact same.
 However if you use `/` after the `:`, the mount will be relative to the _remote root directory_, e.g.
 
 ```
-sshfs <STATION>:/tmp/ cluster_folder
+sshfs <USERNAME>@<STATION>:/tmp/ cluster_folder
 ```
 
 will attach the remote `/tmp/` to the local `./cluster_folder`
 
 
 ```{note}
-If you are experiencing mounting issues on macOs, [this]([url](https://github.com/neuropoly/intranet.neuro.polymtl.ca/issues/57)) might help.
+If you are experiencing mounting issues on macOs, [this](https://github.com/neuropoly/intranet.neuro.polymtl.ca/issues/57) might help.
 ```
 
 
