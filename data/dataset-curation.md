@@ -33,7 +33,7 @@ For details, see [BIDS specification](https://bids-specification.readthedocs.io/
 
 ### `README.md`
 
-The `README.md` is a [markdown](https://markdown-guide.readthedocs.io/en/latest/index.html) file describing the dataset in more detail.
+The [`README.md`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#readme) is a [markdown](https://markdown-guide.readthedocs.io/en/latest/index.html) file describing the dataset in more detail.
 
 Below is a template - modify it!!!
 
@@ -110,6 +110,24 @@ The `participants.json` is a JSON file describing the column names in the `parti
 
 </details>
 
+### `dataset_description.json`
+
+The [`dataset_description.json`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#dataset_descriptionjson) is a JSON file describing the dataset.
+
+❗The `dataset_description.json` file within the top-level dataset should include `"DatasetType": "raw"`.
+
+<details><summary>dataset_description.json template:</summary>
+
+```json
+{
+    "BIDSVersion": "BIDS X.Y.Z",
+    "Name": "<dataset_name>",
+    "DatasetType": "raw"
+}
+```
+
+</details>
+
 ### `code/`
 
 The data curation script(s) should be placed inside the BIDS datasets, under the `code/` folder. For more convenience, you can create a PR with a curation script that you are working on, so that others can give feedback; once the script is validated, you can simply close the PR and delete the branch without merging.
@@ -117,9 +135,7 @@ The data curation script(s) should be placed inside the BIDS datasets, under the
 
 ## derivatives structure
 
-The `derivatives` will be organized according to the following:
-
-https://github.com/ivadomed/ivadomed/wiki/repositories#derivatives
+The [`derivatives`](https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html) are files generated from the top-level dataset such as segmentations or labels.
 
 Convention for derivatives JSON metadata:
 
@@ -131,6 +147,8 @@ Convention for derivatives JSON metadata:
 ```
 
 NOTE: "Date" is optional. We usually include it when running the manual correction via python scripts.
+
+❗The `derivatives` must include its own `dataset_description.json` file (with `"DatasetType": "derivative"`).
 
 ## Changelog policy
 
