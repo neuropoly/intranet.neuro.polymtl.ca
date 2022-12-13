@@ -1053,6 +1053,15 @@ title="Edit this page"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dataset-description-json">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       dataset_description.json
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#code">
      <code class="docutils literal notranslate">
       <span class="pre">
@@ -1130,6 +1139,15 @@ title="Edit this page"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dataset-description-json">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       dataset_description.json
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#code">
      <code class="docutils literal notranslate">
       <span class="pre">
@@ -1193,7 +1211,7 @@ sub-<site><pathology>XXX</p>
 <p>For details, see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#code">BIDS specification</a>.</p>
 <section id="readme-md">
 <h3><code class="docutils literal notranslate"><span class="pre">README.md</span></code><a class="headerlink" href="#readme-md" title="Permalink to this headline">#</a></h3>
-<p>The <code class="docutils literal notranslate"><span class="pre">README.md</span></code> is a <a class="reference external" href="https://markdown-guide.readthedocs.io/en/latest/index.html">markdown</a> file describing the dataset in more detail.</p>
+<p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#readme"><code class="docutils literal notranslate"><span class="pre">README.md</span></code></a> is a <a class="reference external" href="https://markdown-guide.readthedocs.io/en/latest/index.html">markdown</a> file describing the dataset in more detail.</p>
 <p>Below is a template - modify it!!!</p>
 <details><summary>README.md template:</summary>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># &lt;NAME OF DATASET&gt;</span>
@@ -1287,6 +1305,20 @@ sub-<site><pathology>XXX</p>
 </div>
 </details>
 </section>
+<section id="dataset-description-json">
+<h3><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code><a class="headerlink" href="#dataset-description-json" title="Permalink to this headline">#</a></h3>
+<p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#dataset_descriptionjson"><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code></a> is a JSON file describing the dataset.</p>
+<p>❗The <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> file within the top-level dataset should include <code class="docutils literal notranslate"><span class="pre">&quot;DatasetType&quot;:</span> <span class="pre">&quot;raw&quot;</span></code>.</p>
+<details><summary>dataset_description.json template:</summary>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;BIDSVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BIDS X.Y.Z&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;dataset_name&gt;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;DatasetType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;raw&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</details>
+</section>
 <section id="code">
 <h3><code class="docutils literal notranslate"><span class="pre">code/</span></code><a class="headerlink" href="#code" title="Permalink to this headline">#</a></h3>
 <p>The data curation script(s) should be placed inside the BIDS datasets, under the <code class="docutils literal notranslate"><span class="pre">code/</span></code> folder. For more convenience, you can create a PR with a curation script that you are working on, so that others can give feedback; once the script is validated, you can simply close the PR and delete the branch without merging.</p>
@@ -1294,8 +1326,7 @@ sub-<site><pathology>XXX</p>
 </section>
 <section id="derivatives-structure">
 <h2>derivatives structure<a class="headerlink" href="#derivatives-structure" title="Permalink to this headline">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> will be organized according to the following:</p>
-<p>https://github.com/ivadomed/ivadomed/wiki/repositories#derivatives</p>
+<p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html"><code class="docutils literal notranslate"><span class="pre">derivatives</span></code></a> are files generated from the top-level dataset such as segmentations or labels.</p>
 <p>Convention for derivatives JSON metadata:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="nt">&quot;Author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Firstname Lastname&quot;</span><span class="p">,</span><span class="w"></span>
@@ -1304,6 +1335,7 @@ sub-<site><pathology>XXX</p>
 </pre></div>
 </div>
 <p>NOTE: “Date” is optional. We usually include it when running the manual correction via python scripts.</p>
+<p>❗The <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> must include its own <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> file (with <code class="docutils literal notranslate"><span class="pre">&quot;DatasetType&quot;:</span> <span class="pre">&quot;derivative&quot;</span></code>).</p>
 </section>
 <section id="changelog-policy">
 <h2>Changelog policy<a class="headerlink" href="#changelog-policy" title="Permalink to this headline">#</a></h2>
