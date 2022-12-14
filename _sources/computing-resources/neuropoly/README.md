@@ -278,16 +278,6 @@ If you are experiencing mounting issues on macOs, [this](https://github.com/neur
 3. You can use the password from [shared account credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg)
 ````
 
-### Language
-
-The default interface on our systems is français. To use another language, set your `LANG` environment variable:
-
-```
-echo 'export LANG=en_CA.UTF-8' >> ~/.profile
-```
-
-Logout and back in again and apps should now be in English (or the other language code you chose).
-
 #### Linux stations
 
 On Linux targets, a VNC server needs to be started manually before the above instructions will work.
@@ -334,6 +324,17 @@ After starting the vncserver, connect to it as above.
 ```bash
  vncserver -kill :<PORT_NUMBER>
 ```
+
+### Language
+
+The default interface on our systems is français. To use another language, set your `LANG` environment variable:
+
+```
+echo 'export LANG=en_CA.UTF-8' >> ~/.profile
+```
+
+Logout and back in again and apps should now be in English (or the other language code you chose).
+
 
 
 ## CPU/GPU Clusters
