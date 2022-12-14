@@ -1414,13 +1414,13 @@ title="Edit this page"
 <h2>Changelog policy<a class="headerlink" href="#changelog-policy" title="Permalink to this headline">#</a></h2>
 <p>We use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code> to track our changes. That means care should be taken to <a class="reference internal" href="../geek-tips/git.html#commit-message-convention"><span class="std std-doc">write good messages</span></a>: they are there to help both you and future researchers understand how the dataset evolved.</p>
 <p>Good commit message examples:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git commit -m `Segment spines of subjects 010 through 023
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;Segment spines of subjects 010 through 023</span>
     
-Produced manually, using fsleyes.`
+<span class="n">Produced</span> <span class="n">manually</span><span class="p">,</span> <span class="n">using</span> <span class="n">fsleyes</span><span class="o">.</span><span class="s1">&#39;</span>
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git commit -m `Add new subjects provided by &lt;email_adress&gt;`
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;Add new subjects provided by &lt;email_adress&gt;&#39;</span>
 </pre></div>
 </div>
 <p>If you choose to also fill in BIDS’s optional <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#changes">CHANGES</a> file make sure it reflects the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code>.</p>

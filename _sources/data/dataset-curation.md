@@ -209,15 +209,15 @@ We use `git log` to track our changes. That means care should be taken to [write
 Good commit message examples:
 
 ```
-git commit -m `Segment spines of subjects 010 through 023
+git commit -m 'Segment spines of subjects 010 through 023
     
-Produced manually, using fsleyes.`
+Produced manually, using fsleyes.'
 ```
 
 or
 
 ```
-git commit -m `Add new subjects provided by <email_adress>`
+git commit -m 'Add new subjects provided by <email_adress>'
 ```
     
 If you choose to also fill in BIDS's optional [CHANGES](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#changes) file make sure it reflects the `git log`.
