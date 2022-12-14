@@ -202,7 +202,7 @@ TODO: describe neuropoly-specific BIDS entities, like bp-cspine or acq-MTon
 
 ## Changelog policy
 
-We use `git log` to track our changes. That means
+We use `git log` to track our changes. That means care should be taken to [write good messages](../geek-tips/git.md#commit-message-convention): they are there to help both you and future researchers understand how the dataset evolved.
 
 Good commit message examples:
 
