@@ -82,7 +82,7 @@ Refer to the [BIDS spec](https://bids-specification.readthedocs.io/) to know wha
 The [`participants.tsv`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file) is a TSV file and should include at least the following columns:
 
 | participant_id | source_id | species | age | sex | pathology  | institution |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | sub-001 | 001 | homo sapiens | 30 | F } HC | montreal |
 | sub-002 | 005 | homo sapiens | 40 | O | MS | montreal |
 | sub-003 | 007 | homo sapiens  | n/a | n/a | MS | toronto |
