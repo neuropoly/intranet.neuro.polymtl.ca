@@ -97,7 +97,7 @@ sub-003	007	homo sapiens	n/a	n/a	MS	toronto
 ```
 </details>
 
-See next template for column descriptions. As BIDS explains, other columns may be added if data to fill them exists.
+Other columns may be added if the data exists to fill them and it would be useful to keep.
 
 ```{warning}
 Indicate missing values with `n/a` (for "not available"), not by empty cells!
