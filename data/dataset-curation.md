@@ -171,7 +171,9 @@ unpacks, converts and renames all the images and related files in `path/to/sourc
 
 This program should be committed first, before the curated data it produces. Afterwards, every commit that modifies the code should also re-run it, and the code and re-curated data should be committed in tandem.
 
+```{note}
 Analysis scripts should not be kept here. Keep them in separate repositories, usually in public on GitHub, with instructions about. See [PIPELINE-DOC](TODO-PIPELINE-DOC).
+```
     
 ### `sub-XXX/`
     
