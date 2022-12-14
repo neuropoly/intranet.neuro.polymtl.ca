@@ -517,7 +517,11 @@ If rebasing caused commits to be lost, use `git reflog` to find the commits that
 
 ## Commit message convention
 
-See: [https://github.com/neuropoly/spinalcordtoolbox/wiki/git_rules](https://github.com/neuropoly/spinalcordtoolbox/wiki/git_rules)
+Writing good commit messages is an art. They should be concise but accurate. They should help someone several years from now with little knowledge of your project understand at a high-level what each change was for, and they should help you remember the direction you are working in while working on a branch in the present.
+
+Here are some suggestions:
+
+* [https://github.com/neuropoly/spinalcordtoolbox/wiki/git_rules](https://github.com/neuropoly/spinalcordtoolbox/wiki/git_rules)
 
 ## GitHub
 
