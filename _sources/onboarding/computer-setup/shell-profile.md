@@ -7,7 +7,10 @@ You can edit your shell profile to create custom commands and make the colours i
 
 ```bash
 # Nice .bash_profile
- 
+
+# Set error message in English (if you want to)
+LANG=en_CA.UTF-8
+
 # COLOR
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
@@ -65,6 +68,9 @@ source ~/miniconda3/etc/profile.d/conda.sh
 ````{tabbed} ~/.zshrc
 
 ```bash
+# Set error message in English (if you want to)
+LANG=en_CA.UTF-8
+
 # COLOR
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
