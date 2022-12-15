@@ -39,9 +39,11 @@ What's more important is that the date for the oral presentation should be fixed
 
 **Format:** This presentation is essentially you describing your research proposal in **30 minutes**. The jury will ask questions and discuss some aspects one-by-one after your presentation. This is also the time when the jury members can decide to go back to the questions on the written exam and get some answers/clarifications if any. 
 
-**NOTE:** Some thesis proposal presentations are open-to-all but not all. Confirm with the president of your jury whether this presentation will be open to your lab members (it's nice to have some support from them!). 
+**NOTE 1:** Some thesis proposal presentations are open-to-all but not all. Confirm with the president of your jury whether this presentation will be open to your lab members (it's nice to have some support from them!). 
 
 The whole presentation + discussion should last about 2 hrs after which the jury deliberates and gives a verdict. 
+
+**NOTE 2:** Schedule your written exam to be 2-3 weeks before the oral exam. This gives you enough time to prepare your presentation and think about the questions you might be asked during the presentation. 
 
 
 ### The Research Proposal
@@ -59,6 +61,8 @@ It is highly, *highly* recommended that you start writing your proposal at least
 9. Short curriculum vitae (previous studies, experience, publications)
 
 A challenge is that you are also required to write about the projects that you will be doing in your PhD, meaning, the things you will be working on 1-2 years from now. While this might seem pointless (because you never know which idea you might find interesting in 1-2 years or what you have proposed now may be irrelevant in 1-2 years (which is quite possible if you're in machine learning)), know that the jury definitely understands this, they are only looking to see how well you can present your ideas coherently and whether you can considered all the relevant aspects for whichever ideas you are proposing. 
+
+**When to submit?** As per the official guidelines, the research proposal must be submitted at least 2 weeks before the day of your oral exam. But, it is always good to give more time to jury to read your proposal, so a good time to submit it would be just before you give your written exam. This has to be sent to all the jury members includding a cc to the graduate students coordinator.   
 
 **NOTE:** Starting your proposal early also gives you the chance to get the necessary feedback from your supervisor about its structure and content. 
 
