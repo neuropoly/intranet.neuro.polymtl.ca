@@ -15,6 +15,7 @@ rf-lab/README
 :caption: Academic Life
 :hidden:
 courses
+comprehensive-exam-guide
 scholarships
 conferences
 bibliography/README
