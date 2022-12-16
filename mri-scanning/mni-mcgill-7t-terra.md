@@ -20,7 +20,7 @@ description: >-
 
 * Download the safety screening form [here](https://drive.google.com/file/d/1ezjUSRP9EYNM5zzqMNMIAwwkhevagay6/view?usp=sharing) and ask your participant to fill it out
 * Give it to the MR Techs in person, or send it to them via [email](mailto:mrtechs.neuro@mcgill.ca)
-* Ask your participant to fill out and sign the consent [form](https://drive.google.com/drive/folders/1DZB8r1uiz7wqz9qPDRExx5In9M5FgAz-) and sign it yourself on the date of the scan.
+* Doiwnload the [consent form](https://drive.google.com/file/d/1yS2MxG3P7QuDTcTUhfMIVhkzl9FpY8AS/view?usp=share_link), ask your participant to sign it and sign it yourself at the date of the scan.
 
 
 ## Download the data
