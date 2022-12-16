@@ -8,7 +8,7 @@ example:
 - sub-001
 - sub-002
 
-**Multi-institution/Multi-pathology convention**: sub-<site><pathology>XXX
+**Multi-institution/Multi-pathology convention**: sub-\<site>\<pathology>XXX
 
 example:
 - sub-montrealDCM001
