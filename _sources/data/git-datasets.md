@@ -233,7 +233,7 @@ git push origin :synced/xy/some-topic
 
 ### New repository
 
-To make a new repo, follow this [recipe](../../geek-tips/git-annex.md#new-repo).
+To make a new repo, follow this [recipe](../geek-tips/git-annex.md#new-repo).
 
 Then, to upload it, pick a name under `datasets/`, e.g. "my-new-repo", and do
 
