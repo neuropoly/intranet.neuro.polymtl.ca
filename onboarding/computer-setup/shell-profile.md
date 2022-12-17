@@ -100,7 +100,29 @@ alias gl="git log --pretty=oneline"
 alias glg="git log --pretty=oneline --decorate --all --graph"
 alias gd="git diff"
 alias gb="git branch"
- 
+alias nn='nano'
+alias grep='grep --color=auto'
+
+# FUNCTIONS
+# ls in combination with head or tail commands with definable number of output lines
+function lh { if [ "$#" -eq 0 ];then num=10;else num=${1};fi; ls -lath | head -${num} }
+function lt { if [ "$#" -eq 0 ];then num=10;else num=${1};fi; ls -lath | tail -${num} }
+# quick (and nice looking) check of tabulator, comma, and semicolon separated files (.tsv, .csv)
+# Note: tput rnam and tput smam disable line wrapping temporarily; see https://unix.stackexchange.com/a/515938
+function column_tab { tput rmam; column -t -s $'\t' ${1};tput smam }
+function column_comma { tput rmam; column -t -s $',' ${1};tput smam }
+function column_semicol { tput rmam; column -t -s $';' ${1};tput smam }
+# get nii header using sct_image
+function header { sct_image -i ${1} -header }
+
+# VENV workflow
+# create venv (and install requirements if requirements.txt file exists)
+function ce { python3 -m venv venv; echo "venv was created successfully"; if [ -f requirements.txt ]; then echo "requirements.txt file found, installing dependencies..."; source ./venv/bin/activate; pip install -r requirements.txt;fi } 
+# activate venv
+alias ae='deactivate &> /dev/null; source ./venv/bin/activate'
+# deactivate venv
+alias de='deactivate'
+
 # FSL Setup
 FSLDIR=/usr/local/fsl
 PATH=${FSLDIR}/bin:${PATH}
@@ -109,7 +131,8 @@ export FSLDIR PATH
  
 # FSLeyes
 PATH=${PATH}:/Applications/FSLeyes.app/Contents/MacOS
- 
+alias ff='fsleyes'
+
 # DCM2NII
 PATH=${PATH}:/Applications/mricron
  
