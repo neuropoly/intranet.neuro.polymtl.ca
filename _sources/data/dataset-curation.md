@@ -23,9 +23,17 @@ example:
 ├── dataset_description.json
 ├── participants.tsv
 ├── participants.json
-└── code/
-    └── curate.py
-└── sub-XXX
+├── code/
+│   └── curate.py
+├── sub-XXX
+ ...
+ ...
+└── derivatives
+    ├──  dataset_description.json
+    └── labels
+        └── sub-XXX
+        ...
+        ...
 ```
 
 For details, see [BIDS specification](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#code).
