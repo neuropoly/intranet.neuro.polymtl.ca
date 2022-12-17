@@ -1026,8 +1026,8 @@ title="Edit this page"
 <h1><code class="docutils literal notranslate"><span class="pre">💻</span></code> Shell Profile<a class="headerlink" href="#shell-profile" title="Permalink to this headline">#</a></h1>
 <p>You can edit your shell profile to create custom commands and make the colours in your terminal look nice.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="258c8f7a-6d4f-4089-8eed-8c2ee076a2e7" name="81718b4f-4c7b-4ae7-a6ce-f5b546eb01d5" type="radio">
-</input><label class="tabbed-label" for="258c8f7a-6d4f-4089-8eed-8c2ee076a2e7">
+<input checked="checked" id="02fa5095-886c-4744-b172-a3b576cfc5e0" name="09fd55b4-9777-4ce8-bbc6-f90563433c86" type="radio">
+</input><label class="tabbed-label" for="02fa5095-886c-4744-b172-a3b576cfc5e0">
 ~/.bash_profile</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Nice .bash_profile</span>
 
@@ -1088,8 +1088,8 @@ title="Edit this page"
 </pre></div>
 </div>
 </div>
-<input id="3f58d23a-3140-4f25-897b-54322793b3b9" name="81718b4f-4c7b-4ae7-a6ce-f5b546eb01d5" type="radio">
-</input><label class="tabbed-label" for="3f58d23a-3140-4f25-897b-54322793b3b9">
+<input id="dfe78146-9ab5-4177-920b-17b9e57ae678" name="09fd55b4-9777-4ce8-bbc6-f90563433c86" type="radio">
+</input><label class="tabbed-label" for="dfe78146-9ab5-4177-920b-17b9e57ae678">
 ~/.zshrc</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set error message in English (if you want to)</span>
 <span class="nv">LANG</span><span class="o">=</span>en_CA.UTF-8
@@ -1123,7 +1123,29 @@ title="Edit this page"
 <span class="nb">alias</span> <span class="nv">glg</span><span class="o">=</span><span class="s2">&quot;git log --pretty=oneline --decorate --all --graph&quot;</span>
 <span class="nb">alias</span> <span class="nv">gd</span><span class="o">=</span><span class="s2">&quot;git diff&quot;</span>
 <span class="nb">alias</span> <span class="nv">gb</span><span class="o">=</span><span class="s2">&quot;git branch&quot;</span>
- 
+<span class="nb">alias</span> <span class="nv">nn</span><span class="o">=</span><span class="s1">&#39;nano&#39;</span>
+<span class="nb">alias</span> <span class="nv">grep</span><span class="o">=</span><span class="s1">&#39;grep --color=auto&#39;</span>
+
+<span class="c1"># FUNCTIONS</span>
+<span class="c1"># ls in combination with head or tail commands with definable number of output lines</span>
+<span class="k">function</span> lh <span class="o">{</span> <span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$#</span><span class="s2">&quot;</span> -eq <span class="m">0</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span> <span class="nv">num</span><span class="o">=</span><span class="m">10</span><span class="p">;</span><span class="k">else</span> <span class="nv">num</span><span class="o">=</span><span class="si">${</span><span class="nv">1</span><span class="si">}</span><span class="p">;</span><span class="k">fi</span><span class="p">;</span> ls -lath <span class="p">|</span> head -<span class="si">${</span><span class="nv">num</span><span class="si">}</span> <span class="o">}</span>
+<span class="k">function</span> lt <span class="o">{</span> <span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$#</span><span class="s2">&quot;</span> -eq <span class="m">0</span> <span class="o">]</span><span class="p">;</span><span class="k">then</span> <span class="nv">num</span><span class="o">=</span><span class="m">10</span><span class="p">;</span><span class="k">else</span> <span class="nv">num</span><span class="o">=</span><span class="si">${</span><span class="nv">1</span><span class="si">}</span><span class="p">;</span><span class="k">fi</span><span class="p">;</span> ls -lath <span class="p">|</span> tail -<span class="si">${</span><span class="nv">num</span><span class="si">}</span> <span class="o">}</span>
+<span class="c1"># quick (and nice looking) check of tabulator, comma, and semicolon separated files (.tsv, .csv)</span>
+<span class="c1"># Note: tput rnam and tput smam disable line wrapping temporarily; see https://unix.stackexchange.com/a/515938</span>
+<span class="k">function</span> column_tab <span class="o">{</span> tput rmam<span class="p">;</span> column -t -s <span class="s1">$&#39;\t&#39;</span> <span class="si">${</span><span class="nv">1</span><span class="si">}</span><span class="p">;</span>tput smam <span class="o">}</span>
+<span class="k">function</span> column_comma <span class="o">{</span> tput rmam<span class="p">;</span> column -t -s <span class="s1">$&#39;,&#39;</span> <span class="si">${</span><span class="nv">1</span><span class="si">}</span><span class="p">;</span>tput smam <span class="o">}</span>
+<span class="k">function</span> column_semicol <span class="o">{</span> tput rmam<span class="p">;</span> column -t -s <span class="s1">$&#39;;&#39;</span> <span class="si">${</span><span class="nv">1</span><span class="si">}</span><span class="p">;</span>tput smam <span class="o">}</span>
+<span class="c1"># get nii header using sct_image</span>
+<span class="k">function</span> header <span class="o">{</span> sct_image -i <span class="si">${</span><span class="nv">1</span><span class="si">}</span> -header <span class="o">}</span>
+
+<span class="c1"># VENV workflow</span>
+<span class="c1"># create venv (and install requirements if requirements.txt file exists)</span>
+<span class="k">function</span> ce <span class="o">{</span> python3 -m venv venv<span class="p">;</span> <span class="nb">echo</span> <span class="s2">&quot;venv was created successfully&quot;</span><span class="p">;</span> <span class="k">if</span> <span class="o">[</span> -f requirements.txt <span class="o">]</span><span class="p">;</span> <span class="k">then</span> <span class="nb">echo</span> <span class="s2">&quot;requirements.txt file found, installing dependencies...&quot;</span><span class="p">;</span> <span class="nb">source</span> ./venv/bin/activate<span class="p">;</span> pip install -r requirements.txt<span class="p">;</span><span class="k">fi</span> <span class="o">}</span> 
+<span class="c1"># activate venv</span>
+<span class="nb">alias</span> <span class="nv">ae</span><span class="o">=</span><span class="s1">&#39;deactivate &amp;&gt; /dev/null; source ./venv/bin/activate&#39;</span>
+<span class="c1"># deactivate venv</span>
+<span class="nb">alias</span> <span class="nv">de</span><span class="o">=</span><span class="s1">&#39;deactivate&#39;</span>
+
 <span class="c1"># FSL Setup</span>
 <span class="nv">FSLDIR</span><span class="o">=</span>/usr/local/fsl
 <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">FSLDIR</span><span class="si">}</span>/bin:<span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>
@@ -1132,7 +1154,8 @@ title="Edit this page"
  
 <span class="c1"># FSLeyes</span>
 <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/Applications/FSLeyes.app/Contents/MacOS
- 
+<span class="nb">alias</span> <span class="nv">ff</span><span class="o">=</span><span class="s1">&#39;fsleyes&#39;</span>
+
 <span class="c1"># DCM2NII</span>
 <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/Applications/mricron
  
