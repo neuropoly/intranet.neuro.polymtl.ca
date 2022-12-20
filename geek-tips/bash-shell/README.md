@@ -140,6 +140,7 @@ or for all folders in the path
 ```
 du -csh *
 du -sm * | sort -nr  # in MB and reverse-ordered by size
+du -hs template_dog_virginiatech/* | sort -h  # in human-readable
 ```
 
 
