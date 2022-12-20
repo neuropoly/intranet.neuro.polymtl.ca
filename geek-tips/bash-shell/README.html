@@ -1684,7 +1684,7 @@ rsync -azP &lt;FOLDER_SOURCE&gt;/ &lt;FOLDER_DEST&gt;  <span class="c1"># will c
 <p>or for all folders in the path</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">du</span> <span class="o">-</span><span class="n">csh</span> <span class="o">*</span>
 <span class="n">du</span> <span class="o">-</span><span class="n">sm</span> <span class="o">*</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">nr</span>  <span class="c1"># in MB and reverse-ordered by size</span>
-<span class="n">du</span> <span class="o">-</span><span class="n">hcs</span> <span class="n">template_dog_virginiatech</span><span class="o">/*</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">h</span>  <span class="c1"># in human-readable</span>
+<span class="n">du</span> <span class="o">-</span><span class="n">hcs</span> <span class="o">*</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">h</span>  <span class="c1"># in human-readable</span>
 </pre></div>
 </div>
 </section>
@@ -1784,15 +1784,15 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 <h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">#</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="88ffa55a-978a-49f8-943d-b2dc4cb0f063" name="cbaf8849-d4a4-4f30-a8aa-01c9679bb498" type="radio">
-</input><label class="tabbed-label" for="88ffa55a-978a-49f8-943d-b2dc4cb0f063">
+<input checked="checked" id="62e8d74f-fb34-4054-a954-5f82c56b4ed8" name="83e0896e-8aac-4a0c-82a9-e7a87212ef2e" type="radio">
+</input><label class="tabbed-label" for="62e8d74f-fb34-4054-a954-5f82c56b4ed8">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
 </pre></div>
 </div>
 </div>
-<input id="f95a76a3-789d-4129-ae60-4d878baf093e" name="cbaf8849-d4a4-4f30-a8aa-01c9679bb498" type="radio">
-</input><label class="tabbed-label" for="f95a76a3-789d-4129-ae60-4d878baf093e">
+<input id="3dc30c85-f65d-4a1d-9c59-3b636d4e0491" name="83e0896e-8aac-4a0c-82a9-e7a87212ef2e" type="radio">
+</input><label class="tabbed-label" for="3dc30c85-f65d-4a1d-9c59-3b636d4e0491">
 Mac</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
 find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5
