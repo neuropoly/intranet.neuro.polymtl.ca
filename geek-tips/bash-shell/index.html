@@ -1092,21 +1092,19 @@ title="Edit this page"
        Rename files with a given extension
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#size-of-a-disk-folder-a-href-size-of-a-diskfolder-id-size-of-a-diskfolder-a">
-       Size of a disk/folder
-       <a href="size_of_a_diskfolder" id="size_of_a_diskfolder">
-       </a>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#number-of-files-a-href-number-of-files-id-number-of-files-a">
-       Number of files
-       <a href="number_of_files" id="number_of_files">
-       </a>
-      </a>
-     </li>
     </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#size-of-folder">
+     Size of folder
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#number-of-files-a-href-number-of-files-id-number-of-files-a">
+     Number of files
+     <a href="number_of_files" id="number_of_files">
+     </a>
+    </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#permissions">
@@ -1371,21 +1369,19 @@ title="Edit this page"
        Rename files with a given extension
       </a>
      </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#size-of-a-disk-folder-a-href-size-of-a-diskfolder-id-size-of-a-diskfolder-a">
-       Size of a disk/folder
-       <a href="size_of_a_diskfolder" id="size_of_a_diskfolder">
-       </a>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#number-of-files-a-href-number-of-files-id-number-of-files-a">
-       Number of files
-       <a href="number_of_files" id="number_of_files">
-       </a>
-      </a>
-     </li>
     </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#size-of-folder">
+     Size of folder
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#number-of-files-a-href-number-of-files-id-number-of-files-a">
+     Number of files
+     <a href="number_of_files" id="number_of_files">
+     </a>
+    </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#permissions">
@@ -1679,8 +1675,9 @@ rsync -azP &lt;FOLDER_SOURCE&gt;/ &lt;FOLDER_DEST&gt;  <span class="c1"># will c
 </pre></div>
 </div>
 </section>
-<section id="size-of-a-disk-folder-a-href-size-of-a-diskfolder-id-size-of-a-diskfolder-a">
-<h4>Size of a disk/folder <a href="size_of_a_diskfolder" id="size_of_a_diskfolder"></a><a class="headerlink" href="#size-of-a-disk-folder-a-href-size-of-a-diskfolder-id-size-of-a-diskfolder-a" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="size-of-folder">
+<h3>Size of folder<a class="headerlink" href="#size-of-folder" title="Permalink to this headline">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>du -sh &lt;FOLDER&gt;
 </pre></div>
 </div>
@@ -1689,13 +1686,9 @@ rsync -azP &lt;FOLDER_SOURCE&gt;/ &lt;FOLDER_DEST&gt;  <span class="c1"># will c
 <span class="n">du</span> <span class="o">-</span><span class="n">sm</span> <span class="o">*</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">nr</span>  <span class="c1"># in MB and reverse-ordered by size</span>
 </pre></div>
 </div>
-<p><strong>Get space on a disk</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">-</span><span class="n">h</span> <span class="o">.</span>
-</pre></div>
-</div>
 </section>
 <section id="number-of-files-a-href-number-of-files-id-number-of-files-a">
-<h4>Number of files <a href="number_of_files" id="number_of_files"></a><a class="headerlink" href="#number-of-files-a-href-number-of-files-id-number-of-files-a" title="Permalink to this headline">#</a></h4>
+<h3>Number of files <a href="number_of_files" id="number_of_files"></a><a class="headerlink" href="#number-of-files-a-href-number-of-files-id-number-of-files-a" title="Permalink to this headline">#</a></h3>
 <p>== Get number of files that match a pattern</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">dq</span> <span class="o">*</span><span class="n">pattern</span><span class="o">*</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
 </pre></div>
@@ -1716,7 +1709,6 @@ rsync -azP &lt;FOLDER_SOURCE&gt;/ &lt;FOLDER_DEST&gt;  <span class="c1"># will c
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">.</span> <span class="o">-</span><span class="n">maxdepth</span> <span class="mi">1</span> <span class="o">-</span><span class="n">mindepth</span> <span class="mi">1</span> <span class="o">-</span><span class="nb">type</span> <span class="n">d</span> <span class="o">-</span><span class="n">exec</span> <span class="n">sh</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;echo &quot;</span><span class="si">{}</span><span class="s1"> : $(find &quot;</span><span class="si">{}</span><span class="s1">&quot; -type f | wc -l)&quot; file\(s\)&#39;</span> \<span class="p">;</span>
 </pre></div>
 </div>
-</section>
 </section>
 <section id="permissions">
 <h3>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">#</a></h3>
@@ -1791,15 +1783,15 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 <h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">#</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="e970c50b-8241-44b2-bf79-5cad5c7bf87d" name="fd4e78cb-49d1-407e-a35a-2c37162a3956" type="radio">
-</input><label class="tabbed-label" for="e970c50b-8241-44b2-bf79-5cad5c7bf87d">
+<input checked="checked" id="bd0f1a1d-b3a7-464d-bda2-4298af678bd6" name="56d88d9e-568a-4ee5-9f5c-e91e0644270b" type="radio">
+</input><label class="tabbed-label" for="bd0f1a1d-b3a7-464d-bda2-4298af678bd6">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
 </pre></div>
 </div>
 </div>
-<input id="82713719-acad-4ff8-a1a6-74e38cbaa7ad" name="fd4e78cb-49d1-407e-a35a-2c37162a3956" type="radio">
-</input><label class="tabbed-label" for="82713719-acad-4ff8-a1a6-74e38cbaa7ad">
+<input id="e7d8ccdc-0d92-4f9f-82a8-b571f8019a60" name="56d88d9e-568a-4ee5-9f5c-e91e0644270b" type="radio">
+</input><label class="tabbed-label" for="e7d8ccdc-0d92-4f9f-82a8-b571f8019a60">
 Mac</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
 find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5
