@@ -138,7 +138,7 @@ du -sh <FOLDER>
 or for all folders in the path
 
 ```
-du -sh *
+du -csh *
 du -sm * | sort -nr  # in MB and reverse-ordered by size
 ```
 
