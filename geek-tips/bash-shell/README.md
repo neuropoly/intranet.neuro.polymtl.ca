@@ -128,7 +128,8 @@ On Maverick and later, the creation date is not updated if newer than the existi
 SetFile -d 'DD/MM/YYYY HH:MM:SS' <FILE>
 ```
 
-#### Size of a disk/folder <a href="size_of_a_diskfolder" id="size_of_a_diskfolder"></a>
+
+### Size of folder
 
 ```bash
 du -sh <FOLDER>
@@ -141,15 +142,8 @@ du -sh *
 du -sm * | sort -nr  # in MB and reverse-ordered by size
 ```
 
-**Get space on a disk**
 
-```
-df -h .
-```
-
-
-
-#### Number of files <a href="number_of_files" id="number_of_files"></a>
+### Number of files <a href="number_of_files" id="number_of_files"></a>
 
 \== Get number of files that match a pattern
 
