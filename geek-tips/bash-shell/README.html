@@ -1682,7 +1682,7 @@ rsync -azP &lt;FOLDER_SOURCE&gt;/ &lt;FOLDER_DEST&gt;  <span class="c1"># will c
 </pre></div>
 </div>
 <p>or for all folders in the path</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">du</span> <span class="o">-</span><span class="n">sh</span> <span class="o">*</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">du</span> <span class="o">-</span><span class="n">csh</span> <span class="o">*</span>
 <span class="n">du</span> <span class="o">-</span><span class="n">sm</span> <span class="o">*</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">nr</span>  <span class="c1"># in MB and reverse-ordered by size</span>
 </pre></div>
 </div>
@@ -1783,15 +1783,15 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 <h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">#</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="bd0f1a1d-b3a7-464d-bda2-4298af678bd6" name="56d88d9e-568a-4ee5-9f5c-e91e0644270b" type="radio">
-</input><label class="tabbed-label" for="bd0f1a1d-b3a7-464d-bda2-4298af678bd6">
+<input checked="checked" id="c244e98d-449a-4bca-be74-c0b2f069f76f" name="666f731f-897b-40bd-8a67-507a86e8c02a" type="radio">
+</input><label class="tabbed-label" for="c244e98d-449a-4bca-be74-c0b2f069f76f">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
 </pre></div>
 </div>
 </div>
-<input id="e7d8ccdc-0d92-4f9f-82a8-b571f8019a60" name="56d88d9e-568a-4ee5-9f5c-e91e0644270b" type="radio">
-</input><label class="tabbed-label" for="e7d8ccdc-0d92-4f9f-82a8-b571f8019a60">
+<input id="25b0221f-5e5c-469e-b071-e498649fd0c1" name="666f731f-897b-40bd-8a67-507a86e8c02a" type="radio">
+</input><label class="tabbed-label" for="25b0221f-5e5c-469e-b071-e498649fd0c1">
 Mac</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
 find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5
