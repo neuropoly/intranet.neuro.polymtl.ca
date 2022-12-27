@@ -1756,24 +1756,24 @@ title="Edit this page"
 <h2>Install git<a class="headerlink" href="#install-git" title="Permalink to this headline">#</a></h2>
 <p>Full instructions to install <code class="docutils literal notranslate"><span class="pre">git</span></code> <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">here</a>. We have a quick-start below:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="b244c2f2-ddbb-4f47-ae2e-43aefd0bb08a" name="160a21c9-4fd7-460d-ad0b-399ed57e8384" type="radio">
-</input><label class="tabbed-label" for="b244c2f2-ddbb-4f47-ae2e-43aefd0bb08a">
+<input checked="checked" id="9f006b1f-8f6e-4dae-9b11-89febabb2680" name="6b2f637b-c68b-4f56-bc18-35febbe0db19" type="radio">
+</input><label class="tabbed-label" for="9f006b1f-8f6e-4dae-9b11-89febabb2680">
 Linux/Docker</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get update
 apt-get install git-all
 </pre></div>
 </div>
 </div>
-<input id="36f14ac5-2c0d-4365-9fab-0903994b5488" name="160a21c9-4fd7-460d-ad0b-399ed57e8384" type="radio">
-</input><label class="tabbed-label" for="36f14ac5-2c0d-4365-9fab-0903994b5488">
+<input id="e9cf611f-062c-4d0a-a288-050b0a9bdc13" name="6b2f637b-c68b-4f56-bc18-35febbe0db19" type="radio">
+</input><label class="tabbed-label" for="e9cf611f-062c-4d0a-a288-050b0a9bdc13">
 macOS</label><div class="tabbed-content docutils">
 <p>Probably the easiest way to install on macOS is to install via <a class="reference external" href="https://developer.apple.com/downloads/">XCode Command Line Tools</a>. To check if <code class="docutils literal notranslate"><span class="pre">git</span></code> is installed:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git --version
 </pre></div>
 </div>
 </div>
-<input id="61b14936-5161-4cbd-9d83-2bcdc4403075" name="160a21c9-4fd7-460d-ad0b-399ed57e8384" type="radio">
-</input><label class="tabbed-label" for="61b14936-5161-4cbd-9d83-2bcdc4403075">
+<input id="5206d8ee-c53d-4892-8832-5f28be5c43b6" name="6b2f637b-c68b-4f56-bc18-35febbe0db19" type="radio">
+</input><label class="tabbed-label" for="5206d8ee-c53d-4892-8832-5f28be5c43b6">
 Windows</label><div class="tabbed-content docutils">
 <p>Recommended install: Go to <a class="reference external" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a> and the download will start automatically.</p>
 </div>
@@ -2045,31 +2045,30 @@ git push -u origin &lt;branch_name&gt;  <span class="c1"># push to specific bran
 </pre></div>
 </div>
 <p>This will open the default text editor, so that you can add a more descriptive message:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Commit</span> <span class="n">message</span> <span class="n">style</span> <span class="n">guide</span> <span class="k">for</span> <span class="n">Git</span>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Commit message style guide for Git
 
-<span class="n">The</span> <span class="n">first</span> <span class="n">line</span> <span class="n">of</span> <span class="n">a</span> <span class="n">commit</span> <span class="n">message</span> <span class="n">serves</span> <span class="k">as</span> <span class="n">a</span> <span class="n">summary</span><span class="o">.</span>  <span class="n">When</span> <span class="n">displayed</span>
-<span class="n">on</span> <span class="n">the</span> <span class="n">web</span><span class="p">,</span> <span class="n">it</span><span class="s1">&#39;s often styled as a heading, and in emails, it&#39;</span><span class="n">s</span>
-<span class="n">typically</span> <span class="n">used</span> <span class="k">as</span> <span class="n">the</span> <span class="n">subject</span><span class="o">.</span>  <span class="n">As</span> <span class="n">such</span><span class="p">,</span> <span class="n">you</span> <span class="n">should</span> <span class="n">capitalize</span> <span class="n">it</span> <span class="ow">and</span>
-<span class="n">omit</span> <span class="nb">any</span> <span class="n">trailing</span> <span class="n">punctuation</span><span class="o">.</span>  <span class="n">Aim</span> <span class="k">for</span> <span class="n">about</span> <span class="mi">50</span> <span class="n">characters</span><span class="p">,</span> <span class="n">give</span> <span class="ow">or</span>
-<span class="n">take</span><span class="p">,</span> <span class="n">otherwise</span> <span class="n">it</span> <span class="n">may</span> <span class="n">be</span> <span class="n">painfully</span> <span class="n">truncated</span> <span class="ow">in</span> <span class="n">some</span> <span class="n">contexts</span><span class="o">.</span>  <span class="n">Write</span>
-<span class="n">it</span><span class="p">,</span> <span class="n">along</span> <span class="k">with</span> <span class="n">the</span> <span class="n">rest</span> <span class="n">of</span> <span class="n">your</span> <span class="n">message</span><span class="p">,</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">imperative</span> <span class="n">tense</span><span class="p">:</span> <span class="s2">&quot;Fix</span>
-<span class="n">bug</span><span class="s2">&quot; and not &quot;</span><span class="n">Fixed</span> <span class="n">bug</span><span class="s2">&quot; or &quot;</span><span class="n">Fixes</span> <span class="n">bug</span><span class="s2">&quot;.  Consistent wording makes it</span>
-<span class="n">easier</span> <span class="n">to</span> <span class="n">mentally</span> <span class="n">process</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">commits</span><span class="o">.</span>
+The first line of a commit message serves as a summary.  When displayed
+on the web, it&#39;s often styled as a heading, and in emails, it&#39;s
+typically used as the subject.  As such, you should capitalize it and
+omit any trailing punctuation.  Aim for about 50 characters, give or
+take, otherwise it may be painfully truncated in some contexts.  Write
+it, along with the rest of your message, in the imperative tense: &quot;Fix
+bug&quot; and not &quot;Fixed bug&quot; or &quot;Fixes bug&quot;.  Consistent wording makes it
+easier to mentally process a list of commits.
 
-<span class="n">Oftentimes</span> <span class="n">a</span> <span class="n">subject</span> <span class="n">by</span> <span class="n">itself</span> <span class="ow">is</span> <span class="n">sufficient</span><span class="o">.</span>  <span class="n">When</span> <span class="n">it</span><span class="s1">&#39;s not, add a</span>
-<span class="n">blank</span> <span class="n">line</span> <span class="p">(</span><span class="n">this</span> <span class="ow">is</span> <span class="n">important</span><span class="p">)</span> <span class="n">followed</span> <span class="n">by</span> <span class="n">one</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">paragraphs</span> <span class="n">hard</span>
-<span class="n">wrapped</span> <span class="n">to</span> <span class="mi">72</span> <span class="n">characters</span><span class="o">.</span>  <span class="n">Git</span> <span class="ow">is</span> <span class="n">strongly</span> <span class="n">opinionated</span> <span class="n">that</span> <span class="n">the</span> <span class="n">author</span>
-<span class="ow">is</span> <span class="n">responsible</span> <span class="k">for</span> <span class="n">line</span> <span class="n">breaks</span><span class="p">;</span> <span class="k">if</span> <span class="n">you</span> <span class="n">omit</span> <span class="n">them</span><span class="p">,</span> <span class="n">command</span> <span class="n">line</span> <span class="n">tooling</span>
-<span class="n">will</span> <span class="n">show</span> <span class="n">it</span> <span class="k">as</span> <span class="n">one</span> <span class="n">extremely</span> <span class="n">long</span> <span class="n">unwrapped</span> <span class="n">line</span><span class="o">.</span>  <span class="n">Fortunately</span><span class="p">,</span> <span class="n">most</span>
-<span class="n">text</span> <span class="n">editors</span> <span class="n">are</span> <span class="n">capable</span> <span class="n">of</span> <span class="n">automating</span> <span class="n">this</span><span class="o">.</span>
+Oftentimes a subject by itself is sufficient.  When it&#39;s not, add a
+blank line (this is important) followed by one or more paragraphs hard
+wrapped to 72 characters.  Git is strongly opinionated that the author
+is responsible for line breaks; if you omit them, command line tooling
+will show it as one extremely long unwrapped line.  Fortunately, most
+text editors are capable of automating this.
 
-<span class="p">:</span><span class="n">q</span>
+:q
 </pre></div>
 </div>
 <p>For more information on commit messages:</p>
 <p><a class="reference external" href="https://commit.style">https://commit.style/</a></p>
 <p><a class="reference external" href="https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message">https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message</a></p>
-<p><a class="reference external" href="https://github.com/neuropoly/spinalcordtoolbox/wiki/git_rules">https://github.com/neuropoly/spinalcordtoolbox/wiki/git_rules</a></p>
 </section>
 <section id="amending-commits">
 <h3>Amending Commits<a class="headerlink" href="#amending-commits" title="Permalink to this headline">#</a></h3>

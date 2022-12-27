@@ -326,7 +326,7 @@ git commit
 
 This will open the default text editor, so that you can add a more descriptive message:
 
-```
+```text
 Commit message style guide for Git
 
 The first line of a commit message serves as a summary.  When displayed
@@ -354,7 +354,6 @@ For more information on commit messages:
 
 [https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message](https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message)
 
-[https://github.com/neuropoly/spinalcordtoolbox/wiki/git_rules](https://github.com/neuropoly/spinalcordtoolbox/wiki/git_rules)
 
 ### Amending Commits
 
