@@ -9,7 +9,6 @@ dropbox
 jekyll
 microsoft-word
 openneuro
-git-and-github
 sketchup
 xquartz
 ```
