@@ -683,7 +683,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../git.html">
-     git &amp; Github
+     Git &amp; Github
     </a>
    </li>
    <li class="toctree-l2">
@@ -790,11 +790,6 @@
      <li class="toctree-l3">
       <a class="reference internal" href="../misc/openneuro.html">
        OpenNeuro
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../misc/git-and-github.html">
-       Git &amp; GitHub
       </a>
      </li>
      <li class="toctree-l3">
@@ -1789,15 +1784,15 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 <h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">#</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="2cb1a566-ac3e-4fe3-ae86-1b1751f005b0" name="fb1b8980-0967-437b-8776-992656d8e322" type="radio">
-</input><label class="tabbed-label" for="2cb1a566-ac3e-4fe3-ae86-1b1751f005b0">
+<input checked="checked" id="5e06d0a3-e6f6-4867-86d3-a8f9bfbe1d6c" name="5aa2aa96-9a66-4218-acc9-6acf78165e52" type="radio">
+</input><label class="tabbed-label" for="5e06d0a3-e6f6-4867-86d3-a8f9bfbe1d6c">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
 </pre></div>
 </div>
 </div>
-<input id="7d438a6a-e9dd-4148-9330-b070726c2624" name="fb1b8980-0967-437b-8776-992656d8e322" type="radio">
-</input><label class="tabbed-label" for="7d438a6a-e9dd-4148-9330-b070726c2624">
+<input id="f0ac6b68-37f0-4066-9aa4-69306ace64ff" name="5aa2aa96-9a66-4218-acc9-6acf78165e52" type="radio">
+</input><label class="tabbed-label" for="f0ac6b68-37f0-4066-9aa4-69306ace64ff">
 Mac</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
 find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5

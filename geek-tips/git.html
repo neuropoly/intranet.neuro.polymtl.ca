@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>git &amp; Github &#8212; NeuroPoly Lab Manual</title>
+    <title>Git &amp; Github &#8212; NeuroPoly Lab Manual</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -683,7 +683,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     git &amp; Github
+     Git &amp; Github
     </a>
    </li>
    <li class="toctree-l2">
@@ -790,11 +790,6 @@
      <li class="toctree-l3">
       <a class="reference internal" href="misc/openneuro.html">
        OpenNeuro
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="misc/git-and-github.html">
-       Git &amp; GitHub
       </a>
      </li>
      <li class="toctree-l3">
@@ -1027,8 +1022,25 @@ title="Edit this page"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tutorials-courses">
-   Tutorials / courses
+   Tutorials &amp; Courses
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tutorials">
+     Tutorials:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#courses">
+     Courses:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-resources">
+     Other resources:
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#install-git">
@@ -1046,13 +1058,13 @@ title="Edit this page"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#maintain-your-branch-up-to-date">
-     Maintain your branch up-to-date
+    <a class="reference internal nav-link" href="#keep-your-branch-up-to-date">
+     Keep your branch up-to-date
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#send-a-pull-request">
-     Send a pull request
+    <a class="reference internal nav-link" href="#submit-a-pull-request">
+     Submit a pull request
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1143,6 +1155,33 @@ title="Edit this page"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#commits">
+   Commits
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#commit-message-convention">
+     Commit message convention
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#amending-commits">
+     Amending Commits
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rollbacks">
+     Rollbacks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reset-commit">
+     Reset Commit
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to">
    HOW TO
   </a>
@@ -1194,8 +1233,8 @@ title="Edit this page"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#come-back-to-previous-commit-ignore-latest-ones">
-     Come back to previous commit (ignore latest ones)
+    <a class="reference internal nav-link" href="#come-back-to-previous-commit-ignore-the-latest-ones">
+     Come back to previous commit (ignore the latest ones)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1209,11 +1248,6 @@ title="Edit this page"
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#commit-message-convention">
-   Commit message convention
-  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#github">
@@ -1281,7 +1315,7 @@ title="Edit this page"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git-software">
-   git software
+   Git software
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -1328,7 +1362,7 @@ title="Edit this page"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>git & Github</h1>
+                <h1>Git & Github</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -1340,8 +1374,25 @@ title="Edit this page"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tutorials-courses">
-   Tutorials / courses
+   Tutorials &amp; Courses
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tutorials">
+     Tutorials:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#courses">
+     Courses:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-resources">
+     Other resources:
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#install-git">
@@ -1359,13 +1410,13 @@ title="Edit this page"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#maintain-your-branch-up-to-date">
-     Maintain your branch up-to-date
+    <a class="reference internal nav-link" href="#keep-your-branch-up-to-date">
+     Keep your branch up-to-date
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#send-a-pull-request">
-     Send a pull request
+    <a class="reference internal nav-link" href="#submit-a-pull-request">
+     Submit a pull request
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1456,6 +1507,33 @@ title="Edit this page"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#commits">
+   Commits
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#commit-message-convention">
+     Commit message convention
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#amending-commits">
+     Amending Commits
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rollbacks">
+     Rollbacks
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reset-commit">
+     Reset Commit
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to">
    HOW TO
   </a>
@@ -1507,8 +1585,8 @@ title="Edit this page"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#come-back-to-previous-commit-ignore-latest-ones">
-     Come back to previous commit (ignore latest ones)
+    <a class="reference internal nav-link" href="#come-back-to-previous-commit-ignore-the-latest-ones">
+     Come back to previous commit (ignore the latest ones)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -1522,11 +1600,6 @@ title="Edit this page"
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#commit-message-convention">
-   Commit message convention
-  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#github">
@@ -1594,7 +1667,7 @@ title="Edit this page"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git-software">
-   git software
+   Git software
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -1643,37 +1716,67 @@ title="Edit this page"
               <div>
                 
   <section id="git-github">
-<h1>git &amp; Github<a class="headerlink" href="#git-github" title="Permalink to this headline">#</a></h1>
+<h1>Git &amp; Github<a class="headerlink" href="#git-github" title="Permalink to this headline">#</a></h1>
 <section id="tutorials-courses">
-<h2>Tutorials / courses<a class="headerlink" href="#tutorials-courses" title="Permalink to this headline">#</a></h2>
-<p><strong>EVERYONE WORKING WITH GIT AT NEUROPOLY LAB: PLEASE TAKE 2+ HOURS OF YOUR TIME AND LEARN HOW TO USE GIT BEFORE ACTUALLY USING IT.</strong></p>
+<h2>Tutorials &amp; Courses<a class="headerlink" href="#tutorials-courses" title="Permalink to this headline">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Everyone working with <code class="docutils literal notranslate"><span class="pre">git</span></code> at NeuroPoly Lab: Please take 2+ hours of your time and learn how to use <code class="docutils literal notranslate"><span class="pre">git</span></code> before using it.</strong></p>
+</div>
+<p><a class="reference external" href="https://git-scm.com/book/en/v2"><strong>Official Git Documentation</strong></a></p>
+<section id="tutorials">
+<h3>Tutorials:<a class="headerlink" href="#tutorials" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="https://git-scm.com/book/en/v2">git official documentation</a></p></li>
-<li><p>TUTORIAL:</p>
-<ul>
 <li><p><a class="reference external" href="https://githowto.com">Learn By Doing</a></p></li>
-<li><p><a class="reference external" href="https://www.coursera.org/learn/introduction-git-github">Coursera: Introduction to git/github</a></p></li>
-<li><p><a class="reference external" href="https://try.github.io">Github’s Learn By Doing</a></p></li>
 <li><p><a class="reference external" href="https://git-send-email.io">sr.ht’s Learn By Doing</a></p></li>
-<li><p><a class="reference external" href="https://lab.github.com/githubtraining/ramp-up-on-git-and-github">Ramp up on Git and GitHub (Github Lab)</a></p></li>
-<li><p><a class="reference external" href="https://lab.github.com/githubtraining/managing-merge-conflicts">Managing merge conflicts (Github Lab)</a></p></li>
 <li><p><a class="reference external" href="http://www.atlassian.com/git">http://www.atlassian.com/git</a></p></li>
 </ul>
-</li>
-<li><p><a class="reference external" href="https://wizardzines.com/zines/oh-shit-git/">A guide to managing git mistakes by &#64;jvns</a></p></li>
+</section>
+<section id="courses">
+<h3>Courses:<a class="headerlink" href="#courses" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.coursera.org/learn/introduction-git-github">Coursera: Introduction to git/github</a></p></li>
+</ul>
+</section>
+<section id="other-resources">
+<h3>Other resources:<a class="headerlink" href="#other-resources" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://try.github.io">Github’s Learn By Doing</a></p></li>
+<li><p><a class="reference external" href="https://wizardzines.com/zines/oh-shit-git/">A guide to managing git mistakes from Julia Evans</a></p></li>
 <li><p><a class="reference external" href="https://matthew-brett.github.io/curious-git/index.html">Excellent notes from Matthew Brett</a></p></li>
 <li><p><a class="reference external" href="http://emdupre.github.io/git-course/">Another great tutorial from Elizabeth DuPre</a>, and a <a class="reference external" href="https://neurohackademy.org/course/collaborating-with-git-and-github/">video</a></p></li>
-<li><p><a class="reference external" href="https://gist.github.com/hofmannsven/6814451">Excellent infos</a></p></li>
+<li><p><a class="reference external" href="https://gist.github.com/hofmannsven/6814451">Sven Hofmann README</a></p></li>
 <li><p><a class="reference external" href="https://rogerdudler.github.io/git-guide/">git - the simple guide (Roger Dudler)</a></p></li>
 <li><p>Snapshot of all commands: <a class="reference external" href="http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf">cheat sheet</a></p></li>
+<li><p><a class="reference external" href="https://ohshitgit.com">Methods to dig yourself out of common pitfalls</a></p></li>
 </ul>
+</section>
 </section>
 <section id="install-git">
 <h2>Install git<a class="headerlink" href="#install-git" title="Permalink to this headline">#</a></h2>
-<p>If you’re running from Docker:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
-<span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">git</span><span class="o">-</span><span class="nb">all</span>
+<p>Full instructions to install <code class="docutils literal notranslate"><span class="pre">git</span></code> <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">here</a>. We have a quick-start below:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="b244c2f2-ddbb-4f47-ae2e-43aefd0bb08a" name="160a21c9-4fd7-460d-ad0b-399ed57e8384" type="radio">
+</input><label class="tabbed-label" for="b244c2f2-ddbb-4f47-ae2e-43aefd0bb08a">
+Linux/Docker</label><div class="tabbed-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get update
+apt-get install git-all
 </pre></div>
+</div>
+</div>
+<input id="36f14ac5-2c0d-4365-9fab-0903994b5488" name="160a21c9-4fd7-460d-ad0b-399ed57e8384" type="radio">
+</input><label class="tabbed-label" for="36f14ac5-2c0d-4365-9fab-0903994b5488">
+macOS</label><div class="tabbed-content docutils">
+<p>Probably the easiest way to install on macOS is to install via <a class="reference external" href="https://developer.apple.com/downloads/">XCode Command Line Tools</a>. To check if <code class="docutils literal notranslate"><span class="pre">git</span></code> is installed:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git --version
+</pre></div>
+</div>
+</div>
+<input id="61b14936-5161-4cbd-9d83-2bcdc4403075" name="160a21c9-4fd7-460d-ad0b-399ed57e8384" type="radio">
+</input><label class="tabbed-label" for="61b14936-5161-4cbd-9d83-2bcdc4403075">
+Windows</label><div class="tabbed-content docutils">
+<p>Recommended install: Go to <a class="reference external" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a> and the download will start automatically.</p>
+</div>
 </div>
 </section>
 <section id="contribute-to-a-project">
@@ -1687,44 +1790,40 @@ title="Edit this page"
 </ol>
 <section id="fork-the-repository">
 <h3>Fork the repository<a class="headerlink" href="#fork-the-repository" title="Permalink to this headline">#</a></h3>
-<ol class="arabic">
-<li><p>Log in to your Github account</p></li>
-<li><p>Fork the project repository: click on the</p>
-<p><code class="docutils literal notranslate"><span class="pre">Fork</span></code> button near the top of the page.</p>
-<p>This creates a copy of the code under your account on the GitHub</p>
-<p>server.</p>
-</li>
-<li><p>In a Terminal window, go to the folder where you want to copy</p>
-<p>locally the code.</p>
-</li>
+<ol class="arabic simple">
+<li><p>Log in to your GitHub account</p></li>
+<li><p>Fork the project repository: click on the <code class="docutils literal notranslate"><span class="pre">Fork</span></code> button near the top of the page. This creates a copy of the code under your account on the GitHub server.</p></li>
+<li><p>In a Terminal window, go to the folder where you want to copy locally the code.</p></li>
 <li><p>Clone the copy of the code to your local disk:</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">your_login</span><span class="o">/</span><span class="n">project_name</span><span class="o">.</span><span class="n">git</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git clone git@github.com:your_login/project_name.git
 </pre></div>
 </div>
-<p>N.B. If you get the following error message, <a class="reference external" href="http://www.neuro.polymtl.ca/doku.php?id=tips_and_tricks:git#github">create a SSH key</a>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="ne">Warning</span><span class="p">:</span> <span class="n">Permanently</span> <span class="n">added</span> <span class="n">the</span> <span class="n">RSA</span> <span class="n">host</span> <span class="n">key</span> <span class="k">for</span> <span class="n">IP</span> <span class="n">address</span> <span class="s1">&#39;XX.XX.XX.XX&#39;</span> <span class="n">to</span> <span class="n">the</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">known</span> <span class="n">hosts</span><span class="o">.</span>
-  <span class="n">Permission</span> <span class="n">denied</span> <span class="p">(</span><span class="n">publickey</span><span class="p">)</span><span class="o">.</span>
-  <span class="n">fatal</span><span class="p">:</span> <span class="n">Could</span> <span class="ow">not</span> <span class="n">read</span> <span class="kn">from</span> <span class="nn">remote</span> <span class="n">repository</span><span class="o">.</span>
-  <span class="n">Please</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">you</span> <span class="n">have</span> <span class="n">the</span> <span class="n">correct</span> <span class="n">access</span> <span class="n">rights</span>
-  <span class="ow">and</span> <span class="n">the</span> <span class="n">repository</span> <span class="n">exists</span><span class="o">.</span><span class="s2">&quot;</span>
-</pre></div>
+<p>If you get the following error message, <a class="reference external" href="http://www.neuro.polymtl.ca/doku.php?id=tips_and_tricks:git#github">create an SSH key</a>:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<blockquote>
+<div><p>Warning: Permanently added the RSA host key for IP address ‘XX.XX.XX.XX’ to the list of known hosts.<br />
+Permission denied (publickey).<br />
+fatal: Could not read from remote repository.<br />
+Please make sure you have the correct access rights and the repository exists.</p>
+</div></blockquote>
 </div>
 </section>
-<section id="maintain-your-branch-up-to-date">
-<h3>Maintain your branch up-to-date<a class="headerlink" href="#maintain-your-branch-up-to-date" title="Permalink to this headline">#</a></h3>
+<section id="keep-your-branch-up-to-date">
+<h3>Keep your branch up-to-date<a class="headerlink" href="#keep-your-branch-up-to-date" title="Permalink to this headline">#</a></h3>
 <p>Once the clone is complete your repo will have a remote named <code class="docutils literal notranslate"><span class="pre">origin</span></code> that points to your fork on GitHub. Don’t let the name confuse you, this does not point to the original repo you forked from. To help you keep track of that repo you need to add another remote named <code class="docutils literal notranslate"><span class="pre">upstream</span></code>:</p>
 <ul class="simple">
 <li><p>open a terminal, go to your repos and type:</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">git</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">neuropoly</span><span class="o">/</span><span class="n">spinalcordtoolbox</span><span class="o">.</span><span class="n">git</span>
-  <span class="n">git</span> <span class="n">fetch</span> <span class="n">upstream</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git remote add upstream git://github.com/neuropoly/spinalcordtoolbox.git
+  git fetch upstream
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Then (like <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> which is fetch + merge):</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">merge</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span> <span class="n">master</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git merge upstream/master master
 </pre></div>
 </div>
 <ul>
@@ -1732,52 +1831,49 @@ title="Edit this page"
 <p>(like a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">--rebase</span></code>)</p>
 </li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">rebase</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git rebase upstream/master
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">--rebase</span></code> option can be used to ensure a linear history by preventing unnecessary merge commits. Many developers prefer rebasing over merging, since it’s like saying, “I want to put my changes on top of what everybody else has done.”</p>
 </section>
-<section id="send-a-pull-request">
-<h3>Send a pull request<a class="headerlink" href="#send-a-pull-request" title="Permalink to this headline">#</a></h3>
+<section id="submit-a-pull-request">
+<h3>Submit a pull request<a class="headerlink" href="#submit-a-pull-request" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>In a Terminal window, go to your git repository and type:</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">feature</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">add</span> <span class="n">to</span> <span class="n">the</span> <span class="n">project</span><span class="o">&gt;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git push origin &lt;BRANCH_NAME&gt;
 </pre></div>
 </div>
-<ul>
-<li><p>Log in to your Github account and go to your branch.</p></li>
-<li><p>Click on “Pull request”. You will be sent to a page asking you to</p>
-<p>describe your modifications; you can give any title you want to your</p>
-<p>modfications (it doesn’t need to be the name of your branch).</p>
-</li>
-<li><p>Click on “Create a pull request”.</p></li>
+<ul class="simple">
+<li><p>Log in to your GitHub account and go to your branch.</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Pull</span> <span class="pre">request</span></code>. You will be sent to a page asking you to describe your modifications; you can give any title you want to your modifications (it doesn’t need to be the name of your branch).</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">a</span> <span class="pre">pull</span> <span class="pre">request</span></code>.</p></li>
 </ul>
 <p>Now you need to wait that the person in charge of the project accepts your modifications; if this person finds problems in your code, you can still push new changes to your code and they will be added to your pull request.</p>
 </section>
 <section id="how-to-merge-specific-files-from-another-branch">
 <h3>How to <code class="docutils literal notranslate"><span class="pre">merge</span></code> specific files from another branch<a class="headerlink" href="#how-to-merge-specific-files-from-another-branch" title="Permalink to this headline">#</a></h3>
 <p>The tool to use is <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">checkout</span> <span class="n">source_branch</span> <span class="o">&lt;</span><span class="n">paths</span><span class="o">&gt;...</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git checkout source_branch &lt;paths&gt;...
 </pre></div>
 </div>
 <p>You simply need to give <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> the name of the feature branch and the paths to the specific files that we want to add to your <code class="docutils literal notranslate"><span class="pre">master</span></code> branch as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  $ git branch
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  $ git branch
   * master
     your_branch
 
   $ git checkout your_branch &lt;path_to_file_1&gt; &lt;path_to_file_2&gt;...
 
   $ git status
-  # On branch master
-  # Changes to be committed:
-  #   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
-  #
-  #   new file:   &lt;path_to_file_1&gt;
-  #   new file:   &lt;path_to_file_2&gt;
-  #   ...
+  <span class="c1"># On branch master</span>
+  <span class="c1"># Changes to be committed:</span>
+  <span class="c1">#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)</span>
+  <span class="c1">#</span>
+  <span class="c1">#   new file:   &lt;path_to_file_1&gt;</span>
+  <span class="c1">#   new file:   &lt;path_to_file_2&gt;</span>
+  <span class="c1">#   ...</span>
   
-  $ git commit -m &quot;explanation of the commit you are doing&quot;
+  $ git commit -m <span class="s2">&quot;explanation of the commit you are doing&quot;</span>
 </pre></div>
 </div>
 <p>See the page <a class="reference external" href="http://jasonrudolph.com/blog/2009/02/25/git-tip-how-to-merge-specific-files-from-another-branch/">git tip how to merge specific files from another branch</a> for more details.</p>
@@ -1789,40 +1885,40 @@ title="Edit this page"
 <h2>Branches<a class="headerlink" href="#branches" title="Permalink to this headline">#</a></h2>
 <section id="list-remote-branches">
 <h3>List remote branches<a class="headerlink" href="#list-remote-branches" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">remote</span> <span class="n">show</span> <span class="n">origin</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git remote show origin
 </pre></div>
 </div>
 </section>
 <section id="track-remote-branch">
 <h3>Track remote branch<a class="headerlink" href="#track-remote-branch" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">remote</span> <span class="n">update</span>
-  <span class="n">git</span> <span class="n">fetch</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git remote update
+  git fetch
 </pre></div>
 </div>
 </section>
 <section id="checkout-existing-branch">
 <h3>Checkout existing branch<a class="headerlink" href="#checkout-existing-branch" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">checkout</span> <span class="o">&lt;</span><span class="n">branch_name</span><span class="o">&gt;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git checkout &lt;branch_name&gt;
 </pre></div>
 </div>
 <p>If branch is not tracked (use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">show</span> <span class="pre">origin</span></code> to check if branch is listed), then use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">fetch</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git fetch
 </pre></div>
 </div>
 <p>If you still don’t see the branch listed, maybe your local git repository does not allow to fetch all branches on <code class="docutils literal notranslate"><span class="pre">master</span></code>. This happens if you <code class="docutils literal notranslate"><span class="pre">clone</span></code> with <code class="docutils literal notranslate"><span class="pre">--depth=X</span></code>. To check if this is the case, run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">get</span> <span class="n">remote</span><span class="o">.</span><span class="n">origin</span><span class="o">.</span><span class="n">fetch</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git config --get remote.origin.fetch
 </pre></div>
 </div>
 <p>If result is not <code class="docutils literal notranslate"><span class="pre">+refs/heads/\*:refs/remotes/origin/\*</span></code>, then update the <code class="docutils literal notranslate"><span class="pre">remote.origin.fetch</span></code> variable using:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">add</span> <span class="n">remote</span><span class="o">.</span><span class="n">origin</span><span class="o">.</span><span class="n">fetch</span> <span class="o">+</span><span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/*</span><span class="p">:</span><span class="n">refs</span><span class="o">/</span><span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/*</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
 </pre></div>
 </div>
 <p>Then, fetch:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">fetch</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git fetch
 </pre></div>
 </div>
 <p>Now, all tracked branches should appear when running:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">remote</span> <span class="n">show</span> <span class="n">origin</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git remote show origin
 </pre></div>
 </div>
 </section>
@@ -1840,31 +1936,36 @@ git checkout -b branch-name username/branch-name
 </section>
 <section id="clone-specific-branch">
 <h3>Clone specific branch<a class="headerlink" href="#clone-specific-branch" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">-</span><span class="n">b</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">remote_repo</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">depth</span> <span class="mi">1</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone -b &lt;branch&gt; &lt;remote_repo&gt; --depth <span class="m">1</span>
 </pre></div>
 </div>
 </section>
 <section id="create-a-branch">
 <h3>Create a branch<a class="headerlink" href="#create-a-branch" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="o">&lt;</span><span class="n">branch_name</span><span class="o">&gt;</span>
+<ul class="simple">
+<li><p>Prefix the branch name with a personal identifier (such as your initials) and a forward slash.</p></li>
+<li><p>If the branch you are working on is in response to an issue, provide the issue number.</p></li>
+<li><p>Add some text that make the branch name meaningful.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git checkout -b &lt;jv/123-branch_name&gt;
 </pre></div>
 </div>
 </section>
 <section id="push-to-remote">
 <h3>Push to remote<a class="headerlink" href="#push-to-remote" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span>
-<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">branch_name</span><span class="o">&gt;</span>  <span class="c1"># push to specific branch</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push -u
+git push -u origin &lt;branch_name&gt;  <span class="c1"># push to specific branch</span>
 </pre></div>
 </div>
 </section>
 <section id="remove-a-branch">
 <h3>Remove a branch<a class="headerlink" href="#remove-a-branch" title="Permalink to this headline">#</a></h3>
 <p>To remove a local branch</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">d</span> <span class="o">&lt;</span><span class="n">branch_name</span><span class="o">&gt;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git branch -d &lt;branch_name&gt;
 </pre></div>
 </div>
 <p>To remove a remote branch (if you know what you are doing!)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="p">:</span><span class="o">&lt;</span><span class="n">branch_name</span><span class="o">&gt;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>  git push origin :&lt;branch_name&gt;
 </pre></div>
 </div>
 </section>
@@ -1873,30 +1974,30 @@ git checkout -b branch-name username/branch-name
 <h2>General usage<a class="headerlink" href="#general-usage" title="Permalink to this headline">#</a></h2>
 <section id="upload-local-repository-for-the-first-time">
 <h3>Upload local repository for the first time<a class="headerlink" href="#upload-local-repository-for-the-first-time" title="Permalink to this headline">#</a></h3>
-<p>First, create repository in github or bitbucket. Then, open a Terminal and run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your</span><span class="o">/</span><span class="n">project</span>
-<span class="n">git</span> <span class="n">init</span>  <span class="c1"># initialize local git repos</span>
-<span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">USERNAME</span><span class="nd">@URL_TO_REPOSITORY</span><span class="o">.</span><span class="n">git</span>  <span class="c1"># link to remote repos</span>
-<span class="n">git</span> <span class="n">add</span> <span class="o">.</span>  <span class="c1"># add every file under folder</span>
-<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;First commit&#39;</span>
-<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
+<p>First, create a repository on the GitHub website. Then, open a Terminal and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    <span class="nb">cd</span> &lt;/path/to/your/project&gt;
+    git init  <span class="c1"># initialize local git repos</span>
+    git remote add origin https://USERNAME@URL_TO_REPOSITORY.git  <span class="c1"># link to remote repos</span>
+    git add .  <span class="c1"># add every file under folder</span>
+    git commit -m <span class="s1">&#39;First commit&#39;</span>
+    git push -u origin master
 </pre></div>
 </div>
 </section>
 <section id="switch-local-repository-to-another-branch">
 <h3>Switch local repository to another branch<a class="headerlink" href="#switch-local-repository-to-another-branch" title="Permalink to this headline">#</a></h3>
 <p>on Sourcetree:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Checkout</span> <span class="o">&gt;</span> <span class="n">Checkout</span> <span class="n">New</span> <span class="n">Branch</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Checkout &gt; Checkout New Branch
 </pre></div>
 </div>
 <p>on Terminal:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">NAME_BRANCH</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout &lt;BRANCH_NAME&gt;
 </pre></div>
 </div>
 </section>
 <section id="check-which-branch-you-are-currently-working-on">
 <h3>Check which branch you are currently working on<a class="headerlink" href="#check-which-branch-you-are-currently-working-on" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git branch
 </pre></div>
 </div>
 </section>
@@ -1909,24 +2010,121 @@ git checkout -b branch-name username/branch-name
 </ol>
 </section>
 </section>
+<section id="commits">
+<h2>Commits<a class="headerlink" href="#commits" title="Permalink to this headline">#</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Term</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>tracked file</strong></p></td>
+<td><p>A tracked file is one that is part of the git version control. New files are untracked.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>untracked file</strong></p></td>
+<td><p>An untracked file is one that is not part of the git version control. This includes new files, and any files that are specified to be untracked. For example, you may want to ignore files in the <code class="docutils literal notranslate"><span class="pre">env/</span></code> folder. To mark a file as untracked, you can add the file to the <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>head</strong></p></td>
+<td><p>The HEAD is the most recent snapshot, or commit.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>commit ID</strong></p></td>
+<td><p>The commit ID is the 40-character alphanumeric identifier for a given commit. It is a hash, generated using SHA1 (cryptographic algorithm).</p></td>
+</tr>
+</tbody>
+</table>
+<section id="commit-message-convention">
+<h3>Commit message convention<a class="headerlink" href="#commit-message-convention" title="Permalink to this headline">#</a></h3>
+<p>Writing good commit messages is an art. They should be concise but accurate. They should help someone several years from now with little knowledge of your project understand at a high-level what each change was for, and they should help you remember the direction you are working in while working on a branch in the present.</p>
+<p>For short, simple commits, this can be achieved via:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit -m <span class="s2">&quot;A message describing your commit&quot;</span>
+</pre></div>
+</div>
+<p>However, you may want a longer, more descriptive message. To do this, just run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit
+</pre></div>
+</div>
+<p>This will open the default text editor, so that you can add a more descriptive message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Commit</span> <span class="n">message</span> <span class="n">style</span> <span class="n">guide</span> <span class="k">for</span> <span class="n">Git</span>
+
+<span class="n">The</span> <span class="n">first</span> <span class="n">line</span> <span class="n">of</span> <span class="n">a</span> <span class="n">commit</span> <span class="n">message</span> <span class="n">serves</span> <span class="k">as</span> <span class="n">a</span> <span class="n">summary</span><span class="o">.</span>  <span class="n">When</span> <span class="n">displayed</span>
+<span class="n">on</span> <span class="n">the</span> <span class="n">web</span><span class="p">,</span> <span class="n">it</span><span class="s1">&#39;s often styled as a heading, and in emails, it&#39;</span><span class="n">s</span>
+<span class="n">typically</span> <span class="n">used</span> <span class="k">as</span> <span class="n">the</span> <span class="n">subject</span><span class="o">.</span>  <span class="n">As</span> <span class="n">such</span><span class="p">,</span> <span class="n">you</span> <span class="n">should</span> <span class="n">capitalize</span> <span class="n">it</span> <span class="ow">and</span>
+<span class="n">omit</span> <span class="nb">any</span> <span class="n">trailing</span> <span class="n">punctuation</span><span class="o">.</span>  <span class="n">Aim</span> <span class="k">for</span> <span class="n">about</span> <span class="mi">50</span> <span class="n">characters</span><span class="p">,</span> <span class="n">give</span> <span class="ow">or</span>
+<span class="n">take</span><span class="p">,</span> <span class="n">otherwise</span> <span class="n">it</span> <span class="n">may</span> <span class="n">be</span> <span class="n">painfully</span> <span class="n">truncated</span> <span class="ow">in</span> <span class="n">some</span> <span class="n">contexts</span><span class="o">.</span>  <span class="n">Write</span>
+<span class="n">it</span><span class="p">,</span> <span class="n">along</span> <span class="k">with</span> <span class="n">the</span> <span class="n">rest</span> <span class="n">of</span> <span class="n">your</span> <span class="n">message</span><span class="p">,</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">imperative</span> <span class="n">tense</span><span class="p">:</span> <span class="s2">&quot;Fix</span>
+<span class="n">bug</span><span class="s2">&quot; and not &quot;</span><span class="n">Fixed</span> <span class="n">bug</span><span class="s2">&quot; or &quot;</span><span class="n">Fixes</span> <span class="n">bug</span><span class="s2">&quot;.  Consistent wording makes it</span>
+<span class="n">easier</span> <span class="n">to</span> <span class="n">mentally</span> <span class="n">process</span> <span class="n">a</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">commits</span><span class="o">.</span>
+
+<span class="n">Oftentimes</span> <span class="n">a</span> <span class="n">subject</span> <span class="n">by</span> <span class="n">itself</span> <span class="ow">is</span> <span class="n">sufficient</span><span class="o">.</span>  <span class="n">When</span> <span class="n">it</span><span class="s1">&#39;s not, add a</span>
+<span class="n">blank</span> <span class="n">line</span> <span class="p">(</span><span class="n">this</span> <span class="ow">is</span> <span class="n">important</span><span class="p">)</span> <span class="n">followed</span> <span class="n">by</span> <span class="n">one</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">paragraphs</span> <span class="n">hard</span>
+<span class="n">wrapped</span> <span class="n">to</span> <span class="mi">72</span> <span class="n">characters</span><span class="o">.</span>  <span class="n">Git</span> <span class="ow">is</span> <span class="n">strongly</span> <span class="n">opinionated</span> <span class="n">that</span> <span class="n">the</span> <span class="n">author</span>
+<span class="ow">is</span> <span class="n">responsible</span> <span class="k">for</span> <span class="n">line</span> <span class="n">breaks</span><span class="p">;</span> <span class="k">if</span> <span class="n">you</span> <span class="n">omit</span> <span class="n">them</span><span class="p">,</span> <span class="n">command</span> <span class="n">line</span> <span class="n">tooling</span>
+<span class="n">will</span> <span class="n">show</span> <span class="n">it</span> <span class="k">as</span> <span class="n">one</span> <span class="n">extremely</span> <span class="n">long</span> <span class="n">unwrapped</span> <span class="n">line</span><span class="o">.</span>  <span class="n">Fortunately</span><span class="p">,</span> <span class="n">most</span>
+<span class="n">text</span> <span class="n">editors</span> <span class="n">are</span> <span class="n">capable</span> <span class="n">of</span> <span class="n">automating</span> <span class="n">this</span><span class="o">.</span>
+
+<span class="p">:</span><span class="n">q</span>
+</pre></div>
+</div>
+<p>For more information on commit messages:</p>
+<p><a class="reference external" href="https://commit.style">https://commit.style/</a></p>
+<p><a class="reference external" href="https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message">https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message</a></p>
+<p><a class="reference external" href="https://github.com/neuropoly/spinalcordtoolbox/wiki/git_rules">https://github.com/neuropoly/spinalcordtoolbox/wiki/git_rules</a></p>
+</section>
+<section id="amending-commits">
+<h3>Amending Commits<a class="headerlink" href="#amending-commits" title="Permalink to this headline">#</a></h3>
+<p>If you made a mistake in your last commit, want to add something, or change the commit message, you can do so with the –amend flag:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit --amend
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit --amend -m <span class="s2">&quot;New commit message&quot;</span>
+</pre></div>
+</div>
+<p>This will add the changes you have added to the most recent commit. Make sure to only use this on local commits (i.e. commits that have not been pushed).</p>
+</section>
+<section id="rollbacks">
+<h3>Rollbacks<a class="headerlink" href="#rollbacks" title="Permalink to this headline">#</a></h3>
+<p>What if you made a commit that you need to revert? The revert command allows for you to fix this. It undoes your last commit by performing the inverse of everything in the last commit. That way, you still have all the correct history, and you will be able to still see the commit you reverted.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git revert HEAD
+</pre></div>
+</div>
+<p>Alternatively, you can revert any commit using the commit ID:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git revert &lt;COMMIT_ID&gt;
+</pre></div>
+</div>
+</section>
+<section id="reset-commit">
+<h3>Reset Commit<a class="headerlink" href="#reset-commit" title="Permalink to this headline">#</a></h3>
+<p>If you want to go back to a previous commit and ignore the latest ones:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git reset --hard &lt;COMMIT_NUMBER&gt;
+git push -f
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>WARNING:</strong> This will erase the latest commits!</p>
+</div>
+</section>
+</section>
 <section id="how-to">
 <h2>HOW TO<a class="headerlink" href="#how-to" title="Permalink to this headline">#</a></h2>
 <section id="configure-git">
 <h3>Configure git<a class="headerlink" href="#configure-git" title="Permalink to this headline">#</a></h3>
 <p>Before starting: configure git to identify you for each commit</p>
 <p>Define the author name to be used for all commits by the current user.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --global user.name &lt;name&gt;
 </pre></div>
 </div>
 <p>Define the author email to be used for all commits by the current user.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">alias</span><span class="o">.&lt;</span><span class="n">alias</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">git</span><span class="o">-</span><span class="n">command</span><span class="o">&gt;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --global alias.&lt;alias-name&gt; &lt;git-command&gt;
 </pre></div>
 </div>
 <p>more info: <a class="reference external" href="http://www.atlassian.com/git/tutorial/git-basics#!config">http://www.atlassian.com/git/tutorial/git-basics#!config</a></p>
 </section>
 <section id="show-changed-files-between-two-commits">
 <h3>Show changed files between two commits<a class="headerlink" href="#show-changed-files-between-two-commits" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">diff</span> <span class="o">--</span><span class="n">name</span><span class="o">-</span><span class="n">only</span> <span class="n">SHA1</span> <span class="n">SHA2</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git diff --name-only SHA1 SHA2
 </pre></div>
 </div>
 <p>GIT - repository solution</p>
@@ -1935,66 +2133,66 @@ git checkout -b branch-name username/branch-name
 <p>Download: <a class="reference external" href="http://git-scm.com/download">http://git-scm.com/download</a></p>
 <p>Create a repository</p>
 <p>Create folder:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">my_repos</span><span class="o">.</span><span class="n">git</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir my_repos.git
 </pre></div>
 </div>
 <p>Go there:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">my_repos</span><span class="o">.</span><span class="n">git</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> my_repos.git
 </pre></div>
 </div>
 <p>Copy repository to your station</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">path_to_my_repos</span><span class="o">/</span><span class="n">my_repos</span><span class="o">.</span><span class="n">git</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone path_to_my_repos/my_repos.git
 </pre></div>
 </div>
 <p>Rename directory</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mv</span> <span class="n">my_repos</span><span class="o">.</span><span class="n">git</span> <span class="n">working_dir</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv my_repos.git working_dir
 </pre></div>
 </div>
-<p>N.B. Now you can copy/modif files in your working_dir</p>
+<p>Note: Now you can copy/modify files in your working_dir</p>
 <p>Commit changes locally</p>
 <p>Add the files you want to your commit list, e.g.:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">*.</span><span class="n">m</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add *.m
 </pre></div>
 </div>
 <p>To add all modified (or deleted) files automatically, use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">-</span><span class="n">u</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add -u
 </pre></div>
 </div>
 <p>Commit the files</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;enter description here&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit -m <span class="s1">&#39;enter description here&#39;</span>
 </pre></div>
 </div>
-<p>N.B. You have to configure the commit params (do only once):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s1">&#39;Your Name&#39;</span>
-<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="n">you</span><span class="nd">@somedomain</span><span class="o">.</span><span class="n">com</span>
+<p>Note: You have to configure the commit params (do only once):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config --global user.name <span class="s1">&#39;Your Name&#39;</span>
+git config --global user.email you@somedomain.com
 </pre></div>
 </div>
 <p>Cancel a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span> <span class="o">&lt;</span><span class="n">file_name</span><span class="o">&gt;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git reset &lt;file_name&gt;
 </pre></div>
 </div>
 <p>Look at the status of the files (tracked? Modified? Added?)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span> <span class="o">-</span><span class="n">s</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git status -s
 </pre></div>
 </div>
 <p>Update changes to your repos</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">path_to_my_repos</span><span class="o">/</span><span class="n">my_repos</span><span class="o">.</span><span class="n">git</span> <span class="n">master</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push path_to_my_repos/my_repos.git master
 </pre></div>
 </div>
 <p>example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">jcohen</span><span class="nd">@door</span><span class="o">.</span><span class="n">nmr</span><span class="o">.</span><span class="n">mgh</span><span class="o">.</span><span class="n">harvard</span><span class="o">.</span><span class="n">edu</span><span class="p">:</span><span class="o">/</span><span class="n">autofs</span><span class="o">/</span><span class="n">cluster</span><span class="o">/</span><span class="n">connectome</span><span class="o">/</span><span class="n">git</span><span class="o">/</span><span class="n">process_data</span><span class="o">.</span><span class="n">git</span> <span class="n">master</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push jcohen@door.nmr.mgh.harvard.edu:/autofs/cluster/connectome/git/process_data.git master
 </pre></div>
 </div>
 <p>or:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push -u origin master
 </pre></div>
 </div>
 <p>Download changes from your repos</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git pull
 </pre></div>
 </div>
 <p>Removed tracked files</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rm</span> <span class="s2">&quot;file name&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git rm <span class="s2">&quot;file name&quot;</span>
 </pre></div>
 </div>
 </section>
@@ -2002,19 +2200,19 @@ git checkout -b branch-name username/branch-name
 <h3>Download<a class="headerlink" href="#download" title="Permalink to this headline">#</a></h3>
 <p>Download (server -&gt; local station) a repository for the first time</p>
 <p>get address of repos, and type</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@bitbucket</span><span class="o">.</span><span class="n">org</span><span class="p">:</span><span class="n">neuropoly</span><span class="o">/</span><span class="n">spinalcordtoolbox_dev</span><span class="o">.</span><span class="n">git</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone git@bitbucket.org:neuropoly/spinalcordtoolbox_dev.git
 </pre></div>
 </div>
 </section>
 <section id="reset-your-branch-revert-your-local-commits">
 <h3>Reset your branch (revert your local commits)<a class="headerlink" href="#reset-your-branch-revert-your-local-commits" title="Permalink to this headline">#</a></h3>
 <p>Using the Terminal:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span>
-<span class="n">git</span> <span class="n">reset</span> <span class="o">--</span><span class="n">hard</span> <span class="n">origin</span><span class="o">/</span><span class="n">master</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git fetch
+git reset --hard origin/master
 </pre></div>
 </div>
 <p>Moving the current branch backward by N commits:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span> <span class="o">--</span><span class="n">hard</span> <span class="n">HEAD</span><span class="o">~</span><span class="n">N</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git reset --hard HEAD~N
 </pre></div>
 </div>
 <p>Warning: This comment effectively removes the N snapshots created from the project history. Remember that this kind of reset should only be used on unpublished commits. Never perform the above operation if you’ve already pushed your commits to a shared repository.</p>
@@ -2025,52 +2223,52 @@ git checkout -b branch-name username/branch-name
 <h3>Upload<a class="headerlink" href="#upload" title="Permalink to this headline">#</a></h3>
 <p>Upload (local –&gt; server) a repository for the first time</p>
 <ul class="simple">
-<li><p>Create repository in github</p></li>
+<li><p>Create repository in GitHub</p></li>
 <li><p>Clone repository to local station:</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">xxx</span><span class="o">/</span><span class="n">xxx</span><span class="o">.</span><span class="n">git</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/xxx/xxx.git
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>Copy files to upload to repository</p></li>
 <li><p>Update repository:</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">*</span>
-<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;First commit&quot;</span>
-<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add *
+git commit -m <span class="s2">&quot;First commit&quot;</span>
+git push -u origin master
 </pre></div>
 </div>
 </section>
 <section id="discard-local-changes-if-pull-doesn-t-work">
 <h3>Discard local changes (if <code class="docutils literal notranslate"><span class="pre">pull</span></code> doesn’t work)<a class="headerlink" href="#discard-local-changes-if-pull-doesn-t-work" title="Permalink to this headline">#</a></h3>
 <p>For a specific file use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">file</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">revert</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout &lt;path/to/file/to/revert&gt;
 </pre></div>
 </div>
 <p>For all unstaged files use:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">--</span> <span class="o">.</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout -- .
 </pre></div>
 </div>
 </section>
 <section id="commit-change-message">
 <h3>Commit: change message<a class="headerlink" href="#commit-change-message" title="Permalink to this headline">#</a></h3>
 <p>If you haven’t pushed and wish to replace your commit message, use that:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">--</span><span class="n">amend</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;New commit message&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit --amend -m <span class="s2">&quot;New commit message&quot;</span>
 </pre></div>
 </div>
 </section>
 <section id="ignore-file-mode">
 <h3>Ignore file mode<a class="headerlink" href="#ignore-file-mode" title="Permalink to this headline">#</a></h3>
 <p>If you cannot do a pull due to a change of file mode, you can ignore it:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="n">core</span><span class="o">.</span><span class="n">fileMode</span> <span class="n">false</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git config core.fileMode <span class="nb">false</span>
 </pre></div>
 </div>
 </section>
-<section id="come-back-to-previous-commit-ignore-latest-ones">
-<h3>Come back to previous commit (ignore latest ones)<a class="headerlink" href="#come-back-to-previous-commit-ignore-latest-ones" title="Permalink to this headline">#</a></h3>
+<section id="come-back-to-previous-commit-ignore-the-latest-ones">
+<h3>Come back to previous commit (ignore the latest ones)<a class="headerlink" href="#come-back-to-previous-commit-ignore-the-latest-ones" title="Permalink to this headline">#</a></h3>
 <p>WARNING: This will erase the latest commits!</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">reset</span> <span class="o">--</span><span class="n">hard</span> <span class="c1">#COMMIT</span>
-<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">f</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git reset --hard <span class="c1">#COMMIT</span>
+git push -f
 </pre></div>
 </div>
 </section>
@@ -2083,80 +2281,68 @@ git checkout -b branch-name username/branch-name
 <p>If rebasing caused commits to be lost, use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reflog</span></code> to find the commits that were deleted, and then do a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">--hard</span> <span class="pre">HEAD&#64;{XX}</span></code>, XX being the commit that comes right before the merge (the one that says: <code class="docutils literal notranslate"><span class="pre">checkout:</span> <span class="pre">moving</span> <span class="pre">from</span> <span class="pre">master</span> <span class="pre">to</span> <span class="pre">YOUR_BRANCH</span></code>)</p>
 </section>
 </section>
-<section id="commit-message-convention">
-<h2>Commit message convention<a class="headerlink" href="#commit-message-convention" title="Permalink to this headline">#</a></h2>
-<p>Writing good commit messages is an art. They should be concise but accurate. They should help someone several years from now with little knowledge of your project understand at a high-level what each change was for, and they should help you remember the direction you are working in while working on a branch in the present.</p>
-<p>Here are some suggestions:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://github.com/neuropoly/spinalcordtoolbox/wiki/git_rules">https://github.com/neuropoly/spinalcordtoolbox/wiki/git_rules</a></p></li>
-</ul>
-</section>
 <section id="github">
 <h2>GitHub<a class="headerlink" href="#github" title="Permalink to this headline">#</a></h2>
 <section id="add-ssh-key">
 <h3>Add SSH key<a class="headerlink" href="#add-ssh-key" title="Permalink to this headline">#</a></h3>
-<ol class="arabic">
-<li><p>Log in to your Github account and click on the button at the top</p>
-<p>right-hand corner called “Account settings”.</p>
-</li>
+<ol class="arabic simple">
+<li><p>Log in to your Github account and click on the button at the top right-hand corner called “Account settings”.</p></li>
 <li><p>Click on “SSH keys in the left panel”.</p></li>
 <li><p>Click on “Add SSH keys”.</p></li>
-<li><p>Copy and paste the content of id_rsa.pub (open a Terminal and type:</p>
-<p><code class="docutils literal notranslate"><span class="pre">more</span> <span class="pre">~/.ssh/id_rsa.pub</span></code>)</p>
-</li>
+<li><p>Copy and paste the content of id_rsa.pub (open a Terminal and type: <code class="docutils literal notranslate"><span class="pre">more</span> <span class="pre">~/.ssh/id_rsa.pub</span></code>)</p></li>
 </ol>
 <p>If you don’t have the file id_rsa.pub, do the following:</p>
 <ol class="arabic simple">
-<li><p>open a terminal</p></li>
-<li><p>go to the folder <code class="docutils literal notranslate"><span class="pre">~/.ssh/</span></code> and type:</p></li>
+<li><p>Open a Terminal</p></li>
+<li><p>Go to the folder <code class="docutils literal notranslate"><span class="pre">~/.ssh/</span></code> and type:</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">t</span> <span class="n">rsa</span> <span class="o">-</span><span class="n">C</span> <span class="n">your_email</span><span class="nd">@example</span><span class="o">.</span><span class="n">com</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen -t rsa -C your_email@example.com
 </pre></div>
 </div>
 </section>
 <section id="port-22-connection-refused">
 <h3>port 22: Connection refused<a class="headerlink" href="#port-22-connection-refused" title="Permalink to this headline">#</a></h3>
 <p>If you get this message, try this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vim</span> <span class="o">~/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">config</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim ~/.ssh/config
 </pre></div>
 </div>
 <p>Add:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Host</span> <span class="n">github</span><span class="o">.</span><span class="n">com</span>
-  <span class="n">Hostname</span> <span class="n">ssh</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">com</span>
-  <span class="n">Port</span> <span class="mi">443</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Host github.com
+  Hostname ssh.github.com
+  Port <span class="m">443</span>
 </pre></div>
 </div>
 </section>
 <section id="compare-commits-branches-tags">
 <h3>Compare commits/branches/tags<a class="headerlink" href="#compare-commits-branches-tags" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ORGANIZATION</span><span class="o">/</span><span class="n">REPOSITORY</span><span class="o">/</span><span class="n">compare</span><span class="o">/</span><span class="n">TAG1</span><span class="o">...</span><span class="n">TAG2</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>https://github.com/ORGANIZATION/REPOSITORY/compare/TAG1...TAG2
 </pre></div>
 </div>
 </section>
 <section id="connection-closed-by-remote-host">
 <h3>Connection closed by remote host<a class="headerlink" href="#connection-closed-by-remote-host" title="Permalink to this headline">#</a></h3>
 <p>If you get this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh_exchange_identification</span><span class="p">:</span> <span class="n">Connection</span> <span class="n">closed</span> <span class="n">by</span> <span class="n">remote</span> <span class="n">host</span>
-<span class="n">fatal</span><span class="p">:</span> <span class="n">Could</span> <span class="ow">not</span> <span class="n">read</span> <span class="kn">from</span> <span class="nn">remote</span> <span class="n">repository</span><span class="o">.</span>
-<span class="n">Please</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">you</span> <span class="n">have</span> <span class="n">the</span> <span class="n">correct</span> <span class="n">access</span> <span class="n">rights</span>
-<span class="ow">and</span> <span class="n">the</span> <span class="n">repository</span> <span class="n">exists</span><span class="o">.</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh_exchange_identification: Connection closed by remote host
+fatal: Could not <span class="nb">read</span> from remote repository.
+Please make sure you have the correct access rights
+and the repository exists.
 </pre></div>
 </div>
-<p>this might be due to wifi connection that does not allow ssh. So you can temporarily switch to https:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># check which username/remote you are set on</span>
-<span class="n">git</span> <span class="n">remote</span> <span class="o">-</span><span class="n">v</span>
+<p>this might be due to Wi-Fi connection that does not allow ssh. So you can temporarily switch to https:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># check which username/remote you are set on</span>
+git remote -v
 <span class="c1"># it should give:</span>
 <span class="c1"># origin  git@github.com:USERNAME/REPOSITORY.git (fetch)</span>
 <span class="c1"># origin  git@github.com:USERNAME/REPOSITORY.git (push)</span>
 <span class="c1"># then set to https:</span>
-<span class="n">git</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">USERNAME</span><span class="o">/</span><span class="n">OTHERREPOSITORY</span><span class="o">.</span><span class="n">git</span>
+git remote set-url origin https://github.com/USERNAME/OTHERREPOSITORY.git
 </pre></div>
 </div>
 </section>
 <section id="search-file-name">
 <h3>Search file name<a class="headerlink" href="#search-file-name" title="Permalink to this headline">#</a></h3>
 <p>Go to search and type:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span><span class="p">:</span><span class="n">my_file</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>filename:my_file
 </pre></div>
 </div>
 </section>
@@ -2166,51 +2352,51 @@ git checkout -b branch-name username/branch-name
 <section id="checkout-specific-tag-or-commit">
 <h3>Checkout specific tag or commit<a class="headerlink" href="#checkout-specific-tag-or-commit" title="Permalink to this headline">#</a></h3>
 <p>List all tags</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">tag</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git tag
 </pre></div>
 </div>
 <p>Get the commit number of the tag you want, using:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">show</span> <span class="n">tag_xx</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git show tag_xx
 </pre></div>
 </div>
 <p>Then, checkout on commit</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">commit_xx</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout commit_xx
 </pre></div>
 </div>
-<p>N.B. It is not possible to checkout directly using the tag. More info <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Basics-Tagging#Checking-out-Tags">here</a></p>
+<p>Note: It is not possible to checkout directly using the tag. More info <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Basics-Tagging#Checking-out-Tags">here</a></p>
 <p>If you got the following error message:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fatal</span><span class="p">:</span> <span class="n">reference</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">a</span> <span class="n">tree</span><span class="p">:</span> <span class="c1">#commit</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fatal: reference is not a tree: <span class="c1">#commit</span>
 </pre></div>
 </div>
 <p>It means that the commit is not listed in the tree of your local git repository. To reach older commits from your local tree, do:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="n">X</span>  <span class="c1"># with X=number of commit back in time</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git pull --depth<span class="o">=</span>X  <span class="c1"># with X=number of commit back in time</span>
 </pre></div>
 </div>
 </section>
 <section id="add-tag">
 <h3>Add tag<a class="headerlink" href="#add-tag" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">a</span> <span class="n">vx</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">z</span> <span class="c1">#COMMIT -m &quot;added tag for vx.y.z&quot;</span>
-<span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="n">tag</span> <span class="n">origin</span> <span class="n">master</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git tag -a vx.y.z <span class="c1">#COMMIT -m &quot;added tag for vx.y.z&quot;</span>
+git push --tag origin master
 </pre></div>
 </div>
 </section>
 <section id="remove-tag">
 <h3>Remove Tag<a class="headerlink" href="#remove-tag" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="n">delete</span> <span class="n">origin</span> <span class="n">tagname</span>
-<span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">d</span> <span class="n">tagname</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push --delete origin tagname
+git tag -d tagname
 </pre></div>
 </div>
 </section>
 <section id="useful-aliases">
 <h3>Useful aliases<a class="headerlink" href="#useful-aliases" title="Permalink to this headline">#</a></h3>
 <p>Here are useful aliases that you could add to your <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">gs</span><span class="o">=</span><span class="s2">&quot;git status -s&quot;</span>
-<span class="n">alias</span> <span class="n">gc</span><span class="o">=</span><span class="s2">&quot;git commit -a&quot;</span>
-<span class="n">alias</span> <span class="n">gp</span><span class="o">=</span><span class="s2">&quot;git push&quot;</span>
-<span class="n">alias</span> <span class="n">gl</span><span class="o">=</span><span class="s2">&quot;git log --pretty=oneline&quot;</span>
-<span class="n">alias</span> <span class="n">glg</span><span class="o">=</span><span class="s2">&quot;git log --pretty=oneline --decorate --all --graph&quot;</span>
-<span class="n">alias</span> <span class="n">gd</span><span class="o">=</span><span class="s2">&quot;git diff&quot;</span>
-<span class="n">alias</span> <span class="n">gb</span><span class="o">=</span><span class="s2">&quot;git branch&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">gs</span><span class="o">=</span><span class="s2">&quot;git status -s&quot;</span>
+<span class="nb">alias</span> <span class="nv">gc</span><span class="o">=</span><span class="s2">&quot;git commit -a&quot;</span>
+<span class="nb">alias</span> <span class="nv">gp</span><span class="o">=</span><span class="s2">&quot;git push&quot;</span>
+<span class="nb">alias</span> <span class="nv">gl</span><span class="o">=</span><span class="s2">&quot;git log --pretty=oneline&quot;</span>
+<span class="nb">alias</span> <span class="nv">glg</span><span class="o">=</span><span class="s2">&quot;git log --pretty=oneline --decorate --all --graph&quot;</span>
+<span class="nb">alias</span> <span class="nv">gd</span><span class="o">=</span><span class="s2">&quot;git diff&quot;</span>
+<span class="nb">alias</span> <span class="nv">gb</span><span class="o">=</span><span class="s2">&quot;git branch&quot;</span>
 </pre></div>
 </div>
 </section>
@@ -2220,7 +2406,7 @@ git checkout -b branch-name username/branch-name
 <p><a class="reference external" href="https://ohshitgit.com">Methods to dig yourself out of common pitfalls</a></p>
 </section>
 <section id="git-software">
-<h2>git software<a class="headerlink" href="#git-software" title="Permalink to this headline">#</a></h2>
+<h2>Git software<a class="headerlink" href="#git-software" title="Permalink to this headline">#</a></h2>
 <section id="pycharm">
 <h3>Pycharm<a class="headerlink" href="#pycharm" title="Permalink to this headline">#</a></h3>
 <p>Interactive squash, rebase: <a class="reference external" href="https://www.jetbrains.com/help/pycharm/edit-project-history.html">https://www.jetbrains.com/help/pycharm/edit-project-history.html</a></p>
@@ -2237,9 +2423,9 @@ git checkout -b branch-name username/branch-name
 </section>
 <section id="update-your-branch">
 <h4><strong>Update your branch</strong><a class="headerlink" href="#update-your-branch" title="Permalink to this headline">#</a></h4>
-<p>In case you have not used fork and you want to update your branch from master, do this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">YOUR_BRANCH</span>
-<span class="n">git</span> <span class="n">rebase</span> <span class="n">master</span>
+<p>In case you have not used fork, and you want to update your branch from master, do this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout &lt;YOUR_BRANCH&gt;
+git rebase master
 </pre></div>
 </div>
 </section>
