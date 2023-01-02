@@ -68,9 +68,7 @@ Dataset shared by: <NAME AND EMAIL>
 ### `dataset_description.json`
 
 The [`dataset_description.json`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#dataset_descriptionjson) is a JSON file describing the dataset.
-
-❗The `dataset_description.json` file within the top-level dataset should include `"DatasetType": "raw"`.
-
+ 
 <details><summary>dataset_description.json template:</summary>
 
 Refer to the [BIDS spec](https://bids-specification.readthedocs.io/) to know what version to fill in here.
@@ -84,7 +82,11 @@ Refer to the [BIDS spec](https://bids-specification.readthedocs.io/) to know wha
 ```
 
 </details>
-    
+
+ ```{warning}
+The `dataset_description.json` file within the top-level dataset should include `"DatasetType": "raw"`.
+ ```
+ 
 ### `participants.tsv`
 
 The [`participants.tsv`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file) is a TSV file and should include at least the following columns:
