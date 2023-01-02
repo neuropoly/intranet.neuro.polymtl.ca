@@ -1075,15 +1075,6 @@ title="Edit this page"
      </code>
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sub-xxx">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       sub-XXX/
-      </span>
-     </code>
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1170,15 +1161,6 @@ title="Edit this page"
      </code>
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sub-xxx">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       sub-XXX/
-      </span>
-     </code>
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -1217,6 +1199,27 @@ title="Edit this page"
 <li><p>sub-montrealDCM001</p></li>
 <li><p>sub-torontoHC001</p></li>
 </ul>
+<p>Data collected from actual subjects goes under their specific sub-folder, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sub-001
+├── anat
+│   ├── sub-001_T1w.json
+│   ├── sub-001_T1w.nii.gz
+│   ├── sub-001_T2star.json
+│   ├── sub-001_T2star.nii.gz
+│   ├── sub-001_T2w.json
+│   └── sub-001_T2w.nii.gz
+└── dwi
+    ├── sub-001_dwi.bval
+    ├── sub-001_dwi.bvec
+    ├── sub-001_dwi.json
+    └── sub-001_dwi.nii.gz
+</pre></div>
+</div>
+<p>Many kinds of data have a place specified for them by BIDS. See <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#filesystem-structure">file naming conventions</a> and the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html">MRI</a> and <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html">Microscopy</a> extensions for full details.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>TODO: describe neuropoly-specific BIDS entities, like bp-cspine or acq-MTon</p>
+</div>
 </section>
 <section id="bids-template">
 <h2>BIDS template<a class="headerlink" href="#bids-template" title="Permalink to this headline">#</a></h2>
@@ -1228,6 +1231,8 @@ title="Edit this page"
 ├── code/
 │   └── curate.py
 ├── sub-XXX
+│   └── anat
+│       └──sub-XXX_T1w.nii.gz
  ...
  ...
 └── derivatives
@@ -1399,30 +1404,6 @@ title="Edit this page"
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Analysis scripts should not be kept here. Keep them in separate repositories, usually in public on GitHub, with instructions about. See <span class="xref myst">PIPELINE-DOC</span>.</p>
-</div>
-</section>
-<section id="sub-xxx">
-<h3><code class="docutils literal notranslate"><span class="pre">sub-XXX/</span></code><a class="headerlink" href="#sub-xxx" title="Permalink to this headline">#</a></h3>
-<p>Data collected from actual subjects goes under their specific sub-folder, for example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sub-001
-├── anat
-│   ├── sub-001_T1w.json
-│   ├── sub-001_T1w.nii.gz
-│   ├── sub-001_T2star.json
-│   ├── sub-001_T2star.nii.gz
-│   ├── sub-001_T2w.json
-│   └── sub-001_T2w.nii.gz
-└── dwi
-    ├── sub-001_dwi.bval
-    ├── sub-001_dwi.bvec
-    ├── sub-001_dwi.json
-    └── sub-001_dwi.nii.gz
-</pre></div>
-</div>
-<p>Many kinds of data have a place specified for them by BIDS. See <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#filesystem-structure">file naming conventions</a> and the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html">MRI</a> and <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html">Microscopy</a> extensions for full details.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>TODO: describe neuropoly-specific BIDS entities, like bp-cspine or acq-MTon</p>
 </div>
 </section>
 </section>
