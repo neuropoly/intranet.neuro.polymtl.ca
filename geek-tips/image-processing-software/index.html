@@ -1150,13 +1150,13 @@ title="Edit this page"
 <section id="gaussian-filter">
 <h3>Gaussian Filter<a class="headerlink" href="#gaussian-filter" title="Permalink to this headline">#</a></h3>
 <p>To smooth an image choosing the dimension(s) in which you want to apply the smoothing</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c3d &lt;input_image&gt; -smooth &lt;std_dim1&gt;x&lt;std_dim2&gt;x&lt;std_dim3&gt;vox -o &lt;output_image&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c3d<span class="w"> </span>&lt;input_image&gt;<span class="w"> </span>-smooth<span class="w"> </span>&lt;std_dim1&gt;x&lt;std_dim2&gt;x&lt;std_dim3&gt;vox<span class="w"> </span>-o<span class="w"> </span>&lt;output_image&gt;
 </pre></div>
 </div>
 <p>where &lt;std_dim1&gt;, &lt;std_dim2&gt; and &lt;std_dim3&gt; are the standard deviation of the Gaussian kernel in each dimension.</p>
 <section id="example">
 <h4>Example:<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c3d t2.nii.gz -smooth 0x0x5vox -o t2_z_smoothed.nii.gz
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c3d<span class="w"> </span>t2.nii.gz<span class="w"> </span>-smooth<span class="w"> </span>0x0x5vox<span class="w"> </span>-o<span class="w"> </span>t2_z_smoothed.nii.gz
 </pre></div>
 </div>
 <p><em>Smooth the image t2.nii.gz only along the third dimension with a standard deviation of 5 voxels in this dimension.</em></p>
@@ -1181,11 +1181,11 @@ title="Edit this page"
 <h3>N3 - Non-parametric Non-uniform Intensity Normalization<a class="headerlink" href="#n3-non-parametric-non-uniform-intensity-normalization" title="Permalink to this headline">#</a></h3>
 <p>Information can be found on <a class="reference external" href="http://en.wikibooks.org/wiki/MINC/Tools/N3">http://en.wikibooks.org/wiki/MINC/Tools/N3</a></p>
 <p>This filter can be applied using the following command (MNI tools): (Problem –&gt; lost the image intensity dynamic)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mri_nu_correct.mni --i &lt;input_image&gt; --o &lt;output_image&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mri_nu_correct.mni<span class="w"> </span>--i<span class="w"> </span>&lt;input_image&gt;<span class="w"> </span>--o<span class="w"> </span>&lt;output_image&gt;
 </pre></div>
 </div>
 <p>Or with c3d:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c3d &lt;input_image&gt; -biascorr -o &lt;output_image&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c3d<span class="w"> </span>&lt;input_image&gt;<span class="w"> </span>-biascorr<span class="w"> </span>-o<span class="w"> </span>&lt;output_image&gt;
 </pre></div>
 </div>
 </section>
@@ -1194,7 +1194,7 @@ title="Edit this page"
 <p>The N4 algorithm is a variation of the original N3 algorithm with the additional benefits of an improved B-spline fitting routine which allows for multiple resolutions to be used during the correction process.</p>
 <p>This algorithm is implemented on ITK (<a class="reference external" href="http://www.itk.org/Doxygen/html/classitk_1_1N4BiasFieldCorrectionImageFilter.html">http://www.itk.org/Doxygen/html/classitk_1_1N4BiasFieldCorrectionImageFilter.html</a>)</p>
 <p>or in c3d:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c3d &lt;input_image&gt; -n4 -o &lt;output_image&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c3d<span class="w"> </span>&lt;input_image&gt;<span class="w"> </span>-n4<span class="w"> </span>-o<span class="w"> </span>&lt;output_image&gt;
 </pre></div>
 </div>
 <p>Example (before-after N4 correction):</p>

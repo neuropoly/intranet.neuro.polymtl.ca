@@ -1237,7 +1237,7 @@ The executable can be called by the command if you are in the folder of your pro
 </pre></div>
 </div>
 <p>If you don’t want to add ”./” before the name of your program, you need to add the path of the program’s folder in the environment variable $PATH :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/Applications/NameOfYourProgram
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/Applications/NameOfYourProgram
 </pre></div>
 </div>
 <p>This path is only valid if you place your program in /Applications. To make definitive changes to PATH, add this line to <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code></p>
@@ -1247,7 +1247,7 @@ The executable can be called by the command if you are in the folder of your pro
 <section id="how-to-use-xcode-toolchain-as-a-non-admin-user">
 <h3>How to use XCode toolchain as a non-admin user?<a class="headerlink" href="#how-to-use-xcode-toolchain-as-a-non-admin-user" title="Permalink to this headline">#</a></h3>
 <p>Usually when you use XCode as a non-admin user, it ask you for admin login and password for building your project in debugging mode. This is required to enable the Developer Tools. To allow a non-admin user to use debugging mode on XCode, you may enter in a Terminal the following command :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo dscl . append /Groups/_developer GroupMembership &lt;username&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dscl<span class="w"> </span>.<span class="w"> </span>append<span class="w"> </span>/Groups/_developer<span class="w"> </span>GroupMembership<span class="w"> </span>&lt;username&gt;
 </pre></div>
 </div>
 <p>Then, you can provide your login and password to build your project. You have to provide them just once per session.</p>

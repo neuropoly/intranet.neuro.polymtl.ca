@@ -1179,11 +1179,11 @@ title="Edit this page"
 <section id="getting-started-basic-commands-a-href-getting-started-and-basic-commands-id-getting-started-and-basic-commands-a">
 <h2>Getting Started &amp; Basic Commands <a href="getting-started-and-basic-commands" id="getting-started-and-basic-commands"></a><a class="headerlink" href="#getting-started-basic-commands-a-href-getting-started-and-basic-commands-id-getting-started-and-basic-commands-a" title="Permalink to this headline">#</a></h2>
 <p>To create a box:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant init &lt;BOX_NAME&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant<span class="w"> </span>init<span class="w"> </span>&lt;BOX_NAME&gt;
 </pre></div>
 </div>
 <p>For example:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant init ubuntu/trusty64
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant<span class="w"> </span>init<span class="w"> </span>ubuntu/trusty64
 </pre></div>
 </div>
 <p>To run the box:</p>
@@ -1191,31 +1191,31 @@ title="Edit this page"
 </pre></div>
 </div>
 <p>To shut down the box:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant <span class="nb">suspend</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant<span class="w"> </span><span class="nb">suspend</span>
 </pre></div>
 </div>
 <p>To resume the box:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant resume
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant<span class="w"> </span>resume
 </pre></div>
 </div>
 <p>To remove the box permanently:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant destroy
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant<span class="w"> </span>destroy
 </pre></div>
 </div>
 <p>If you update your <code class="docutils literal notranslate"><span class="pre">Vagrantfile</span></code> and want to reload:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant reload
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant<span class="w"> </span>reload
 </pre></div>
 </div>
 </section>
 <section id="ssh-into-box-a-href-ssh-into-box-id-ssh-into-box-a">
 <h2>SSH into Box <a href="ssh-into-box" id="ssh-into-box"></a><a class="headerlink" href="#ssh-into-box-a-href-ssh-into-box-id-ssh-into-box-a" title="Permalink to this headline">#</a></h2>
 <p>You can SSH into your box:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant ssh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant<span class="w"> </span>ssh
 </pre></div>
 </div>
 <p>This will bring up a terminal that you can use. For example, you might want to install git:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get update
-sudo apt-get install -y git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git
 </pre></div>
 </div>
 </section>
@@ -1224,9 +1224,9 @@ sudo apt-get install -y git
 <section id="memory-and-cpu-settings-a-href-memory-and-cpu-settings-id-memory-and-cpu-settings-a">
 <h3>Memory and CPU Settings <a href="memory-and-cpu-settings" id="memory-and-cpu-settings"></a><a class="headerlink" href="#memory-and-cpu-settings-a-href-memory-and-cpu-settings-id-memory-and-cpu-settings-a" title="Permalink to this headline">#</a></h3>
 <p>To configure memory and CPU used by your virtual box:</p>
-<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provider</span> <span class="s2">&quot;virtualbox&quot;</span> <span class="k">do</span> <span class="o">|</span><span class="n">vb</span><span class="o">|</span>
-    <span class="n">vb</span><span class="o">.</span><span class="n">memory</span> <span class="o">=</span> <span class="mi">2048</span>
-    <span class="n">vb</span><span class="o">.</span><span class="n">cpus</span> <span class="o">=</span> <span class="mi">4</span>
+<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provider</span><span class="w"> </span><span class="s2">&quot;virtualbox&quot;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="o">|</span><span class="n">vb</span><span class="o">|</span>
+<span class="w">    </span><span class="n">vb</span><span class="o">.</span><span class="n">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2048</span>
+<span class="w">    </span><span class="n">vb</span><span class="o">.</span><span class="n">cpus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
 <span class="k">end</span>
 </pre></div>
 </div>
@@ -1234,7 +1234,7 @@ sudo apt-get install -y git
 <section id="folder-settings-a-href-folder-settings-id-folder-settings-a">
 <h3>Folder Settings <a href="folder-settings" id="folder-settings"></a><a class="headerlink" href="#folder-settings-a-href-folder-settings-id-folder-settings-a" title="Permalink to this headline">#</a></h3>
 <p>You will probably also want to use data from your local machine. To do this:</p>
-<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">synced_folder</span> <span class="s2">&quot;path/to/local/folder&quot;</span><span class="p">,</span> <span class="s2">&quot;path/to/vagrant/folder&quot;</span>
+<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">synced_folder</span><span class="w"> </span><span class="s2">&quot;path/to/local/folder&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;path/to/vagrant/folder&quot;</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">path/to/local/folder</span></code> can be absolute, or relative to the location of the Vagrantfile. The <code class="docutils literal notranslate"><span class="pre">path/to/vagrant/folder</span></code> is where you want the data to be added in your box.</p>
@@ -1242,14 +1242,14 @@ sudo apt-get install -y git
 <section id="startup-provision-settings-a-href-startup-provision-settings-id-startup-provision-settings-a">
 <h3>Startup/Provision Settings <a href="startup-provision-settings" id="startup-provision-settings"></a><a class="headerlink" href="#startup-provision-settings-a-href-startup-provision-settings-id-startup-provision-settings-a" title="Permalink to this headline">#</a></h3>
 <p>When you start your box, you can install packages/run commands:</p>
-<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provision</span> <span class="s2">&quot;shell&quot;</span><span class="p">,</span> <span class="ss">inline</span><span class="p">:</span> <span class="o">&lt;&lt;-</span><span class="dl">SHELL</span>    
+<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provision</span><span class="w"> </span><span class="s2">&quot;shell&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">inline</span><span class="p">:</span><span class="w"> </span><span class="o">&lt;&lt;-</span><span class="dl">SHELL</span><span class="w">    </span>
 <span class="sh">    apt-get update</span>
 <span class="sh">    apt-get install -y apache2</span>
 <span class="dl">SHELL</span>
 </pre></div>
 </div>
 <p>If you have a lot of packages to install or commands to run, you may want to put them in a separate file:</p>
-<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provision</span> <span class="s2">&quot;shell&quot;</span><span class="p">,</span> <span class="ss">path</span><span class="p">:</span> <span class="s2">&quot;install.sh&quot;</span>
+<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provision</span><span class="w"> </span><span class="s2">&quot;shell&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">path</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;install.sh&quot;</span>
 </pre></div>
 </div>
 </section>
@@ -1259,8 +1259,8 @@ sudo apt-get install -y git
 <ol class="arabic simple">
 <li><p>Clear <code class="docutils literal notranslate"><span class="pre">csrutil</span></code> and restart.</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo su
-csrutil clear
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>su
+csrutil<span class="w"> </span>clear
 reboot
 </pre></div>
 </div>
@@ -1269,7 +1269,7 @@ reboot
 <p>4. Restart your computer.</p>
 <p>5. Install Oracle VM VirtualBox Extension Pack</p>
 <p>6. Install <code class="docutils literal notranslate"><span class="pre">vagrant-vbguest</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant plugin install vagrant-vbguest
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant<span class="w"> </span>plugin<span class="w"> </span>install<span class="w"> </span>vagrant-vbguest
 </pre></div>
 </div>
 </section>

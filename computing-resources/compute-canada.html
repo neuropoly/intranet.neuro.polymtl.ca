@@ -1242,7 +1242,7 @@ title="Edit this page"
 <p>You can find the <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.g1khl9eioopm">Resource Allocation Project Identifier (RAPI)</a> here.</p>
 <section id="transfer-files">
 <h3><strong>Transfer Files</strong><a class="headerlink" href="#transfer-files" title="Permalink to this headline">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp &lt;username&gt;@guillimin.clumeq.ca:&lt;PATH/TO/FILE&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span>&lt;username&gt;@guillimin.clumeq.ca:&lt;PATH/TO/FILE&gt;
 </pre></div>
 </div>
 </section>
@@ -1250,25 +1250,25 @@ title="Edit this page"
 <h3><strong>Environment Variables</strong><a class="headerlink" href="#environment-variables" title="Permalink to this headline">#</a></h3>
 <p>You have a <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> and <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> on the server. Use <code class="docutils literal notranslate"><span class="pre">.bahsrc</span></code> rather than <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/gs/project/&lt;RAPI&gt;/bin/ants/bin
-<span class="nb">export</span> <span class="nv">ANTSPATH</span><span class="o">=</span>/gs/project/&lt;RAPI&gt;/bin/ants/bin/
+<span class="nb">export</span><span class="w"> </span><span class="nv">ANTSPATH</span><span class="o">=</span>/gs/project/&lt;RAPI&gt;/bin/ants/bin/
 </pre></div>
 </div>
 </section>
 <section id="modules">
 <h3><strong>Modules</strong><a class="headerlink" href="#modules" title="Permalink to this headline">#</a></h3>
 <p>There are pre-installed modules that you’ll need to load in order to use (e.g. <code class="docutils literal notranslate"><span class="pre">cmake</span></code>). To see all modules available:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module avail
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>avail
 </pre></div>
 </div>
 <p>To load module (you can put this in your <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> if you need the module all the time):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module load &lt;module_name&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>&lt;module_name&gt;
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Example</strong>: Check if git is available and load it</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module avail git
-module load apps/git/2.13.0
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>avail<span class="w"> </span>git
+module<span class="w"> </span>load<span class="w"> </span>apps/git/2.13.0
 </pre></div>
 </div>
 </div>
@@ -1305,8 +1305,8 @@ serveur-info
 <span class="c1">#PBS -e error.txt</span>
 <span class="c1">#PBS -V</span>
 <span class="c1">#PBS -N build_template</span>
-<span class="nb">cd</span> /gs/project/&lt;RAPI&gt;/final_data_T2
-bash buildtemplateparallel.sh -d <span class="m">3</span> -o AVT -n <span class="m">0</span> -c <span class="m">2</span> -j <span class="m">16</span> *.nii.gz
+<span class="nb">cd</span><span class="w"> </span>/gs/project/&lt;RAPI&gt;/final_data_T2
+bash<span class="w"> </span>buildtemplateparallel.sh<span class="w"> </span>-d<span class="w"> </span><span class="m">3</span><span class="w"> </span>-o<span class="w"> </span>AVT<span class="w"> </span>-n<span class="w"> </span><span class="m">0</span><span class="w"> </span>-c<span class="w"> </span><span class="m">2</span><span class="w"> </span>-j<span class="w"> </span><span class="m">16</span><span class="w"> </span>*.nii.gz
 </pre></div>
 </div>
 </div>
@@ -1323,13 +1323,13 @@ qsub my_job.sh
 </section>
 <section id="check-jobs">
 <h3><strong>Check jobs</strong><a class="headerlink" href="#check-jobs" title="Permalink to this headline">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>qstat -u <span class="nv">$USER</span>
-  S: Q <span class="o">(</span>queue<span class="o">)</span>, R <span class="o">(</span>running<span class="o">)</span>
-checkjob JobID <span class="o">(</span>only the number!<span class="o">)</span> <span class="o">[</span>-v<span class="o">]</span> <span class="o">[</span>-v<span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>qstat<span class="w"> </span>-u<span class="w"> </span><span class="nv">$USER</span>
+<span class="w">  </span>S:<span class="w"> </span>Q<span class="w"> </span><span class="o">(</span>queue<span class="o">)</span>,<span class="w"> </span>R<span class="w"> </span><span class="o">(</span>running<span class="o">)</span>
+checkjob<span class="w"> </span>JobID<span class="w"> </span><span class="o">(</span>only<span class="w"> </span>the<span class="w"> </span>number!<span class="o">)</span><span class="w"> </span><span class="o">[</span>-v<span class="o">]</span><span class="w"> </span><span class="o">[</span>-v<span class="o">]</span>
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Once running:</span>
-showq -r -u <span class="nv">$USER</span>
+showq<span class="w"> </span>-r<span class="w"> </span>-u<span class="w"> </span><span class="nv">$USER</span>
 </pre></div>
 </div>
 </section>
@@ -1347,11 +1347,11 @@ showq -r -u <span class="nv">$USER</span>
 <h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://docs.computecanada.ca/wiki/Python">Compute Canada: Python</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># activate python</span>
-module load python/3.6
+module<span class="w"> </span>load<span class="w"> </span>python/3.6
 <span class="c1"># create virtual environment</span>
-virtualenv &lt;VENV_NAME&gt;
+virtualenv<span class="w"> </span>&lt;VENV_NAME&gt;
 <span class="c1"># activate it</span>
-<span class="nb">source</span> &lt;VENV_NAME&gt;/bin/activate
+<span class="nb">source</span><span class="w"> </span>&lt;VENV_NAME&gt;/bin/activate
 <span class="c1"># deactivate</span>
 deactivate
 </pre></div>
@@ -1381,29 +1381,29 @@ slurm queueing system</p>
 <span class="c1">#SBATCH --ntasks=256            # number of MPI processes (1 for the main process and 255 for the workers)</span>
 <span class="c1">#SBATCH --mem-per-cpu=1024M     # memory; default unit is megabytes</span>
 <span class="c1">#SBATCH --time=0-03:00          # time (DD-HH:MM)</span>
- 
+<span class="w"> </span>
 <span class="c1"># cd to a scratch space where outputs will be saved</span>
-<span class="nb">cd</span> /scratch/<span class="nv">$USER</span>/workdir
- 
+<span class="nb">cd</span><span class="w"> </span>/scratch/<span class="nv">$USER</span>/workdir
+<span class="w"> </span>
 <span class="nv">DATA_PATH</span><span class="o">=</span>&lt;/PATH/TO/SUBJECTS/DATA/&gt;
- 
-&lt;/PATH/TO/SCT_PIPELINE&gt; --nb-cup <span class="m">255</span> -f sct_propseg -d &lt;/PATH/TO/BIG_DATASET&gt;  -p  <span class="se">\&quot;</span>-i t2s/t2s.nii.gz  -c t2s<span class="se">\&quot;</span>    <span class="c1"># run propseg on 255 workers</span>
+<span class="w"> </span>
+&lt;/PATH/TO/SCT_PIPELINE&gt;<span class="w"> </span>--nb-cup<span class="w"> </span><span class="m">255</span><span class="w"> </span>-f<span class="w"> </span>sct_propseg<span class="w"> </span>-d<span class="w"> </span>&lt;/PATH/TO/BIG_DATASET&gt;<span class="w">  </span>-p<span class="w">  </span><span class="se">\&quot;</span>-i<span class="w"> </span>t2s/t2s.nii.gz<span class="w">  </span>-c<span class="w"> </span>t2s<span class="se">\&quot;</span><span class="w">    </span><span class="c1"># run propseg on 255 workers</span>
 </pre></div>
 </div>
 </div>
 <p>You can then submit the job with <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod <span class="m">750</span> my_sct_script.sh <span class="c1"># make sure the script is executable</span>
-sbatch my_sct_script.sh <span class="c1"># submit the job</span>
-squeue -u <span class="nv">$UID</span> <span class="c1"># check that the job is in the slurm queue</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span><span class="m">750</span><span class="w"> </span>my_sct_script.sh<span class="w"> </span><span class="c1"># make sure the script is executable</span>
+sbatch<span class="w"> </span>my_sct_script.sh<span class="w"> </span><span class="c1"># submit the job</span>
+squeue<span class="w"> </span>-u<span class="w"> </span><span class="nv">$UID</span><span class="w"> </span><span class="c1"># check that the job is in the slurm queue</span>
 </pre></div>
 </div>
 <p>One can also do interactive testing with MPI. We recommend using this method to run SCT on a smaller scale. For example, here we run on 16 cores:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>salloc --time<span class="o">=</span><span class="m">0</span>-03:00 --ntasks<span class="o">=</span><span class="m">16</span> --mem-per-cpu<span class="o">=</span>1024M  --account<span class="o">=</span>def-jcohen
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>salloc<span class="w"> </span>--time<span class="o">=</span><span class="m">0</span>-03:00<span class="w"> </span>--ntasks<span class="o">=</span><span class="m">16</span><span class="w"> </span>--mem-per-cpu<span class="o">=</span>1024M<span class="w">  </span>--account<span class="o">=</span>def-jcohen
 <span class="c1"># [wait for cedar to give you a session, bigger are ntasks and mem-per-cpu, longer is that time]</span>
 </pre></div>
 </div>
 <p>Then run <code class="docutils literal notranslate"><span class="pre">sct_pipeline</span></code>. The 16 cores will be accessible via the MPI interface:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;PATH/TO/SCT&gt;/bin/sct_pipeline -cpu-nb <span class="m">16</span>  -f sct_propseg -d /home/poq/small -p <span class="se">\&quot;</span> -i  t2s/t2s.nii.gz  -c t2s <span class="se">\&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;PATH/TO/SCT&gt;/bin/sct_pipeline<span class="w"> </span>-cpu-nb<span class="w"> </span><span class="m">16</span><span class="w">  </span>-f<span class="w"> </span>sct_propseg<span class="w"> </span>-d<span class="w"> </span>/home/poq/small<span class="w"> </span>-p<span class="w"> </span><span class="se">\&quot;</span><span class="w"> </span>-i<span class="w">  </span>t2s/t2s.nii.gz<span class="w">  </span>-c<span class="w"> </span>t2s<span class="w"> </span><span class="se">\&quot;</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
@@ -1443,7 +1443,7 @@ ls /software/gpu/apps/python/wheelhouse/tensorflow-0.*
 </pre></div>
 </div>
 <p>Load the required modules. For example:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module load compilers/gcc/4.8.5 cuda/7.5 libs/cuDNN/5
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>compilers/gcc/4.8.5<span class="w"> </span>cuda/7.5<span class="w"> </span>libs/cuDNN/5
 </pre></div>
 </div>
 <p>Load the correct Python module:</p>
@@ -1451,17 +1451,17 @@ ls /software/gpu/apps/python/wheelhouse/tensorflow-0.*
 </pre></div>
 </div>
 <p>Create a virtual environment and activate it:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>virtualenv &lt;ENV_NAME&gt;
-<span class="nb">source</span> &lt;ENV_NAME&gt;/bin/activate
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>virtualenv<span class="w"> </span>&lt;ENV_NAME&gt;
+<span class="nb">source</span><span class="w"> </span>&lt;ENV_NAME&gt;/bin/activate
 </pre></div>
 </div>
 <p>Install <code class="docutils literal notranslate"><span class="pre">tensorflow</span></code>. If you need a version other than the latest version, you can specify the version number.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install <span class="nv">tensorflow</span><span class="o">==</span>&lt;VERSION_NUMBER&gt;+helios
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">tensorflow</span><span class="o">==</span>&lt;VERSION_NUMBER&gt;+helios
 </pre></div>
 </div>
 <p>The addition of <code class="docutils literal notranslate"><span class="pre">+helios</span></code> after the version number isn’t necessary, but it ensures that <code class="docutils literal notranslate"><span class="pre">pip</span></code> doesn’t download a version from the internet, and instead uses the version you have compiled for Helios.</p>
 <p>Submitting a script (use MOAB):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>name@server<span class="o">)</span> $ msub <span class="o">[</span>options<span class="o">]</span> script.pbs
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>name@server<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>msub<span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span>script.pbs
 </pre></div>
 </div>
 </section>

@@ -1139,43 +1139,43 @@ title="Edit this page"
 <h2>Install VTK<a class="headerlink" href="#install-vtk" title="Permalink to this headline">#</a></h2>
 <p>1. Download VTK sources (the latest release) on VTK website (<a class="reference external" href="http://www.vtk.org/VTK/resources/software.html">http://www.vtk.org/VTK/resources/software.html</a>) and unpack for example on Desktop</p>
 <p>2. In the VTK folder, create a new folder named “VTKBuild” (or anything else). Open a terminal in VTKBuild folder and open CMake Gui with the command :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ccmake ..
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ccmake<span class="w"> </span>..
 </pre></div>
 </div>
 <p>If you have the message <code class="docutils literal notranslate"><span class="pre">EMPTY_CACHE</span></code>, then press “c” to configure.</p>
 <p>3. Numerous options are available and you need to change some of these ones :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BUILD_DOCUMENTATION</span><span class="o">=</span>OFF <span class="c1"># (if ON, need Doxygen)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BUILD_DOCUMENTATION</span><span class="o">=</span>OFF<span class="w"> </span><span class="c1"># (if ON, need Doxygen)</span>
 <span class="nv">BUILD_EXAMPLES</span><span class="o">=</span>OFF
 <span class="nv">BUILD_TESTING</span><span class="o">=</span>OFF
-<span class="nv">BUILD_SHARED_LIBS</span><span class="o">=</span>ON <span class="c1"># (ON to compile dynamically, OFF to compile statically)</span>
+<span class="nv">BUILD_SHARED_LIBS</span><span class="o">=</span>ON<span class="w"> </span><span class="c1"># (ON to compile dynamically, OFF to compile statically)</span>
 <span class="nv">CMAKE_INSTALL_PREFIX</span><span class="o">=</span>/usr/local/vtk
-    <span class="c1"># Probably the most important option to change. It is where the library</span>
-    <span class="c1"># will be installed. In this case, it&#39;s in local but you can provide another</span>
-    <span class="c1"># folder. Installing ITK and VTK in the same folder is also important.</span>
-    <span class="c1"># This way will put all library files (.dylib) in the same folder and it&#39;s</span>
-    <span class="c1"># easier to link with your project.</span>
+<span class="w">    </span><span class="c1"># Probably the most important option to change. It is where the library</span>
+<span class="w">    </span><span class="c1"># will be installed. In this case, it&#39;s in local but you can provide another</span>
+<span class="w">    </span><span class="c1"># folder. Installing ITK and VTK in the same folder is also important.</span>
+<span class="w">    </span><span class="c1"># This way will put all library files (.dylib) in the same folder and it&#39;s</span>
+<span class="w">    </span><span class="c1"># easier to link with your project.</span>
 <span class="nv">CMAKE_OSX_ARCHITECTURES</span><span class="o">=</span>x86_64
-    <span class="c1"># Some authors suggest changing this feature. You can add architecture like</span>
-    <span class="c1"># i386 or pcc</span>
+<span class="w">    </span><span class="c1"># Some authors suggest changing this feature. You can add architecture like</span>
+<span class="w">    </span><span class="c1"># i386 or pcc</span>
 <span class="nv">CMAKE_OSX_DEPLOYMENT_TARGET</span><span class="o">=</span><span class="m">10</span>.8
 <span class="nv">CMAKE_OSX_SYSROOT</span><span class="o">=</span>/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
-    <span class="c1"># This path is required to link Xcode with VTK. If you don&#39;t have XCode</span>
-    <span class="c1"># installed the path will be different.</span>
-<span class="nv">VTK_Group_Qt</span><span class="o">=</span>OFF <span class="c1"># (building doesn&#39;t work with Qt...)</span>
+<span class="w">    </span><span class="c1"># This path is required to link Xcode with VTK. If you don&#39;t have XCode</span>
+<span class="w">    </span><span class="c1"># installed the path will be different.</span>
+<span class="nv">VTK_Group_Qt</span><span class="o">=</span>OFF<span class="w"> </span><span class="c1"># (building doesn&#39;t work with Qt...)</span>
 <span class="nv">VTK_Group_Rendering</span><span class="o">=</span>ON
 <span class="nv">VTK_Group_StandAlone</span><span class="o">=</span>ON
 <span class="nv">VTK_USE_64BITS_IDS</span><span class="o">=</span>ON
 </pre></div>
 </div>
 <p>4. Press “c” to configure and “g” to generate VTK. Once generated, you can build VTK using commands :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake ..  <span class="c1"># (maybe redundant)</span>
-make -j <span class="m">4</span>
-    <span class="c1"># The option -j allows you to build libraries using multiple cores and</span>
-    <span class="c1"># accelerate the process (which may be very long!)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>..<span class="w">  </span><span class="c1"># (maybe redundant)</span>
+make<span class="w"> </span>-j<span class="w"> </span><span class="m">4</span>
+<span class="w">    </span><span class="c1"># The option -j allows you to build libraries using multiple cores and</span>
+<span class="w">    </span><span class="c1"># accelerate the process (which may be very long!)</span>
 </pre></div>
 </div>
 <p>5. At this point, library is build in the folder “VTKBuild” and you have to install it in the local folder using command :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo make install <span class="c1"># (sudo is needed because installation is made in local)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>make<span class="w"> </span>install<span class="w"> </span><span class="c1"># (sudo is needed because installation is made in local)</span>
 </pre></div>
 </div>
 </section>
@@ -1184,44 +1184,44 @@ make -j <span class="m">4</span>
 <h2>Install ITK<a class="headerlink" href="#install-itk" title="Permalink to this headline">#</a></h2>
 <p>1. Download ITK sources named “InsightToolkit-x.x.x.tar.gz” (the latest official release) on ITK website (<a class="reference external" href="http://www.itk.org/ITK/resources/software.html">http://www.itk.org/ITK/resources/software.html</a>) and unpack for example on Desktop</p>
 <p>2. In the ITK folder, create a new folder named “ITKBuild” (or anything else). Open a terminal in ITKBuild folder and open CMake gui with the command :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ccmake ..
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ccmake<span class="w"> </span>..
 </pre></div>
 </div>
 <p>3. Numerous options are available and you need to change some of these ones :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BUILD_DOCUMENTATION</span><span class="o">=</span>OFF <span class="c1"># (if ON, need Doxygen)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BUILD_DOCUMENTATION</span><span class="o">=</span>OFF<span class="w"> </span><span class="c1"># (if ON, need Doxygen)</span>
 <span class="nv">BUILD_EXAMPLES</span><span class="o">=</span>OFF
-<span class="nv">BUILD_SHARED_LIBS</span><span class="o">=</span>ON <span class="c1"># (ON to compile dynamically, OFF to compile statically)</span>
+<span class="nv">BUILD_SHARED_LIBS</span><span class="o">=</span>ON<span class="w"> </span><span class="c1"># (ON to compile dynamically, OFF to compile statically)</span>
 <span class="nv">BUILD_TESTING</span><span class="o">=</span>OFF
 <span class="nv">CMAKE_INSTALL_PREFIX</span><span class="o">=</span>/usr/local/itk
-    <span class="c1"># Probably the most important option to change. It is where the library</span>
-    <span class="c1"># will be installed. In this case, it&#39;s in local but you can provide another</span>
-    <span class="c1"># folder. Installing ITK and VTK in the same folder is also important.</span>
-    <span class="c1"># This way will put all library files (.dylib) in the same folder and it&#39;s</span>
-    <span class="c1"># easier to link with your project.</span>
+<span class="w">    </span><span class="c1"># Probably the most important option to change. It is where the library</span>
+<span class="w">    </span><span class="c1"># will be installed. In this case, it&#39;s in local but you can provide another</span>
+<span class="w">    </span><span class="c1"># folder. Installing ITK and VTK in the same folder is also important.</span>
+<span class="w">    </span><span class="c1"># This way will put all library files (.dylib) in the same folder and it&#39;s</span>
+<span class="w">    </span><span class="c1"># easier to link with your project.</span>
 <span class="nv">CMAKE_OSX_ARCHITECTURES</span><span class="o">=</span>x86_64
-    <span class="c1"># Some authors suggest changing this feature. You can add architecture</span>
-    <span class="c1"># like i386 or pcc</span>
+<span class="w">    </span><span class="c1"># Some authors suggest changing this feature. You can add architecture</span>
+<span class="w">    </span><span class="c1"># like i386 or pcc</span>
 <span class="nv">CMAKE_OSX_DEPLOYMENT_TARGET</span><span class="o">=</span><span class="m">10</span>.8
 <span class="nv">CMAKE_OSX_SYSROOT</span><span class="o">=</span>/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
-    <span class="c1"># This path is required to link Xcode with VTK. If you don&#39;t have Xcode</span>
-    <span class="c1"># installed the path will be different.</span>
+<span class="w">    </span><span class="c1"># This path is required to link Xcode with VTK. If you don&#39;t have Xcode</span>
+<span class="w">    </span><span class="c1"># installed the path will be different.</span>
 <span class="nv">ITK_BUILD_ALL_MODULES</span><span class="o">=</span>ON
 <span class="nv">ITK_USE_64BITS_IDS</span><span class="o">=</span>ON
 <span class="nv">Module_ITKV3Compatibility</span><span class="o">=</span>ON
-    <span class="c1"># used if you want to use classes people have built from different</span>
-    <span class="c1"># versions (e.g., v3)</span>
-<span class="nv">Module_ITKVtkGlue</span><span class="o">=</span>ON <span class="c1"># (probably not necessary if ITK_BUILD_ALL_MODULES is ON)</span>
+<span class="w">    </span><span class="c1"># used if you want to use classes people have built from different</span>
+<span class="w">    </span><span class="c1"># versions (e.g., v3)</span>
+<span class="nv">Module_ITKVtkGlue</span><span class="o">=</span>ON<span class="w"> </span><span class="c1"># (probably not necessary if ITK_BUILD_ALL_MODULES is ON)</span>
 <span class="nv">VTK_DIR</span><span class="o">=</span>/usr/local/vtk/lib/cmake/vtk-6.0
-    <span class="c1"># path may change depending on VTK version and folder installation</span>
+<span class="w">    </span><span class="c1"># path may change depending on VTK version and folder installation</span>
 </pre></div>
 </div>
 <p>4. Press “c” to configure and “g” to generate ITK. Once generated, you can build ITK using commands :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake .. <span class="c1"># (maybe redundant)</span>
-make -j <span class="m">4</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>..<span class="w"> </span><span class="c1"># (maybe redundant)</span>
+make<span class="w"> </span>-j<span class="w"> </span><span class="m">4</span>
 </pre></div>
 </div>
 <p>5. Installation of ITK in the same local folder :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo make install
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>make<span class="w"> </span>install
 </pre></div>
 </div>
 </section>
@@ -1240,15 +1240,15 @@ ITK: 4.7</p>
 </div></blockquote>
 <p>From a fresh start, meaning new directory to build. Run CMAKE and generate. You can use any generator, but I chose CodeBlocks - Unix Makefile, because Qt can read CMake project structure if we use CodeBlocks generator.</p>
 <p>Set the correct C &amp; C++ compiler (I don’t want to mix up with GNU):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">CMAKE_CXX_COMPILER</span> <span class="o">=</span> /usr/bin/clang++
-<span class="nv">CMAKE_C_COMPILER</span> <span class="o">=</span> /usr/bin/clang
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">CMAKE_CXX_COMPILER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/usr/bin/clang++
+<span class="nv">CMAKE_C_COMPILER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/usr/bin/clang
 </pre></div>
 </div>
 <p>Set the correct compiler flags:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">CMAKE_CXX_FLAGS</span> <span class="o">=</span> -stdlib<span class="o">=</span>libstdc++ -std<span class="o">=</span>c++11
-<span class="nv">CMAKE_OSX_SYSROOT</span> <span class="o">=</span> /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
-<span class="nv">CMAKE_OSX_DEPLOYMENT_TARGET</span> <span class="o">=</span> <span class="m">10</span>.9
-<span class="nv">CMAKE_OSX_ARCHITECTURES</span> <span class="o">=</span> x86_64
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">CMAKE_CXX_FLAGS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-stdlib<span class="o">=</span>libstdc++<span class="w"> </span>-std<span class="o">=</span>c++11
+<span class="nv">CMAKE_OSX_SYSROOT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+<span class="nv">CMAKE_OSX_DEPLOYMENT_TARGET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span>.9
+<span class="nv">CMAKE_OSX_ARCHITECTURES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>x86_64
 </pre></div>
 </div>
 <p>Other settings are:</p>
@@ -1256,16 +1256,16 @@ ITK: 4.7</p>
 <p>If this still doesn’t work, you may need to until I hack directly into the <code class="docutils literal notranslate"><span class="pre">CMakeCache.txt</span></code> file.</p>
 <p>It appears that even though I told CMake that I used LLVM’s clang compiler (Apple changed that since 10.9 from GNU), CMake still uses <code class="docutils literal notranslate"><span class="pre">&lt;type_traits&gt;</span></code> inclusion instead of <code class="docutils literal notranslate"><span class="pre">&lt;tr1/type_traits&gt;</span></code>.</p>
 <p>I forced CMake, by changing these lines in the CMakeCache.txt file manually:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>//Have include tr1/type_traits
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>//Have<span class="w"> </span>include<span class="w"> </span>tr1/type_traits
 ITK_HAS_STLTR1_TR1_TYPE_TRAITS:INTERNAL<span class="o">=</span>
-//Have include type_traits
+//Have<span class="w"> </span>include<span class="w"> </span>type_traits
 ITK_HAS_STLTR1_TYPE_TRAITS:INTERNAL<span class="o">=</span><span class="m">1</span>
 </pre></div>
 </div>
 <p>into:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>//Have include tr1/type_traits
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>//Have<span class="w"> </span>include<span class="w"> </span>tr1/type_traits
 ITK_HAS_STLTR1_TR1_TYPE_TRAITS:INTERNAL<span class="o">=</span><span class="m">1</span>
-//Have include type_traits
+//Have<span class="w"> </span>include<span class="w"> </span>type_traits
 ITK_HAS_STLTR1_TYPE_TRAITS:INTERNAL<span class="o">=</span>
 </pre></div>
 </div>
@@ -1307,8 +1307,8 @@ ITK_HAS_STLTR1_TYPE_TRAITS:INTERNAL<span class="o">=</span>
 </ul>
 <p>ITK and VTK may now be used in Xcode. Documentation for creating a new project linked to ITK and VTK on Xcode is located here : <a class="reference external" href="https://www.neuro.polymtl.ca/tips_and_tricks/cpp/create_project_xcode">Create a new Xcode project linked with ITK and VTK</a></p>
 <p>To use executable linked with ITK or VTK you need to set your environment variables. Edit your <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> and add:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/usr/local/itk/bin:<span class="nv">$PATH</span>
-<span class="nb">export</span> <span class="nv">DYLD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/ITKVTK/lib:<span class="nv">$DYLD_LIBRARY_PATH</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/usr/local/itk/bin:<span class="nv">$PATH</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">DYLD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/ITKVTK/lib:<span class="nv">$DYLD_LIBRARY_PATH</span>
 </pre></div>
 </div>
 </section>

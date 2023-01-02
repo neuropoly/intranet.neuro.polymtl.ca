@@ -1596,35 +1596,35 @@ title="Edit this page"
 <h3>Copying<a class="headerlink" href="#copying" title="Permalink to this headline">#</a></h3>
 <section id="copy-and-synchronize-with-rsync">
 <h4><strong>Copy (and synchronize) with rsync</strong><a class="headerlink" href="#copy-and-synchronize-with-rsync" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rsync -azP &lt;FILE_SRC&gt; &lt;FILE_DEST&gt;
-rsync -azP &lt;FOLDER_SOURCE&gt; &lt;FOLDER_DEST&gt;  <span class="c1"># will create FOLDER_SOURCE inside FOLDER_DEST (if it does not exist), and will copy the content of FOLDER_SOURCE inside it</span>
-rsync -azP &lt;FOLDER_SOURCE&gt;/ &lt;FOLDER_DEST&gt;  <span class="c1"># will copy the content of FOLDER_SOURCE inside FOLDER_DEST</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rsync<span class="w"> </span>-azP<span class="w"> </span>&lt;FILE_SRC&gt;<span class="w"> </span>&lt;FILE_DEST&gt;
+rsync<span class="w"> </span>-azP<span class="w"> </span>&lt;FOLDER_SOURCE&gt;<span class="w"> </span>&lt;FOLDER_DEST&gt;<span class="w">  </span><span class="c1"># will create FOLDER_SOURCE inside FOLDER_DEST (if it does not exist), and will copy the content of FOLDER_SOURCE inside it</span>
+rsync<span class="w"> </span>-azP<span class="w"> </span>&lt;FOLDER_SOURCE&gt;/<span class="w"> </span>&lt;FOLDER_DEST&gt;<span class="w">  </span><span class="c1"># will copy the content of FOLDER_SOURCE inside FOLDER_DEST</span>
 <span class="c1"># For nii.gz files, no need to further compress so -z can be dropped</span>
 </pre></div>
 </div>
 </section>
 <section id="copy-from-remote-station-via-scp">
 <h4><strong>Copy from remote station via scp</strong><a class="headerlink" href="#copy-from-remote-station-via-scp" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp username@hostname:&lt;/PATH_TO_FILE&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span>username@hostname:&lt;/PATH_TO_FILE&gt;
 </pre></div>
 </div>
 </section>
 </section>
 <section id="finding">
 <h3>Finding<a class="headerlink" href="#finding" title="Permalink to this headline">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -name <span class="s2">&quot;dti*&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;dti*&quot;</span>
 </pre></div>
 </div>
 <p>To be case-insensitive, use:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -iname <span class="s2">&quot;dti*&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>.<span class="w"> </span>-iname<span class="w"> </span><span class="s2">&quot;dti*&quot;</span>
 </pre></div>
 </div>
 <p>To only look for folders/directories:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -type d -iname <span class="s2">&quot;dti*&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-iname<span class="w"> </span><span class="s2">&quot;dti*&quot;</span>
 </pre></div>
 </div>
 <p>To only look for files:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -type f -iname <span class="s2">&quot;dti*.*&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-iname<span class="w"> </span><span class="s2">&quot;dti*.*&quot;</span>
 </pre></div>
 </div>
 </section>
@@ -1632,21 +1632,21 @@ rsync -azP &lt;FOLDER_SOURCE&gt;/ &lt;FOLDER_DEST&gt;  <span class="c1"># will c
 <h3>Deleting<a class="headerlink" href="#deleting" title="Permalink to this headline">#</a></h3>
 <section id="delete-non-empty-folder">
 <h4><strong>Delete non-empty folder</strong><a class="headerlink" href="#delete-non-empty-folder" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm -rf &lt;FOLDER&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>-rf<span class="w"> </span>&lt;FOLDER&gt;
 </pre></div>
 </div>
 </section>
 <section id="delete-a-bunch-of-files">
 <h4><strong>Delete a bunch of files</strong><a class="headerlink" href="#delete-a-bunch-of-files" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -name <span class="s2">&quot;dti*&quot;</span> -delete
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;dti*&quot;</span><span class="w"> </span>-delete
 </pre></div>
 </div>
 <p>or the more complicated version:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -name <span class="s2">&quot;dti*&quot;</span> <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> F<span class="p">;</span> <span class="k">do</span> rm <span class="nv">$F</span><span class="p">;</span> <span class="k">done</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;dti*&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>F<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>rm<span class="w"> </span><span class="nv">$F</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
 </pre></div>
 </div>
 <p>When you are trying to delete too many files using <code class="docutils literal notranslate"><span class="pre">rm</span></code>, you may get error message: <code class="docutils literal notranslate"><span class="pre">/bin/rm</span> <span class="pre">Argument</span> <span class="pre">list</span> <span class="pre">too</span> <span class="pre">long</span></code>. Use <code class="docutils literal notranslate"><span class="pre">xargs</span></code> to avoid this problem.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find ~ -name ‘*.log’ -print0 <span class="p">|</span> xargs -0 rm -f
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>~<span class="w"> </span>-name<span class="w"> </span>‘*.log’<span class="w"> </span>-print0<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-0<span class="w"> </span>rm<span class="w"> </span>-f
 </pre></div>
 </div>
 </section>
@@ -1655,30 +1655,30 @@ rsync -azP &lt;FOLDER_SOURCE&gt;/ &lt;FOLDER_DEST&gt;  <span class="c1"># will c
 <h3>Renaming<a class="headerlink" href="#renaming" title="Permalink to this headline">#</a></h3>
 <section id="rename-files-with-a-given-extension">
 <h4>Rename files with a given extension<a class="headerlink" href="#rename-files-with-a-given-extension" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls *.&lt;EXT&gt; <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> F<span class="p">;</span> <span class="k">do</span> mv <span class="nv">$F</span> &lt;NEW_FILE_NAME&gt;_<span class="nv">$F</span><span class="p">;</span> <span class="k">done</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>*.&lt;EXT&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>F<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>mv<span class="w"> </span><span class="nv">$F</span><span class="w"> </span>&lt;NEW_FILE_NAME&gt;_<span class="nv">$F</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
 </pre></div>
 </div>
 <p>Do it recursively:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -name <span class="s2">&quot;t2_seg.nii.gz&quot;</span> -exec bash -c <span class="s1">&#39;mv $(dirname $1)/$(basename $1) $(dirname $1)/t2_seg_manual.nii.gz&#39;</span> -- <span class="o">{}</span> <span class="se">\;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;t2_seg.nii.gz&quot;</span><span class="w"> </span>-exec<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;mv $(dirname $1)/$(basename $1) $(dirname $1)/t2_seg_manual.nii.gz&#39;</span><span class="w"> </span>--<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span>
 </pre></div>
 </div>
 <p><strong>Do something on files modified for the past 10 days</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -type f -name <span class="s1">&#39;*.*&#39;</span> -mtime +10 -exec <span class="nb">echo</span> <span class="s2">&quot;do something on this file: {}&quot;</span> <span class="se">\;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span><span class="s1">&#39;*.*&#39;</span><span class="w"> </span>-mtime<span class="w"> </span>+10<span class="w"> </span>-exec<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;do something on this file: {}&quot;</span><span class="w"> </span><span class="se">\;</span>
 </pre></div>
 </div>
 <p><strong>Set created/modification date on a file</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch -mt YYYYMMDDhhmm &lt;FILE&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch<span class="w"> </span>-mt<span class="w"> </span>YYYYMMDDhhmm<span class="w"> </span>&lt;FILE&gt;
 </pre></div>
 </div>
 <p>On Maverick and later, the creation date is not updated if newer than the existing. So you should use:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>SetFile -d <span class="s1">&#39;DD/MM/YYYY HH:MM:SS&#39;</span> &lt;FILE&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>SetFile<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;DD/MM/YYYY HH:MM:SS&#39;</span><span class="w"> </span>&lt;FILE&gt;
 </pre></div>
 </div>
 </section>
 </section>
 <section id="size-of-folder">
 <h3>Size of folder<a class="headerlink" href="#size-of-folder" title="Permalink to this headline">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>du -sh &lt;FOLDER&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>du<span class="w"> </span>-sh<span class="w"> </span>&lt;FOLDER&gt;
 </pre></div>
 </div>
 <p>or for all folders in the path</p>
@@ -1715,21 +1715,21 @@ rsync -azP &lt;FOLDER_SOURCE&gt;/ &lt;FOLDER_DEST&gt;  <span class="c1"># will c
 <h3>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">#</a></h3>
 <section id="change-permissions">
 <h4><strong>Change permissions</strong><a class="headerlink" href="#change-permissions" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod <span class="m">644</span>  <span class="c1"># make a file readable by anyone and writable by the owner only.</span>
-chmod <span class="m">755</span>	 <span class="c1"># make a file readable/executable by everyone and writable by the owner only.</span>
-chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no access for everyone</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span><span class="m">644</span><span class="w">  </span><span class="c1"># make a file readable by anyone and writable by the owner only.</span>
+chmod<span class="w"> </span><span class="m">755</span><span class="w">	 </span><span class="c1"># make a file readable/executable by everyone and writable by the owner only.</span>
+chmod<span class="w"> </span><span class="m">701</span><span class="w">	 </span><span class="c1"># r/w/x for the owner, no access for everyone</span>
 </pre></div>
 </div>
 </section>
 <section id="change-owner-of-a-file">
 <h4><strong>Change owner of a file</strong><a class="headerlink" href="#change-owner-of-a-file" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo chown &lt;OWNER&gt; &lt;FILE&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>chown<span class="w"> </span>&lt;OWNER&gt;<span class="w"> </span>&lt;FILE&gt;
 </pre></div>
 </div>
 </section>
 <section id="look-for-group-owner-permission">
 <h4><strong>Look for group owner &amp; permission</strong><a class="headerlink" href="#look-for-group-owner-permission" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls -le@a
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-le@a
 </pre></div>
 </div>
 <p><strong>Find most recently changed files (less than 1 day ago)</strong></p>
@@ -1784,18 +1784,18 @@ chmod <span class="m">701</span>	 <span class="c1"># r/w/x for the owner, no acc
 <h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">#</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="6023d0f8-92d3-485f-8f87-4500ccacd15b" name="28bd85b8-a8a5-4391-90bc-59501597188a" type="radio">
-</input><label class="tabbed-label" for="6023d0f8-92d3-485f-8f87-4500ccacd15b">
+<input checked="checked" id="abd9b806-1a8f-4ac5-9dc0-f8b0fee3f946" name="9f5df782-36b9-4787-9309-60c4c06e5b4b" type="radio">
+</input><label class="tabbed-label" for="abd9b806-1a8f-4ac5-9dc0-f8b0fee3f946">
 Linux</label><div class="tabbed-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find FOLDER -type f -exec md5sum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5sum
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>FOLDER<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>md5sum<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>md5sum
 </pre></div>
 </div>
 </div>
-<input id="dccab109-4b77-4b41-8cee-589856c40044" name="28bd85b8-a8a5-4391-90bc-59501597188a" type="radio">
-</input><label class="tabbed-label" for="dccab109-4b77-4b41-8cee-589856c40044">
+<input id="84a44025-6b49-42e7-bdd4-2add17af96b0" name="9f5df782-36b9-4787-9309-60c4c06e5b4b" type="radio">
+</input><label class="tabbed-label" for="84a44025-6b49-42e7-bdd4-2add17af96b0">
 Mac</label><div class="tabbed-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find -s FOLDER -type f -exec shasum <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> shasum
-find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</span> <span class="p">|</span> md5
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>-s<span class="w"> </span>FOLDER<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>shasum<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>shasum
+find<span class="w"> </span>-s<span class="w"> </span>FOLDER<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>md5<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>md5
 </pre></div>
 </div>
 </div>
@@ -1803,7 +1803,7 @@ find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</
 </section>
 <section id="remove-files-from-tmp-a-href-remove-files-from-tmp-id-remove-files-from-tmp-a">
 <h4>Remove files from tmp <a href="remove_files_from_tmp" id="remove_files_from_tmp"></a><a class="headerlink" href="#remove-files-from-tmp-a-href-remove-files-from-tmp-id-remove-files-from-tmp-a" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find . -name <span class="s2">&quot;tmp.*&quot;</span> -type d -print0 <span class="p">|</span> xargs -0 /bin/rm -rf
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;tmp.*&quot;</span><span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-print0<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-0<span class="w"> </span>/bin/rm<span class="w"> </span>-rf
 </pre></div>
 </div>
 </section>
@@ -1813,14 +1813,14 @@ find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</
 <h2>.bash_profile<a class="headerlink" href="#bash-profile" title="Permalink to this headline">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> file is launched when you open a new terminal. You can configure your environment variables from there. It is located in your home folder (<code class="docutils literal notranslate"><span class="pre">$HOME</span></code>).</p>
 <p>To load it:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> ~/.bash_profile
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>~/.bash_profile
 </pre></div>
 </div>
 </section>
 <section id="emails">
 <h2>Emails<a class="headerlink" href="#emails" title="Permalink to this headline">#</a></h2>
 <p><strong>send email</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;something&quot;</span> <span class="p">|</span> mailx -s <span class="s2">&quot;subject&quot;</span> someone@email.com
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;something&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>mailx<span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;subject&quot;</span><span class="w"> </span>someone@email.com
 </pre></div>
 </div>
 </section>
@@ -1828,10 +1828,10 @@ find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</
 <h2>Processes<a class="headerlink" href="#processes" title="Permalink to this headline">#</a></h2>
 <section id="check-processes">
 <h3><strong>Check Processes</strong><a class="headerlink" href="#check-processes" title="Permalink to this headline">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pstree -ap
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pstree<span class="w"> </span>-ap
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ps aux
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ps<span class="w"> </span>aux
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">top</span>
@@ -1842,13 +1842,13 @@ find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</
 <h3><strong>Killing Processes</strong><a class="headerlink" href="#killing-processes" title="Permalink to this headline">#</a></h3>
 <section id="kill-a-process-based-on-pid">
 <h4><strong>kill a process based on PID</strong><a class="headerlink" href="#kill-a-process-based-on-pid" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">kill</span> -9 &lt;<span class="s2">&quot;PID&quot;</span>&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">kill</span><span class="w"> </span>-9<span class="w"> </span>&lt;<span class="s2">&quot;PID&quot;</span>&gt;
 </pre></div>
 </div>
 </section>
 <section id="kill-a-process-from-a-user">
 <h4><strong>kill a process from a user</strong><a class="headerlink" href="#kill-a-process-from-a-user" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pkill -U &lt;USER&gt; 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pkill<span class="w"> </span>-U<span class="w"> </span>&lt;USER&gt;<span class="w"> </span>
 </pre></div>
 </div>
 </section>
@@ -1858,13 +1858,13 @@ find -s FOLDER -type f -exec md5 <span class="o">{}</span> <span class="se">\;</
 <h2>Internet / Network<a class="headerlink" href="#internet-network" title="Permalink to this headline">#</a></h2>
 <section id="download-file-from-internet">
 <h3>Download file from internet<a class="headerlink" href="#download-file-from-internet" title="Permalink to this headline">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -o filename -L &lt;URL&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-o<span class="w"> </span>filename<span class="w"> </span>-L<span class="w"> </span>&lt;URL&gt;
 <span class="c1"># Example for OSF file (note the &quot;?action=download&quot; added after the URL):</span>
-curl -o data.zip -L https://osf.io/76jkx/?action<span class="o">=</span>download
+curl<span class="w"> </span>-o<span class="w"> </span>data.zip<span class="w"> </span>-L<span class="w"> </span>https://osf.io/76jkx/?action<span class="o">=</span>download
 </pre></div>
 </div>
 <p>Alternatively:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget -O data &lt;URL&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>-O<span class="w"> </span>data<span class="w"> </span>&lt;URL&gt;
 </pre></div>
 </div>
 </section>
@@ -1899,8 +1899,8 @@ curl -o data.zip -L https://osf.io/76jkx/?action<span class="o">=</span>download
 </section>
 <section id="copy-from-a-remote-station">
 <h4><strong>Copy from a remote station</strong><a class="headerlink" href="#copy-from-a-remote-station" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp username@station.domain: &lt;/PATH/FILE&gt; . <span class="c1"># copy file</span>
-scp username@station.domain: &lt;/PATH/&gt; . -r <span class="c1"># copy folder</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span>username@station.domain:<span class="w"> </span>&lt;/PATH/FILE&gt;<span class="w"> </span>.<span class="w"> </span><span class="c1"># copy file</span>
+scp<span class="w"> </span>username@station.domain:<span class="w"> </span>&lt;/PATH/&gt;<span class="w"> </span>.<span class="w"> </span>-r<span class="w"> </span><span class="c1"># copy folder</span>
 </pre></div>
 </div>
 </section>
@@ -1942,41 +1942,41 @@ scp username@station.domain: &lt;/PATH/&gt; . -r <span class="c1"># copy folder<
 <li><p>Do whatever you want (e.g., launch a long process).</p></li>
 </ol>
 <p>Detach from the screen:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen -d
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen<span class="w"> </span>-d
 <span class="c1"># or</span>
-CTRL+a d
+CTRL+a<span class="w"> </span>d
 </pre></div>
 </div>
 <p>Attach to a detached screen:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen -r
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen<span class="w"> </span>-r
 </pre></div>
 </div>
 <p>Attach to a not detached screen. (Multi display mode).</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen -x
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen<span class="w"> </span>-x
 </pre></div>
 </div>
 <p>List of your screens</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen -ls
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen<span class="w"> </span>-ls
 </pre></div>
 </div>
 <p>Kill a screen</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen -X <span class="nb">kill</span>  <span class="c1"># (if you only have one screen running)</span>
-screen -X -S <span class="o">[</span>session <span class="c1"># you want to kill] kill</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen<span class="w"> </span>-X<span class="w"> </span><span class="nb">kill</span><span class="w">  </span><span class="c1"># (if you only have one screen running)</span>
+screen<span class="w"> </span>-X<span class="w"> </span>-S<span class="w"> </span><span class="o">[</span>session<span class="w"> </span><span class="c1"># you want to kill] kill</span>
 </pre></div>
 </div>
 <p>Give specific name to a screen session</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen -S &lt;NAME_OF_SESSION&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen<span class="w"> </span>-S<span class="w"> </span>&lt;NAME_OF_SESSION&gt;
 </pre></div>
 </div>
 </section>
 <section id="ssh-public-key">
 <h2>SSH Public Key<a class="headerlink" href="#ssh-public-key" title="Permalink to this headline">#</a></h2>
 <p>Create key on the client (do this only once):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen -t rsa
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa
 </pre></div>
 </div>
 <p>Copy key on server:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-copy-id demo@198.51.100.0
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-copy-id<span class="w"> </span>demo@198.51.100.0
 </pre></div>
 </div>
 </section>
@@ -1989,8 +1989,8 @@ screen -X -S <span class="o">[</span>session <span class="c1"># you want to kill
 :wq = quit and save</p>
 </div></blockquote>
 <p>Coloured syntax:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vi ~/.vimrc
-add: syntax on
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vi<span class="w"> </span>~/.vimrc
+add:<span class="w"> </span>syntax<span class="w"> </span>on
 </pre></div>
 </div>
 </section>

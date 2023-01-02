@@ -1108,9 +1108,9 @@ title="Edit this page"
 </ol>
 <p>Requirements when running from OSX: XQuartz</p>
 <p>Install FSLeyes from <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> (this has to be done in a virtual environment) on the remote host (rosenberg or joplin):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create --name &lt;YOUR_ENV&gt;
-conda activate &lt;YOUR_ENV&gt;
-conda install -c conda-forge fsleyes
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>&lt;YOUR_ENV&gt;
+conda<span class="w"> </span>activate<span class="w"> </span>&lt;YOUR_ENV&gt;
+conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>fsleyes
 </pre></div>
 </div>
 </section>
@@ -1118,8 +1118,8 @@ conda install -c conda-forge fsleyes
 <h2>Running Remotely<a class="headerlink" href="#running-remotely" title="Permalink to this headline">#</a></h2>
 <p>To run FSLeyes remotely, please see the documentation <a class="reference external" href="https://open.win.ox.ac.uk/pages/fsl/fsleyes/fsleyes/userdoc/troubleshooting.html#running-fsleyes-remotely">here</a>.</p>
 <p>After installing, do an ssh for X forwarding:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh -X username@remotehost
-conda activate &lt;YOUR_ENV&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>-X<span class="w"> </span>username@remotehost
+conda<span class="w"> </span>activate<span class="w"> </span>&lt;YOUR_ENV&gt;
 fsleyes
 </pre></div>
 </div>

@@ -1445,8 +1445,8 @@ title="Edit this page"
 <h3>Home folder<a class="headerlink" href="#home-folder" title="Permalink to this headline">#</a></h3>
 <p>Every <span class="xref myst">GRAMES</span> account has a school-wide personal home folder. It is backed-up nightly.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="86da2bc3-bfa2-4a7d-a151-a344670d3128" name="d5264049-5b44-4fd3-b14c-9b345dbe7ae1" type="radio">
-</input><label class="tabbed-label" for="86da2bc3-bfa2-4a7d-a151-a344670d3128">
+<input checked="checked" id="16c6d354-6ecf-4f2f-b916-7b3188350e70" name="c546029e-7017-4f34-825c-758678f547f7" type="radio">
+</input><label class="tabbed-label" for="16c6d354-6ecf-4f2f-b916-7b3188350e70">
 macOS</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Finder</p></li>
@@ -1489,8 +1489,8 @@ macOS</label><div class="tabbed-content docutils">
 <p>You can change your password at <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a>. Also, you can double-check you have VPN access by looking for <code class="docutils literal notranslate"><span class="pre">VPN_*</span> <span class="pre">=</span> <span class="pre">Actif</span></code> here.</p>
 <p>The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing a VPN client such as <code class="docutils literal notranslate"><span class="pre">openconnect</span></code> (recommended) or <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">AnyConnect</span> <span class="pre">Secure</span> <span class="pre">Mobility</span> <span class="pre">Client</span></code> (if <code class="docutils literal notranslate"><span class="pre">openconnect</span></code> is not available for your OS/distro):</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="b6331992-3f17-40d4-9bf5-9ac00e98dde9" name="42f48a1f-5623-4d4c-a190-12762136f4c9" type="radio">
-</input><label class="tabbed-label" for="b6331992-3f17-40d4-9bf5-9ac00e98dde9">
+<input checked="checked" id="8be15c04-d51b-4f9e-86c2-976ee63e522b" name="7ee64adb-3e1c-4247-8e0b-6158b8ff9e8b" type="radio">
+</input><label class="tabbed-label" for="8be15c04-d51b-4f9e-86c2-976ee63e522b">
 MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1506,12 +1506,12 @@ MacOS</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1"># vpn.sh</span>
 
-<span class="nb">set</span> -eo pipefail
+<span class="nb">set</span><span class="w"> </span>-eo<span class="w"> </span>pipefail
 
 <span class="nv">USER</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR_CAS_USERNAME&gt;&quot;</span>
-<span class="nv">PASS</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>security find-generic-password -a <span class="s2">&quot;</span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span><span class="s2">&quot;</span> -s poly-vpn -w<span class="k">)</span><span class="s2">&quot;</span>
-<span class="nv">GROUP</span><span class="o">=</span>PolySSL <span class="c1"># or PolyInvites, depending on your account&#39;s status</span>
-<span class="nb">echo</span> -n <span class="s2">&quot;</span><span class="nv">$PASS</span><span class="s2">&quot;</span> <span class="p">|</span> sudo openconnect -u <span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span> --authgroup <span class="s2">&quot;</span><span class="nv">$GROUP</span><span class="s2">&quot;</span> --passwd-on-stdin --reconnect-timeout <span class="m">20</span> ssl.vpn.polymtl.ca
+<span class="nv">PASS</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>security<span class="w"> </span>find-generic-password<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>-s<span class="w"> </span>poly-vpn<span class="w"> </span>-w<span class="k">)</span><span class="s2">&quot;</span>
+<span class="nv">GROUP</span><span class="o">=</span>PolySSL<span class="w"> </span><span class="c1"># or PolyInvites, depending on your account&#39;s status</span>
+<span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PASS</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>openconnect<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span><span class="w"> </span>--authgroup<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$GROUP</span><span class="s2">&quot;</span><span class="w"> </span>--passwd-on-stdin<span class="w"> </span>--reconnect-timeout<span class="w"> </span><span class="m">20</span><span class="w"> </span>ssl.vpn.polymtl.ca
 </pre></div>
 </div>
 <p>To connect to the VPN, you need to run:</p>
@@ -1519,8 +1519,8 @@ MacOS</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="8184dfcf-6b20-42a5-aa79-bb87300b05f0" name="42f48a1f-5623-4d4c-a190-12762136f4c9" type="radio">
-</input><label class="tabbed-label" for="8184dfcf-6b20-42a5-aa79-bb87300b05f0">
+<input id="854a8185-d14a-4238-9a16-0b560f2770a2" name="7ee64adb-3e1c-4247-8e0b-6158b8ff9e8b" type="radio">
+</input><label class="tabbed-label" for="854a8185-d14a-4238-9a16-0b560f2770a2">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1529,12 +1529,12 @@ Linux</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1"># vpn.sh</span>
 
-<span class="nb">set</span> -eo pipefail
+<span class="nb">set</span><span class="w"> </span>-eo<span class="w"> </span>pipefail
 
 <span class="nv">USER</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR_CAS_USERNAME&gt;&quot;</span>
 <span class="nv">PASS</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR_CAS_PASSWORD&gt;&quot;</span>
-<span class="nv">GROUP</span><span class="o">=</span>PolySSL <span class="c1"># or PolyInvites, depending on your account&#39;s status</span>
-<span class="nb">echo</span> -n <span class="s2">&quot;</span><span class="nv">$PASS</span><span class="s2">&quot;</span> <span class="p">|</span> sudo openconnect -u <span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span> --authgroup <span class="s2">&quot;</span><span class="nv">$GROUP</span><span class="s2">&quot;</span> --passwd-on-stdin ssl.vpn.polymtl.ca
+<span class="nv">GROUP</span><span class="o">=</span>PolySSL<span class="w"> </span><span class="c1"># or PolyInvites, depending on your account&#39;s status</span>
+<span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PASS</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>openconnect<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span><span class="w"> </span>--authgroup<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$GROUP</span><span class="s2">&quot;</span><span class="w"> </span>--passwd-on-stdin<span class="w"> </span>ssl.vpn.polymtl.ca
 </pre></div>
 </div>
 <p>To connect to the VPN, you need to run:</p>
@@ -1542,8 +1542,8 @@ Linux</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="a568ca24-0d91-49ec-9936-9aa71b669460" name="42f48a1f-5623-4d4c-a190-12762136f4c9" type="radio">
-</input><label class="tabbed-label" for="a568ca24-0d91-49ec-9936-9aa71b669460">
+<input id="42ef96a7-402d-426f-9feb-0be4418ff684" name="7ee64adb-3e1c-4247-8e0b-6158b8ff9e8b" type="radio">
+</input><label class="tabbed-label" for="42ef96a7-402d-426f-9feb-0be4418ff684">
 Windows</label><div class="tabbed-content docutils">
 <p>Please follow the official steps from PolyMTL (<a class="reference external" href="https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/rentree/documentLibrary/Aide-m%C3%A9moire%20tutoriels%20A2020/Aide-Memoire_VPN.pdf?a=true&amp;guest=true">French</a> or <a class="reference external" href="https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/rentree/documentLibrary/Aide-m%C3%A9moire%20tutoriels%20A2020/Checklist_VPN.pdf?a=true&amp;guest=true">English</a>.</p>
 <p>In case the above links ever break, the steps are:</p>
@@ -1575,12 +1575,12 @@ Windows</label><div class="tabbed-content docutils">
 <section id="ssh-command-line">
 <h3>SSH (command line)<a class="headerlink" href="#ssh-command-line" title="Permalink to this headline">#</a></h3>
 <p>Once the VPN connection established, connect via ssh using the <code class="docutils literal notranslate"><span class="pre">STATION</span></code> you want:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> ssh &lt;POLYGRAMES_USERNAME&gt;@&lt;STATION&gt;.neuro.polymtl.ca
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>ssh<span class="w"> </span>&lt;POLYGRAMES_USERNAME&gt;@&lt;STATION&gt;.neuro.polymtl.ca
 </pre></div>
 </div>
 <p>Note: For Windows systems, you can<a class="reference external" href="https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse"> install Microsoft’s ssh package</a>, <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a>, <a class="reference external" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>, or <a class="reference external" href="https://cmder.net">cmder</a>.</p>
 <p>Optionally, this shortcut. It allows you to just type <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;STATION&gt;</span></code> and be connected:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat &gt;~/.ssh/config_neuropoly <span class="s">&lt;&lt;EOF</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>&gt;~/.ssh/config_neuropoly<span class="w"> </span><span class="s">&lt;&lt;EOF</span>
 <span class="s"># GPU servers</span>
 <span class="s">Match Host romane,rosenberg,bireli</span>
 <span class="s">HostName %h.neuro.polymtl.ca</span>
@@ -1607,7 +1607,7 @@ Windows</label><div class="tabbed-content docutils">
 <span class="s">PreferredAuthentications password</span>
 <span class="s">EOF</span>
 
-<span class="nb">echo</span> <span class="s1">&#39;Include ~/.ssh/config_neuropoly&#39;</span> &gt;&gt; ~/.ssh/config
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;Include ~/.ssh/config_neuropoly&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.ssh/config
 </pre></div>
 </div>
 <p>Add this to your <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> to make multiple ssh connections faster and without retyping your password:</p>
@@ -1624,20 +1624,20 @@ Windows</label><div class="tabbed-content docutils">
 <p>The best way to do this is <code class="docutils literal notranslate"><span class="pre">sshfs</span></code>, which makes them appear as if they were a drive on your computer:</p>
 <p>Install sshfs, if not yet installed:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="8455de5d-aae7-4f41-8e31-0f3ca0695b0b" name="fccaa99c-9472-43c9-99d3-6b82f0852566" type="radio">
-</input><label class="tabbed-label" for="8455de5d-aae7-4f41-8e31-0f3ca0695b0b">
+<input checked="checked" id="b4b6b626-2285-4351-877b-919c80bb3aec" name="3598a858-09fd-4657-affb-ded6a76964c4" type="radio">
+</input><label class="tabbed-label" for="b4b6b626-2285-4351-877b-919c80bb3aec">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">sshfs</span>
 </pre></div>
 </div>
 </div>
-<input id="ab4b97d8-8a6a-4bff-8247-f6fdb1e1db8c" name="fccaa99c-9472-43c9-99d3-6b82f0852566" type="radio">
-</input><label class="tabbed-label" for="ab4b97d8-8a6a-4bff-8247-f6fdb1e1db8c">
+<input id="e73acf7c-337f-4dc9-8204-605e1138070a" name="3598a858-09fd-4657-affb-ded6a76964c4" type="radio">
+</input><label class="tabbed-label" for="e73acf7c-337f-4dc9-8204-605e1138070a">
 mac (Monterey and after)</label><div class="tabbed-content docutils">
 <p>Follow <a class="reference external" href="https://eengstrom.github.io/musings/install-macfuse-and-sshfs-on-macos-monterey">this procedure</a>.</p>
 </div>
-<input id="83b37cab-5615-41d0-a58b-b2215465a5c2" name="fccaa99c-9472-43c9-99d3-6b82f0852566" type="radio">
-</input><label class="tabbed-label" for="83b37cab-5615-41d0-a58b-b2215465a5c2">
+<input id="25b0ba95-ed09-407b-958f-a53d0272d0d3" name="3598a858-09fd-4657-affb-ded6a76964c4" type="radio">
+</input><label class="tabbed-label" for="25b0ba95-ed09-407b-958f-a53d0272d0d3">
 mac (Before Monterey)</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="o">--</span><span class="n">cask</span> <span class="n">osxfuse</span>
 <span class="n">brew</span> <span class="n">install</span> <span class="n">sshfs</span>
@@ -1672,8 +1672,8 @@ mac (Before Monterey)</label><div class="tabbed-content docutils">
 <section id="vnc-graphical-interface">
 <h3>VNC (graphical interface)<a class="headerlink" href="#vnc-graphical-interface" title="Permalink to this headline">#</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="879b9051-8e03-4e04-9d7e-bf8794e9b5d7" name="d0d2c645-80d7-48a8-b786-a7d7f1fea252" type="radio">
-</input><label class="tabbed-label" for="879b9051-8e03-4e04-9d7e-bf8794e9b5d7">
+<input checked="checked" id="c1c53acc-6d39-4615-9437-61f56e044ba4" name="fd195c39-7bc4-41a2-abf9-3d1e1a1cb759" type="radio">
+</input><label class="tabbed-label" for="c1c53acc-6d39-4615-9437-61f56e044ba4">
 macOS</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Finder</p></li>
@@ -1682,8 +1682,8 @@ macOS</label><div class="tabbed-content docutils">
 <li><p>You can use your local/network account information or the <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg">shared account credentials</a></p></li>
 </ol>
 </div>
-<input id="aa2406d3-471a-4313-903a-292822559b93" name="d0d2c645-80d7-48a8-b786-a7d7f1fea252" type="radio">
-</input><label class="tabbed-label" for="aa2406d3-471a-4313-903a-292822559b93">
+<input id="4638643a-da98-4b2d-aa6f-ba985c284fda" name="fd195c39-7bc4-41a2-abf9-3d1e1a1cb759" type="radio">
+</input><label class="tabbed-label" for="4638643a-da98-4b2d-aa6f-ba985c284fda">
 PC/Linux</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Establish a VNC connection using <a class="reference external" href="https://wiki.gnome.org/Apps/Vinagre/">vinaigre</a>.</p></li>
@@ -1698,27 +1698,27 @@ PC/Linux</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Create configuration file under <code class="docutils literal notranslate"><span class="pre">~/.vnc/xstartup</span></code> with the following contents:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> <span class="c1">#!/bin/sh</span>
- <span class="c1"># Uncomment the following two lines for normal desktop:</span>
- <span class="nb">unset</span> SESSION_MANAGER
- <span class="nb">unset</span> DBUS_SESSION_BUS_ADDRESS
- startxfce4 <span class="p">&amp;</span>
- <span class="o">[</span> -x /etc/vnc/xstartup <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">exec</span> /etc/vnc/xstartup
- <span class="o">[</span> -r <span class="nv">$HOME</span>/.Xresources <span class="o">]</span> <span class="o">&amp;&amp;</span> xrdb <span class="nv">$HOME</span>/.Xresources
- xsetroot -solid grey
- vncconfig -iconic <span class="p">&amp;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="c1">#!/bin/sh</span>
+<span class="w"> </span><span class="c1"># Uncomment the following two lines for normal desktop:</span>
+<span class="w"> </span><span class="nb">unset</span><span class="w"> </span>SESSION_MANAGER
+<span class="w"> </span><span class="nb">unset</span><span class="w"> </span>DBUS_SESSION_BUS_ADDRESS
+<span class="w"> </span>startxfce4<span class="w"> </span><span class="p">&amp;</span>
+<span class="w"> </span><span class="o">[</span><span class="w"> </span>-x<span class="w"> </span>/etc/vnc/xstartup<span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">exec</span><span class="w"> </span>/etc/vnc/xstartup
+<span class="w"> </span><span class="o">[</span><span class="w"> </span>-r<span class="w"> </span><span class="nv">$HOME</span>/.Xresources<span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>xrdb<span class="w"> </span><span class="nv">$HOME</span>/.Xresources
+<span class="w"> </span>xsetroot<span class="w"> </span>-solid<span class="w"> </span>grey
+<span class="w"> </span>vncconfig<span class="w"> </span>-iconic<span class="w"> </span><span class="p">&amp;</span>
 </pre></div>
 </div>
 <ol class="arabic simple">
 <li><p>Give the right permissions to the file <code class="docutils literal notranslate"><span class="pre">~/.vnc/xstartup</span></code></p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> chmod +x ~/.vnc/xstartup
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>~/.vnc/xstartup
 </pre></div>
 </div>
 <ol class="arabic simple">
 <li><p>Start VNC server</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> vncserver -geometry 1600x1200 :&lt;PORT_NUMBER&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>vncserver<span class="w"> </span>-geometry<span class="w"> </span>1600x1200<span class="w"> </span>:&lt;PORT_NUMBER&gt;
 </pre></div>
 </div>
 <p><strong>Note:</strong> To list all running vncservers, use: ps -ef | grep vnc`</p>
@@ -1734,7 +1734,7 @@ PC/Linux</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Stop VNC server - mandatory at the end of your session</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> vncserver -kill :&lt;PORT_NUMBER&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>vncserver<span class="w"> </span>-kill<span class="w"> </span>:&lt;PORT_NUMBER&gt;
 </pre></div>
 </div>
 </section>

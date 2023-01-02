@@ -1121,34 +1121,34 @@ title="Edit this page"
 <h2><strong>Automatic <strong>M</strong>ount on Startup</strong><a class="headerlink" href="#automatic-mount-on-startup" title="Permalink to this headline">#</a></h2>
 <p>For the following steps you need admin permissions.</p>
 <p>1. Create data_processing &amp; data_shared folders in <code class="docutils literal notranslate"><span class="pre">/mnt</span></code>, type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mkdir /mnt/data_processing
-sudo mkdir /mnt/data_shared
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>mkdir<span class="w"> </span>/mnt/data_processing
+sudo<span class="w"> </span>mkdir<span class="w"> </span>/mnt/data_shared
 </pre></div>
 </div>
 <p>2. Edit mount table, type : <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">nano</span> <span class="pre">/etc/fstab</span></code></p>
 <p>3. For the following operating systems:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="cc220008-40b4-4c73-b034-b6177661177e" name="c210a0b4-5427-491b-91f5-4474b3af74d7" type="radio">
-</input><label class="tabbed-label" for="cc220008-40b4-4c73-b034-b6177661177e">
+<input checked="checked" id="ee2cdb26-567d-4873-9e29-2d078a80ea51" name="b91084ce-0305-4c3f-8cd9-b1fa7e91de89" type="radio">
+</input><label class="tabbed-label" for="ee2cdb26-567d-4873-9e29-2d078a80ea51">
 Ubuntu 14.04 LTS</label><div class="tabbed-content docutils">
 <p>Add the following lines at the bottom of the file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#data_processing @SERVER</span>
-//IP_SERVER/data_processing        /mnt/data_processing    cifs    <span class="nv">username</span><span class="o">=</span>XXX,password<span class="o">=</span>XXX    <span class="m">0</span>       <span class="m">0</span>
+//IP_SERVER/data_processing<span class="w">        </span>/mnt/data_processing<span class="w">    </span>cifs<span class="w">    </span><span class="nv">username</span><span class="o">=</span>XXX,password<span class="o">=</span>XXX<span class="w">    </span><span class="m">0</span><span class="w">       </span><span class="m">0</span>
 
 <span class="c1">#data_shared @SERVER</span>
-//IP_SERVER/data_shared        /mnt/data_shared    cifs    <span class="nv">username</span><span class="o">=</span>XXX,password<span class="o">=</span>XXX    <span class="m">0</span>       <span class="m">0</span>
+//IP_SERVER/data_shared<span class="w">        </span>/mnt/data_shared<span class="w">    </span>cifs<span class="w">    </span><span class="nv">username</span><span class="o">=</span>XXX,password<span class="o">=</span>XXX<span class="w">    </span><span class="m">0</span><span class="w">       </span><span class="m">0</span>
 </pre></div>
 </div>
 </div>
-<input id="d838367a-4799-4908-83c5-8a16242065c1" name="c210a0b4-5427-491b-91f5-4474b3af74d7" type="radio">
-</input><label class="tabbed-label" for="d838367a-4799-4908-83c5-8a16242065c1">
+<input id="cff05a1c-6291-4f70-8717-9fd81ba1fa9b" name="b91084ce-0305-4c3f-8cd9-b1fa7e91de89" type="radio">
+</input><label class="tabbed-label" for="cff05a1c-6291-4f70-8717-9fd81ba1fa9b">
 Debian Wheezy 8</label><div class="tabbed-content docutils">
 <p>Add the following lines at the bottom of the file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#data_processing @SERVER</span>
-//IP_SERVER/data_processing    /mnt/data_processing    cifs  nounix,sec<span class="o">=</span>ntlmssp,user<span class="o">=</span>XXX,password<span class="o">=</span>XXX <span class="m">0</span> <span class="m">0</span>
+//IP_SERVER/data_processing<span class="w">    </span>/mnt/data_processing<span class="w">    </span>cifs<span class="w">  </span>nounix,sec<span class="o">=</span>ntlmssp,user<span class="o">=</span>XXX,password<span class="o">=</span>XXX<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
 
 <span class="c1">#data_shared @SERVER</span>
-//IP_SERVER/data_shared    /mnt/data_shared    cifs  nounix,sec<span class="o">=</span>ntlmssp,user<span class="o">=</span>XXX,password<span class="o">=</span>XXX <span class="m">0</span> <span class="m">0</span>
+//IP_SERVER/data_shared<span class="w">    </span>/mnt/data_shared<span class="w">    </span>cifs<span class="w">  </span>nounix,sec<span class="o">=</span>ntlmssp,user<span class="o">=</span>XXX,password<span class="o">=</span>XXX<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
 </pre></div>
 </div>
 </div>
@@ -1174,16 +1174,16 @@ PATH=${PATH}:${SCT_DIR}/install/debian/c3d
 </div>
 <p>Then install FSL with the python script <code class="docutils literal notranslate"><span class="pre">fslinstaller.py</span></code> you’ll find there : <a class="reference external" href="http://goo.gl/Tfu1UW">http://goo.gl/Tfu1UW</a> Make sure the installer set your bash configuration, following lines should be in your bashrc or bash_profile. If not, add it:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FSLDIR</span><span class="o">=</span><span class="s2">&quot;/usr/local/fsl&quot;</span>
-. <span class="si">${</span><span class="nv">FSLDIR</span><span class="si">}</span>/etc/fslconf/fsl.sh
+.<span class="w"> </span><span class="si">${</span><span class="nv">FSLDIR</span><span class="si">}</span>/etc/fslconf/fsl.sh
 <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">FSLDIR</span><span class="si">}</span>/bin:<span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>
-<span class="nb">export</span> FSLDIR PATH
+<span class="nb">export</span><span class="w"> </span>FSLDIR<span class="w"> </span>PATH
 </pre></div>
 </div>
 </section>
 <section id="miniconda">
 <h3>Miniconda<a class="headerlink" href="#miniconda" title="Permalink to this headline">#</a></h3>
 <p>Run the miniconda installer shell script for linux you can get there <a class="reference external" href="http://conda.pydata.org/miniconda.html">http://conda.pydata.org/miniconda.html</a></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>~ bash Miniconda-*.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>~<span class="w"> </span>bash<span class="w"> </span>Miniconda-*.sh
 </pre></div>
 </div>
 <p>Then, in the SCT repo, type:</p>

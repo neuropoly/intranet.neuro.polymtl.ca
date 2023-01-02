@@ -1265,11 +1265,11 @@ title="Edit this page"
 <section id="visualizing-warping-field">
 <h2>Visualizing Warping Field<a class="headerlink" href="#visualizing-warping-field" title="Permalink to this headline">#</a></h2>
 <p>ANTs saves the warping field as a component image (5D), not in vector format (4D). Therefore, it cannot be interpreted by FSL. To convert the warping field in component, you can use c3d:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c3d -mcs warp_comp.nii -oo warp_vecx.nii warp_vecy.nii warp_vecz.nii
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c3d<span class="w"> </span>-mcs<span class="w"> </span>warp_comp.nii<span class="w"> </span>-oo<span class="w"> </span>warp_vecx.nii<span class="w"> </span>warp_vecy.nii<span class="w"> </span>warp_vecz.nii
 </pre></div>
 </div>
 <p>To convert vector-based warping field into component image readable by ANTS, use the following command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c3d warp_vecx.nii warp_vecy.nii warp_vecz.nii -omc <span class="m">3</span> warp_comp.nii
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c3d<span class="w"> </span>warp_vecx.nii<span class="w"> </span>warp_vecy.nii<span class="w"> </span>warp_vecz.nii<span class="w"> </span>-omc<span class="w"> </span><span class="m">3</span><span class="w"> </span>warp_comp.nii
 </pre></div>
 </div>
 </section>
@@ -1277,8 +1277,8 @@ title="Edit this page"
 <h2>Translation<a class="headerlink" href="#translation" title="Permalink to this headline">#</a></h2>
 <p>-t Translation[GradientStep]</p>
 <p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>antsRegistration -d <span class="nv">$ImageDimension</span> -r <span class="o">[</span><span class="si">${</span><span class="nv">FILE_DEST</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span>,<span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span> ,1<span class="o">]</span> -m <span class="si">${</span><span class="nv">MetricType</span><span class="si">}</span>
-<span class="si">${</span><span class="nv">FILE_DEST</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span>,<span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span>,1,4<span class="o">]</span> -o <span class="nv">$OutPrefix</span> -t Translation -c <span class="o">[</span>10000x10000x10000,1.e-8,20<span class="o">]</span> -s 4x2x1vox -f 3x2x1
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>antsRegistration<span class="w"> </span>-d<span class="w"> </span><span class="nv">$ImageDimension</span><span class="w"> </span>-r<span class="w"> </span><span class="o">[</span><span class="si">${</span><span class="nv">FILE_DEST</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span>,<span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span><span class="w"> </span>,1<span class="o">]</span><span class="w"> </span>-m<span class="w"> </span><span class="si">${</span><span class="nv">MetricType</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">FILE_DEST</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span>,<span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span>,1,4<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span><span class="nv">$OutPrefix</span><span class="w"> </span>-t<span class="w"> </span>Translation<span class="w"> </span>-c<span class="w"> </span><span class="o">[</span>10000x10000x10000,1.e-8,20<span class="o">]</span><span class="w"> </span>-s<span class="w"> </span>4x2x1vox<span class="w"> </span>-f<span class="w"> </span>3x2x1
 </pre></div>
 </div>
 </section>
@@ -1286,7 +1286,7 @@ title="Edit this page"
 <h2>Restrict Gradient Deformation<a class="headerlink" href="#restrict-gradient-deformation" title="Permalink to this headline">#</a></h2>
 <p>–Restrict-Deformation XxYxZ</p>
 <p><strong>Example: restrict the gradient in two dimensions (axial)</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ants <span class="nv">$ImageDimension</span> -m <span class="si">${</span><span class="nv">MetricType</span><span class="si">}</span><span class="o">[</span><span class="si">${</span><span class="nv">FILE_DEST</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT_ANAT</span><span class="si">}</span>,<span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span>,1,4<span class="o">]</span> --Restrict-Deformation 1x1x0 -t SyN -r Gauss<span class="o">[</span><span class="m">6</span>,3<span class="o">]</span> -o <span class="si">${</span><span class="nv">PATH_OUTPUT</span><span class="si">}</span>/ -i <span class="si">${</span><span class="nv">MaxIteration</span><span class="si">}</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ants<span class="w"> </span><span class="nv">$ImageDimension</span><span class="w"> </span>-m<span class="w"> </span><span class="si">${</span><span class="nv">MetricType</span><span class="si">}</span><span class="o">[</span><span class="si">${</span><span class="nv">FILE_DEST</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT_ANAT</span><span class="si">}</span>,<span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span>,1,4<span class="o">]</span><span class="w"> </span>--Restrict-Deformation<span class="w"> </span>1x1x0<span class="w"> </span>-t<span class="w"> </span>SyN<span class="w"> </span>-r<span class="w"> </span>Gauss<span class="o">[</span><span class="m">6</span>,3<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span><span class="si">${</span><span class="nv">PATH_OUTPUT</span><span class="si">}</span>/<span class="w"> </span>-i<span class="w"> </span><span class="si">${</span><span class="nv">MaxIteration</span><span class="si">}</span>
 </pre></div>
 </div>
 <p>Note: this restriction <strong>does not</strong> apply to the affine transformation</p>
@@ -1307,13 +1307,13 @@ title="Edit this page"
 <p>– <code class="docutils literal notranslate"><span class="pre">PartialMatchingIterations</span></code> controls the symmetry in the matching. This option assumes the complete labeling is in the first set of label parameters … more iterations leads to more symmetry in the matching - 0 iterations means full asymmetry</p>
 <section id="example">
 <h3><strong>Example</strong><a class="headerlink" href="#example" title="Permalink to this headline">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ants <span class="m">3</span> -m PSE<span class="o">[</span>destination.nii,source.nii,mask_destination.nii,mask_source.nii,0.8,100,1,0,1,100000<span class="o">]</span> -o source_reg -i <span class="m">0</span> --rigid-affine <span class="nb">true</span> --number-of-affine-iterations 100x10x5 -m MI<span class="o">[</span>destination.nii,source.nii,0.2,4<span class="o">]</span> --use-all-metrics-for-convergence <span class="m">1</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ants<span class="w"> </span><span class="m">3</span><span class="w"> </span>-m<span class="w"> </span>PSE<span class="o">[</span>destination.nii,source.nii,mask_destination.nii,mask_source.nii,0.8,100,1,0,1,100000<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span>source_reg<span class="w"> </span>-i<span class="w"> </span><span class="m">0</span><span class="w"> </span>--rigid-affine<span class="w"> </span><span class="nb">true</span><span class="w"> </span>--number-of-affine-iterations<span class="w"> </span>100x10x5<span class="w"> </span>-m<span class="w"> </span>MI<span class="o">[</span>destination.nii,source.nii,0.2,4<span class="o">]</span><span class="w"> </span>--use-all-metrics-for-convergence<span class="w"> </span><span class="m">1</span>
 </pre></div>
 </div>
 <p>This line does an affine registration of the moving to the fixed image. There are 2 metrics used: PSE (point-set expectation) and MI (mutual information). The weight of each of them is the first “non-string” argument (0.8 for PSE and 0.2 for MI here). To do a diffeomorphic transformation, change the -i paramater to something like 50x50x50 (number of iteration to do for the diffeomorphic transformation). The MARKER files can be done with the ITK-snap labelling utility</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> <span class="c1"># apply the transformation</span>
- WarpImageMultiTransform <span class="nv">$DIM</span> <span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span> <span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>_reg_diffeo.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span> -R <span class="si">${</span><span class="nv">FILE_DEST</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span> --use-BSpline
- <span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>Warp.nii.gz <span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>Affine.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="c1"># apply the transformation</span>
+<span class="w"> </span>WarpImageMultiTransform<span class="w"> </span><span class="nv">$DIM</span><span class="w"> </span><span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>_reg_diffeo.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span><span class="w"> </span>-R<span class="w"> </span><span class="si">${</span><span class="nv">FILE_DEST</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span><span class="w"> </span>--use-BSpline
+<span class="w"> </span><span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>Warp.nii.gz<span class="w"> </span><span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>Affine.txt
 </pre></div>
 </div>
 <p>This line applies the affine transformation to the moving image. For a diffeomorphic case, simply add ${FILE_SRC}Warp.nii.gz in the transformation parameter (end of the line)</p>
@@ -1322,7 +1322,7 @@ title="Edit this page"
 <section id="affine-only-point-match-transformation">
 <h2>Affine-only point-match transformation<a class="headerlink" href="#affine-only-point-match-transformation" title="Permalink to this headline">#</a></h2>
 <p>Cannot be done with ANTs. Use the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ANTSUseLandmarkImagesToGetAffineTransform fixed_image moving_image affine regAffine.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ANTSUseLandmarkImagesToGetAffineTransform<span class="w"> </span>fixed_image<span class="w"> </span>moving_image<span class="w"> </span>affine<span class="w"> </span>regAffine.txt
 </pre></div>
 </div>
 </section>
@@ -1337,26 +1337,26 @@ title="Edit this page"
 <section id="itk-transform-file">
 <h2>ITK Transform File<a class="headerlink" href="#itk-transform-file" title="Permalink to this headline">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">FixedCenterOfRotationAffineTransform</span></code> performs the following computation:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>X′ <span class="o">=</span> R·<span class="o">(</span>S·X −C<span class="o">)</span>+C+V
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>X′<span class="w"> </span><span class="o">=</span><span class="w"> </span>R·<span class="o">(</span>S·X<span class="w"> </span>−C<span class="o">)</span>+C+V
 </pre></div>
 </div>
 <p>Where R is the rotation matrix, S is a scaling factor, C is the center of rotation and V is a translation vector or offset. Therefore the affine matrix M and the affine offset T are defined as:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">M</span><span class="o">=</span>R·S
-<span class="nv">T</span> <span class="o">=</span>C+V−R·C
+<span class="nv">T</span><span class="w"> </span><span class="o">=</span>C+V−R·C
 </pre></div>
 </div>
 <p>NOTES ON ITK Transform Files:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">T2d</span> <span class="o">=</span> <span class="o">[</span>
-a b o
-c d p
-<span class="m">0</span> <span class="m">0</span> <span class="m">1</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">T2d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>
+a<span class="w"> </span>b<span class="w"> </span>o
+c<span class="w"> </span>d<span class="w"> </span>p
+<span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span>
 <span class="o">]</span>
 
-<span class="nv">T3d</span> <span class="o">=</span> <span class="o">[</span>
-a b c o
-d e f p
-g h i q
-<span class="m">0</span> <span class="m">0</span> <span class="m">0</span> <span class="m">1</span>
+<span class="nv">T3d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>
+a<span class="w"> </span>b<span class="w"> </span>c<span class="w"> </span>o
+d<span class="w"> </span>e<span class="w"> </span>f<span class="w"> </span>p
+g<span class="w"> </span>h<span class="w"> </span>i<span class="w"> </span>q
+<span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span>
 <span class="o">]</span>
 </pre></div>
 </div>

@@ -1113,9 +1113,9 @@ title="Edit this page"
 <li><p>Install cuDNN 5: <a class="reference external" href="https://developer.nvidia.com/cudnn">https://developer.nvidia.com/cudnn</a></p></li>
 <li><p>Add to <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code></p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/usr/local/cuda-8.0/bin<span class="si">${</span><span class="nv">PATH</span><span class="p">:+:</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}}</span>
-<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/cuda-8.0/lib64<span class="si">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="p">:+:</span><span class="si">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="si">}}</span>
-<span class="nb">export</span> <span class="nv">CUDA_HOME</span><span class="o">=</span>/usr/local/cuda
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/usr/local/cuda-8.0/bin<span class="si">${</span><span class="nv">PATH</span><span class="p">:+:</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}}</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/cuda-8.0/lib64<span class="si">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="p">:+:</span><span class="si">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="si">}}</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">CUDA_HOME</span><span class="o">=</span>/usr/local/cuda
 </pre></div>
 </div>
 <section id="install-tensorflow-a-id-install-tensorflow-a">
@@ -1127,69 +1127,69 @@ title="Edit this page"
 <span class="c1"># </span>
 
 
-<span class="nb">echo</span> ------------------- install-essentional utils -------------------
-sudo apt-get install git
-sudo apt-get install vim
+<span class="nb">echo</span><span class="w"> </span>-------------------<span class="w"> </span>install-essentional<span class="w"> </span>utils<span class="w"> </span>-------------------
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>git
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>vim
 
 
-<span class="nb">echo</span> ------------------- install-update pip and essentional -------------------
-sudo apt-get install python-pip python-dev
-sudo pip install numpy
-pip install --upgrade pip
+<span class="nb">echo</span><span class="w"> </span>-------------------<span class="w"> </span>install-update<span class="w"> </span>pip<span class="w"> </span>and<span class="w"> </span>essentional<span class="w"> </span>-------------------
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python-pip<span class="w"> </span>python-dev
+sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>numpy
+pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
 
 
-<span class="nb">echo</span> ------------------- install_java <span class="k">for</span> installing bazel -------------------
-sudo apt-get install software-properties-common swig
-sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get update
-sudo apt-get install oracle-java8-installer
-<span class="nb">echo</span> <span class="s2">&quot;deb http://storage.googleapis.com/bazel-apt stable jdk1.8&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/bazel.list
-curl https://storage.googleapis.com/bazel-apt/doc/apt-key.pub.gpg <span class="p">|</span> sudo apt-key add -
-sudo apt-get update - See more at: http://www.nvidia.com/object/gpu-accelerated-applications-tensorflow-installation.html#sthash.sG3VIfZK.dpuf
+<span class="nb">echo</span><span class="w"> </span>-------------------<span class="w"> </span>install_java<span class="w"> </span><span class="k">for</span><span class="w"> </span>installing<span class="w"> </span>bazel<span class="w"> </span>-------------------
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>software-properties-common<span class="w"> </span>swig
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:webupd8team/java
+sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>oracle-java8-installer
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb http://storage.googleapis.com/bazel-apt stable jdk1.8&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/bazel.list
+curl<span class="w"> </span>https://storage.googleapis.com/bazel-apt/doc/apt-key.pub.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
+sudo<span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span>-<span class="w"> </span>See<span class="w"> </span>more<span class="w"> </span>at:<span class="w"> </span>http://www.nvidia.com/object/gpu-accelerated-applications-tensorflow-installation.html#sthash.sG3VIfZK.dpuf
 
-<span class="nb">echo</span> ------------------- installing bazel -------------------
-wget https://github.com/bazelbuild/bazel/archive/0.3.2.tar.gz
-tar -xvzf <span class="m">0</span>.3.2.tar.gz
-<span class="nb">cd</span> bazel-0.3.2/
-sudo ./compile.sh
-sudo cp output/bazel /usr/local/bin
-<span class="nb">cd</span> ..
+<span class="nb">echo</span><span class="w"> </span>-------------------<span class="w"> </span>installing<span class="w"> </span>bazel<span class="w"> </span>-------------------
+wget<span class="w"> </span>https://github.com/bazelbuild/bazel/archive/0.3.2.tar.gz
+tar<span class="w"> </span>-xvzf<span class="w"> </span><span class="m">0</span>.3.2.tar.gz
+<span class="nb">cd</span><span class="w"> </span>bazel-0.3.2/
+sudo<span class="w"> </span>./compile.sh
+sudo<span class="w"> </span>cp<span class="w"> </span>output/bazel<span class="w"> </span>/usr/local/bin
+<span class="nb">cd</span><span class="w"> </span>..
 
-<span class="nb">echo</span> ------------------- bulding tensorflow with bazel -------------------
+<span class="nb">echo</span><span class="w"> </span>-------------------<span class="w"> </span>bulding<span class="w"> </span>tensorflow<span class="w"> </span>with<span class="w"> </span>bazel<span class="w"> </span>-------------------
 
-git clone https://github.com/tensorflow/tensorflow
-git reset --hard 287db3a
-<span class="nb">cd</span> tensorflow/
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/tensorflow/tensorflow
+git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>287db3a
+<span class="nb">cd</span><span class="w"> </span>tensorflow/
 ./configure
 
-bazel build -c opt --config<span class="o">=</span>cuda //tensorflow/tools/pip_package:build_pip_package
-bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
+bazel<span class="w"> </span>build<span class="w"> </span>-c<span class="w"> </span>opt<span class="w"> </span>--config<span class="o">=</span>cuda<span class="w"> </span>//tensorflow/tools/pip_package:build_pip_package
+bazel-bin/tensorflow/tools/pip_package/build_pip_package<span class="w"> </span>/tmp/tensorflow_pkg
 
-sudo pip install --upgrade /tmp/tensorflow_pkg/tensorflow-0.12*
-sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/protobuf-3.0.0b2.post2-cp27-none-linux_x86_64.whl
-
-
-<span class="nb">echo</span> ------------------- Test tensorflow -------------------
-<span class="nb">cd</span> ..
-python test_tensorflow.py
+sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>/tmp/tensorflow_pkg/tensorflow-0.12*
+sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>https://storage.googleapis.com/tensorflow/linux/cpu/protobuf-3.0.0b2.post2-cp27-none-linux_x86_64.whl
 
 
-<span class="nb">echo</span> ------------------- End script -------------------
+<span class="nb">echo</span><span class="w"> </span>-------------------<span class="w"> </span>Test<span class="w"> </span>tensorflow<span class="w"> </span>-------------------
+<span class="nb">cd</span><span class="w"> </span>..
+python<span class="w"> </span>test_tensorflow.py
+
+
+<span class="nb">echo</span><span class="w"> </span>-------------------<span class="w"> </span>End<span class="w"> </span>script<span class="w"> </span>-------------------
 </pre></div>
 </div>
 </section>
 <section id="fix-cuda-driver-version-a-id-fix-cuda-driver-version-a">
 <h2>Fix CUDA driver version <a id="fix_cuda_driver_version"></a><a class="headerlink" href="#fix-cuda-driver-version-a-id-fix-cuda-driver-version-a" title="Permalink to this headline">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo add-apt-repository ppa:graphics-drivers/ppa
-sudo apt-get update
-sudo apt-get install nvidia-367
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:graphics-drivers/ppa
+sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>nvidia-367
 </pre></div>
 </div>
 </section>
 <section id="fix-module-tensorflow-import-error-a-id-fix-module-tensorflow-import-error-a">
 <h2>Fix module tensorflow import error <a id="fix_module_tensorflow_import_error"></a><a class="headerlink" href="#fix-module-tensorflow-import-error-a-id-fix-module-tensorflow-import-error-a" title="Permalink to this headline">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo pip uninstall six
-sudo pip install six --upgrade --target<span class="o">=</span><span class="s2">&quot;/usr/lib/python2.7/dist-packages&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>pip<span class="w"> </span>uninstall<span class="w"> </span>six
+sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>six<span class="w"> </span>--upgrade<span class="w"> </span>--target<span class="o">=</span><span class="s2">&quot;/usr/lib/python2.7/dist-packages&quot;</span>
 </pre></div>
 </div>
 </section>

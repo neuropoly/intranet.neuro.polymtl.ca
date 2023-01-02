@@ -1107,16 +1107,16 @@ title="Edit this page"
 <h4>CUDA 7.5<a class="headerlink" href="#cuda-7-5" title="Permalink to this headline">#</a></h4>
 <p>1. Download your relevant CUDA.run file, e.g. <code class="docutils literal notranslate"><span class="pre">cuda_7.0.28_linux.run</span></code>. Note, that once again this install is if you purely want to use your graphics card (Titan X) for GPU/CUDA purposes and not for rendering.</p>
 <p>2. Run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install build-essential
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>build-essential
 </pre></div>
 </div>
 <p>3. No need to create an <code class="docutils literal notranslate"><span class="pre">xorg.conf</span></code> file. If you have one, remove it (assuming you have a fresh OS install):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo rm /etc/X11/xorg.conf
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>rm<span class="w"> </span>/etc/X11/xorg.conf
 </pre></div>
 </div>
 <p>4. Create the <code class="docutils literal notranslate"><span class="pre">/etc/modprobe.d/blacklist-nouveau.conf</span></code> file with : blacklist nouveau option nouveau modeset=0</p>
 <p>Then:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo update-initramfs -u
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>update-initramfs<span class="w"> </span>-u
 </pre></div>
 </div>
 <p>5. Reboot computer. Nothing should have changed in loading up menu. You should be taken to the login screen. Once there type: <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Alt</span> <span class="pre">+</span> <span class="pre">F1</span></code>, and login to your user.</p>
@@ -1126,7 +1126,7 @@ title="Edit this page"
 </div>
 <p>7. Now, run $ sudo service lightdm stop The top line is a necessary step for installing the driver.</p>
 <p>8. Run the CUDA driver run file. *Notice that I explicitly don’t want the OpenGL flags to be installed:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo bash cuda-7.0.28_linux.run –no-opengl-libs
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>bash<span class="w"> </span>cuda-7.0.28_linux.run<span class="w"> </span>–no-opengl-libs
 </pre></div>
 </div>
 <p>9. During the install:</p>
@@ -1136,25 +1136,25 @@ SAY YES to installing CUDA Toolkit + Driver<br />
 Say YES to installing CUDA Samples<br />
 Say NO rebuilding any Xserver configurations with Nvidia.</p>
 <p>10. Installation should be complete. Now to check if device nodes are present, check if <code class="docutils literal notranslate"><span class="pre">/dev/nvidia*</span></code> files exist. If they don’t exist:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo modprobe nvidia
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>modprobe<span class="w"> </span>nvidia
 </pre></div>
 </div>
 <p>11. Set Environment path variables:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/usr/local/cuda-7.0/bin:<span class="nv">$PATH</span>
-<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/cuda-7.0/lib64:<span class="nv">$LD_LIBRARY_PATH</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/usr/local/cuda-7.0/bin:<span class="nv">$PATH</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/cuda-7.0/lib64:<span class="nv">$LD_LIBRARY_PATH</span>
 </pre></div>
 </div>
 <p>*Change depending on your cuda version.</p>
 <p>12. Verify the driver version:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat /proc/driver/nvidia/version
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>/proc/driver/nvidia/version
 </pre></div>
 </div>
 <p>13. Check CUDA driver version:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nvcc -V
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nvcc<span class="w"> </span>-V
 </pre></div>
 </div>
 <p>[Optional] At this point you can switch the <code class="docutils literal notranslate"><span class="pre">lightdm</span></code> back on again by doing:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo service lightdm start
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>service<span class="w"> </span>lightdm<span class="w"> </span>start
 </pre></div>
 </div>
 <p>You should be able to login to your session through the GUI without any problems or login-loops.</p>

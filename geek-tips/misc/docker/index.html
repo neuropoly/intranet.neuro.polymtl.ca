@@ -1232,9 +1232,9 @@ docker pull centos
 <section id="run-docker-image-a-id-run-docker-image-a">
 <h3>Run Docker image <a id="run_docker_image"></a><a class="headerlink" href="#run-docker-image-a-id-run-docker-image-a" title="Permalink to this headline">#</a></h3>
 <p>To run in interactive mode, use flag <code class="docutils literal notranslate"><span class="pre">-i</span></code></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it IMAGE /bin/bash
-docker run -it ubuntu:trusty /bin/bash
-docker run -it ubuntu:16.04
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>IMAGE<span class="w"> </span>/bin/bash
+docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>ubuntu:trusty<span class="w"> </span>/bin/bash
+docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>ubuntu:16.04
 </pre></div>
 </div>
 </section>
@@ -1269,7 +1269,7 @@ docker commit &lt;container_id&gt; your_name/ubuntu:16.04
 <li><p>Create a Dockerfile by running `touch Dockerfile`</p></li>
 <li><p>Inside the Dockerfile write the following (items below are just given as an example):</p></li>
 </ol>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">FROM centos:latest</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">FROM centos:latest</span>
 </pre></div>
 </div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>RUN yum -y update \
@@ -1311,9 +1311,9 @@ ENV PATH &quot;/sct/bin:${PATH}&quot;
 <section id="copy-file-into-container-a-id-copy-file-into-container-a">
 <h3>Copy file into container <a id="copy_file_into_container"></a><a class="headerlink" href="#copy-file-into-container-a-id-copy-file-into-container-a" title="Permalink to this headline">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># list container</span>
-docker ps
+docker<span class="w"> </span>ps
 <span class="c1"># copy file</span>
-docker cp &lt;file&gt; &lt;CONTAINER ID&gt;:&lt;PATH_DEST&gt;/&lt;file&gt;
+docker<span class="w"> </span>cp<span class="w"> </span>&lt;file&gt;<span class="w"> </span>&lt;CONTAINER<span class="w"> </span>ID&gt;:&lt;PATH_DEST&gt;/&lt;file&gt;
 </pre></div>
 </div>
 <p>Examples of Docker builder:</p>

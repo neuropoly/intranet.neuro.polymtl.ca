@@ -1138,45 +1138,45 @@ title="Edit this page"
 <section id="installation">
 <h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="ac989bfb-a721-413a-9777-692fdc27ddfb" name="50239e8b-e1c5-40f0-926c-7ee63894e924" type="radio">
-</input><label class="tabbed-label" for="ac989bfb-a721-413a-9777-692fdc27ddfb">
+<input checked="checked" id="df7f8379-99cb-4b09-a329-1ea25bc6e4cf" name="b43d16e6-0dc8-4afc-a398-d3f660a6a5c2" type="radio">
+</input><label class="tabbed-label" for="df7f8379-99cb-4b09-a329-1ea25bc6e4cf">
 Debian/Ubuntu</label><div class="tabbed-content docutils">
 <p>Install <code class="docutils literal notranslate"><span class="pre">datalad</span></code> using <code class="docutils literal notranslate"><span class="pre">conda</span></code> :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> miniconda3/etc/profile.d/conda.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>miniconda3/etc/profile.d/conda.sh
 
 <span class="c1"># TO DO ONLY ONCE: </span>
 
-conda create -y -n venv3.7 <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7
+conda<span class="w"> </span>create<span class="w"> </span>-y<span class="w"> </span>-n<span class="w"> </span>venv3.7<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7
 
 <span class="c1"># TO ACTIVATE:</span>
 
-conda activate venv3.7
+conda<span class="w"> </span>activate<span class="w"> </span>venv3.7
 
-pip install datalad
+pip<span class="w"> </span>install<span class="w"> </span>datalad
 
-su 
-apt-get install git-annex
+su<span class="w"> </span>
+apt-get<span class="w"> </span>install<span class="w"> </span>git-annex
 </pre></div>
 </div>
 </div>
-<input id="32ef3a26-5ec4-42ac-9bc8-2987a92ba51f" name="50239e8b-e1c5-40f0-926c-7ee63894e924" type="radio">
-</input><label class="tabbed-label" for="32ef3a26-5ec4-42ac-9bc8-2987a92ba51f">
+<input id="fd3af028-ebb8-4ec9-a369-bdda3cd231ef" name="b43d16e6-0dc8-4afc-a398-d3f660a6a5c2" type="radio">
+</input><label class="tabbed-label" for="fd3af028-ebb8-4ec9-a369-bdda3cd231ef">
 MacOS</label><div class="tabbed-content docutils">
 <p>Install <code class="docutils literal notranslate"><span class="pre">datalad</span></code> using <code class="docutils literal notranslate"><span class="pre">conda</span></code> :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> miniconda3/etc/profile.d/conda.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>miniconda3/etc/profile.d/conda.sh
 
 <span class="c1"># TO DO ONLY ONCE: </span>
 
-conda create -y -n venv3.7 <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7
+conda<span class="w"> </span>create<span class="w"> </span>-y<span class="w"> </span>-n<span class="w"> </span>venv3.7<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7
 
 <span class="c1"># TO ACTIVATE:</span>
 
-conda activate venv3.7
+conda<span class="w"> </span>activate<span class="w"> </span>venv3.7
 
-pip install datalad
+pip<span class="w"> </span>install<span class="w"> </span>datalad
 
 <span class="c1"># first, install brew: https://brew.sh/</span>
-brew install git-annex
+brew<span class="w"> </span>install<span class="w"> </span>git-annex
 </pre></div>
 </div>
 </div>
@@ -1185,19 +1185,19 @@ brew install git-annex
 <section id="usage">
 <h3>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h3>
 <p>Install dataset from OpenNeuro:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>datalad install https://github.com/OpenNeuroDatasets/ds001919.git
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>datalad<span class="w"> </span>install<span class="w"> </span>https://github.com/OpenNeuroDatasets/ds001919.git
 </pre></div>
 </div>
 <p>Get one subject:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>datalad get sub-unf01
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>datalad<span class="w"> </span>get<span class="w"> </span>sub-unf01
 </pre></div>
 </div>
 <p>Get all subjects:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>datalad get . 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>datalad<span class="w"> </span>get<span class="w"> </span>.<span class="w"> </span>
 </pre></div>
 </div>
 <p>Update dataset:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>datalad update -r —merge
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>datalad<span class="w"> </span>update<span class="w"> </span>-r<span class="w"> </span>—merge
 </pre></div>
 </div>
 </section>
@@ -1207,18 +1207,18 @@ brew install git-annex
 <section id="id1">
 <h3>Installation<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <div class="tabbed-set docutils">
-<input checked="checked" id="55842f14-bd73-4a12-b8e8-5249f574da59" name="850923a8-6a5b-495a-b85f-dde1b435fa23" type="radio">
-</input><label class="tabbed-label" for="55842f14-bd73-4a12-b8e8-5249f574da59">
+<input checked="checked" id="429fff85-62fc-427c-a00f-52e21f236d95" name="01054e19-0231-4b36-9f21-61e88e02bcb6" type="radio">
+</input><label class="tabbed-label" for="429fff85-62fc-427c-a00f-52e21f236d95">
 Linux</label><div class="tabbed-content docutils">
 <p>Follow the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/userguide/install-linux.html">AWS Installation Instructions for Linux</a>.</p>
 </div>
-<input id="aa9e837e-b522-4511-b865-8c09797110ef" name="850923a8-6a5b-495a-b85f-dde1b435fa23" type="radio">
-</input><label class="tabbed-label" for="aa9e837e-b522-4511-b865-8c09797110ef">
+<input id="e4e0b2bb-6589-4c45-a748-15ccd993b6ce" name="01054e19-0231-4b36-9f21-61e88e02bcb6" type="radio">
+</input><label class="tabbed-label" for="e4e0b2bb-6589-4c45-a748-15ccd993b6ce">
 MacOS</label><div class="tabbed-content docutils">
 <p>Follow the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/userguide/install-macos.html">AWS Installation Instructions for MacOS</a>.</p>
 </div>
-<input id="f1a131f1-d0e2-434c-9ae7-38a5bf9bf5fc" name="850923a8-6a5b-495a-b85f-dde1b435fa23" type="radio">
-</input><label class="tabbed-label" for="f1a131f1-d0e2-434c-9ae7-38a5bf9bf5fc">
+<input id="9532693f-0053-4f2f-bc73-f01c558ec04a" name="01054e19-0231-4b36-9f21-61e88e02bcb6" type="radio">
+</input><label class="tabbed-label" for="9532693f-0053-4f2f-bc73-f01c558ec04a">
 Windows</label><div class="tabbed-content docutils">
 <p>Follow the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/userguide/install-windows.html">AWS Installation Instructions for Windows</a>.</p>
 </div>
@@ -1227,7 +1227,7 @@ Windows</label><div class="tabbed-content docutils">
 <section id="download-openneuro-dataset">
 <h3>Download OpenNeuro Dataset<a class="headerlink" href="#download-openneuro-dataset" title="Permalink to this headline">#</a></h3>
 <p>Download dataset from openneuro by running this command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/aws  s3 sync --no-sign-request s3://openneuro.org/ds001919 ds001919-dwld/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/usr/local/bin/aws<span class="w">  </span>s3<span class="w"> </span>sync<span class="w"> </span>--no-sign-request<span class="w"> </span>s3://openneuro.org/ds001919<span class="w"> </span>ds001919-dwld/
 </pre></div>
 </div>
 </section>

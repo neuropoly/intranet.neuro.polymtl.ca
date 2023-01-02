@@ -1257,7 +1257,7 @@ title="Edit this page"
 <section id="arrays">
 <h2>Arrays<a class="headerlink" href="#arrays" title="Permalink to this headline">#</a></h2>
 <p>Create array from list of files</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FILES</span><span class="o">=(</span><span class="k">$(</span>ls -r data*.*<span class="k">)</span><span class="o">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FILES</span><span class="o">=(</span><span class="k">$(</span>ls<span class="w"> </span>-r<span class="w"> </span>data*.*<span class="k">)</span><span class="o">)</span>
 </pre></div>
 </div>
 <p>Use array (just an example)</p>
@@ -1269,34 +1269,34 @@ title="Edit this page"
 <h2>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">#</a></h2>
 <p><strong>Get the first 2 characters of a string</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">my_string</span><span class="o">=</span><span class="s2">&quot;hola&quot;</span>
-<span class="nb">echo</span> <span class="si">${</span><span class="nv">my_string</span><span class="p">:</span><span class="nv">0</span><span class="p">:</span><span class="nv">2</span><span class="si">}</span>
+<span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">my_string</span><span class="p">:</span><span class="nv">0</span><span class="p">:</span><span class="nv">2</span><span class="si">}</span>
 </pre></div>
 </div>
 <p><strong>Get the last 2 characters of a string</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="si">${</span><span class="nv">my_string</span><span class="p">: -2</span><span class="si">}</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">my_string</span><span class="p">: -2</span><span class="si">}</span>
 </pre></div>
 </div>
 <p><strong>Remove the first character of a string</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="si">${</span><span class="nv">my_string</span><span class="p">:</span><span class="nv">1</span><span class="si">}</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">my_string</span><span class="p">:</span><span class="nv">1</span><span class="si">}</span>
 </pre></div>
 </div>
 <p><strong>Remove the last 2 characters of a string</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="si">${</span><span class="nv">my_string</span><span class="p">%??</span><span class="si">}</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">my_string</span><span class="p">%??</span><span class="si">}</span>
 </pre></div>
 </div>
 <p><strong>Display the first line where a pattern is found (here dim3), and remove the first characters that matches a given string</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fslhd t1w.nii.gz <span class="p">|</span> grep -m <span class="m">1</span> dim3 <span class="p">|</span> sed -e <span class="s2">&quot;s/^dim3           //&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fslhd<span class="w"> </span>t1w.nii.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-m<span class="w"> </span><span class="m">1</span><span class="w"> </span>dim3<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;s/^dim3           //&quot;</span>
 </pre></div>
 </div>
 <p><strong>Batch actions with grep</strong></p>
 <p>`grep` is powerful for creating an action based on a series of input (e.g. multiple files). Below is an example to delete several branches in git, based on their prefix name:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git branch -D <span class="sb">`</span>git branch <span class="p">|</span> grep -E <span class="s1">&#39;BRANCH_PREFIX*&#39;</span><span class="sb">`</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>-D<span class="w"> </span><span class="sb">`</span>git<span class="w"> </span>branch<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s1">&#39;BRANCH_PREFIX*&#39;</span><span class="sb">`</span>
 </pre></div>
 </div>
 <p><strong>Check if substring is in string</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">my_string</span><span class="o">=</span><span class="s1">&#39;My long string&#39;</span>
-<span class="k">if</span> <span class="o">[[</span> <span class="nv">$my_string</span> <span class="o">==</span> *<span class="s2">&quot;My long&quot;</span>* <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
-  <span class="nb">echo</span> <span class="s2">&quot;It&#39;s there!&quot;</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$my_string</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*<span class="s2">&quot;My long&quot;</span>*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;It&#39;s there!&quot;</span>
 <span class="k">fi</span>
 </pre></div>
 </div>
@@ -1305,53 +1305,53 @@ title="Edit this page"
 <section id="dates">
 <h2>Dates<a class="headerlink" href="#dates" title="Permalink to this headline">#</a></h2>
 <p>To list the date every week for the next five weeks, starting in 2 days:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> i <span class="k">in</span> <span class="o">{</span><span class="m">1</span>..5<span class="o">}</span><span class="p">;</span> <span class="k">do</span> <span class="nb">echo</span> <span class="k">$(</span>date -v +<span class="si">${</span><span class="nv">i</span><span class="si">}</span>w -v +2d <span class="s2">&quot;+%Y-%m-%d&quot;</span><span class="k">)</span><span class="p">;</span> <span class="k">done</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..5<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="k">$(</span>date<span class="w"> </span>-v<span class="w"> </span>+<span class="si">${</span><span class="nv">i</span><span class="si">}</span>w<span class="w"> </span>-v<span class="w"> </span>+2d<span class="w"> </span><span class="s2">&quot;+%Y-%m-%d&quot;</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
 </pre></div>
 </div>
 </section>
 <section id="for-loop">
 <h2>FOR Loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">#</a></h2>
 <p><strong>Loop across list elements</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">ARRAY</span><span class="o">=(</span>element1 element2 element3<span class="o">)</span>
-<span class="k">for</span> i <span class="k">in</span> <span class="si">${</span><span class="nv">ARRAY</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
-  <span class="nb">echo</span> <span class="nv">$i</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">ARRAY</span><span class="o">=(</span>element1<span class="w"> </span>element2<span class="w"> </span>element3<span class="o">)</span>
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="nv">ARRAY</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$i</span>
 <span class="k">done</span>
 </pre></div>
 </div>
 <p><strong>Loop across list elements (using indices)</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">ARRAY</span><span class="o">=(</span>element1 element2 element3<span class="o">)</span>
-<span class="k">for</span> i <span class="k">in</span> <span class="si">${</span><span class="p">!ARRAY[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
-  <span class="nb">echo</span> <span class="s2">&quot;Element: </span><span class="k">$((</span>i+1<span class="k">))</span><span class="s2">/</span><span class="si">${#</span><span class="nv">ARRAY</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
-  <span class="nb">echo</span> <span class="si">${</span><span class="nv">ARRAY</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">ARRAY</span><span class="o">=(</span>element1<span class="w"> </span>element2<span class="w"> </span>element3<span class="o">)</span>
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="p">!ARRAY[@]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Element: </span><span class="k">$((</span>i+1<span class="k">))</span><span class="s2">/</span><span class="si">${#</span><span class="nv">ARRAY</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">ARRAY</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span>
 <span class="k">done</span>
 </pre></div>
 </div>
 <p><strong>Loop across a series of files</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> filename <span class="k">in</span> im1 im2 im3 <span class="p">;</span> <span class="k">do</span>
-  bet <span class="nv">$filename</span> <span class="si">${</span><span class="nv">filename</span><span class="si">}</span>_brain <span class="p">;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span>filename<span class="w"> </span><span class="k">in</span><span class="w"> </span>im1<span class="w"> </span>im2<span class="w"> </span>im3<span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span>bet<span class="w"> </span><span class="nv">$filename</span><span class="w"> </span><span class="si">${</span><span class="nv">filename</span><span class="si">}</span>_brain<span class="w"> </span><span class="p">;</span>
 <span class="k">done</span>
 </pre></div>
 </div>
 <p><strong>Using ls</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FILES</span><span class="o">=</span><span class="sb">`</span>ls folder/*.nii<span class="sb">`</span>
-<span class="k">for</span> file <span class="k">in</span> <span class="nv">$FILES</span><span class="p">;</span> <span class="k">do</span>
-  <span class="nb">echo</span> <span class="nv">$file</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FILES</span><span class="o">=</span><span class="sb">`</span>ls<span class="w"> </span>folder/*.nii<span class="sb">`</span>
+<span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nv">$FILES</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$file</span>
 <span class="k">done</span>
 </pre></div>
 </div>
 <p>Do it in a single line:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FILES</span><span class="o">=</span><span class="sb">`</span>ls folder/*.nii<span class="sb">`</span><span class="p">;</span> <span class="k">for</span> file <span class="k">in</span> <span class="nv">$FILES</span><span class="p">;</span> <span class="k">do</span> <span class="nb">echo</span> <span class="nv">$file</span><span class="p">;</span> <span class="k">done</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FILES</span><span class="o">=</span><span class="sb">`</span>ls<span class="w"> </span>folder/*.nii<span class="sb">`</span><span class="p">;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nv">$FILES</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$file</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
 </pre></div>
 </div>
 <p><strong>Using find (recursive)</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FILES</span><span class="o">=</span><span class="sb">`</span>find . -name *.nii<span class="sb">`</span><span class="p">;</span> <span class="k">for</span> file <span class="k">in</span> <span class="nv">$FILES</span><span class="p">;</span> <span class="k">do</span> <span class="nb">echo</span> <span class="nv">$file</span><span class="p">;</span> <span class="k">done</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FILES</span><span class="o">=</span><span class="sb">`</span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span>*.nii<span class="sb">`</span><span class="p">;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nv">$FILES</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$file</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
 </pre></div>
 </div>
 <p><strong>Using a list of string</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">SUBJECT_LIST</span><span class="o">=</span><span class="s2">&quot;subject_a subject_b&quot;</span>
 
-<span class="k">for</span> subject <span class="k">in</span> <span class="nv">$SUBJECT_LIST</span><span class="p">;</span> <span class="k">do</span>
-  <span class="nb">echo</span> <span class="nv">$subject</span>
+<span class="k">for</span><span class="w"> </span>subject<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nv">$SUBJECT_LIST</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$subject</span>
 <span class="k">done</span>
 </pre></div>
 </div>
@@ -1360,32 +1360,32 @@ title="Edit this page"
 <h2>IF Statements<a class="headerlink" href="#if-statements" title="Permalink to this headline">#</a></h2>
 <section id="if-and">
 <h3>IF - AND<a class="headerlink" href="#if-and" title="Permalink to this headline">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> ! -z <span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="o">[</span> -e <span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-  <span class="k">do</span> something ...
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="k">do</span><span class="w"> </span>something<span class="w"> </span>...
 <span class="k">else</span>
-  <span class="k">do</span> something <span class="k">else</span>...
+<span class="w">  </span><span class="k">do</span><span class="w"> </span>something<span class="w"> </span><span class="k">else</span>...
 <span class="k">fi</span>
 </pre></div>
 </div>
 <p>alternative:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span> ! -z <span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span> -a  -e <span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span> <span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span><span class="w"> </span>-a<span class="w">  </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span>
 </pre></div>
 </div>
 </section>
 <section id="if-or">
 <h3>IF - OR<a class="headerlink" href="#if-or" title="Permalink to this headline">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[[</span> <span class="s2">&quot;</span><span class="nv">$s1</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s2">&quot;</span><span class="nv">$s2</span><span class="s2">&quot;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
-  <span class="k">do</span> something...
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$s1</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$s2</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="k">do</span><span class="w"> </span>something...
 <span class="k">fi</span>
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> ! -z <span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> -e <span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-  <span class="k">do</span> something ...
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="k">do</span><span class="w"> </span>something<span class="w"> </span>...
 <span class="k">fi</span>
 </pre></div>
 </div>
 <p>alternative:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span> ! -z <span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span> -o  -e <span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span> <span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span><span class="w"> </span>-o<span class="w">  </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span>
 </pre></div>
 </div>
 </section>
@@ -1394,10 +1394,10 @@ title="Edit this page"
 <h2>CSV Files<a class="headerlink" href="#csv-files" title="Permalink to this headline">#</a></h2>
 <section id="parse-csv-file">
 <h3>Parse CSV File<a class="headerlink" href="#parse-csv-file" title="Permalink to this headline">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span>, <span class="nb">read</span> col1 col2 col3 col4 col5
-  <span class="k">do</span>
-    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$col2</span><span class="s2">&quot;</span>
-  <span class="k">done</span> &lt; &lt;FILE&gt;.csv
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="w"> </span><span class="nv">IFS</span><span class="o">=</span>,<span class="w"> </span><span class="nb">read</span><span class="w"> </span>col1<span class="w"> </span>col2<span class="w"> </span>col3<span class="w"> </span>col4<span class="w"> </span>col5
+<span class="w">  </span><span class="k">do</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$col2</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="k">done</span><span class="w"> </span>&lt;<span class="w"> </span>&lt;FILE&gt;.csv
 </pre></div>
 </div>
 </section>
@@ -1407,23 +1407,23 @@ title="Edit this page"
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1"># use predefined variables to access passed arguments</span>
 <span class="c1"># echo arguments to the shell</span>
-<span class="nb">echo</span> <span class="nv">$1</span> <span class="nv">$2</span> <span class="nv">$3</span> <span class="s1">&#39; -&gt; echo $1 $2 $3&#39;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$1</span><span class="w"> </span><span class="nv">$2</span><span class="w"> </span><span class="nv">$3</span><span class="w"> </span><span class="s1">&#39; -&gt; echo $1 $2 $3&#39;</span>
 <span class="c1"># list all arguments:</span>
-<span class="nb">echo</span> <span class="nv">$@</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$@</span>
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># We can also store arguments from bash command line in special array</span>
 <span class="nv">args</span><span class="o">=(</span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span><span class="o">)</span>
 <span class="c1"># echo arguments to the shell</span>
-<span class="nb">echo</span> <span class="si">${</span><span class="nv">args</span><span class="p">[0]</span><span class="si">}</span> <span class="si">${</span><span class="nv">args</span><span class="p">[1]</span><span class="si">}</span> <span class="si">${</span><span class="nv">args</span><span class="p">[2]</span><span class="si">}</span> <span class="s1">&#39; -&gt; args=(&quot;$@&quot;); echo ${args[0]} ${args[1]} ${args[2]}&#39;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">args</span><span class="p">[0]</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">args</span><span class="p">[1]</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">args</span><span class="p">[2]</span><span class="si">}</span><span class="w"> </span><span class="s1">&#39; -&gt; args=(&quot;$@&quot;); echo ${args[0]} ${args[1]} ${args[2]}&#39;</span>
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># use $@ to print out all arguments at once</span>
-<span class="nb">echo</span> <span class="nv">$@</span> <span class="s1">&#39; -&gt; echo $@&#39;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$@</span><span class="w"> </span><span class="s1">&#39; -&gt; echo $@&#39;</span>
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># use $# variable to print out number of arguments passed to the bash script</span>
-<span class="nb">echo</span> Number of arguments passed: <span class="nv">$#</span> <span class="s1">&#39; -&gt; echo Number of arguments passed: $#&#39;</span>  
+<span class="nb">echo</span><span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>arguments<span class="w"> </span>passed:<span class="w"> </span><span class="nv">$#</span><span class="w"> </span><span class="s1">&#39; -&gt; echo Number of arguments passed: $#&#39;</span><span class="w">  </span>
 </pre></div>
 </div>
 <p>also see: <a class="reference external" href="https://www.shellscript.sh/tips/getopts/">Bash: parsing arguments with ‘getopts’</a></p>
@@ -1434,13 +1434,13 @@ title="Edit this page"
 <h3>Generate log file <a id="generate_log_file"></a><a class="headerlink" href="#generate-log-file-a-id-generate-log-file-a" title="Permalink to this headline">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">LOGFILE</span><span class="o">=</span>&lt;FILE_NAME&gt;.log
 <span class="o">{</span>
-    <span class="c1"># bash commands...</span>
-    
-<span class="o">}</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> tee <span class="nv">$LOGFILE</span>
+<span class="w">    </span><span class="c1"># bash commands...</span>
+<span class="w">    </span>
+<span class="o">}</span><span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span><span class="nv">$LOGFILE</span>
 </pre></div>
 </div>
 <p>Generate a log file of a script directly in terminal:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>script.<span class="nv">$$</span> <span class="o">[</span>options<span class="o">]</span> <span class="p">|</span> tee &lt;FILE_NAME&gt;.log
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>script.<span class="nv">$$</span><span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>&lt;FILE_NAME&gt;.log
 </pre></div>
 </div>
 <p>Add date to log file: log_file_name_$(date +%Y%m%d).logEdit</p>
@@ -1449,7 +1449,7 @@ title="Edit this page"
 <section id="colors">
 <h2>Colors<a class="headerlink" href="#colors" title="Permalink to this headline">#</a></h2>
 <p>The Mountain Lion Terminal does not support the command <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">-e</span></code> therefore the following has to be used:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">printf</span> <span class="s2">&quot;\e[0;32mText here\e[0m&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;\e[0;32mText here\e[0m&quot;</span>
 </pre></div>
 </div>
 <section id="ansi-escape-codes-for-colours">
@@ -1506,11 +1506,11 @@ title="Edit this page"
 <section id="misc">
 <h2>Misc<a class="headerlink" href="#misc" title="Permalink to this headline">#</a></h2>
 <p><strong>Pass argument from file</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mycommand <span class="s2">&quot;</span><span class="k">$(</span>&lt; file.txt<span class="k">)</span><span class="s2">&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mycommand<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>&lt;<span class="w"> </span>file.txt<span class="k">)</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
 <p><strong>Test existence of a file</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="o">[</span> -e <span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
 </pre></div>
 </div>
 </section>

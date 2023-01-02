@@ -1115,8 +1115,8 @@ title="Edit this page"
 </section>
 <section id="cpu-clusters">
 <h2>CPU Clusters<a class="headerlink" href="#cpu-clusters" title="Permalink to this headline">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>elm.criugm.qc.ca <span class="o">(</span><span class="m">64</span> cores<span class="o">)</span>
-jacaranda.criugm.qc.ca <span class="o">(</span><span class="m">24</span> cores<span class="o">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>elm.criugm.qc.ca<span class="w"> </span><span class="o">(</span><span class="m">64</span><span class="w"> </span>cores<span class="o">)</span>
+jacaranda.criugm.qc.ca<span class="w"> </span><span class="o">(</span><span class="m">24</span><span class="w"> </span>cores<span class="o">)</span>
 </pre></div>
 </div>
 <p>Note: to run your processings, go to <code class="docutils literal notranslate"><span class="pre">/scratch</span></code>, it is a much faster disk than the disk where your home directory is, however it is only used for temp files (i.e. clean after use).</p>
@@ -1124,7 +1124,7 @@ jacaranda.criugm.qc.ca <span class="o">(</span><span class="m">24</span> cores<s
 <section id="transferring-data-from-jacaranda">
 <h2>Transferring Data from JACARANDA<a class="headerlink" href="#transferring-data-from-jacaranda" title="Permalink to this headline">#</a></h2>
 <p>When located in your home directory , you can compress a scan (example myelin_06_rescan) with the following command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar -zcvhf myelin_06_rescan.tar.gz /unf/dicoms/by_groups/neuropoly/dev/myelin_mapping/myelin_06_rescan/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>-zcvhf<span class="w"> </span>myelin_06_rescan.tar.gz<span class="w"> </span>/unf/dicoms/by_groups/neuropoly/dev/myelin_mapping/myelin_06_rescan/
 </pre></div>
 </div>
 <p>Once the <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> file has been created, you can download it on your computer using scp or using filezilla (setup connection to sftp server).</p>
@@ -1142,16 +1142,16 @@ jacaranda.criugm.qc.ca <span class="o">(</span><span class="m">24</span> cores<s
 <p><strong>Example</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#$ -V  # To load environment variables</span>
- 
-<span class="nb">cd</span> /scratch/julien
- 
-<span class="nb">echo</span> <span class="s2">&quot;Script started at:&quot;</span>
+<span class="w"> </span>
+<span class="nb">cd</span><span class="w"> </span>/scratch/julien
+<span class="w"> </span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Script started at:&quot;</span>
 date
- 
+<span class="w"> </span>
 <span class="c1"># Launch script</span>
 sct_testing
- 
-<span class="nb">echo</span> <span class="s2">&quot;Script ended at:&quot;</span>
+<span class="w"> </span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Script ended at:&quot;</span>
 date
 </pre></div>
 </div>
@@ -1170,15 +1170,15 @@ ssh -Y username@elm.criugm.qc.ca
 </pre></div>
 </div>
 <p>Copy your files using <code class="docutils literal notranslate"><span class="pre">scp</span></code> to Elm from your computer:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp -r /src username@elm.criugm.qc.ca:neuropoly/&lt;GRAMES_USERNAME&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span>-r<span class="w"> </span>/src<span class="w"> </span>username@elm.criugm.qc.ca:neuropoly/&lt;GRAMES_USERNAME&gt;
 </pre></div>
 </div>
 <p>For a faster processing move your data on elm from home to scratch:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp -r source/ /scratch/julien/neuropoly/&lt;GRAMES_USERNAME&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-r<span class="w"> </span>source/<span class="w"> </span>/scratch/julien/neuropoly/&lt;GRAMES_USERNAME&gt;
 </pre></div>
 </div>
 <p>Activate MATLAB on elm:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module load matlab
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>matlab
 matlab
 </pre></div>
 </div>

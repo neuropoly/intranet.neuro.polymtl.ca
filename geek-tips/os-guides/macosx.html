@@ -2016,15 +2016,15 @@ title="Edit this page"
 <h3><strong>Misc</strong><a class="headerlink" href="#misc" title="Permalink to this headline">#</a></h3>
 <section id="dock-in-2d-a-id-dock-in-2d-a">
 <h4>Dock in 2d <a id="dock_in_2d"></a><a class="headerlink" href="#dock-in-2d-a-id-dock-in-2d-a" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>defaults write com.apple.dock no-glass -boolean YES
-killall Dock
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>defaults<span class="w"> </span>write<span class="w"> </span>com.apple.dock<span class="w"> </span>no-glass<span class="w"> </span>-boolean<span class="w"> </span>YES
+killall<span class="w"> </span>Dock
 </pre></div>
 </div>
 </section>
 <section id="make-hidden-applications-icons-transparent-a-id-make-hidden-applications-icons-transparent-a">
 <h4>Make Hidden Applications Icons Transparent <a id="make_hidden_applications_icons_transparent"></a><a class="headerlink" href="#make-hidden-applications-icons-transparent-a-id-make-hidden-applications-icons-transparent-a" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>defaults write com.apple.Dock showhidden -bool YES
-killall Dock
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>defaults<span class="w"> </span>write<span class="w"> </span>com.apple.Dock<span class="w"> </span>showhidden<span class="w"> </span>-bool<span class="w"> </span>YES
+killall<span class="w"> </span>Dock
 </pre></div>
 </div>
 </section>
@@ -2036,19 +2036,19 @@ killall Dock
 </section>
 <section id="reboot-station-with-terminal-a-id-reboot-station-with-terminal-a">
 <h4>Reboot station with Terminal <a id="reboot_station_with_terminal"></a><a class="headerlink" href="#reboot-station-with-terminal-a-id-reboot-station-with-terminal-a" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo shutdown -r now
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>shutdown<span class="w"> </span>-r<span class="w"> </span>now
 </pre></div>
 </div>
 </section>
 <section id="set-the-expanded-save-dialogue-as-default-a-id-set-the-expanded-save-dialogue-as-default-a">
 <h4>Set The Expanded Save Dialogue As Default <a id="set_the_expanded_save_dialogue_as_default"></a><a class="headerlink" href="#set-the-expanded-save-dialogue-as-default-a-id-set-the-expanded-save-dialogue-as-default-a" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>defaults write -g NSNavPanelExpandedStateForSaveMode -bool TRUE
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>defaults<span class="w"> </span>write<span class="w"> </span>-g<span class="w"> </span>NSNavPanelExpandedStateForSaveMode<span class="w"> </span>-bool<span class="w"> </span>TRUE
 </pre></div>
 </div>
 </section>
 <section id="screenshot-in-desired-format-a-id-screenshot-in-desired-format-a">
 <h4>Screenshot in desired format <a id="screenshot_in_desired_format"></a><a class="headerlink" href="#screenshot-in-desired-format-a-id-screenshot-in-desired-format-a" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>defaults write com.apple.screencapture <span class="nb">type</span> jpg
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>defaults<span class="w"> </span>write<span class="w"> </span>com.apple.screencapture<span class="w"> </span><span class="nb">type</span><span class="w"> </span>jpg
 </pre></div>
 </div>
 <p>needs re-logging</p>
@@ -2073,13 +2073,13 @@ killall Dock
 <h3>FSL and FSLeyes<a class="headerlink" href="#fsl-and-fsleyes" title="Permalink to this headline">#</a></h3>
 <section id="launch-fslview-via-double-click">
 <h4><strong>Launch fslview via double click</strong><a class="headerlink" href="#launch-fslview-via-double-click" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FSLDIR</span><span class="o">=</span>/usr/local/fsl . <span class="si">${</span><span class="nv">FSLDIR</span><span class="si">}</span>/etc/fslconf/fsl.sh <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/usr/local/fsl/bin fslview “<span class="nv">$@</span>” <span class="p">&amp;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FSLDIR</span><span class="o">=</span>/usr/local/fsl<span class="w"> </span>.<span class="w"> </span><span class="si">${</span><span class="nv">FSLDIR</span><span class="si">}</span>/etc/fslconf/fsl.sh<span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/usr/local/fsl/bin<span class="w"> </span>fslview<span class="w"> </span>“<span class="nv">$@</span>”<span class="w"> </span><span class="p">&amp;</span>
 </pre></div>
 </div>
 </section>
 <section id="generate-dwi-mean-in-same-folder">
 <h4><strong>generate dwi_mean in same folder</strong><a class="headerlink" href="#generate-dwi-mean-in-same-folder" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FSLDIR</span><span class="o">=</span>/usr/local/fsl . <span class="si">${</span><span class="nv">FSLDIR</span><span class="si">}</span>/etc/fslconf/fsl.sh <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/usr/local/fsl/bin <span class="nv">fold</span><span class="o">=</span><span class="k">$(</span>dirname “<span class="nv">$1</span>”<span class="k">)</span> <span class="nv">NAME</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> “<span class="k">$(</span>basename “<span class="nv">$1</span>”<span class="k">)</span>” <span class="p">|</span> cut -d<span class="s1">&#39;.&#39;</span> -f1<span class="sb">`</span> fslmaths “<span class="nv">$1</span>” -Tmean <span class="nv">$fold</span>“/“<span class="nv">$NAME</span>”_mean”
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FSLDIR</span><span class="o">=</span>/usr/local/fsl<span class="w"> </span>.<span class="w"> </span><span class="si">${</span><span class="nv">FSLDIR</span><span class="si">}</span>/etc/fslconf/fsl.sh<span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/usr/local/fsl/bin<span class="w"> </span><span class="nv">fold</span><span class="o">=</span><span class="k">$(</span>dirname<span class="w"> </span>“<span class="nv">$1</span>”<span class="k">)</span><span class="w"> </span><span class="nv">NAME</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span><span class="w"> </span>“<span class="k">$(</span>basename<span class="w"> </span>“<span class="nv">$1</span>”<span class="k">)</span>”<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="s1">&#39;.&#39;</span><span class="w"> </span>-f1<span class="sb">`</span><span class="w"> </span>fslmaths<span class="w"> </span>“<span class="nv">$1</span>”<span class="w"> </span>-Tmean<span class="w"> </span><span class="nv">$fold</span>“/“<span class="nv">$NAME</span>”_mean”
 </pre></div>
 </div>
 </section>
@@ -2262,7 +2262,7 @@ Example: qlmanage -p /Library/QuickLook/DTITK_QuickLookPlugin.qlgenerator
 <p>There are many forums about this issue. Below are some that sometimes work.</p>
 <section id="solution-1">
 <h4>Solution 1<a class="headerlink" href="#solution-1" title="Permalink to this headline">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mdutil -a -i off
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>mdutil<span class="w"> </span>-a<span class="w"> </span>-i<span class="w"> </span>off
 </pre></div>
 </div>
 <p><a class="reference external" href="https://apple.stackexchange.com/questions/388882/how-to-disable-spotlight-and-mds-stores-on-mac-os-catalina">Source</a>.</p>
@@ -2270,11 +2270,11 @@ Example: qlmanage -p /Library/QuickLook/DTITK_QuickLookPlugin.qlgenerator
 <section id="solution-2">
 <h4>Solution 2<a class="headerlink" href="#solution-2" title="Permalink to this headline">#</a></h4>
 <p>Turn off the indexing for all of my Volumes</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mdutil -d /Volumes/Macintosh<span class="se">\ </span>HD
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>mdutil<span class="w"> </span>-d<span class="w"> </span>/Volumes/Macintosh<span class="se">\ </span>HD
 </pre></div>
 </div>
 <p>Re-enable Spotlight with following command</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo mdutil -Ei on /Volumes/Macintosh<span class="se">\ </span>HD
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>mdutil<span class="w"> </span>-Ei<span class="w"> </span>on<span class="w"> </span>/Volumes/Macintosh<span class="se">\ </span>HD
 </pre></div>
 </div>
 <p><a class="reference external" href="https://apple.stackexchange.com/questions/388882/how-to-disable-spotlight-and-mds-stores-on-mac-os-catalina">Source</a>.</p>
@@ -2284,7 +2284,7 @@ Example: qlmanage -p /Library/QuickLook/DTITK_QuickLookPlugin.qlgenerator
 <h3>Right-click sharing for Google Drive<a class="headerlink" href="#right-click-sharing-for-google-drive" title="Permalink to this headline">#</a></h3>
 <p>The Share menu might not show one or more sharing options—such as Email This Page, AirDrop, or Facebook—or the Markup feature might be missing.</p>
 <p>Follow these steps if the issue occurred immediately after upgrading to Yosemite or El Capitan. Open the Terminal app, and run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -seed
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister<span class="w"> </span>-kill<span class="w"> </span>-seed
 </pre></div>
 </div>
 <p>source: <a class="reference external" href="https://support.apple.com/en-us/HT203129">https://support.apple.com/en-us/HT203129</a></p>
@@ -2296,16 +2296,16 @@ Example: qlmanage -p /Library/QuickLook/DTITK_QuickLookPlugin.qlgenerator
 <li><p>try to restart the computer.</p></li>
 <li><p>Try this:</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm ~/Library/Preferences/org.macosforge.xquartz.X11.plist
-rm ~/Library/Preferences/uk.fmrib.ox.ac.fslview.plist
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>~/Library/Preferences/org.macosforge.xquartz.X11.plist
+rm<span class="w"> </span>~/Library/Preferences/uk.fmrib.ox.ac.fslview.plist
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>open AppleScript Editor and run:</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tell application <span class="s2">&quot;fslview&quot;</span>
-  <span class="nb">set</span> bounds of windows to <span class="o">{</span><span class="m">100</span>, <span class="m">100</span>, <span class="m">800</span>, <span class="m">800</span><span class="o">}</span>
-end tell
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tell<span class="w"> </span>application<span class="w"> </span><span class="s2">&quot;fslview&quot;</span>
+<span class="w">  </span><span class="nb">set</span><span class="w"> </span>bounds<span class="w"> </span>of<span class="w"> </span>windows<span class="w"> </span>to<span class="w"> </span><span class="o">{</span><span class="m">100</span>,<span class="w"> </span><span class="m">100</span>,<span class="w"> </span><span class="m">800</span>,<span class="w"> </span><span class="m">800</span><span class="o">}</span>
+end<span class="w"> </span>tell
 </pre></div>
 </div>
 </section>
@@ -2335,8 +2335,8 @@ end tell
 <section id="id1">
 <h4><strong>Solution 1</strong><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
 <p>Remove the ACL manually. Go to the problematic folder(s) and type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod -N &lt;FOLDER&gt;
-chmod -RN &lt;FOLDER&gt;  <span class="c1"># --&gt; do do it for all files/folders recursively</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>-N<span class="w"> </span>&lt;FOLDER&gt;
+chmod<span class="w"> </span>-RN<span class="w"> </span>&lt;FOLDER&gt;<span class="w">  </span><span class="c1"># --&gt; do do it for all files/folders recursively</span>
 </pre></div>
 </div>
 </section>

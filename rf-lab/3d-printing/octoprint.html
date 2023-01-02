@@ -1071,43 +1071,43 @@ title="Edit this page"
 <li><p>Use the ethernet connection and ssh into raspberry pi. Default username and password are here:  <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.m20wwwmvvmjb">NeuroPoly Internal Document: OctoPi Default Credentials</a>.</p></li>
 <li><p>Get certificate:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo -i
-mkdir /etc/cert/
-<span class="nb">cd</span> /etc/cert/
-wget --user-agent<span class="o">=</span><span class="s2">&quot;Mozilla&quot;</span> http://si-reseau.polymtl.ca/entrust_g2_ca.cer
-mv /etc/cert/entrust_g2_ca.cer /etc/cert/entrust_g2_ca.pem
- 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>-i
+mkdir<span class="w"> </span>/etc/cert/
+<span class="nb">cd</span><span class="w"> </span>/etc/cert/
+wget<span class="w"> </span>--user-agent<span class="o">=</span><span class="s2">&quot;Mozilla&quot;</span><span class="w"> </span>http://si-reseau.polymtl.ca/entrust_g2_ca.cer
+mv<span class="w"> </span>/etc/cert/entrust_g2_ca.cer<span class="w"> </span>/etc/cert/entrust_g2_ca.pem
+<span class="w"> </span>
 </pre></div>
 </div>
 <p>* Configure your WiFi connection by editing <strong>octopi-wpa-supplicant.txt</strong> on the root of the flashed card when using it like a thumb drive. Important: Do not use WordPad (Windows) or TextEdit (MacOS X) for this, those editors are known to mangle the file, making configuration fail. Use something like Notepad++, Atom or VSCode instead or at the very least heed the warnings in the file:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> <span class="nv">country</span><span class="o">=</span>CA
- <span class="nv">ctrl_interface</span><span class="o">=</span><span class="nv">DIR</span><span class="o">=</span>/var/run/wpa_supplicant <span class="nv">GROUP</span><span class="o">=</span>netdev
- <span class="nv">update_config</span><span class="o">=</span><span class="m">1</span>
- <span class="nv">network</span><span class="o">={</span>
- <span class="nv">ssid</span><span class="o">=</span><span class="s2">&quot;eduroam&quot;</span>
- <span class="nv">priority</span><span class="o">=</span><span class="m">1</span>
- <span class="nv">proto</span><span class="o">=</span>RSN
- <span class="nv">key_mgmt</span><span class="o">=</span>WPA-EAP
- <span class="nv">auth_alg</span><span class="o">=</span>OPEN
- <span class="nv">pairwise</span><span class="o">=</span>CCMP TKIP
- <span class="nv">group</span><span class="o">=</span>CCMP TKIP
- <span class="nv">identity</span><span class="o">=</span>&lt;YOUR_CODE_HERE&gt;
- <span class="nv">password</span><span class="o">=</span>hash:&lt;YOUR_HASH_HERE&gt;
- <span class="nv">anonymous_identity</span><span class="o">=</span><span class="s2">&quot;anonymous@polymtl.ca&quot;</span>
- <span class="nv">phase1</span><span class="o">=</span><span class="s2">&quot;peaplabel=0&quot;</span>
- <span class="nv">phase2</span><span class="o">=</span><span class="s2">&quot;auth=MSCHAPV2&quot;</span>
- <span class="nv">eap</span><span class="o">=</span>PEAP
- <span class="nv">ca_cert</span><span class="o">=</span><span class="s2">&quot;/etc/cert/entrust_g2_ca.pem&quot;</span>
- <span class="nv">proactive_key_caching</span><span class="o">=</span><span class="m">1</span>
- <span class="o">}</span>
- 
- 
- <span class="c1"># Deactivate IPv6 by adding the line **net.ipv6.conf.all.disable_ipv6 = 1** in:</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="nv">country</span><span class="o">=</span>CA
+<span class="w"> </span><span class="nv">ctrl_interface</span><span class="o">=</span><span class="nv">DIR</span><span class="o">=</span>/var/run/wpa_supplicant<span class="w"> </span><span class="nv">GROUP</span><span class="o">=</span>netdev
+<span class="w"> </span><span class="nv">update_config</span><span class="o">=</span><span class="m">1</span>
+<span class="w"> </span><span class="nv">network</span><span class="o">={</span>
+<span class="w"> </span><span class="nv">ssid</span><span class="o">=</span><span class="s2">&quot;eduroam&quot;</span>
+<span class="w"> </span><span class="nv">priority</span><span class="o">=</span><span class="m">1</span>
+<span class="w"> </span><span class="nv">proto</span><span class="o">=</span>RSN
+<span class="w"> </span><span class="nv">key_mgmt</span><span class="o">=</span>WPA-EAP
+<span class="w"> </span><span class="nv">auth_alg</span><span class="o">=</span>OPEN
+<span class="w"> </span><span class="nv">pairwise</span><span class="o">=</span>CCMP<span class="w"> </span>TKIP
+<span class="w"> </span><span class="nv">group</span><span class="o">=</span>CCMP<span class="w"> </span>TKIP
+<span class="w"> </span><span class="nv">identity</span><span class="o">=</span>&lt;YOUR_CODE_HERE&gt;
+<span class="w"> </span><span class="nv">password</span><span class="o">=</span>hash:&lt;YOUR_HASH_HERE&gt;
+<span class="w"> </span><span class="nv">anonymous_identity</span><span class="o">=</span><span class="s2">&quot;anonymous@polymtl.ca&quot;</span>
+<span class="w"> </span><span class="nv">phase1</span><span class="o">=</span><span class="s2">&quot;peaplabel=0&quot;</span>
+<span class="w"> </span><span class="nv">phase2</span><span class="o">=</span><span class="s2">&quot;auth=MSCHAPV2&quot;</span>
+<span class="w"> </span><span class="nv">eap</span><span class="o">=</span>PEAP
+<span class="w"> </span><span class="nv">ca_cert</span><span class="o">=</span><span class="s2">&quot;/etc/cert/entrust_g2_ca.pem&quot;</span>
+<span class="w"> </span><span class="nv">proactive_key_caching</span><span class="o">=</span><span class="m">1</span>
+<span class="w"> </span><span class="o">}</span>
+<span class="w"> </span>
+<span class="w"> </span>
+<span class="w"> </span><span class="c1"># Deactivate IPv6 by adding the line **net.ipv6.conf.all.disable_ipv6 = 1** in:</span>
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span> sudo nano /etc/sysctl.conf
- 
- <span class="c1"># Disable bluetooth: https://scribles.net/disabling-bluetooth-on-raspberry-pi/</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/sysctl.conf
+<span class="w"> </span>
+<span class="w"> </span><span class="c1"># Disable bluetooth: https://scribles.net/disabling-bluetooth-on-raspberry-pi/</span>
 </pre></div>
 </div>
 <section id="octoprint-plugins">

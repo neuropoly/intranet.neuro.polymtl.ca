@@ -2250,18 +2250,18 @@ Core 1:        +25.0°C  (high = +80.0°C, crit = +90.0°C)
 <li><p>Open a terminal session:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>screen
 <span class="c1"># If there is already a SINGLE screen session, reopen it:</span>
-screen -dr
+screen<span class="w"> </span>-dr
 <span class="c1"># if there are more than one screen sessions, see which ones are active:</span>
-screen -ls
+screen<span class="w"> </span>-ls
 <span class="c1"># Then select the one you like:</span>
-screen -r PID
+screen<span class="w"> </span>-r<span class="w"> </span>PID
 </pre></div>
 </div>
 </li>
 <li><p>Launch tensorboard:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">TMPDIR</span><span class="o">=</span>/tmp/<span class="nv">$USER</span>
-mkdir -p <span class="nv">$TMPDIR</span>
-tensorboard --logdir PATH_TO_MODEL --port PORTNUMBER
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">TMPDIR</span><span class="o">=</span>/tmp/<span class="nv">$USER</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$TMPDIR</span>
+tensorboard<span class="w"> </span>--logdir<span class="w"> </span>PATH_TO_MODEL<span class="w"> </span>--port<span class="w"> </span>PORTNUMBER
 </pre></div>
 </div>
 <p>with:</p>
@@ -2278,17 +2278,17 @@ tensorboard --logdir PATH_TO_MODEL --port PORTNUMBER
 <span id="id1"></span><h2>SSH tunnelling<a class="headerlink" href="#ssh-tunnelling" title="Permalink to this headline">#</a></h2>
 <p>If you want to run a Jupyter notebook from a remote server, or monitor a model training using tensorboard, you will need to do an SSH tunnelling to be able to pass the display from the remote cluster to your local station.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="f512e2fe-68e3-4b3e-bd09-cf5fca11fe27" name="7888280e-b9b2-4fc8-abf5-208d45553f92" type="radio">
-</input><label class="tabbed-label" for="f512e2fe-68e3-4b3e-bd09-cf5fca11fe27">
+<input checked="checked" id="274351b9-9429-4a28-b8b0-2dafdb7ae8d3" name="2a698fff-8f38-4473-90ef-491c990e1eef" type="radio">
+</input><label class="tabbed-label" for="274351b9-9429-4a28-b8b0-2dafdb7ae8d3">
 Secure pipes</label><div class="tabbed-content docutils">
 <p>Install secure pipes and configure it as follows:
 with port_rosenber as the “Port” of the screen session and port_local is a random number (see screenshot below):</p>
 <p><img alt="" src="../../_images/tunnelling_macos.png" /></p>
 </div>
-<input id="f2e94253-0fa8-4bbc-a9b1-ee01d4971149" name="7888280e-b9b2-4fc8-abf5-208d45553f92" type="radio">
-</input><label class="tabbed-label" for="f2e94253-0fa8-4bbc-a9b1-ee01d4971149">
+<input id="0b29c0db-0fd2-49f9-98ca-a80636f6a66d" name="2a698fff-8f38-4473-90ef-491c990e1eef" type="radio">
+</input><label class="tabbed-label" for="0b29c0db-0fd2-49f9-98ca-a80636f6a66d">
 Terminal</label><div class="tabbed-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh -N -f -L localhost:8080:localhost:PORTNUMBER username@CLUSTER.neuro.polymtl.ca
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>-N<span class="w"> </span>-f<span class="w"> </span>-L<span class="w"> </span>localhost:8080:localhost:PORTNUMBER<span class="w"> </span>username@CLUSTER.neuro.polymtl.ca
 </pre></div>
 </div>
 <p>Once the SSH tunnel is established, open a browser and go to: <a class="reference external" href="http://localhost:8080/">http://localhost:8080/</a>.</p>
