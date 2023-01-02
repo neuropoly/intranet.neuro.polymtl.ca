@@ -14,6 +14,31 @@ example:
 - sub-montrealDCM001
 - sub-torontoHC001
 
+    
+Data collected from actual subjects goes under their specific sub-folder, for example:
+    
+```
+sub-001
+├── anat
+│   ├── sub-001_T1w.json
+│   ├── sub-001_T1w.nii.gz
+│   ├── sub-001_T2star.json
+│   ├── sub-001_T2star.nii.gz
+│   ├── sub-001_T2w.json
+│   └── sub-001_T2w.nii.gz
+└── dwi
+    ├── sub-001_dwi.bval
+    ├── sub-001_dwi.bvec
+    ├── sub-001_dwi.json
+    └── sub-001_dwi.nii.gz
+```
+
+Many kinds of data have a place specified for them by BIDS. See [file naming conventions](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#filesystem-structure) and the [MRI](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html) and [Microscopy](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html) extensions for full details.
+
+```{warning}
+TODO: describe neuropoly-specific BIDS entities, like bp-cspine or acq-MTon
+```
+
 ## BIDS template
 
 ⚠️ Every dataset must have the following files: 
@@ -26,6 +51,8 @@ example:
 ├── code/
 │   └── curate.py
 ├── sub-XXX
+│   └── anat
+│       └──sub-XXX_T1w.nii.gz
  ...
  ...
 └── derivatives
@@ -185,33 +212,6 @@ This program should be committed first, before the curated data it produces. Aft
 Analysis scripts should not be kept here. Keep them in separate repositories, usually in public on GitHub, with instructions about. See [PIPELINE-DOC](TODO-PIPELINE-DOC).
 ```
     
-### `sub-XXX/`
-    
-Data collected from actual subjects goes under their specific sub-folder, for example:
-    
-```
-sub-001
-├── anat
-│   ├── sub-001_T1w.json
-│   ├── sub-001_T1w.nii.gz
-│   ├── sub-001_T2star.json
-│   ├── sub-001_T2star.nii.gz
-│   ├── sub-001_T2w.json
-│   └── sub-001_T2w.nii.gz
-└── dwi
-    ├── sub-001_dwi.bval
-    ├── sub-001_dwi.bvec
-    ├── sub-001_dwi.json
-    └── sub-001_dwi.nii.gz
-```
-
-Many kinds of data have a place specified for them by BIDS. See [file naming conventions](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#filesystem-structure) and the [MRI](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html) and [Microscopy](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html) extensions for full details.
-
-```{warning}
-TODO: describe neuropoly-specific BIDS entities, like bp-cspine or acq-MTon
-```
-    
-
 ## Changelog policy
 
 We use `git log` to track our changes. That means care should be taken to [write good messages](../geek-tips/git.md#commit-message-convention): they are there to help both you and future researchers understand how the dataset evolved.
