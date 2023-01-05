@@ -243,7 +243,7 @@ git branch -M master
 # initialize remote and upload metadata
 git push -u origin master
 # initialize remote annex
-git annex sync --cleanup -a --no-content
+git annex sync -a --no-content
 # upload images to remote annex
 git annex copy --to origin
 # verify your .nii.gz files were annexed and uploaded
