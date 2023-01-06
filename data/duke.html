@@ -1109,13 +1109,20 @@ drwxr-xr-x 2 u108545 domain users  4096 Feb 18 20:45 sct_testing
 drwxr-xr-x 2 u108545 domain users  4096 Jun  8 16:44 temp
 </pre></div>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Don’t run processing scripts or <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">annex</span></code> inside <code class="docutils literal notranslate"><span class="pre">duke</span></code>.
+(It’s fine if your input data is in <code class="docutils literal notranslate"><span class="pre">duke</span></code>, but not the script and not the output.)</p>
+<p>This is because, inside <code class="docutils literal notranslate"><span class="pre">duke</span></code>, every file has permissions <code class="docutils literal notranslate"><span class="pre">-rw-r--r--</span></code> and every directory has permissions <code class="docutils literal notranslate"><span class="pre">drwxr-xr-x</span></code>
+(even if you try to change them with <code class="docutils literal notranslate"><span class="pre">chmod</span></code>), so scripts will not be executable (including the git hooks used by git-annex).</p>
+</div>
 </section>
 <section id="mount-with-gui">
 <h2>Mount with GUI<a class="headerlink" href="#mount-with-gui" title="Permalink to this headline">#</a></h2>
 <p>When working on campus or <span class="xref myst">over the VPN</span>, you can connect your computer to <code class="docutils literal notranslate"><span class="pre">duke</span></code>:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="7e3737bf-90cd-43cd-8cba-50dee4dc111b" name="dd70dba6-3748-4750-80b3-40974fc6cd5d" type="radio">
-</input><label class="tabbed-label" for="7e3737bf-90cd-43cd-8cba-50dee4dc111b">
+<input checked="checked" id="246f97e5-99c5-4549-b836-78a9574dc51a" name="34f1c836-091c-4690-83f6-83dc424d2a49" type="radio">
+</input><label class="tabbed-label" for="246f97e5-99c5-4549-b836-78a9574dc51a">
 macOS</label><div class="tabbed-content docutils">
 <ol class="arabic">
 <li><p>Open Finder</p></li>
@@ -1138,8 +1145,8 @@ macOS</label><div class="tabbed-content docutils">
 </li>
 </ol>
 </div>
-<input id="f64e967c-257b-4db5-8548-a834c378596b" name="dd70dba6-3748-4750-80b3-40974fc6cd5d" type="radio">
-</input><label class="tabbed-label" for="f64e967c-257b-4db5-8548-a834c378596b">
+<input id="d8731b17-6420-4dad-8f97-93cb62093c68" name="34f1c836-091c-4690-83f6-83dc424d2a49" type="radio">
+</input><label class="tabbed-label" for="d8731b17-6420-4dad-8f97-93cb62093c68">
 Linux</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open File Browser</p></li>
@@ -1147,8 +1154,8 @@ Linux</label><div class="tabbed-content docutils">
 <li><p><code class="docutils literal notranslate"><span class="pre">smb://duke.neuro.polymtl.ca/</span></code></p></li>
 </ol>
 </div>
-<input id="bd25bcd8-c378-4b08-b2c0-3952077321df" name="dd70dba6-3748-4750-80b3-40974fc6cd5d" type="radio">
-</input><label class="tabbed-label" for="bd25bcd8-c378-4b08-b2c0-3952077321df">
+<input id="226ac86d-faa9-4a2d-b4c7-8dab4793ed78" name="34f1c836-091c-4690-83f6-83dc424d2a49" type="radio">
+</input><label class="tabbed-label" for="226ac86d-faa9-4a2d-b4c7-8dab4793ed78">
 Windows 10</label><div class="tabbed-content docutils">
 <ol class="arabic simple">
 <li><p>Open Windows explorer</p></li>
@@ -1174,8 +1181,8 @@ Windows 10</label><div class="tabbed-content docutils">
 <h2>Mount with Terminal<a class="headerlink" href="#mount-with-terminal" title="Permalink to this headline">#</a></h2>
 <p>You can also connect your computer from the CLI, or with a script, which might be more efficient in the long run:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="9bd7ef5f-5cfe-409c-8818-6041212f9bb7" name="ce621432-101d-4333-9683-5c833894598f" type="radio">
-</input><label class="tabbed-label" for="9bd7ef5f-5cfe-409c-8818-6041212f9bb7">
+<input checked="checked" id="b916b25c-109d-4c56-bb77-b3b27656ff9f" name="f1bc57d2-d8bb-4e48-9758-01e94609b63b" type="radio">
+</input><label class="tabbed-label" for="b916b25c-109d-4c56-bb77-b3b27656ff9f">
 Mac OSX</label><div class="tabbed-content docutils">
 <p>Create folder for the mount point on a location (your home directory) where you have read and write access:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>&lt;FOLDER_NAME&gt;<span class="w"> </span><span class="c1"># (e.g. &lt;FOLDER_NAME&gt;=sct_testing)</span>
@@ -1186,8 +1193,8 @@ sudo<span class="w"> </span>umount<span class="w"> </span>&lt;FOLDER_NAME&gt;/
 </pre></div>
 </div>
 </div>
-<input id="fbe83c8a-fdc4-4950-a4a2-8a200f9cdb20" name="ce621432-101d-4333-9683-5c833894598f" type="radio">
-</input><label class="tabbed-label" for="fbe83c8a-fdc4-4950-a4a2-8a200f9cdb20">
+<input id="91fd7aa6-c40d-4b8a-bbc0-535ec55fce51" name="f1bc57d2-d8bb-4e48-9758-01e94609b63b" type="radio">
+</input><label class="tabbed-label" for="91fd7aa6-c40d-4b8a-bbc0-535ec55fce51">
 Linux</label><div class="tabbed-content docutils">
 <p>To mount:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>mount<span class="w"> </span>-t<span class="w"> </span>cifs<span class="w"> </span>//duke.neuro.polymtl.ca/&lt;FOLDER_NAME&gt;<span class="w"> </span>/mnt/duke/&lt;FOLDER_NAME&gt;<span class="w"> </span>-o<span class="w"> </span><span class="nv">username</span><span class="o">=</span>&lt;GRAMES_USERNAME&gt;,noexec
