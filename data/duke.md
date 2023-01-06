@@ -33,6 +33,14 @@ drwxr-xr-x 2 u108545 domain users  4096 Feb 18 20:45 sct_testing
 drwxr-xr-x 2 u108545 domain users  4096 Jun  8 16:44 temp
 ```
 
+```{warning}
+Don't run processing scripts or `git annex` inside `duke`.
+(It's fine if your input data is in `duke`, but not the script and not the output.)
+
+This is because, inside `duke`, every file has permissions `-rw-r--r--` and every directory has permissions `drwxr-xr-x`
+(even if you try to change them with `chmod`), so scripts will not be executable (including the git hooks used by git-annex).
+```
+
 
 ## Mount with GUI
 
