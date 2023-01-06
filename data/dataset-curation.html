@@ -1188,17 +1188,24 @@ title="Edit this page"
 <section id="subject-naming-convention">
 <h2>Subject naming convention<a class="headerlink" href="#subject-naming-convention" title="Permalink to this headline">#</a></h2>
 <p><strong>Basic convention</strong>: sub-XXX</p>
-<p>example:</p>
-<ul class="simple">
-<li><p>sub-001</p></li>
-<li><p>sub-002</p></li>
-</ul>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">-</span><span class="mi">001</span>
+<span class="n">sub</span><span class="o">-</span><span class="mi">002</span>
+</pre></div>
+</div>
 <p><strong>Multi-institution/Multi-pathology convention</strong>: sub-&lt;site&gt;&lt;pathology&gt;XXX</p>
-<p>example:</p>
-<ul class="simple">
-<li><p>sub-montrealDCM001</p></li>
-<li><p>sub-torontoHC001</p></li>
-</ul>
+<p>Example of Multi-institution dataset:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">-</span><span class="n">mon001</span>      <span class="c1"># mon stands for Montreal</span>
+<span class="n">sub</span><span class="o">-</span><span class="n">tor001</span>      <span class="c1"># tor stands for Toronto</span>
+</pre></div>
+</div>
+<p>Example of Multi-institution/Multi-pathology dataset:</p>
+<p>In the case of multi-pathology dataset (two or more distinct diseases + healthy controls), it is convenient to include also pathology to the subjectID, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">-</span><span class="n">torDCM001</span>      <span class="c1"># tor stands for Toronto and DCM stands for Degenerative Cervical Myelopathy</span>
+<span class="n">sub</span><span class="o">-</span><span class="n">torHC001</span>       <span class="c1"># tor stands for Toronto and HC stands for Healthy Controls</span>
+<span class="n">sub</span><span class="o">-</span><span class="n">zurSCI001</span>      <span class="c1"># zur stands for Zurich and SCI stands for Spinal Cord Injury</span>
+</pre></div>
+</div>
 <p>Data collected from actual subjects goes under their specific sub-folder, for example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sub-001
 ├── anat

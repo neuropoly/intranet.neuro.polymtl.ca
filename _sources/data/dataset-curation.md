@@ -4,16 +4,31 @@
 
 **Basic convention**: sub-XXX
 
-example:
-- sub-001
-- sub-002
+Example:
+
+```
+sub-001
+sub-002
+```
 
 **Multi-institution/Multi-pathology convention**: sub-\<site>\<pathology>XXX
 
-example:
-- sub-montrealDCM001
-- sub-torontoHC001
+Example of Multi-institution dataset:
 
+```
+sub-mon001      # mon stands for Montreal
+sub-tor001      # tor stands for Toronto
+```
+
+Example of Multi-institution/Multi-pathology dataset:
+
+In the case of multi-pathology dataset (two or more distinct diseases + healthy controls), it is convenient to include also pathology to the subjectID, for example:
+
+```
+sub-torDCM001      # tor stands for Toronto and DCM stands for Degenerative Cervical Myelopathy
+sub-torHC001       # tor stands for Toronto and HC stands for Healthy Controls
+sub-zurSCI001      # zur stands for Zurich and SCI stands for Spinal Cord Injury
+```
     
 Data collected from actual subjects goes under their specific sub-folder, for example:
     
