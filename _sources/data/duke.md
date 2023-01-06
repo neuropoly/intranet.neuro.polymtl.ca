@@ -13,6 +13,14 @@ The shared folders are:
 * **sct\_testing** –&gt; Data for testing SCT
 * **temp** –&gt; Use for temporary files, to share between you. Files are deleted after 15 days.
 
+```{warning}
+Please do not run processing scripts or `git annex` inside `duke`.
+(It is fine if your input data is in `duke`, but not the script and not the output.)
+
+This is because, inside `duke`, every file has permissions `-rw-r--r--` and every directory has permissions `drwxr-xr-x`
+(even if you try to change them with `chmod`), so scripts will not be executable (including the git hooks used by git-annex).
+```
+
 ```{note}
 `duke` is not accessible when using SSH key login to linux stations.
 ```
@@ -31,14 +39,6 @@ drwxr-xr-x 2 u108545 domain users  8192 Jun  8 23:21 projects
 drwxr-xr-x 2 u108545 domain users  4096 Mar 11 18:38 public
 drwxr-xr-x 2 u108545 domain users  4096 Feb 18 20:45 sct_testing
 drwxr-xr-x 2 u108545 domain users  4096 Jun  8 16:44 temp
-```
-
-```{warning}
-Don't run processing scripts or `git annex` inside `duke`.
-(It's fine if your input data is in `duke`, but not the script and not the output.)
-
-This is because, inside `duke`, every file has permissions `-rw-r--r--` and every directory has permissions `drwxr-xr-x`
-(even if you try to change them with `chmod`), so scripts will not be executable (including the git hooks used by git-annex).
 ```
 
 
