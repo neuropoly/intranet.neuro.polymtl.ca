@@ -9,6 +9,7 @@ description: >-
 ## Deep Learning Resources
 
 * [Deep Learning State of the Art (2019) - MIT (Youtube Video)](https://www.youtube.com/watch?v=53YvP6gdD7U)
+* [Deep Learning Fundamentals course from Lightning AI (PyTorch Lightning)](https://lightning.ai/pages/courses/deep-learning-fundamentals/)
 
 ## Deep Learning Applied to Medical Analysis
 
