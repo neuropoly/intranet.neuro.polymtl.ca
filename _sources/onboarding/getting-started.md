@@ -7,4 +7,4 @@ of the steps needed for access to the various accounts and services you will use
 ## Get help
 
 If ever you need help with accounts or onboarding, feel free to reach out to
-Joshua Newton or Noel Rignon via Slack.
+Nick or Julien on Slack or #computer channel.
