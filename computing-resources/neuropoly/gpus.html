@@ -171,7 +171,7 @@
       <a class="reference internal" href="../../onboarding/computer-setup/mail.html">
        <code class="docutils literal notranslate">
         <span class="pre">
-         ✉️
+         📧
         </span>
        </code>
        Email
@@ -201,7 +201,7 @@
       <a class="reference internal" href="../../onboarding/computer-setup/configuration-tips.html">
        <code class="docutils literal notranslate">
         <span class="pre">
-         ⚙️
+         💡
         </span>
        </code>
        Other configuration tips
@@ -2278,15 +2278,15 @@ tensorboard<span class="w"> </span>--logdir<span class="w"> </span>PATH_TO_MODEL
 <span id="id1"></span><h2>SSH tunnelling<a class="headerlink" href="#ssh-tunnelling" title="Permalink to this headline">#</a></h2>
 <p>If you want to run a Jupyter notebook from a remote server, or monitor a model training using tensorboard, you will need to do an SSH tunnelling to be able to pass the display from the remote cluster to your local station.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="9fd62815-5caa-4bc4-9b67-81f5507204be" name="6d0f65a3-e5c6-4c74-a29e-938c40cf694b" type="radio">
-</input><label class="tabbed-label" for="9fd62815-5caa-4bc4-9b67-81f5507204be">
+<input checked="checked" id="b4f1cd45-e4ba-4241-b66f-b8bb1751a296" name="18aa334d-02d3-4a6e-a679-bcd9cbfbaf62" type="radio">
+</input><label class="tabbed-label" for="b4f1cd45-e4ba-4241-b66f-b8bb1751a296">
 Secure pipes</label><div class="tabbed-content docutils">
 <p>Install secure pipes and configure it as follows:
 with port_rosenber as the “Port” of the screen session and port_local is a random number (see screenshot below):</p>
 <p><img alt="" src="../../_images/tunnelling_macos.png" /></p>
 </div>
-<input id="fabf7e55-3799-4003-a4b4-0dd9caf9fe7c" name="6d0f65a3-e5c6-4c74-a29e-938c40cf694b" type="radio">
-</input><label class="tabbed-label" for="fabf7e55-3799-4003-a4b4-0dd9caf9fe7c">
+<input id="d856be34-2a2e-44ad-b2e7-7aa6ac04ae87" name="18aa334d-02d3-4a6e-a679-bcd9cbfbaf62" type="radio">
+</input><label class="tabbed-label" for="d856be34-2a2e-44ad-b2e7-7aa6ac04ae87">
 Terminal</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>-N<span class="w"> </span>-f<span class="w"> </span>-L<span class="w"> </span>localhost:8080:localhost:PORTNUMBER<span class="w"> </span>username@CLUSTER.neuro.polymtl.ca
 </pre></div>
