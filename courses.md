@@ -105,7 +105,7 @@ Also see this list of [Bio-imaging courses offered by Quebec Universities](https
 
 | Code                                                               | Title / Notes                        | Lang.   | Prof.        |
 | ------------------------------------------------------------------ | ------------------------------------ | ------- | ------------ |
-| [BMDE 520](https://www.mcgill.ca/study/2021-2022/courses/bmde-520) | Machine Learning for Biomedical Data <p><em>(Assignment heavy, no CV application Who took: Rohan Banerjee)</em></p> | English | Danilo Bzdok |
+| [BMDE 520](https://www.mcgill.ca/study/2021-2022/courses/bmde-520) | Machine Learning for Biomedical Data [outline](http://bzdok.lab.mcgill.ca/media/M4BD_course_outline_fall_2021.pdf)<p><em>(Assignment heavy, no CV application Who took: Rohan Banerjee)</em></p> | English | Danilo Bzdok |
 | [COMP 551](https://www.mcgill.ca/study/2022-2023/courses/comp-551) | Applied Machine Learning [outline](http://www.reirab.com/Teaching/AML23/index.html)<p><em>(great overview of classical ML but not much DL. No CV. Who took it: Nadia Blostein )</em></p>                                                  | English | Yue Li (Fall), Reihaneh Rabbany (Winter)|
 
 ## **Computer Vision**
