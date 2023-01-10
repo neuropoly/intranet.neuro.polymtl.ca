@@ -159,7 +159,7 @@ git annex sync --no-content --only-annex
 git push
 ```
 
-Finally, ask one of that dataset's reviewers to [look at your pull request](#Reviewing-Pull-Requests) by opening an issue on [neuropoly/data-management](https://github.com/neuropoly/data-management).
+Finally, ask one of that dataset's reviewers to [look at your pull request](#Reviewing-Pull-Requests) by **opening an issue** (not creating a new pull request) on [neuropoly/data-management](https://github.com/neuropoly/data-management). The details of your pull request (i.e. the changes made to the dataset) must be explained in the issue along with name of your branch on which the changes can be found. 
 
 
 ### Reviewing Pull Requests
