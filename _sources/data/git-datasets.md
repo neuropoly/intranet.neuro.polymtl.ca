@@ -162,6 +162,24 @@ git push
 Finally, ask one of that dataset's reviewers to [look at your pull request](#Reviewing-Pull-Requests) by **opening an issue** (not creating a new pull request) on [neuropoly/data-management](https://github.com/neuropoly/data-management). The details of your pull request (i.e. the changes made to the dataset) must be explained in the issue along with name of your branch on which the changes can be found. 
 
 
+If you are uploading changes gradually, you can reuse the same branch:
+
+```
+# First, update your local master branch:
+git checkout master
+git pull && git annex sync --no-content
+
+# Then, bring your branch up to include the recent changes:
+git checkout branch_you_are_reusing
+git merge --ff-only master
+git pull && git annex sync --no-content
+
+# Then, modify a file and make a new commit:
+git add .
+git commit
+git push origin branch_you_are_reusing
+```
+
 ### Reviewing Pull Requests
 
 If someone asks you to review their changes on branch `xy/some-topic`:
