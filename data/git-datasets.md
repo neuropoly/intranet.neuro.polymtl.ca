@@ -346,13 +346,15 @@ Like with Github, you can authorize any number of secondary devices.
 For example, to authorize yourself from `server2`, log in to `server2` and make an ssh key if one doesn't exist (`ssh-keygen`), copy it (`~/.ssh/id_rsa.pub`) to a device that is already authenticated (e.g. as `~/id_rsa.server2.pub`), then authorize yourself by:
 
 ```
-cat ~/id_rsa-server2.pub | ssh git@data.neuro.polymtl.ca keys add @server2
+cat ~/id_rsa-server2.pub | ssh git@data.neuro.polymtl.ca keys add <yourusername>@server2
 ```
 
-Test it by running, from `server2`
+Note: you can check your `yourusername` by `ssh git@data.neuro.polymtl.ca info`
+
+Once added, you should be able to see the newly added key by running:
 
 ```
-ssh git@data.neuro.polymtl.ca info
+ssh git@data.neuro.polymtl.ca keys list
 ```
 
 Admin Guide
