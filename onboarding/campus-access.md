@@ -50,4 +50,4 @@ In addition to the above requirement, please also complete the following steps s
 
 ### WiFi Access: Eduroam
 
-As part of your PolyMTL CAS account (`@polymtl.ca`), you are granted access to the 'eduroam' network across campuses internationally. Setting up a connection to this network requires additional steps beyond just logging in. For more information on how to log into eduroam, please visit the ['Computing Resources - Eduroam'](https://intranet.neuro.polymtl.ca/computing-resources/eduroam.html) page.
+As part of your PolyMTL CAS account (`@polymtl.ca`), you are granted access to the 'eduroam' network across campuses internationally. Setting up a connection to this network requires additional steps beyond just logging in. For more information on how to log into eduroam, please visit the ['Computer Setup - Eduroam'](https://intranet.neuro.polymtl.ca/onboarding/computer-setup/eduroam.html) page.
