@@ -32,7 +32,9 @@ NeuroPoly's conference folder is on [google drive](https://drive.google.com/driv
 * 2020 April 18-24, Sydney, NSW, Australia
 * 2021 May 15-21, Virtual
 * 2022 May 07-13, London, United Kingdom
-* 2023 June 03-09, Toronto, ON, Canada
+* 2023 June 03-08, Toronto, ON, Canada
+* 2024 May 04-09, Singapore
+* 2025 May 10-15, Honolulu, Hawaii, USA
 
 ### OHBM <a id="ohbm"></a>
 
@@ -41,8 +43,12 @@ NeuroPoly's conference folder is on [google drive](https://drive.google.com/driv
 * 2017 June 11-15, Vancouver, BC, Canada
 * 2018 June 10-14, Seoul, South Korea
 * 2019 June 8-14, Rome, Italy
-* 2020, Montreal, Canada
-* 2021, June 21-25, Virtual
+* 2020 Montreal, Canada
+* 2021 June 21-25, Virtual
+* 2022 June 19-23, Glasgow, Scotland
+* 2023 July 22-26, Montreal, Canada
+* 2024 June 23-27, Seoul, Korea
+* 2025 June 24-28, Brisbane, Australia
 
 ### MICCAI <a id="miccai"></a>
 
