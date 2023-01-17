@@ -111,7 +111,7 @@ Email body:
 
 **Upload on the website:**
 
-* [Affiliations](https://neuropoly.gitbook.io/neuropoly-lab/publishing-articles#affiliations)
+* [Affiliations](https://intranet.neuro.polymtl.ca/writing-articles.html#affiliations)
 * Presentation format:
   * First choice: oral
   * Second choice: poster \(traditional or electronic\)
