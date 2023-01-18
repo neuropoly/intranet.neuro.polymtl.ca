@@ -105,7 +105,7 @@ To download an existing repository use `git clone`:
 
 ```
 git clone git@data.neuro.polymtl.ca:datasets/<dataset_name> 	# download folders and metadata
-cd sct-testing-large
+cd <dataset_name>
 ```
 
 After running `git clone git@data.neuro.polymtl.ca:datasets/<dataset_name>`, only metadata and small-size files such as `.json` sidecars are cloned (downloaded). In other words, you can access the content of the `.json` sidecars but can not open image `.nii` files.
