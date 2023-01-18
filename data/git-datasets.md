@@ -122,6 +122,12 @@ If you just want to explore, you can opt for a portion of the image `.nii` files
 git annex get sub-karo*                                        	# download images under any of sub-karo*/*
 ```
 
+> **Note**: If you want to download images together with corresponding derivatives files for a specific subject(s), use: 
+
+```
+git annex get $(find . -name "sub-karo*")			# download images and derivatives for sub-karo* subjects
+```
+
 ### Update
 
 If you have already cloned a repository and you would like to get its latest version, do:
