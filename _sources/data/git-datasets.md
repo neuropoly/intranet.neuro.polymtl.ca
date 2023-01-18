@@ -104,15 +104,22 @@ You are identified to the server by your ssh keys, but notice that this tells yo
 To download an existing repository use `git clone`:
 
 ```
-git clone git@data.neuro.polymtl.ca:datasets/sct-testing-large # download folders and metadata
+git clone git@data.neuro.polymtl.ca:datasets/<dataset_name> 	# download folders and metadata
 cd sct-testing-large
-git annex get .                                                # download images
 ```
 
-If you just want to explore, you can opt for a portion of the image files by specifying paths instead of the last step, for example:
+After running `git clone git@data.neuro.polymtl.ca:datasets/<dataset_name>`, only metadata and small-size files such as `.json` sidecars are cloned (downloaded). In other words, you can access the content of the `.json` sidecars but can not open image `.nii` files.
+
+To download all image `.nii` files, run:
 
 ```
-git annex get sub-karo*                                        # download images under any of sub-karo*/*
+git annex get . 						# download images
+```
+
+If you just want to explore, you can opt for a portion of the image `.nii` files by specifying paths instead of the last step, for example:
+
+```
+git annex get sub-karo*                                        	# download images under any of sub-karo*/*
 ```
 
 ### Update

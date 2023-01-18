@@ -1461,13 +1461,17 @@ list of remote commands available:
 <section id="download">
 <h3>Download<a class="headerlink" href="#download" title="Permalink to this headline">#</a></h3>
 <p>To download an existing repository use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span><span class="p">:</span><span class="n">datasets</span><span class="o">/</span><span class="n">sct</span><span class="o">-</span><span class="n">testing</span><span class="o">-</span><span class="n">large</span> <span class="c1"># download folders and metadata</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span><span class="p">:</span><span class="n">datasets</span><span class="o">/&lt;</span><span class="n">dataset_name</span><span class="o">&gt;</span> 	<span class="c1"># download folders and metadata</span>
 <span class="n">cd</span> <span class="n">sct</span><span class="o">-</span><span class="n">testing</span><span class="o">-</span><span class="n">large</span>
-<span class="n">git</span> <span class="n">annex</span> <span class="n">get</span> <span class="o">.</span>                                                <span class="c1"># download images</span>
 </pre></div>
 </div>
-<p>If you just want to explore, you can opt for a portion of the image files by specifying paths instead of the last step, for example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">annex</span> <span class="n">get</span> <span class="n">sub</span><span class="o">-</span><span class="n">karo</span><span class="o">*</span>                                        <span class="c1"># download images under any of sub-karo*/*</span>
+<p>After running <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">git&#64;data.neuro.polymtl.ca:datasets/&lt;dataset_name&gt;</span></code>, only metadata and small-size files such as <code class="docutils literal notranslate"><span class="pre">.json</span></code> sidecars are cloned (downloaded). In other words, you can access the content of the <code class="docutils literal notranslate"><span class="pre">.json</span></code> sidecars but can not open image <code class="docutils literal notranslate"><span class="pre">.nii</span></code> files.</p>
+<p>To download all image <code class="docutils literal notranslate"><span class="pre">.nii</span></code> files, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">annex</span> <span class="n">get</span> <span class="o">.</span> 						<span class="c1"># download images</span>
+</pre></div>
+</div>
+<p>If you just want to explore, you can opt for a portion of the image <code class="docutils literal notranslate"><span class="pre">.nii</span></code> files by specifying paths instead of the last step, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">annex</span> <span class="n">get</span> <span class="n">sub</span><span class="o">-</span><span class="n">karo</span><span class="o">*</span>                                        	<span class="c1"># download images under any of sub-karo*/*</span>
 </pre></div>
 </div>
 </section>
