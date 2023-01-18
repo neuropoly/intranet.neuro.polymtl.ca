@@ -1474,6 +1474,12 @@ list of remote commands available:
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">annex</span> <span class="n">get</span> <span class="n">sub</span><span class="o">-</span><span class="n">karo</span><span class="o">*</span>                                        	<span class="c1"># download images under any of sub-karo*/*</span>
 </pre></div>
 </div>
+<blockquote>
+<div><p><strong>Note</strong>: If you want to download images together with corresponding derivatives files for a specific subject(s), use:</p>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git annex get $(find . -name &quot;sub-karo*&quot;)			# download images and derivatives for sub-karo* subjects
+</pre></div>
+</div>
 </section>
 <section id="update">
 <h3>Update<a class="headerlink" href="#update" title="Permalink to this headline">#</a></h3>
