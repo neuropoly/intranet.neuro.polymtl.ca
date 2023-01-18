@@ -14,3 +14,7 @@ Contact: assep.postdoc@gmail.com
 ## Postdoctoral Office
 
 Contact: stage.postdoc@polymtl.ca
+
+```{note}
+Make sure you are subscripted to `dge-post-doc@liste.polymtl.ca` mailing list. If not, contact postdoc office.
+```
