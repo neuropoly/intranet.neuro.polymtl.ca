@@ -231,3 +231,6 @@ _MAJOR.MINOR.PATCH-beta.x_ (with x = 0, 1, 2, etc.) Stable version is indicated 
 Project-specific release procedure:
 
 * [AxonDeepSeg](https://github.com/neuropoly/axondeepseg/wiki/How-to-create-a-new-release)
+
+Alternatively, you can use date-based format `rYYYYMMDD`. For example: `r20230118`.
+
