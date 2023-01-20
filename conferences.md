@@ -21,6 +21,7 @@ NeuroPoly's conference folder is on [google drive](https://drive.google.com/driv
 **Medical Conferences:**
 
 * ECTRIMS
+* [ACTRIMS (Americas Committee for Treatment and Research in Multiple Sclerosis)](https://forum.actrims.org/about)
 
 ### ISMRM <a id="ismrm"></a>
 
