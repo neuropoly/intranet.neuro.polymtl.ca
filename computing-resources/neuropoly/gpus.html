@@ -2288,15 +2288,15 @@ tensorboard<span class="w"> </span>--logdir<span class="w"> </span>PATH_TO_MODEL
 <span id="id1"></span><h2>SSH tunnelling<a class="headerlink" href="#ssh-tunnelling" title="Permalink to this headline">#</a></h2>
 <p>If you want to run a Jupyter notebook from a remote server, or monitor a model training using tensorboard, you will need to do an SSH tunnelling to be able to pass the display from the remote cluster to your local station.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="a5b4e203-3b0c-4459-8566-c378baabd0d8" name="aa825cd9-2ba9-4115-bfef-e871b54d836d" type="radio">
-</input><label class="tabbed-label" for="a5b4e203-3b0c-4459-8566-c378baabd0d8">
+<input checked="checked" id="cb14e110-4af6-41e5-a71f-429954aeb81f" name="f6395567-f55f-4e4a-913b-55ca671428f8" type="radio">
+</input><label class="tabbed-label" for="cb14e110-4af6-41e5-a71f-429954aeb81f">
 Secure pipes</label><div class="tabbed-content docutils">
 <p>Install secure pipes and configure it as follows:
 with port_rosenber as the “Port” of the screen session and port_local is a random number (see screenshot below):</p>
 <p><img alt="" src="../../_images/tunnelling_macos.png" /></p>
 </div>
-<input id="3e4f9bda-71e7-43a6-820d-ab1fd4c6260d" name="aa825cd9-2ba9-4115-bfef-e871b54d836d" type="radio">
-</input><label class="tabbed-label" for="3e4f9bda-71e7-43a6-820d-ab1fd4c6260d">
+<input id="8dbf02c1-d133-448a-96b5-4a082eee5c83" name="f6395567-f55f-4e4a-913b-55ca671428f8" type="radio">
+</input><label class="tabbed-label" for="8dbf02c1-d133-448a-96b5-4a082eee5c83">
 Terminal</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>-N<span class="w"> </span>-f<span class="w"> </span>-L<span class="w"> </span>localhost:8080:localhost:PORTNUMBER<span class="w"> </span>username@CLUSTER.neuro.polymtl.ca
 </pre></div>

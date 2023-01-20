@@ -1123,6 +1123,13 @@ title="Edit this page"
     <a class="reference internal nav-link" href="#deletion">
      Deletion
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#deleting-a-branch">
+       Deleting a branch
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-extra-devices">
@@ -1297,6 +1304,13 @@ title="Edit this page"
     <a class="reference internal nav-link" href="#deletion">
      Deletion
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#deleting-a-branch">
+       Deleting a branch
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#add-extra-devices">
@@ -1661,6 +1675,16 @@ You can <a class="reference internal" href="#id2"><span class="std std-doc">ask 
 </pre></div>
 </div>
 <p>The “trash” is cleaned out after a week. <em>Except it’s not, yet: https://github.com/neuropoly/data-management/issues/54</em></p>
+<section id="deleting-a-branch">
+<h4>Deleting a branch<a class="headerlink" href="#deleting-a-branch" title="Permalink to this headline">#</a></h4>
+<p>If you no longer are working on a specific, make sure that it is deleted (in order to save space and avoid maintaining unnecessary commit history). For deleting the branch locally (same as how it is done in standard git):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">d</span> <span class="o">&lt;</span><span class="n">your</span><span class="o">-</span><span class="n">branch</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><strong>Note</strong>: The branch should also be deleted remotely. Notify the admins for doing so on your behalf by mentioning the branch to be deleted.</p>
+</div></blockquote>
+</section>
 </section>
 <section id="add-extra-devices">
 <h3>Add extra devices<a class="headerlink" href="#add-extra-devices" title="Permalink to this headline">#</a></h3>
