@@ -8,6 +8,7 @@ script
 ## Awesome links
 
 * [Bash scripting cheatsheet](https://devhints.io/bash)
+* [explainshell.com: Comprehensive help for SHELL commands](https://explainshell.com/)
 
 ## HDD parameters
 
