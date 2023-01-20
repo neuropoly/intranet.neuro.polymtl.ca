@@ -208,12 +208,14 @@ Then look at the branch to see if it looks right to you.
 To investigate what changed:
 
 ```
-# to see filenames
+# list changed files
+git diff --name-only master..HEAD
+# list changed files (each commit)
 git log --stat master..HEAD
-# to see content, commit-by-commit
-git log -p master..HEAD
 # to see content, overall
 git diff master..HEAD
+# to see content, commit-by-commit
+git log -p master..HEAD
 ```
 
 Also, it's a good idea to run:

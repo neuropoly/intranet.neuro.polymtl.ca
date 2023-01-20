@@ -1545,12 +1545,14 @@ So, to make changes to a dataset, first ask an admin to <a class="reference inte
 </div>
 <p>Then look at the branch to see if it looks right to you.</p>
 <p>To investigate what changed:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># to see filenames</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># list changed files</span>
+<span class="n">git</span> <span class="n">diff</span> <span class="o">--</span><span class="n">name</span><span class="o">-</span><span class="n">only</span> <span class="n">master</span><span class="o">..</span><span class="n">HEAD</span>
+<span class="c1"># list changed files (each commit)</span>
 <span class="n">git</span> <span class="n">log</span> <span class="o">--</span><span class="n">stat</span> <span class="n">master</span><span class="o">..</span><span class="n">HEAD</span>
-<span class="c1"># to see content, commit-by-commit</span>
-<span class="n">git</span> <span class="n">log</span> <span class="o">-</span><span class="n">p</span> <span class="n">master</span><span class="o">..</span><span class="n">HEAD</span>
 <span class="c1"># to see content, overall</span>
 <span class="n">git</span> <span class="n">diff</span> <span class="n">master</span><span class="o">..</span><span class="n">HEAD</span>
+<span class="c1"># to see content, commit-by-commit</span>
+<span class="n">git</span> <span class="n">log</span> <span class="o">-</span><span class="n">p</span> <span class="n">master</span><span class="o">..</span><span class="n">HEAD</span>
 </pre></div>
 </div>
 <p>Also, it’s a good idea to run:</p>
