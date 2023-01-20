@@ -358,13 +358,7 @@ The "trash" is cleaned out after a week. *Except it's not, yet: https://github.c
 
 #### Deleting a branch
 
-If you no longer are working on a specific, make sure that it is deleted (in order to save space and avoid maintaining unnecessary commit history). For deleting the branch locally (same as how it is done in standard git):
-
-```
-git branch -d <your-branch-name>
-```
-
-> **Note**: The branch should also be deleted remotely. Notify the admins for doing so on your behalf by mentioning the branch to be deleted.
+If you no longer are working on a specific, make sure that it is deleted (in order to save space and avoid maintaining unnecessary commit history). The relevant commands can be found under _Clean up a branch_ [here](#committing).
 
 
 ### Add extra devices
