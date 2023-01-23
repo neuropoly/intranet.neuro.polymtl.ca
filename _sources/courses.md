@@ -1,5 +1,10 @@
 # `🎓` University Courses
 
+## Admission at Polytechnique
+
+https://www.polymtl.ca/futur/es/admission
+
+
 ## Requirements for Polytechnique
 
 ````{tabbed} MSc
