@@ -272,7 +272,7 @@ Convention for derivatives JSON metadata:
 }
 ```
 
-NOTE: "Date" is optional. We usually include it when running the manual correction via python scripts.
+NOTE: "Date" is optional. We usually include it when running the manual correction via [python scripts](https://github.com/spinalcordtoolbox/manual-correction).
 
 ```{warning}
 The `derivatives` must include its own `dataset_description.json` file (with `"DatasetType": "derivative"`).
