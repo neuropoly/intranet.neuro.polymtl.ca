@@ -13,13 +13,14 @@
 * [Bloch simulator for education in NMR and MRI](http://www.drcmr.dk/bloch)
 * [Jülich Extensible MRI Simulator (JEMRIS)](http://www.jemris.org/index.html): Sequence development and simulation environment.
 
-## Pulse Sequences
+## RF Coils
 
-* [Spinbench: Pulse sequence simulator](http://www.heartvista.com/spinbench/)
-* Open source pulse sequence programming (Matlab): [http://pulseq.github.io/](http://pulseq.github.io/)
-* [MR Pulse Sequences: What Every Radiologist Wants to Know but Is Afraid to Ask](https://pubs.rsna.org/doi/10.1148/rg.262055063)
-* [Understanding MRI: basic MR physics for physicians](https://pmj.bmj.com/content/postgradmedj/89/1050/209.full.pdf)
-* [AAPM/RSNA Physics: Tutorial for Residents - Fundamental Physics of MR Imaging](https://pubs.rsna.org/doi/10.1148/rg.254055027?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%3dpubmed)
+* 📄 [Roemer PB, Edelstein WA, Hayes CE, Souza SP, Mueller OM. The NMR phased array. Magn Reson Med. 1990;16:192–225.](https://pubmed.ncbi.nlm.nih.gov/2266841/)
+* 📄 [Gruber B, Froeling M, Leiner T, Klomp DWJ. RF coils: A practical guide for nonphysicists. J Magn Reson Imaging [Internet]. 2018 Jun 13; Available from: http://dx.doi.org/10.1002/jmri.26187](https://onlinelibrary.wiley.com/doi/10.1002/jmri.26187)
+* [Open source hardware at 7T from UMCU](https://github.com/umcu7tcoillab)
+* [Open-source Console for Real-time Acquisition (OCRA)](https://openmri.github.io/ocra/)
+* [Open source coil design](https://github.com/OpenMRI/CoilDesign)
+* [Birdcage builder (PennState)](http://www.pennstatehershey.org/web/nmrlab/resources/software/javabirdcage)
 
 ## B0 Shimming
 
@@ -34,18 +35,15 @@
 * [🔒 🎥 Universal Pulse]() TODO
 * [🔒 VOP creation (internal documentation)](https://docs.google.com/document/d/1uqr4UX4VY8H8cZ_DB9zaj12o0xrswRj44AxE3FZauHM/edit#heading=h.uf4xboevl4xa)
 @Gaspard todo: (notably list talks from UHF meeting)
+* 📄 [Williams SN, McElhinney P, Gunamony S. Ultra-high field MRI: parallel-transmit arrays and RF pulse design. Phys Med Biol [Internet]. 2023 Jan 18;68(2). Available from: http://dx.doi.org/10.1088/1361-6560/aca4b7](https://iopscience.iop.org/article/10.1088/1361-6560/aca4b7)
 
-## MRI Hardware
+## Pulse Sequences
 
-* [Open source hardware at 7T from UMCU](https://github.com/umcu7tcoillab)
-* [Open-source Console for Real-time Acquisition (OCRA)](https://openmri.github.io/ocra/)
-* [Open source coil design](https://github.com/OpenMRI/CoilDesign)
-* [Birdcage builder (PennState)](http://www.pennstatehershey.org/web/nmrlab/resources/software/javabirdcage)
-
-## RF Coils
-
-* [Roemer PB, Edelstein WA, Hayes CE, Souza SP, Mueller OM. The NMR phased array. Magn Reson Med. 1990;16:192–225.](https://pubmed.ncbi.nlm.nih.gov/2266841/)
-* [Gruber B, Froeling M, Leiner T, Klomp DWJ. RF coils: A practical guide for nonphysicists. J Magn Reson Imaging [Internet]. 2018 Jun 13; Available from: http://dx.doi.org/10.1002/jmri.26187](https://onlinelibrary.wiley.com/doi/10.1002/jmri.26187)
+* [Spinbench: Pulse sequence simulator](http://www.heartvista.com/spinbench/)
+* Open source pulse sequence programming (Matlab): [http://pulseq.github.io/](http://pulseq.github.io/)
+* [MR Pulse Sequences: What Every Radiologist Wants to Know but Is Afraid to Ask](https://pubs.rsna.org/doi/10.1148/rg.262055063)
+* [Understanding MRI: basic MR physics for physicians](https://pmj.bmj.com/content/postgradmedj/89/1050/209.full.pdf)
+* [AAPM/RSNA Physics: Tutorial for Residents - Fundamental Physics of MR Imaging](https://pubs.rsna.org/doi/10.1148/rg.254055027?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%3dpubmed)
 
 ## MRI Software
 
