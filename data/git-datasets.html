@@ -1593,13 +1593,16 @@ So, to make changes to a dataset, first ask an admin to <a class="reference inte
 <h4>Committing<a class="headerlink" href="#committing" title="Permalink to this headline">#</a></h4>
 <p>Once a branch is finalized:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
-<span class="n">git</span> <span class="n">merge</span> <span class="o">--</span><span class="n">ff</span><span class="o">-</span><span class="n">only</span> <span class="n">xy</span><span class="o">/</span><span class="n">some</span><span class="o">-</span><span class="n">topic</span> <span class="c1"># or use git pull --squash xy/some-topic</span>
-<span class="n">git</span> <span class="n">push</span>  <span class="c1"># no need for git-annex sync here, no annex files have been moved</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="o">--</span><span class="n">ff</span><span class="o">-</span><span class="n">only</span> <span class="n">xy</span><span class="o">/</span><span class="n">some</span><span class="o">-</span><span class="n">topic</span>
+<span class="c1"># or use git pull --squash xy/some-topic</span>
+<span class="n">git</span> <span class="n">push</span>
+<span class="c1"># no need for git-annex sync here, no annex files have been moved</span>
 </pre></div>
 </div>
 <p>(Optional) Clean up the branch:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">d</span> <span class="n">xy</span><span class="o">/</span><span class="n">some</span><span class="o">-</span><span class="n">topic</span>
-<span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">d</span> <span class="n">synced</span><span class="o">/</span><span class="n">xy</span><span class="o">/</span><span class="n">some</span><span class="o">-</span><span class="n">topic</span>   <span class="c1"># redundancy</span>
+<span class="c1"># redundancy</span>
+<span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">d</span> <span class="n">synced</span><span class="o">/</span><span class="n">xy</span><span class="o">/</span><span class="n">some</span><span class="o">-</span><span class="n">topic</span>
 <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="p">:</span><span class="n">xy</span><span class="o">/</span><span class="n">some</span><span class="o">-</span><span class="n">topic</span>
 <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="p">:</span><span class="n">synced</span><span class="o">/</span><span class="n">xy</span><span class="o">/</span><span class="n">some</span><span class="o">-</span><span class="n">topic</span>
 </pre></div>

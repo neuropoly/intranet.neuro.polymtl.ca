@@ -253,15 +253,18 @@ Once a branch is finalized:
 
 ```
 git checkout master
-git merge --ff-only xy/some-topic # or use git pull --squash xy/some-topic
-git push  # no need for git-annex sync here, no annex files have been moved
+git merge --ff-only xy/some-topic
+# or use git pull --squash xy/some-topic
+git push
+# no need for git-annex sync here, no annex files have been moved
 ```
 
 (Optional) Clean up the branch:
 
 ```
 git branch -d xy/some-topic
-git branch -d synced/xy/some-topic   # redundancy
+# redundancy
+git branch -d synced/xy/some-topic
 git push origin :xy/some-topic
 git push origin :synced/xy/some-topic
 ```
