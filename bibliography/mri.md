@@ -42,6 +42,11 @@
 * [Open source coil design](https://github.com/OpenMRI/CoilDesign)
 * [Birdcage builder (PennState)](http://www.pennstatehershey.org/web/nmrlab/resources/software/javabirdcage)
 
+## RF Coils
+
+* [Roemer PB, Edelstein WA, Hayes CE, Souza SP, Mueller OM. The NMR phased array. Magn Reson Med. 1990;16:192–225.](https://pubmed.ncbi.nlm.nih.gov/2266841/)
+* [Gruber B, Froeling M, Leiner T, Klomp DWJ. RF coils: A practical guide for nonphysicists. J Magn Reson Imaging [Internet]. 2018 Jun 13; Available from: http://dx.doi.org/10.1002/jmri.26187](https://onlinelibrary.wiley.com/doi/10.1002/jmri.26187)
+
 ## MRI Software
 
 * [List of software from ISMRM MRHub](https://github.com/ISMRM/mrhub)
