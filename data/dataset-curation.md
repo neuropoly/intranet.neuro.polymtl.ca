@@ -59,7 +59,11 @@ If you need to differentiate between sequences acquired with different orientati
 ```
 
 ```{note}
-If you need to differentiate between different magnetization transfer (MT) seqeunces, use the `acq-MTon` or `acq-MToff` tag. For example, `sub-001_acq-MTon_T1w.nii.gz`.
+If you need to differentiate between different magnetization transfer (MT) seqeunces, use the [`flip-<index>_mt-<on|off>`](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html#anatomy-imaging-data) tag. For example, `sub-001_flip-1_mt-on_MTS.nii.gz`, `sub-001_flip-1_mt-off_MTS.nii.gz` or `sub-001_flip-2_mt-off_MTS.nii.gz`.
+Here is a conversion table between our old convention and the new one:
+acq-MTon_MTS → flip-1_mt-on_MTS
+acq-MToff_MTS → flip-1_mt-off_MTS
+acq-T1w_MTS → flip-2_mt-off_MTS
 ```
 
 ```{note}
