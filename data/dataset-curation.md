@@ -50,26 +50,23 @@ sub-001
 
 Many kinds of data have a place specified for them by BIDS. See [file naming conventions](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#filesystem-structure) and the [MRI](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html) and [Microscopy](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html) extensions for full details.
 
-```{note}
-If you need to differentiate spinal cord images from the brain, use the `acq-cspine` tag. For example, `sub-001_acq-cspine_T1w.nii.gz`.
+ℹ️ If you need to differentiate spinal cord images from the brain, use the `acq-cspine` tag. For example, `sub-001_acq-cspine_T1w.nii.gz`.
+
 Note: We opted for `acq-cspine` tag (see [BIDS template](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html#anatomy-imaging-data)) because `bp-cspine` is not currently supported by the BIDS convention (see [BEP25](https://docs.google.com/document/d/1chZv7vAPE-ebPDxMktfI9i1OkLNR2FELIfpVYsaZPr4/edit) BIDS extension proposal).
-```
 
-```{note}
-If you need to differentiate between sequences acquired with different orientations, use the `acq-axial` or `acq-sagittal` tag. For example, `sub-001_acq-axial_T1w.nii.gz`.
-```
+ℹ️ If you need to differentiate between sequences acquired with different orientations, use the `acq-axial` or `acq-sagittal` tag. For example, `sub-001_acq-axial_T1w.nii.gz`.
 
-```{note}
-If you need to differentiate between different magnetization transfer (MT) sequences, use the [`flip-<index>_mt-<on|off>`](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html#anatomy-imaging-data) tag. For example, `sub-001_flip-1_mt-on_MTS.nii.gz`, `sub-001_flip-1_mt-off_MTS.nii.gz` or `sub-001_flip-2_mt-off_MTS.nii.gz`.
+ℹ️ If you need to differentiate between different magnetization transfer (MT) sequences, use the [`flip-<index>_mt-<on|off>`](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html#anatomy-imaging-data) tag. For example, `sub-001_flip-1_mt-on_MTS.nii.gz`, `sub-001_flip-1_mt-off_MTS.nii.gz` or `sub-001_flip-2_mt-off_MTS.nii.gz`.
+
 Here is a conversion table between our old convention and the new one:
+```
 acq-MTon_MTS → flip-1_mt-on_MTS
 acq-MToff_MTS → flip-1_mt-off_MTS
 acq-T1w_MTS → flip-2_mt-off_MTS
 ```
 
-```{note}
-If you to combine several above mentioned tags, use camelCase. For example, `sub-001_acq-cspineSagittal_T1w.nii.gz`.
-```
+ℹ️ If you to combine several above mentioned tags, use camelCase. For example, `sub-001_acq-cspineSagittal_T1w.nii.gz`.
+
 
 ## BIDS template
 
