@@ -50,8 +50,20 @@ sub-001
 
 Many kinds of data have a place specified for them by BIDS. See [file naming conventions](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#filesystem-structure) and the [MRI](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html) and [Microscopy](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html) extensions for full details.
 
-```{warning}
-TODO: describe neuropoly-specific BIDS entities, like bp-cspine or acq-MTon
+```{note}
+If you need to differentiate spinal cord images from the brain, use the `acq-cspine` tag. For example, `sub-001_acq-cspine_T1w.nii.gz`.
+```
+
+```{note}
+If you need to differentiate between sequences acquired with different orientations, use the `acq-axial` or `acq-sagittal` tag. For example, `sub-001_acq-axial_T1w.nii.gz`.
+```
+
+```{note}
+If you need to differentiate between different magnetization transfer (MT) seqeunces, use the `acq-MTon` or `acq-MToff` tag. For example, `sub-001_acq-MTon_T1w.nii.gz`.
+```
+
+```{note}
+If you to combine several above mentioned tags, use camelCase. For example, `sub-001_acq-cspineSagittal_T1w.nii.gz`.
 ```
 
 ## BIDS template
