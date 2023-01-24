@@ -52,6 +52,7 @@ Many kinds of data have a place specified for them by BIDS. See [file naming con
 
 ```{note}
 If you need to differentiate spinal cord images from the brain, use the `acq-cspine` tag. For example, `sub-001_acq-cspine_T1w.nii.gz`.
+Note: We opted for `acq-cspine` tag (see [BIDS template](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html#anatomy-imaging-data)) because `bp-cspine` is not currently supported by the BIDS convention (see [BEP25](https://docs.google.com/document/d/1chZv7vAPE-ebPDxMktfI9i1OkLNR2FELIfpVYsaZPr4/edit) BIDS extension proposal).
 ```
 
 ```{note}
