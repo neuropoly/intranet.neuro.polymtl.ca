@@ -295,7 +295,7 @@ The convention for suffix is the following:
 
 - `label-<region>_seg.nii.gz`: binary segmentation of the region `<region>`
 - `label-<region>_probseg.nii.gz`: probabilistic segmentation of the region `<region>`
-- `label-<region>_mask.nii.gz`: binary mask of the region `<region>`
+- `label-<region>_mask.nii.gz`: binary mask of the region `<region>`, for example, cylinder mask with diameter of 35mm centered at the center of the spinal cord
 - `label-<region>_probmask.nii.gz`: probabilistic mask of the region `<region>`
 - `label-centerline.nii.gz`: binary spinal cord centerline
 - `label-disc.nii.gz`: intervertebral disc labels, see [here](https://spinalcordtoolbox.com/user_section/tutorials/registration-to-template/vertebral-labeling/labeling-conventions.html?highlight=labeling) for details
