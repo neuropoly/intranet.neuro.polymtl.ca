@@ -261,7 +261,62 @@ If you choose to also fill in BIDS's optional [CHANGES](https://bids-specificati
 
 ## Derivatives Structure
 
-The [`derivatives`](https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html) are files generated from the top-level dataset such as segmentations or labels.
+This is a folder at the root of the dataset, which includes derivatives files generated from the top-level dataset such as segmentations or labeling.
+According to BIDS, these data should go under [`derivatives/`](https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html) folder, and follow the same folder logic as the `sub-*` data. 
+Example:
+
+```
+...
+...
+├── sub-XXX
+│   └── anat
+│       └──sub-XXX_T1w.nii.gz
+...
+...
+└── derivatives
+    ├── dataset_description.json
+    └── manual_labels
+        ├── sub-XXX
+        │   ├── anat
+        │   │   ├──sub-XXX_T1w_label-SC_seg.nii.gz
+        │   │   ├──sub-XXX_T1w_label-SC_propseg.nii.gz
+        │   │   ├──sub-XXX_T1w_label-SC_mask.nii.gz
+        │   │   ├──sub-XXX_T1w_label-GM_seg.nii.gz
+        │   │   ├──sub-XXX_T1w_label-WM_seg.nii.gz
+        │   │   ├──sub-XXX_T1w_label-centerline.nii.gz
+        │   │   ├──sub-XXX_T1w_label-disc.nii.gz
+        │   │   ├──sub-XXX_T1w_label-lesion.nii.gz
+        │   │   ├──sub-XXX_T1w_label-compression.nii.gz
+        ...
+        ...
+```
+
+The convention for suffix is the following:
+
+- `label-<region>_seg.nii.gz`: binary segmentation of the region `<region>`
+- `label-<region>_probseg.nii.gz`: probabilistic segmentation of the region `<region>`
+- `label-<region>_mask.nii.gz`: binary mask of the region `<region>`
+- `label-<region>_probmask.nii.gz`: probabilistic mask of the region `<region>`
+- `label-centerline.nii.gz`: binary spinal cord centerline
+- `label-disc.nii.gz`: intervertebral disc labels, see [here](https://spinalcordtoolbox.com/user_section/tutorials/registration-to-template/vertebral-labeling/labeling-conventions.html?highlight=labeling) for details
+- `label-lesion.nii.gz`: lesion (for example in multiple sclerosis), see [here](https://github.com/ivadomed/model_seg_sci#data) for details
+- `label-compression.nii.gz`: spinal cord compression labels, see [here](https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/3984#issuecomment-1373008539) for details
+
+```
+Fields:
+- region = {SC, GM, WM, CSF, brainstem, tumor, edema, cavity, axon, myelin}
+```
+
+If you have multiple derivatives, you can create a folder for each of them, and then follow the same logic as above. For example:
+
+```
+...
+...
+└── derivatives
+    ├── dataset_description.json
+    ├── manual_labels
+    └── manual_labels_softseg
+```
 
 Convention for derivatives JSON metadata:
 
