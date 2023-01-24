@@ -67,6 +67,15 @@
 
 * [🎥 Series of talks on diffusion MRI](http://blog.ismrm.org/2018/04/03/interactive-diffusion-course/)
 
+## Arterial Spin Labeling (ASL)
+
+* 📄 [Hernandez‐Garcia L, Aramendía‐Vidaurreta V, Bolar DS, Dai W, Fernández‐Seara MA, Guo J, Madhuranthakam AJ, Mutsaerts H, Petr J, Qin Q, Schollenberger J, Suzuki Y, Taso M, Thomas DL, van Osch MJP, Woods J, Zhao MY, Yan L, Wang Z, Zhao L, Okell TW. Recent Technical Developments in ASL: A Review of the State of the Art [Internet]. Vol. 88, Magnetic Resonance in Medicine. 2022. p. 2021–42. Available from: http://dx.doi.org/10.1002/mrm.29381](https://pubmed.ncbi.nlm.nih.gov/35983963/)
+* 📄 [Martín-Noguerol T, Kirsch CFE, Montesinos P, Luna A. Arterial spin labeling for head and neck lesion assessment: technical adjustments and clinical applications. Neuroradiology. 2021 Dec;63(12):1969–83.](https://pubmed.ncbi.nlm.nih.gov/34427708/)
+* 📄 [Hernandez-Garcia L, Lahiri A, Schollenberger J. Recent progress in ASL. Neuroimage. 2019 Feb 15;187:3–16.](https://pubmed.ncbi.nlm.nih.gov/29305164/)
+* 📄 [Havsteen I, Damm Nybing J, Christensen H, Christensen AF. Arterial spin labeling: a technical overview. Acta radiol. 2018 Oct;59(10):1232–8.](https://pubmed.ncbi.nlm.nih.gov/29313361/)
+* 📄 [Alsop DC, Detre JA, Golay X, Günther M, Hendrikse J, Hernandez-Garcia L, Lu H, MacIntosh BJ, Parkes LM, Smits M, van Osch MJP, Wang DJJ, Wong EC, Zaharchuk G. Recommended implementation of arterial spin-labeled perfusion MRI for clinical applications: A consensus of the ISMRM perfusion study group and the European consortium for ASL in dementia. Magn Reson Med. 2015 Jan;73(1):102–16.](https://onlinelibrary.wiley.com/doi/10.1002/mrm.25197)
+
+
 ## Quality Control (QC)
 
 * [https://github.com/raamana/visualqc](https://github.com/raamana/visualqc)
