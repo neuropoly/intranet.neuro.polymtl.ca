@@ -299,6 +299,7 @@ The convention for suffix is the following:
 - `label-<region>_probmask.nii.gz`: probabilistic mask of the region `<region>`
 - `label-centerline.nii.gz`: binary spinal cord centerline
 - `label-disc.nii.gz`: intervertebral disc labels, see [here](https://spinalcordtoolbox.com/user_section/tutorials/registration-to-template/vertebral-labeling/labeling-conventions.html?highlight=labeling) for details
+- `label-pmj.nii.gz`: pontomedullary junction (PMJ) label, see [here](https://spinalcordtoolbox.com/user_section/tutorials/registration-to-template/vertebral-labeling/labeling-conventions.html?highlight=labeling) for details
 - `label-lesion.nii.gz`: lesion (for example in multiple sclerosis), see [here](https://github.com/ivadomed/model_seg_sci#data) for details
 - `label-compression.nii.gz`: spinal cord compression labels, see [here](https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/3984#issuecomment-1373008539) for details
 
