@@ -1357,10 +1357,10 @@ title="Edit this page"
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FILES</span><span class="o">=</span><span class="sb">`</span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span>*.nii<span class="sb">`</span><span class="p">;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nv">$FILES</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$file</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
 </pre></div>
 </div>
-<p><strong>Using a list of string</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">SUBJECT_LIST</span><span class="o">=</span><span class="s2">&quot;subject_a subject_b&quot;</span>
+<p><strong>Using an array of strings</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">SUBJECT_LIST</span><span class="o">=(</span>subject_a<span class="w"> </span>subject_b<span class="o">)</span>
 
-<span class="k">for</span><span class="w"> </span>subject<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nv">$SUBJECT_LIST</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="k">for</span><span class="w"> </span>subject<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="nv">SUBJECT_LIST</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
 <span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$subject</span>
 <span class="k">done</span>
 </pre></div>

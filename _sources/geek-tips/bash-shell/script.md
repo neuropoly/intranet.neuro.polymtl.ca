@@ -140,12 +140,12 @@ FILES=`ls folder/*.nii`; for file in $FILES; do echo $file; done
 FILES=`find . -name *.nii`; for file in $FILES; do echo $file; done
 ```
 
-**Using a list of string**
+**Using an array of strings**
 
 ```bash
-SUBJECT_LIST="subject_a subject_b"
+SUBJECT_LIST=(subject_a subject_b)
 
-for subject in $SUBJECT_LIST; do
+for subject in ${SUBJECT_LIST[@]}; do
   echo $subject
 done
 ```
