@@ -303,7 +303,7 @@ The convention for suffix is the following:
 - `label-disc.nii.gz`: voxels located at the posterior tip of each intervertebral disc, with values corresponding to [SCT convention](https://spinalcordtoolbox.com/user_section/tutorials/registration-to-template/vertebral-labeling/labeling-conventions.html?highlight=labeling)
 - `label-pmj.nii.gz`: a single voxel with value of `50` corresponding to the pontomedullary junction (PMJ), see [SCT convention](https://spinalcordtoolbox.com/user_section/tutorials/registration-to-template/vertebral-labeling/labeling-conventions.html?highlight=labeling) for details
 - `label-compression.nii.gz`: voxel(s) with value of `1` located at the posterior tip of each intervertebral disc corresponding to the spinal cord compression(s), see [here](https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/3984#issuecomment-1373008539) for details
-- `label-lesion.nii.gz`: lesion (for example in multiple sclerosis), see [here](https://github.com/ivadomed/model_seg_sci#data) for details
+- `label-<region>_lesion.nii.gz`: lesion (for example in multiple sclerosis), see [here](https://github.com/ivadomed/model_seg_sci#data) for details
 
 ```
 Fields:
