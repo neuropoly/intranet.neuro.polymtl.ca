@@ -101,13 +101,34 @@ for i in ${ARRAY[@]}; do
 done
 ```
 
-**Loop across list elements \(using indices\)**
+**Loop across list elements (using indices)**
 
 ```bash
 ARRAY=(element1 element2 element3)
 for i in ${!ARRAY[@]}; do
   echo "Element: $((i+1))/${#ARRAY[@]}"
   echo ${ARRAY[$i]}
+done
+```
+
+**Loop across numerical range (with zero filling)
+
+```bash
+START=30
+END=150
+
+for i in $(seq -f "%03g" $START $END); do
+  echo $i
+done
+```
+
+**Loop across an array of strings**
+
+```bash
+SUBJECT_LIST=(subject_a subject_b)
+
+for subject in ${SUBJECT_LIST[@]}; do
+  echo $subject
 done
 ```
 
@@ -140,15 +161,6 @@ FILES=`ls folder/*.nii`; for file in $FILES; do echo $file; done
 FILES=`find . -name *.nii`; for file in $FILES; do echo $file; done
 ```
 
-**Using an array of strings**
-
-```bash
-SUBJECT_LIST=(subject_a subject_b)
-
-for subject in ${SUBJECT_LIST[@]}; do
-  echo $subject
-done
-```
 
 ## IF Statements
 
