@@ -1336,6 +1336,23 @@ title="Edit this page"
 <span class="k">done</span>
 </pre></div>
 </div>
+<p>**Loop across numerical range (with zero filling)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">START</span><span class="o">=</span><span class="m">30</span>
+<span class="nv">END</span><span class="o">=</span><span class="m">150</span>
+
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>seq<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;%03g&quot;</span><span class="w"> </span><span class="nv">$START</span><span class="w"> </span><span class="nv">$END</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$i</span>
+<span class="k">done</span>
+</pre></div>
+</div>
+<p><strong>Loop across an array of strings</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">SUBJECT_LIST</span><span class="o">=(</span>subject_a<span class="w"> </span>subject_b<span class="o">)</span>
+
+<span class="k">for</span><span class="w"> </span>subject<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="nv">SUBJECT_LIST</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$subject</span>
+<span class="k">done</span>
+</pre></div>
+</div>
 <p><strong>Loop across a series of files</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span>filename<span class="w"> </span><span class="k">in</span><span class="w"> </span>im1<span class="w"> </span>im2<span class="w"> </span>im3<span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
 <span class="w">  </span>bet<span class="w"> </span><span class="nv">$filename</span><span class="w"> </span><span class="si">${</span><span class="nv">filename</span><span class="si">}</span>_brain<span class="w"> </span><span class="p">;</span>
@@ -1355,14 +1372,6 @@ title="Edit this page"
 </div>
 <p><strong>Using find (recursive)</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FILES</span><span class="o">=</span><span class="sb">`</span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span>*.nii<span class="sb">`</span><span class="p">;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nv">$FILES</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$file</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
-</pre></div>
-</div>
-<p><strong>Using an array of strings</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">SUBJECT_LIST</span><span class="o">=(</span>subject_a<span class="w"> </span>subject_b<span class="o">)</span>
-
-<span class="k">for</span><span class="w"> </span>subject<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="nv">SUBJECT_LIST</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
-<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$subject</span>
-<span class="k">done</span>
 </pre></div>
 </div>
 </section>
