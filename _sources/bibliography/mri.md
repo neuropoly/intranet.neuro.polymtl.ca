@@ -7,6 +7,7 @@
 * [🎥 How MRI works / Fourier encoding (check out Parts 1, 2, 3, etc.)](https://www.youtube.com/watch?v=TQegSF4ZiIQ&t=0s&ab_channel=thePIRL)
 * [Questions and Answers in MRI](https://mriquestions.com/index.html)
 * [🇫🇷 MRI Online Course (in French)](https://www.imaios.com/fr/e-Cours/e-MRI)
+* 📄 [Eills et al. Spin Hyperpolarization in Modern Magnetic Resonance. Chem. Rev. 2023](https://pubs.acs.org/doi/10.1021/acs.chemrev.2c00534)
 
 ## Fundamentals
 
@@ -15,8 +16,8 @@
 
 ## RF Coils
 
-* 📄 [Roemer PB, Edelstein WA, Hayes CE, Souza SP, Mueller OM. The NMR phased array. Magn Reson Med. 1990;16:192–225.](https://pubmed.ncbi.nlm.nih.gov/2266841/)
-* 📄 [Gruber B, Froeling M, Leiner T, Klomp DWJ. RF coils: A practical guide for nonphysicists. J Magn Reson Imaging [Internet]. 2018 Jun 13; Available from: http://dx.doi.org/10.1002/jmri.26187](https://onlinelibrary.wiley.com/doi/10.1002/jmri.26187)
+* 📄 [Roemer et al. The NMR phased array. Magn Reson Med. 1990](https://pubmed.ncbi.nlm.nih.gov/2266841/)
+* 📄 [Gruber et al. RF coils: A practical guide for nonphysicists. J Magn Reson Imaging. 2018](https://onlinelibrary.wiley.com/doi/10.1002/jmri.26187)
 * [Open source hardware at 7T from UMCU](https://github.com/umcu7tcoillab)
 * [Open-source Console for Real-time Acquisition (OCRA)](https://openmri.github.io/ocra/)
 * [Open source coil design](https://github.com/OpenMRI/CoilDesign)
@@ -35,7 +36,7 @@
 * [🔒 🎥 Universal Pulse]() TODO
 * [🔒 VOP creation (internal documentation)](https://docs.google.com/document/d/1uqr4UX4VY8H8cZ_DB9zaj12o0xrswRj44AxE3FZauHM/edit#heading=h.uf4xboevl4xa)
 @Gaspard todo: (notably list talks from UHF meeting)
-* 📄 [Williams SN, McElhinney P, Gunamony S. Ultra-high field MRI: parallel-transmit arrays and RF pulse design. Phys Med Biol [Internet]. 2023 Jan 18;68(2). Available from: http://dx.doi.org/10.1088/1361-6560/aca4b7](https://iopscience.iop.org/article/10.1088/1361-6560/aca4b7)
+* 📄 [Williams et al. Ultra-high field MRI: parallel-transmit arrays and RF pulse design. Phys Med Biol 2023](https://iopscience.iop.org/article/10.1088/1361-6560/aca4b7)
 
 ## Pulse Sequences
 
