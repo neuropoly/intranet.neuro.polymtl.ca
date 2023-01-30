@@ -766,6 +766,30 @@ alias gb="git branch"
 
 [Methods to dig yourself out of common pitfalls](https://ohshitgit.com)
 
+### gpg
+
+If you are getting:
+
+```
+error: gpg failed to sign the data
+fatal: failed to write commit object
+```
+
+Follow [this procedure](https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key).
+
+Then, if you experience this:
+```
+error: unsupported value for gpg.format: ssh
+fatal: bad config variable 'gpg.format' in file '/Users/julien/.gitconfig' at line 3
+```
+
+Maybe git is not up-to-date (see: [this comment]([url](https://1password.community/discussion/comment/656138/#Comment_656138))). Update it.
+
+```{note}
+After reinstalling git, you need to open a new Terminal. 
+```
+
+
 ## Git software
 
 ### Pycharm
