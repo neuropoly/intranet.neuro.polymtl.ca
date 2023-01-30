@@ -1322,6 +1322,13 @@ title="Edit this page"
   <a class="reference internal nav-link" href="#troubleshooting">
    Troubleshooting
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gpg">
+     gpg
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git-software">
@@ -1674,6 +1681,13 @@ title="Edit this page"
   <a class="reference internal nav-link" href="#troubleshooting">
    Troubleshooting
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gpg">
+     gpg
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#git-software">
@@ -1766,24 +1780,24 @@ title="Edit this page"
 <h2>Install git<a class="headerlink" href="#install-git" title="Permalink to this headline">#</a></h2>
 <p>Full instructions to install <code class="docutils literal notranslate"><span class="pre">git</span></code> <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">here</a>. We have a quick-start below:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="418f28bd-7c6e-42b6-a984-e3f17f587f3b" name="d0aa35a8-fd96-4dcb-97bf-2e6cb3b547b9" type="radio">
-</input><label class="tabbed-label" for="418f28bd-7c6e-42b6-a984-e3f17f587f3b">
+<input checked="checked" id="a334b61e-6d52-491d-a851-5a905bd14fba" name="737c246e-3d65-411e-8875-882a0833959b" type="radio">
+</input><label class="tabbed-label" for="a334b61e-6d52-491d-a851-5a905bd14fba">
 Linux/Docker</label><div class="tabbed-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
 apt-get<span class="w"> </span>install<span class="w"> </span>git-all
 </pre></div>
 </div>
 </div>
-<input id="b2e12777-7a2b-403b-a257-980fda17a623" name="d0aa35a8-fd96-4dcb-97bf-2e6cb3b547b9" type="radio">
-</input><label class="tabbed-label" for="b2e12777-7a2b-403b-a257-980fda17a623">
+<input id="d259b475-d66b-40dc-995b-a53ac2ddfa13" name="737c246e-3d65-411e-8875-882a0833959b" type="radio">
+</input><label class="tabbed-label" for="d259b475-d66b-40dc-995b-a53ac2ddfa13">
 macOS</label><div class="tabbed-content docutils">
 <p>Probably the easiest way to install on macOS is to install via <a class="reference external" href="https://developer.apple.com/downloads/">XCode Command Line Tools</a>. To check if <code class="docutils literal notranslate"><span class="pre">git</span></code> is installed:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>--version
 </pre></div>
 </div>
 </div>
-<input id="385c2d8e-7d7a-40d1-8c72-37d35e6f62a4" name="d0aa35a8-fd96-4dcb-97bf-2e6cb3b547b9" type="radio">
-</input><label class="tabbed-label" for="385c2d8e-7d7a-40d1-8c72-37d35e6f62a4">
+<input id="2214516c-9865-4ac0-9fee-e447f354160b" name="737c246e-3d65-411e-8875-882a0833959b" type="radio">
+</input><label class="tabbed-label" for="2214516c-9865-4ac0-9fee-e447f354160b">
 Windows</label><div class="tabbed-content docutils">
 <p>Recommended install: Go to <a class="reference external" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a> and the download will start automatically.</p>
 </div>
@@ -2413,6 +2427,25 @@ git<span class="w"> </span>tag<span class="w"> </span>-d<span class="w"> </span>
 <section id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h2>
 <p><a class="reference external" href="https://ohshitgit.com">Methods to dig yourself out of common pitfalls</a></p>
+<section id="gpg">
+<h3>gpg<a class="headerlink" href="#gpg" title="Permalink to this headline">#</a></h3>
+<p>If you are getting:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">error</span><span class="p">:</span> <span class="n">gpg</span> <span class="n">failed</span> <span class="n">to</span> <span class="n">sign</span> <span class="n">the</span> <span class="n">data</span>
+<span class="n">fatal</span><span class="p">:</span> <span class="n">failed</span> <span class="n">to</span> <span class="n">write</span> <span class="n">commit</span> <span class="nb">object</span>
+</pre></div>
+</div>
+<p>Follow <a class="reference external" href="https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key">this procedure</a>.</p>
+<p>Then, if you experience this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">error</span><span class="p">:</span> <span class="n">unsupported</span> <span class="n">value</span> <span class="k">for</span> <span class="n">gpg</span><span class="o">.</span><span class="n">format</span><span class="p">:</span> <span class="n">ssh</span>
+<span class="n">fatal</span><span class="p">:</span> <span class="n">bad</span> <span class="n">config</span> <span class="n">variable</span> <span class="s1">&#39;gpg.format&#39;</span> <span class="ow">in</span> <span class="n">file</span> <span class="s1">&#39;/Users/julien/.gitconfig&#39;</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>Maybe git is not up-to-date (see: <span class="xref myst">this comment</span>). Update it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>After reinstalling git, you need to open a new Terminal.</p>
+</div>
+</section>
 </section>
 <section id="git-software">
 <h2>Git software<a class="headerlink" href="#git-software" title="Permalink to this headline">#</a></h2>
