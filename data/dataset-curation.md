@@ -314,7 +314,7 @@ The convention for suffix is the following:
 
 ```
 Fields:
-- region = {SC, GM, WM, CSF, brainstem, tumor, edema, cavity, axon, myelin}
+- region = {SC, GM, WM, CSF, brain, brainstem, tumor, edema, cavity, axon, myelin}
 ```
 
 If you have multiple derivatives, you can create a folder for each of them, and then follow the same logic as above. For example:
