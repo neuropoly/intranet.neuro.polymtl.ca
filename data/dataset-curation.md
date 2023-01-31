@@ -265,6 +265,13 @@ If you choose to also fill in BIDS's optional [CHANGES](https://bids-specificati
 
 This is a folder at the root of the dataset, which includes derivatives files generated from the top-level dataset such as segmentations or labeling.
 According to BIDS, these data should go under [`derivatives/`](https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html) folder, and follow the same folder logic as the `sub-*` data. 
+
+```{warning}
+If derivatives files were generated from preprocessed data (e.g., after reorientation and resampling), describe the 
+preprocessing steps in README.md file. Also, include the link (pointing to fixed GitHub version) to the pipeline to the 
+README.md file.
+```
+
 Example:
 
 ```
