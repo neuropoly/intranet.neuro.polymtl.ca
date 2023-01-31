@@ -300,7 +300,7 @@ Example:
         ...
 ```
 
-The convention for suffix is the following:
+The convention for suffix is inspired from the [BIDS convention](https://bids-specification.readthedocs.io/en/stable/05-derivatives/03-imaging.html#imaging-data-types) and is the following::
 
 - `label-<region>_seg.nii.gz`: binary segmentation of the region `<region>`
 - `label-<region>_probseg.nii.gz`: probabilistic (soft) segmentation (i.e., values can lie between 0 and 1) of the region `<region>`
