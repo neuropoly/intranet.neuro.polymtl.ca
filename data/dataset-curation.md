@@ -63,10 +63,6 @@ If you need to differentiate between sequences acquired with different orientati
 ```{note}
 If you need to differentiate between different magnetization transfer (MT) sequences, use the [`flip-<index>_mt-<on|off>`](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html#anatomy-imaging-data) tag. For example, `sub-001_flip-1_mt-on_MTS.nii.gz`, `sub-001_flip-1_mt-off_MTS.nii.gz` or `sub-001_flip-2_mt-off_MTS.nii.gz`.
 ```
-acq-MTon_MTS → flip-1_mt-on_MTS
-acq-MToff_MTS → flip-1_mt-off_MTS
-acq-T1w_MTS → flip-2_mt-off_MTS
-```
 
 ```{note}
  If you to combine several above mentioned tags, use camelCase. For example, `sub-001_acq-cspineSagittal_T1w.nii.gz`.
