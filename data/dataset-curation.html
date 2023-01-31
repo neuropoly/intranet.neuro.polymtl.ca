@@ -1233,9 +1233,22 @@ title="Edit this page"
 </pre></div>
 </div>
 <p>Many kinds of data have a place specified for them by BIDS. See <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#filesystem-structure">file naming conventions</a> and the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html">MRI</a> and <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html">Microscopy</a> extensions for full details.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>TODO: describe neuropoly-specific BIDS entities, like bp-cspine or acq-MTon</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you need to differentiate spinal cord images from the brain, use the <code class="docutils literal notranslate"><span class="pre">acq-cspine</span></code> tag. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_acq-cspine_T1w.nii.gz</span></code>.</p>
+<p>ℹ️ We opted for <code class="docutils literal notranslate"><span class="pre">acq-cspine</span></code> tag (see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html#anatomy-imaging-data">BIDS template</a>) because <code class="docutils literal notranslate"><span class="pre">bp-cspine</span></code> is not currently supported by the BIDS convention (see <a class="reference external" href="https://docs.google.com/document/d/1chZv7vAPE-ebPDxMktfI9i1OkLNR2FELIfpVYsaZPr4/edit">BEP25</a> BIDS extension proposal).</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you need to differentiate between sequences acquired with different orientations, use the <code class="docutils literal notranslate"><span class="pre">acq-axial</span></code> or <code class="docutils literal notranslate"><span class="pre">acq-sagittal</span></code> tag. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_acq-axial_T1w.nii.gz</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you need to differentiate between different magnetization transfer (MT) sequences, use the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html#anatomy-imaging-data"><code class="docutils literal notranslate"><span class="pre">flip-&lt;index&gt;_mt-&lt;on|off&gt;</span></code></a> tag. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_flip-1_mt-on_MTS.nii.gz</span></code>, <code class="docutils literal notranslate"><span class="pre">sub-001_flip-1_mt-off_MTS.nii.gz</span></code> or <code class="docutils literal notranslate"><span class="pre">sub-001_flip-2_mt-off_MTS.nii.gz</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you to combine several above mentioned tags, use camelCase. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_acq-cspineSagittal_T1w.nii.gz</span></code>.</p>
 </div>
 </section>
 <section id="bids-template">
@@ -1441,7 +1454,65 @@ title="Edit this page"
 </section>
 <section id="derivatives-structure">
 <h2>Derivatives Structure<a class="headerlink" href="#derivatives-structure" title="Permalink to this headline">#</a></h2>
-<p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html"><code class="docutils literal notranslate"><span class="pre">derivatives</span></code></a> are files generated from the top-level dataset such as segmentations or labels.</p>
+<p>This is a folder at the root of the dataset, which includes derivatives files generated from the top-level dataset such as segmentations or labeling.
+According to BIDS, these data should go under <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html"><code class="docutils literal notranslate"><span class="pre">derivatives/</span></code></a> folder, and follow the same folder logic as the <code class="docutils literal notranslate"><span class="pre">sub-*</span></code> data.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If derivatives files were generated from preprocessed data (e.g., after reorientation and resampling), describe the
+preprocessing steps in README.md file. Also, include the link (pointing to fixed GitHub version) to the pipeline to the
+README.md file.</p>
+</div>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>...
+...
+├── sub-XXX
+│   └── anat
+│       └──sub-XXX_T1w.nii.gz
+...
+...
+└── derivatives
+    ├── dataset_description.json
+    └── manual_labels
+        ├── sub-XXX
+        │   ├── anat
+        │   │   ├──sub-XXX_T1w_label-SC_seg.nii.gz
+        │   │   ├──sub-XXX_T1w_label-SC_propseg.nii.gz
+        │   │   ├──sub-XXX_T1w_label-SC_mask.nii.gz
+        │   │   ├──sub-XXX_T1w_label-GM_seg.nii.gz
+        │   │   ├──sub-XXX_T1w_label-WM_seg.nii.gz
+        │   │   ├──sub-XXX_T1w_label-centerline.nii.gz
+        │   │   ├──sub-XXX_T1w_label-disc.nii.gz
+        │   │   ├──sub-XXX_T1w_label-lesion.nii.gz
+        │   │   ├──sub-XXX_T1w_label-compression.nii.gz
+        ...
+        ...
+</pre></div>
+</div>
+<p>The convention for suffix is inspired from the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/05-derivatives/03-imaging.html#imaging-data-types">BIDS convention</a> and is the following::</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">label-&lt;region&gt;_seg.nii.gz</span></code>: binary segmentation of the region <code class="docutils literal notranslate"><span class="pre">&lt;region&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label-&lt;region&gt;_probseg.nii.gz</span></code>: probabilistic (soft) segmentation (i.e., values can lie between 0 and 1) of the region <code class="docutils literal notranslate"><span class="pre">&lt;region&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label-&lt;region&gt;_mask.nii.gz</span></code>: binary mask of the region <code class="docutils literal notranslate"><span class="pre">&lt;region&gt;</span></code>, for example, cylinder mask with diameter of 35mm centered at the center of the spinal cord</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label-&lt;region&gt;_probmask.nii.gz</span></code>: probabilistic mask of the region <code class="docutils literal notranslate"><span class="pre">&lt;region&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label-centerline.nii.gz</span></code>: binary spinal cord centerline</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label-disc.nii.gz</span></code>: voxels located at the posterior tip of each intervertebral disc, with values corresponding to <a class="reference external" href="https://spinalcordtoolbox.com/user_section/tutorials/registration-to-template/vertebral-labeling/labeling-conventions.html?highlight=labeling">SCT convention</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label-pmj.nii.gz</span></code>: a single voxel with value of <code class="docutils literal notranslate"><span class="pre">50</span></code> corresponding to the pontomedullary junction (PMJ), see <a class="reference external" href="https://spinalcordtoolbox.com/user_section/tutorials/registration-to-template/vertebral-labeling/labeling-conventions.html?highlight=labeling">SCT convention</a> for details</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label-compression.nii.gz</span></code>: voxel(s) with value of <code class="docutils literal notranslate"><span class="pre">1</span></code> located at the posterior tip of each intervertebral disc corresponding to the spinal cord compression(s), see <a class="reference external" href="https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/3984#issuecomment-1373008539">here</a> for details</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label-&lt;region&gt;_lesion.nii.gz</span></code>: lesion (for example in multiple sclerosis), see <a class="reference external" href="https://github.com/ivadomed/model_seg_sci#data">here</a> for details</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fields</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">region</span> <span class="o">=</span> <span class="p">{</span><span class="n">SC</span><span class="p">,</span> <span class="n">GM</span><span class="p">,</span> <span class="n">WM</span><span class="p">,</span> <span class="n">CSF</span><span class="p">,</span> <span class="n">brain</span><span class="p">,</span> <span class="n">brainstem</span><span class="p">,</span> <span class="n">tumor</span><span class="p">,</span> <span class="n">edema</span><span class="p">,</span> <span class="n">cavity</span><span class="p">,</span> <span class="n">axon</span><span class="p">,</span> <span class="n">myelin</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>If you have multiple derivatives, you can create a folder for each of them, and then follow the same logic as above. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>...
+...
+└── derivatives
+    ├── dataset_description.json
+    ├── manual_labels
+    └── manual_labels_softseg
+</pre></div>
+</div>
 <p>Convention for derivatives JSON metadata:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;Author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Firstname Lastname&quot;</span><span class="p">,</span>
@@ -1449,7 +1520,10 @@ title="Edit this page"
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>NOTE: “Date” is optional. We usually include it when running the manual correction via python scripts.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">&quot;Date&quot;</span></code> is optional. We usually include it when running the manual correction via <a class="reference external" href="https://github.com/spinalcordtoolbox/manual-correction">python scripts</a>.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> must include its own <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> file (with <code class="docutils literal notranslate"><span class="pre">&quot;DatasetType&quot;:</span> <span class="pre">&quot;derivative&quot;</span></code>).</p>

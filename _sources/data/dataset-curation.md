@@ -50,8 +50,22 @@ sub-001
 
 Many kinds of data have a place specified for them by BIDS. See [file naming conventions](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#filesystem-structure) and the [MRI](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html) and [Microscopy](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html) extensions for full details.
 
-```{warning}
-TODO: describe neuropoly-specific BIDS entities, like bp-cspine or acq-MTon
+```{note}
+If you need to differentiate spinal cord images from the brain, use the `acq-cspine` tag. For example, `sub-001_acq-cspine_T1w.nii.gz`.
+
+ℹ️ We opted for `acq-cspine` tag (see [BIDS template](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html#anatomy-imaging-data)) because `bp-cspine` is not currently supported by the BIDS convention (see [BEP25](https://docs.google.com/document/d/1chZv7vAPE-ebPDxMktfI9i1OkLNR2FELIfpVYsaZPr4/edit) BIDS extension proposal).
+```
+
+```{note}
+If you need to differentiate between sequences acquired with different orientations, use the `acq-axial` or `acq-sagittal` tag. For example, `sub-001_acq-axial_T1w.nii.gz`.
+```
+
+```{note}
+If you need to differentiate between different magnetization transfer (MT) sequences, use the [`flip-<index>_mt-<on|off>`](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html#anatomy-imaging-data) tag. For example, `sub-001_flip-1_mt-on_MTS.nii.gz`, `sub-001_flip-1_mt-off_MTS.nii.gz` or `sub-001_flip-2_mt-off_MTS.nii.gz`.
+```
+
+```{note}
+ If you to combine several above mentioned tags, use camelCase. For example, `sub-001_acq-cspineSagittal_T1w.nii.gz`.
 ```
 
 ## BIDS template
@@ -249,7 +263,70 @@ If you choose to also fill in BIDS's optional [CHANGES](https://bids-specificati
 
 ## Derivatives Structure
 
-The [`derivatives`](https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html) are files generated from the top-level dataset such as segmentations or labels.
+This is a folder at the root of the dataset, which includes derivatives files generated from the top-level dataset such as segmentations or labeling.
+According to BIDS, these data should go under [`derivatives/`](https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html) folder, and follow the same folder logic as the `sub-*` data. 
+
+```{warning}
+If derivatives files were generated from preprocessed data (e.g., after reorientation and resampling), describe the 
+preprocessing steps in README.md file. Also, include the link (pointing to fixed GitHub version) to the pipeline to the 
+README.md file.
+```
+
+Example:
+
+```
+...
+...
+├── sub-XXX
+│   └── anat
+│       └──sub-XXX_T1w.nii.gz
+...
+...
+└── derivatives
+    ├── dataset_description.json
+    └── manual_labels
+        ├── sub-XXX
+        │   ├── anat
+        │   │   ├──sub-XXX_T1w_label-SC_seg.nii.gz
+        │   │   ├──sub-XXX_T1w_label-SC_propseg.nii.gz
+        │   │   ├──sub-XXX_T1w_label-SC_mask.nii.gz
+        │   │   ├──sub-XXX_T1w_label-GM_seg.nii.gz
+        │   │   ├──sub-XXX_T1w_label-WM_seg.nii.gz
+        │   │   ├──sub-XXX_T1w_label-centerline.nii.gz
+        │   │   ├──sub-XXX_T1w_label-disc.nii.gz
+        │   │   ├──sub-XXX_T1w_label-lesion.nii.gz
+        │   │   ├──sub-XXX_T1w_label-compression.nii.gz
+        ...
+        ...
+```
+
+The convention for suffix is inspired from the [BIDS convention](https://bids-specification.readthedocs.io/en/stable/05-derivatives/03-imaging.html#imaging-data-types) and is the following::
+
+- `label-<region>_seg.nii.gz`: binary segmentation of the region `<region>`
+- `label-<region>_probseg.nii.gz`: probabilistic (soft) segmentation (i.e., values can lie between 0 and 1) of the region `<region>`
+- `label-<region>_mask.nii.gz`: binary mask of the region `<region>`, for example, cylinder mask with diameter of 35mm centered at the center of the spinal cord
+- `label-<region>_probmask.nii.gz`: probabilistic mask of the region `<region>`
+- `label-centerline.nii.gz`: binary spinal cord centerline
+- `label-disc.nii.gz`: voxels located at the posterior tip of each intervertebral disc, with values corresponding to [SCT convention](https://spinalcordtoolbox.com/user_section/tutorials/registration-to-template/vertebral-labeling/labeling-conventions.html?highlight=labeling)
+- `label-pmj.nii.gz`: a single voxel with value of `50` corresponding to the pontomedullary junction (PMJ), see [SCT convention](https://spinalcordtoolbox.com/user_section/tutorials/registration-to-template/vertebral-labeling/labeling-conventions.html?highlight=labeling) for details
+- `label-compression.nii.gz`: voxel(s) with value of `1` located at the posterior tip of each intervertebral disc corresponding to the spinal cord compression(s), see [here](https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/3984#issuecomment-1373008539) for details
+- `label-<region>_lesion.nii.gz`: lesion (for example in multiple sclerosis), see [here](https://github.com/ivadomed/model_seg_sci#data) for details
+
+```
+Fields:
+- region = {SC, GM, WM, CSF, brain, brainstem, tumor, edema, cavity, axon, myelin}
+```
+
+If you have multiple derivatives, you can create a folder for each of them, and then follow the same logic as above. For example:
+
+```
+...
+...
+└── derivatives
+    ├── dataset_description.json
+    ├── manual_labels
+    └── manual_labels_softseg
+```
 
 Convention for derivatives JSON metadata:
 
@@ -260,7 +337,9 @@ Convention for derivatives JSON metadata:
 }
 ```
 
-NOTE: "Date" is optional. We usually include it when running the manual correction via python scripts.
+```{note}
+`"Date"` is optional. We usually include it when running the manual correction via [python scripts](https://github.com/spinalcordtoolbox/manual-correction).
+```
 
 ```{warning}
 The `derivatives` must include its own `dataset_description.json` file (with `"DatasetType": "derivative"`).
