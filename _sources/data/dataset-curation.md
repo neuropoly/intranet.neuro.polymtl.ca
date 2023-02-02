@@ -288,7 +288,7 @@ Example:
         ├── sub-XXX
         │   ├── anat
         │   │   ├──sub-XXX_T1w_label-SC_seg.nii.gz
-        │   │   ├──sub-XXX_T1w_label-SC_propseg.nii.gz
+        │   │   ├──sub-XXX_T1w_label-SC_probseg.nii.gz
         │   │   ├──sub-XXX_T1w_label-SC_mask.nii.gz
         │   │   ├──sub-XXX_T1w_label-GM_seg.nii.gz
         │   │   ├──sub-XXX_T1w_label-WM_seg.nii.gz
