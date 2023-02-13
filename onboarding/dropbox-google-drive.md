@@ -17,10 +17,7 @@ If you are a student, please create a Google Drive folder and share it with your
 For students doing an internship, you will only need to create the `admin`, `biblio`, and `reports` folders.
 ```
 
-**GENERAL RULES:**
-
-* NEVER USE SPACE OR ACCENTS IN FILE NAMES! (Unix-unfriendly).
-* Date format should always be `YYYYMMDD` (or `YYYY-MM-DD`). See this: [https://xkcd.com/1179/](https://xkcd.com/1179/)
+Date format should always be `YYYYMMDD` (or `YYYY-MM-DD`). See this: [https://xkcd.com/1179/](https://xkcd.com/1179/)
 
 ![](../.gitbook/assets/psa.png)
 
