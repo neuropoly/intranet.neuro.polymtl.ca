@@ -20,7 +20,7 @@ Initial setup
 ### Getting an account
 
 ```{note}
-If you already have an account on a server and/or laptop, and you want to have access from a new machine, see the section on [adding extra devices](#add_extra_devices) instead.
+If you already have an account on a server and/or laptop, and you want to have access from a new machine, see the section on [adding extra devices](#add-extra-devices) instead.
 ```
 
 On Slack `#computers` channel, request to be added to the git-annex by providing the contents of your **public key** (examples: `~/.ssh/id_rsa.pub`, `~/.ssh/id_ed25519.pub`). 
