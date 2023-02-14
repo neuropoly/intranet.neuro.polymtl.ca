@@ -19,6 +19,10 @@ Initial setup
 
 ### Getting an account
 
+```{note}
+If you already have an account on a server and/or laptop, and you want to have access from a new machine, see the section on [adding extra devices](#add_extra_devices) instead.
+```
+
 On Slack `#computers` channel, request to be added to the git-annex by providing the contents of your **public key** (examples: `~/.ssh/id_rsa.pub`, `~/.ssh/id_ed25519.pub`). 
 
 A **public key** should look like
@@ -368,13 +372,13 @@ If you no longer are working on a specific, make sure that it is deleted (in ord
 
 Like with Github, you can authorize any number of secondary devices.
 
-For example, to authorize yourself from `server2`, log in to `server2` and make an ssh key if one doesn't exist (`ssh-keygen`), copy it (`~/.ssh/id_rsa.pub`) to a device that is already authenticated (e.g. as `~/id_rsa.server2.pub`), then authorize yourself by:
+For example, to authorize yourself from the server `romane`, log in to `romane` and make an ssh key if one doesn't exist (`ssh-keygen`), copy the public part of it (`~/.ssh/id_rsa.pub`) to a device that is already authenticated (e.g. as `~/id_rsa.romane.pub`), then authorize yourself by:
 
 ```
-cat ~/id_rsa-server2.pub | ssh git@data.neuro.polymtl.ca keys add <yourusername>@server2
+cat ~/id_rsa.romane.pub | ssh git@data.neuro.polymtl.ca keys add <yourusername>@romane
 ```
 
-Note: you can check your `yourusername` by `ssh git@data.neuro.polymtl.ca info`
+Note: you can check your `<yourusername>` by running `ssh git@data.neuro.polymtl.ca info`.
 
 Once added, you should be able to see the newly added key by running:
 
