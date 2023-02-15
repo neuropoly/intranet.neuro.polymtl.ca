@@ -177,9 +177,7 @@ This is a Tab-Separated-Values file. Make sure to use tabs between entries if ed
 
 ### `participants.json`
 
-The [`participants.json`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file) is a JSON file providing a legend for the columns in `participants.tsv`, with longer descriptions, units, and in the case of categorical variables, allowed levels.
-
-<details><summary>participants.json template:</summary>
+The [`participants.json`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file) is a JSON file providing a legend for the columns in `participants.tsv`, with longer descriptions, units, and in the case of categorical variables, allowed levels. Please use the template below:
 
 ```json
 {
@@ -224,8 +222,6 @@ The [`participants.json`](https://bids-specification.readthedocs.io/en/stable/03
     }
 }
 ```
-
-</details>
 
 ### `code/`
 
