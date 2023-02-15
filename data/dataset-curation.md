@@ -211,6 +211,7 @@ The [`participants.json`](https://bids-specification.readthedocs.io/en/stable/03
         "Levels": {
             "HC": "Healthy Control",
             "DCM": "Degenerative Cervical Myelopathy (synonymous with CSM - Cervical Spondylotic Myelopathy)",
+            "MildCompression": "Asymptomatic cord compression, without myelopathy",
             "MS": "Multiple Sclerosis",
             "SCI": "Traumatic Spinal Cord Injury"
         }
