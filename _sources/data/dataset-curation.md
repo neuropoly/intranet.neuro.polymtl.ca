@@ -153,7 +153,7 @@ The [`participants.tsv`](https://bids-specification.readthedocs.io/en/stable/03-
 | sub-002 | 005 | homo sapiens | 40 | O | MS | montreal |
 | sub-003 | 007 | homo sapiens  | n/a | n/a | MS | toronto |
 
-Authorized values for `pathology` are listed under [`participants.json`](#participants-json).
+Authorized values for `pathology` are listed under [`participants.json`](#participantsjson).
 
 Below is an example `participants.tsv` file:
     
