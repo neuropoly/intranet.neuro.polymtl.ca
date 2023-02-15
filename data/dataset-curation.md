@@ -155,7 +155,7 @@ The [`participants.tsv`](https://bids-specification.readthedocs.io/en/stable/03-
 
 Authorized values for `pathology` are listed under [`participants.json`](#participants-json).
 
-<details><summary>participants.tsv template:</summary>
+Below is an example `participants.tsv` file:
     
 ```
 participant_id	source_id	species	age	sex	pathology	institution
@@ -163,7 +163,6 @@ sub-001	001	homo sapiens	30	F	HC	montreal
 sub-002	005	homo sapiens	40	O	MS	montreal
 sub-003	007	homo sapiens	n/a	n/a	MS	toronto
 ```
-</details>
 
 Other columns may be added if the data exists to fill them and it would be useful to keep.
 
