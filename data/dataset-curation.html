@@ -1277,8 +1277,7 @@ title="Edit this page"
 <section id="readme-md">
 <h3><code class="docutils literal notranslate"><span class="pre">README.md</span></code><a class="headerlink" href="#readme-md" title="Permalink to this headline">#</a></h3>
 <p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#readme"><code class="docutils literal notranslate"><span class="pre">README.md</span></code></a> is a <a class="reference external" href="https://markdown-guide.readthedocs.io/en/latest/index.html">markdown</a> file describing the dataset in more detail.</p>
-<p>Below is a template - modify it!!!</p>
-<details><summary>README.md template:</summary>
+<p>Please use the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> template below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># &lt;NAME OF DATASET&gt;</span>
 
 <span class="n">This</span> <span class="ow">is</span> <span class="n">an</span> <span class="o">&lt;</span><span class="n">MRI</span><span class="o">/</span><span class="n">Microscopy</span><span class="o">&gt;</span> <span class="n">dataset</span> <span class="n">acquired</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">context</span> <span class="n">of</span> <span class="n">the</span> <span class="o">&lt;</span><span class="n">XYZ</span><span class="o">&gt;</span> <span class="n">project</span><span class="o">.</span> 
@@ -1295,13 +1294,11 @@ title="Edit this page"
 <span class="o">&lt;</span><span class="n">LIST</span> <span class="n">HERE</span> <span class="n">MISSING</span> <span class="n">SUBJECTS</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</details>
 </section>
 <section id="dataset-description-json">
 <h3><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code><a class="headerlink" href="#dataset-description-json" title="Permalink to this headline">#</a></h3>
 <p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#dataset_descriptionjson"><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code></a> is a JSON file describing the dataset.</p>
-<details><summary>dataset_description.json template:</summary>
-<p>Refer to the <a class="reference external" href="https://bids-specification.readthedocs.io/">BIDS spec</a> to know what version to fill in here.</p>
+<p>Please use the <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> template below:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;BIDSVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BIDS X.Y.Z&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;dataset_name&gt;&quot;</span><span class="p">,</span>
@@ -1309,7 +1306,10 @@ title="Edit this page"
 <span class="p">}</span>
 </pre></div>
 </div>
-</details>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <a class="reference external" href="https://bids-specification.readthedocs.io/">BIDS spec</a> to know what version to fill in here.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> file within the top-level dataset should include <code class="docutils literal notranslate"><span class="pre">&quot;DatasetType&quot;:</span> <span class="pre">&quot;raw&quot;</span></code>.</p>
@@ -1357,7 +1357,7 @@ title="Edit this page"
 </tbody>
 </table>
 <p>Authorized values for <code class="docutils literal notranslate"><span class="pre">pathology</span></code> are listed under <a class="reference internal" href="#participants-json"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">participants.json</span></code></span></a>.</p>
-<p>Below is an example <code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code> file:</p>
+<p>Please use the <code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code> template below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">participant_id</span>	<span class="n">source_id</span>	<span class="n">species</span>	<span class="n">age</span>	<span class="n">sex</span>	<span class="n">pathology</span>	<span class="n">institution</span>
 <span class="n">sub</span><span class="o">-</span><span class="mi">001</span>	<span class="mi">001</span>	<span class="n">homo</span> <span class="n">sapiens</span>	<span class="mi">30</span>	<span class="n">F</span>	<span class="n">HC</span>	<span class="n">montreal</span>
 <span class="n">sub</span><span class="o">-</span><span class="mi">002</span>	<span class="mi">005</span>	<span class="n">homo</span> <span class="n">sapiens</span>	<span class="mi">40</span>	<span class="n">O</span>	<span class="n">MS</span>	<span class="n">montreal</span>
