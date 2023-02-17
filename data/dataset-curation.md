@@ -98,9 +98,7 @@ For details, see [BIDS specification](https://bids-specification.readthedocs.io/
 
 The [`README.md`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#readme) is a [markdown](https://markdown-guide.readthedocs.io/en/latest/index.html) file describing the dataset in more detail.
 
-Below is a template - modify it!!!
-
-<details><summary>README.md template:</summary>
+Please use the `README.md` template below:
 
 ```
 # <NAME OF DATASET>
@@ -119,15 +117,11 @@ Dataset shared by: <NAME AND EMAIL>
 <LIST HERE MISSING SUBJECTS>
 ```
 
-</details>
-
 ### `dataset_description.json`
 
 The [`dataset_description.json`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#dataset_descriptionjson) is a JSON file describing the dataset.
- 
-<details><summary>dataset_description.json template:</summary>
 
-Refer to the [BIDS spec](https://bids-specification.readthedocs.io/) to know what version to fill in here.
+Please use the `dataset_description.json` template below:
     
 ```json
 {
@@ -137,8 +131,10 @@ Refer to the [BIDS spec](https://bids-specification.readthedocs.io/) to know wha
 }
 ```
 
-</details>
-
+```{note}
+Refer to the [BIDS spec](https://bids-specification.readthedocs.io/) to know what version to fill in here.
+```
+    
  ```{warning}
 The `dataset_description.json` file within the top-level dataset should include `"DatasetType": "raw"`.
  ```
@@ -155,7 +151,7 @@ The [`participants.tsv`](https://bids-specification.readthedocs.io/en/stable/03-
 
 Authorized values for `pathology` are listed under [`participants.json`](#participantsjson).
 
-Below is an example `participants.tsv` file:
+Please use the `participants.tsv` template below:
     
 ```
 participant_id	source_id	species	age	sex	pathology	institution
