@@ -27,3 +27,46 @@ The following google calendars are available. In order to subscribe to any of th
 ## Book a room
 
 To book a conference room at Polytechnique, you need to use [http://zimbra.polymtl.ca/](http://zimbra.polymtl.ca/). Go to 'Calendrier', create the event, and edit the tag 'Endroit', search in building 'Lassonde' and select a preferred room (M5517 or M5519 are good). You can create repeated events. Once you're done editing the event, click on 'Envoyer' (top left).
+
+To book a room for bigger events at Polytechnique (eg organize a conference), here are the available spaces:
+
+|                                                         | Capacité |
+| ------------------------------------------------------- | -------- |
+| Amphithéâtre Bernard-Lamarre C - 631                    |          |
+|                                                         |          |
+| Amphithéâtre seulement:                                 | 318      |
+| Rotonde C - 624                                         | 50       |
+| Rotonde C - 630                                         | 50       |
+| Rotonde C - 632                                         | 50       |
+| Avec les 3 rotondes                                     | 468      |
+|                                                         |          |
+|                                                         |          |
+| Cafétéria                                               |          |
+|                                                         |          |
+| Cafétéria 1er principal: 34 tables 204 chaises          |          |
+| Bento sushi: 20 tables  120 chaises                     |          |
+|                                                         |          |
+| Rotonde inférieure: 9 tables 54 chaises                 |          |
+| Rotonde centrale: 15 tables 84 chaises                  |          |
+| Rotonde supérieure: 11 tables 66 chaises                |          |
+| Porte double des rotondes: S -144                       |          |
+|                                                         |          |
+| Galerie Rolland B-600.16                                |          |
+|                                                         |          |
+| Lorsque l'Amphithéâtre est utilisé à sa pleine capacité | 140      |
+| sinon:                                                  |          |
+| Tables et sièges                                        | 267      |
+| Sièges seulement                                        | 338      |
+| Sans tables ni sièges                                   | 634      |
+|                                                         |          |
+|                                                         |          |
+|                                                         |          |
+| Atrium Lassonde - M3500                                 |          |
+|                                                         |          |
+| Tables et chaises - avec alcool                         | 298      |
+| Tables et chaises - sans alcool                         | 400      |
+| Sans tables, sans sièges et sans alcool                 | 708      |
+|                                                         |          |
+| Éclairage en semaine: 7h - minuit                       |          |
+| Éclairage en fin de semaine : 9h - minuit               |          |
+
