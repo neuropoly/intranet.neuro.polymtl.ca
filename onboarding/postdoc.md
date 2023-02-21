@@ -18,5 +18,5 @@ Contact: stage.postdoc@polymtl.ca
 Web: https://www.polymtl.ca/stage-postdoctoral/
 
 ```{note}
-Make sure you are subscripted to `dge-post-doc@liste.polymtl.ca` mailing list. If not, contact postdoc office.
+Make sure you are subscribed to `dge-post-doc@liste.polymtl.ca` mailing list. If not, contact postdoc office.
 ```
