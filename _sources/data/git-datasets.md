@@ -146,7 +146,7 @@ Despite not being hosted on Github, we are still using a [pull-request workflow]
 So, to make changes to a dataset, first ask an admin to [grant you upload rights](#permissions), then make a working branch for your changes. If your initials are `xy` and you are working on `some-topic`:
 
 ```
-git checkout -b xy/some-topic
+git checkout -b xy/some-topic master
 # Edit your files, add new ones, etc. 
 # Add all modified files to be commited
 git add .
