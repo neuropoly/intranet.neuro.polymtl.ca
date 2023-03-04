@@ -552,9 +552,7 @@ smb://hcifst.grames.polymtl.ca/tools
 
 Each computer has a regular unattended upgrade that forces a reboot once a week. The date and time of the next reboot will be indicated in a message when you log in. Do try and consider this when starting your computations. If you started a long computation that you think will be interupted by the scheduled reboot, you can contact the admins in the #computers Slack channel to request that the reboot be exceptionally delayed.
 
-### Admins
-
-Documentation on the standard operating procedure for delaying scheduled reboots is described [here](https://github.com/neuropoly/computers/blob/master/docs/unattended-upgrades.md).
+**Admins**: Documentation on the standard operating procedure for delaying scheduled reboots is described [here](https://github.com/neuropoly/computers/blob/master/docs/unattended-upgrades.md).
 
 ## Admin
 
