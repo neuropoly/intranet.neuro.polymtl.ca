@@ -10,7 +10,7 @@ Then, inspect the data and convert them to BIDS. It is recommended to write a sc
 script should then be saved under the `code` folder of the final dataset. Some previous scripts can be found on 
 [GitHub](https://github.com/neuropoly/data-management/tree/master/scripts) or under the `code` folder of already existing datasets.
 
-Once the data are converted to BIDS and uploaded to git-annex repository (see [here](./data/git-datasets.html#upload)), delete the temporary folder to save space.
+Once the data are converted to BIDS and [uploaded](git-datasets.md#upload) to git-annex repository, delete the temporary folder to save space.
 
 ## Subject naming convention
 
