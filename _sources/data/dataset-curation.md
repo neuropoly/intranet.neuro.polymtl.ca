@@ -2,7 +2,7 @@
 
 ## Converting data to BIDS
 
-All git-annex datasets should be BIDS-compliant. For more information about the BIDS standard, please visit http://bids.neuroimaging.io.
+All git-annex datasets should be BIDS-compliant. For more information about the BIDS standard, please visit [http://bids.neuroimaging.io](http://bids.neuroimaging.io).
 
 When you receive data from an external collaborator, you can save them under a temporary location: `duke/temp`.
 
