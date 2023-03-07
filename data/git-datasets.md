@@ -178,6 +178,9 @@ git push
 
 Finally, ask one of that dataset's reviewers to [look at your pull request](#Reviewing-Pull-Requests) by **opening an issue** (not creating a new pull request) on [neuropoly/data-management](https://github.com/neuropoly/data-management). The details of your pull request (i.e. the changes made to the dataset) must be explained in the issue along with name of your branch on which the changes can be found. 
 
+```{note}
+You do not have to open an issue if your change is small, such as updating a single image. Instead, describe your change in the commit message and ask one of that dataset's reviewers by Slack.
+```
 
 If you are uploading changes gradually, you can reuse the same branch:
 
