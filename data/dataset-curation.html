@@ -1031,6 +1031,11 @@ title="Edit this page"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#converting-data-to-bids">
+   Converting data to BIDS
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#subject-naming-convention">
    Subject naming convention
   </a>
@@ -1117,6 +1122,11 @@ title="Edit this page"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#converting-data-to-bids">
+   Converting data to BIDS
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#subject-naming-convention">
    Subject naming convention
   </a>
@@ -1195,6 +1205,15 @@ title="Edit this page"
                 
   <section id="dataset-curation">
 <h1>Dataset curation<a class="headerlink" href="#dataset-curation" title="Permalink to this headline">#</a></h1>
+<section id="converting-data-to-bids">
+<h2>Converting data to BIDS<a class="headerlink" href="#converting-data-to-bids" title="Permalink to this headline">#</a></h2>
+<p>All git-annex datasets should be BIDS-compliant. For more information about the BIDS standard, please visit http://bids.neuroimaging.io.</p>
+<p>When you receive data from an external collaborator, you can save them under a temporary location: <code class="docutils literal notranslate"><span class="pre">duke/temp</span></code>.</p>
+<p>Then, inspect the data and convert them to BIDS. It is recommended to write a script that does the conversion. The
+script should then be saved under the <code class="docutils literal notranslate"><span class="pre">code</span></code> folder of the final dataset. Some previous scripts can be found on
+<a class="reference external" href="https://github.com/neuropoly/data-management/tree/master/scripts">GitHub</a> or under the <code class="docutils literal notranslate"><span class="pre">code</span></code> folder of already existing datasets.</p>
+<p>Once the data are converted to BIDS and uploaded to git-annex repository (see <span class="xref myst">here</span>), delete the temporary folder to save space.</p>
+</section>
 <section id="subject-naming-convention">
 <h2>Subject naming convention<a class="headerlink" href="#subject-naming-convention" title="Permalink to this headline">#</a></h2>
 <p><strong>Basic convention</strong>: sub-XXX</p>

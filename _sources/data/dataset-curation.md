@@ -1,5 +1,17 @@
 # Dataset curation
 
+## Converting data to BIDS
+
+All git-annex datasets should be BIDS-compliant. For more information about the BIDS standard, please visit http://bids.neuroimaging.io.
+
+When you receive data from an external collaborator, you can save them under a temporary location: `duke/temp`.
+
+Then, inspect the data and convert them to BIDS. It is recommended to write a script that does the conversion. The 
+script should then be saved under the `code` folder of the final dataset. Some previous scripts can be found on 
+[GitHub](https://github.com/neuropoly/data-management/tree/master/scripts) or under the `code` folder of already existing datasets.
+
+Once the data are converted to BIDS and uploaded to git-annex repository (see [here](./data/git-datasets.html#upload)), delete the temporary folder to save space.
+
 ## Subject naming convention
 
 **Basic convention**: sub-XXX
