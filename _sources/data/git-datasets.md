@@ -13,7 +13,7 @@ Initial setup
 
 ### Prerequisites
 
-0. You must have a \*nix OS with `git-annex>=8` installed. See [`git-annex` installation](https://intranet.neuro.polymtl.ca/geek-tips/git-annex.html#installation).
+0. You must have a \*nix OS with `git-annex>=8` installed. See [`git-annex` installation](../geek-tips/git-annex.md#installation).
 2. Make sure you have an ssh key.
     * If not, run `ssh-keygen -t ed25519 -C your.name@polymtl.ca`. Your keys will be in the hidden folder `~/.ssh/`.
 
@@ -80,9 +80,9 @@ list of remote commands available:
 Usage
 -----
 
-During daily usage, you will need to be [*on the polyvpn network*](#connection).
+During daily usage, you will need to be [*on the polyvpn network*](../computing-resources/neuropoly/README.md#vpn) to access the server.
 
-You should also make sure to [configure git annex](./git-annex.md#global-git-config) for the best performance.
+You should also make sure to [configure git annex](../geek-tips/git-annex.md#global-git-config) for the best performance.
 
 ### List
 
