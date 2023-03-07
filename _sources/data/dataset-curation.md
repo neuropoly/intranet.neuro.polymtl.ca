@@ -69,7 +69,7 @@ If you need to differentiate spinal cord images from the brain, use the `acq-csp
 ```
 
 ```{note}
-If you need to differentiate between sequences acquired with different orientations, use the `acq-axial` or `acq-sagittal` tag. For example, `sub-001_acq-axial_T1w.nii.gz`.
+If you need to differentiate between sequences acquired with different orientations, use the `acq-axial` or `acq-sag` tag. For example, `sub-001_acq-axial_T1w.nii.gz`.
 ```
 
 ```{note}
