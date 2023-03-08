@@ -1,6 +1,6 @@
 # VirtualBox
 
-### Import a .ova file <a href="import_a_ova_file" id="import_a_ova_file"></a>
+## Import a .ova file <a href="import_a_ova_file" id="import_a_ova_file"></a>
 
 If you have a Virtual Machine (VM) that has a .ova extension here's what to do to use it with Virtualbox
 
@@ -10,15 +10,15 @@ If you have a Virtual Machine (VM) that has a .ova extension here's what to do t
 * It may take several minutes to import
 * Once it's done just select your machine and click on Show to run it
 
-### Shared folder <a href="shared_folder" id="shared_folder"></a>
+## Shared folder <a href="shared_folder" id="shared_folder"></a>
 
-#### Using Guest Additions (recommended) <a href="using_guest_additions_recommended" id="using_guest_additions_recommended"></a>
+### Using Guest Additions (recommended) <a href="using_guest_additions_recommended" id="using_guest_additions_recommended"></a>
 
 [https://www.virtualbox.org/manual/ch04.html#idp91444064](https://www.virtualbox.org/manual/ch04.html#idp91444064)
 
 On Linux: once you ran all the instructions here, a CD-ROM will be mounted on the guest. Then, go to /mnt/ and run the file ./VBoxLinuxAdditions.run in a terminal.
 
-#### Manual method <a href="manual_method" id="manual_method"></a>
+### Manual method <a href="manual_method" id="manual_method"></a>
 
 [https://www.virtualbox.org/manual/ch04.html#idp91444064](https://www.virtualbox.org/manual/ch04.html#idp91444064) If you want to transfer files between your computer (host) and your Virtual Machine (guest) you'll need a shared folder.
 
@@ -44,7 +44,7 @@ If that didn't work it could be because the VBoxGuestAdditions are not installed
 * `sudo bash VBoxLinuxAdditions.run`
 * Reboot your VM
 
-### Create a Virtual Machine (VM) with Debian <a href="create_a_virtual_machine_vm_with_debian" id="create_a_virtual_machine_vm_with_debian"></a>
+## Create a Virtual Machine (VM) with Debian <a href="create_a_virtual_machine_vm_with_debian" id="create_a_virtual_machine_vm_with_debian"></a>
 
 To create a Virtual Machine with Debian, you can follow this excellent tutorial: [http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/](http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/).
 
@@ -52,7 +52,7 @@ To create a Virtual Machine with Debian, you can follow this excellent tutorial:
 
 Don't give to your VM more than the half of your system RAM. You need to keep memory for your own system.
 
-### Reduce the size of the VM <a href="reduce_the_size_of_the_vm" id="reduce_the_size_of_the_vm"></a>
+## Reduce the size of the VM <a href="reduce_the_size_of_the_vm" id="reduce_the_size_of_the_vm"></a>
 
 Run defrag in the guest (Windows only)
 
@@ -102,9 +102,9 @@ Source:
 * [http://jurajsplayground.com/2012/05/20/shrinking-a-dynamic-virtualbox-hard-disk-on-ubuntu/](http://jurajsplayground.com/2012/05/20/shrinking-a-dynamic-virtualbox-hard-disk-on-ubuntu/)
 * [http://crysol.github.io/recipe/2013-10-15/virtualbox-compact-vmdk-images/#.U8LWqY1dUkg](http://crysol.github.io/recipe/2013-10-15/virtualbox-compact-vmdk-images/#.U8LWqY1dUkg)
 
-### Install guest additions <a href="install_guest_additions" id="install_guest_additions"></a>
+## Install guest additions <a href="install_guest_additions" id="install_guest_additions"></a>
 
-#### Ubuntu 14.04 <a href="ubuntu_1404" id="ubuntu_1404"></a>
+### Ubuntu 14.04 <a href="ubuntu_1404" id="ubuntu_1404"></a>
 
 ```
 sudo apt-get update

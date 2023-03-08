@@ -17,7 +17,7 @@ docker-for-deep-learning
 
 ## Using Docker
 
-#### Search for remote image
+### Search for remote image
 
 ```text
 docker search ubuntu  # will search for ubuntu distrib
@@ -25,7 +25,7 @@ docker search ubuntu  # will search for ubuntu distrib
 
 [List of Ubuntu images](https://hub.docker.com/_/ubuntu)
 
-#### Install & Run Linux distribution <a id="install_run_linux_distribution"></a>
+### Install & Run Linux distribution <a id="install_run_linux_distribution"></a>
 
 ```text
 docker pull debian  # will install debian
@@ -33,13 +33,13 @@ docker pull ubuntu:16.04
 docker pull centos
 ```
 
-#### List local Docker images <a id="list_local_docker_images"></a>
+### List local Docker images <a id="list_local_docker_images"></a>
 
 ```text
 docker images
 ```
 
-#### Run Docker image <a id="run_docker_image"></a>
+### Run Docker image <a id="run_docker_image"></a>
 
 To run in interactive mode, use flag `-i`
 
@@ -49,7 +49,7 @@ docker run -it ubuntu:trusty /bin/bash
 docker run -it ubuntu:16.04
 ```
 
-#### Remove Docker image or containers \(force deletion\) <a id="remove_docker_image_or_containers_force_deletion"></a>
+### Remove Docker image or containers \(force deletion\) <a id="remove_docker_image_or_containers_force_deletion"></a>
 
 ```text
 docker rmi -f IMAGE_ID
@@ -57,7 +57,7 @@ docker rmi $(docker images -a -q)  # WARNING!!! This will remove all images
 docker rm $(docker ps -a -f status=exited -q)  # WARNING!!! This will remove all containers
 ```
 
-#### Save a Docker image <a id="save_a_docker_image"></a>
+### Save a Docker image <a id="save_a_docker_image"></a>
 
 The example below shows how to install useful items on a standard ubuntu image, and then save the image locally.
 
@@ -75,7 +75,7 @@ docker ps -a
 docker commit <container_id> your_name/ubuntu:16.04
 ```
 
-#### Build Docker container from Dockerfile <a id="build_docker_container_from_dockerfile"></a>
+### Build Docker container from Dockerfile <a id="build_docker_container_from_dockerfile"></a>
 
 1. Create a Dockerfile by running \`touch Dockerfile\`
 2. Inside the Dockerfile write the following \(items below are just given as an example\):
@@ -105,7 +105,7 @@ ENV PATH "/sct/bin:${PATH}"
 1. Build docker image: \`docker build -t &lt;container\_id&gt; .\`
 2. Run it: \`docker run -it &lt;container\_id&gt;\`
 
-#### Run with DISPLAY redirection <a id="run_with_display_redirection"></a>
+### Run with DISPLAY redirection <a id="run_with_display_redirection"></a>
 
 In order to run scripts with GUI you need to allow X11 redirection:
 
@@ -117,7 +117,7 @@ In order to run scripts with GUI you need to allow X11 redirection:
    1. On OSX: \`docker run -e DISPLAY=host.docker.internal:0 -it &lt;CONTAINER\_ID&gt;\`
    2. On Linux: \`docker run -ti –rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix &lt;CONTAINER\_ID&gt;\`
 
-#### Copy file into container <a id="copy_file_into_container"></a>
+### Copy file into container <a id="copy_file_into_container"></a>
 
 ```bash
 # list container
