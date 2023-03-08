@@ -1,19 +1,4 @@
 
-.topbar .topbar-main {
-    background-color: #e73c3c
-}
-.topbar .topbar-main button.topbarbtn {
-    background-color: transparent;
-}
-
-/* #main-content {
-    font-size: 14px;
-} */
-
-#site-navigation {
-    background: #f3f5f6;
-}
-
 /* hack: sphinx-panels overrides sphinx-book-theme's overrriding of bootstrap.css's default design,
    which makes the sidebar end up wider than it needs to be.
 
@@ -21,7 +6,8 @@
 
    It's fragile to do it this way but it's just a small patch, hopefully it will be manageable.
 */
-.bd-sidebar,.bd-topbar-whitespace {
+.bd-sidebar {
+  background: #f3f5f6;
   max-width: 275px;
 }
 
@@ -36,7 +22,7 @@
  * the container-fluid class, but I don't know how to do that without
  * forking and editing sphinx-book-theme itself.
  */
-.container-xl {
+.bd-page-width {
   max-width: none;
 }
 
@@ -71,7 +57,7 @@ i[class*="fa-"] ~ span {
   display: none;
 }
 
-#main-content :is(.fa, .fab) {
+#main-content :is(.fa,.fab) {
     /* style the social media icons */
     color: rgb(90, 90, 90);
     font-size: 1.4em;
@@ -85,14 +71,6 @@ i[class*="fa-"] ~ span {
     color: #0086c1;
 }
 
-
-/* Center the Github/Docs columns on software.html and make sure they align across all tables on the page.
- * This is a bit of a hack to do in the main theme file but it works.
- */
-#open-source-projects table tr > :is(th,td):is(:nth-child(3),:nth-child(4)) {
-  text-align: center;
-  min-width: 15%; /* this forces these columns to get 30%, text-wrapping the description column as necessary */
-}
 
 /* make clicking anchor links scroll to their target instead of jump to them */
 /* TODO: if restricted to only a { } this doesn't seem to take effect;
@@ -113,10 +91,6 @@ i[class*="fa-"] ~ span {
     margin-left: 1em;
 }
 
-/* clear sphinx-book-theme's default whitespace above the siderbar */
-div.navbar-brand-box {
-  padding-top: 0;
-}
 
 /* vertically center table contents */
 .table td {
