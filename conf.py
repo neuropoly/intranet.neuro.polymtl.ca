@@ -82,10 +82,16 @@ html_theme_options = {
     "toc_title": "Page Contents",
     "search_bar_text": "Search...",
 
-    "repository_url": "https://github.com/neuropoly/intranet.neuro.polymtl.ca",
     "use_fullscreen_button": False,
     "use_edit_page_button": True,
     "use_download_button": False,
+}
+
+html_context = {
+    "github_user": "neuropoly",
+    "github_repo": "intranet.neuro.polymtl.ca",
+    "github_version": "master",
+    "doc_path": "",
 }
 
 
