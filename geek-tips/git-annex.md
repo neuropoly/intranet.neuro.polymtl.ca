@@ -15,31 +15,33 @@ It has about a thousand variants and options. This covers only the parts we use.
 
 You must have a unix OS. `git-annex` is simply not compatible with anything else.
 
-````{tabbed} Linux
+::::{tab-set}
+:::{tab-item} Linux
 * **Arch**: `pacman -Sy git-annex`
 * **Fedora/RedHat/CentOS**: `dnf install git-annex`
 * **Debian/Ubuntu**: `apt-get install git-annex`, but **you must be using Ubuntu 20.04** or **Debian Testing** or higher.
 * **[ComputeCanada](https://docs.computecanada.ca/)**, a supercomputer we have accounts on: `module load StdEnv/2020  && module load git-annex` *in [every session or batch job](https://docs.computecanada.ca/wiki/Utiliser_des_modules/en#Loading_modules_automatically)*
 * if on an older system and can't upgrade, you can try [installing `conda`](https://docs.conda.io/en/latest/miniconda.html) (or [miniforge](https://github.com/conda-forge/miniforge/) and then using `conda install -f conda-forge git-annex`.
-````
+:::
 
-````{tabbed} macOS
+:::{tab-item} macOS
 ```
 brew install git-annex
 ```
-````
+:::
 
-````{tabbed} Windows 10 (via WSL)
+:::{tab-item} Windows 10 (via WSL)
 Install [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10), pick a distro, and then run one of:
 
 * **[Ubuntu-20.04](https://www.microsoft.com/store/apps/9n6svws3rx71)**: `apt install git-annex`
 * **[Debian](https://www.microsoft.com/store/apps/9MSVKQC78PK6)**: `apt install git-annex`
 * The [other distros](https://docs.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions) are supported.
-````
+:::
 
-````{tabbed} Windows 10 (via VirtualBox)
+:::{tab-item} Windows 10 (via VirtualBox)
 Install [VirtualBox](https://virtualbox.org/), install a Linux distro inside of it, and then follow the Linux instructions.
-````
+:::
+::::
 
 
 ````{warning}

@@ -1096,16 +1096,16 @@ To do on the remote GPU cluster:
 
 If you want to run a Jupyter notebook from a remote server, or monitor a model training using tensorboard, you will need to do an SSH tunnelling to be able to pass the display from the remote cluster to your local station. 
 
-````{tabbed} Secure pipes
+::::{tab-set}
+:::{tab-item} Secure pipes
 
 Install secure pipes and configure it as follows: 
 with port_rosenber as the “Port” of the screen session and port_local is a random number (see screenshot below):
 
 ![](../../_media/tunnelling_macos.png)
+:::
 
-````
-
-````{tabbed} Terminal
+:::{tab-item} Terminal
 
 ```bash
 ssh -N -f -L localhost:8080:localhost:PORTNUMBER username@CLUSTER.neuro.polymtl.ca
@@ -1128,5 +1128,5 @@ lsof -ti:8080 | xargs kill -9
 ```
 
 Reference: https://fizzylogic.nl/2017/11/06/edit-jupyter-notebooks-over-ssh/
-
-````
+:::
+::::

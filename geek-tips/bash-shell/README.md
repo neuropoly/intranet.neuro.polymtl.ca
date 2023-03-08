@@ -266,18 +266,20 @@ find -name sica\*.png | xargs -t -i /bin/cp ./{} ./imagesEdit
 This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.
 
 
-````{tabbed} Linux
+::::{tab-set}
+:::{tab-item} Linux
 ```bash
 find FOLDER -type f -exec md5sum {} \; | md5sum
 ```
-````
+:::
 
-````{tabbed} Mac
+:::{tab-item} Mac
 ```bash
 find -s FOLDER -type f -exec shasum {} \; | shasum
 find -s FOLDER -type f -exec md5 {} \; | md5
 ```
-````
+:::
+::::
 
 
 #### Remove files from tmp <a href="remove_files_from_tmp" id="remove_files_from_tmp"></a>

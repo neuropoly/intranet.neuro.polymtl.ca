@@ -26,30 +26,32 @@
   * [Sven Hofmann README](https://gist.github.com/hofmannsven/6814451)
   * [git - the simple guide (Roger Dudler)](https://rogerdudler.github.io/git-guide/)
   * Snapshot of all commands: [cheat sheet](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf)
-  * [Methods to dig yourself out of common pitfalls](https://ohshitgit.com)  
+  * [Methods to dig yourself out of common pitfalls](https://ohshitgit.com)
 
 ## Install git
 
 Full instructions to install `git` [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). We have a quick-start below:
 
-````{tabbed} Linux/Docker
+::::{tab-set}
+:::{tab-item} Linux/Docker
 ```bash
 sudo apt-get update
 apt-get install git-all
 ```
-````
+:::
 
-````{tabbed} macOS
+:::{tab-item} macOS
 Probably the easiest way to install on macOS is to install via [XCode Command Line Tools](https://developer.apple.com/downloads/). To check if `git` is installed:
 
 ```bash
 git --version
 ```
-````
+:::
 
-````{tabbed} Windows
+:::{tab-item} Windows
 Recommended install: Go to [https://git-scm.com/download/win](https://git-scm.com/download/win) and the download will start automatically.
-````
+:::
+::::
 
 ## Contribute to a project
 
