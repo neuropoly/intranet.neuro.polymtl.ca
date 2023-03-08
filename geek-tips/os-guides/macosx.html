@@ -1,91 +1,140 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>MacOSX &#8212; NeuroPoly Lab Manual</title>
-    
+    <title>MacOSX &#8212; NeuroPoly Internal Wiki  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/os-guides/macosx';</script>
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Contributing Guidelines" href="../contributing.html" />
     <link rel="prev" title="Linux" href="linux.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../README.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">NeuroPoly Lab Manual</h1>
-      
-    </a>
-</div><!-- GTranslate: https://gtranslate.io/ -->
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+    <p class="title logo__title">NeuroPoly Lab Manual</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><!-- GTranslate: https://gtranslate.io/ -->
 <div class="center-g-translate">
     <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl" style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png" height="24" width="24" alt="English" /></a><a href="#" onclick="doGTranslate('en|fr');return false;" title="French" class="gflag nturl" style="background-position:-200px -100px;"><img src="//gtranslate.net/flags/blank.png" height="24" width="24" alt="French" /></a>
 
@@ -113,1722 +162,386 @@
         eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
         /* ]]> */
     </script>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Ressources
- </span>
-</p>
+</div></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ressources</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../onboarding/README.html">
-   <span>
-    👋
-   </span>
-   Onboarding
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../onboarding/getting-started.html">
-     Getting Started
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../onboarding/campus-access.html">
-     Campus Access
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../onboarding/infrastructure.html">
-     Infrastructure
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../onboarding/dropbox-google-drive.html">
-     Google Drive
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../onboarding/computer-setup/README.html">
-     Computer Setup
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-    <label for="toctree-checkbox-2">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../onboarding/computer-setup/mail.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         📧
-        </span>
-       </code>
-       Email
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../onboarding/computer-setup/slack.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         🗣
-        </span>
-       </code>
-       Slack
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../onboarding/computer-setup/eduroam.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         📶
-        </span>
-       </code>
-       Eduroam
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../onboarding/computer-setup/shell-profile.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         💻
-        </span>
-       </code>
-       Shell Profile
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../onboarding/computer-setup/configuration-tips.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         💡
-        </span>
-       </code>
-       Other configuration tips
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../onboarding/developer-setup.html">
-     Developer Setup
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../onboarding/consultants-ra.html">
-     Consultants and RA
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../onboarding/postdoc.html">
-     Postdoctoral fellows
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../agenda-and-calendar.html">
-   <span>
-    📅
-   </span>
-   Calendar &amp; Meetings
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../computing-resources/README.html">
-   <span>
-    🖥
-   </span>
-   Computing Resources
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../computing-resources/neuropoly/README.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       🖥
-      </span>
-     </code>
-     Computers @NeuroPoly
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-    <label for="toctree-checkbox-4">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../computing-resources/neuropoly/cpus.html">
-       CPU Clusters
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../computing-resources/neuropoly/gpus.html">
-       GPU Clusters
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../computing-resources/clusters-at-criugm.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       🖥
-      </span>
-     </code>
-     Computers @CRIUGM
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../computing-resources/compute-canada.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       🖥
-      </span>
-     </code>
-     Compute Canada
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../computing-resources/printer.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       🖨
-      </span>
-     </code>
-     Printer
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../computing-resources/youtube.html">
-     YouTube Procedure
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../data/README.html">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     💾
-    </span>
-   </code>
-   Data
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../data/dataset-curation.html">
-     Dataset curation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../data/git-datasets.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       data
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../data/duke.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       duke
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../data/django.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       django
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../mri-scanning/README.html">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     🧲
-    </span>
-   </code>
-   MRI Scanning
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../mri-scanning/unf-3t-prisma.html">
-     UNF (3T Prisma)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../mri-scanning/mni-mcgill-7t-terra.html">
-     MNI/McGill (7T Terra)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../mri-scanning/mhi-7t-agilent.html">
-     MHI (7T Agilent)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../rf-lab/README.html">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     🔧
-    </span>
-   </code>
-   RF Lab
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../rf-lab/mri-coils-at-neuropoly.html">
-     NeuroPoly Coils
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../rf-lab/misc.html">
-     Misc
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../rf-lab/mri-phantoms.html">
-     Phantoms
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../rf-lab/3d-printing/README.html">
-     3D Printing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../rf-lab/3d-printing/octoprint.html">
-     OctoPrint
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../rf-lab/pcb-manufacturing.html">
-     PCB Manufacturing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../rf-lab/cnc-machine.html">
-     CNC machine
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../onboarding/README.html"><span>👋</span> Onboarding</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/getting-started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/campus-access.html">Campus Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/infrastructure.html">Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/dropbox-google-drive.html">Google Drive</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../onboarding/computer-setup/README.html">Computer Setup</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../onboarding/computer-setup/mail.html"><code class="docutils literal notranslate"><span class="pre">📧</span></code> Email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../onboarding/computer-setup/slack.html"><code class="docutils literal notranslate"><span class="pre">🗣</span></code> Slack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../onboarding/computer-setup/eduroam.html"><code class="docutils literal notranslate"><span class="pre">📶</span></code> Eduroam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../onboarding/computer-setup/shell-profile.html"><code class="docutils literal notranslate"><span class="pre">💻</span></code> Shell Profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../onboarding/computer-setup/configuration-tips.html"><code class="docutils literal notranslate"><span class="pre">💡</span></code> Other configuration tips</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Academic Life
- </span>
-</p>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/developer-setup.html">Developer Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/consultants-ra.html">Consultants and RA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/postdoc.html">Postdoctoral fellows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../agenda-and-calendar.html"><span>📅</span> Calendar &amp; Meetings</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../computing-resources/README.html"><span>🖥</span> Computing Resources</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../computing-resources/neuropoly/README.html"><code class="docutils literal notranslate"><span class="pre">🖥</span></code> Computers @NeuroPoly</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../computing-resources/neuropoly/cpus.html">CPU Clusters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../computing-resources/neuropoly/gpus.html">GPU Clusters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../computing-resources/clusters-at-criugm.html"><code class="docutils literal notranslate"><span class="pre">🖥</span></code> Computers @CRIUGM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../computing-resources/compute-canada.html"><code class="docutils literal notranslate"><span class="pre">🖥</span></code> Compute Canada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../computing-resources/printer.html"><code class="docutils literal notranslate"><span class="pre">🖨</span></code> Printer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../computing-resources/youtube.html">YouTube Procedure</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../data/README.html"><code class="docutils literal notranslate"><span class="pre">💾</span></code> Data</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data/dataset-curation.html">Dataset curation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data/git-datasets.html"><code class="docutils literal notranslate"><span class="pre">data</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data/duke.html"><code class="docutils literal notranslate"><span class="pre">duke</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data/django.html"><code class="docutils literal notranslate"><span class="pre">django</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../mri-scanning/README.html"><code class="docutils literal notranslate"><span class="pre">🧲</span></code> MRI Scanning</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mri-scanning/unf-3t-prisma.html">UNF (3T Prisma)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mri-scanning/mni-mcgill-7t-terra.html">MNI/McGill (7T Terra)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mri-scanning/mhi-7t-agilent.html">MHI (7T Agilent)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../rf-lab/README.html"><code class="docutils literal notranslate"><span class="pre">🔧</span></code> RF Lab</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/mri-coils-at-neuropoly.html">NeuroPoly Coils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/misc.html">Misc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/mri-phantoms.html">Phantoms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/3d-printing/README.html">3D Printing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/3d-printing/octoprint.html">OctoPrint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/pcb-manufacturing.html">PCB Manufacturing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/cnc-machine.html">CNC machine</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Academic Life</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../courses.html">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     🎓
-    </span>
-   </code>
-   University Courses
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../comprehensive-exam-guide.html">
-   📖 Comprehensive Exam
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../scholarships.html">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     💰
-    </span>
-   </code>
-   Scholarships
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../conferences.html">
-   <span>
-    ✈️
-   </span>
-   Conferences
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../bibliography/README.html">
-   <span>
-    📚
-   </span>
-   Bibliography
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../bibliography/lab-theses.html">
-     Theses
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../bibliography/spinal-cord-injury.html">
-     Spinal Cord Injury
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../bibliography/mri.html">
-     MRI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../bibliography/mri-analysis.html">
-     MRI Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../bibliography/deep-learning.html">
-     Deep Learning
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../bibliography/histology.html">
-     Histology
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../bibliography/shared-paperpile-folder.html">
-     Paperpile Folder
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ideas-for-cool-projects.html">
-   <span>
-    💡
-   </span>
-   Ideas for Cool Projects
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../writing-articles.html">
-   <span>
-    ✍️
-   </span>
-   Academic Writing
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../courses.html"><code class="docutils literal notranslate"><span class="pre">🎓</span></code> University Courses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../comprehensive-exam-guide.html">📖 Comprehensive Exam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scholarships.html"><code class="docutils literal notranslate"><span class="pre">💰</span></code> Scholarships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../conferences.html"><span>✈️</span> Conferences</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../bibliography/README.html"><span>📚</span> Bibliography</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/lab-theses.html">Theses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/spinal-cord-injury.html">Spinal Cord Injury</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/mri.html">MRI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/mri-analysis.html">MRI Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/deep-learning.html">Deep Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/histology.html">Histology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/shared-paperpile-folder.html">Paperpile Folder</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Miscellaneous
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ideas-for-cool-projects.html"><span>💡</span> Ideas for Cool Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing-articles.html"><span>✍️</span>     Academic Writing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../practical-information/README.html">
-   <span>
-    📎
-   </span>
-   Practical Information
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../practical-information/visa.html">
-     VISAs and Work Permits
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../practical-information/moving-to-montreal.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       🇨🇦
-      </span>
-     </code>
-     Living in Montreal
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../practical-information/purchasing-weekly-lunch.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       🍱
-      </span>
-     </code>
-     Social Lunch
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../practical-information/purchasing-hardware-and-lab-supplies.html">
-     Purchasing Supplies
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../README.html">
-   <span>
-    🤓
-   </span>
-   Geek tips
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../useful-links.html">
-     Useful links 🔗
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../bash-shell/README.html">
-     Bash/Shell
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../bash-shell/script.html">
-       Script
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../programming-languages/README.html">
-     Programming Languages
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-    <label for="toctree-checkbox-12">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../programming-languages/python.html">
-       Python
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../programming-languages/matlab.html">
-       MATLAB
-      </a>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../programming-languages/c%2B%2B/README.html">
-       C++
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-      <label for="toctree-checkbox-13">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../programming-languages/c%2B%2B/installation-of-vtk-and-itk-on-mac-os-x.html">
-         Installation of VTK and ITK on Mac OS X
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../programming-languages/c%2B%2B/using-xcode.html">
-         Using XCode
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../git.html">
-     Git &amp; Github
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../git-annex.html">
-     git-annex
-    </a>
-   </li>
-   <li class="toctree-l2 current active has-children">
-    <a class="reference internal" href="README.html">
-     OS Guides
-    </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-    <label for="toctree-checkbox-14">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul class="current">
-     <li class="toctree-l3">
-      <a class="reference internal" href="linux.html">
-       Linux
-      </a>
-     </li>
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
-       MacOSX
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../contributing.html">
-     Contributing Guidelines
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../misc/README.html">
-     Various Software &amp; Tools
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-    <label for="toctree-checkbox-15">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../misc/virtual-machines/README.html">
-       Virtual Machines
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-      <label for="toctree-checkbox-16">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../misc/virtual-machines/virtualbox.html">
-         VirtualBox
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../misc/virtual-machines/vagrant.html">
-         Vagrant
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../misc/bitbucket.html">
-       BitBucket
-      </a>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../misc/docker/README.html">
-       Docker
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
-      <label for="toctree-checkbox-17">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../misc/docker/docker-for-deep-learning.html">
-         Docker for Deep Learning
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../misc/dropbox.html">
-       Dropbox
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../misc/jekyll.html">
-       Jekyll
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../misc/microsoft-word.html">
-       Microsoft Word
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../misc/openneuro.html">
-       OpenNeuro
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../misc/sketchup.html">
-       Sketchup
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../misc/xquartz.html">
-       XQuartz
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../image-processing-software/README.html">
-     Image Processing Software
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
-    <label for="toctree-checkbox-18">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../image-processing-software/advanced-normalization-tools-ants.html">
-       Advanced Normalization Tools (ANTs)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../image-processing-software/anima.html">
-       Anima
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../image-processing-software/diffusion-simulator.html">
-       Diffusion Simulator
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../image-processing-software/freesurfer.html">
-       FreeSurfer
-      </a>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../image-processing-software/fsl/README.html">
-       FSL
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
-      <label for="toctree-checkbox-19">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../image-processing-software/fsl/fsleyes.html">
-         FSLeyes
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../image-processing-software/itk-snap.html">
-       ITK-SNAP
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../image-processing-software/nifti.html">
-       NIfTI
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../image-processing-software/openneuro-cli.html">
-       OpenNeuro CLI
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../image-processing-software/osirix.html">
-       OsiriX
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../deep-learning/README.html">
-     Deep Learning
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
-    <label for="toctree-checkbox-20">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../deep-learning/cuda.html">
-       CUDA
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../deep-learning/tensorflow.html">
-       Tensorflow
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../deep-learning/conditional-random-fields-crf.html">
-       Conditional Random Fields (CRF)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../deep-learning/restricted-boltzmann-machines.html">
-       Restricted Boltzmann Machines (RBM)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../deep-learning/misc.html">
-       Misc
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../edi.html">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     🧩
-    </span>
-   </code>
-   EDI
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../contact.html">
-   <span>
-    📞
-   </span>
-   Contact
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://neuro.polymtl.ca">
-   NeuroPoly Website
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../practical-information/README.html"><span>📎</span> Practical Information</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../practical-information/visa.html">VISAs and Work Permits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../practical-information/moving-to-montreal.html"><code class="docutils literal notranslate"><span class="pre">🇨🇦</span></code> Living in Montreal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../practical-information/purchasing-weekly-lunch.html"><code class="docutils literal notranslate"><span class="pre">🍱</span></code> Social Lunch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../practical-information/purchasing-hardware-and-lab-supplies.html">Purchasing Supplies</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../README.html"><span>🤓</span> Geek tips</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../useful-links.html">Useful links 🔗</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../bash-shell/README.html">Bash/Shell</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bash-shell/script.html">Script</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../programming-languages/README.html">Programming Languages</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../programming-languages/python.html">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programming-languages/matlab.html">MATLAB</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../programming-languages/c%2B%2B/README.html">C++</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../programming-languages/c%2B%2B/installation-of-vtk-and-itk-on-mac-os-x.html">Installation of VTK and ITK on Mac OS X</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../programming-languages/c%2B%2B/using-xcode.html">Using XCode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../git.html">Git &amp; Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-annex.html">git-annex</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="README.html">OS Guides</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="linux.html">Linux</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">MacOSX</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html">Contributing Guidelines</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../misc/README.html">Various Software &amp; Tools</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../misc/virtual-machines/README.html">Virtual Machines</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../misc/virtual-machines/virtualbox.html">VirtualBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../misc/virtual-machines/vagrant.html">Vagrant</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/bitbucket.html">BitBucket</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../misc/docker/README.html">Docker</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../misc/docker/docker-for-deep-learning.html">Docker for Deep Learning</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/dropbox.html">Dropbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/jekyll.html">Jekyll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/microsoft-word.html">Microsoft Word</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/openneuro.html">OpenNeuro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/sketchup.html">Sketchup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/xquartz.html">XQuartz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../image-processing-software/README.html">Image Processing Software</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../image-processing-software/advanced-normalization-tools-ants.html">Advanced Normalization Tools (ANTs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../image-processing-software/anima.html">Anima</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../image-processing-software/diffusion-simulator.html">Diffusion Simulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../image-processing-software/freesurfer.html">FreeSurfer</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../image-processing-software/fsl/README.html">FSL</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../image-processing-software/fsl/fsleyes.html">FSLeyes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../image-processing-software/itk-snap.html">ITK-SNAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../image-processing-software/nifti.html">NIfTI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../image-processing-software/openneuro-cli.html">OpenNeuro CLI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../image-processing-software/osirix.html">OsiriX</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../deep-learning/README.html">Deep Learning</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/cuda.html">CUDA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/conditional-random-fields-crf.html">Conditional Random Fields (CRF)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/restricted-boltzmann-machines.html">Restricted Boltzmann Machines (RBM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/misc.html">Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../edi.html"><code class="docutils literal notranslate"><span class="pre">🧩</span></code> EDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html"><span>📞</span> Contact</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://neuro.polymtl.ca">NeuroPoly Website</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right"><a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/os-guides/macosx.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="bottom"
-title="Edit this page"
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/main/geek-tips/os-guides/macosx.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button"
+   title="Suggest edit"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-pencil-alt"></i>
   </span>
 
 </a>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
 
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Page Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#booting-options">
-   Booting Options
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#nice-software">
-   Nice Software
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general">
-   General
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#global-default-config-a-id-global-default-config-a">
-     Global default config
-     <a id="global_default_config">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#maintenance">
-     Maintenance
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#files-and-folders">
-     Files and Folders
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#change-folder-icon-a-id-change-folder-icon-a">
-       Change Folder Icon
-       <a id="change_folder_icon">
-       </a>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#copy-make-a-disk-image-from-cd-dvd-iso-format-a-id-copymake-a-disk-image-from-cddvd-iso-format-a">
-       Copy/Make a disk image from CD/DVD (ISO format)
-       <a id="copymake_a_disk_image_from_cddvd_iso_format">
-       </a>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#recovery">
-     Recovery
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-recovery-partition-a-id-create-recovery-partition-a">
-       Create recovery partition
-       <a id="create_recovery_partition">
-       </a>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#displays">
-     Displays
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#lock-screen-a-id-lock-screen-a">
-       Lock screen
-       <a id="lock_screen">
-       </a>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#lock-screen-upon-sleep-a-id-lock-screen-upon-sleep-a">
-       Lock screen upon sleep
-       <a id="lock_screen_upon_sleep">
-       </a>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#notifications">
-     Notifications
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#disable-notification-center-a-id-disable-notification-center-a">
-       Disable Notification Center
-       <a id="disable_notification_center">
-       </a>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#keyboard">
-     Keyboard
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dialog-box-select-option-with-tab-a-id-dialog-boxselect-option-with-tab-a">
-       Dialog box: select option with Tab
-       <a id="dialog_boxselect_option_with_tab">
-       </a>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#misc">
-     <strong>
-      Misc
-     </strong>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dock-in-2d-a-id-dock-in-2d-a">
-       Dock in 2d
-       <a id="dock_in_2d">
-       </a>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#make-hidden-applications-icons-transparent-a-id-make-hidden-applications-icons-transparent-a">
-       Make Hidden Applications Icons Transparent
-       <a id="make_hidden_applications_icons_transparent">
-       </a>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#set-the-expanded-print-dialogue-as-default-a-id-set-the-expanded-print-dialogue-as-default-a">
-       Set The Expanded Print Dialogue As Default
-       <a id="set_the_expanded_print_dialogue_as_default">
-       </a>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#reboot-station-with-terminal-a-id-reboot-station-with-terminal-a">
-       Reboot station with Terminal
-       <a id="reboot_station_with_terminal">
-       </a>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#set-the-expanded-save-dialogue-as-default-a-id-set-the-expanded-save-dialogue-as-default-a">
-       Set The Expanded Save Dialogue As Default
-       <a id="set_the_expanded_save_dialogue_as_default">
-       </a>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#screenshot-in-desired-format-a-id-screenshot-in-desired-format-a">
-       Screenshot in desired format
-       <a id="screenshot_in_desired_format">
-       </a>
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#servers">
-   Servers
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#software-specific">
-   Software-specific
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#matlab">
-     MATLAB
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#automator">
-     Automator
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fsl-and-fsleyes">
-     FSL and FSLeyes
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#launch-fslview-via-double-click">
-       <strong>
-        Launch fslview via double click
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#generate-dwi-mean-in-same-folder">
-       <strong>
-        generate dwi_mean in same folder
-       </strong>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#use-a-service">
-     <strong>
-      Use a service
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#chrome">
-     Chrome
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dropbox">
-     Dropbox
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#finder">
-     Finder
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#image-capture">
-     Image Capture
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#keynote">
-     Keynote
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#microsoft-word">
-     Microsoft Word
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#papers">
-     Papers
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#port-papers-to-another-mac">
-       <strong>
-        Port Papers to another mac
-       </strong>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#preview">
-     Preview
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#quicklook">
-     QuickLook
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#terminal">
-     Terminal
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#let-terminal-talk">
-       <strong>
-        Let Terminal Talk
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#display-log">
-       <strong>
-        display log
-       </strong>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#textmate">
-     TextMate
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#troubleshooting">
-   Troubleshooting
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mds-stores-using-high-cpu-load">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       mds_stores
-      </span>
-     </code>
-     using high CPU load
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-1">
-       Solution 1
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-2">
-       Solution 2
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#right-click-sharing-for-google-drive">
-     Right-click sharing for Google Drive
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fslview-opening-out-of-screen">
-     fslview opening out of screen
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#archive-utility-permanent-loading">
-     Archive Utility: Permanent loading
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#trash-stuck-when-being-emptied">
-     Trash: Stuck when being emptied
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#error-disk-quota-exceeded">
-     Error: “disk quota exceeded”
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cannot-repair-permission">
-     Cannot repair permission
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#password-prompts-finder-wants-to-make-changes">
-     Password prompts: “Finder wants to make changes”
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       <strong>
-        Solution 1
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id2">
-       <strong>
-        Solution 2
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-3">
-       <strong>
-        Solution 3
-       </strong>
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>MacOSX</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Page Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#booting-options">
-   Booting Options
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#nice-software">
-   Nice Software
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general">
-   General
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#global-default-config-a-id-global-default-config-a">
-     Global default config
-     <a id="global_default_config">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#maintenance">
-     Maintenance
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#files-and-folders">
-     Files and Folders
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#change-folder-icon-a-id-change-folder-icon-a">
-       Change Folder Icon
-       <a id="change_folder_icon">
-       </a>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#copy-make-a-disk-image-from-cd-dvd-iso-format-a-id-copymake-a-disk-image-from-cddvd-iso-format-a">
-       Copy/Make a disk image from CD/DVD (ISO format)
-       <a id="copymake_a_disk_image_from_cddvd_iso_format">
-       </a>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#recovery">
-     Recovery
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-recovery-partition-a-id-create-recovery-partition-a">
-       Create recovery partition
-       <a id="create_recovery_partition">
-       </a>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#displays">
-     Displays
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#lock-screen-a-id-lock-screen-a">
-       Lock screen
-       <a id="lock_screen">
-       </a>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#lock-screen-upon-sleep-a-id-lock-screen-upon-sleep-a">
-       Lock screen upon sleep
-       <a id="lock_screen_upon_sleep">
-       </a>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#notifications">
-     Notifications
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#disable-notification-center-a-id-disable-notification-center-a">
-       Disable Notification Center
-       <a id="disable_notification_center">
-       </a>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#keyboard">
-     Keyboard
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dialog-box-select-option-with-tab-a-id-dialog-boxselect-option-with-tab-a">
-       Dialog box: select option with Tab
-       <a id="dialog_boxselect_option_with_tab">
-       </a>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#misc">
-     <strong>
-      Misc
-     </strong>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dock-in-2d-a-id-dock-in-2d-a">
-       Dock in 2d
-       <a id="dock_in_2d">
-       </a>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#make-hidden-applications-icons-transparent-a-id-make-hidden-applications-icons-transparent-a">
-       Make Hidden Applications Icons Transparent
-       <a id="make_hidden_applications_icons_transparent">
-       </a>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#set-the-expanded-print-dialogue-as-default-a-id-set-the-expanded-print-dialogue-as-default-a">
-       Set The Expanded Print Dialogue As Default
-       <a id="set_the_expanded_print_dialogue_as_default">
-       </a>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#reboot-station-with-terminal-a-id-reboot-station-with-terminal-a">
-       Reboot station with Terminal
-       <a id="reboot_station_with_terminal">
-       </a>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#set-the-expanded-save-dialogue-as-default-a-id-set-the-expanded-save-dialogue-as-default-a">
-       Set The Expanded Save Dialogue As Default
-       <a id="set_the_expanded_save_dialogue_as_default">
-       </a>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#screenshot-in-desired-format-a-id-screenshot-in-desired-format-a">
-       Screenshot in desired format
-       <a id="screenshot_in_desired_format">
-       </a>
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#servers">
-   Servers
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#software-specific">
-   Software-specific
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#matlab">
-     MATLAB
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#automator">
-     Automator
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fsl-and-fsleyes">
-     FSL and FSLeyes
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#launch-fslview-via-double-click">
-       <strong>
-        Launch fslview via double click
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#generate-dwi-mean-in-same-folder">
-       <strong>
-        generate dwi_mean in same folder
-       </strong>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#use-a-service">
-     <strong>
-      Use a service
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#chrome">
-     Chrome
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dropbox">
-     Dropbox
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#finder">
-     Finder
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#image-capture">
-     Image Capture
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#keynote">
-     Keynote
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#microsoft-word">
-     Microsoft Word
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#papers">
-     Papers
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#port-papers-to-another-mac">
-       <strong>
-        Port Papers to another mac
-       </strong>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#preview">
-     Preview
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#quicklook">
-     QuickLook
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#terminal">
-     Terminal
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#let-terminal-talk">
-       <strong>
-        Let Terminal Talk
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#display-log">
-       <strong>
-        display log
-       </strong>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#textmate">
-     TextMate
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#troubleshooting">
-   Troubleshooting
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mds-stores-using-high-cpu-load">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       mds_stores
-      </span>
-     </code>
-     using high CPU load
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-1">
-       Solution 1
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-2">
-       Solution 2
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#right-click-sharing-for-google-drive">
-     Right-click sharing for Google Drive
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#fslview-opening-out-of-screen">
-     fslview opening out of screen
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#archive-utility-permanent-loading">
-     Archive Utility: Permanent loading
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#trash-stuck-when-being-emptied">
-     Trash: Stuck when being emptied
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#error-disk-quota-exceeded">
-     Error: “disk quota exceeded”
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cannot-repair-permission">
-     Cannot repair permission
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#password-prompts-finder-wants-to-make-changes">
-     Password prompts: “Finder wants to make changes”
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       <strong>
-        Solution 1
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id2">
-       <strong>
-        Solution 2
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution-3">
-       <strong>
-        Solution 3
-       </strong>
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>MacOSX</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Page Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#booting-options">Booting Options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nice-software">Nice Software</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general">General</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#global-default-config">Global default config <a id="global_default_config"></a></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maintenance">Maintenance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#files-and-folders">Files and Folders</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#change-folder-icon">Change Folder Icon <a id="change_folder_icon"></a></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-make-a-disk-image-from-cd-dvd-iso-format">Copy/Make a disk image from CD/DVD (ISO format) <a id="copymake_a_disk_image_from_cddvd_iso_format"></a></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recovery">Recovery</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#create-recovery-partition">Create recovery partition <a id="create_recovery_partition"></a></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#displays">Displays</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lock-screen">Lock screen <a id="lock_screen"></a></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lock-screen-upon-sleep">Lock screen upon sleep <a id="lock_screen_upon_sleep"></a></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notifications">Notifications</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#disable-notification-center">Disable Notification Center <a id="disable_notification_center"></a></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keyboard">Keyboard</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dialog-box-select-option-with-tab">Dialog box: select option with Tab <a id="dialog_boxselect_option_with_tab"></a></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#misc"><strong>Misc</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dock-in-2d">Dock in 2d <a id="dock_in_2d"></a></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#make-hidden-applications-icons-transparent">Make Hidden Applications Icons Transparent <a id="make_hidden_applications_icons_transparent"></a></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-expanded-print-dialogue-as-default">Set The Expanded Print Dialogue As Default <a id="set_the_expanded_print_dialogue_as_default"></a></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reboot-station-with-terminal">Reboot station with Terminal <a id="reboot_station_with_terminal"></a></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-expanded-save-dialogue-as-default">Set The Expanded Save Dialogue As Default <a id="set_the_expanded_save_dialogue_as_default"></a></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#screenshot-in-desired-format">Screenshot in desired format <a id="screenshot_in_desired_format"></a></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#servers">Servers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-specific">Software-specific</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab">MATLAB</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automator">Automator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fsl-and-fsleyes">FSL and FSLeyes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-fslview-via-double-click"><strong>Launch fslview via double click</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-dwi-mean-in-same-folder"><strong>generate dwi_mean in same folder</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-a-service"><strong>Use a service</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chrome">Chrome</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dropbox">Dropbox</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finder">Finder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#image-capture">Image Capture</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keynote">Keynote</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#microsoft-word">Microsoft Word</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#papers">Papers</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#port-papers-to-another-mac"><strong>Port Papers to another mac</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preview">Preview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quicklook">QuickLook</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#terminal">Terminal</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#let-terminal-talk"><strong>Let Terminal Talk</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#display-log"><strong>display log</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#textmate">TextMate</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mds-stores-using-high-cpu-load"><code class="docutils literal notranslate"><span class="pre">mds_stores</span></code> using high CPU load</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-1">Solution 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-2">Solution 2</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#right-click-sharing-for-google-drive">Right-click sharing for Google Drive</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fslview-opening-out-of-screen">fslview opening out of screen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#archive-utility-permanent-loading">Archive Utility: Permanent loading</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trash-stuck-when-being-emptied">Trash: Stuck when being emptied</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-disk-quota-exceeded">Error: “disk quota exceeded”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cannot-repair-permission">Cannot repair permission</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#password-prompts-finder-wants-to-make-changes">Password prompts: “Finder wants to make changes”</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Solution 1</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Solution 2</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-3"><strong>Solution 3</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section id="macosx">
-<h1>MacOSX<a class="headerlink" href="#macosx" title="Permalink to this headline">#</a></h1>
+<h1>MacOSX<a class="headerlink" href="#macosx" title="Permalink to this heading">#</a></h1>
 <section id="booting-options">
-<h2>Booting Options<a class="headerlink" href="#booting-options" title="Permalink to this headline">#</a></h2>
-<table class="colwidths-auto table">
+<h2>Booting Options<a class="headerlink" href="#booting-options" title="Permalink to this heading">#</a></h2>
+<table class="table">
 <thead>
-<tr class="row-odd"><th class="text-left head"><p>Key</p></th>
-<th class="text-left head"><p>Action</p></th>
+<tr class="row-odd"><th class="head text-left"><p>Key</p></th>
+<th class="head text-left"><p>Action</p></th>
 </tr>
 </thead>
 <tbody>
@@ -1842,7 +555,7 @@ title="Edit this page"
 </table>
 </section>
 <section id="nice-software">
-<h2>Nice Software<a class="headerlink" href="#nice-software" title="Permalink to this headline">#</a></h2>
+<h2>Nice Software<a class="headerlink" href="#nice-software" title="Permalink to this heading">#</a></h2>
 <p><strong>Recommended</strong></p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://qsapp.com/">Quicksilver</a>. Do stuff using keyboard instead of mouse (e.g., open applications, Google search, send email, etc.).</p></li>
@@ -1934,13 +647,13 @@ title="Edit this page"
 </ul>
 </section>
 <section id="general">
-<h2>General<a class="headerlink" href="#general" title="Permalink to this headline">#</a></h2>
-<section id="global-default-config-a-id-global-default-config-a">
-<h3>Global default config <a id="global_default_config"></a><a class="headerlink" href="#global-default-config-a-id-global-default-config-a" title="Permalink to this headline">#</a></h3>
+<h2>General<a class="headerlink" href="#general" title="Permalink to this heading">#</a></h2>
+<section id="global-default-config">
+<h3>Global default config <a id="global_default_config"></a><a class="headerlink" href="#global-default-config" title="Permalink to this heading">#</a></h3>
 <p><a class="reference external" href="https://gist.github.com/brandonb927/3195465">https://gist.github.com/brandonb927/3195465</a></p>
 </section>
 <section id="maintenance">
-<h3>Maintenance<a class="headerlink" href="#maintenance" title="Permalink to this headline">#</a></h3>
+<h3>Maintenance<a class="headerlink" href="#maintenance" title="Permalink to this heading">#</a></h3>
 <p>Clean cache:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>~/Library/Caches
 /Library/Caches
@@ -1948,17 +661,17 @@ title="Edit this page"
 </div>
 </section>
 <section id="files-and-folders">
-<h3>Files and Folders<a class="headerlink" href="#files-and-folders" title="Permalink to this headline">#</a></h3>
-<section id="change-folder-icon-a-id-change-folder-icon-a">
-<h4>Change Folder Icon <a id="change_folder_icon"></a><a class="headerlink" href="#change-folder-icon-a-id-change-folder-icon-a" title="Permalink to this headline">#</a></h4>
+<h3>Files and Folders<a class="headerlink" href="#files-and-folders" title="Permalink to this heading">#</a></h3>
+<section id="change-folder-icon">
+<h4>Change Folder Icon <a id="change_folder_icon"></a><a class="headerlink" href="#change-folder-icon" title="Permalink to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p>Find an icon you like. A good place is interface lift.</p></li>
 <li><p>Once you have found your icon, right click and “Get Info” on both your icon file and the folder you wish to change. Click on the small icon in the top left hand corner. There will be a blue outline around the icon. Now press Command + C, this will copy the icon to your clip board.</p></li>
 <li><p>On your folder icon that you want to change, click it again and press <code class="docutils literal notranslate"><span class="pre">CMD</span> <span class="pre">+</span> <span class="pre">V</span></code>. This will paste the icon.</p></li>
 </ol>
 </section>
-<section id="copy-make-a-disk-image-from-cd-dvd-iso-format-a-id-copymake-a-disk-image-from-cddvd-iso-format-a">
-<h4>Copy/Make a disk image from CD/DVD (ISO format) <a id="copymake_a_disk_image_from_cddvd_iso_format"></a><a class="headerlink" href="#copy-make-a-disk-image-from-cd-dvd-iso-format-a-id-copymake-a-disk-image-from-cddvd-iso-format-a" title="Permalink to this headline">#</a></h4>
+<section id="copy-make-a-disk-image-from-cd-dvd-iso-format">
+<h4>Copy/Make a disk image from CD/DVD (ISO format) <a id="copymake_a_disk_image_from_cddvd_iso_format"></a><a class="headerlink" href="#copy-make-a-disk-image-from-cd-dvd-iso-format" title="Permalink to this heading">#</a></h4>
 <p>Open Disk Utility, click on “create new image”, then save as DVD/CD .cdr format. Then you can convert your CDR into ISO using the following Terminal command:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>hdiutil makehybrid -iso -joliet -o Master.iso Master.cdr
 </pre></div>
@@ -1966,37 +679,37 @@ title="Edit this page"
 </section>
 </section>
 <section id="recovery">
-<h3>Recovery<a class="headerlink" href="#recovery" title="Permalink to this headline">#</a></h3>
-<section id="create-recovery-partition-a-id-create-recovery-partition-a">
-<h4>Create recovery partition <a id="create_recovery_partition"></a><a class="headerlink" href="#create-recovery-partition-a-id-create-recovery-partition-a" title="Permalink to this headline">#</a></h4>
+<h3>Recovery<a class="headerlink" href="#recovery" title="Permalink to this heading">#</a></h3>
+<section id="create-recovery-partition">
+<h4>Create recovery partition <a id="create_recovery_partition"></a><a class="headerlink" href="#create-recovery-partition" title="Permalink to this heading">#</a></h4>
 <p><a class="reference external" href="http://www.macworld.co.uk/how-to/mac-software/downgrade-mavericks-mountain-lion-3494785/">http://www.macworld.co.uk/how-to/mac-software/downgrade-mavericks-mountain-lion-3494785/</a></p>
 <p>For Mavericks: <a class="reference external" href="http://support.apple.com/kb/HT5856">http://support.apple.com/kb/HT5856</a></p>
 <p>Is it possible to downgrade to Mountain Lion on a Mac with native Mavericks installation? ANSWER: <a class="reference external" href="https://discussions.apple.com/thread/5595780">no.</a></p>
 </section>
 </section>
 <section id="displays">
-<h3>Displays<a class="headerlink" href="#displays" title="Permalink to this headline">#</a></h3>
-<section id="lock-screen-a-id-lock-screen-a">
-<h4>Lock screen <a id="lock_screen"></a><a class="headerlink" href="#lock-screen-a-id-lock-screen-a" title="Permalink to this headline">#</a></h4>
+<h3>Displays<a class="headerlink" href="#displays" title="Permalink to this heading">#</a></h3>
+<section id="lock-screen">
+<h4>Lock screen <a id="lock_screen"></a><a class="headerlink" href="#lock-screen" title="Permalink to this heading">#</a></h4>
 <p>In order to run a script overnight:</p>
 <ul class="simple">
 <li><p>Keyboard Shortcut: <code class="docutils literal notranslate"><span class="pre">Ctrl+Shift+Eject</span></code></p></li>
 <li><p>Icon in your menu bar: Keychain Access &gt; Preferences &gt; General tab &gt; select the Show Status in Menu Bar option.</p></li>
 </ul>
 </section>
-<section id="lock-screen-upon-sleep-a-id-lock-screen-upon-sleep-a">
-<h4>Lock screen upon sleep <a id="lock_screen_upon_sleep"></a><a class="headerlink" href="#lock-screen-upon-sleep-a-id-lock-screen-upon-sleep-a" title="Permalink to this headline">#</a></h4>
+<section id="lock-screen-upon-sleep">
+<h4>Lock screen upon sleep <a id="lock_screen_upon_sleep"></a><a class="headerlink" href="#lock-screen-upon-sleep" title="Permalink to this heading">#</a></h4>
 <p>Looking through this site, I found part of the solution in this hint. The trick was getting this script to activate on Sleep (or wake up). After some searching, I found Bernhard Baehr’s excellent Sleepwatcher. Sleepwatcher is a daemon that calls a pair of scripts, ~/.sleep and ~/.wakeup, upon sleep and wakeup. Combining these two, I installed Sleepwatcher, and used the code below as my .sleep file (the /System… line is shown on two lines; enter it as one line without any added spaces):</p>
 <p>#!/bin/sh /System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend</p>
 <p>Restart, and your Mac will fast-user switch itself to the log in screen when you close the lid! Hope this helps other paranoid PowerBook owners! Note: You can also put this script in your .wakeup file, but there’s a few (three to five) seconds’ delay between wake and the script call, leaving the system wide open for a few seconds, and looking a bit tacky to boot.</p>
 <p>To download sleepwatcher: <a class="reference external" href="http://www.bernhard-baehr.de/">http://www.bernhard-baehr.de/</a></p>
-<p>Source of this tips: <a class="reference external" href="http://hints.macworld.com/article.php?story=20040724203315798&amp;query=CGSession">http://hints.macworld.com/article.php?story=20040724203315798&amp;query=CGSession</a></p>
+<p>Source of this tips: <a class="reference external" href="http://hints.macworld.com/article.php?story=20040724203315798&amp;amp;query=CGSession">http://hints.macworld.com/article.php?story=20040724203315798&amp;query=CGSession</a></p>
 </section>
 </section>
 <section id="notifications">
-<h3>Notifications<a class="headerlink" href="#notifications" title="Permalink to this headline">#</a></h3>
-<section id="disable-notification-center-a-id-disable-notification-center-a">
-<h4>Disable Notification Center <a id="disable_notification_center"></a><a class="headerlink" href="#disable-notification-center-a-id-disable-notification-center-a" title="Permalink to this headline">#</a></h4>
+<h3>Notifications<a class="headerlink" href="#notifications" title="Permalink to this heading">#</a></h3>
+<section id="disable-notification-center">
+<h4>Disable Notification Center <a id="disable_notification_center"></a><a class="headerlink" href="#disable-notification-center" title="Permalink to this heading">#</a></h4>
 <p>If you don’t need the Notification Center feature introduced in OS X Mountain Lion, you can easily disable it with a Terminal command.</p>
 <p>Open Terminal by searching for it in Spotlight or opening it from the Applications &gt; Utilities folder. Enter the following command</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
@@ -2016,48 +729,48 @@ title="Edit this page"
 </section>
 </section>
 <section id="keyboard">
-<h3>Keyboard<a class="headerlink" href="#keyboard" title="Permalink to this headline">#</a></h3>
-<section id="dialog-box-select-option-with-tab-a-id-dialog-boxselect-option-with-tab-a">
-<h4>Dialog box: select option with Tab <a id="dialog_boxselect_option_with_tab"></a><a class="headerlink" href="#dialog-box-select-option-with-tab-a-id-dialog-boxselect-option-with-tab-a" title="Permalink to this headline">#</a></h4>
+<h3>Keyboard<a class="headerlink" href="#keyboard" title="Permalink to this heading">#</a></h3>
+<section id="dialog-box-select-option-with-tab">
+<h4>Dialog box: select option with Tab <a id="dialog_boxselect_option_with_tab"></a><a class="headerlink" href="#dialog-box-select-option-with-tab" title="Permalink to this heading">#</a></h4>
 <p>After Snow Leopard, this useful feature was removed by default. To put it back: System Preferences &gt; Keyboard &gt; Shortcuts &gt; select “All Controls”</p>
 </section>
 </section>
 <section id="misc">
-<h3><strong>Misc</strong><a class="headerlink" href="#misc" title="Permalink to this headline">#</a></h3>
-<section id="dock-in-2d-a-id-dock-in-2d-a">
-<h4>Dock in 2d <a id="dock_in_2d"></a><a class="headerlink" href="#dock-in-2d-a-id-dock-in-2d-a" title="Permalink to this headline">#</a></h4>
+<h3><strong>Misc</strong><a class="headerlink" href="#misc" title="Permalink to this heading">#</a></h3>
+<section id="dock-in-2d">
+<h4>Dock in 2d <a id="dock_in_2d"></a><a class="headerlink" href="#dock-in-2d" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>defaults<span class="w"> </span>write<span class="w"> </span>com.apple.dock<span class="w"> </span>no-glass<span class="w"> </span>-boolean<span class="w"> </span>YES
 killall<span class="w"> </span>Dock
 </pre></div>
 </div>
 </section>
-<section id="make-hidden-applications-icons-transparent-a-id-make-hidden-applications-icons-transparent-a">
-<h4>Make Hidden Applications Icons Transparent <a id="make_hidden_applications_icons_transparent"></a><a class="headerlink" href="#make-hidden-applications-icons-transparent-a-id-make-hidden-applications-icons-transparent-a" title="Permalink to this headline">#</a></h4>
+<section id="make-hidden-applications-icons-transparent">
+<h4>Make Hidden Applications Icons Transparent <a id="make_hidden_applications_icons_transparent"></a><a class="headerlink" href="#make-hidden-applications-icons-transparent" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>defaults<span class="w"> </span>write<span class="w"> </span>com.apple.Dock<span class="w"> </span>showhidden<span class="w"> </span>-bool<span class="w"> </span>YES
 killall<span class="w"> </span>Dock
 </pre></div>
 </div>
 </section>
-<section id="set-the-expanded-print-dialogue-as-default-a-id-set-the-expanded-print-dialogue-as-default-a">
-<h4>Set The Expanded Print Dialogue As Default <a id="set_the_expanded_print_dialogue_as_default"></a><a class="headerlink" href="#set-the-expanded-print-dialogue-as-default-a-id-set-the-expanded-print-dialogue-as-default-a" title="Permalink to this headline">#</a></h4>
+<section id="set-the-expanded-print-dialogue-as-default">
+<h4>Set The Expanded Print Dialogue As Default <a id="set_the_expanded_print_dialogue_as_default"></a><a class="headerlink" href="#set-the-expanded-print-dialogue-as-default" title="Permalink to this heading">#</a></h4>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>defaults write -g PMPrintingExpandedStateForPrint -bool TRUE
 </pre></div>
 </div>
 </section>
-<section id="reboot-station-with-terminal-a-id-reboot-station-with-terminal-a">
-<h4>Reboot station with Terminal <a id="reboot_station_with_terminal"></a><a class="headerlink" href="#reboot-station-with-terminal-a-id-reboot-station-with-terminal-a" title="Permalink to this headline">#</a></h4>
+<section id="reboot-station-with-terminal">
+<h4>Reboot station with Terminal <a id="reboot_station_with_terminal"></a><a class="headerlink" href="#reboot-station-with-terminal" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>shutdown<span class="w"> </span>-r<span class="w"> </span>now
 </pre></div>
 </div>
 </section>
-<section id="set-the-expanded-save-dialogue-as-default-a-id-set-the-expanded-save-dialogue-as-default-a">
-<h4>Set The Expanded Save Dialogue As Default <a id="set_the_expanded_save_dialogue_as_default"></a><a class="headerlink" href="#set-the-expanded-save-dialogue-as-default-a-id-set-the-expanded-save-dialogue-as-default-a" title="Permalink to this headline">#</a></h4>
+<section id="set-the-expanded-save-dialogue-as-default">
+<h4>Set The Expanded Save Dialogue As Default <a id="set_the_expanded_save_dialogue_as_default"></a><a class="headerlink" href="#set-the-expanded-save-dialogue-as-default" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>defaults<span class="w"> </span>write<span class="w"> </span>-g<span class="w"> </span>NSNavPanelExpandedStateForSaveMode<span class="w"> </span>-bool<span class="w"> </span>TRUE
 </pre></div>
 </div>
 </section>
-<section id="screenshot-in-desired-format-a-id-screenshot-in-desired-format-a">
-<h4>Screenshot in desired format <a id="screenshot_in_desired_format"></a><a class="headerlink" href="#screenshot-in-desired-format-a-id-screenshot-in-desired-format-a" title="Permalink to this headline">#</a></h4>
+<section id="screenshot-in-desired-format">
+<h4>Screenshot in desired format <a id="screenshot_in_desired_format"></a><a class="headerlink" href="#screenshot-in-desired-format" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>defaults<span class="w"> </span>write<span class="w"> </span>com.apple.screencapture<span class="w"> </span><span class="nb">type</span><span class="w"> </span>jpg
 </pre></div>
 </div>
@@ -2066,43 +779,43 @@ killall<span class="w"> </span>Dock
 </section>
 </section>
 <section id="servers">
-<h2>Servers<a class="headerlink" href="#servers" title="Permalink to this headline">#</a></h2>
+<h2>Servers<a class="headerlink" href="#servers" title="Permalink to this heading">#</a></h2>
 <p><a class="reference external" href="https://www.neuro.polymtl.ca/tips_and_tricks/mac/server">How to manage a server</a></p>
 </section>
 <section id="software-specific">
-<h2>Software-specific<a class="headerlink" href="#software-specific" title="Permalink to this headline">#</a></h2>
+<h2>Software-specific<a class="headerlink" href="#software-specific" title="Permalink to this heading">#</a></h2>
 <section id="matlab">
-<h3>MATLAB<a class="headerlink" href="#matlab" title="Permalink to this headline">#</a></h3>
+<h3>MATLAB<a class="headerlink" href="#matlab" title="Permalink to this heading">#</a></h3>
 <p>help crash. use this command in matlab : <code class="docutils literal notranslate"><span class="pre">com.mathworks.mlwidgets.html.HtmlComponentFactory.setDefaultType('HTMLRENDERER');</span></code></p>
 </section>
 <section id="automator">
-<h3>Automator<a class="headerlink" href="#automator" title="Permalink to this headline">#</a></h3>
+<h3>Automator<a class="headerlink" href="#automator" title="Permalink to this heading">#</a></h3>
 <p>Launch app automator –&gt; New app OR service –&gt; add “Run shell script” module –&gt; select module Option: Pass input “as argument” –&gt; write you script</p>
 </section>
 <section id="fsl-and-fsleyes">
-<h3>FSL and FSLeyes<a class="headerlink" href="#fsl-and-fsleyes" title="Permalink to this headline">#</a></h3>
+<h3>FSL and FSLeyes<a class="headerlink" href="#fsl-and-fsleyes" title="Permalink to this heading">#</a></h3>
 <section id="launch-fslview-via-double-click">
-<h4><strong>Launch fslview via double click</strong><a class="headerlink" href="#launch-fslview-via-double-click" title="Permalink to this headline">#</a></h4>
+<h4><strong>Launch fslview via double click</strong><a class="headerlink" href="#launch-fslview-via-double-click" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FSLDIR</span><span class="o">=</span>/usr/local/fsl<span class="w"> </span>.<span class="w"> </span><span class="si">${</span><span class="nv">FSLDIR</span><span class="si">}</span>/etc/fslconf/fsl.sh<span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/usr/local/fsl/bin<span class="w"> </span>fslview<span class="w"> </span>“<span class="nv">$@</span>”<span class="w"> </span><span class="p">&amp;</span>
 </pre></div>
 </div>
 </section>
 <section id="generate-dwi-mean-in-same-folder">
-<h4><strong>generate dwi_mean in same folder</strong><a class="headerlink" href="#generate-dwi-mean-in-same-folder" title="Permalink to this headline">#</a></h4>
+<h4><strong>generate dwi_mean in same folder</strong><a class="headerlink" href="#generate-dwi-mean-in-same-folder" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FSLDIR</span><span class="o">=</span>/usr/local/fsl<span class="w"> </span>.<span class="w"> </span><span class="si">${</span><span class="nv">FSLDIR</span><span class="si">}</span>/etc/fslconf/fsl.sh<span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/usr/local/fsl/bin<span class="w"> </span><span class="nv">fold</span><span class="o">=</span><span class="k">$(</span>dirname<span class="w"> </span>“<span class="nv">$1</span>”<span class="k">)</span><span class="w"> </span><span class="nv">NAME</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span><span class="w"> </span>“<span class="k">$(</span>basename<span class="w"> </span>“<span class="nv">$1</span>”<span class="k">)</span>”<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="s1">&#39;.&#39;</span><span class="w"> </span>-f1<span class="sb">`</span><span class="w"> </span>fslmaths<span class="w"> </span>“<span class="nv">$1</span>”<span class="w"> </span>-Tmean<span class="w"> </span><span class="nv">$fold</span>“/“<span class="nv">$NAME</span>”_mean”
 </pre></div>
 </div>
 </section>
 </section>
 <section id="use-a-service">
-<h3><strong>Use a service</strong><a class="headerlink" href="#use-a-service" title="Permalink to this headline">#</a></h3>
+<h3><strong>Use a service</strong><a class="headerlink" href="#use-a-service" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>select a file or text (depending on your service input)</p></li>
 <li><p>application menu (e.g. finder) → Services → your service. (Or specify a keyboard shortcut in “Services preferences”)</p></li>
 </ul>
 </section>
 <section id="chrome">
-<h3>Chrome<a class="headerlink" href="#chrome" title="Permalink to this headline">#</a></h3>
+<h3>Chrome<a class="headerlink" href="#chrome" title="Permalink to this heading">#</a></h3>
 <p><strong>Won’t launch</strong></p>
 <ul class="simple">
 <li><p>Terminal –&gt; go to folder:</p>
@@ -2115,7 +828,7 @@ killall<span class="w"> </span>Dock
 </ul>
 </section>
 <section id="dropbox">
-<h3>Dropbox<a class="headerlink" href="#dropbox" title="Permalink to this headline">#</a></h3>
+<h3>Dropbox<a class="headerlink" href="#dropbox" title="Permalink to this heading">#</a></h3>
 <p><strong>Sync is stuck</strong></p>
 <p><strong>Solution 1</strong></p>
 <p>Remove the ACL manually. Go to the problematic folder(s) and type:</p>
@@ -2129,7 +842,7 @@ chmod -RN foldername  --&gt; do do it for all files/folders recursively
 </ul>
 </section>
 <section id="finder">
-<h3>Finder<a class="headerlink" href="#finder" title="Permalink to this headline">#</a></h3>
+<h3>Finder<a class="headerlink" href="#finder" title="Permalink to this heading">#</a></h3>
 <p><strong>Enable The Path View</strong></p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
 </pre></div>
@@ -2147,7 +860,7 @@ chmod -RN foldername  --&gt; do do it for all files/folders recursively
 <p><a class="reference external" href="http://fahmiesalleh.blogspot.com/2008/04/mac-os-x-finder-sort-folder-before-file.html">http://fahmiesalleh.blogspot.com/2008/04/mac-os-x-finder-sort-folder-before-file.html</a></p>
 </section>
 <section id="image-capture">
-<h3>Image Capture<a class="headerlink" href="#image-capture" title="Permalink to this headline">#</a></h3>
+<h3>Image Capture<a class="headerlink" href="#image-capture" title="Permalink to this heading">#</a></h3>
 <p><strong>iPhone or scanner is no more recognized</strong></p>
 <p>Close Image capture. Delete (or rename) the plist files:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>cd ~/Library/Preferences
@@ -2158,11 +871,11 @@ mv com.apple.ImageCaptureExtension2.plist com.apple.ImageCaptureExtension2.plist
 <p>Open Image Capture and plug your device.</p>
 </section>
 <section id="keynote">
-<h3>Keynote<a class="headerlink" href="#keynote" title="Permalink to this headline">#</a></h3>
+<h3>Keynote<a class="headerlink" href="#keynote" title="Permalink to this heading">#</a></h3>
 <p>In the new version of Keynote (6.2), files are now saved as packages instead of files. This creates huge problems with Dropbox, git, etc. I did not find any workaround so far, so had to install the older version (not possible to downgrade from Apple Store– you need to manually install the previous version inside the Applications/ folder).</p>
 </section>
 <section id="microsoft-word">
-<h3>Microsoft Word<a class="headerlink" href="#microsoft-word" title="Permalink to this headline">#</a></h3>
+<h3>Microsoft Word<a class="headerlink" href="#microsoft-word" title="Permalink to this heading">#</a></h3>
 <p><strong>Word freezes after copy/paste</strong></p>
 <p>Solutions:</p>
 <ol class="arabic simple">
@@ -2181,9 +894,9 @@ mv com.apple.ImageCaptureExtension2.plist com.apple.ImageCaptureExtension2.plist
 <p>This is a <a class="reference external" href="http://msgroups.net/microsoft.public.mac.office.word/links-lost-on-conversion-to/63190">known bug</a>. Solution: convert your word document using <a class="reference external" href="https://www.freepdfconvert.com/">freepdfconvert</a></p>
 </section>
 <section id="papers">
-<h3>Papers<a class="headerlink" href="#papers" title="Permalink to this headline">#</a></h3>
+<h3>Papers<a class="headerlink" href="#papers" title="Permalink to this heading">#</a></h3>
 <section id="port-papers-to-another-mac">
-<h4><strong>Port Papers to another mac</strong><a class="headerlink" href="#port-papers-to-another-mac" title="Permalink to this headline">#</a></h4>
+<h4><strong>Port Papers to another mac</strong><a class="headerlink" href="#port-papers-to-another-mac" title="Permalink to this heading">#</a></h4>
 <p>This only applies to Papers 1. Not possible to do with Papers 2+ for security reasons (at least I haven’t figured out how to do it).</p>
 <p>Copy these files to another mac:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>/Applications/Papers
@@ -2201,7 +914,7 @@ mv com.apple.ImageCaptureExtension2.plist com.apple.ImageCaptureExtension2.plist
 </section>
 </section>
 <section id="preview">
-<h3>Preview<a class="headerlink" href="#preview" title="Permalink to this headline">#</a></h3>
+<h3>Preview<a class="headerlink" href="#preview" title="Permalink to this heading">#</a></h3>
 <p><strong>Add a signature</strong></p>
 <p>To avoid having to click multiple times to add a signature, here is an awesome AppleScript + QuickSilver combo:</p>
 <p>Create this AppleScript:</p>
@@ -2225,7 +938,7 @@ end tell
 </ol>
 </section>
 <section id="quicklook">
-<h3>QuickLook<a class="headerlink" href="#quicklook" title="Permalink to this headline">#</a></h3>
+<h3>QuickLook<a class="headerlink" href="#quicklook" title="Permalink to this heading">#</a></h3>
 <p>Reload cache</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>qlmanage -r
 </pre></div>
@@ -2245,40 +958,40 @@ Example: qlmanage -p /Library/QuickLook/DTITK_QuickLookPlugin.qlgenerator
 </ul>
 </section>
 <section id="terminal">
-<h3>Terminal<a class="headerlink" href="#terminal" title="Permalink to this headline">#</a></h3>
+<h3>Terminal<a class="headerlink" href="#terminal" title="Permalink to this heading">#</a></h3>
 <section id="let-terminal-talk">
-<h4><strong>Let Terminal Talk</strong><a class="headerlink" href="#let-terminal-talk" title="Permalink to this headline">#</a></h4>
+<h4><strong>Let Terminal Talk</strong><a class="headerlink" href="#let-terminal-talk" title="Permalink to this heading">#</a></h4>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>say hola
 </pre></div>
 </div>
 <p>for more UNIX commands, see <a class="reference external" href="http://www.neuro.polymtl.ca/doku.php?id=tips_and_tricks:unix">http://www.neuro.polymtl.ca/doku.php?id=tips_and_tricks:unix</a></p>
 </section>
 <section id="display-log">
-<h4><strong>display log</strong><a class="headerlink" href="#display-log" title="Permalink to this headline">#</a></h4>
+<h4><strong>display log</strong><a class="headerlink" href="#display-log" title="Permalink to this heading">#</a></h4>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>syslog
 </pre></div>
 </div>
 </section>
 </section>
 <section id="textmate">
-<h3>TextMate<a class="headerlink" href="#textmate" title="Permalink to this headline">#</a></h3>
+<h3>TextMate<a class="headerlink" href="#textmate" title="Permalink to this heading">#</a></h3>
 <p>If TextMate does not open, delete folder <code class="docutils literal notranslate"><span class="pre">~/Library/Application</span> <span class="pre">Support/TextMate</span></code> .</p>
 </section>
 </section>
 <section id="troubleshooting">
-<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h2>
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading">#</a></h2>
 <section id="mds-stores-using-high-cpu-load">
-<h3><code class="docutils literal notranslate"><span class="pre">mds_stores</span></code> using high CPU load<a class="headerlink" href="#mds-stores-using-high-cpu-load" title="Permalink to this headline">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">mds_stores</span></code> using high CPU load<a class="headerlink" href="#mds-stores-using-high-cpu-load" title="Permalink to this heading">#</a></h3>
 <p>There are many forums about this issue. Below are some that sometimes work.</p>
 <section id="solution-1">
-<h4>Solution 1<a class="headerlink" href="#solution-1" title="Permalink to this headline">#</a></h4>
+<h4>Solution 1<a class="headerlink" href="#solution-1" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>mdutil<span class="w"> </span>-a<span class="w"> </span>-i<span class="w"> </span>off
 </pre></div>
 </div>
 <p><a class="reference external" href="https://apple.stackexchange.com/questions/388882/how-to-disable-spotlight-and-mds-stores-on-mac-os-catalina">Source</a>.</p>
 </section>
 <section id="solution-2">
-<h4>Solution 2<a class="headerlink" href="#solution-2" title="Permalink to this headline">#</a></h4>
+<h4>Solution 2<a class="headerlink" href="#solution-2" title="Permalink to this heading">#</a></h4>
 <p>Turn off the indexing for all of my Volumes</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>mdutil<span class="w"> </span>-d<span class="w"> </span>/Volumes/Macintosh<span class="se">\ </span>HD
 </pre></div>
@@ -2291,7 +1004,7 @@ Example: qlmanage -p /Library/QuickLook/DTITK_QuickLookPlugin.qlgenerator
 </section>
 </section>
 <section id="right-click-sharing-for-google-drive">
-<h3>Right-click sharing for Google Drive<a class="headerlink" href="#right-click-sharing-for-google-drive" title="Permalink to this headline">#</a></h3>
+<h3>Right-click sharing for Google Drive<a class="headerlink" href="#right-click-sharing-for-google-drive" title="Permalink to this heading">#</a></h3>
 <p>The Share menu might not show one or more sharing options—such as Email This Page, AirDrop, or Facebook—or the Markup feature might be missing.</p>
 <p>Follow these steps if the issue occurred immediately after upgrading to Yosemite or El Capitan. Open the Terminal app, and run:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister<span class="w"> </span>-kill<span class="w"> </span>-seed
@@ -2300,7 +1013,7 @@ Example: qlmanage -p /Library/QuickLook/DTITK_QuickLookPlugin.qlgenerator
 <p>source: <a class="reference external" href="https://support.apple.com/en-us/HT203129">https://support.apple.com/en-us/HT203129</a></p>
 </section>
 <section id="fslview-opening-out-of-screen">
-<h3>fslview opening out of screen<a class="headerlink" href="#fslview-opening-out-of-screen" title="Permalink to this headline">#</a></h3>
+<h3>fslview opening out of screen<a class="headerlink" href="#fslview-opening-out-of-screen" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>try to restart the application.</p></li>
 <li><p>try to restart the computer.</p></li>
@@ -2320,30 +1033,30 @@ end<span class="w"> </span>tell
 </div>
 </section>
 <section id="archive-utility-permanent-loading">
-<h3>Archive Utility: Permanent loading<a class="headerlink" href="#archive-utility-permanent-loading" title="Permalink to this headline">#</a></h3>
+<h3>Archive Utility: Permanent loading<a class="headerlink" href="#archive-utility-permanent-loading" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Restart Computer</p></li>
 <li><p>Use other program: <a class="reference external" href="http://wakaba.c3.cx/s/apps/unarchiver">http://wakaba.c3.cx/s/apps/unarchiver</a></p></li>
 </ul>
 </section>
 <section id="trash-stuck-when-being-emptied">
-<h3>Trash: Stuck when being emptied<a class="headerlink" href="#trash-stuck-when-being-emptied" title="Permalink to this headline">#</a></h3>
+<h3>Trash: Stuck when being emptied<a class="headerlink" href="#trash-stuck-when-being-emptied" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Terminal –&gt; killall Finder –&gt; <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">~/.Trash/*</span></code></p></li>
 </ul>
 </section>
 <section id="error-disk-quota-exceeded">
-<h3>Error: “disk quota exceeded”<a class="headerlink" href="#error-disk-quota-exceeded" title="Permalink to this headline">#</a></h3>
+<h3>Error: “disk quota exceeded”<a class="headerlink" href="#error-disk-quota-exceeded" title="Permalink to this heading">#</a></h3>
 <p>ONLY APPLIES TO PEOPLE AT NEUROPOLY: If you see this message, try to unmount <strong>django</strong>: from the Finder, click on the eject button. If you still have problems, ask an administrator system.</p>
 </section>
 <section id="cannot-repair-permission">
-<h3>Cannot repair permission<a class="headerlink" href="#cannot-repair-permission" title="Permalink to this headline">#</a></h3>
+<h3>Cannot repair permission<a class="headerlink" href="#cannot-repair-permission" title="Permalink to this heading">#</a></h3>
 <p>Probably some ACL issues. Download and run this: <a class="reference external" href="http://nomulous.com/goodies/ACLr8/">http://nomulous.com/goodies/ACLr8/</a></p>
 </section>
 <section id="password-prompts-finder-wants-to-make-changes">
-<h3>Password prompts: “Finder wants to make changes”<a class="headerlink" href="#password-prompts-finder-wants-to-make-changes" title="Permalink to this headline">#</a></h3>
+<h3>Password prompts: “Finder wants to make changes”<a class="headerlink" href="#password-prompts-finder-wants-to-make-changes" title="Permalink to this heading">#</a></h3>
 <section id="id1">
-<h4><strong>Solution 1</strong><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
+<h4><strong>Solution 1</strong><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
 <p>Remove the ACL manually. Go to the problematic folder(s) and type:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>-N<span class="w"> </span>&lt;FOLDER&gt;
 chmod<span class="w"> </span>-RN<span class="w"> </span>&lt;FOLDER&gt;<span class="w">  </span><span class="c1"># --&gt; do do it for all files/folders recursively</span>
@@ -2351,7 +1064,7 @@ chmod<span class="w"> </span>-RN<span class="w"> </span>&lt;FOLDER&gt;<span clas
 </div>
 </section>
 <section id="id2">
-<h4><strong>Solution 2</strong><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
+<h4><strong>Solution 2</strong><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p>Open Applications &gt; Utilities &gt; Disk Utility.</p></li>
 <li><p>Select your hard drive in the left column. Most likely it will be named “Macintosh HD.”</p></li>
@@ -2360,7 +1073,7 @@ chmod<span class="w"> </span>-RN<span class="w"> </span>&lt;FOLDER&gt;<span clas
 </ol>
 </section>
 <section id="solution-3">
-<h4><strong>Solution 3</strong><a class="headerlink" href="#solution-3" title="Permalink to this headline">#</a></h4>
+<h4><strong>Solution 3</strong><a class="headerlink" href="#solution-3" title="Permalink to this heading">#</a></h4>
 <p>If it is still not resolved:</p>
 <ol class="arabic simple">
 <li><p>Restart and hold down the Command and R keys. You will boot into the Repair Utilities screen. On top, in the Menu Bar click the Utilities item then select Terminal.</p></li>
@@ -2373,50 +1086,186 @@ chmod<span class="w"> </span>-RN<span class="w"> </span>&lt;FOLDER&gt;<span clas
 </section>
 
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="linux.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Linux</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="linux.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Linux</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../contributing.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../contributing.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Contributing Guidelines</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Page Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#booting-options">Booting Options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nice-software">Nice Software</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general">General</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#global-default-config">Global default config <a id="global_default_config"></a></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maintenance">Maintenance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#files-and-folders">Files and Folders</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#change-folder-icon">Change Folder Icon <a id="change_folder_icon"></a></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-make-a-disk-image-from-cd-dvd-iso-format">Copy/Make a disk image from CD/DVD (ISO format) <a id="copymake_a_disk_image_from_cddvd_iso_format"></a></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recovery">Recovery</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#create-recovery-partition">Create recovery partition <a id="create_recovery_partition"></a></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#displays">Displays</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lock-screen">Lock screen <a id="lock_screen"></a></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lock-screen-upon-sleep">Lock screen upon sleep <a id="lock_screen_upon_sleep"></a></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notifications">Notifications</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#disable-notification-center">Disable Notification Center <a id="disable_notification_center"></a></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keyboard">Keyboard</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dialog-box-select-option-with-tab">Dialog box: select option with Tab <a id="dialog_boxselect_option_with_tab"></a></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#misc"><strong>Misc</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dock-in-2d">Dock in 2d <a id="dock_in_2d"></a></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#make-hidden-applications-icons-transparent">Make Hidden Applications Icons Transparent <a id="make_hidden_applications_icons_transparent"></a></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-expanded-print-dialogue-as-default">Set The Expanded Print Dialogue As Default <a id="set_the_expanded_print_dialogue_as_default"></a></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reboot-station-with-terminal">Reboot station with Terminal <a id="reboot_station_with_terminal"></a></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set-the-expanded-save-dialogue-as-default">Set The Expanded Save Dialogue As Default <a id="set_the_expanded_save_dialogue_as_default"></a></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#screenshot-in-desired-format">Screenshot in desired format <a id="screenshot_in_desired_format"></a></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#servers">Servers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-specific">Software-specific</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matlab">MATLAB</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#automator">Automator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fsl-and-fsleyes">FSL and FSLeyes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#launch-fslview-via-double-click"><strong>Launch fslview via double click</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-dwi-mean-in-same-folder"><strong>generate dwi_mean in same folder</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-a-service"><strong>Use a service</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chrome">Chrome</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dropbox">Dropbox</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finder">Finder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#image-capture">Image Capture</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keynote">Keynote</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#microsoft-word">Microsoft Word</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#papers">Papers</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#port-papers-to-another-mac"><strong>Port Papers to another mac</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preview">Preview</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quicklook">QuickLook</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#terminal">Terminal</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#let-terminal-talk"><strong>Let Terminal Talk</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#display-log"><strong>display log</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#textmate">TextMate</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mds-stores-using-high-cpu-load"><code class="docutils literal notranslate"><span class="pre">mds_stores</span></code> using high CPU load</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-1">Solution 1</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-2">Solution 2</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#right-click-sharing-for-google-drive">Right-click sharing for Google Drive</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fslview-opening-out-of-screen">fslview opening out of screen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#archive-utility-permanent-loading">Archive Utility: Permanent loading</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trash-stuck-when-being-emptied">Trash: Stuck when being emptied</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-disk-quota-exceeded">Error: “disk quota exceeded”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cannot-repair-permission">Cannot repair permission</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#password-prompts-finder-wants-to-make-changes">Password prompts: “Finder wants to make changes”</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Solution 1</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Solution 2</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-3"><strong>Solution 3</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-    By NeuroPoly<br/>
-  
-      &copy; Copyright 2021, NeuroPoly.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
-</div>
+<p class="component-author">
+By NeuroPoly
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2021, NeuroPoly.
+      <br/>
+    
+  </p>
 
-      </div>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

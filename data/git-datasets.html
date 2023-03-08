@@ -1,91 +1,140 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>data &#8212; NeuroPoly Lab Manual</title>
-    
+    <title>data &#8212; NeuroPoly Internal Wiki  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'data/git-datasets';</script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="duke" href="duke.html" />
     <link rel="prev" title="Dataset curation" href="dataset-curation.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">NeuroPoly Lab Manual</h1>
-      
-    </a>
-</div><!-- GTranslate: https://gtranslate.io/ -->
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+    <p class="title logo__title">NeuroPoly Lab Manual</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><!-- GTranslate: https://gtranslate.io/ -->
 <div class="center-g-translate">
     <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl" style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png" height="24" width="24" alt="English" /></a><a href="#" onclick="doGTranslate('en|fr');return false;" title="French" class="gflag nturl" style="background-position:-200px -100px;"><img src="//gtranslate.net/flags/blank.png" height="24" width="24" alt="French" /></a>
 
@@ -113,1288 +162,343 @@
         eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
         /* ]]> */
     </script>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Ressources
- </span>
-</p>
+</div></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ressources</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../onboarding/README.html">
-   <span>
-    👋
-   </span>
-   Onboarding
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../onboarding/getting-started.html">
-     Getting Started
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../onboarding/campus-access.html">
-     Campus Access
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../onboarding/infrastructure.html">
-     Infrastructure
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../onboarding/dropbox-google-drive.html">
-     Google Drive
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../onboarding/computer-setup/README.html">
-     Computer Setup
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-    <label for="toctree-checkbox-2">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../onboarding/computer-setup/mail.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         📧
-        </span>
-       </code>
-       Email
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../onboarding/computer-setup/slack.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         🗣
-        </span>
-       </code>
-       Slack
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../onboarding/computer-setup/eduroam.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         📶
-        </span>
-       </code>
-       Eduroam
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../onboarding/computer-setup/shell-profile.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         💻
-        </span>
-       </code>
-       Shell Profile
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../onboarding/computer-setup/configuration-tips.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         💡
-        </span>
-       </code>
-       Other configuration tips
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../onboarding/developer-setup.html">
-     Developer Setup
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../onboarding/consultants-ra.html">
-     Consultants and RA
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../onboarding/postdoc.html">
-     Postdoctoral fellows
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../agenda-and-calendar.html">
-   <span>
-    📅
-   </span>
-   Calendar &amp; Meetings
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../computing-resources/README.html">
-   <span>
-    🖥
-   </span>
-   Computing Resources
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../computing-resources/neuropoly/README.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       🖥
-      </span>
-     </code>
-     Computers @NeuroPoly
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-    <label for="toctree-checkbox-4">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../computing-resources/neuropoly/cpus.html">
-       CPU Clusters
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../computing-resources/neuropoly/gpus.html">
-       GPU Clusters
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../computing-resources/clusters-at-criugm.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       🖥
-      </span>
-     </code>
-     Computers @CRIUGM
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../computing-resources/compute-canada.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       🖥
-      </span>
-     </code>
-     Compute Canada
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../computing-resources/printer.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       🖨
-      </span>
-     </code>
-     Printer
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../computing-resources/youtube.html">
-     YouTube Procedure
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="README.html">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     💾
-    </span>
-   </code>
-   Data
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="dataset-curation.html">
-     Dataset curation
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       data
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="duke.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       duke
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="django.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       django
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../mri-scanning/README.html">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     🧲
-    </span>
-   </code>
-   MRI Scanning
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../mri-scanning/unf-3t-prisma.html">
-     UNF (3T Prisma)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../mri-scanning/mni-mcgill-7t-terra.html">
-     MNI/McGill (7T Terra)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../mri-scanning/mhi-7t-agilent.html">
-     MHI (7T Agilent)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../rf-lab/README.html">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     🔧
-    </span>
-   </code>
-   RF Lab
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../rf-lab/mri-coils-at-neuropoly.html">
-     NeuroPoly Coils
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../rf-lab/misc.html">
-     Misc
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../rf-lab/mri-phantoms.html">
-     Phantoms
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../rf-lab/3d-printing/README.html">
-     3D Printing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../rf-lab/3d-printing/octoprint.html">
-     OctoPrint
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../rf-lab/pcb-manufacturing.html">
-     PCB Manufacturing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../rf-lab/cnc-machine.html">
-     CNC machine
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../onboarding/README.html"><span>👋</span> Onboarding</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../onboarding/getting-started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../onboarding/campus-access.html">Campus Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../onboarding/infrastructure.html">Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../onboarding/dropbox-google-drive.html">Google Drive</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../onboarding/computer-setup/README.html">Computer Setup</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../onboarding/computer-setup/mail.html"><code class="docutils literal notranslate"><span class="pre">📧</span></code> Email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../onboarding/computer-setup/slack.html"><code class="docutils literal notranslate"><span class="pre">🗣</span></code> Slack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../onboarding/computer-setup/eduroam.html"><code class="docutils literal notranslate"><span class="pre">📶</span></code> Eduroam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../onboarding/computer-setup/shell-profile.html"><code class="docutils literal notranslate"><span class="pre">💻</span></code> Shell Profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../onboarding/computer-setup/configuration-tips.html"><code class="docutils literal notranslate"><span class="pre">💡</span></code> Other configuration tips</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Academic Life
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../courses.html">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     🎓
-    </span>
-   </code>
-   University Courses
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../comprehensive-exam-guide.html">
-   📖 Comprehensive Exam
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../scholarships.html">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     💰
-    </span>
-   </code>
-   Scholarships
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../conferences.html">
-   <span>
-    ✈️
-   </span>
-   Conferences
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../bibliography/README.html">
-   <span>
-    📚
-   </span>
-   Bibliography
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../bibliography/lab-theses.html">
-     Theses
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../bibliography/spinal-cord-injury.html">
-     Spinal Cord Injury
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../bibliography/mri.html">
-     MRI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../bibliography/mri-analysis.html">
-     MRI Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../bibliography/deep-learning.html">
-     Deep Learning
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../bibliography/histology.html">
-     Histology
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../bibliography/shared-paperpile-folder.html">
-     Paperpile Folder
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../ideas-for-cool-projects.html">
-   <span>
-    💡
-   </span>
-   Ideas for Cool Projects
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../writing-articles.html">
-   <span>
-    ✍️
-   </span>
-   Academic Writing
-  </a>
- </li>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../onboarding/developer-setup.html">Developer Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../onboarding/consultants-ra.html">Consultants and RA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../onboarding/postdoc.html">Postdoctoral fellows</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Miscellaneous
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../agenda-and-calendar.html"><span>📅</span> Calendar &amp; Meetings</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../computing-resources/README.html"><span>🖥</span> Computing Resources</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../computing-resources/neuropoly/README.html"><code class="docutils literal notranslate"><span class="pre">🖥</span></code> Computers @NeuroPoly</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../computing-resources/neuropoly/cpus.html">CPU Clusters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../computing-resources/neuropoly/gpus.html">GPU Clusters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../computing-resources/clusters-at-criugm.html"><code class="docutils literal notranslate"><span class="pre">🖥</span></code> Computers @CRIUGM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computing-resources/compute-canada.html"><code class="docutils literal notranslate"><span class="pre">🖥</span></code> Compute Canada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computing-resources/printer.html"><code class="docutils literal notranslate"><span class="pre">🖨</span></code> Printer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computing-resources/youtube.html">YouTube Procedure</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="README.html"><code class="docutils literal notranslate"><span class="pre">💾</span></code> Data</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dataset-curation.html">Dataset curation</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">data</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="duke.html"><code class="docutils literal notranslate"><span class="pre">duke</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="django.html"><code class="docutils literal notranslate"><span class="pre">django</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../mri-scanning/README.html"><code class="docutils literal notranslate"><span class="pre">🧲</span></code> MRI Scanning</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mri-scanning/unf-3t-prisma.html">UNF (3T Prisma)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mri-scanning/mni-mcgill-7t-terra.html">MNI/McGill (7T Terra)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mri-scanning/mhi-7t-agilent.html">MHI (7T Agilent)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rf-lab/README.html"><code class="docutils literal notranslate"><span class="pre">🔧</span></code> RF Lab</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rf-lab/mri-coils-at-neuropoly.html">NeuroPoly Coils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rf-lab/misc.html">Misc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rf-lab/mri-phantoms.html">Phantoms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rf-lab/3d-printing/README.html">3D Printing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rf-lab/3d-printing/octoprint.html">OctoPrint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rf-lab/pcb-manufacturing.html">PCB Manufacturing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rf-lab/cnc-machine.html">CNC machine</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Academic Life</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../practical-information/README.html">
-   <span>
-    📎
-   </span>
-   Practical Information
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../practical-information/visa.html">
-     VISAs and Work Permits
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../practical-information/moving-to-montreal.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       🇨🇦
-      </span>
-     </code>
-     Living in Montreal
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../practical-information/purchasing-weekly-lunch.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       🍱
-      </span>
-     </code>
-     Social Lunch
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../practical-information/purchasing-hardware-and-lab-supplies.html">
-     Purchasing Supplies
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../geek-tips/README.html">
-   <span>
-    🤓
-   </span>
-   Geek tips
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../geek-tips/useful-links.html">
-     Useful links 🔗
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../geek-tips/bash-shell/README.html">
-     Bash/Shell
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/bash-shell/script.html">
-       Script
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../geek-tips/programming-languages/README.html">
-     Programming Languages
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-    <label for="toctree-checkbox-12">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/programming-languages/python.html">
-       Python
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/programming-languages/matlab.html">
-       MATLAB
-      </a>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../geek-tips/programming-languages/c%2B%2B/README.html">
-       C++
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-      <label for="toctree-checkbox-13">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../geek-tips/programming-languages/c%2B%2B/installation-of-vtk-and-itk-on-mac-os-x.html">
-         Installation of VTK and ITK on Mac OS X
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../geek-tips/programming-languages/c%2B%2B/using-xcode.html">
-         Using XCode
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../geek-tips/git.html">
-     Git &amp; Github
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../geek-tips/git-annex.html">
-     git-annex
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../geek-tips/os-guides/README.html">
-     OS Guides
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-    <label for="toctree-checkbox-14">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/os-guides/linux.html">
-       Linux
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/os-guides/macosx.html">
-       MacOSX
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../geek-tips/contributing.html">
-     Contributing Guidelines
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../geek-tips/misc/README.html">
-     Various Software &amp; Tools
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-    <label for="toctree-checkbox-15">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../geek-tips/misc/virtual-machines/README.html">
-       Virtual Machines
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-      <label for="toctree-checkbox-16">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../geek-tips/misc/virtual-machines/virtualbox.html">
-         VirtualBox
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../geek-tips/misc/virtual-machines/vagrant.html">
-         Vagrant
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/misc/bitbucket.html">
-       BitBucket
-      </a>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../geek-tips/misc/docker/README.html">
-       Docker
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
-      <label for="toctree-checkbox-17">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../geek-tips/misc/docker/docker-for-deep-learning.html">
-         Docker for Deep Learning
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/misc/dropbox.html">
-       Dropbox
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/misc/jekyll.html">
-       Jekyll
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/misc/microsoft-word.html">
-       Microsoft Word
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/misc/openneuro.html">
-       OpenNeuro
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/misc/sketchup.html">
-       Sketchup
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/misc/xquartz.html">
-       XQuartz
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../geek-tips/image-processing-software/README.html">
-     Image Processing Software
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
-    <label for="toctree-checkbox-18">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/image-processing-software/advanced-normalization-tools-ants.html">
-       Advanced Normalization Tools (ANTs)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/image-processing-software/anima.html">
-       Anima
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/image-processing-software/diffusion-simulator.html">
-       Diffusion Simulator
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/image-processing-software/freesurfer.html">
-       FreeSurfer
-      </a>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../geek-tips/image-processing-software/fsl/README.html">
-       FSL
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
-      <label for="toctree-checkbox-19">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../geek-tips/image-processing-software/fsl/fsleyes.html">
-         FSLeyes
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/image-processing-software/itk-snap.html">
-       ITK-SNAP
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/image-processing-software/nifti.html">
-       NIfTI
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/image-processing-software/openneuro-cli.html">
-       OpenNeuro CLI
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/image-processing-software/osirix.html">
-       OsiriX
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../geek-tips/deep-learning/README.html">
-     Deep Learning
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
-    <label for="toctree-checkbox-20">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/deep-learning/cuda.html">
-       CUDA
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/deep-learning/tensorflow.html">
-       Tensorflow
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/deep-learning/conditional-random-fields-crf.html">
-       Conditional Random Fields (CRF)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/deep-learning/restricted-boltzmann-machines.html">
-       Restricted Boltzmann Machines (RBM)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../geek-tips/deep-learning/misc.html">
-       Misc
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../edi.html">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     🧩
-    </span>
-   </code>
-   EDI
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../contact.html">
-   <span>
-    📞
-   </span>
-   Contact
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://neuro.polymtl.ca">
-   NeuroPoly Website
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../courses.html"><code class="docutils literal notranslate"><span class="pre">🎓</span></code> University Courses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../comprehensive-exam-guide.html">📖 Comprehensive Exam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scholarships.html"><code class="docutils literal notranslate"><span class="pre">💰</span></code> Scholarships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conferences.html"><span>✈️</span> Conferences</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../bibliography/README.html"><span>📚</span> Bibliography</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../bibliography/lab-theses.html">Theses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bibliography/spinal-cord-injury.html">Spinal Cord Injury</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bibliography/mri.html">MRI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bibliography/mri-analysis.html">MRI Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bibliography/deep-learning.html">Deep Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bibliography/histology.html">Histology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bibliography/shared-paperpile-folder.html">Paperpile Folder</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ideas-for-cool-projects.html"><span>💡</span> Ideas for Cool Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing-articles.html"><span>✍️</span>     Academic Writing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../practical-information/README.html"><span>📎</span> Practical Information</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practical-information/visa.html">VISAs and Work Permits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practical-information/moving-to-montreal.html"><code class="docutils literal notranslate"><span class="pre">🇨🇦</span></code> Living in Montreal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practical-information/purchasing-weekly-lunch.html"><code class="docutils literal notranslate"><span class="pre">🍱</span></code> Social Lunch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practical-information/purchasing-hardware-and-lab-supplies.html">Purchasing Supplies</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../geek-tips/README.html"><span>🤓</span> Geek tips</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../geek-tips/useful-links.html">Useful links 🔗</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../geek-tips/bash-shell/README.html">Bash/Shell</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/bash-shell/script.html">Script</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../geek-tips/programming-languages/README.html">Programming Languages</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/programming-languages/python.html">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/programming-languages/matlab.html">MATLAB</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../geek-tips/programming-languages/c%2B%2B/README.html">C++</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../geek-tips/programming-languages/c%2B%2B/installation-of-vtk-and-itk-on-mac-os-x.html">Installation of VTK and ITK on Mac OS X</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../geek-tips/programming-languages/c%2B%2B/using-xcode.html">Using XCode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../geek-tips/git.html">Git &amp; Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geek-tips/git-annex.html">git-annex</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../geek-tips/os-guides/README.html">OS Guides</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/os-guides/linux.html">Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/os-guides/macosx.html">MacOSX</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../geek-tips/contributing.html">Contributing Guidelines</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../geek-tips/misc/README.html">Various Software &amp; Tools</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../geek-tips/misc/virtual-machines/README.html">Virtual Machines</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../geek-tips/misc/virtual-machines/virtualbox.html">VirtualBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../geek-tips/misc/virtual-machines/vagrant.html">Vagrant</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/misc/bitbucket.html">BitBucket</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../geek-tips/misc/docker/README.html">Docker</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../geek-tips/misc/docker/docker-for-deep-learning.html">Docker for Deep Learning</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/misc/dropbox.html">Dropbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/misc/jekyll.html">Jekyll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/misc/microsoft-word.html">Microsoft Word</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/misc/openneuro.html">OpenNeuro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/misc/sketchup.html">Sketchup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/misc/xquartz.html">XQuartz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../geek-tips/image-processing-software/README.html">Image Processing Software</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/image-processing-software/advanced-normalization-tools-ants.html">Advanced Normalization Tools (ANTs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/image-processing-software/anima.html">Anima</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/image-processing-software/diffusion-simulator.html">Diffusion Simulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/image-processing-software/freesurfer.html">FreeSurfer</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../geek-tips/image-processing-software/fsl/README.html">FSL</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../geek-tips/image-processing-software/fsl/fsleyes.html">FSLeyes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/image-processing-software/itk-snap.html">ITK-SNAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/image-processing-software/nifti.html">NIfTI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/image-processing-software/openneuro-cli.html">OpenNeuro CLI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/image-processing-software/osirix.html">OsiriX</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../geek-tips/deep-learning/README.html">Deep Learning</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/deep-learning/cuda.html">CUDA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/deep-learning/tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/deep-learning/conditional-random-fields-crf.html">Conditional Random Fields (CRF)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/deep-learning/restricted-boltzmann-machines.html">Restricted Boltzmann Machines (RBM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/deep-learning/misc.html">Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../edi.html"><code class="docutils literal notranslate"><span class="pre">🧩</span></code> EDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html"><span>📞</span> Contact</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://neuro.polymtl.ca">NeuroPoly Website</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right"><a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/data/git-datasets.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="bottom"
-title="Edit this page"
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/main/data/git-datasets.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button"
+   title="Suggest edit"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-pencil-alt"></i>
   </span>
 
 </a>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
 
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Page Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#initial-setup">
-   Initial setup
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prerequisites">
-     Prerequisites
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#getting-an-account">
-     Getting an account
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#connecting-to-data-neuro-polymtl-ca">
-     Connecting to
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       data.neuro.polymtl.ca
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#usage">
-   Usage
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#list">
-     List
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#download">
-     Download
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#update">
-     Update
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#upload">
-     Upload
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reviewing-pull-requests">
-     Reviewing Pull Requests
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#commit-rights">
-       Commit Rights
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#committing">
-       Committing
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#new-repository">
-     New repository
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#releases">
-     Releases
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#permissions">
-     Permissions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#renaming">
-     Renaming
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deletion">
-     Deletion
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#deleting-a-branch">
-       Deleting a branch
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-extra-devices">
-     Add extra devices
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#admin-guide">
-   Admin Guide
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#list-users">
-     List users
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-users">
-     Add users
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Permissions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Renaming
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     Deletion
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#backups">
-     Backups
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#recovery-shortcut">
-       Recovery Shortcut
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#troubleshooting">
-     Troubleshooting
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#references">
-     References
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>data</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Page Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#initial-setup">
-   Initial setup
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prerequisites">
-     Prerequisites
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#getting-an-account">
-     Getting an account
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#connecting-to-data-neuro-polymtl-ca">
-     Connecting to
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       data.neuro.polymtl.ca
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#usage">
-   Usage
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#list">
-     List
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#download">
-     Download
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#update">
-     Update
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#upload">
-     Upload
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reviewing-pull-requests">
-     Reviewing Pull Requests
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#commit-rights">
-       Commit Rights
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#committing">
-       Committing
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#new-repository">
-     New repository
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#releases">
-     Releases
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#permissions">
-     Permissions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#renaming">
-     Renaming
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deletion">
-     Deletion
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#deleting-a-branch">
-       Deleting a branch
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-extra-devices">
-     Add extra devices
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#admin-guide">
-   Admin Guide
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#list-users">
-     List users
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-users">
-     Add users
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Permissions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Renaming
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     Deletion
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#backups">
-     Backups
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#recovery-shortcut">
-       Recovery Shortcut
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#troubleshooting">
-     Troubleshooting
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#references">
-     References
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>data</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Page Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-setup">Initial setup</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-an-account">Getting an account</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-to-data-neuro-polymtl-ca">Connecting to <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list">List</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download">Download</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update">Update</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upload">Upload</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reviewing-pull-requests">Reviewing Pull Requests</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#commit-rights">Commit Rights</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#committing">Committing</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#new-repository">New repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#releases">Releases</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#permissions">Permissions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#renaming">Renaming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deletion">Deletion</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-a-branch">Deleting a branch</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-extra-devices">Add extra devices</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#admin-guide">Admin Guide</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-users">List users</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-users">Add users</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Permissions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Renaming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Deletion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backups">Backups</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#recovery-shortcut">Recovery Shortcut</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section id="data">
-<h1><code class="docutils literal notranslate"><span class="pre">data</span></code><a class="headerlink" href="#data" title="Permalink to this headline">#</a></h1>
+<h1><code class="docutils literal notranslate"><span class="pre">data</span></code><a class="headerlink" href="#data" title="Permalink to this heading">#</a></h1>
 <p>This server includes private MRI and microscopy datasets, which have been curated and organized according to the <a class="reference external" href="https://bids.neuroimaging.io/">BIDS</a> convention.</p>
 <p><code class="docutils literal notranslate"><span class="pre">git+ssh://data.neuro.polymtl.ca</span></code> has a max size of ~1TB.</p>
-<p>It hosts <a class="reference external" href="https://bids-specification.readthedocs.io">BIDS</a> datasets, version-controlled using <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">git-annex</span></code></span>.
-It is locked behind a <span class="xref myst">VPN</span> because much of our data is under medical ethics protections, and needs to be kept off the general internet.</p>
+<p>It hosts <a class="reference external" href="https://bids-specification.readthedocs.io">BIDS</a> datasets, version-controlled using <a class="reference internal" href="#git-annex.branchable.com/"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">git-annex</span></code></span></a>.
+It is locked behind a <a class="reference internal" href="#../../#vpn"><span class="xref myst">VPN</span></a> because much of our data is under medical ethics protections, and needs to be kept off the general internet.</p>
 <section id="initial-setup">
-<h2>Initial setup<a class="headerlink" href="#initial-setup" title="Permalink to this headline">#</a></h2>
+<h2>Initial setup<a class="headerlink" href="#initial-setup" title="Permalink to this heading">#</a></h2>
 <section id="prerequisites">
-<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h3>
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple" start="0">
-<li><p>You must have a *nix OS with <code class="docutils literal notranslate"><span class="pre">git-annex&gt;=8</span></code> installed. See <a class="reference internal" href="../geek-tips/git-annex.html#installation"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">git-annex</span></code> installation</span></a>.</p></li>
+<li><p>You must have a *nix OS with <code class="docutils literal notranslate"><span class="pre">git-annex&gt;=8</span></code> installed. See <a class="reference internal" href="../geek-tips/git-annex.html#installation"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">git-annex</span></code> installation</span></a>.</p></li>
 <li><p>Make sure you have an ssh key.</p>
 <ul class="simple">
 <li><p>If not, run <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span> <span class="pre">-t</span> <span class="pre">ed25519</span> <span class="pre">-C</span> <span class="pre">your.name&#64;polymtl.ca</span></code>. Your keys will be in the hidden folder <code class="docutils literal notranslate"><span class="pre">~/.ssh/</span></code>.</p></li>
@@ -1403,10 +507,10 @@ It is locked behind a <span class="xref myst">VPN</span> because much of our dat
 </ol>
 </section>
 <section id="getting-an-account">
-<h3>Getting an account<a class="headerlink" href="#getting-an-account" title="Permalink to this headline">#</a></h3>
+<h3>Getting an account<a class="headerlink" href="#getting-an-account" title="Permalink to this heading">#</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you already have an account on a server and/or laptop, and you want to have access from a new machine, see the section on <a class="reference internal" href="#add-extra-devices"><span class="std std-doc">adding extra devices</span></a> instead.</p>
+<p>If you already have an account on a server and/or laptop, and you want to have access from a new machine, see the section on <a class="reference internal" href="#add-extra-devices">adding extra devices</a> instead.</p>
 </div>
 <p>On Slack <code class="docutils literal notranslate"><span class="pre">#computers</span></code> channel, request to be added to the git-annex by providing the contents of your <strong>public key</strong> (examples: <code class="docutils literal notranslate"><span class="pre">~/.ssh/id_rsa.pub</span></code>, <code class="docutils literal notranslate"><span class="pre">~/.ssh/id_ed25519.pub</span></code>).</p>
 <p>A <strong>public key</strong> should look like</p>
@@ -1426,14 +530,14 @@ It is locked behind a <span class="xref myst">VPN</span> because much of our dat
 <li><p>mathieu.boudreau&#64;polymtl.ca</p></li>
 <li><p>mathieu.guay-paquet&#64;polymtl.ca</p></li>
 </ul>
-<p>The admins should follow <a class="reference internal" href="#add-users"><span class="std std-doc">Admin Guide &gt; Add Users</span></a> to create your account.</p>
+<p>The admins should follow <a class="reference internal" href="#add-users">Admin Guide &gt; Add Users</a> to create your account.</p>
 </section>
 <section id="connecting-to-data-neuro-polymtl-ca">
-<h3>Connecting to <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code><a class="headerlink" href="#connecting-to-data-neuro-polymtl-ca" title="Permalink to this headline">#</a></h3>
+<h3>Connecting to <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code><a class="headerlink" href="#connecting-to-data-neuro-polymtl-ca" title="Permalink to this heading">#</a></h3>
 <p>Because this server contains private medical data, you need to be on campus, connected to the VPN, or working from a server on campus, like <code class="docutils literal notranslate"><span class="pre">joplin</span></code> or <code class="docutils literal notranslate"><span class="pre">rosenberg</span></code> to access it.</p>
 <p><em>If connecting from off-campus</em>, connect to <a class="reference external" href="http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn">polyvpn</a>.</p>
 <blockquote>
-<div><p>🏚️ Verify connectivity by running <code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">data.neuro.polymtl.ca</span></code>. If <strong>you cannot ping</strong> then you need to double-check your VPN connection; make sure it is connected, make sure you can reach <code class="docutils literal notranslate"><span class="pre">joplin</span></code>, and if it still isn’t working <em>ask the <span class="xref myst">Poly network admins</span></em> to unblock your account from this server.</p>
+<div><p>🏚️ Verify connectivity by running <code class="docutils literal notranslate"><span class="pre">ping</span> <span class="pre">data.neuro.polymtl.ca</span></code>. If <strong>you cannot ping</strong> then you need to double-check your VPN connection; make sure it is connected, make sure you can reach <code class="docutils literal notranslate"><span class="pre">joplin</span></code>, and if it still isn’t working <em>ask the <a class="reference internal" href="#dge.informatique&#64;polymtl.ca"><span class="xref myst">Poly network admins</span></a></em> to unblock your account from this server.</p>
 </div></blockquote>
 <p>Verify you can use the server by running <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">git&#64;data.neuro.polymtl.ca</span> <span class="pre">help</span></code>. If it hangs, triple-check again your VPN. If it asks for <code class="docutils literal notranslate"><span class="pre">git&#64;data.neuro.polymtl.ca's</span> <span class="pre">password</span></code>, double-check that <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-la</span> <span class="pre">~/.ssh</span></code> shows permissions of <code class="docutils literal notranslate"><span class="pre">drwx------</span></code> for the <code class="docutils literal notranslate"><span class="pre">.</span></code> folder, and that the files <code class="docutils literal notranslate"><span class="pre">id_ed25519</span></code> and <code class="docutils literal notranslate"><span class="pre">id_ed25519.pub</span></code> (or <code class="docutils literal notranslate"><span class="pre">id_rsa</span></code> and <code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code>) exist with exactly those names. A successful connection looks like:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh git@data.neuro.polymtl.ca help
@@ -1457,11 +561,11 @@ list of remote commands available:
 </section>
 </section>
 <section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
-<p>During daily usage, you will need to be <a class="reference internal" href="../computing-resources/neuropoly/README.html#vpn"><span class="std std-doc"><em>on the polyvpn network</em></span></a> to access the server.</p>
-<p>You should also make sure to <a class="reference internal" href="../geek-tips/git-annex.html#global-git-config"><span class="std std-doc">configure git annex</span></a> for the best performance.</p>
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h2>
+<p>During daily usage, you will need to be <a class="reference internal" href="../computing-resources/neuropoly/README.html#vpn"><span class="std std-ref"><em>on the polyvpn network</em></span></a> to access the server.</p>
+<p>You should also make sure to <a class="reference internal" href="../geek-tips/git-annex.html#global-git-config"><span class="std std-ref">configure git annex</span></a> for the best performance.</p>
 <section id="list">
-<h3>List<a class="headerlink" href="#list" title="Permalink to this headline">#</a></h3>
+<h3>List<a class="headerlink" href="#list" title="Permalink to this heading">#</a></h3>
 <p>To see what datasets you have available, use <code class="docutils literal notranslate"><span class="pre">info</span></code>, for example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">info</span>
 </pre></div>
@@ -1477,7 +581,7 @@ list of remote commands available:
 <p>You are identified to the server by your ssh keys, but notice that this tells you the username you are known as.</p>
 </section>
 <section id="download">
-<h3>Download<a class="headerlink" href="#download" title="Permalink to this headline">#</a></h3>
+<h3>Download<a class="headerlink" href="#download" title="Permalink to this heading">#</a></h3>
 <p>To download an existing repository use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span><span class="p">:</span><span class="n">datasets</span><span class="o">/&lt;</span><span class="n">dataset_name</span><span class="o">&gt;</span> 	<span class="c1"># download folders and metadata</span>
 <span class="n">cd</span> <span class="o">&lt;</span><span class="n">dataset_name</span><span class="o">&gt;</span>
@@ -1500,16 +604,16 @@ list of remote commands available:
 </div>
 </section>
 <section id="update">
-<h3>Update<a class="headerlink" href="#update" title="Permalink to this headline">#</a></h3>
+<h3>Update<a class="headerlink" href="#update" title="Permalink to this heading">#</a></h3>
 <p>If you have already cloned a repository and you would like to get its latest version, do:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="o">&amp;&amp;</span> <span class="n">git</span> <span class="n">annex</span> <span class="n">sync</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">content</span> <span class="o">&amp;&amp;</span> <span class="n">git</span> <span class="n">annex</span> <span class="n">get</span> <span class="o">.</span>
 </pre></div>
 </div>
 </section>
 <section id="upload">
-<h3>Upload<a class="headerlink" href="#upload" title="Permalink to this headline">#</a></h3>
+<h3>Upload<a class="headerlink" href="#upload" title="Permalink to this heading">#</a></h3>
 <p>Despite not being hosted on Github, we are still using a <a class="reference external" href="https://guides.github.com/introduction/flow/">pull-request workflow</a>.
-So, to make changes to a dataset, first ask an admin to <a class="reference internal" href="#permissions"><span class="std std-doc">grant you upload rights</span></a>, then make a working branch for your changes. If your initials are <code class="docutils literal notranslate"><span class="pre">xy</span></code> and you are working on <code class="docutils literal notranslate"><span class="pre">some-topic</span></code>:</p>
+So, to make changes to a dataset, first ask an admin to <a class="reference internal" href="#permissions">grant you upload rights</a>, then make a working branch for your changes. If your initials are <code class="docutils literal notranslate"><span class="pre">xy</span></code> and you are working on <code class="docutils literal notranslate"><span class="pre">some-topic</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">xy</span><span class="o">/</span><span class="n">some</span><span class="o">-</span><span class="n">topic</span> <span class="n">master</span>
 <span class="c1"># Edit your files, add new ones, etc. </span>
 <span class="c1"># Add all modified files to be commited</span>
@@ -1535,7 +639,7 @@ So, to make changes to a dataset, first ask an admin to <a class="reference inte
 <span class="n">git</span> <span class="n">push</span>
 </pre></div>
 </div>
-<p>Finally, ask one of that dataset’s reviewers to <span class="xref myst">look at your pull request</span> by <strong>opening an issue</strong> (not creating a new pull request) on <a class="reference external" href="https://github.com/neuropoly/data-management">neuropoly/data-management</a>. The details of your pull request (i.e. the changes made to the dataset) must be explained in the issue along with name of your branch on which the changes can be found.</p>
+<p>Finally, ask one of that dataset’s reviewers to <a class="reference internal" href="#Reviewing-Pull-Requests"><span class="xref myst">look at your pull request</span></a> by <strong>opening an issue</strong> (not creating a new pull request) on <a class="reference external" href="https://github.com/neuropoly/data-management">neuropoly/data-management</a>. The details of your pull request (i.e. the changes made to the dataset) must be explained in the issue along with name of your branch on which the changes can be found.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You do not have to open an issue if your change is small, such as updating a single image. Instead, describe your change in the commit message and ask one of that dataset’s reviewers by Slack.</p>
@@ -1558,7 +662,7 @@ So, to make changes to a dataset, first ask an admin to <a class="reference inte
 </div>
 </section>
 <section id="reviewing-pull-requests">
-<h3>Reviewing Pull Requests<a class="headerlink" href="#reviewing-pull-requests" title="Permalink to this headline">#</a></h3>
+<h3>Reviewing Pull Requests<a class="headerlink" href="#reviewing-pull-requests" title="Permalink to this heading">#</a></h3>
 <p>If someone asks you to review their changes on branch <code class="docutils literal notranslate"><span class="pre">xy/some-topic</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span>
 <span class="n">git</span> <span class="n">checkout</span> <span class="n">xy</span><span class="o">/</span><span class="n">some</span><span class="o">-</span><span class="n">topic</span>
@@ -1586,8 +690,8 @@ So, to make changes to a dataset, first ask an admin to <a class="reference inte
 <div><p>🏚️ <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> is not well-suited to a pull-request flow. It is mostly designed for a single person to share data among many computers, not for multiple people to share data between a few computers. We can make it work but it needs some patience. Have a cat to make it better: 🐈🌺</p>
 </div></blockquote>
 <section id="commit-rights">
-<h4>Commit Rights<a class="headerlink" href="#commit-rights" title="Permalink to this headline">#</a></h4>
-<p>Each repo has its own <a class="reference internal" href="#permissions"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">OWNERS</span></code> group</span></a> attached. These are the people allowed to commit to <code class="docutils literal notranslate"><span class="pre">master</span></code>, and usually they should be the <a class="reference internal" href="#reviewing-pull-requests"><span class="std std-doc">reviewers</span></a> as well.</p>
+<h4>Commit Rights<a class="headerlink" href="#commit-rights" title="Permalink to this heading">#</a></h4>
+<p>Each repo has its own <a class="reference internal" href="#permissions"><code class="docutils literal notranslate"><span class="pre">OWNERS</span></code> group</a> attached. These are the people allowed to commit to <code class="docutils literal notranslate"><span class="pre">master</span></code>, and usually they should be the <a class="reference internal" href="#reviewing-pull-requests">reviewers</a> as well.</p>
 <p>In order to join this group, someone already in it needs to grant you access:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">perms</span> <span class="n">datasets</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">repo</span> <span class="o">+</span> <span class="n">OWNERS</span> <span class="n">yourusername</span>
 </pre></div>
@@ -1598,7 +702,7 @@ So, to make changes to a dataset, first ask an admin to <a class="reference inte
 </div>
 </section>
 <section id="committing">
-<h4>Committing<a class="headerlink" href="#committing" title="Permalink to this headline">#</a></h4>
+<h4>Committing<a class="headerlink" href="#committing" title="Permalink to this heading">#</a></h4>
 <p>Once a branch is finalized:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
 <span class="n">git</span> <span class="n">merge</span> <span class="o">--</span><span class="n">ff</span><span class="o">-</span><span class="n">only</span> <span class="n">xy</span><span class="o">/</span><span class="n">some</span><span class="o">-</span><span class="n">topic</span>
@@ -1618,8 +722,8 @@ So, to make changes to a dataset, first ask an admin to <a class="reference inte
 </section>
 </section>
 <section id="new-repository">
-<h3>New repository<a class="headerlink" href="#new-repository" title="Permalink to this headline">#</a></h3>
-<p>To make a new repo, follow this <a class="reference internal" href="../geek-tips/git-annex.html#new-repo"><span class="std std-doc">recipe</span></a>.</p>
+<h3>New repository<a class="headerlink" href="#new-repository" title="Permalink to this heading">#</a></h3>
+<p>To make a new repo, follow this <a class="reference internal" href="../geek-tips/git-annex.html#new-repo"><span class="std std-ref">recipe</span></a>.</p>
 <p>Then, to upload it, pick a name under <code class="docutils literal notranslate"><span class="pre">datasets/</span></code>, e.g. “my-new-repo”, and do</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span><span class="p">:</span><span class="n">datasets</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">repo</span>
 <span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">M</span> <span class="n">master</span>
@@ -1635,13 +739,13 @@ So, to make changes to a dataset, first ask an admin to <a class="reference inte
 </div>
 </section>
 <section id="releases">
-<h3>Releases<a class="headerlink" href="#releases" title="Permalink to this headline">#</a></h3>
+<h3>Releases<a class="headerlink" href="#releases" title="Permalink to this heading">#</a></h3>
 <p>To make a release, use an <a class="reference external" href="https://git-scm.com/book/en/v2/Git-Basics-Tagging#_annotated_tags">annotated git tag</a>. Use the tag name for the name of the release, and the annotation for the release notes. Our naming convention for datasets is “rYYYYMMDD”.</p>
 <p>For example, if today is September 8th, 2019, then to create a release do:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">a</span> <span class="n">r20190908</span>
 </pre></div>
 </div>
-<p>To view available releases, first <a class="reference internal" href="#download"><span class="std std-doc">download</span></a> a dataset, then run</p>
+<p>To view available releases, first <a class="reference internal" href="#download">download</a> a dataset, then run</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">l</span>
 </pre></div>
 </div>
@@ -1649,7 +753,7 @@ So, to make changes to a dataset, first ask an admin to <a class="reference inte
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">show</span> <span class="n">r20190908</span>
 </pre></div>
 </div>
-<p>To use a specific release, either <a class="reference internal" href="#download"><span class="std std-doc">download</span></a> the dataset and then</p>
+<p>To use a specific release, either <a class="reference internal" href="#download">download</a> the dataset and then</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">r20190908</span>
 </pre></div>
 </div>
@@ -1659,7 +763,7 @@ So, to make changes to a dataset, first ask an admin to <a class="reference inte
 </div>
 </section>
 <section id="permissions">
-<h3>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">#</a></h3>
+<h3>Permissions<a class="headerlink" href="#permissions" title="Permalink to this heading">#</a></h3>
 <p>You can grant others permissions to your repositories with <code class="docutils literal notranslate"><span class="pre">perms</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">perms</span> <span class="n">datasets</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">repo</span> <span class="o">+</span> <span class="n">WRITERS</span> <span class="n">someone</span> <span class="c1"># grant someone upload rights</span>
 <span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">perms</span> <span class="n">datasets</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">repo</span> <span class="o">-</span> <span class="n">WRITERS</span> <span class="n">someone</span> <span class="c1"># revoke someone&#39;s upload rights</span>
@@ -1675,24 +779,24 @@ So, to make changes to a dataset, first ask an admin to <a class="reference inte
 <p>and see https://gitolite.com/gitolite/user#setget-additional-permissions-for-repos-you-created for full details.</p>
 </section>
 <section id="renaming">
-<h3>Renaming<a class="headerlink" href="#renaming" title="Permalink to this headline">#</a></h3>
+<h3>Renaming<a class="headerlink" href="#renaming" title="Permalink to this heading">#</a></h3>
 <p>There is no way for a user to rename a repo directly (<a class="reference external" href="https://github.com/neuropoly/data-management/issues/83">bug report</a>).
-You can <a class="reference internal" href="#id2"><span class="std std-doc">ask an admin to do it</span></a>.</p>
+You can <a class="reference internal" href="#id2">ask an admin to do it</a>.</p>
 </section>
 <section id="deletion">
-<h3>Deletion<a class="headerlink" href="#deletion" title="Permalink to this headline">#</a></h3>
+<h3>Deletion<a class="headerlink" href="#deletion" title="Permalink to this heading">#</a></h3>
 <p>If you created or own a repo and decide it is no longer necessary:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">D</span> <span class="n">trash</span> <span class="n">repo</span>
 </pre></div>
 </div>
 <p>The “trash” is cleaned out after a week. <em>Except it’s not, yet: https://github.com/neuropoly/data-management/issues/54</em></p>
 <section id="deleting-a-branch">
-<h4>Deleting a branch<a class="headerlink" href="#deleting-a-branch" title="Permalink to this headline">#</a></h4>
-<p>If you no longer are working on a specific, make sure that it is deleted (in order to save space and avoid maintaining unnecessary commit history). The relevant commands can be found under <em>Clean up a branch</em> <a class="reference internal" href="#committing"><span class="std std-doc">here</span></a>.</p>
+<h4>Deleting a branch<a class="headerlink" href="#deleting-a-branch" title="Permalink to this heading">#</a></h4>
+<p>If you no longer are working on a specific, make sure that it is deleted (in order to save space and avoid maintaining unnecessary commit history). The relevant commands can be found under <em>Clean up a branch</em> <a class="reference internal" href="#committing">here</a>.</p>
 </section>
 </section>
 <section id="add-extra-devices">
-<h3>Add extra devices<a class="headerlink" href="#add-extra-devices" title="Permalink to this headline">#</a></h3>
+<h3>Add extra devices<a class="headerlink" href="#add-extra-devices" title="Permalink to this heading">#</a></h3>
 <p>Like with Github, you can authorize any number of secondary devices.</p>
 <p>For example, to authorize yourself from the server <code class="docutils literal notranslate"><span class="pre">romane</span></code>, log in to <code class="docutils literal notranslate"><span class="pre">romane</span></code> and make an ssh key if one doesn’t exist (<code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code>), copy the public part of it (<code class="docutils literal notranslate"><span class="pre">~/.ssh/id_rsa.pub</span></code>) to a device that is already authenticated (e.g. as <code class="docutils literal notranslate"><span class="pre">~/id_rsa.romane.pub</span></code>), then authorize yourself by:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">~/</span><span class="n">id_rsa</span><span class="o">.</span><span class="n">romane</span><span class="o">.</span><span class="n">pub</span> <span class="o">|</span> <span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">keys</span> <span class="n">add</span> <span class="o">&lt;</span><span class="n">yourusername</span><span class="o">&gt;</span><span class="nd">@romane</span>
@@ -1706,21 +810,21 @@ You can <a class="reference internal" href="#id2"><span class="std std-doc">ask 
 </section>
 </section>
 <section id="admin-guide">
-<h2>Admin Guide<a class="headerlink" href="#admin-guide" title="Permalink to this headline">#</a></h2>
+<h2>Admin Guide<a class="headerlink" href="#admin-guide" title="Permalink to this heading">#</a></h2>
 <p>We are using <a class="reference external" href="https://gitolite.com/"><code class="docutils literal notranslate"><span class="pre">Gitolite</span></code></a> with <a class="reference external" href="https://git-annex.branchable.com/"><code class="docutils literal notranslate"><span class="pre">git-annex</span></code></a> as our dataset server.
 It is compatible with <a class="reference external" href="https://www.datalad.org/"><code class="docutils literal notranslate"><span class="pre">datalad</span></code></a> but to reduce the fragility we only support the basics.</p>
 <p>Datasets are stored as git repositories on the server, with the bulk of their data <em>also</em> stored on the server in each repo’s “annex” folder. Using <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> enables data on-demand – in our default configuration, only the data needed for the active branch is actually downloaded by a user, and it is also possible for the user to choose specific folders to focus on. Datasets are <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> <a class="reference external" href="https://git-annex.branchable.com/walkthrough/#index11h2">ssh remotes</a>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">gitolite</span></code> manages users and their permissions. The repositories containing datasets are under <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca:datasets/*</span></code>, and the server also contains a few admin-only repositories outside of <code class="docutils literal notranslate"><span class="pre">datasets/*</span></code>.</p>
 <p>The VM is monitored <a class="reference external" href="https://monitor.neuro.polymtl.ca/host/data.neuro.polymtl.ca/#menu_system_submenu_cpu;after=0;before=0;theme=slate;help=true;utc=America/Toronto">here</a> (requires VPN to connect to the dashboard monitor).</p>
 <section id="list-users">
-<h3>List users<a class="headerlink" href="#list-users" title="Permalink to this headline">#</a></h3>
+<h3>List users<a class="headerlink" href="#list-users" title="Permalink to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">keys</span> <span class="nb">list</span>
 </pre></div>
 </div>
 </section>
 <section id="add-users">
-<h3>Add users<a class="headerlink" href="#add-users" title="Permalink to this headline">#</a></h3>
-<p>To grant access to a lab member, <a class="reference internal" href="#add-extra-devices"><span class="std std-doc">as above</span></a>, ask the lab member to generate an ssh key using <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code> and have them send you the <em>public key</em>. Save it to a file <code class="docutils literal notranslate"><span class="pre">firstnamelastname.pub</span></code> and add them with</p>
+<h3>Add users<a class="headerlink" href="#add-users" title="Permalink to this heading">#</a></h3>
+<p>To grant access to a lab member, <a class="reference internal" href="#add-extra-devices">as above</a>, ask the lab member to generate an ssh key using <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code> and have them send you the <em>public key</em>. Save it to a file <code class="docutils literal notranslate"><span class="pre">firstnamelastname.pub</span></code> and add them with</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">firstnamelastname</span><span class="o">.</span><span class="n">pub</span> <span class="o">|</span> <span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">keys</span> <span class="n">add</span> <span class="n">firstnamelastname</span>
 </pre></div>
 </div>
@@ -1738,8 +842,8 @@ It is compatible with <a class="reference external" href="https://www.datalad.or
 <p>You should use the person’s full name as their username, in the form <code class="docutils literal notranslate"><span class="pre">firstnamelastname</span></code>, with no spaces or periods or anything. It’s essentially an arbitrary string that the user doesn’t really need to know, since everyone is authenticated using just their public/private keys without supplying a username. The only time users see them is when they run <code class="docutils literal notranslate"><span class="pre">info</span></code> or use <code class="docutils literal notranslate"><span class="pre">perms</span></code>. We would <strong>like</strong> to use the format firstname.lastname&#64;polymtl.ca, but <a class="reference external" href="https://github.com/kousu/gitolite-mods/issues/3">there is a bug</a>, so just use <code class="docutils literal notranslate"><span class="pre">firstnamelastname</span></code>. Once someone is registered they can add and remove their own keys without having to know their username.</p>
 </section>
 <section id="id1">
-<h3>Permissions<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
-<p>As admin, you can add or revoke any permissions to any repo <a class="reference internal" href="#permissions"><span class="std std-doc">using <code class="docutils literal notranslate"><span class="pre">perms</span></code></span></a>.</p>
+<h3>Permissions<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>As admin, you can add or revoke any permissions to any repo <a class="reference internal" href="#permissions">using <code class="docutils literal notranslate"><span class="pre">perms</span></code></a>.</p>
 <p>There is unfortunately no way to view permissions <em>as another user</em> so you will need to rely on people sending you screenshots if they are having problems
 but you can at least inspect the active sets of permissions on a repo with</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">perms</span> <span class="o">&lt;</span><span class="n">repo</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">l</span>
@@ -1755,7 +859,7 @@ but you can at least inspect the active sets of permissions on a repo with</p>
 </div>
 </section>
 <section id="id2">
-<h3>Renaming<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<h3>Renaming<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <p>As an admin, you can rename a repo by connecting to the server directly:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ssh root@data.neuro.polymtl.ca
 sudo -u git -i
@@ -1765,8 +869,8 @@ mv $dataset.git $new_name.git
 </div>
 </section>
 <section id="id3">
-<h3>Deletion<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
-<p>You can also delete any repo <a class="reference internal" href="#deletion"><span class="std std-doc">using <code class="docutils literal notranslate"><span class="pre">D</span></code></span></a>.</p>
+<h3>Deletion<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<p>You can also delete any repo <a class="reference internal" href="#deletion">using <code class="docutils literal notranslate"><span class="pre">D</span></code></a>.</p>
 <p>You can also get rid of a dataset immediately by:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">D</span> <span class="n">unlock</span> <span class="n">datasets</span><span class="o">/&lt;</span><span class="n">dataset</span><span class="o">&gt;</span>
 <span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">D</span> <span class="n">rm</span> <span class="n">datasets</span><span class="o">/&lt;</span><span class="n">dataset</span><span class="o">&gt;</span>
@@ -1774,7 +878,7 @@ mv $dataset.git $new_name.git
 </div>
 </section>
 <section id="backups">
-<h3>Backups<a class="headerlink" href="#backups" title="Permalink to this headline">#</a></h3>
+<h3>Backups<a class="headerlink" href="#backups" title="Permalink to this heading">#</a></h3>
 <p>Encrypted backups are sent daily to <code class="docutils literal notranslate"><span class="pre">s3+https://s3.ca-central-1.amazonaws.com/data.neuro.polymtl.ca.restic</span></code> and <code class="docutils literal notranslate"><span class="pre">sftp://narval.computecanada.ca:projects/def-jcohen/data.neuro.polymtl.ca.restic</span></code>. Daily backups are retained for the current week, weekly for the current month, and monthly for the current year.</p>
 <p>We use a backup tool called <code class="docutils literal notranslate"><span class="pre">restic</span></code> and to recover files you should <a class="reference external" href="https://restic.readthedocs.io/en/stable/050_restore.html">review its full recovery documentation</a> to use it safely, but the quick version is that you need to provide backup credentials, one set for either location. <strong>It is your responsibility as a data server admin</strong> to ensure you have generated and can protect these credentials.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># AWS</span>
@@ -1822,7 +926,7 @@ Date:   Thu Feb 11 12:36:32 2021 -0500
 </div>
 </details>
 <section id="recovery-shortcut">
-<h4>Recovery Shortcut<a class="headerlink" href="#recovery-shortcut" title="Permalink to this headline">#</a></h4>
+<h4>Recovery Shortcut<a class="headerlink" href="#recovery-shortcut" title="Permalink to this heading">#</a></h4>
 <p>If you are in a pinch, <em>and the server is still running</em>, you can use its credentials instead of loading your own.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">root</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span>
 <span class="n">su</span> <span class="o">-</span><span class="n">l</span> <span class="n">git</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
@@ -1835,13 +939,13 @@ Date:   Thu Feb 11 12:36:32 2021 -0500
 </section>
 </section>
 <section id="troubleshooting">
-<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h3>
+<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading">#</a></h3>
 <p>If you are having a problem, please open an issue <a class="reference external" href="https://github.com/neuropoly/data-management/issues">here</a>. Please don’t be shy, if you don’t report the issue, we won’t know about it and it will never be solved 😉</p>
 <p>If the server is doing something strange, contact someone with sysadmin-access to the server.</p>
 <p>These people can investigate by following the gitolote guide in the <a class="reference external" href="https://github.com/neuropoly/management/blob/master/docs/gitolite.md">sysadmin docs</a>.</p>
 </section>
 <section id="references">
-<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h3>
+<h3>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Patel, Hiren - <a class="reference external" href="https://caesr.uwaterloo.ca/wildrepos-in-gitolite/">Wildrepos in Gitolite</a> – detailing how a research lab manages their code and publications collaboratively through <code class="docutils literal notranslate"><span class="pre">gitolite</span></code></p></li>
 </ul>
@@ -1850,50 +954,139 @@ Date:   Thu Feb 11 12:36:32 2021 -0500
 </section>
 
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="dataset-curation.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Dataset curation</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="dataset-curation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Dataset curation</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="duke.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="duke.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">duke</span></code></p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Page Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initial-setup">Initial setup</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-an-account">Getting an account</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connecting-to-data-neuro-polymtl-ca">Connecting to <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list">List</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download">Download</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update">Update</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#upload">Upload</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reviewing-pull-requests">Reviewing Pull Requests</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#commit-rights">Commit Rights</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#committing">Committing</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#new-repository">New repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#releases">Releases</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#permissions">Permissions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#renaming">Renaming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deletion">Deletion</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-a-branch">Deleting a branch</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-extra-devices">Add extra devices</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#admin-guide">Admin Guide</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-users">List users</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-users">Add users</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Permissions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Renaming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Deletion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backups">Backups</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#recovery-shortcut">Recovery Shortcut</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-    By NeuroPoly<br/>
-  
-      &copy; Copyright 2021, NeuroPoly.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
-</div>
+<p class="component-author">
+By NeuroPoly
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2021, NeuroPoly.
+      <br/>
+    
+  </p>
 
-      </div>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

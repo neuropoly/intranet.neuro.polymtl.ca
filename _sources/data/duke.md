@@ -46,7 +46,8 @@ drwxr-xr-x 2 u108545 domain users  4096 Jun  8 16:44 temp
 
 When working on campus or [over the VPN](../../#vpn), you can connect your computer to `duke`:
 
-````{tabbed} macOS
+::::{tab-set}
+:::{tab-item} macOS
 1. Open Finder
 2. CMD+K
 3. <details><summary>Enter <code>afp://duke.neuro.polymtl.ca/</code></summary>
@@ -71,16 +72,15 @@ When working on campus or [over the VPN](../../#vpn), you can connect your compu
     ![Screenshot of Finder with mounted volume](./duke-macOS-04.png)
     
     </details>
-````
+:::
 
-````{tabbed} Linux
+:::{tab-item} Linux
 1. Open File Browser
 2. Menu > Go > Open Network Location 
 3. `smb://duke.neuro.polymtl.ca/`
-````
+:::
 
-````{tabbed} Windows 10
-
+:::{tab-item} Windows 10
 1. Open Windows explorer
 2. Right click This PC
 3. Map Network Drive
@@ -88,7 +88,8 @@ When working on campus or [over the VPN](../../#vpn), you can connect your compu
 5. Check "Connect using different credentials".
 6. Username: `grames\<POLYGRAMES_USERNAME>`
 7. Password: `<POLYGRAMES_PASSWORD>`.
-````
+:::
+::::
 
 ```{note}
 Some root folders are restricted \(e.g. **mri**\), so you need to write the URL to the destination folder you have access to. Example: `duke.neuro.polymtl.ca/mri/unf`
@@ -102,7 +103,8 @@ If you get the message “There are no shares available…”, then there might 
 
 You can also connect your computer from the CLI, or with a script, which might be more efficient in the long run:
 
-````{tabbed} Mac OSX
+::::{tab-set}
+:::{tab-item} Mac OSX
 Create folder for the mount point on a location \(your home directory\) where you have read and write access:
 
 ```bash
@@ -112,12 +114,13 @@ mount -t afp afp://USERNAME:PASSWORD@duke.neuro.polymtl.ca/<FOLDER_NAME> <FOLDER
 # To unmount:
 sudo umount <FOLDER_NAME>/
 ```
-````
+:::
 
-````{tabbed} Linux
+:::{tab-item} Linux
 To mount:
 
 ```bash
 sudo mount -t cifs //duke.neuro.polymtl.ca/<FOLDER_NAME> /mnt/duke/<FOLDER_NAME> -o username=<GRAMES_USERNAME>,noexec
 ```
-````
+:::
+::::

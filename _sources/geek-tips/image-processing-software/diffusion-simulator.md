@@ -14,7 +14,7 @@ You can choose the permeability of the barriers via p but not the thickness.
 
 However, you can also build any kind of shape using a PLY file \(3D object file\). Here is a tutorial for this option: [Monte-Carlo Mesh Simulation](http://cmic.cs.ucl.ac.uk/camino/index.php?n=Tutorials.MCMeshSimulation).
 
-### Recommendations <a id="advices"></a>
+## Recommendations <a id="advices"></a>
 
 * `cylindersep` must be at least twice as big as `cylinderrad` \(cylinders mustn't overlap\)
 * Be very careful at high q-values \(&gt;0.14 um-1\). You need lots of walkers \(200 000\), and time steps \(-tmax 3000\)

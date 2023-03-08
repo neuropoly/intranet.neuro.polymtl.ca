@@ -7,7 +7,8 @@ https://www.polymtl.ca/futur/es/admission
 
 ## Requirements for Polytechnique
 
-````{tabbed} MSc
+::::{tab-set}
+:::{tab-item} MSc
 * Details of the program on the [Polymtl website](https://www.polymtl.ca/programmes/programmes/maitrise-professionnelle-ou-recherche-en-genie-biomedical-programme-conjoint).
 * The rules say that "At most 6 credits can be undergraduate courses and at least 8 credits must be courses in the field of biomedical engineering or other and approved by the CPÉS", but this is a relaxed rules. Courses in computer science, deep learning, etc. are accepted. 
 * For [exemption of additional fees as foreign student](https://www.polymtl.ca/etudiants-internationaux/en/financial-questions/exemption-differential-fees), you need at least 6 credits completed, of grad courses at Polytechnique Montréal.
@@ -19,10 +20,9 @@ See [this link](https://etudiant.polymtl.ca/etudes/en/graduate-studies/thesis-an
 ### Jury
 
 Please refer to the [Règlements généraux des études supérieures ](https://www.polymtl.ca/renseignements-generaux/documents-officiels/5-affaires-academiques-et-vie-etudiante) (53.4 COMPOSITION ET NOMINATION DU JURY).
+:::
 
-````
-
-````{tabbed} PhD
+:::{tab-item} PhD
 * Details of the program on the [Polymtl website](https://www.polymtl.ca/programmes/programmes/doctorat-en-genie-biomedical-programme-conjoint#).
 * Candidates who already hold a graduate degree may obtain an exemption from all or part of their graduate course credits according to the procedures specified in article 73.1.1 of the specific regulations for graduate studies.
 
@@ -37,7 +37,8 @@ See [this link](https://etudiant.polymtl.ca/etudes/en/graduate-studies/thesis-an
 ### Jury
 
 Please refer to the [Règlements généraux des études supérieures ](https://www.polymtl.ca/renseignements-generaux/documents-officiels/5-affaires-academiques-et-vie-etudiante) (76.4 COMPOSITION ET NOMINATION DU JURY).
-````
+:::
+::::
 
 
 ## Medical imaging

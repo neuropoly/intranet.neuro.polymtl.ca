@@ -1,91 +1,140 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Bash/Shell &#8212; NeuroPoly Lab Manual</title>
-    
+    <title>Bash/Shell &#8212; NeuroPoly Internal Wiki  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/bash-shell/README';</script>
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Script" href="script.html" />
     <link rel="prev" title="Useful links 🔗" href="../useful-links.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../README.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">NeuroPoly Lab Manual</h1>
-      
-    </a>
-</div><!-- GTranslate: https://gtranslate.io/ -->
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+    <p class="title logo__title">NeuroPoly Lab Manual</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><!-- GTranslate: https://gtranslate.io/ -->
 <div class="center-g-translate">
     <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl" style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png" height="24" width="24" alt="English" /></a><a href="#" onclick="doGTranslate('en|fr');return false;" title="French" class="gflag nturl" style="background-position:-200px -100px;"><img src="//gtranslate.net/flags/blank.png" height="24" width="24" alt="French" /></a>
 
@@ -113,1474 +162,358 @@
         eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
         /* ]]> */
     </script>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search..." aria-label="Search..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Ressources
- </span>
-</p>
+</div></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ressources</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../onboarding/README.html">
-   <span>
-    👋
-   </span>
-   Onboarding
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../onboarding/getting-started.html">
-     Getting Started
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../onboarding/campus-access.html">
-     Campus Access
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../onboarding/infrastructure.html">
-     Infrastructure
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../onboarding/dropbox-google-drive.html">
-     Google Drive
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../onboarding/computer-setup/README.html">
-     Computer Setup
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-    <label for="toctree-checkbox-2">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../onboarding/computer-setup/mail.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         📧
-        </span>
-       </code>
-       Email
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../onboarding/computer-setup/slack.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         🗣
-        </span>
-       </code>
-       Slack
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../onboarding/computer-setup/eduroam.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         📶
-        </span>
-       </code>
-       Eduroam
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../onboarding/computer-setup/shell-profile.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         💻
-        </span>
-       </code>
-       Shell Profile
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../onboarding/computer-setup/configuration-tips.html">
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         💡
-        </span>
-       </code>
-       Other configuration tips
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../onboarding/developer-setup.html">
-     Developer Setup
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../onboarding/consultants-ra.html">
-     Consultants and RA
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../onboarding/postdoc.html">
-     Postdoctoral fellows
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../agenda-and-calendar.html">
-   <span>
-    📅
-   </span>
-   Calendar &amp; Meetings
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../computing-resources/README.html">
-   <span>
-    🖥
-   </span>
-   Computing Resources
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../computing-resources/neuropoly/README.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       🖥
-      </span>
-     </code>
-     Computers @NeuroPoly
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-    <label for="toctree-checkbox-4">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../computing-resources/neuropoly/cpus.html">
-       CPU Clusters
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../computing-resources/neuropoly/gpus.html">
-       GPU Clusters
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../computing-resources/clusters-at-criugm.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       🖥
-      </span>
-     </code>
-     Computers @CRIUGM
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../computing-resources/compute-canada.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       🖥
-      </span>
-     </code>
-     Compute Canada
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../computing-resources/printer.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       🖨
-      </span>
-     </code>
-     Printer
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../computing-resources/youtube.html">
-     YouTube Procedure
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../data/README.html">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     💾
-    </span>
-   </code>
-   Data
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../data/dataset-curation.html">
-     Dataset curation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../data/git-datasets.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       data
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../data/duke.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       duke
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../data/django.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       django
-      </span>
-     </code>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../mri-scanning/README.html">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     🧲
-    </span>
-   </code>
-   MRI Scanning
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../mri-scanning/unf-3t-prisma.html">
-     UNF (3T Prisma)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../mri-scanning/mni-mcgill-7t-terra.html">
-     MNI/McGill (7T Terra)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../mri-scanning/mhi-7t-agilent.html">
-     MHI (7T Agilent)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../rf-lab/README.html">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     🔧
-    </span>
-   </code>
-   RF Lab
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../rf-lab/mri-coils-at-neuropoly.html">
-     NeuroPoly Coils
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../rf-lab/misc.html">
-     Misc
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../rf-lab/mri-phantoms.html">
-     Phantoms
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../rf-lab/3d-printing/README.html">
-     3D Printing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../rf-lab/3d-printing/octoprint.html">
-     OctoPrint
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../rf-lab/pcb-manufacturing.html">
-     PCB Manufacturing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../rf-lab/cnc-machine.html">
-     CNC machine
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../onboarding/README.html"><span>👋</span> Onboarding</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/getting-started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/campus-access.html">Campus Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/infrastructure.html">Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/dropbox-google-drive.html">Google Drive</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../onboarding/computer-setup/README.html">Computer Setup</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../onboarding/computer-setup/mail.html"><code class="docutils literal notranslate"><span class="pre">📧</span></code> Email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../onboarding/computer-setup/slack.html"><code class="docutils literal notranslate"><span class="pre">🗣</span></code> Slack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../onboarding/computer-setup/eduroam.html"><code class="docutils literal notranslate"><span class="pre">📶</span></code> Eduroam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../onboarding/computer-setup/shell-profile.html"><code class="docutils literal notranslate"><span class="pre">💻</span></code> Shell Profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../onboarding/computer-setup/configuration-tips.html"><code class="docutils literal notranslate"><span class="pre">💡</span></code> Other configuration tips</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Academic Life
- </span>
-</p>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/developer-setup.html">Developer Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/consultants-ra.html">Consultants and RA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/postdoc.html">Postdoctoral fellows</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../agenda-and-calendar.html"><span>📅</span> Calendar &amp; Meetings</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../computing-resources/README.html"><span>🖥</span> Computing Resources</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../computing-resources/neuropoly/README.html"><code class="docutils literal notranslate"><span class="pre">🖥</span></code> Computers @NeuroPoly</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../computing-resources/neuropoly/cpus.html">CPU Clusters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../computing-resources/neuropoly/gpus.html">GPU Clusters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../computing-resources/clusters-at-criugm.html"><code class="docutils literal notranslate"><span class="pre">🖥</span></code> Computers @CRIUGM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../computing-resources/compute-canada.html"><code class="docutils literal notranslate"><span class="pre">🖥</span></code> Compute Canada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../computing-resources/printer.html"><code class="docutils literal notranslate"><span class="pre">🖨</span></code> Printer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../computing-resources/youtube.html">YouTube Procedure</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../data/README.html"><code class="docutils literal notranslate"><span class="pre">💾</span></code> Data</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data/dataset-curation.html">Dataset curation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data/git-datasets.html"><code class="docutils literal notranslate"><span class="pre">data</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data/duke.html"><code class="docutils literal notranslate"><span class="pre">duke</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data/django.html"><code class="docutils literal notranslate"><span class="pre">django</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../mri-scanning/README.html"><code class="docutils literal notranslate"><span class="pre">🧲</span></code> MRI Scanning</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mri-scanning/unf-3t-prisma.html">UNF (3T Prisma)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mri-scanning/mni-mcgill-7t-terra.html">MNI/McGill (7T Terra)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mri-scanning/mhi-7t-agilent.html">MHI (7T Agilent)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../rf-lab/README.html"><code class="docutils literal notranslate"><span class="pre">🔧</span></code> RF Lab</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/mri-coils-at-neuropoly.html">NeuroPoly Coils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/misc.html">Misc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/mri-phantoms.html">Phantoms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/3d-printing/README.html">3D Printing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/3d-printing/octoprint.html">OctoPrint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/pcb-manufacturing.html">PCB Manufacturing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/cnc-machine.html">CNC machine</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Academic Life</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../courses.html">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     🎓
-    </span>
-   </code>
-   University Courses
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../comprehensive-exam-guide.html">
-   📖 Comprehensive Exam
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../scholarships.html">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     💰
-    </span>
-   </code>
-   Scholarships
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../conferences.html">
-   <span>
-    ✈️
-   </span>
-   Conferences
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../bibliography/README.html">
-   <span>
-    📚
-   </span>
-   Bibliography
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../bibliography/lab-theses.html">
-     Theses
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../bibliography/spinal-cord-injury.html">
-     Spinal Cord Injury
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../bibliography/mri.html">
-     MRI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../bibliography/mri-analysis.html">
-     MRI Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../bibliography/deep-learning.html">
-     Deep Learning
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../bibliography/histology.html">
-     Histology
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../bibliography/shared-paperpile-folder.html">
-     Paperpile Folder
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../ideas-for-cool-projects.html">
-   <span>
-    💡
-   </span>
-   Ideas for Cool Projects
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../writing-articles.html">
-   <span>
-    ✍️
-   </span>
-   Academic Writing
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../courses.html"><code class="docutils literal notranslate"><span class="pre">🎓</span></code> University Courses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../comprehensive-exam-guide.html">📖 Comprehensive Exam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scholarships.html"><code class="docutils literal notranslate"><span class="pre">💰</span></code> Scholarships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../conferences.html"><span>✈️</span> Conferences</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../bibliography/README.html"><span>📚</span> Bibliography</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/lab-theses.html">Theses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/spinal-cord-injury.html">Spinal Cord Injury</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/mri.html">MRI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/mri-analysis.html">MRI Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/deep-learning.html">Deep Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/histology.html">Histology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/shared-paperpile-folder.html">Paperpile Folder</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Miscellaneous
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../ideas-for-cool-projects.html"><span>💡</span> Ideas for Cool Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing-articles.html"><span>✍️</span>     Academic Writing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../practical-information/README.html">
-   <span>
-    📎
-   </span>
-   Practical Information
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../practical-information/visa.html">
-     VISAs and Work Permits
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../practical-information/moving-to-montreal.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       🇨🇦
-      </span>
-     </code>
-     Living in Montreal
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../practical-information/purchasing-weekly-lunch.html">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       🍱
-      </span>
-     </code>
-     Social Lunch
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../practical-information/purchasing-hardware-and-lab-supplies.html">
-     Purchasing Supplies
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../README.html">
-   <span>
-    🤓
-   </span>
-   Geek tips
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../useful-links.html">
-     Useful links 🔗
-    </a>
-   </li>
-   <li class="toctree-l2 current active has-children">
-    <a class="current reference internal" href="#">
-     Bash/Shell
-    </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="script.html">
-       Script
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../programming-languages/README.html">
-     Programming Languages
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-    <label for="toctree-checkbox-12">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../programming-languages/python.html">
-       Python
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../programming-languages/matlab.html">
-       MATLAB
-      </a>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../programming-languages/c%2B%2B/README.html">
-       C++
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-      <label for="toctree-checkbox-13">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../programming-languages/c%2B%2B/installation-of-vtk-and-itk-on-mac-os-x.html">
-         Installation of VTK and ITK on Mac OS X
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../programming-languages/c%2B%2B/using-xcode.html">
-         Using XCode
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../git.html">
-     Git &amp; Github
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../git-annex.html">
-     git-annex
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../os-guides/README.html">
-     OS Guides
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-    <label for="toctree-checkbox-14">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../os-guides/linux.html">
-       Linux
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../os-guides/macosx.html">
-       MacOSX
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../contributing.html">
-     Contributing Guidelines
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../misc/README.html">
-     Various Software &amp; Tools
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-    <label for="toctree-checkbox-15">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../misc/virtual-machines/README.html">
-       Virtual Machines
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-      <label for="toctree-checkbox-16">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../misc/virtual-machines/virtualbox.html">
-         VirtualBox
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../misc/virtual-machines/vagrant.html">
-         Vagrant
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../misc/bitbucket.html">
-       BitBucket
-      </a>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../misc/docker/README.html">
-       Docker
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
-      <label for="toctree-checkbox-17">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../misc/docker/docker-for-deep-learning.html">
-         Docker for Deep Learning
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../misc/dropbox.html">
-       Dropbox
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../misc/jekyll.html">
-       Jekyll
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../misc/microsoft-word.html">
-       Microsoft Word
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../misc/openneuro.html">
-       OpenNeuro
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../misc/sketchup.html">
-       Sketchup
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../misc/xquartz.html">
-       XQuartz
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../image-processing-software/README.html">
-     Image Processing Software
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
-    <label for="toctree-checkbox-18">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../image-processing-software/advanced-normalization-tools-ants.html">
-       Advanced Normalization Tools (ANTs)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../image-processing-software/anima.html">
-       Anima
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../image-processing-software/diffusion-simulator.html">
-       Diffusion Simulator
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../image-processing-software/freesurfer.html">
-       FreeSurfer
-      </a>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="../image-processing-software/fsl/README.html">
-       FSL
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
-      <label for="toctree-checkbox-19">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="../image-processing-software/fsl/fsleyes.html">
-         FSLeyes
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../image-processing-software/itk-snap.html">
-       ITK-SNAP
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../image-processing-software/nifti.html">
-       NIfTI
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../image-processing-software/openneuro-cli.html">
-       OpenNeuro CLI
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../image-processing-software/osirix.html">
-       OsiriX
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../deep-learning/README.html">
-     Deep Learning
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
-    <label for="toctree-checkbox-20">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../deep-learning/cuda.html">
-       CUDA
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../deep-learning/tensorflow.html">
-       Tensorflow
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../deep-learning/conditional-random-fields-crf.html">
-       Conditional Random Fields (CRF)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../deep-learning/restricted-boltzmann-machines.html">
-       Restricted Boltzmann Machines (RBM)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../deep-learning/misc.html">
-       Misc
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../edi.html">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     🧩
-    </span>
-   </code>
-   EDI
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../contact.html">
-   <span>
-    📞
-   </span>
-   Contact
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://neuro.polymtl.ca">
-   NeuroPoly Website
-  </a>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../practical-information/README.html"><span>📎</span> Practical Information</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../practical-information/visa.html">VISAs and Work Permits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../practical-information/moving-to-montreal.html"><code class="docutils literal notranslate"><span class="pre">🇨🇦</span></code> Living in Montreal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../practical-information/purchasing-weekly-lunch.html"><code class="docutils literal notranslate"><span class="pre">🍱</span></code> Social Lunch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../practical-information/purchasing-hardware-and-lab-supplies.html">Purchasing Supplies</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../README.html"><span>🤓</span> Geek tips</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../useful-links.html">Useful links 🔗</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Bash/Shell</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="script.html">Script</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../programming-languages/README.html">Programming Languages</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../programming-languages/python.html">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programming-languages/matlab.html">MATLAB</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../programming-languages/c%2B%2B/README.html">C++</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../programming-languages/c%2B%2B/installation-of-vtk-and-itk-on-mac-os-x.html">Installation of VTK and ITK on Mac OS X</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../programming-languages/c%2B%2B/using-xcode.html">Using XCode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../git.html">Git &amp; Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-annex.html">git-annex</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../os-guides/README.html">OS Guides</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../os-guides/linux.html">Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../os-guides/macosx.html">MacOSX</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing.html">Contributing Guidelines</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../misc/README.html">Various Software &amp; Tools</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../misc/virtual-machines/README.html">Virtual Machines</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../misc/virtual-machines/virtualbox.html">VirtualBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../misc/virtual-machines/vagrant.html">Vagrant</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/bitbucket.html">BitBucket</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../misc/docker/README.html">Docker</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../misc/docker/docker-for-deep-learning.html">Docker for Deep Learning</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/dropbox.html">Dropbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/jekyll.html">Jekyll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/microsoft-word.html">Microsoft Word</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/openneuro.html">OpenNeuro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/sketchup.html">Sketchup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/xquartz.html">XQuartz</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../image-processing-software/README.html">Image Processing Software</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../image-processing-software/advanced-normalization-tools-ants.html">Advanced Normalization Tools (ANTs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../image-processing-software/anima.html">Anima</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../image-processing-software/diffusion-simulator.html">Diffusion Simulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../image-processing-software/freesurfer.html">FreeSurfer</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../image-processing-software/fsl/README.html">FSL</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../image-processing-software/fsl/fsleyes.html">FSLeyes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../image-processing-software/itk-snap.html">ITK-SNAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../image-processing-software/nifti.html">NIfTI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../image-processing-software/openneuro-cli.html">OpenNeuro CLI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../image-processing-software/osirix.html">OsiriX</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../deep-learning/README.html">Deep Learning</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/cuda.html">CUDA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/conditional-random-fields-crf.html">Conditional Random Fields (CRF)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/restricted-boltzmann-machines.html">Restricted Boltzmann Machines (RBM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/misc.html">Misc</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../edi.html"><code class="docutils literal notranslate"><span class="pre">🧩</span></code> EDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html"><span>📞</span> Contact</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://neuro.polymtl.ca">NeuroPoly Website</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right"><a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/bash-shell/README.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="bottom"
-title="Edit this page"
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/main/geek-tips/bash-shell/README.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button"
+   title="Suggest edit"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-pencil-alt"></i>
   </span>
 
 </a>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
 
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Page Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#awesome-links">
-   Awesome links
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hdd-parameters">
-   HDD parameters
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#file-folders">
-   File/Folders
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#copying">
-     Copying
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#copy-and-synchronize-with-rsync">
-       <strong>
-        Copy (and synchronize) with rsync
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#copy-from-remote-station-via-scp">
-       <strong>
-        Copy from remote station via scp
-       </strong>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#finding">
-     Finding
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deleting">
-     Deleting
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#delete-non-empty-folder">
-       <strong>
-        Delete non-empty folder
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#delete-a-bunch-of-files">
-       <strong>
-        Delete a bunch of files
-       </strong>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#renaming">
-     Renaming
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#rename-files-with-a-given-extension">
-       Rename files with a given extension
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#size-of-folder">
-     Size of folder
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#number-of-files-a-href-number-of-files-id-number-of-files-a">
-     Number of files
-     <a href="number_of_files" id="number_of_files">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#permissions">
-     Permissions
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#change-permissions">
-       <strong>
-        Change permissions
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#change-owner-of-a-file">
-       <strong>
-        Change owner of a file
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#look-for-group-owner-permission">
-       <strong>
-        Look for group owner &amp; permission
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#stdout-stderr-a-href-stdoutstderr-id-stdoutstderr-a">
-       Stdout / Stderr
-       <a href="stdoutstderr" id="stdoutstderr">
-       </a>
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#compression-extraction">
-   Compression/Extraction
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tar">
-     <strong>
-      tar
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#zip">
-     <strong>
-      zip
-     </strong>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#checksum-a-href-checksum-id-checksum-a">
-       Checksum
-       <a href="checksum" id="checksum">
-       </a>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#remove-files-from-tmp-a-href-remove-files-from-tmp-id-remove-files-from-tmp-a">
-       Remove files from tmp
-       <a href="remove_files_from_tmp" id="remove_files_from_tmp">
-       </a>
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bash-profile">
-   .bash_profile
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#emails">
-   Emails
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#processes">
-   Processes
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#check-processes">
-     <strong>
-      Check Processes
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#killing-processes">
-     <strong>
-      Killing Processes
-     </strong>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#kill-a-process-based-on-pid">
-       <strong>
-        kill a process based on PID
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#kill-a-process-from-a-user">
-       <strong>
-        kill a process from a user
-       </strong>
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#internet-network">
-   Internet / Network
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#download-file-from-internet">
-     Download file from internet
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Copying
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#copy-file-between-computers">
-       Copy file between computers
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#copy-from-a-remote-station">
-       <strong>
-        Copy from a remote station
-       </strong>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#network-dns">
-     Network/DNS
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#screen-for-background-processes">
-   Screen (for background processes)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ssh-public-key">
-   SSH Public Key
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vim-text-editor">
-   VIM Text Editor
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Bash/Shell</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Page Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#awesome-links">
-   Awesome links
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hdd-parameters">
-   HDD parameters
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#file-folders">
-   File/Folders
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#copying">
-     Copying
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#copy-and-synchronize-with-rsync">
-       <strong>
-        Copy (and synchronize) with rsync
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#copy-from-remote-station-via-scp">
-       <strong>
-        Copy from remote station via scp
-       </strong>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#finding">
-     Finding
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#deleting">
-     Deleting
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#delete-non-empty-folder">
-       <strong>
-        Delete non-empty folder
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#delete-a-bunch-of-files">
-       <strong>
-        Delete a bunch of files
-       </strong>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#renaming">
-     Renaming
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#rename-files-with-a-given-extension">
-       Rename files with a given extension
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#size-of-folder">
-     Size of folder
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#number-of-files-a-href-number-of-files-id-number-of-files-a">
-     Number of files
-     <a href="number_of_files" id="number_of_files">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#permissions">
-     Permissions
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#change-permissions">
-       <strong>
-        Change permissions
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#change-owner-of-a-file">
-       <strong>
-        Change owner of a file
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#look-for-group-owner-permission">
-       <strong>
-        Look for group owner &amp; permission
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#stdout-stderr-a-href-stdoutstderr-id-stdoutstderr-a">
-       Stdout / Stderr
-       <a href="stdoutstderr" id="stdoutstderr">
-       </a>
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#compression-extraction">
-   Compression/Extraction
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tar">
-     <strong>
-      tar
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#zip">
-     <strong>
-      zip
-     </strong>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#checksum-a-href-checksum-id-checksum-a">
-       Checksum
-       <a href="checksum" id="checksum">
-       </a>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#remove-files-from-tmp-a-href-remove-files-from-tmp-id-remove-files-from-tmp-a">
-       Remove files from tmp
-       <a href="remove_files_from_tmp" id="remove_files_from_tmp">
-       </a>
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bash-profile">
-   .bash_profile
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#emails">
-   Emails
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#processes">
-   Processes
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#check-processes">
-     <strong>
-      Check Processes
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#killing-processes">
-     <strong>
-      Killing Processes
-     </strong>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#kill-a-process-based-on-pid">
-       <strong>
-        kill a process based on PID
-       </strong>
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#kill-a-process-from-a-user">
-       <strong>
-        kill a process from a user
-       </strong>
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#internet-network">
-   Internet / Network
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#download-file-from-internet">
-     Download file from internet
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Copying
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#copy-file-between-computers">
-       Copy file between computers
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#copy-from-a-remote-station">
-       <strong>
-        Copy from a remote station
-       </strong>
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#network-dns">
-     Network/DNS
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#screen-for-background-processes">
-   Screen (for background processes)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ssh-public-key">
-   SSH Public Key
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vim-text-editor">
-   VIM Text Editor
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Bash/Shell</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Page Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#awesome-links">Awesome links</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hdd-parameters">HDD parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-folders">File/Folders</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copying">Copying</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-and-synchronize-with-rsync"><strong>Copy (and synchronize) with rsync</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-from-remote-station-via-scp"><strong>Copy from remote station via scp</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding">Finding</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting">Deleting</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#delete-non-empty-folder"><strong>Delete non-empty folder</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#delete-a-bunch-of-files"><strong>Delete a bunch of files</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#renaming">Renaming</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rename-files-with-a-given-extension">Rename files with a given extension</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#size-of-folder">Size of folder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-of-files">Number of files <a href="number_of_files" id="number_of_files"></a></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#permissions">Permissions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#change-permissions"><strong>Change permissions</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#change-owner-of-a-file"><strong>Change owner of a file</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#look-for-group-owner-permission"><strong>Look for group owner &amp; permission</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stdout-stderr">Stdout / Stderr <a href="stdoutstderr" id="stdoutstderr"></a></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compression-extraction">Compression/Extraction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tar"><strong>tar</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zip"><strong>zip</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#checksum">Checksum <a href="checksum" id="checksum"></a></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-files-from-tmp">Remove files from tmp <a href="remove_files_from_tmp" id="remove_files_from_tmp"></a></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bash-profile">.bash_profile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emails">Emails</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#processes">Processes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-processes"><strong>Check Processes</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#killing-processes"><strong>Killing Processes</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#kill-a-process-based-on-pid"><strong>kill a process based on PID</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#kill-a-process-from-a-user"><strong>kill a process from a user</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internet-network">Internet / Network</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-file-from-internet">Download file from internet</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Copying</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-file-between-computers">Copy file between computers</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-from-a-remote-station"><strong>Copy from a remote station</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#network-dns">Network/DNS</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#screen-for-background-processes">Screen (for background processes)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh-public-key">SSH Public Key</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vim-text-editor">VIM Text Editor</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section id="bash-shell">
-<h1>Bash/Shell<a class="headerlink" href="#bash-shell" title="Permalink to this headline">#</a></h1>
+<h1>Bash/Shell<a class="headerlink" href="#bash-shell" title="Permalink to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <section id="awesome-links">
-<h2>Awesome links<a class="headerlink" href="#awesome-links" title="Permalink to this headline">#</a></h2>
+<h2>Awesome links<a class="headerlink" href="#awesome-links" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://swcarpentry.github.io/shell-novice/">SHELL tutorials</a></p></li>
 <li><p><a class="reference external" href="https://devhints.io/bash">Bash scripting cheatsheet</a></p></li>
@@ -1588,7 +521,7 @@ title="Edit this page"
 </ul>
 </section>
 <section id="hdd-parameters">
-<h2>HDD parameters<a class="headerlink" href="#hdd-parameters" title="Permalink to this headline">#</a></h2>
+<h2>HDD parameters<a class="headerlink" href="#hdd-parameters" title="Permalink to this heading">#</a></h2>
 <p>Check disk space:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">-</span><span class="n">h</span>
 </pre></div>
@@ -1603,11 +536,11 @@ title="Edit this page"
 </div>
 </section>
 <section id="file-folders">
-<h2>File/Folders<a class="headerlink" href="#file-folders" title="Permalink to this headline">#</a></h2>
+<h2>File/Folders<a class="headerlink" href="#file-folders" title="Permalink to this heading">#</a></h2>
 <section id="copying">
-<h3>Copying<a class="headerlink" href="#copying" title="Permalink to this headline">#</a></h3>
+<h3>Copying<a class="headerlink" href="#copying" title="Permalink to this heading">#</a></h3>
 <section id="copy-and-synchronize-with-rsync">
-<h4><strong>Copy (and synchronize) with rsync</strong><a class="headerlink" href="#copy-and-synchronize-with-rsync" title="Permalink to this headline">#</a></h4>
+<h4><strong>Copy (and synchronize) with rsync</strong><a class="headerlink" href="#copy-and-synchronize-with-rsync" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rsync<span class="w"> </span>-azP<span class="w"> </span>&lt;FILE_SRC&gt;<span class="w"> </span>&lt;FILE_DEST&gt;
 rsync<span class="w"> </span>-azP<span class="w"> </span>&lt;FOLDER_SOURCE&gt;<span class="w"> </span>&lt;FOLDER_DEST&gt;<span class="w">  </span><span class="c1"># will create FOLDER_SOURCE inside FOLDER_DEST (if it does not exist), and will copy the content of FOLDER_SOURCE inside it</span>
 rsync<span class="w"> </span>-azP<span class="w"> </span>&lt;FOLDER_SOURCE&gt;/<span class="w"> </span>&lt;FOLDER_DEST&gt;<span class="w">  </span><span class="c1"># will copy the content of FOLDER_SOURCE inside FOLDER_DEST</span>
@@ -1616,14 +549,14 @@ rsync<span class="w"> </span>-azP<span class="w"> </span>&lt;FOLDER_SOURCE&gt;/<
 </div>
 </section>
 <section id="copy-from-remote-station-via-scp">
-<h4><strong>Copy from remote station via scp</strong><a class="headerlink" href="#copy-from-remote-station-via-scp" title="Permalink to this headline">#</a></h4>
+<h4><strong>Copy from remote station via scp</strong><a class="headerlink" href="#copy-from-remote-station-via-scp" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span>username@hostname:&lt;/PATH_TO_FILE&gt;
 </pre></div>
 </div>
 </section>
 </section>
 <section id="finding">
-<h3>Finding<a class="headerlink" href="#finding" title="Permalink to this headline">#</a></h3>
+<h3>Finding<a class="headerlink" href="#finding" title="Permalink to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;dti*&quot;</span>
 </pre></div>
 </div>
@@ -1641,15 +574,15 @@ rsync<span class="w"> </span>-azP<span class="w"> </span>&lt;FOLDER_SOURCE&gt;/<
 </div>
 </section>
 <section id="deleting">
-<h3>Deleting<a class="headerlink" href="#deleting" title="Permalink to this headline">#</a></h3>
+<h3>Deleting<a class="headerlink" href="#deleting" title="Permalink to this heading">#</a></h3>
 <section id="delete-non-empty-folder">
-<h4><strong>Delete non-empty folder</strong><a class="headerlink" href="#delete-non-empty-folder" title="Permalink to this headline">#</a></h4>
+<h4><strong>Delete non-empty folder</strong><a class="headerlink" href="#delete-non-empty-folder" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>-rf<span class="w"> </span>&lt;FOLDER&gt;
 </pre></div>
 </div>
 </section>
 <section id="delete-a-bunch-of-files">
-<h4><strong>Delete a bunch of files</strong><a class="headerlink" href="#delete-a-bunch-of-files" title="Permalink to this headline">#</a></h4>
+<h4><strong>Delete a bunch of files</strong><a class="headerlink" href="#delete-a-bunch-of-files" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;dti*&quot;</span><span class="w"> </span>-delete
 </pre></div>
 </div>
@@ -1664,9 +597,9 @@ rsync<span class="w"> </span>-azP<span class="w"> </span>&lt;FOLDER_SOURCE&gt;/<
 </section>
 </section>
 <section id="renaming">
-<h3>Renaming<a class="headerlink" href="#renaming" title="Permalink to this headline">#</a></h3>
+<h3>Renaming<a class="headerlink" href="#renaming" title="Permalink to this heading">#</a></h3>
 <section id="rename-files-with-a-given-extension">
-<h4>Rename files with a given extension<a class="headerlink" href="#rename-files-with-a-given-extension" title="Permalink to this headline">#</a></h4>
+<h4>Rename files with a given extension<a class="headerlink" href="#rename-files-with-a-given-extension" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>*.&lt;EXT&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>F<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>mv<span class="w"> </span><span class="nv">$F</span><span class="w"> </span>&lt;NEW_FILE_NAME&gt;_<span class="nv">$F</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
 </pre></div>
 </div>
@@ -1689,7 +622,7 @@ rsync<span class="w"> </span>-azP<span class="w"> </span>&lt;FOLDER_SOURCE&gt;/<
 </section>
 </section>
 <section id="size-of-folder">
-<h3>Size of folder<a class="headerlink" href="#size-of-folder" title="Permalink to this headline">#</a></h3>
+<h3>Size of folder<a class="headerlink" href="#size-of-folder" title="Permalink to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>du<span class="w"> </span>-sh<span class="w"> </span>&lt;FOLDER&gt;
 </pre></div>
 </div>
@@ -1700,8 +633,8 @@ rsync<span class="w"> </span>-azP<span class="w"> </span>&lt;FOLDER_SOURCE&gt;/<
 </pre></div>
 </div>
 </section>
-<section id="number-of-files-a-href-number-of-files-id-number-of-files-a">
-<h3>Number of files <a href="number_of_files" id="number_of_files"></a><a class="headerlink" href="#number-of-files-a-href-number-of-files-id-number-of-files-a" title="Permalink to this headline">#</a></h3>
+<section id="number-of-files">
+<h3>Number of files <a href="number_of_files" id="number_of_files"></a><a class="headerlink" href="#number-of-files" title="Permalink to this heading">#</a></h3>
 <p>== Get number of files that match a pattern</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">dq</span> <span class="o">*</span><span class="n">pattern</span><span class="o">*</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
 </pre></div>
@@ -1724,9 +657,9 @@ rsync<span class="w"> </span>-azP<span class="w"> </span>&lt;FOLDER_SOURCE&gt;/<
 </div>
 </section>
 <section id="permissions">
-<h3>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">#</a></h3>
+<h3>Permissions<a class="headerlink" href="#permissions" title="Permalink to this heading">#</a></h3>
 <section id="change-permissions">
-<h4><strong>Change permissions</strong><a class="headerlink" href="#change-permissions" title="Permalink to this headline">#</a></h4>
+<h4><strong>Change permissions</strong><a class="headerlink" href="#change-permissions" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span><span class="m">644</span><span class="w">  </span><span class="c1"># make a file readable by anyone and writable by the owner only.</span>
 chmod<span class="w"> </span><span class="m">755</span><span class="w">	 </span><span class="c1"># make a file readable/executable by everyone and writable by the owner only.</span>
 chmod<span class="w"> </span><span class="m">701</span><span class="w">	 </span><span class="c1"># r/w/x for the owner, no access for everyone</span>
@@ -1734,13 +667,13 @@ chmod<span class="w"> </span><span class="m">701</span><span class="w">	 </span>
 </div>
 </section>
 <section id="change-owner-of-a-file">
-<h4><strong>Change owner of a file</strong><a class="headerlink" href="#change-owner-of-a-file" title="Permalink to this headline">#</a></h4>
+<h4><strong>Change owner of a file</strong><a class="headerlink" href="#change-owner-of-a-file" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>chown<span class="w"> </span>&lt;OWNER&gt;<span class="w"> </span>&lt;FILE&gt;
 </pre></div>
 </div>
 </section>
 <section id="look-for-group-owner-permission">
-<h4><strong>Look for group owner &amp; permission</strong><a class="headerlink" href="#look-for-group-owner-permission" title="Permalink to this headline">#</a></h4>
+<h4><strong>Look for group owner &amp; permission</strong><a class="headerlink" href="#look-for-group-owner-permission" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-le@a
 </pre></div>
 </div>
@@ -1758,16 +691,16 @@ chmod<span class="w"> </span><span class="m">701</span><span class="w">	 </span>
 </pre></div>
 </div>
 </section>
-<section id="stdout-stderr-a-href-stdoutstderr-id-stdoutstderr-a">
-<h4>Stdout / Stderr <a href="stdoutstderr" id="stdoutstderr"></a><a class="headerlink" href="#stdout-stderr-a-href-stdoutstderr-id-stdoutstderr-a" title="Permalink to this headline">#</a></h4>
+<section id="stdout-stderr">
+<h4>Stdout / Stderr <a href="stdoutstderr" id="stdoutstderr"></a><a class="headerlink" href="#stdout-stderr" title="Permalink to this heading">#</a></h4>
 <p><a class="reference external" href="https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file">https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file</a>Edit</p>
 </section>
 </section>
 </section>
 <section id="compression-extraction">
-<h2>Compression/Extraction<a class="headerlink" href="#compression-extraction" title="Permalink to this headline">#</a></h2>
+<h2>Compression/Extraction<a class="headerlink" href="#compression-extraction" title="Permalink to this heading">#</a></h2>
 <section id="tar">
-<h3><strong>tar</strong><a class="headerlink" href="#tar" title="Permalink to this headline">#</a></h3>
+<h3><strong>tar</strong><a class="headerlink" href="#tar" title="Permalink to this heading">#</a></h3>
 <p>compress:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">czf</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">output</span><span class="o">/</span><span class="n">folder</span><span class="o">/</span><span class="n">filename</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">folder</span>
 </pre></div>
@@ -1778,7 +711,7 @@ chmod<span class="w"> </span><span class="m">701</span><span class="w">	 </span>
 </div>
 </section>
 <section id="zip">
-<h3><strong>zip</strong><a class="headerlink" href="#zip" title="Permalink to this headline">#</a></h3>
+<h3><strong>zip</strong><a class="headerlink" href="#zip" title="Permalink to this heading">#</a></h3>
 <p>compress folder:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">zip</span> <span class="o">-</span><span class="n">r</span> <span class="n">archive</span><span class="o">.</span><span class="n">zip</span> <span class="n">folder</span><span class="o">/</span>
 
@@ -1792,20 +725,20 @@ chmod<span class="w"> </span><span class="m">701</span><span class="w">	 </span>
 </div>
 <p><strong>copie de fichiers ds une directory</strong></p>
 <p>find -name sica*.png | xargs -t -i /bin/cp ./{} ./imagesEdit</p>
-<section id="checksum-a-href-checksum-id-checksum-a">
-<h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum-a-href-checksum-id-checksum-a" title="Permalink to this headline">#</a></h4>
+<section id="checksum">
+<h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum" title="Permalink to this heading">#</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
-<div class="tabbed-set docutils">
-<input checked="checked" id="fead51a2-ec2c-4720-ab48-29b985309723" name="f57d5f8f-6b1f-4951-b974-ee41260261c1" type="radio">
-</input><label class="tabbed-label" for="fead51a2-ec2c-4720-ab48-29b985309723">
-Linux</label><div class="tabbed-content docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>FOLDER<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>md5sum<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>md5sum
 </pre></div>
 </div>
 </div>
-<input id="d2777d6f-7ebf-4101-864f-9a2792229209" name="f57d5f8f-6b1f-4951-b974-ee41260261c1" type="radio">
-</input><label class="tabbed-label" for="d2777d6f-7ebf-4101-864f-9a2792229209">
-Mac</label><div class="tabbed-content docutils">
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Mac</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>-s<span class="w"> </span>FOLDER<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>shasum<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>shasum
 find<span class="w"> </span>-s<span class="w"> </span>FOLDER<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>md5<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>md5
 </pre></div>
@@ -1813,8 +746,8 @@ find<span class="w"> </span>-s<span class="w"> </span>FOLDER<span class="w"> </s
 </div>
 </div>
 </section>
-<section id="remove-files-from-tmp-a-href-remove-files-from-tmp-id-remove-files-from-tmp-a">
-<h4>Remove files from tmp <a href="remove_files_from_tmp" id="remove_files_from_tmp"></a><a class="headerlink" href="#remove-files-from-tmp-a-href-remove-files-from-tmp-id-remove-files-from-tmp-a" title="Permalink to this headline">#</a></h4>
+<section id="remove-files-from-tmp">
+<h4>Remove files from tmp <a href="remove_files_from_tmp" id="remove_files_from_tmp"></a><a class="headerlink" href="#remove-files-from-tmp" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;tmp.*&quot;</span><span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-print0<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-0<span class="w"> </span>/bin/rm<span class="w"> </span>-rf
 </pre></div>
 </div>
@@ -1822,7 +755,7 @@ find<span class="w"> </span>-s<span class="w"> </span>FOLDER<span class="w"> </s
 </section>
 </section>
 <section id="bash-profile">
-<h2>.bash_profile<a class="headerlink" href="#bash-profile" title="Permalink to this headline">#</a></h2>
+<h2>.bash_profile<a class="headerlink" href="#bash-profile" title="Permalink to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> file is launched when you open a new terminal. You can configure your environment variables from there. It is located in your home folder (<code class="docutils literal notranslate"><span class="pre">$HOME</span></code>).</p>
 <p>To load it:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>~/.bash_profile
@@ -1830,16 +763,16 @@ find<span class="w"> </span>-s<span class="w"> </span>FOLDER<span class="w"> </s
 </div>
 </section>
 <section id="emails">
-<h2>Emails<a class="headerlink" href="#emails" title="Permalink to this headline">#</a></h2>
+<h2>Emails<a class="headerlink" href="#emails" title="Permalink to this heading">#</a></h2>
 <p><strong>send email</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;something&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>mailx<span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;subject&quot;</span><span class="w"> </span>someone@email.com
 </pre></div>
 </div>
 </section>
 <section id="processes">
-<h2>Processes<a class="headerlink" href="#processes" title="Permalink to this headline">#</a></h2>
+<h2>Processes<a class="headerlink" href="#processes" title="Permalink to this heading">#</a></h2>
 <section id="check-processes">
-<h3><strong>Check Processes</strong><a class="headerlink" href="#check-processes" title="Permalink to this headline">#</a></h3>
+<h3><strong>Check Processes</strong><a class="headerlink" href="#check-processes" title="Permalink to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pstree<span class="w"> </span>-ap
 </pre></div>
 </div>
@@ -1851,15 +784,15 @@ find<span class="w"> </span>-s<span class="w"> </span>FOLDER<span class="w"> </s
 </div>
 </section>
 <section id="killing-processes">
-<h3><strong>Killing Processes</strong><a class="headerlink" href="#killing-processes" title="Permalink to this headline">#</a></h3>
+<h3><strong>Killing Processes</strong><a class="headerlink" href="#killing-processes" title="Permalink to this heading">#</a></h3>
 <section id="kill-a-process-based-on-pid">
-<h4><strong>kill a process based on PID</strong><a class="headerlink" href="#kill-a-process-based-on-pid" title="Permalink to this headline">#</a></h4>
+<h4><strong>kill a process based on PID</strong><a class="headerlink" href="#kill-a-process-based-on-pid" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">kill</span><span class="w"> </span>-9<span class="w"> </span>&lt;<span class="s2">&quot;PID&quot;</span>&gt;
 </pre></div>
 </div>
 </section>
 <section id="kill-a-process-from-a-user">
-<h4><strong>kill a process from a user</strong><a class="headerlink" href="#kill-a-process-from-a-user" title="Permalink to this headline">#</a></h4>
+<h4><strong>kill a process from a user</strong><a class="headerlink" href="#kill-a-process-from-a-user" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pkill<span class="w"> </span>-U<span class="w"> </span>&lt;USER&gt;<span class="w"> </span>
 </pre></div>
 </div>
@@ -1867,9 +800,9 @@ find<span class="w"> </span>-s<span class="w"> </span>FOLDER<span class="w"> </s
 </section>
 </section>
 <section id="internet-network">
-<h2>Internet / Network<a class="headerlink" href="#internet-network" title="Permalink to this headline">#</a></h2>
+<h2>Internet / Network<a class="headerlink" href="#internet-network" title="Permalink to this heading">#</a></h2>
 <section id="download-file-from-internet">
-<h3>Download file from internet<a class="headerlink" href="#download-file-from-internet" title="Permalink to this headline">#</a></h3>
+<h3>Download file from internet<a class="headerlink" href="#download-file-from-internet" title="Permalink to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-o<span class="w"> </span>filename<span class="w"> </span>-L<span class="w"> </span>&lt;URL&gt;
 <span class="c1"># Example for OSF file (note the &quot;?action=download&quot; added after the URL):</span>
 curl<span class="w"> </span>-o<span class="w"> </span>data.zip<span class="w"> </span>-L<span class="w"> </span>https://osf.io/76jkx/?action<span class="o">=</span>download
@@ -1881,18 +814,18 @@ curl<span class="w"> </span>-o<span class="w"> </span>data.zip<span class="w"> <
 </div>
 </section>
 <section id="id1">
-<h3>Copying<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<h3>Copying<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <section id="copy-file-between-computers">
-<h4>Copy file between computers<a class="headerlink" href="#copy-file-between-computers" title="Permalink to this headline">#</a></h4>
+<h4>Copy file between computers<a class="headerlink" href="#copy-file-between-computers" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p><a class="reference external" href="https://magic-wormhole.readthedocs.io/en/latest/">https://magic-wormhole.readthedocs.io/en/latest/</a></p></li>
-<li><p><a class="reference external" href="https://clbin.com">https://clbin.com/</a> (featuring CLI uploading) ( running <a class="reference external" href="http://github.com/rupa/sprunge">http://github.com/rupa/sprunge</a> )</p></li>
+<li><p><a class="reference external" href="https://clbin.com">https://clbin.com/</a> (featuring CLI uploading) ( running <a class="github reference external" href="http://github.com/rupa/sprunge">rupa/sprunge</a> )</p></li>
 <li><p><a class="reference external" href="https://paste.fossdaily.xyz">https://paste.fossdaily.xyz/</a> (running privatebin)</p></li>
 <li><p><a class="reference external" href="https://paste.tildeverse.org">https://paste.tildeverse.org/</a> (running privatebin)</p></li>
 <li><p><a class="reference external" href="https://bin.snopyta.org">https://bin.snopyta.org/</a> (running privatebin)</p></li>
 <li><p><a class="reference external" href="https://pb.envs.net">https://pb.envs.net/</a> (running privatebin)</p></li>
 <li><p><a class="reference external" href="https://sebsauvage.net/paste/">https://sebsauvage.net/paste/</a> (running zerobin; an unmaintained forerunner of privatebin)</p></li>
-<li><p><a class="reference external" href="https://0bin.net">https://0bin.net/</a> (running <a class="reference external" href="https://github.com/sametmax/0bin">https://github.com/sametmax/0bin</a>)</p></li>
+<li><p><a class="reference external" href="https://0bin.net">https://0bin.net/</a> (running <a class="github reference external" href="https://github.com/sametmax/0bin">sametmax/0bin</a>)</p></li>
 <li><p><a class="reference external" href="https://demo.lufi.io">https://demo.lufi.io/</a> (running <a class="reference external" href="https://lufi.io">https://lufi.io</a>)</p></li>
 <li><p><a class="reference external" href="https://ybits.io">https://ybits.io/</a> (closed source but oh well)</p></li>
 <li><p><a class="reference external" href="https://upload.disroot.org">https://upload.disroot.org/</a> (running <a class="reference external" href="https://lufi.io">https://lufi.io/</a>)</p></li>
@@ -1910,7 +843,7 @@ curl<span class="w"> </span>-o<span class="w"> </span>data.zip<span class="w"> <
 </div>
 </section>
 <section id="copy-from-a-remote-station">
-<h4><strong>Copy from a remote station</strong><a class="headerlink" href="#copy-from-a-remote-station" title="Permalink to this headline">#</a></h4>
+<h4><strong>Copy from a remote station</strong><a class="headerlink" href="#copy-from-a-remote-station" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span>username@station.domain:<span class="w"> </span>&lt;/PATH/FILE&gt;<span class="w"> </span>.<span class="w"> </span><span class="c1"># copy file</span>
 scp<span class="w"> </span>username@station.domain:<span class="w"> </span>&lt;/PATH/&gt;<span class="w"> </span>.<span class="w"> </span>-r<span class="w"> </span><span class="c1"># copy folder</span>
 </pre></div>
@@ -1918,7 +851,7 @@ scp<span class="w"> </span>username@station.domain:<span class="w"> </span>&lt;/
 </section>
 </section>
 <section id="network-dns">
-<h3>Network/DNS<a class="headerlink" href="#network-dns" title="Permalink to this headline">#</a></h3>
+<h3>Network/DNS<a class="headerlink" href="#network-dns" title="Permalink to this heading">#</a></h3>
 <p><strong>List all stations on the network (only works on a server)</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">findsmb</span>
 </pre></div>
@@ -1945,7 +878,7 @@ scp<span class="w"> </span>username@station.domain:<span class="w"> </span>&lt;/
 </section>
 </section>
 <section id="screen-for-background-processes">
-<h2>Screen (for background processes)<a class="headerlink" href="#screen-for-background-processes" title="Permalink to this headline">#</a></h2>
+<h2>Screen (for background processes)<a class="headerlink" href="#screen-for-background-processes" title="Permalink to this heading">#</a></h2>
 <p>Let’s say you connect to a station from your laptop and you wish to launch a script that will run for several hours. If you close your laptop, the remote script will stop. To prevent this, use <code class="docutils literal notranslate"><span class="pre">screen</span></code>. It opens a virtual environment from a remote station, so that any script launched within this environment will continue running even if you close your laptop.</p>
 <p>Step-by-step procedure:</p>
 <ol class="arabic simple">
@@ -1982,7 +915,7 @@ screen<span class="w"> </span>-X<span class="w"> </span>-S<span class="w"> </spa
 </div>
 </section>
 <section id="ssh-public-key">
-<h2>SSH Public Key<a class="headerlink" href="#ssh-public-key" title="Permalink to this headline">#</a></h2>
+<h2>SSH Public Key<a class="headerlink" href="#ssh-public-key" title="Permalink to this heading">#</a></h2>
 <p>Create key on the client (do this only once):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa
 </pre></div>
@@ -1993,7 +926,7 @@ screen<span class="w"> </span>-X<span class="w"> </span>-S<span class="w"> </spa
 </div>
 </section>
 <section id="vim-text-editor">
-<h2>VIM Text Editor<a class="headerlink" href="#vim-text-editor" title="Permalink to this headline">#</a></h2>
+<h2>VIM Text Editor<a class="headerlink" href="#vim-text-editor" title="Permalink to this heading">#</a></h2>
 <p>Simple but great editor. Usually installed everywhere.</p>
 <blockquote>
 <div><p>:w = save<br />
@@ -2009,50 +942,160 @@ add:<span class="w"> </span>syntax<span class="w"> </span>on
 </section>
 
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../useful-links.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Useful links 🔗</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../useful-links.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Useful links 🔗</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="script.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="script.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Script</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Page Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#awesome-links">Awesome links</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hdd-parameters">HDD parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-folders">File/Folders</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copying">Copying</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-and-synchronize-with-rsync"><strong>Copy (and synchronize) with rsync</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-from-remote-station-via-scp"><strong>Copy from remote station via scp</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding">Finding</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting">Deleting</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#delete-non-empty-folder"><strong>Delete non-empty folder</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#delete-a-bunch-of-files"><strong>Delete a bunch of files</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#renaming">Renaming</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rename-files-with-a-given-extension">Rename files with a given extension</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#size-of-folder">Size of folder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#number-of-files">Number of files <a href="number_of_files" id="number_of_files"></a></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#permissions">Permissions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#change-permissions"><strong>Change permissions</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#change-owner-of-a-file"><strong>Change owner of a file</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#look-for-group-owner-permission"><strong>Look for group owner &amp; permission</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stdout-stderr">Stdout / Stderr <a href="stdoutstderr" id="stdoutstderr"></a></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compression-extraction">Compression/Extraction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tar"><strong>tar</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zip"><strong>zip</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#checksum">Checksum <a href="checksum" id="checksum"></a></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#remove-files-from-tmp">Remove files from tmp <a href="remove_files_from_tmp" id="remove_files_from_tmp"></a></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bash-profile">.bash_profile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emails">Emails</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#processes">Processes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-processes"><strong>Check Processes</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#killing-processes"><strong>Killing Processes</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#kill-a-process-based-on-pid"><strong>kill a process based on PID</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#kill-a-process-from-a-user"><strong>kill a process from a user</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internet-network">Internet / Network</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-file-from-internet">Download file from internet</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Copying</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-file-between-computers">Copy file between computers</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-from-a-remote-station"><strong>Copy from a remote station</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#network-dns">Network/DNS</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#screen-for-background-processes">Screen (for background processes)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh-public-key">SSH Public Key</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vim-text-editor">VIM Text Editor</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-    By NeuroPoly<br/>
-  
-      &copy; Copyright 2021, NeuroPoly.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
-</div>
+<p class="component-author">
+By NeuroPoly
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2021, NeuroPoly.
+      <br/>
+    
+  </p>
 
-      </div>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

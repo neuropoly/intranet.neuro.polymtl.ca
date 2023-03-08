@@ -3,7 +3,8 @@
 You can edit your shell profile to create custom commands and make the colours in your terminal look nice.
 
 
-````{tabbed} ~/.bash_profile
+::::{tab-set}
+:::{tab-item} ~/.bash_profile
 
 ```bash
 # Nice .bash_profile
@@ -63,10 +64,9 @@ export PATH=${PATH}:/Applications/CMake.app/Contents/bin
 export PATH="$HOME/miniconda3/bin:$PATH"  # commented out by conda initialize
 source ~/miniconda3/etc/profile.d/conda.sh
 ```
-````
+:::
 
-````{tabbed} ~/.zshrc
-
+:::{tab-item} ~/.zshrc
 ```bash
 # Set error message in English (if you want to)
 LANG=en_CA.UTF-8
@@ -148,4 +148,5 @@ source ~/miniconda3/etc/profile.d/conda.sh
 # Remove "(base)" from the prompt added by miniconda
 PROMPT=$(echo $PROMPT | sed 's/(base) //')
 ```
-````
+:::
+::::

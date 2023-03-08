@@ -27,14 +27,16 @@ getent passwd <GRAMES_ACCOUNT>
 
 Every [GRAMES](../#poly-grames) account has a school-wide personal home folder. It is backed-up nightly.
 
-````{tabbed} macOS
+::::{tab-set}
+:::{tab-item} macOS
 1. Open Finder
 2. CMD+K
 3. for students:
    1. `smb://hvclusterfs.grames.polymtl.ca/usagers/etudiants/USERNAME`
 4. for personnel:
    1. `smb://hvclusterfs.grames.polymtl.ca/usagers/personnels/USERNAME`
-````
+:::
+::::
 
 ### Poly-Grames Groups
 
@@ -67,7 +69,8 @@ You can change your password at [Gestion des Codes](https://codes.si.polymtl.ca/
 The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing a VPN client such as `openconnect` (recommended) or `Cisco AnyConnect Secure Mobility Client` (if `openconnect` is not available for your OS/distro):
 
 
-````{tabbed} MacOS
+::::{tab-set}
+:::{tab-item} MacOS
 ```
 brew install openconnect
 ```
@@ -96,10 +99,9 @@ To connect to the VPN, you need to run:
 ```
 ./vpn.sh
 ```
+:::
 
-````
-
-````{tabbed} Linux
+:::{tab-item} Linux
 ```
 apt install openconnect
 ```
@@ -121,11 +123,9 @@ To connect to the VPN, you need to run:
 ```
 ./vpn.sh
 ```
+:::
 
-````
-
-
-````{tabbed} Windows
+:::{tab-item} Windows
 
 Please follow the official steps from PolyMTL ([French](https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/rentree/documentLibrary/Aide-m%C3%A9moire%20tutoriels%20A2020/Aide-Memoire_VPN.pdf?a=true&guest=true) or [English](https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/rentree/documentLibrary/Aide-m%C3%A9moire%20tutoriels%20A2020/Checklist_VPN.pdf?a=true&guest=true).
 
@@ -139,8 +139,8 @@ In case the above links ever break, the steps are:
    * In the “Group” drop-down list, choose the profile: PolySSL
    * Identify yourself with the username and password of your CAS account (e.g. p123123)
 4. Click "Accept". You're connected! :)
-
-````
+:::
+::::
 
 
 ## Connect to NeuroPoly Computers
@@ -210,22 +210,24 @@ The best way to do this is `sshfs`, which makes them appear as if they were a dr
 
 Install sshfs, if not yet installed:
 
-````{tabbed} Linux
+::::{tab-set}
+:::{tab-item} Linux
 ```
 sudo apt install -y sshfs
 ```
-````
+:::
 
-````{tabbed} mac (Monterey and after)
+:::{tab-item} mac (Monterey and after)
 Follow [this procedure](https://eengstrom.github.io/musings/install-macfuse-and-sshfs-on-macos-monterey).
-````
+:::
 
-````{tabbed} mac (Before Monterey)
+:::{tab-item} mac (Before Monterey)
 ```
 brew install --cask osxfuse
 brew install sshfs
 ```
-````
+:::
+::::
 
 Then mount the folder
 
@@ -265,18 +267,20 @@ If you are experiencing mounting issues on macOs, [this](https://github.com/neur
 ### VNC (graphical interface)
 
 
-````{tabbed} macOS
+::::{tab-set}
+:::{tab-item} macOS
 1. Open Finder
 2. Click Cmd+K
 3. In the “Server Address”, type (using the `STATION` you want): `vnc://STATION.neuro.polymtl.ca`
 4. You can use your local/network account information or the [shared account credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg)
-````
+:::
 
-````{tabbed} PC/Linux
+:::{tab-item} PC/Linux
 1. Establish a VNC connection using [vinaigre](https://wiki.gnome.org/Apps/Vinagre/).
 2. In the “Server Address”, type (using the `STATION` you want): `vnc://STATION.neuro.polymtl.ca`
 3. You can use the password from [shared account credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg)
-````
+:::
+::::
 
 #### Linux stations
 
