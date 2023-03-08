@@ -19,7 +19,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install '.[sphinx]' 'sphinx-book-theme<1'
+          pip install '.[sphinx]'
 
       - name: Build
         run: |

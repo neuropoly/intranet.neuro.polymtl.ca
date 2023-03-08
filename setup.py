@@ -20,10 +20,8 @@ setup(
         "sphinx": [
             "myst-parser",
             "sphinx-book-theme",
-            "sphinx-panels",
-            # pinned because of this bug https://github.com/pydata/pydata-sphinx-theme/pull/509
-            # and that the patched sphinx-book-theme isn't out yet: https://github.com/executablebooks/sphinx-book-theme/issues/428#issuecomment-966021270
-            "sphinx~=4.2.0", # TODO: unpin when the next sphinx-book-theme is released
+            "sphinx-design",
+            "sphinx",
         ],
     },
 )

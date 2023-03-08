@@ -31,12 +31,11 @@ root_doc = 'README'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-        'myst_parser', # there's also myst_nb, which supports embedding Jupyter notebooks, but is heavier.
-        'sphinx_panels',
-]
+extensions = ["myst_parser", "sphinx_design"]
+myst_enable_extensions = ["colon_fence"]
 
-myst_heading_anchors = 4 # enable #section links: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-header-anchors
+# enable #section links: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-header-anchors
+myst_heading_anchors = 4
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -62,21 +61,24 @@ html_css_files = ["theme.css"]
 
 html_sidebars = {
     "**": [
-        "sidebar-logo.html",
+        "navbar-logo.html",
         "gtranslate.html",
         "search-field.html",
         "sbt-sidebar-nav.html",
     ]
 }
 
-html_title = "NeuroPoly Lab Manual"
-html_logo = "_static/logo.png"
 html_favicon = "_static/logo.png"
 panels_add_bootstrap_css = False
 
 html_sourcelink_suffix = ".md" # our sources are in markdown; but this only has an effect if "use_download_button": True
 
 html_theme_options = {
+    "logo": {
+        "image_light": "_static/logo.png",
+        "image_dark": "_static/logo.png",
+        "text": "NeuroPoly Lab Manual",
+    },
     "toc_title": "Page Contents",
     "search_bar_text": "Search...",
 
@@ -84,8 +86,6 @@ html_theme_options = {
     "use_fullscreen_button": False,
     "use_edit_page_button": True,
     "use_download_button": False,
-
-    #"logo_only": True, # hides html_title and just shows html_logo
 }
 
 
