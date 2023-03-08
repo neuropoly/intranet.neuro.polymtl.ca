@@ -16,7 +16,7 @@ We have spent money and time on this infrastructure for it to push science forwa
 
 ## Connecting
 
-Like [other machines](./#connect), connect with ssh using your [polygrames](https://github.com/neuropoly/neuropoly-internal-docs/tree/24a8cfb83736a4325aa342ece74a89846c1f700d/computing-resources/onboarding/accounts.md#polygrames) account.
+Like [other machines](./README.md#connect-to-neuropoly-computers), connect with ssh using your [polygrames](./README.md#poly-grames) account.
 
 ## Hardware
 

@@ -4,8 +4,8 @@ This server includes private MRI and microscopy datasets, which have been curate
 
 `git+ssh://data.neuro.polymtl.ca` has a max size of ~1TB.
 
-It hosts [BIDS](https://bids-specification.readthedocs.io) datasets, version-controlled using [`git-annex`](git-annex.branchable.com/).
-It is locked behind a [VPN](../../#vpn) because much of our data is under medical ethics protections, and needs to be kept off the general internet.
+It hosts [BIDS](https://bids-specification.readthedocs.io) datasets, version-controlled using [`git-annex`](https://git-annex.branchable.com/).
+It is locked behind a [VPN](../computing-resources/neuropoly/README.md#vpn) because much of our data is under medical ethics protections, and needs to be kept off the general internet.
 
 
 Initial setup
@@ -54,7 +54,7 @@ Because this server contains private medical data, you need to be on campus, con
 
 *If connecting from off-campus*, connect to [polyvpn](http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn).
 
-> 🏚️ Verify connectivity by running `ping data.neuro.polymtl.ca`. If **you cannot ping** then you need to double-check your VPN connection; make sure it is connected, make sure you can reach `joplin`, and if it still isn't working *ask the [Poly network admins](dge.informatique@polymtl.ca)* to unblock your account from this server.
+> 🏚️ Verify connectivity by running `ping data.neuro.polymtl.ca`. If **you cannot ping** then you need to double-check your VPN connection; make sure it is connected, make sure you can reach `joplin`, and if it still isn't working *ask the [Poly network admins](mailto:dge.informatique@polymtl.ca)* to unblock your account from this server.
 
 Verify you can use the server by running `ssh git@data.neuro.polymtl.ca help`. If it hangs, triple-check again your VPN. If it asks for `git@data.neuro.polymtl.ca's password`, double-check that `ls -la ~/.ssh` shows permissions of `drwx------` for the `.` folder, and that the files `id_ed25519` and `id_ed25519.pub` (or `id_rsa` and `id_rsa.pub`) exist with exactly those names. A successful connection looks like:
 
@@ -176,7 +176,7 @@ git annex sync --no-content --only-annex
 git push
 ```
 
-Finally, ask one of that dataset's reviewers to [look at your pull request](#Reviewing-Pull-Requests) by **opening an issue** (not creating a new pull request) on [neuropoly/data-management](https://github.com/neuropoly/data-management). The details of your pull request (i.e. the changes made to the dataset) must be explained in the issue along with name of your branch on which the changes can be found. 
+Finally, ask one of that dataset's reviewers to [look at your pull request](#reviewing-pull-requests) by **opening an issue** (not creating a new pull request) on [neuropoly/data-management](https://github.com/neuropoly/data-management). The details of your pull request (i.e. the changes made to the dataset) must be explained in the issue along with name of your branch on which the changes can be found. 
 
 ```{note}
 You do not have to open an issue if your change is small, such as updating a single image. Instead, describe your change in the commit message and ask one of that dataset's reviewers by Slack.
