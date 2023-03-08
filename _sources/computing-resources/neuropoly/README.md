@@ -25,7 +25,7 @@ getent passwd <GRAMES_ACCOUNT>
 
 ### Home folder
 
-Every [GRAMES](../#poly-grames) account has a school-wide personal home folder. It is backed-up nightly.
+Every [GRAMES](#poly-grames) account has a school-wide personal home folder. It is backed-up nightly.
 
 ::::{tab-set}
 :::{tab-item} macOS

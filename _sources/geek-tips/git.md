@@ -785,7 +785,7 @@ error: unsupported value for gpg.format: ssh
 fatal: bad config variable 'gpg.format' in file '/Users/julien/.gitconfig' at line 3
 ```
 
-Maybe git is not up-to-date (see: [this comment]([url](https://1password.community/discussion/comment/656138/#Comment_656138))). Update it.
+Maybe git is not up-to-date (see: [this comment](https://1password.community/discussion/comment/656138/#Comment_656138)). Update it.
 
 ```{note}
 After reinstalling git, you need to open a new Terminal. 

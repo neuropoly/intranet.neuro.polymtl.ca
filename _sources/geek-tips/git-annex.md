@@ -1,6 +1,6 @@
 # git-annex
 
-[`git annex`](git-annex.branchable.com/) is an extension to git that lets it handle large repos spread in pieces across multiple servers/disks/accounts.
+[`git annex`](https://git-annex.branchable.com/) is an extension to git that lets it handle large repos spread in pieces across multiple servers/disks/accounts.
 
 We are using it because
 
@@ -75,7 +75,7 @@ git config --global annex.thin true # save disk space by de-duplicating checked 
 git config --global annex.private true # prevent attempting to share your local copy of the annex, which is impossible when working in a team
 ```
 
-See [below](#hardlinks) to understand what this setting offers.
+See [below](#annexthin-hardlinks) to understand what this setting offers.
 
 ## New repo
 
@@ -121,7 +121,7 @@ git add .
 git commit -m "Initial data"
 ```
 
-If you are working on a private, internal dataset, continue by [uploading to `data.neuro.polymtl.ca`](./internal-server.md#new-repository).
+If you are working on a private, internal dataset, continue by [uploading to `data.neuro.polymtl.ca`](../data/git-datasets.md#new-repository).
 
 ## `annex.thin` Hardlinks <a id="hardlinks">
 

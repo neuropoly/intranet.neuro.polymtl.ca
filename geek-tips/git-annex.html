@@ -462,7 +462,7 @@ document.write(`
                   
   <section id="git-annex">
 <h1>git-annex<a class="headerlink" href="#git-annex" title="Permalink to this heading">#</a></h1>
-<p><a class="reference internal" href="#git-annex.branchable.com/"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">annex</span></code></span></a> is an extension to git that lets it handle large repos spread in pieces across multiple servers/disks/accounts.</p>
+<p><a class="reference external" href="https://git-annex.branchable.com/"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">annex</span></code></a> is an extension to git that lets it handle large repos spread in pieces across multiple servers/disks/accounts.</p>
 <p>We are using it because</p>
 <ol class="arabic simple">
 <li><p>We have datasets we need to trace but they are too large for plain git to handle them well</p></li>
@@ -534,7 +534,7 @@ upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">annex</span><span class="o">.</span><span class="n">private</span> <span class="n">true</span> <span class="c1"># prevent attempting to share your local copy of the annex, which is impossible when working in a team</span>
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="#hardlinks"><span class="xref myst">below</span></a> to understand what this setting offers.</p>
+<p>See <a class="reference internal" href="#annex-thin-hardlinks">below</a> to understand what this setting offers.</p>
 </section>
 </section>
 <section id="new-repo">
@@ -579,7 +579,7 @@ upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Initial data&quot;</span>
 </pre></div>
 </div>
-<p>If you are working on a private, internal dataset, continue by <a class="reference internal" href="#./internal-server.md#new-repository"><span class="xref myst">uploading to <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code></span></a>.</p>
+<p>If you are working on a private, internal dataset, continue by <a class="reference internal" href="../data/git-datasets.html#new-repository"><span class="std std-ref">uploading to <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code></span></a>.</p>
 </section>
 <section id="annex-thin-hardlinks">
 <h2><code class="docutils literal notranslate"><span class="pre">annex.thin</span></code> Hardlinks <a id="hardlinks"><a class="headerlink" href="#annex-thin-hardlinks" title="Permalink to this heading">#</a></h2>

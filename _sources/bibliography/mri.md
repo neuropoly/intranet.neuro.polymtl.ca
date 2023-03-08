@@ -34,7 +34,6 @@
 
 * [Jupyter book](https://shimming-toolbox.github.io/B1-shimming/) covering the basics of static B1+ shimming
 * [Gaspard Cereza's MSc thesis](https://www.dropbox.com/s/4cv8s4t0ioll32q/Master_thesis_Gaspard_Cereza_corrected_2.pdf?dl=0)
-* [🔒 🎥 Universal Pulse]() TODO
 * [🔒 VOP creation (internal documentation)](https://docs.google.com/document/d/1uqr4UX4VY8H8cZ_DB9zaj12o0xrswRj44AxE3FZauHM/edit#heading=h.uf4xboevl4xa)
 @Gaspard todo: (notably list talks from UHF meeting)
 * 📄 [Williams et al. Ultra-high field MRI: parallel-transmit arrays and RF pulse design. Phys Med Biol 2023](https://iopscience.iop.org/article/10.1088/1361-6560/aca4b7)
