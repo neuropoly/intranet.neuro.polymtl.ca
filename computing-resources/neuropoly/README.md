@@ -20,6 +20,10 @@ If you want to find out who is behind u/pXXXXXX Grames account, type this:
 ~~~
 getent passwd <GRAMES_ACCOUNT>
 ~~~
+To list all lab members:
+~~~
+getent group neuropoly | cut -f 4 -d : | tr , '\n' | xargs -n1 getent passwd | less
+~~~
 ```
 
 
