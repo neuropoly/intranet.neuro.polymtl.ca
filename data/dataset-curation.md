@@ -193,8 +193,8 @@ The [`participants.json`](https://bids-specification.readthedocs.io/en/stable/03
         "LongName": "Participant ID"
     },
     "source_id": {
-        "Description": "Subject ID in the unprocessed data",
-        "LongName": "Subject ID in the unprocessed data"
+        "Description": "Subject ID in the source unprocessed data",
+        "LongName": "Subject ID in the source unprocessed data"
     },
     "species": {
         "Description": "Binomial species name of participant",
