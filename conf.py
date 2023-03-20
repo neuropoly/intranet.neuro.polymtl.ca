@@ -88,6 +88,7 @@ html_theme_options = {
 }
 
 html_context = {
+    "default_mode": "light",
     "github_user": "neuropoly",
     "github_repo": "intranet.neuro.polymtl.ca",
     "github_version": "master",
