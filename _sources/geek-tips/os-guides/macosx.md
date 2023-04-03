@@ -434,7 +434,8 @@ Example: qlmanage -p /Library/QuickLook/DTITK_QuickLookPlugin.qlgenerator
 
 Nice plugins
 
-* [http://www.nitrc.org/projects/dtitk](http://www.nitrc.org/projects/dtitk)
+* NIfTI viewer: [http://www.nitrc.org/projects/dtitk](http://www.nitrc.org/projects/dtitk)
+* DICOM viewer: https://www.rogue-research.com/downloads/
 
 ### Terminal
 
