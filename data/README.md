@@ -13,3 +13,5 @@ git-datasets
 duke
 django
 ```
+
+[Here](https://docs.google.com/spreadsheets/d/1yjcA8Z0COn4OZxusIDHjStH2DpeXvscsj-aWE2X-_sg) useful list of MRI data to use for various projects. 
