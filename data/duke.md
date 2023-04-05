@@ -56,6 +56,11 @@ When working on campus or [over the VPN](../computing-resources/neuropoly/README
     
     </details>
 4. <details><summary>Enter your <em>GRAMES</em> username and password</summary>
+    
+    ```{note}
+    Your user name is your personal number example: p000000 or u000000
+    Your password is the one you use for SSH connections
+    ```
 
     ![Screenshot of password dialog](./duke-macOS-02.png)
     
