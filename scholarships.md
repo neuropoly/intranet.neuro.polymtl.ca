@@ -33,7 +33,7 @@ For students in neurosciences:
 * [FRSQ \(for canadians\)](http://www.frsq.gouv.qc.ca/fr/financement/Programmes_2013_2014/f02_fiche_2et3_cycle.shtml#l-01)
 * [QBIN \(for non-Canadians\) \*\*Deadline: August 28 2014\*\*](https://www.rbiq-qbin.qc.ca/en/contests)
 * [TransMedTech](https://www.polymtl.ca/transmedtech/programmes-de-financement-et-daccompagnement)
-* IVADO
+* [IVADO](https://ivado.ca/en/scholarships-and-grants/phd-excellence-scholarships/)
 * [Consulat France/Quebec \(pour co-tutelles uniquement\)](http://www.consulfrance-quebec.org/Frontenac-aide-a-la-mobilite-pour)
 * [Vanier \(HIGHLY COMPETITIVE!\)](http://vanier.gc.ca/eng/scholarship_details-renseignements_generaux.aspx)
 * [FRQNT \* \[\[http://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/BellandPostgrad-BelletSuperieures\_eng.asp\|NSERC - Alexander Bell \(for canadians\)](http://www.frqnt.gouv.qc.ca/en/bourses-et-subventions/consulter-les-programmes-remplir-une-demande?program=1&group=1&submit=Search)
