@@ -23,7 +23,7 @@
 | Purpose | URL | Notes |
 | :--- | :--- | :--- |
 | Record terminal (for demo) | [https://showterm.io/](https://showterm.io/) | Currently [buggy](https://github.com/ConradIrwin/showterm/issues/48); use [this patched version](https://gist.github.com/kousu/855c164979af078f623fd44f0e1b5350) in the meantime. |
-| GIF screen recording | [https://flameshot.org/](https://flameshot.org/) | Open-source screenshot software to create GIF. Great for demo. |
+| GIF screen recording | [https://flameshot.org/](https://flameshot.org/), [https://getkap.co/](https://getkap.co/) (only for Macos) | Open-source screenshot software to create GIF. Great for demo. |
 | Gantt diagram | [https://www.ganttproject.biz/](https://www.ganttproject.biz/) |
 | QuickLook viewer | DICOM & NIFTI: [Brainsight-quicklook](https://www.rogue-research.com/downloads/), NIFTI: [dtitk](http://www.nitrc.org/projects/dtitk) | Quick viewer for MRI data (only for Macos) |
 
