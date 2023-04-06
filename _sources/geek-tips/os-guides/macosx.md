@@ -77,11 +77,7 @@
 
 **QuickLook modules**
 
-* NIFTI: [dtitk](http://www.nitrc.org/projects/dtitk)
-* DICOM & NIFTI: [Brainsight-quicklook](https://www.rogue-research.com/downloads/)
-  * NOTE: The Brainsight plugin is not working \(at least on my station\) with Mojave.
-* DICOM: [Osirix](http://macappstore.org/osirix-quicklook/)
-
+Nice plugins, see: https://intranet.neuro.polymtl.ca/geek-tips/useful-links.html#software
 Full list of QuickLook modules [here](https://www.quicklookplugins.com/page/2/)\)
 
 **Science**
@@ -434,8 +430,8 @@ Example: qlmanage -p /Library/QuickLook/DTITK_QuickLookPlugin.qlgenerator
 
 Nice plugins
 
-* NIfTI viewer: [http://www.nitrc.org/projects/dtitk](http://www.nitrc.org/projects/dtitk)
-* DICOM viewer: https://www.rogue-research.com/downloads/
+See: https://intranet.neuro.polymtl.ca/geek-tips/useful-links.html#software
+
 
 ### Terminal
 
