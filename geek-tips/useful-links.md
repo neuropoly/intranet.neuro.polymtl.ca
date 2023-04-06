@@ -1,8 +1,8 @@
-# Useful links 🔗
+# Useful links/Software
 
 [Netherlands eScience Center Guide](https://guide.esciencecenter.nl/)
 
-## websites
+## Websites
 
 | Purpose | URL |
 | :--- | :--- |
@@ -24,6 +24,7 @@
 | :--- | :--- | :--- |
 | Record terminal \(for demo\) | [https://showterm.io/](https://showterm.io/) | Currently [buggy](https://github.com/ConradIrwin/showterm/issues/48); use [this patched version](https://gist.github.com/kousu/855c164979af078f623fd44f0e1b5350) in the meantime. |
 | Gantt diagram | [https://www.ganttproject.biz/](https://www.ganttproject.biz/) |
+| QuickLook viewer | DICOM & NIFTI: [Brainsight-quicklook](https://www.rogue-research.com/downloads/), NIFTI: [dtitk](http://www.nitrc.org/projects/dtitk) | Quick viewer for MRI data (only for Macos) |
 
 ## Services
 
