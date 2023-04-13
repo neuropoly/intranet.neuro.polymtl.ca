@@ -1,4 +1,4 @@
-# `💾` Data
+# <span>💾</span> Data
 
 ```{toctree}
 :maxdepth: 1

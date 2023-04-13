@@ -1,4 +1,4 @@
-# `🍱` Social Lunch
+# <span>🍱</span> Social Lunch
 
 Most weeks we have a [social lunch](https://www.google.com/calendar/event?eid=MDkyOWJ0bDRjNmU3ZmdwMWwzc3ZjZTRhdDJfMjAyMjA1MjZUMTYzMDAwWiBoNHRmaXJydHVydHQ4M29hbWhodDM5NnV2OEBn) at 12:30 Thursday. Every 3rd Thursday this overlaps with our group research meeting. These lunches present a chance for us to get together and chat about our research projects, invite collaborators to for them to get to know us informally, etc. 
 

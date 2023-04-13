@@ -1,4 +1,4 @@
-# `📧` Email
+# <span>📧</span> Email
 
 You can access your PolyMTL email account (@polymtl.ca) at https://zimbra.polymtl.ca.
 

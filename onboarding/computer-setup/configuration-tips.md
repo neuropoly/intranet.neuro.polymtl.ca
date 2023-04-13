@@ -1,4 +1,4 @@
-# `💡` Other configuration tips
+# <span>💡</span> Other configuration tips
 
 ## niftiviewer.app (MacOS) <a href="niftiviewerapp" id="niftiviewerapp"></a>
 

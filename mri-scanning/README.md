@@ -2,7 +2,7 @@
 description: Available MRI facilities and useful information about experiments.
 ---
 
-# `🧲` MRI Scanning
+# <span>🧲</span> MRI Scanning
 
 ```{toctree}
 :hidden:

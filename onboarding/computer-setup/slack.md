@@ -1,4 +1,4 @@
-# `🗣` Slack
+# <span>🗣</span> Slack
 
 Slack is used for rapid communication. Please make sure to browse all the channels regularly and feel free to subscribe to any channels you like. 
 
