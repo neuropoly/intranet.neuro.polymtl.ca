@@ -40,9 +40,10 @@
  * unfortunately we can't use a css class because sphinx rolls CSS classes
  * into the anchor links it generates for these titles.
  */
-li.toctree-l1 > a > span:nth-child(1) {
+li:is(.toctree-l1, .toctree-l2, .toctree-l3, .toctree-l4) > a > span:nth-child(1) {
   display: inline-block;
   width: 1.5em;
+  text-align: center;
 }
 
 /* space out lists */
