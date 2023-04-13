@@ -1,4 +1,4 @@
-# `🖥` Compute Canada
+# <span>🖥</span> Compute Canada
 
 ## Create Account
 

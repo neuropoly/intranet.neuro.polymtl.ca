@@ -1,4 +1,4 @@
-# 📖 Comprehensive Exam
+# <span>📖</span> Comprehensive Exam
 
 This page presents a guide to the comprehensive exam at Poly. Comprehensive Exam (CE) is one of the milestones that every doctoral student enrolled at Poly needs to pass before continuing towards the PhD. This guide intends to provide all the details to the CE for students enrolled at the **Biomedical Engineering department**. 
 

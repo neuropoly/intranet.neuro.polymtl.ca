@@ -2,7 +2,7 @@
 description: RF coil building.
 ---
 
-# `🔧` RF Lab
+# <span>🔧</span> RF Lab
 
 In this section you will find anything that has to do with MRI coil building, 
 MRI phantoms, 3D printing, etc.

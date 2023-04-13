@@ -1,4 +1,4 @@
-# `💻` Shell Profile
+# <span>💻</span> Shell Profile
 
 You can edit your shell profile to create custom commands and make the colours in your terminal look nice.
 

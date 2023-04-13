@@ -1,4 +1,4 @@
-# `🖥` Computers \@NeuroPoly
+# <span>🖥</span> Computers \@NeuroPoly
 
 ```{toctree}
 :hidden:

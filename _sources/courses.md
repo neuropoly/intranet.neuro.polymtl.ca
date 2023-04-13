@@ -1,4 +1,4 @@
-# `🎓` University Courses
+# <span>🎓</span> University Courses
 
 ## Admission at Polytechnique
 
