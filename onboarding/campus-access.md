@@ -33,7 +33,9 @@ The list of free desks can be found [here](https://docs.google.com/document/d/11
 
 For Julien's students working on AI projects, you could request an affiliation at Mila. Advantages include: French course, access to Mila facility (open space, infrastructure), and for networking with AI students. 
 
-To request an affiliation, ask Julien to fill up [this form](https://docs.google.com/forms/d/e/1FAIpQLSdChdq0LwkAal5CMc5oDAlacAjMr86xrxYNogqVXSnpT1bReA/viewform).
+To request an affiliation for interns/postdocs, ask Julien to fill up [this form](https://docs.google.com/forms/d/e/1FAIpQLSdChdq0LwkAal5CMc5oDAlacAjMr86xrxYNogqVXSnpT1bReA/viewform).
+
+To request an affiliation for graduate students, send request to: academic.affairs@mila.quebec
 
 
 ## Requirements for room access
