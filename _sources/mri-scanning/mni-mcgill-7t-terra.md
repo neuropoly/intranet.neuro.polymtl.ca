@@ -15,12 +15,11 @@ description: >-
 * Add the session to the MRI log book (see [MRI scanning](./README.md#log-book)).
 
 ## Fill out the screening and consent forms
-* Download the COVID screening form from [here](https://docs.google.com/document/d/1ZYKeX9hy7WDs45spw380bfwJXIG_QeMK/edit?usp=sharing&ouid=117682710501032436327&rtpof=true&sd=true) and ask your participant to fill it out
-* Send it to [Bic-Finance](mailto:bic-finance.mni@mcgill.ca) at least 24h before your scan
 
 * Download the safety screening form [here](https://drive.google.com/file/d/1ezjUSRP9EYNM5zzqMNMIAwwkhevagay6/view?usp=sharing) and ask your participant to fill it out
 * Give it to the MR Techs in person, or send it to them via [email](mailto:mrtechs.neuro@mcgill.ca)
 * Doiwnload the [consent form](https://drive.google.com/file/d/1yS2MxG3P7QuDTcTUhfMIVhkzl9FpY8AS/view?usp=share_link), ask your participant to sign it and sign it yourself at the date of the scan.
+* Note that COVID screening forms are no longer necessary at the MNI. If your subject has COVID, then: "If your participant tests COVID positive (a screening test was performed) please send us proof of the Rapid Response COVID-19 Antigen Rapid Test cassette.   Please use a permanent marker to indicate on the Cassette the date the test was taken and email it to us ( bic-finance.mni@mcgill.ca).    Failure to do that we will be charging for any last minute cancellation as is our policy."
 
 
 ## Download the data
