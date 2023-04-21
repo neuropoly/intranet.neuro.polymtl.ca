@@ -20,7 +20,7 @@ It has 2 parts: a written exam and an oral presentation.
 
 Fix a date for the written exam as early as possible. Planning to write your exam in November? Fix a date (and let the jury know) by the end of September (or earlier)!
 
-**Structure:** At the Biomedical Engineering Department, how it is done is as follows: the graduate student coordinator asks the jury to recommend a few articles 2-3 weeks before the exam. The jury members send the articles to you, and you have to read them thoroughly. You will know the topics on which these articles will be sent beforehand (more on this later).
+**Structure:** In Biomedical Engineering, how it is done is as follows: the graduate student coordinator asks the jury to recommend a few articles 2-3 weeks before the exam. The jury members send the articles to you, and you have to read them thoroughly. You will know the topics on which these articles will be sent beforehand (more on this later).
 
 As the day of the exam approaches, the jury sends the questions to the coordinator (behind-the-scenes).  On the exam day, the coordinator will hand you the questions. 
 
