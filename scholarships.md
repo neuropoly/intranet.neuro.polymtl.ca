@@ -74,4 +74,4 @@ Non-Canadians \(and Canadians\):
 
 ## Travel awards
 
-
+* [QBIN Conference Travel Award (small amount, max 2 people per lab per year)](https://rbiq-qbin.qc.ca/conference-allowance/)
