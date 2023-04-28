@@ -74,5 +74,4 @@ Non-Canadians \(and Canadians\):
 
 ## Travel awards
 
-* [http://www.bwfund.org/grant-programs/biomedical-sciences/collaborative-research-travel-grants](http://www.bwfund.org/grant-programs/biomedical-sciences/collaborative-research-travel-grants)
-* [https://www.omnicompete.com/cpnchallenge.html](https://www.omnicompete.com/cpnchallenge.html)
+
