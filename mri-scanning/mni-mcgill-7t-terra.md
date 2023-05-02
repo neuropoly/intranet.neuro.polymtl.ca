@@ -18,7 +18,7 @@ description: >-
 
 * Download the safety screening form [here](https://drive.google.com/file/d/1ezjUSRP9EYNM5zzqMNMIAwwkhevagay6/view?usp=sharing) and ask your participant to fill it out
 * Give it to the MR Techs in person, or send it to them via [email](mailto:mrtechs.neuro@mcgill.ca)
-* Doiwnload the [consent form](https://drive.google.com/file/d/1yS2MxG3P7QuDTcTUhfMIVhkzl9FpY8AS/view?usp=share_link), ask your participant to sign it and sign it yourself at the date of the scan.
+* Download the [consent form](https://drive.google.com/file/d/1yS2MxG3P7QuDTcTUhfMIVhkzl9FpY8AS/view?usp=share_link), ask your participant to sign it and sign it yourself at the date of the scan.
 * Note that COVID screening forms are no longer necessary at the MNI. "If your participant tests COVID positive (a screening test was performed) please send us proof of the Rapid Response COVID-19 Antigen Rapid Test cassette.   Please use a permanent marker to indicate on the Cassette the date the test was taken and email it to us ( bic-finance.mni@mcgill.ca).    Failure to do that we will be charging for any last minute cancellation as is our policy."
 
 
