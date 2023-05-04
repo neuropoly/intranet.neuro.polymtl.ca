@@ -2,7 +2,7 @@
 
 ## Calendar
 
-The following google calendars are available. In order to subscribe to any of these calendar, click the "+GoogleCalendar" at the bottom right of the browser after clicking on the calendar.
+The following Google Calendars are available. In order to subscribe to any of these calendar, click the "+GoogleCalendar" at the bottom right of the browser after clicking on the calendar.
 
 | [**NeuroPoly**](https://calendar.google.com/calendar/embed?src=h4tfirrturtt83oamhht396uv8%40group.calendar.google.com&ctz=America%2FToronto) | This is the main calendar that lists all internal meetings. | 
 | --- | --- |
