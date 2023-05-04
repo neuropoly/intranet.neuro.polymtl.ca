@@ -12,6 +12,10 @@ The following google calendars are available. In order to subscribe to any of th
 | [**Holiday**](https://calendar.google.com/calendar/embed?src=qtrbj6k5msf69q65gtiv0fnogc%40group.calendar.google.com&ctz=America%2FToronto) | If you are planning to go on vacation, please add your dates here so your lab mates know when you are not available. |
 | [**Lab access**](https://calendar.google.com/calendar/embed?src=f6jauphqn3nfqdb8ghaomgl7k0%40group.calendar.google.com&ctz=America%2FToronto) | To note when you will be in the lab (private). |
 
+```{warning}
+We do not recommend using Apple Calendar since it has numerous syncing bugs with Google Calendar. For example, you can miss notifications about event updates.
+```
+
 ## Meetings
 
 | Project | Agenda | Slack |
