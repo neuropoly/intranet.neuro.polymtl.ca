@@ -1,4 +1,4 @@
-# Contributing Guidelines
+# Software development
 
 ## Introduction
 
@@ -46,9 +46,9 @@ If you experience an error, copy/paste the Terminal output (include your syntax)
 * If there are < 10 lines of text, embed it directly in your comment in GitHub. Use ` ```<CODE HERE>``` ` to format as code.
 * If there are 10+ lines, either use an external website such as [pastebin](https://pastebin.com) (copy/paste your text and include the URL in your comment), or use [collapsible Github markdown capabilities​](https://gist.github.com/ericclemmons/b146fe5da72ca1f706b2ef72a20ac39d#using-details-in-github).
 
-> **Important**
->
-> Provide steps to **reproduce** the issue. First, try to reproduce your issue using publicly-available data. If the error is data-specific, upload a zipped version of the data directly into GitHub (not the full dataset, only what's required to be able to reproduce the error).
+```{important}
+Provide steps to **reproduce** the issue. First, try to reproduce your issue using publicly-available data. If the error is data-specific, upload a zipped version of the data directly into GitHub (not the full dataset, only what's required to be able to reproduce the error).
+```
 
 Add useful information such as screenshots, etc.
 
@@ -107,7 +107,7 @@ Please review your changes for styling issues, clarity, according to the [PEP8 c
 The PEP8 convention, particularly line lengths, does not apply to markdown and rst/sphinx documentation files (see below).
 ```
 
-```{attention}
+```{important}
 Please, do not address your functional changes in the same commits as any styling clean-up you may be doing on existing code. This will ease the review process.
 ```
 
@@ -203,7 +203,9 @@ Any changes submitted for inclusion to the master branch will have to go through
 
 Only request a review when you deem the PR as "good to go". If the PR is not ready for review, convert it to a "Draft".
 
+```{note}
 Github may suggest you to add particular reviewers to your PR. If that's the case and you don't know better, add all of these suggestions. The reviewers will be notified when you add them.
+```
 
 ### Working on "Epic" Changes
 

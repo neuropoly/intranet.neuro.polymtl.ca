@@ -7,7 +7,7 @@ campus-access
 infrastructure
 dropbox-google-drive
 computer-setup/README
-developer-setup
+software-development
 consultants-ra
 postdoc
 ```
