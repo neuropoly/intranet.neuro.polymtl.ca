@@ -103,9 +103,14 @@ Please review your changes for styling issues, clarity, according to the [PEP8 c
 * [flake8](https://pypi.org/project/flake8/)
 * [pylint](https://www.pylint.org)
 
-Note that the PEP8 convention, particularly line lengths, does not apply to markdown and rst/sphinx documentation files (see below).
+```{note}
+The PEP8 convention, particularly line lengths, does not apply to markdown and rst/sphinx documentation files (see below).
+```
 
-Do not address your functional changes in the same commits as any styling clean-up you may be doing on existing code.
+```{attention}
+Please, do not address your functional changes in the same commits as any styling clean-up you may be doing on existing code. This will ease the review process.
+```
+
 
 ### Documentation and Docstrings
 
