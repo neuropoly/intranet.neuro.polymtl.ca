@@ -150,7 +150,7 @@ Clean up your commit sequence. If your are not familiar with git, [this good tut
 
 Focus on committing one logical change at a time. See [this article](https://github.com/erlang/otp/wiki/writing-good-commit-messages) on the subject.
 
-## Submitting a Pull Request
+## Submitting a Pull Request (PR)
 
 ### PR Title
 
@@ -164,9 +164,11 @@ The PR title is used to automatically generate the [Changelog](https://github.co
 
 Describe what the PR is about, explain the approach and possible drawbacks. Don't hesitate to repeat some of the text from the related issue (easier to read than having to click on the link).
 
-If the PR fixes issue(s), indicate it after your introduction: `Fixes #XXXX, Fixes #YYYY%%`. 
+If the PR fixes issue(s), indicate it after your introduction: Example: `Fixes #25, #78`. 
 
-Note: it is important to respect the syntax above so that the issue(s) will be closed upon merging the PR.
+```{note}
+It is important to respect the syntax above so that the issue(s) will be closed upon merging the PR.
+```
 
 ### PR Labels
 
