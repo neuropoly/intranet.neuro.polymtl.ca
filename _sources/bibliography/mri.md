@@ -41,6 +41,7 @@
 
 ## Pulse Sequences
 
+* [🕹️ SimMRI – A web-based MR Image Simulator for easy accessible MRI teaching](https://virtmri.keks.li/)
 * [Spinbench: Pulse sequence simulator](http://www.heartvista.com/spinbench/)
 * Open source pulse sequence programming (Matlab): [http://pulseq.github.io/](http://pulseq.github.io/)
 * [MR Pulse Sequences: What Every Radiologist Wants to Know but Is Afraid to Ask](https://pubs.rsna.org/doi/10.1148/rg.262055063)
