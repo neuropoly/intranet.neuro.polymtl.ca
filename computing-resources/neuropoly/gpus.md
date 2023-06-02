@@ -1023,7 +1023,7 @@ For details, see [ivadomed/data-conversion](https://github.com/ivadomed/data-con
 #### Train a model
 
 ```{note}
-Always run a training inside a virtual terminal. You can use [`screen`](https://intranet.neuro.polymtl.ca/geek-tips/bash-shell/README.html#screen-for-background-processes) or `tmux`.
+Always run training inside the virtual terminal. You can use [`screen`](https://intranet.neuro.polymtl.ca/geek-tips/bash-shell/README.html#screen-for-background-processes) or `tmux`.
 ```
 
 1. Validate dataset integrity
