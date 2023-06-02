@@ -973,7 +973,7 @@ pip install nnunetv2
 pip install --upgrade git+https://github.com/FabianIsensee/hiddenlayer.git
 ```
 
-#### Set environment variables and Data organization
+#### Environment variables
 
 For details, see [here](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/set_environment_variables.md#linux--macos).
 
