@@ -373,13 +373,10 @@ If you no longer are working on a specific, make sure that it is deleted (in ord
 
 ### Add extra devices
 
-Like with Github, you can authorize any number of secondary devices.
+Like with Github, you can authorize any number of secondary devices. Assuming you already have authorization on `romane` and want to authorize yourself on `joplin`, here is the procedure: 
 
-For example, to authorize yourself from the server `romane`, log in to `romane` and make an ssh key if one doesn't exist (`ssh-keygen`), copy the public part of it (`~/.ssh/id_rsa.pub`) to a device that is already authenticated (e.g. as `~/id_rsa.romane.pub`), then authorize yourself by:
-
-```
-cat ~/id_rsa.romane.pub | ssh git@data.neuro.polymtl.ca keys add <yourusername>@romane
-```
+* Log on to `joplin` and create a new ssh key with `ssh-keygen`. Once this is done, the public part of the new ssh key can be found in the file `~/.ssh/id_*.pub`. 
+* In a new terminal, log on to `romane` and run `ssh git@data.neuro.polymtl.ca keys add <yourusername>@joplin`. This asks for the public part of the new ssh key created on `joplin`. Copy-paste the contents of the file and press Enter!
 
 Note: you can check your `<yourusername>` by running `ssh git@data.neuro.polymtl.ca info`.
 
