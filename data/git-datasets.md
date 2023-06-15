@@ -280,7 +280,7 @@ git push origin :synced/xy/some-topic
 ### New repository
 
 ```{note}
-Only NeuroPoly admnistrators have the needed privileges to create a new repository. Please contact the admins  on the #computers Slack channel for assistance; they'll create a new empty repository for you and grant you write privileges so that you can add your dataset in a git branch and open a [pull-request](#Upload).
+Only NeuroPoly admnistrators have the needed privileges to create a new repository. Please contact the admins  on the #computers Slack channel for assistance; they'll create a new empty repository for you and grant you write privileges so that you can add your dataset in a git branch and open a [pull-request](#upload).
 ```
 
 To make a new repo, follow this [recipe](../geek-tips/git-annex.md#new-repo).
