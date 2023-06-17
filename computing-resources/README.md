@@ -6,6 +6,7 @@ neuropoly/README
 clusters-at-criugm
 compute-canada
 printer
+microsoft365
 youtube
 ```
 
