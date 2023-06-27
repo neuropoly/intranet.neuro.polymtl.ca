@@ -4,7 +4,7 @@
 NeuroPoly's conference folder is on [google drive](https://drive.google.com/drive/folders/0Bx3A13n3Q_EANllhUC0wRmlrblk?resourcekey=0-HIxgXUCsE6PKNnsHrcLfOQ).
 ```
 
-## List of Conferences <a id="list_of_conferences"></a>
+## List of Conferences
 
 **Machine Learning:**
 
@@ -23,7 +23,7 @@ NeuroPoly's conference folder is on [google drive](https://drive.google.com/driv
 * ECTRIMS
 * [ACTRIMS (Americas Committee for Treatment and Research in Multiple Sclerosis)](https://forum.actrims.org/about)
 
-### ISMRM <a id="ismrm"></a>
+### ISMRM
 
 * [2015 May 30-June 05, Toronto, ON, Canada](https://www.neuro.polymtl.ca/internal_resources/conferences/ismrm15)
 * 2016 May 7-13, Singapore
@@ -37,7 +37,7 @@ NeuroPoly's conference folder is on [google drive](https://drive.google.com/driv
 * 2024 May 04-09, Singapore
 * 2025 May 10-15, Honolulu, Hawaii, USA
 
-### OHBM <a id="ohbm"></a>
+### OHBM
 
 * 2015 June 14-18, Honolulu, Hawaii, USA
 * 2016 June 26-30, Geneva, Switzerland
@@ -51,7 +51,7 @@ NeuroPoly's conference folder is on [google drive](https://drive.google.com/driv
 * 2024 June 23-27, Seoul, Korea
 * 2025 June 24-28, Brisbane, Australia
 
-### MICCAI <a id="miccai"></a>
+### MICCAI
 
 * 2015 Oct 5-9, Munich, Germany
 * 2016 Oct 17-21, Athens, Greece
@@ -60,7 +60,7 @@ NeuroPoly's conference folder is on [google drive](https://drive.google.com/driv
 * 2019 TBD, Hong Kong, China
 * 2020 TBD, San Miguel, Lima, Peru
 
-### ECTRIMS <a id="ectrims"></a>
+### ECTRIMS
 
 * 2015 Oct 7-10, Barcelona, Spain
 * 2016 Sept 14-17, London, UK
@@ -68,11 +68,11 @@ NeuroPoly's conference folder is on [google drive](https://drive.google.com/driv
 * 2018 Oct, Berlin, Germany
 * 2019 Sept, Stockholm, Sweden
 
-### ISBI <a id="isbi"></a>
+### ISBI
 
 * 2017 Apr 18-21, Melbourne, Australia
 
-### IEEE EMBS ISC <a id="ieee_embs_isc"></a>
+### IEEE EMBS ISC
 
 * [2016 May 29-31, Ottawa, Canada](http://sites.ieee.org/embs-isc-2016/)
 
@@ -81,16 +81,16 @@ NeuroPoly's conference folder is on [google drive](https://drive.google.com/driv
 * [McGill Biomedical Engineering Seminars](https://www.mcgill.ca/bme/seminars)
 * [UdeM - Groupe De Recherche Sur La Signalisation Neurale Et La Circuiterie (SNC)](https://www.grsnc.org/seminairesetudiants)
 
-## Abstracts <a id="abstracts"></a>
+## Abstracts
 
-### Create Draft <a id="create_your_draft"></a>
+### Create Draft
 
 * Use Google Drive \(for sharing with authors and easy editing\)
   * Example here: [2018 ISMRM SyMR Repeatability](https://docs.google.com/document/d/1DM-94OFEmWYjskgAUJCFfTFNnzsTtXOAV_k7TFpSNPc/edit)
 * Add figures at the end \(up to 5 figures\)
 * more info here: [How to submit your new HTML-based ISMRM abstract](https://medium.com/@mrimark/how-to-submit-your-new-html-based-ismrm-abstract-a9cb2b159d4c)
 
-### Share with Authors <a id="share_with_authors"></a>
+### Share with Authors
 
 To send at least one week before the deadline:
 
@@ -120,14 +120,14 @@ Email body:
   * [ISMRM 2021 Stipend Programs](https://www.ismrm.org/21m/stipends/)
 * Send formatted versions to all co-authors before submitting
 
-## Talk <a id="talk"></a>
+## Talk
 
 Please use templates for presentations:
 
 * [Keynote template](https://drive.google.com/file/d/1I7h7Fe-b5wOyzqFFHqskCGG5fXYwvCAV/view?usp=sharing)
 * [PowerPoint template](https://docs.google.com/presentation/d/1iHf2i2CdAq4VjIh5CBADQnU00xJkDJHX/edit?usp=sharing&ouid=113015882791327478973&rtpof=true&sd=true)
 
-## Posters <a id="posters"></a>
+## Posters
 
 For the visibility of the lab, please use this template in [Keynote](https://drive.google.com/open?id=1Nqn9u4-J6aNYTWLWY1pa28qRrBWSqxGs) or [PowerPoint](https://drive.google.com/open?id=12CkzxhUF6R8kHm2csfpIAL3vMxbkxV-R) format.
 
@@ -138,7 +138,7 @@ For the visibility of the lab, please use this template in [Keynote](https://dri
 * [http://www.makesigns.com/tutorials/](http://www.makesigns.com/tutorials/)
 * [http://www.scientifica.uk.com/neurowire/how-to-make-your-scientific-posters-stand-out](http://www.scientifica.uk.com/neurowire/how-to-make-your-scientific-posters-stand-out)
 
-**Instituional Logos**
+**Institutional Logos**
 
 Neuropoly, UNF, CHUM, etc logos can be found [here](https://drive.google.com/drive/u/0/folders/0Bx3A13n3Q_EAZHhQR2x6cXFOMHc?resourcekey=0-iHgFYODqFfzUnBHGtozngw)
 
@@ -200,20 +200,24 @@ Public access to the Spinal Cord Toolbox on SourceForge can be provided on the p
 
 ![](.gitbook/assets/qrcode_toolbox.png)
 
-## Reimbursement <a id="reimbursement"></a>
+## Reimbursement
 
 The typical policy of the lab is that you can get your conference subscription reimbursed if you have something to present. If you don't, please ask your supervisor if they can reimburse the attendance.
 
 You are reimbursed for:
 
-* registration fees. ⚠️ ‎ The lab will only reimburse the cost of early fee. If you register late, you will have to pay the difference.
-  * for ISMRM: make sure to be a student member– it reduces the overall cost of the conference– and make sure to do it ON TIME \(not last minute\)
+* registration fees. Note: The lab will only reimburse the cost of early fee. If you register late, you will have to pay the difference.
+  * for ISMRM: make sure to be a student member– it reduces the overall cost of the conference– and make sure to do it AHEAD OF TIME (not last minute)
 * transport
 * housing
 
+You are not reimbursed for:
+
+* food
+
 You can be reimbursed by two means:
 
-**A priori \(travel advance\)**
+**A priori (travel advance)**
 
 Send an email to `dge.sec-biomedical@polymtl.ca` and ask them for a travel advance.
 
