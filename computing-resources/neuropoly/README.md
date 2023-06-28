@@ -126,7 +126,7 @@ set -eo pipefail
 USER="<YOUR_CAS_USERNAME>"
 PASS="<YOUR_CAS_PASSWORD>"
 GROUP=PolySSL # or PolyInvites, depending on your account's status
-echo -n "$PASS" | sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-stdin ssl.vpn.polymtl.ca
+echo -n "$PASS" | sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-stdin --reconnect-timeout 20 ssl.vpn.polymtl.ca
 ```
 
 To connect to the VPN, you need to run:
