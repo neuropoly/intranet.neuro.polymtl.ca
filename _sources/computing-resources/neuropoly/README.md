@@ -26,6 +26,12 @@ getent group neuropoly | cut -f 4 -d : | tr , '\n' | xargs -n1 getent passwd | l
 ~~~
 ```
 
+### Password
+
+```{important}
+Once in a while, you are requested to change your password. To do so, log onto another machine (eg `bireli`, `joplin`) and use the command `passwd` to change your password. 
+```
+
 
 ### Home folder
 

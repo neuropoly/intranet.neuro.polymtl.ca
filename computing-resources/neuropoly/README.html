@@ -431,6 +431,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#poly-grames">Poly-Grames</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#poly-grames-network-account">Poly-Grames Network Account</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#password">Password</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#home-folder">Home folder</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#poly-grames-groups">Poly-Grames Groups</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-poly-grames-server">Connect to Poly-Grames Server</a></li>
@@ -508,6 +509,13 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">getent</span> <span class="n">group</span> <span class="n">neuropoly</span> <span class="o">|</span> <span class="n">cut</span> <span class="o">-</span><span class="n">f</span> <span class="mi">4</span> <span class="o">-</span><span class="n">d</span> <span class="p">:</span> <span class="o">|</span> <span class="n">tr</span> <span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">|</span> <span class="n">xargs</span> <span class="o">-</span><span class="n">n1</span> <span class="n">getent</span> <span class="n">passwd</span> <span class="o">|</span> <span class="n">less</span>
 </pre></div>
 </div>
+</div>
+</section>
+<section id="password">
+<h3>Password<a class="headerlink" href="#password" title="Permalink to this heading">#</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Once in a while, you are requested to change your password. To do so, log onto another machine (eg <code class="docutils literal notranslate"><span class="pre">bireli</span></code>, <code class="docutils literal notranslate"><span class="pre">joplin</span></code>) and use the command <code class="docutils literal notranslate"><span class="pre">passwd</span></code> to change your password.</p>
 </div>
 </section>
 <section id="home-folder">
@@ -1280,6 +1288,7 @@ PC/Linux</label><div class="sd-tab-content docutils">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#poly-grames">Poly-Grames</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#poly-grames-network-account">Poly-Grames Network Account</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#password">Password</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#home-folder">Home folder</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#poly-grames-groups">Poly-Grames Groups</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-poly-grames-server">Connect to Poly-Grames Server</a></li>
