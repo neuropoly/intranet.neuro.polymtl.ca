@@ -168,7 +168,7 @@ hello yourusername, this is git@data running gitolite3 3.6.11-2 (Debian) on git 
  R W    datasets/uk-biobank
 ```
 
-Once you have access you can:
+Once you have access you should:
 
 ```
 git annex copy --to=origin
