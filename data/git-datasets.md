@@ -145,6 +145,10 @@ git pull && git annex sync --no-content && git annex get .
 Despite not being hosted on Github, we are still using a [pull-request workflow](https://guides.github.com/introduction/flow/).
 So, to make changes to a dataset, first ask an admin to [grant you upload rights](#permissions), then make a working branch for your changes. If your initials are `xy` and you are working on `some-topic`:
 
+```{note}
+If you are uploading data to a new dataset, run `git annex dead here` to configure your local clone of the repository.
+```
+
 ```
 git checkout -b xy/some-topic master
 # Edit your files, add new ones, etc. 
