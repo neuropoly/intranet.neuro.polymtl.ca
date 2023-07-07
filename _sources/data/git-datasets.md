@@ -146,7 +146,7 @@ Despite not being hosted on Github, we are still using a [pull-request workflow]
 So, to make changes to a dataset, first ask an admin to [grant you upload rights](#permissions), then make a working branch for your changes. If your initials are `xy` and you are working on `some-topic`:
 
 ```{note}
-If you are uploading data to a new dataset, run `git annex dead here` to configure your local clone of the repository.
+If you are uploading data to a dataset for the first time, run `git annex dead here` to configure your local clone of the repository.
 ```
 
 ```
