@@ -331,17 +331,6 @@ Fields:
 - region = {SC, GM, WM, CSF, brain, brainstem, tumor, edema, cavity, axon, myelin}
 ```
 
-If you have multiple derivatives, you can create a folder for each of them, and then follow the same logic as above. For example:
-
-```
-...
-...
-└── derivatives
-    ├── dataset_description.json
-    ├── manual_labels
-    └── manual_labels_softseg
-```
-
 ⚠️ Each label file (such as segmentations or labeling) must be accompanied by a JSON sidecar file. Convention for JSON sidecar files:
 
 ```json
@@ -353,4 +342,15 @@ If you have multiple derivatives, you can create a folder for each of them, and 
 
 ```{note}
 `"Date"` is optional. We usually include it when running the manual correction via [python scripts](https://github.com/spinalcordtoolbox/manual-correction).
+```
+
+If you have multiple derivatives, you can create a folder for each of them and then follow the same logic as above. For example:
+
+```
+...
+...
+└── derivatives
+    ├── dataset_description.json
+    ├── manual_labels
+    └── manual_labels_softseg
 ```
