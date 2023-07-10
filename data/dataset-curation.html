@@ -729,6 +729,10 @@ script should then be saved under the <code class="docutils literal notranslate"
 According to BIDS, these data should go under <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html"><code class="docutils literal notranslate"><span class="pre">derivatives/</span></code></a> folder, and follow the same folder logic as the <code class="docutils literal notranslate"><span class="pre">sub-*</span></code> data.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> must include its own <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> file (with <code class="docutils literal notranslate"><span class="pre">&quot;DatasetType&quot;:</span> <span class="pre">&quot;derivative&quot;</span></code>).</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>If derivatives files were generated from preprocessed data (e.g., after reorientation and resampling), describe the
 preprocessing steps in README.md file. Also, include the link (pointing to fixed GitHub version) to the pipeline to the
 README.md file.</p>
@@ -794,10 +798,6 @@ README.md file.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code class="docutils literal notranslate"><span class="pre">&quot;Date&quot;</span></code> is optional. We usually include it when running the manual correction via <a class="reference external" href="https://github.com/spinalcordtoolbox/manual-correction">python scripts</a>.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> must include its own <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> file (with <code class="docutils literal notranslate"><span class="pre">&quot;DatasetType&quot;:</span> <span class="pre">&quot;derivative&quot;</span></code>).</p>
 </div>
 </section>
 </section>
