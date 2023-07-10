@@ -294,7 +294,7 @@ Example:
 ...
 └── derivatives
     ├── dataset_description.json
-    └── manual_labels
+    └── labels
         ├── sub-XXX
         │   ├── anat
         │   │   ├──sub-XXX_T1w_label-SC_seg.nii.gz
@@ -338,7 +338,7 @@ If you have multiple derivatives, you can create a folder for each of them, and 
     └── manual_labels_softseg
 ```
 
-Convention for derivatives JSON metadata:
+⚠️ Each label file (such as segmentations or labeling) must be accompanied by a JSON sidecar file. Convention for JSON sidecar files:
 
 ```json
 {

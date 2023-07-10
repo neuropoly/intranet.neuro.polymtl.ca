@@ -743,7 +743,7 @@ README.md file.</p>
 ...
 └── derivatives
     ├── dataset_description.json
-    └── manual_labels
+    └── labels
         ├── sub-XXX
         │   ├── anat
         │   │   ├──sub-XXX_T1w_label-SC_seg.nii.gz
@@ -784,7 +784,7 @@ README.md file.</p>
     └── manual_labels_softseg
 </pre></div>
 </div>
-<p>Convention for derivatives JSON metadata:</p>
+<p>⚠️ Each label file (such as segmentations or labeling) must be accompanied by a JSON sidecar file. Convention for JSON sidecar files:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;Author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Firstname Lastname&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;Date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YYYY-MM-DD HH:MM:SS&quot;</span>
