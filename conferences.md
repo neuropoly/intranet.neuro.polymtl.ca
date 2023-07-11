@@ -200,7 +200,6 @@ Public access to the Spinal Cord Toolbox ([https://spinalcordtoolbox.com](https:
 
 ```{image} .gitbook/assets/qrcode_toolbox.png
 :width: 200px
-:align: left
 ```
 
 ## Reimbursement
