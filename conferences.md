@@ -198,7 +198,7 @@ They only accept cash. You have two payment options:
 
 Public access to the Spinal Cord Toolbox ([https://spinalcordtoolbox.com](https://spinalcordtoolbox.com)) can be provided on the poster using this QR Code \(download the original image \(2000×2000\) to add to your poster\):
 
-<img src=".gitbook/assets/qrcode_toolbox.png" width="20%" height="20%">
+<img src="https://github.com/neuropoly/intranet.neuro.polymtl.ca/blob/master/.gitbook/assets/qrcode_toolbox.png" width="20%" height="20%">
 
 ## Reimbursement
 
