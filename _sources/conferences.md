@@ -6,17 +6,17 @@ NeuroPoly's conference folder is on [google drive](https://drive.google.com/driv
 
 ## List of Conferences
 
-**Machine Learning:**
+**Machine Learning / Medical image analyis:**
 
-* [ICML](https://icml.cc/)
+* [MICCAI](http://www.miccai.org/)
+* [MIDL](https://www.midl.io/)
 * NeurIPS
-* MIDL
+* [ICML](https://icml.cc/)
 
 **Neuroimaging:**
 
 * ISMRM
 * OHBM
-* MICCAI
 
 **Medical Conferences:**
 
