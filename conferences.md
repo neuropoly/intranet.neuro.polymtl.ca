@@ -204,7 +204,7 @@ Public access to the Spinal Cord Toolbox ([https://spinalcordtoolbox.com](https:
 
 ## Stickers
 
-If you want to promote SCT, you can print stickers. Printing can be done by Polytechnique Montreal Reprography (C-225, Main pavilion). Just send them an email (`reprographie@polymtl.ca`) with this PDF [SCT logo]([url](https://drive.google.com/file/d/1PZrpx6ywsgtFzVZgRdnjIIYqK5wfFa-5/view?usp=sharing)). They are able to print stickers with both transparent and white backgrounds. Recommended size: 8cm (width) × 3.5cm (height). 
+If you want to promote SCT, you can print stickers. Printing can be done by Polytechnique Montreal Reprography (C-225, Main pavilion). Just send them an email (`reprographie@polymtl.ca`) with this PDF [SCT logo](https://drive.google.com/file/d/1PZrpx6ywsgtFzVZgRdnjIIYqK5wfFa-5/view?usp=sharing). They are able to print stickers with both transparent and white backgrounds. Recommended size: 8cm (width) × 3.5cm (height). 
 
 ## Reimbursement
 
