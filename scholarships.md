@@ -61,6 +61,9 @@ FOUNDATIONS
 Canadians
 
 * [http://www.frqnt.gouv.qc.ca/en/bourses-et-subventions/consulter-les-programmes-remplir-une-demande/bourse/postdoctoral-research-scholarship-t0e0ormq1432652171008](http://www.frqnt.gouv.qc.ca/en/bourses-et-subventions/consulter-les-programmes-remplir-une-demande/bourse/postdoctoral-research-scholarship-t0e0ormq1432652171008)
+* FRQS (for more clinical projects)
+* CIHR
+* NSERC
 
 Non-Canadians \(and Canadians\):
 
