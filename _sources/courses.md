@@ -24,7 +24,7 @@ Please refer to the [Règlements généraux des études supérieures ](https://w
 
 :::{tab-item} PhD
 * Details of the program on the [Polymtl website](https://www.polymtl.ca/programmes/programmes/doctorat-en-genie-biomedical-programme-conjoint#).
-* Candidates who already hold a graduate degree may obtain an exemption from all or part of their graduate course credits according to the procedures specified in article 73.1.1 of the specific regulations for graduate studies.
+* Candidates who already hold a graduate degree may obtain an exemption from all or part of their graduate course credits according to the procedures specified in article [73.1.1](https://share.polymtl.ca/alfresco/service/api/node/content/workspace/SpacesStore/24fe6285-9397-49f5-9029-7f3c11fc92a3?a=false&guest=true) of the specific regulations for graduate studies.
 
 ```{important}
 There exist an agreement between universities across Quebec, called [CREPUQ](https://www.bci-qc.ca/en/aehe/agreement/), that allow students to transfer academic credits between institutions. So for example, you could attend a course at UdeM or McGill and receive the credits at Polytechnique Montreal as part of your gradutate program.
