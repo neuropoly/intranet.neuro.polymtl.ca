@@ -934,7 +934,7 @@ model = Network(...).to(device=device)
 
 ## Data
 
-As with the [other stations](https://github.com/neuropoly/neuropoly-internal-docs/tree/24a8cfb83736a4325aa342ece74a89846c1f700d/computing-resources/computing-resources-neuropoly/stations.md#data), you should prefer getting data in via [`git-annex`](https://github.com/neuropoly/data-management/blob/master/internal-server.md), but you can it via [`duke`](https://github.com/neuropoly/neuropoly-internal-docs/tree/24a8cfb83736a4325aa342ece74a89846c1f700d/computing-resources/computing-resources-neuropoly/stations.md#duke) \(which is available to you at `~/duke/temp`\) or any other method \(`scp`, `curl`, `wget`, etc\).
+As with the [other stations](./cpus.md), you should prefer getting data in via `git-annex` in the [git `data` server](../data/git-datasets.md), but you have the option of using [`duke`](../data/duke.md) \(which is available to you at `~/duke/temp`\) or any other method \(`scp`, `curl`, `wget`, etc\).
 
 ## Storage
 
