@@ -310,6 +310,7 @@ Example:
         │   │   ├──sub-XXX_T1w_label-disc.nii.gz
         │   │   ├──sub-XXX_T1w_label-lesion.nii.gz
         │   │   ├──sub-XXX_T1w_label-compression.nii.gz
+        │   │   ├──sub-XXX_T1w_label-rootlet.nii.gz
         ...
         ...
 ```
