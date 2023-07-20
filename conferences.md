@@ -189,10 +189,9 @@ Options to choose when filling out Poly's [Service de la reprographie form](http
 
 **How to pay?**
 
-They accept both cash and cards. You have two payment options:
+They accept both cash and cards.
 
-1. You pay cash when you get your poster and get the refund from the lab afterwards, on conference spending.
-2. You fulfill the form “Demande au centre de reprographie” available at Marie-Claude Nadeau office \(M-5405\) and give it when you get your poster.
+You pay when you get your poster and get the refund from the lab afterwards, on conference spending.
 
 **QR Code on the poster**
 
