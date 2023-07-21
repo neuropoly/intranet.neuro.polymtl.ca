@@ -52,11 +52,6 @@
 * MITK workbench
 * ITKSNAP
 
-**Programming**
-
-* Pycharm. Great IDE For Python.
-* [SourceTree](http://www.sourcetreeapp.com/). Manages git repository.
-
 **Internet stuff**
 
 * Transmission. Torrent manager \(by default the one from OSX is Opera - which is not that cool\)
@@ -86,8 +81,8 @@ Full list of QuickLook modules [here](https://www.quicklookplugins.com/page/2/)\
 
 **Programming**
 
-* [Pycharm](https://www.jetbrains.com/pycharm/download/#section=mac) IDE
-* [Atom](https://atom.io/) Enhanced editor
+* [Pycharm](https://www.jetbrains.com/pycharm/download/#section=mac) Integrated Development Environment (IDE)
+* [VScode](https://code.visualstudio.com/) Integrated Development Environment (IDE)
 
 ## General
 
