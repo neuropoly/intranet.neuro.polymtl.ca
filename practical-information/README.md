@@ -5,6 +5,7 @@ This section provides useful information for applicants to NeuroPoly Lab and new
 ```{toctree}
 :maxdepth: 1
 visa
-moving-to-montreal
+medical
+living-in-montreal
 purchasing-hardware-and-lab-supplies
 ```

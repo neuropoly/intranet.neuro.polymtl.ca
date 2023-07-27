@@ -1,4 +1,4 @@
-# VISAs and Work Permits
+# <span>🌎</span> VISAs and Work Permits
 
 ## Internships
 
