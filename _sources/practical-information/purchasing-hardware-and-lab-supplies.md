@@ -1,9 +1,8 @@
-# Purchasing Supplies
+# <span>🛠</span> Purchasing Supplies
 
 ## Computers
 
 * [System76](https://www.system76.com/home/)
-* Johane Landry's friend
 
 ## RF Lab
 
@@ -102,7 +101,6 @@ Fomblin:
 ### Poster Tube
 
 * [Cutting Mats](http://www.cutting-mats.net/index.html)
-
 
 
 ## Reimbursements
