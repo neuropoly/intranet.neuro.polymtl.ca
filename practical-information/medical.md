@@ -1,6 +1,6 @@
 # <span>🏥</span> Medical
 
-If you are not sure you need to go to the hospital, call [Info-Santé: 811](https://www.quebec.ca/en/health/finding-a-resource/info-sante-811)**. **They will orient you.
+If you are not sure you need to go to the hospital, call [Info-Santé: 811](https://www.quebec.ca/en/health/finding-a-resource/info-sante-811). They will give you good tips and assistance.
 
 
 ## Tele-medicine
