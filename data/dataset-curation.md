@@ -137,7 +137,7 @@ Please use the `dataset_description.json` template below:
     
 ```json
 {
-    "BIDSVersion": "BIDS X.Y.Z",
+    "BIDSVersion": "1.8.0",
     "Name": "<dataset_name>",
     "DatasetType": "raw"
 }
