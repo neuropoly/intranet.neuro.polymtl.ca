@@ -2,8 +2,12 @@
 
 ## Computers
 
-* [Computer facilities - Neuropoly](https://intranet.neuro.polymtl.ca/computing-resources/neuropoly/README.html#cpu-gpu-clusters)
-* [Computer facilities - Compute Canada](https://intranet.neuro.polymtl.ca/computing-resources/compute-canada.html)
+Please submit IT questions [on GitHub](https://github.com/neuropoly/computers/issues/new).
+
+Our systems are documented in
+
+* [Computer facilities - Neuropoly](../computing-resources/neuropoly/)
+* [Computer facilities - Compute Canada](../computing-resources/compute-canada.html)
 
 ## Data
 
