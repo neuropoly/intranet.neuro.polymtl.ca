@@ -23,7 +23,7 @@ Initial setup
 If you already have an account on a server and/or laptop, and you want to have access from a new machine, see the section on [adding extra devices](#add-extra-devices) instead.
 ```
 
-On Slack `#computers` channel, request to be added to the git-annex by providing the contents of your **public key** (examples: `~/.ssh/id_rsa.pub`, `~/.ssh/id_ed25519.pub`). 
+If not already done, reopen your [onboarding ticket](https://github.com/neuropoly/onboarding/issues/) to request to be added to the git-annex by providing the contents of your **public key** (examples: `~/.ssh/id_rsa.pub`, `~/.ssh/id_ed25519.pub`).
 
 A **public key** should look like
 
@@ -284,7 +284,7 @@ git push origin :synced/xy/some-topic
 ### New repository
 
 ```{note}
-Only NeuroPoly admnistrators have the needed privileges to create a new repository. Please contact the admins  on the #computers Slack channel for assistance; they'll create a new empty repository for you and grant you write privileges so that you can add your dataset in a git branch and open a [pull-request](#upload).
+Only NeuroPoly admnistrators have the needed privileges to create a new repository. Please contact the admins on the [#database_mri](https://app.slack.com/client/T034UD4QN/CB232HT46) Slack channel for assistance; they'll create a new empty repository for you and grant you write privileges so that you can add your dataset in a git branch and open a [pull-request](#upload).
 ```
 
 To make a new repo, follow this [recipe](../geek-tips/git-annex.md#new-repo).
