@@ -356,7 +356,7 @@ Logout and back in again and apps should now be in English (or the other languag
 The following CPU and GPU clusters are available for internal use at **NeuroPoly**.
 
 ```{warning}
-Please indicate in [NeuroPoly's "Computer resource" calendar](https://calendar.google.com/calendar/u/0/embed?src=4mg6bgd9pv55thf9486t2miht8@group.calendar.google.com) if you plan to launch intensive calculations on a computer. These are shared resources, so it helps to know which computer is being used and by who, in order to prioritize tasks and make the best of our resources. Your calendar entry could span several days, and should specify your name and the ID or number of GPU/CPU used. Example: `julien@rosenberg:gpu[4,5]`, or `naga@joplin:cpu[n=20]` If you don't have writing permission on this calendar please post a request on Slack #computer.
+Please indicate in [NeuroPoly's "Computer resource" calendar](https://calendar.google.com/calendar/u/0/embed?src=4mg6bgd9pv55thf9486t2miht8@group.calendar.google.com) if you plan to launch intensive calculations on a computer. These are shared resources, so it helps to know which computer is being used and by who, in order to prioritize tasks and make the best of our resources. Your calendar entry could span several days, and should specify your name and the ID or number of GPU/CPU used. Example: `julien@rosenberg:gpu[4,5]`, or `naga@joplin:cpu[n=20]` If you don't have writing permission on this calendar please post a request on [the ticket tracker](https://github.com/neuropoly/computers/issues/).
 ```
 
 ### rosenberg
@@ -564,7 +564,7 @@ smb://hcifst.grames.polymtl.ca/tools
 
 ## Scheduled reboots
 
-Each computer has a regular unattended upgrade that forces a reboot once a week. The date and time of the next reboot will be indicated in a message when you log in. Do try and consider this when starting your computations. If you started a long computation that you think will be interupted by the scheduled reboot, you can contact the admins in the #computers Slack channel to request that the reboot be exceptionally delayed.
+Each computer has a regular unattended upgrade that forces a reboot once a week. The date and time of the next reboot will be indicated in a message when you log in. Do try and consider this when starting your computations. If you started a long computation that you think will be interupted by the scheduled reboot, you can contact neuropoly-admin@liste.polymtl.ca to request that the reboot be exceptionally delayed.
 
 **Admins**: Documentation on the standard operating procedure for delaying scheduled reboots is described [here](https://github.com/neuropoly/computers/blob/master/docs/unattended-upgrades.md).
 
