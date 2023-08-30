@@ -175,7 +175,7 @@ hello yourusername, this is git@data running gitolite3 3.6.11-2 (Debian) on git 
 Once you have access you should:
 
 ```
-git annex copy --to=origin
+git annex copy --all --to=origin
 git annex sync --no-content --only-annex
 git push
 ```
