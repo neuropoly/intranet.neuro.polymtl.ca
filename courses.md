@@ -170,6 +170,7 @@ Electrical and Computer Engineering Course List: [http://www.mcgill.ca/ece/progr
 | [ELE6506](http://www.polymtl.ca/etudes/cours/details.php?sigle=ELE6506)   | Antennes et propagation                                                                                        | Français | Jean-Jacques Laurin |
 | [ELE4501A](http://www.polymtl.ca/etudes/cours/details.php?sigle=ELE4501A) | <p>Circuits et systèmes communications radiofréquences</p><p><em>(laboratoire simulation ADS Agilent)</em></p> | Français | Ke Wu               |
 | [ELE6502](http://www.polymtl.ca/etudes/cours/details.php?sigle=ELE6502)   | Instrumentation automatisée en micro-ondes                                                                     | Français | Cevdet Akyel        |
+| [ELE8500](https://www.polymtl.ca/programmes/cours/circuits-passifs-micro-ondes-0)   | <p>Circuits Passifs Micro-ondes  </p><p><em>(laboratoires d’initiation aux analyseurs de réseau et de spectre)</em></p>  | Français | Ke Wu               |
 
 ### McGill
 
