@@ -37,7 +37,7 @@ During scanning, please keep a log of your experiment:
 
 ### Log book (UNF)
 
-If you scan at UNF, you also need to fill up the log book, which you can access from the UNF's reservation booking form under the link "Link to logbook". 
+If you scan at UNF, you also need to fill up the log book, which you can access from the UNF's reservation booking form under the link "Link to logbook" if you are an operator. If you are _not_ an operator, ask the person who operated the scan to fill the log book or to send you the link to the log book to fill it.
 
 ```{warning}
 It is important to fill the log book the day of the scan.
