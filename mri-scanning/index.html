@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=927b94d3fcb96560df09" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -35,8 +35,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=927b94d3fcb96560df09" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=927b94d3fcb96560df09" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=927b94d3fcb96560df09"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -59,6 +60,15 @@
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -392,10 +402,10 @@
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -403,7 +413,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -430,10 +440,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mri-facilities">MRI facilities</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#book-the-scanner-and-log-in-the-google-calendar"><strong>Book the scanner and log in the google calendar</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-book"><strong>Log book</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pay-a-participant">Pay a participant?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mri-facilities">MRI facilities</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#book-the-scanner-and-log-in-the-google-calendar">Book the scanner and log in the google calendar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-book">Log book</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-book-unf">Log book (UNF)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pay-a-participant">Pay a participant?</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ethics">​Ethics</a></li>
 </ul>
             </nav>
@@ -453,9 +466,8 @@ document.write(`
 <section id="mri-facilities">
 <h2>MRI facilities<a class="headerlink" href="#mri-facilities" title="Permalink to this heading">#</a></h2>
 <p>A list of MRI facilities accessible to NeuroPoly members is available <a class="reference external" href="https://neuropoly.gitbook.io/workspace/facilities#mri-facilities">here</a>. </p>
-</section>
 <section id="book-the-scanner-and-log-in-the-google-calendar">
-<h2><strong>Book the scanner and log in the google calendar</strong><a class="headerlink" href="#book-the-scanner-and-log-in-the-google-calendar" title="Permalink to this heading">#</a></h2>
+<h3>Book the scanner and log in the google calendar<a class="headerlink" href="#book-the-scanner-and-log-in-the-google-calendar" title="Permalink to this heading">#</a></h3>
 <p>If you book the MRI, please use the “<a class="reference external" href="https://calendar.google.com/calendar/embed?src=k4moiei5d2lh84iokouk6lt84o%40group.calendar.google.com&amp;amp;ctz=America%2FToronto">Neuropoly - MRI</a>” google cal.
 Create an event in the gcal, with:</p>
 <ul class="simple">
@@ -466,7 +478,7 @@ Create an event in the gcal, with:</p>
 <p>Details to book an MRI scanner is given in the specific MRI sub-section. </p>
 </section>
 <section id="log-book">
-<h2><strong>Log book</strong><a class="headerlink" href="#log-book" title="Permalink to this heading">#</a></h2>
+<h3>Log book<a class="headerlink" href="#log-book" title="Permalink to this heading">#</a></h3>
 <p>During scanning, please keep a log of your experiment:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.google.com/document/d/1TdBOc2zbDAyLAB5ps7Ls6vB4iISlsonbDusjUKxeYUc/edit">MRI Acquisition Log 2022</a></p></li>
@@ -476,13 +488,22 @@ Create an event in the gcal, with:</p>
 <li><p><a class="reference external" href="https://docs.google.com/document/d/1AgnNL4Kl51Cl8J2h5VJhzOpB3O1EUrWy8_mgb7dbvVA/edit#heading=h.hubt91p52z5p">MRI Acquisition Log 2018</a></p></li>
 </ul>
 </section>
+<section id="log-book-unf">
+<h3>Log book (UNF)<a class="headerlink" href="#log-book-unf" title="Permalink to this heading">#</a></h3>
+<p>If you scan at UNF, you also need to fill up the log book, which you can access from the UNF’s reservation booking form under the link “Link to logbook”.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is important to fill the log book the day of the scan.</p>
+</div>
+</section>
 <section id="pay-a-participant">
-<h2>Pay a participant?<a class="headerlink" href="#pay-a-participant" title="Permalink to this heading">#</a></h2>
+<h3>Pay a participant?<a class="headerlink" href="#pay-a-participant" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Have the participant fill <a class="reference external" href="https://drive.google.com/file/d/1lJw3trkPCvQSfN9paHt5WmiatLp8jmCI/view?usp=sharing">this compensation form</a> (the editable document is located <a class="reference external" href="https://drive.google.com/drive/folders/1b9O_sCaBzGxk97TPMjdBlS7biZnwC7Dl">here</a>).</p></li>
 <li><p>Pay the participant via <em>Interac</em> transfer or cash, or ask Alexandru Foias to do the payment. The person doing the payment will have to complete the compensation form.</p></li>
 <li><p>The person doing the payment can be reimbursed by sending the compensation form to <code class="docutils literal notranslate"><span class="pre">dge.sec-biomedical&#64;polymtl.ca</span></code>. Note that you can ask to be reimbursed multiple payments at once (more time efficient).\</p></li>
 </ul>
+</section>
 </section>
 <section id="ethics">
 <h2>​Ethics<a class="headerlink" href="#ethics" title="Permalink to this heading">#</a></h2>
@@ -497,11 +518,10 @@ Create an event in the gcal, with:</p>
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../data/django.html"
@@ -521,10 +541,7 @@ Create an event in the gcal, with:</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -539,10 +556,13 @@ Create an event in the gcal, with:</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mri-facilities">MRI facilities</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#book-the-scanner-and-log-in-the-google-calendar"><strong>Book the scanner and log in the google calendar</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-book"><strong>Log book</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pay-a-participant">Pay a participant?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mri-facilities">MRI facilities</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#book-the-scanner-and-log-in-the-google-calendar">Book the scanner and log in the google calendar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-book">Log book</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-book-unf">Log book (UNF)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pay-a-participant">Pay a participant?</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ethics">​Ethics</a></li>
 </ul>
   </nav></div>
@@ -591,8 +611,8 @@ By NeuroPoly
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=927b94d3fcb96560df09"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=927b94d3fcb96560df09"></script>
 
   <footer class="bd-footer">
   </footer>

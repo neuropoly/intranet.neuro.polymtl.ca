@@ -15,7 +15,7 @@ mhi-7t-agilent
 
 A list of MRI facilities accessible to NeuroPoly members is available [here](https://neuropoly.gitbook.io/workspace/facilities#mri-facilities).&#x20;
 
-## **Book the scanner and log in the google calendar**
+### Book the scanner and log in the google calendar
 
 If you book the MRI, please use the “[Neuropoly - MRI](https://calendar.google.com/calendar/embed?src=k4moiei5d2lh84iokouk6lt84o%40group.calendar.google.com\&ctz=America%2FToronto)” google cal. 
 Create an event in the gcal, with:
@@ -25,7 +25,7 @@ Create an event in the gcal, with:
 
 Details to book an MRI scanner is given in the specific MRI sub-section.&#x20;
 
-## **Log book**
+### Log book
 
 During scanning, please keep a log of your experiment:
 
@@ -35,7 +35,15 @@ During scanning, please keep a log of your experiment:
 * [MRI Acquisition Log 2019](https://docs.google.com/document/d/1g8H2KxZ5NNIPmhCu9VIDr34VgskPOHVJBfOqMX7BHR8/edit)
 * [MRI Acquisition Log 2018](https://docs.google.com/document/d/1AgnNL4Kl51Cl8J2h5VJhzOpB3O1EUrWy8\_mgb7dbvVA/edit#heading=h.hubt91p52z5p)
 
-## Pay a participant?
+### Log book (UNF)
+
+If you scan at UNF, you also need to fill up the log book, which you can access from the UNF's reservation booking form under the link "Link to logbook". 
+
+```{warning}
+It is important to fill the log book the day of the scan.
+```
+
+### Pay a participant?
 
 * Have the participant fill [this compensation form](https://drive.google.com/file/d/1lJw3trkPCvQSfN9paHt5WmiatLp8jmCI/view?usp=sharing) (the editable document is located [here](https://drive.google.com/drive/folders/1b9O\_sCaBzGxk97TPMjdBlS7biZnwC7Dl)).
 * Pay the participant via _Interac_ transfer or cash, or ask Alexandru Foias to do the payment. The person doing the payment will have to complete the compensation form.
