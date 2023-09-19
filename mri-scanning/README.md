@@ -35,12 +35,8 @@ During scanning, please keep a log of your experiment:
 * [MRI Acquisition Log 2019](https://docs.google.com/document/d/1g8H2KxZ5NNIPmhCu9VIDr34VgskPOHVJBfOqMX7BHR8/edit)
 * [MRI Acquisition Log 2018](https://docs.google.com/document/d/1AgnNL4Kl51Cl8J2h5VJhzOpB3O1EUrWy8\_mgb7dbvVA/edit#heading=h.hubt91p52z5p)
 
-### Log book (UNF)
-
-If you scan at UNF, you also need to fill up the log book, which you can access from the UNF's reservation booking form under the link "Link to logbook" if you are an operator. If you are _not_ an operator, ask the person who operated the scan to fill the log book or to send you the link to the log book to fill it.
-
 ```{warning}
-It is important to fill the log book the day of the scan.
+If you scan at UNF, you also need to fill up the UNF log book, which you can access from the UNF's reservation booking form under the link "Link to logbook" if you are an operator. If you are _not_ an operator, ask the person who operated the scan to fill the log book or to send you the link to the log book to fill it. It is important to fill the log book the day of the scan.
 ```
 
 ### Pay a participant?
