@@ -8,6 +8,10 @@ More details on the UNF website: [https://unf-montreal.ca/en/documentation/facil
 
 ## Booking the scanner
 
+1. First, you should take the MRI safety training (Send an email to support.unf@criugm.qc.ca requesting participation in the training).
+2. Second, you must have an account to reserve the scanner (Send another email to the same address to get your account ready).
+3. The last step includes a disinfection training which will be given to you once you get to UNF for your first scan.
+
 Details about the booking system [here](https://unf-montreal.ca/en/documentation/facility/reservation/).
 
 ```{note}
