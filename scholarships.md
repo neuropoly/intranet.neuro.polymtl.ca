@@ -8,6 +8,8 @@ description: List of scholarships and bursaries students can apply to.
 If you decide to apply, please let your supervisor know at an early stage (several weeks in advance). Make sure to provide a first version of your application at least **2 weeks** before the deadline, so there is time for iterating on the proposal. Please organize your files in the shared Google Drive under the `fellowship/` folder as instructed [here](https://intranet.neuro.polymtl.ca/onboarding/dropbox-google-drive.html#google-drive).
 ```
 
+Up to date deadlines for scholarship applications are kept on the [Scholarships Calendar](https://calendar.google.com/calendar/u/0/embed?src=fc3d25540a50606a23d9f1ede867b0798e2d5d776346cfba4c9574a0e4e29517@group.calendar.google.com&ctz=America/Toronto). Make sure to subscribe to it ("+ Google Calendar") so you can follow and help add deadlines.
+
 ## Masters (MSc)
 
 * [NSERC](http://www.nserc-crsng.gc.ca/students-etudiants/pg-cs/cgsm-bescm_fra.asp) \(need to be Canadian or PR\)
