@@ -8,6 +8,9 @@ description: List of scholarships and bursaries students can apply to.
 If you decide to apply, please let your supervisor know at an early stage (several weeks in advance). Make sure to provide a first version of your application at least **2 weeks** before the deadline, so there is time for iterating on the proposal. Please organize your files in the shared Google Drive under the `fellowship/` folder as instructed [here](https://intranet.neuro.polymtl.ca/onboarding/dropbox-google-drive.html#google-drive).
 ```
 
+Contact person at Polytechnique: Jacqueline Sanchez
+
+
 ## Masters (MSc)
 
 * [NSERC](http://www.nserc-crsng.gc.ca/students-etudiants/pg-cs/cgsm-bescm_fra.asp) \(need to be Canadian or PR\)
