@@ -17,9 +17,13 @@
 1\. Create a virtual environment for a project:
 
 ```
- $ cd my_project_folder
- $ virtualenv my_project
- 
+$ cd my_project_folder
+$ virtualenv venv
+```
+
+Or to specify a Python version:
+```
+$ virtualenv venv -p <PATH_TO_PYTHON>
 ```
 
 2\. To begin using the virtual environment, it needs to be activated:
