@@ -488,9 +488,12 @@ document.write(`
 <section id="virtual-environments">
 <h2>Virtual Environments<a class="headerlink" href="#virtual-environments" title="Permalink to this heading">#</a></h2>
 <p>1. Create a virtual environment for a project:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> $ cd my_project_folder
- $ virtualenv my_project
- 
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd my_project_folder
+$ virtualenv venv
+</pre></div>
+</div>
+<p>Or to specify a Python version:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ virtualenv venv -p &lt;PATH_TO_PYTHON&gt;
 </pre></div>
 </div>
 <p>2. To begin using the virtual environment, it needs to be activated:</p>
