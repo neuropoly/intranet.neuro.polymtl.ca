@@ -24,7 +24,7 @@
 
 * Pixelmator. Image editor that fully took advantage of the Mac OS \(Open GL, Automator, ColorSync etc.\).
 * Seashore. Image editor - Simpler than Pixelmator. Good for quick fix.
-* [ImageMagick](http://www.imagemagick.org/index.php). Command line processing tools for images. E.g., can create GIF. [Tips for installation and usage](https://www.neuro.polymtl.ca/tips_and_tricks/mac/imagemagick_installation)
+* [ImageMagick](http://www.imagemagick.org/index.php). Command line processing tools for images. E.g., can create GIF.
 
 **Audio/Video**
 
