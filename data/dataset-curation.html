@@ -775,7 +775,7 @@ README.md file.</p>
         ...
 </pre></div>
 </div>
-<p>The convention for suffix is inspired from the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/05-derivatives/03-imaging.html#imaging-data-types">BIDS convention</a> and is the following::</p>
+<p>The convention for suffix is inspired from the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/05-derivatives/03-imaging.html#imaging-data-types">BIDS convention</a> and is the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">label-&lt;region&gt;_seg.nii.gz</span></code>: binary segmentation of the region <code class="docutils literal notranslate"><span class="pre">&lt;region&gt;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">label-&lt;region&gt;_probseg.nii.gz</span></code>: probabilistic (soft) segmentation (i.e., values can lie between 0 and 1) of the region <code class="docutils literal notranslate"><span class="pre">&lt;region&gt;</span></code></p></li>
@@ -792,16 +792,20 @@ README.md file.</p>
 <span class="o">-</span> <span class="n">region</span> <span class="o">=</span> <span class="p">{</span><span class="n">SC</span><span class="p">,</span> <span class="n">GM</span><span class="p">,</span> <span class="n">WM</span><span class="p">,</span> <span class="n">CSF</span><span class="p">,</span> <span class="n">brain</span><span class="p">,</span> <span class="n">brainstem</span><span class="p">,</span> <span class="n">tumor</span><span class="p">,</span> <span class="n">edema</span><span class="p">,</span> <span class="n">cavity</span><span class="p">,</span> <span class="n">axon</span><span class="p">,</span> <span class="n">myelin</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>⚠️ Each label file (such as segmentations or labeling) must be accompanied by a JSON sidecar file. Convention for JSON sidecar files:</p>
+<p>⚠️ Each label file (such as segmentations or disc label) must be accompanied by a JSON sidecar file. Convention (see this <a class="reference external" href="https://github.com/spinalcordtoolbox/manual-correction/issues/34">issue</a>) for JSON sidecar files is the following:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;Author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Firstname Lastname&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;Date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YYYY-MM-DD HH:MM:SS&quot;</span>
+<span class="w">    </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;Author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Firstname Lastname&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YYYY-MM-DD HH:MM:SS&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">&quot;Date&quot;</span></code> is optional. We usually include it when running the manual correction via <a class="reference external" href="https://github.com/spinalcordtoolbox/manual-correction">python scripts</a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&quot;Date&quot;</span></code> is optional. We include it when running the manual correction via the <a class="reference external" href="https://github.com/spinalcordtoolbox/manual-correction">manual correction</a> python script.</p>
 </div>
 <p>If you have multiple derivatives, you can create a folder for each of them and then follow the same logic as above. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>...
