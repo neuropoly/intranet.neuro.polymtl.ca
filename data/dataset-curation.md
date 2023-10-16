@@ -315,7 +315,7 @@ Example:
         ...
 ```
 
-The convention for suffix is inspired from the [BIDS convention](https://bids-specification.readthedocs.io/en/stable/05-derivatives/03-imaging.html#imaging-data-types) and is the following::
+The convention for suffix is inspired from the [BIDS convention](https://bids-specification.readthedocs.io/en/stable/05-derivatives/03-imaging.html#imaging-data-types) and is the following:
 
 - `label-<region>_seg.nii.gz`: binary segmentation of the region `<region>`
 - `label-<region>_probseg.nii.gz`: probabilistic (soft) segmentation (i.e., values can lie between 0 and 1) of the region `<region>`
@@ -333,17 +333,21 @@ Fields:
 - region = {SC, GM, WM, CSF, brain, brainstem, tumor, edema, cavity, axon, myelin}
 ```
 
-⚠️ Each label file (such as segmentations or labeling) must be accompanied by a JSON sidecar file. Convention for JSON sidecar files:
+⚠️ Each label file (such as segmentations or disc label) must be accompanied by a JSON sidecar file. Convention (see this [issue](https://github.com/spinalcordtoolbox/manual-correction/issues/34)) for JSON sidecar files is the following:
 
 ```json
 {
-  "Author": "Firstname Lastname",
-  "Date": "YYYY-MM-DD HH:MM:SS"
+    "GeneratedBy": [
+        {
+            "Author": "Firstname Lastname",
+            "Date": "YYYY-MM-DD HH:MM:SS"
+        }
+    ]
 }
 ```
 
 ```{note}
-`"Date"` is optional. We usually include it when running the manual correction via [python scripts](https://github.com/spinalcordtoolbox/manual-correction).
+`"Date"` is optional. We include it when running the manual correction via the [manual correction](https://github.com/spinalcordtoolbox/manual-correction) python script.
 ```
 
 If you have multiple derivatives, you can create a folder for each of them and then follow the same logic as above. For example:
