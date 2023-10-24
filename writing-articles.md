@@ -191,8 +191,12 @@ We recommend you install (and use) the following Adds-on:
 
 ### Overleaf
 
-1. We have a lab paid license for [Overleaf](https://www.overleaf.com). The advantage of a paid license is the possibility to use track change on a document, which is very convenient for writing with multiple co-authors. 
-2. To get the credentials, please contact Julien Cohen-Adad.
+1. We have a lab paid license for [Overleaf](https://www.overleaf.com). The advantage of a paid license is the possibility to use track change on a document, which is very convenient for writing with multiple co-authors.
+2. To get the credentials, please contact one of the NeuroPoly PIs.
+
+```{note}
+Mila provides the [Overleaf Pro license](https://www.overleaf.com/edu/mila#overview) for its students. If you're Julien's student, please contact him to get you added to Mila's account. Then, send an email to `it-support@mila.quebec` requesting an Overleaf Pro license.
+```
 
 ## Tips for writing scientific articles
 
