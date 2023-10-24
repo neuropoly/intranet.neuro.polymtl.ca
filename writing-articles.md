@@ -68,6 +68,60 @@
 | [Magnetic Resonance Imaging (MRI)](https://www.journals.elsevier.com/magnetic-resonance-imaging)                | 2.1           |      |
 | [Journal of Magnetic Resonance Imaging (JMRI)](https://onlinelibrary.wiley.com/journal/15222586)                | 4.0           |      |
 
+## Writing Platforms
+
+### Google Docs
+
+Google Doc is great for collaborating on a paper. We recommend you install (and use) the following Adds-on:
+
+| Add-on                                                                                          | **Purpose**                                                                          |
+| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| [Cross Reference](https://workspace.google.com/marketplace/app/cross\_reference/269114033347)   | Cross-referencing figures on Google Docs                                             |
+| [Markdown Tools](https://workspace.google.com/u/0/marketplace/app/markdown\_tools/788541604518) | Enables adding heading numbers and the creation of a table of contents for markdown. |
+
+### Overleaf
+
+Overleaf is a good platform for writing papers with Latex. Mila provides the [Overleaf Pro license](https://www.overleaf.com/edu/mila#overview) for its students. If you're Julien's student, please contact him to get you added to Mila's account. Then, send an email to `it-support@mila.quebec` requesting an Overleaf Pro license. Having access to the Pro license enables the 'tracking' mode in Overleaf, which is essential when collaborating on a paper with multiple authors.
+
+## Reference manager
+
+### Paperpile
+
+If you write your article with Google Doc, we recommend using [Paperpile](https://paperpile.com) for managing your bibliography.
+
+We have a Paperpile account for the lab. For login please use the Google account `neuropolylab "at" gmail "dot" com`
+
+If you prefer to have your own Paperpile license please request it to your supervisor.
+
+```{note}
+Paperpile on Google Docs works only with Google Chrome.
+```
+
+To install Paperpile:
+
+1. Connect to [Paperpile website](https://paperpile.com) with the NeuroPoly Google account (or with your account if you have a license). Sometimes if you only have a single Google account logged in, you will have to add another account here: [https://accounts.google.com/AccountChooser?service=lso](https://accounts.google.com/AccountChooser?service=lso)
+2. Install Paperpile chrome extension on the browser (Google Chrome)
+3. Use your personal account to connect on Google Docs, start a new document page. Insert citations, when you do Paperpile/Format citations/ it will require you to authorize Paperpile into Google docs.
+4. Authorize Paperpile on Google using your personal account.
+
+## Figures (in vectorial format)
+
+Create and manage figures:
+
+* make your figure in **Keynote** (or **Power Point**)
+* keep only one keynote file
+* number the slide for a specific fig, eg.: slide 1 –> fig 1, slide 2 –> fig 2. The material/old slides go after a big slide called “OLD”.
+* when using phantom and MRI data please indicate the session number, slice, TE, etc. anything so we can reproduce the figure in the future.
+
+Incorporate figure in article:
+
+* Export all your figures into a single PDF document (select: best quality).
+* Open PDF with **Preview**
+* Tools > Rectangular selection
+* CMD+c, CMD+n
+* Save figure
+* Import your figure into Word and use “crop” tool.
+* 
 ## Organizing Folders
 
 ![](.gitbook/assets/phd101212s.gif)
@@ -102,43 +156,6 @@ Excellent [recommendations](https://twitter.com/drbreaky/status/1385863882816647
 * Address comments point-by-point
 * For most comments, the manuscript will need to be updated and the modified text copied in the responses. Please **do not** duplicate this text during the review process, because the manuscript might be edited later by another coauthor, and there will be discrepancies between the manuscript and the responses. Therefore, edit the manuscript first, and in the responses, indicate a placeholder with a comment “will be copy/pasted when final version of the manuscript is ready”.
 * Please read these [ten simple rules for writing a response to reviewers](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005730).
-
-## Managing References
-
-We recommend using [Paperpile](https://paperpile.com) for managing your bibliography.
-
-We have a Paperpile account for the lab. For login please use the Google account `neuropolylab "at" gmail "dot" com`
-
-If you prefer to have your own Paperpile license please request it to your supervisor.
-
-```{note}
-Paperpile on Google Docs works only with Google Chrome.
-```
-
-### Install Paperpile
-
-1. Connect to [Paperpile website](https://paperpile.com) with the NeuroPoly Google account (or with your account if you have a license). Sometimes if you only have a single Google account logged in, you will have to add another account here: [https://accounts.google.com/AccountChooser?service=lso](https://accounts.google.com/AccountChooser?service=lso)
-2. Install Paperpile chrome extension on the browser (Google Chrome)
-3. Use your personal account to connect on Google Docs, start a new document page. Insert citations, when you do Paperpile/Format citations/ it will require you to authorize Paperpile into Google docs.
-4. Authorize Paperpile on Google using your personal account.
-
-## Figures (in vectorial format)
-
-Create and manage figures:
-
-* make your figure in **Keynote** (or **Power Point**)
-* keep only one keynote file
-* number the slide for a specific fig, eg.: slide 1 –> fig 1, slide 2 –> fig 2. The material/old slides go after a big slide called “OLD”.
-* when using phantom and MRI data please indicate the session number, slice, TE, etc. anything so we can reproduce the figure in the future.
-
-Incorporate figure in article:
-
-* Export all your figures into a single PDF document (select: best quality).
-* Open PDF with **Preview**
-* Tools > Rectangular selection
-* CMD+c, CMD+n
-* Save figure
-* Import your figure into Word and use “crop” tool.
 
 ## Check grammar
 
@@ -177,26 +194,6 @@ If using the GPU on Bireli, add:
 > NVIDIA Corporation for the donation of a Titan X GPU
 
 For those with the **Polytechnique MEDITIS** fellowship and other fellowships, please don't forget to mention them.
-
-## Writing Platforms/Software
-
-### Google Docs
-
-We recommend you install (and use) the following Adds-on:
-
-| Add-on                                                                                          | **Purpose**                                                                          |
-| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| [Cross Reference](https://workspace.google.com/marketplace/app/cross\_reference/269114033347)   | Cross-referencing figures on Google Docs                                             |
-| [Markdown Tools](https://workspace.google.com/u/0/marketplace/app/markdown\_tools/788541604518) | Enables adding heading numbers and the creation of a table of contents for markdown. |
-
-### Overleaf
-
-1. We have a lab paid license for [Overleaf](https://www.overleaf.com). The advantage of a paid license is the possibility to use track change on a document, which is very convenient for writing with multiple co-authors.
-2. To get the credentials, please contact one of the NeuroPoly PIs.
-
-```{note}
-Mila provides the [Overleaf Pro license](https://www.overleaf.com/edu/mila#overview) for its students. If you're Julien's student, please contact him to get you added to Mila's account. Then, send an email to `it-support@mila.quebec` requesting an Overleaf Pro license.
-```
 
 ## Tips for writing scientific articles
 
