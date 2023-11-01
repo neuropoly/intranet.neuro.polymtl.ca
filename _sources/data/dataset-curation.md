@@ -302,7 +302,7 @@ Example:
         ├── sub-XXX
         │   ├── anat
         │   │   ├──sub-XXX_T1w_label-SC_seg.nii.gz
-        │   │   ├──sub-XXX_T1w_label-SC_probseg.nii.gz
+        │   │   ├──sub-XXX_T1w_label-SC_softseg.nii.gz
         │   │   ├──sub-XXX_T1w_label-SC_mask.nii.gz
         │   │   ├──sub-XXX_T1w_label-GM_seg.nii.gz
         │   │   ├──sub-XXX_T1w_label-WM_seg.nii.gz
@@ -318,9 +318,9 @@ Example:
 The convention for suffix is inspired from the [BIDS convention](https://bids-specification.readthedocs.io/en/stable/05-derivatives/03-imaging.html#imaging-data-types) and is the following:
 
 - `label-<region>_seg.nii.gz`: binary segmentation of the region `<region>`
-- `label-<region>_probseg.nii.gz`: probabilistic (soft) segmentation (i.e., values can lie between 0 and 1) of the region `<region>`
+- `label-<region>_softseg.nii.gz`: probabilistic (soft) segmentation (i.e., values can lie between 0 and 1) of the region `<region>`
 - `label-<region>_mask.nii.gz`: binary mask of the region `<region>`, for example, cylinder mask with diameter of 35mm centered at the center of the spinal cord
-- `label-<region>_probmask.nii.gz`: probabilistic mask of the region `<region>`
+- `label-<region>_softmask.nii.gz`: probabilistic mask of the region `<region>`
 - `label-centerline.nii.gz`: binary spinal cord centerline
 - `label-disc.nii.gz`: voxels located at the posterior tip of each intervertebral disc, with values corresponding to [SCT convention](https://spinalcordtoolbox.com/user_section/tutorials/registration-to-template/vertebral-labeling/labeling-conventions.html?highlight=labeling)
 - `label-pmj.nii.gz`: a single voxel with value of `50` corresponding to the pontomedullary junction (PMJ), see [SCT convention](https://spinalcordtoolbox.com/user_section/tutorials/registration-to-template/vertebral-labeling/labeling-conventions.html?highlight=labeling) for details

@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -35,9 +35,9 @@
     <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -129,11 +129,12 @@
   
   
   
+  
     
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/logo.png" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt=""/>`);</script>
   
   
     <p class="title logo__title">NeuroPoly Lab Manual</p>
@@ -762,7 +763,7 @@ README.md file.</p>
         ├── sub-XXX
         │   ├── anat
         │   │   ├──sub-XXX_T1w_label-SC_seg.nii.gz
-        │   │   ├──sub-XXX_T1w_label-SC_probseg.nii.gz
+        │   │   ├──sub-XXX_T1w_label-SC_softseg.nii.gz
         │   │   ├──sub-XXX_T1w_label-SC_mask.nii.gz
         │   │   ├──sub-XXX_T1w_label-GM_seg.nii.gz
         │   │   ├──sub-XXX_T1w_label-WM_seg.nii.gz
@@ -778,9 +779,9 @@ README.md file.</p>
 <p>The convention for suffix is inspired from the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/05-derivatives/03-imaging.html#imaging-data-types">BIDS convention</a> and is the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">label-&lt;region&gt;_seg.nii.gz</span></code>: binary segmentation of the region <code class="docutils literal notranslate"><span class="pre">&lt;region&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">label-&lt;region&gt;_probseg.nii.gz</span></code>: probabilistic (soft) segmentation (i.e., values can lie between 0 and 1) of the region <code class="docutils literal notranslate"><span class="pre">&lt;region&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label-&lt;region&gt;_softseg.nii.gz</span></code>: probabilistic (soft) segmentation (i.e., values can lie between 0 and 1) of the region <code class="docutils literal notranslate"><span class="pre">&lt;region&gt;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">label-&lt;region&gt;_mask.nii.gz</span></code>: binary mask of the region <code class="docutils literal notranslate"><span class="pre">&lt;region&gt;</span></code>, for example, cylinder mask with diameter of 35mm centered at the center of the spinal cord</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">label-&lt;region&gt;_probmask.nii.gz</span></code>: probabilistic mask of the region <code class="docutils literal notranslate"><span class="pre">&lt;region&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label-&lt;region&gt;_softmask.nii.gz</span></code>: probabilistic mask of the region <code class="docutils literal notranslate"><span class="pre">&lt;region&gt;</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">label-centerline.nii.gz</span></code>: binary spinal cord centerline</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">label-disc.nii.gz</span></code>: voxels located at the posterior tip of each intervertebral disc, with values corresponding to <a class="reference external" href="https://spinalcordtoolbox.com/user_section/tutorials/registration-to-template/vertebral-labeling/labeling-conventions.html?highlight=labeling">SCT convention</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">label-pmj.nii.gz</span></code>: a single voxel with value of <code class="docutils literal notranslate"><span class="pre">50</span></code> corresponding to the pontomedullary junction (PMJ), see <a class="reference external" href="https://spinalcordtoolbox.com/user_section/tutorials/registration-to-template/vertebral-labeling/labeling-conventions.html?highlight=labeling">SCT convention</a> for details</p></li>
@@ -922,8 +923,8 @@ By NeuroPoly
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
   <footer class="bd-footer">
   </footer>
