@@ -369,7 +369,8 @@ If you are running multiple processing based on the same `raw` data, you must cr
 ...
 ...
 └── derivatives
-    ├── dataset_description.json
     ├── manual_labels
+    |   └── dataset_description_1.json
     └── manual_labels_softseg
+        └── dataset_description_2.json
 ```
