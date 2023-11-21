@@ -277,7 +277,7 @@ This is a folder at the root of the dataset, which includes derivatives files ge
 According to BIDS, these data should go under [`derivatives/`](https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html) folder, and follow the same folder logic as the `sub-*` data. 
 
 
-⚠️ The `derivatives` folder must include its own `dataset_description.json` file (with `"DatasetType": "derivative"`). Example:
+⚠️ The folders under `derivatives` must include their own `dataset_description.json` file (with `"DatasetType": "derivative"`). Example:
 
 ```json
 {
@@ -310,8 +310,8 @@ Example:
 ...
 ...
 └── derivatives
-    ├── dataset_description.json
     └── labels
+        ├── dataset_description.json
         ├── sub-XXX
         │   ├── anat
         │   │   ├──sub-XXX_T1w_label-SC_seg.nii.gz
@@ -346,7 +346,7 @@ Fields:
 - region = {SC, GM, WM, CSF, brain, brainstem, tumor, edema, cavity, axon, myelin}
 ```
 
-⚠️ Each label file (such as segmentations or disc label) must be accompanied by a JSON sidecar file. Convention (see this [issue](https://github.com/spinalcordtoolbox/manual-correction/issues/34)) for JSON sidecar files is the following:
+⚠️ Each label file (such as segmentations or disc label) should be accompanied by a JSON sidecar file. Convention (see this [issue](https://github.com/spinalcordtoolbox/manual-correction/issues/34)) for JSON sidecar files is the following:
 
 ```json
 {
@@ -363,7 +363,7 @@ Fields:
 `"Date"` is optional. We include it when running the manual correction via the [manual correction](https://github.com/spinalcordtoolbox/manual-correction) python script.
 ```
 
-If you have multiple derivatives, you can create a folder for each of them and then follow the same logic as above. For example:
+If you are running multiple processing based on the same `raw` data, you must create a folder for each of them and then follow the same logic as above. For example:
 
 ```
 ...
