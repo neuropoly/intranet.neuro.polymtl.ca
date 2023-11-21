@@ -276,8 +276,21 @@ If you choose to also fill in BIDS's optional [CHANGES](https://bids-specificati
 This is a folder at the root of the dataset, which includes derivatives files generated from the top-level dataset such as segmentations or labeling.
 According to BIDS, these data should go under [`derivatives/`](https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html) folder, and follow the same folder logic as the `sub-*` data. 
 
-```{warning}
-The `derivatives` must include its own `dataset_description.json` file (with `"DatasetType": "derivative"`).
+
+⚠️ The `derivatives` folder must include its own `dataset_description.json` file (with `"DatasetType": "derivative"`). Example:
+
+```json
+{
+    "BIDSVersion": "1.8.0",
+    "Name": "<dataset_name>",
+    "DatasetType": "derivative",
+    "GeneratedBy": [
+        {
+            "Name": "Manual",
+            "Description": "..."
+        }
+    ]
+}
 ```
 
 ```{warning}
