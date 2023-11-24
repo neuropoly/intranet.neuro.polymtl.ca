@@ -1,6 +1,6 @@
 # MATLAB
 
-MATLAB is installed on some [internal machines](computing-resources/neuropoly) (but [not yet all](https://github.com/neuropoly/computers/issues/326)). If you install MATLAB on your local machine, download the institutional license from [duke](/data/duke), at `duke:/public/software/matlab/license_laboslicsent.dat` and use it to activate your copy. Thereafter, **you must be connected to the [VPN](/computing-resources/neuropoly#vpn)** when using MATLAB because it is a _network license_, meaning the school runs a licensing server, behind the VPN, that authenticates your right to use MATLAB.
+MATLAB is installed on some [internal machines](computing-resources/neuropoly/README) (but [not yet all](https://github.com/neuropoly/computers/issues/326)). If you install MATLAB on your local machine, download the institutional license from [duke](/data/duke), at `duke:/public/software/matlab/license_laboslicsent.dat` and use it to activate your copy. Thereafter, **you must be connected to the [VPN](/computing-resources/neuropoly/README#vpn)** when using MATLAB because it is a _network license_, meaning the school runs a licensing server, behind the VPN, that authenticates your right to use MATLAB.
 
 ## Figures
 
