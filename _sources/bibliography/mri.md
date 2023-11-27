@@ -51,6 +51,7 @@
 
 ## MRI Software
 
+* [List of MRI-related software from the _Open Source Imaging Initiative_](https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/nbm.5052)
 * [List of software from ISMRM MRHub](https://github.com/ISMRM/mrhub)
 * [Reconstruction tools from NYU](https://cai2r.net/resources/)
 * [Gadgetron](http://gadgetron.sourceforge.net/): Open source framework for medical image reconstruction
