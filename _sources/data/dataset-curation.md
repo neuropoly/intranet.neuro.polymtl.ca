@@ -1,6 +1,6 @@
 # Dataset curation
 
-## Converting data to BIDS
+## I - Converting data to BIDS
 
 All git-annex datasets should be BIDS-compliant. For more information about the BIDS standard, please visit [http://bids.neuroimaging.io](http://bids.neuroimaging.io).
 
@@ -12,7 +12,40 @@ script should then be saved under the `code` folder of the final dataset. Some p
 
 Once the data are converted to BIDS and [uploaded](git-datasets.md#upload) to git-annex repository, delete the temporary folder to save space.
 
-## Subject naming convention
+## II - Building the `raw` dataset
+
+> [Brackets] are characterizing optional informations
+
+### Subjects folders and filenames
+
+Subjects folders in the `raw` dataset are structured as follows for MRI,
+
+<details>
+<summary>Raw structure</summary>
+
+```
+sub-<label>/
+    [ses-<label>/]
+        anat/
+            sub-<label>[_ses-<label>][_acq-<label>][_ce-<label>][_rec-<label>][_run-<index>][_part-<mag|phase|real|imag>]_<suffix>.json
+            sub-<label>[_ses-<label>][_acq-<label>][_ce-<label>][_rec-<label>][_run-<index>][_part-<mag|phase|real|imag>]_<suffix>.nii[.gz]
+        dwi/
+            sub-<label>[_ses-<label>][_acq-<label>][_rec-<label>][_dir-<label>][_run-<index>][_part-<mag|phase|real|imag>]_dwi.bval
+            sub-<label>[_ses-<label>][_acq-<label>][_rec-<label>][_dir-<label>][_run-<index>][_part-<mag|phase|real|imag>]_dwi.bvec
+            sub-<label>[_ses-<label>][_acq-<label>][_rec-<label>][_dir-<label>][_run-<index>][_part-<mag|phase|real|imag>]_dwi.json
+            sub-<label>[_ses-<label>][_acq-<label>][_rec-<label>][_dir-<label>][_run-<index>][_part-<mag|phase|real|imag>]_dwi.nii[.gz]
+```
+
+</details>
+
+With folders corresponding to subjects, [sessions] and MRI modalities.
+
+```{note}
+Data collected from actual subjects goes under their specific sub-folder
+```
+
+<details>
+<summary>Subject naming convention</summary>
 
 **Basic convention**: sub-XXX
 
@@ -41,28 +74,9 @@ sub-torDCM001      # tor stands for Toronto and DCM stands for Degenerative Cerv
 sub-torHC001       # tor stands for Toronto and HC stands for Healthy Controls
 sub-zurSCI001      # zur stands for Zurich and SCI stands for Spinal Cord Injury
 ```
-    
-Data collected from actual subjects goes under their specific sub-folder, for example:
-    
-```
-sub-001
-├── anat
-│   ├── sub-001_T1w.json
-│   ├── sub-001_T1w.nii.gz
-│   ├── sub-001_T2star.json
-│   ├── sub-001_T2star.nii.gz
-│   ├── sub-001_T2w.json
-│   └── sub-001_T2w.nii.gz
-└── dwi
-    ├── sub-001_dwi.bval
-    ├── sub-001_dwi.bvec
-    ├── sub-001_dwi.json
-    └── sub-001_dwi.nii.gz
-```
+</details>
 
-Many kinds of data have a place specified for them by BIDS. See [file naming conventions](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#filesystem-structure) and the [MRI](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html) and [Microscopy](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html) extensions for full details.
-
-To summarize, for the `raw` data, BIDS filenames are constructed using 3 types of elements:
+Regarding BIDS filenames, they are constructed using 3 types of elements:
 
 <details>
 <summary>Raw entities</summary>
@@ -123,9 +137,13 @@ If you need to differentiate between different magnetization transfer (MT) seque
 If you to combine several above mentioned tags, use camelCase. For example, `sub-001_acq-cspineSagittal_T1w.nii.gz`.
 ```
 
-## BIDS template
+```{note}
+Many kinds of data have a place specified for them by BIDS. See [file naming conventions](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#filesystem-structure) and the [MRI](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html) and [Microscopy](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html) extensions for full details.
+```
 
-⚠️ Every dataset must have the following files: 
+### `raw` template
+
+⚠️ In addition to the subjects folders, every dataset must have the following files: 
 
 ```
 ├── README.md
@@ -138,18 +156,12 @@ If you to combine several above mentioned tags, use camelCase. For example, `sub
 │   └── anat
 │       └──sub-XXX_T1w.nii.gz
  ...
- ...
-└── derivatives
-    ├── dataset_description.json
-    └── labels
-        └── sub-XXX
-        ...
-        ...
 ```
 
 For details, see [BIDS specification](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#code).
 
-### `README.md`
+<details>
+<summary>README.md</summary>
 
 The [`README.md`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#readme) is a [markdown](https://markdown-guide.readthedocs.io/en/latest/index.html) file describing the dataset in more detail.
 
@@ -171,8 +183,10 @@ Dataset shared by: <NAME AND EMAIL>
 
 <LIST HERE MISSING SUBJECTS>
 ```
+</details>
 
-### `dataset_description.json`
+<details>
+<summary>dataset_description.json</summary>
 
 The [`dataset_description.json`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#dataset_descriptionjson) is a JSON file describing the dataset.
 
@@ -193,8 +207,10 @@ Refer to the [BIDS spec](https://bids-specification.readthedocs.io/) to know wha
  ```{warning}
 The `dataset_description.json` file within the top-level dataset should include `"DatasetType": "raw"`.
  ```
- 
-### `participants.tsv`
+</details>
+
+<details>
+<summary>participants.tsv</summary>
 
 The [`participants.tsv`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file) is a TSV file and should include at least the following columns:
 
@@ -224,8 +240,10 @@ Indicate missing values with `n/a` (for "not available"), not by empty cells!
 ```{warning}
 This is a Tab-Separated-Values file. Make sure to use tabs between entries if editing with a text editor. Most spreadsheet software can read and write .tsv correctly.
 ```
+</details>
 
-### `participants.json`
+<details>
+<summary>participants.json</summary>
 
 The [`participants.json`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file) is a JSON file providing a legend for the columns in `participants.tsv`, with longer descriptions, units, and in the case of categorical variables, allowed levels. Please use the template below:
 
@@ -277,8 +295,10 @@ The [`participants.json`](https://bids-specification.readthedocs.io/en/stable/03
     }
 }
 ```
+</details>
 
-### `code/`
+<details>
+<summary>code/</summary>
 
 The data cleaning and curation script(s) that create the `sub-XXX/` folders should be kept with them, under the [`code/`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#code) folder. Within reason, every dataset should have a script that when run like
 
@@ -293,28 +313,9 @@ This program should be committed first, before the curated data it produces. Aft
 ```{note}
 Analysis scripts should not be kept here. Keep them in separate repositories, usually in public on GitHub, with instructions about. See [PIPELINE-DOC](TODO-PIPELINE-DOC).
 ```
-    
-## Changelog policy
+</details>
 
-We use `git log` to track our changes. That means care should be taken to [write good messages](../geek-tips/git.md#commit-message-convention): they are there to help both you and future researchers understand how the dataset evolved.
-
-Good commit message examples:
-
-```
-git commit -m 'Segment spines of subjects 010 through 023
-    
-Produced manually, using fsleyes.'
-```
-
-or
-
-```
-git commit -m 'Add new subjects provided by <email_adress>'
-```
-    
-If you choose to also fill in BIDS's optional [CHANGES](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#changes) file make sure it reflects the `git log`.
-
-## Derivatives datasets
+## III - Derivatives datasets
 
 First, it is important to understand what are [BIDS derivatives](https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html#bids-derivatives) folders:
 
@@ -359,6 +360,8 @@ If more details about the processing steps used have to be provided (e.g., reori
 - `desc_id`: contains all the labels used with the [desc](https://bids-specification.readthedocs.io/en/stable/appendices/entities.html#desc) entity within the filenames accross the entire dataset.
 - `description`: human readable descriptions
 ```
+
+
 
 Example:
 
@@ -435,3 +438,23 @@ If you are running multiple processing based on the same `raw` data, you must cr
     └── manual_labels_softseg
         └── dataset_description_2.json
 ```
+
+## IV - Changelog policy
+
+We use `git log` to track our changes. That means care should be taken to [write good messages](../geek-tips/git.md#commit-message-convention): they are there to help both you and future researchers understand how the dataset evolved.
+
+Good commit message examples:
+
+```
+git commit -m 'Segment spines of subjects 010 through 023
+    
+Produced manually, using fsleyes.'
+```
+
+or
+
+```
+git commit -m 'Add new subjects provided by <email_adress>'
+```
+    
+If you choose to also fill in BIDS's optional [CHANGES](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#changes) file make sure it reflects the `git log`.
