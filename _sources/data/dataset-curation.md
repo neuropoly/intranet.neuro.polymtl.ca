@@ -62,6 +62,49 @@ sub-001
 
 Many kinds of data have a place specified for them by BIDS. See [file naming conventions](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#filesystem-structure) and the [MRI](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html) and [Microscopy](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html) extensions for full details.
 
+To summarize, for the `raw` data, BIDS filenames are constructed using 3 types of elements:
+
+<details>
+<summary>Raw entities</summary>
+
+Characterized by a key word (sub, ses, acq, etc.) and a value (label = an alphanumeric value, index = a nonnegative integer, etc) separated with a dash `-`
+- `sub-<label>`
+- `[ses-<label>]`
+- `[acq-<label>]`
+- `[ce-<label>]`
+- `[rec-<label>]`
+- `[run-<index>]`
+- `[part-<mag|phase|real|imag>]`
+- `[dir-<label>]`
+
+Multiple entities can be used, but they must be separated using underscores `_`
+
+</details>
+
+<details>
+<summary>Raw suffixes</summary>
+
+An alphanumeric string located after all the entities following a final underscore `_` (i.e. the `<suffix>`). This suffix corresponds for MRI to the MRI contrast:
+- `T1w`
+- `MP2RAGE`
+- `dwi`
+- etc.
+
+Only **ONE** suffix can be used within the filename.
+
+</details>
+
+<details>
+<summary>Raw extensions</summary>
+
+ Files extensions:
+- `.nii.gz`
+- `.json`
+- `.bval`
+- etc.
+
+</details>
+
 ```{note}
 If you need to differentiate spinal cord images from the brain, use the `acq-cspine` tag. For example, `sub-001_acq-cspine_T1w.nii.gz`.
 
@@ -77,7 +120,7 @@ If you need to differentiate between different magnetization transfer (MT) seque
 ```
 
 ```{note}
- If you to combine several above mentioned tags, use camelCase. For example, `sub-001_acq-cspineSagittal_T1w.nii.gz`.
+If you to combine several above mentioned tags, use camelCase. For example, `sub-001_acq-cspineSagittal_T1w.nii.gz`.
 ```
 
 ## BIDS template
