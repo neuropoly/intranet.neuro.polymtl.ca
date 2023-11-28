@@ -180,7 +180,7 @@ Please use the `dataset_description.json` template below:
     
 ```json
 {
-    "BIDSVersion": "1.8.0",
+    "BIDSVersion": "1.9.0",
     "Name": "<dataset_name>",
     "DatasetType": "raw"
 }
@@ -314,32 +314,50 @@ git commit -m 'Add new subjects provided by <email_adress>'
     
 If you choose to also fill in BIDS's optional [CHANGES](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#changes) file make sure it reflects the `git log`.
 
-## Derivatives Structure
+## Derivatives datasets
 
-This is a folder at the root of the dataset, which includes derivatives files generated from the top-level dataset such as segmentations or labeling.
-According to BIDS, these data should go under [`derivatives/`](https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html) folder, and follow the same folder logic as the `sub-*` data. 
+First, it is important to understand what are [BIDS derivatives](https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html#bids-derivatives) folders:
 
+"Derivatives are outputs of common processing pipelines, capturing data and meta-data sufficient for a researcher to understand and (critically) reuse those outputs in subsequent processing. Standardizing derivatives is motivated by use cases where formalized machine-readable access to processed data enables higher level processing."
 
-⚠️ The folders under `derivatives` must include their own `dataset_description.json` file (with `"DatasetType": "derivative"`). Example:
+Basically, derivative folders are derived datasets generated from a raw dataset. They must include **ONLY** processed data obtained from a specific raw dataset (i.e. segmentations, masks, labels...).
+
+```{note}
+**DIFFERENT** data obtained using **DIFFERENT** processes/workflow should be stored using **DIFFERENT** derivatives folders.
+```
+
+```{note}
+According to BIDS, derived datasets could be stored inside a parent folder [`derivatives/`](https://bids-specification.readthedocs.io/en/stable/common-principles.html#storage-of-derived-datasets) "to make a clear distinction between raw data and results of data processing". This folder should also follow the same folder logic as the one used for the `raw` data.
+```
+
+⚠️  Derived datasets must include their own `dataset_description.json` file to track all the processed used to create the data. Example:
 
 ```json
 {
-    "BIDSVersion": "1.8.0",
+    "BIDSVersion": "1.9.0",
     "Name": "<dataset_name>",
     "DatasetType": "derivative",
     "GeneratedBy": [
         {
+            "Name": "sct_deepseg_sc",
+            "Version": "SCT v6.1"
+        },
+        {
             "Name": "Manual",
-            "Description": "..."
+            "Description": "Manually corrected by Nathan Molinier and Pierre-Louis Benveniste."
         }
     ]
 }
 ```
 
 ```{warning}
-If derivatives files were generated from preprocessed data (e.g., after reorientation and resampling), describe the 
-preprocessing steps in README.md file. Also, include the link (pointing to fixed GitHub version) to the pipeline to the 
-README.md file.
+The `dataset_description.json` file within the derived dataset should include `"DatasetType": "derivative"`.
+ ```
+
+```{note}
+If more details about the processing steps used have to be provided (e.g., reorientation, resampling etc.), a [`descriptions.tsv`](https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#descriptionstsv) file may added at the root of the folder. This file must contain at least two columns:
+- `desc_id`: contains all the labels used with the [desc](https://bids-specification.readthedocs.io/en/stable/appendices/entities.html#desc) entity within the filenames accross the entire dataset.
+- `description`: human readable descriptions
 ```
 
 Example:

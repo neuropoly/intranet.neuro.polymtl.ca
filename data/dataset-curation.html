@@ -455,7 +455,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changelog-policy">Changelog policy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-structure">Derivatives Structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-datasets">Derivatives datasets</a></li>
 </ul>
             </nav>
         </div>
@@ -620,7 +620,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 <p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#dataset_descriptionjson"><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code></a> is a JSON file describing the dataset.</p>
 <p>Please use the <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> template below:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;BIDSVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.8.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;BIDSVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.9.0&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;dataset_name&gt;&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;DatasetType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;raw&quot;</span>
 <span class="p">}</span>
@@ -775,19 +775,32 @@ script should then be saved under the <code class="docutils literal notranslate"
 </div>
 <p>If you choose to also fill in BIDS’s optional <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#changes">CHANGES</a> file make sure it reflects the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code>.</p>
 </section>
-<section id="derivatives-structure">
-<h2>Derivatives Structure<a class="headerlink" href="#derivatives-structure" title="Permalink to this heading">#</a></h2>
-<p>This is a folder at the root of the dataset, which includes derivatives files generated from the top-level dataset such as segmentations or labeling.
-According to BIDS, these data should go under <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html"><code class="docutils literal notranslate"><span class="pre">derivatives/</span></code></a> folder, and follow the same folder logic as the <code class="docutils literal notranslate"><span class="pre">sub-*</span></code> data.</p>
-<p>⚠️ The folders under <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> must include their own <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> file (with <code class="docutils literal notranslate"><span class="pre">&quot;DatasetType&quot;:</span> <span class="pre">&quot;derivative&quot;</span></code>). Example:</p>
+<section id="derivatives-datasets">
+<h2>Derivatives datasets<a class="headerlink" href="#derivatives-datasets" title="Permalink to this heading">#</a></h2>
+<p>First, it is important to understand what are <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html#bids-derivatives">BIDS derivatives</a> folders:</p>
+<p>“Derivatives are outputs of common processing pipelines, capturing data and meta-data sufficient for a researcher to understand and (critically) reuse those outputs in subsequent processing. Standardizing derivatives is motivated by use cases where formalized machine-readable access to processed data enables higher level processing.”</p>
+<p>Basically, derivative folders are derived datasets generated from a raw dataset. They must include <strong>ONLY</strong> processed data obtained from a specific raw dataset (i.e. segmentations, masks, labels…).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>DIFFERENT</strong> data obtained using <strong>DIFFERENT</strong> processes/workflow should be stored using <strong>DIFFERENT</strong> derivatives folders.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>According to BIDS, derived datasets could be stored inside a parent folder <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#storage-of-derived-datasets"><code class="docutils literal notranslate"><span class="pre">derivatives/</span></code></a> “to make a clear distinction between raw data and results of data processing”. This folder should also follow the same folder logic as the one used for the <code class="docutils literal notranslate"><span class="pre">raw</span></code> data.</p>
+</div>
+<p>⚠️  Derived datasets must include their own <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> file to track all the processed used to create the data. Example:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;BIDSVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.8.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;BIDSVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.9.0&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;dataset_name&gt;&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;DatasetType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;derivative&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sct_deepseg_sc&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SCT v6.1&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Manual&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span>
+<span class="w">            </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Manually corrected by Nathan Molinier and Pierre-Louis Benveniste.&quot;</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">]</span>
 <span class="p">}</span>
@@ -795,9 +808,15 @@ According to BIDS, these data should go under <a class="reference external" href
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If derivatives files were generated from preprocessed data (e.g., after reorientation and resampling), describe the
-preprocessing steps in README.md file. Also, include the link (pointing to fixed GitHub version) to the pipeline to the
-README.md file.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> file within the derived dataset should include <code class="docutils literal notranslate"><span class="pre">&quot;DatasetType&quot;:</span> <span class="pre">&quot;derivative&quot;</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If more details about the processing steps used have to be provided (e.g., reorientation, resampling etc.), a <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#descriptionstsv"><code class="docutils literal notranslate"><span class="pre">descriptions.tsv</span></code></a> file may added at the root of the folder. This file must contain at least two columns:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">desc_id</span></code>: contains all the labels used with the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/appendices/entities.html#desc">desc</a> entity within the filenames accross the entire dataset.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: human readable descriptions</p></li>
+</ul>
 </div>
 <p>Example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>...
@@ -926,7 +945,7 @@ README.md file.</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changelog-policy">Changelog policy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-structure">Derivatives Structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-datasets">Derivatives datasets</a></li>
 </ul>
   </nav></div>
 
