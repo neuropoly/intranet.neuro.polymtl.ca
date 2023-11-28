@@ -446,11 +446,15 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-converting-data-to-bids">I - Converting data to BIDS</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-building-the-raw-dataset">II - Building the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subjects-folders-and-filenames">Subjects folders and filenames</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-template"><code class="docutils literal notranslate"><span class="pre">raw</span></code> template</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#folders-structure-and-filenames">Folders structure and filenames</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-template">Raw template</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-derivatives-datasets">III - Derivatives datasets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-derivatives-datasets">III - Derivatives datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Folders structure and filenames</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-template">Derivatives template</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iv-changelog-policy">IV - Changelog policy</a></li>
 </ul>
             </nav>
@@ -479,8 +483,8 @@ script should then be saved under the <code class="docutils literal notranslate"
 <blockquote>
 <div><p>[Brackets] are characterizing optional informations</p>
 </div></blockquote>
-<section id="subjects-folders-and-filenames">
-<h3>Subjects folders and filenames<a class="headerlink" href="#subjects-folders-and-filenames" title="Permalink to this heading">#</a></h3>
+<section id="folders-structure-and-filenames">
+<h3>Folders structure and filenames<a class="headerlink" href="#folders-structure-and-filenames" title="Permalink to this heading">#</a></h3>
 <p>Subjects folders in the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset are structured as follows for MRI,</p>
 <details>
 <summary>Raw structure</summary>
@@ -584,7 +588,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </div>
 </section>
 <section id="raw-template">
-<h3><code class="docutils literal notranslate"><span class="pre">raw</span></code> template<a class="headerlink" href="#raw-template" title="Permalink to this heading">#</a></h3>
+<h3>Raw template<a class="headerlink" href="#raw-template" title="Permalink to this heading">#</a></h3>
 <p>⚠️ In addition to the subjects folders, every dataset must have the following files:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── README.md
 ├── dataset_description.json
@@ -768,17 +772,26 @@ script should then be saved under the <code class="docutils literal notranslate"
 </section>
 <section id="iii-derivatives-datasets">
 <h2>III - Derivatives datasets<a class="headerlink" href="#iii-derivatives-datasets" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>[Brackets] are characterizing optional informations</p>
+</div></blockquote>
 <p>First, it is important to understand what are <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html#bids-derivatives">BIDS derivatives</a> folders:</p>
 <p>“Derivatives are outputs of common processing pipelines, capturing data and meta-data sufficient for a researcher to understand and (critically) reuse those outputs in subsequent processing. Standardizing derivatives is motivated by use cases where formalized machine-readable access to processed data enables higher level processing.”</p>
 <p>Basically, derivative folders are derived datasets generated from a raw dataset. They must include <strong>ONLY</strong> processed data obtained from a specific raw dataset (i.e. segmentations, masks, labels…).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>DIFFERENT</strong> data obtained using <strong>DIFFERENT</strong> processes/workflow should be stored using <strong>DIFFERENT</strong> derivatives folders.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>DIFFERENT data obtained using DIFFERENT processes/workflows should be stored using DIFFERENT derivatives folders.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>According to BIDS, derived datasets could be stored inside a parent folder <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#storage-of-derived-datasets"><code class="docutils literal notranslate"><span class="pre">derivatives/</span></code></a> “to make a clear distinction between raw data and results of data processing”. This folder should also follow the same folder logic as the one used for the <code class="docutils literal notranslate"><span class="pre">raw</span></code> data.</p>
 </div>
+<section id="id1">
+<h3>Folders structure and filenames<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>Derived datasets follow the <strong>same structure</strong> as the <code class="docutils literal notranslate"><span class="pre">raw</span></code> folders:</p>
+</section>
+<section id="derivatives-template">
+<h3>Derivatives template<a class="headerlink" href="#derivatives-template" title="Permalink to this heading">#</a></h3>
 <p>⚠️  Derived datasets must include their own <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> file to track all the processed used to create the data. Example:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;BIDSVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.9.0&quot;</span><span class="p">,</span>
@@ -879,6 +892,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </pre></div>
 </div>
 </section>
+</section>
 <section id="iv-changelog-policy">
 <h2>IV - Changelog policy<a class="headerlink" href="#iv-changelog-policy" title="Permalink to this heading">#</a></h2>
 <p>We use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code> to track our changes. That means care should be taken to <a class="reference internal" href="../geek-tips/git.html#commit-message-convention"><span class="std std-ref">write good messages</span></a>: they are there to help both you and future researchers understand how the dataset evolved.</p>
@@ -942,11 +956,15 @@ script should then be saved under the <code class="docutils literal notranslate"
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-converting-data-to-bids">I - Converting data to BIDS</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-building-the-raw-dataset">II - Building the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subjects-folders-and-filenames">Subjects folders and filenames</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-template"><code class="docutils literal notranslate"><span class="pre">raw</span></code> template</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#folders-structure-and-filenames">Folders structure and filenames</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-template">Raw template</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-derivatives-datasets">III - Derivatives datasets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-derivatives-datasets">III - Derivatives datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Folders structure and filenames</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-template">Derivatives template</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iv-changelog-policy">IV - Changelog policy</a></li>
 </ul>
   </nav></div>

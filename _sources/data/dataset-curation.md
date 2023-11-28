@@ -16,7 +16,7 @@ Once the data are converted to BIDS and [uploaded](git-datasets.md#upload) to gi
 
 > [Brackets] are characterizing optional informations
 
-### Subjects folders and filenames
+### Folders structure and filenames
 
 Subjects folders in the `raw` dataset are structured as follows for MRI,
 
@@ -141,7 +141,7 @@ If you to combine several above mentioned tags, use camelCase. For example, `sub
 Many kinds of data have a place specified for them by BIDS. See [file naming conventions](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#filesystem-structure) and the [MRI](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html) and [Microscopy](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html) extensions for full details.
 ```
 
-### `raw` template
+### Raw template
 
 ⚠️ In addition to the subjects folders, every dataset must have the following files: 
 
@@ -317,19 +317,29 @@ Analysis scripts should not be kept here. Keep them in separate repositories, us
 
 ## III - Derivatives datasets
 
+> [Brackets] are characterizing optional informations
+
 First, it is important to understand what are [BIDS derivatives](https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html#bids-derivatives) folders:
 
 "Derivatives are outputs of common processing pipelines, capturing data and meta-data sufficient for a researcher to understand and (critically) reuse those outputs in subsequent processing. Standardizing derivatives is motivated by use cases where formalized machine-readable access to processed data enables higher level processing."
 
 Basically, derivative folders are derived datasets generated from a raw dataset. They must include **ONLY** processed data obtained from a specific raw dataset (i.e. segmentations, masks, labels...).
 
-```{note}
-**DIFFERENT** data obtained using **DIFFERENT** processes/workflow should be stored using **DIFFERENT** derivatives folders.
+```{warning}
+DIFFERENT data obtained using DIFFERENT processes/workflows should be stored using DIFFERENT derivatives folders.
 ```
 
 ```{note}
 According to BIDS, derived datasets could be stored inside a parent folder [`derivatives/`](https://bids-specification.readthedocs.io/en/stable/common-principles.html#storage-of-derived-datasets) "to make a clear distinction between raw data and results of data processing". This folder should also follow the same folder logic as the one used for the `raw` data.
 ```
+
+### Folders structure and filenames
+
+Derived datasets follow the **same structure** as the `raw` folders:
+
+
+
+### Derivatives template
 
 ⚠️  Derived datasets must include their own `dataset_description.json` file to track all the processed used to create the data. Example:
 
