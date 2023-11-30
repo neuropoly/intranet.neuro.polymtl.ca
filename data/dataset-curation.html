@@ -455,7 +455,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-template">Derivative template</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#json-sidecars">json sidecars</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regions-and-atlases">Regions and atlases</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-and-use-case">Examples and use case</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-and-use-cases">Examples and use cases</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iv-changelog-policy">IV - Changelog policy</a></li>
@@ -943,37 +943,37 @@ script should then be saved under the <code class="docutils literal notranslate"
 <tr class="row-even"><td class="text-center"><p>WM</p></td>
 <td class="text-center"><p>White Matter</p></td>
 </tr>
-<tr class="row-odd"><td class="text-center"><p>MSL</p></td>
+<tr class="row-odd"><td class="text-center"><p>MS</p></td>
 <td class="text-center"><p>Multiple Sclerosis Lesion</p></td>
 </tr>
-<tr class="row-even"><td class="text-center"><p>SCIL</p></td>
+<tr class="row-even"><td class="text-center"><p>SCI</p></td>
 <td class="text-center"><p>Spinal Cord Injury Lesion</p></td>
 </tr>
 <tr class="row-odd"><td class="text-center"><p>CSF</p></td>
 <td class="text-center"><p>Cerebrospinal Fluid</p></td>
 </tr>
-<tr class="row-even"><td class="text-center"><p>TUM</p></td>
+<tr class="row-even"><td class="text-center"><p>tumor</p></td>
 <td class="text-center"><p>Tumor</p></td>
 </tr>
-<tr class="row-odd"><td class="text-center"><p>ED</p></td>
+<tr class="row-odd"><td class="text-center"><p>edema</p></td>
 <td class="text-center"><p>Edema</p></td>
 </tr>
-<tr class="row-even"><td class="text-center"><p>CAV</p></td>
+<tr class="row-even"><td class="text-center"><p>cavity</p></td>
 <td class="text-center"><p>Cavity</p></td>
 </tr>
-<tr class="row-odd"><td class="text-center"><p>AX</p></td>
+<tr class="row-odd"><td class="text-center"><p>axon</p></td>
 <td class="text-center"><p>Axon</p></td>
 </tr>
-<tr class="row-even"><td class="text-center"><p>MYEL</p></td>
+<tr class="row-even"><td class="text-center"><p>myelin</p></td>
 <td class="text-center"><p>Myelin</p></td>
 </tr>
 </tbody>
 </table>
 <p>When multiple anatomical regions are present in the image, atlases should be used. When specified, these atlases <strong>SHOULD</strong> be added to a folder <code class="docutils literal notranslate"><span class="pre">atlases/</span></code> at the root of the derivative folder.</p>
 </section>
-<section id="examples-and-use-case">
-<h3>Examples and use case<a class="headerlink" href="#examples-and-use-case" title="Permalink to this heading">#</a></h3>
-<p>Let’s consider a dataset with one single subject <code class="docutils literal notranslate"><span class="pre">sub-001</span></code>. This dataset comes from a clinical partner who segmented spinal cord injuries (SCI) lesions and created point labels for spinal cord (SC) compressions. Based on this dataset, we decide to generate SC segmentations and discs labels. Here is the structure of the final dataset:</p>
+<section id="examples-and-use-cases">
+<h3>Examples and use cases<a class="headerlink" href="#examples-and-use-cases" title="Permalink to this heading">#</a></h3>
+<p>Let’s consider a dataset with one single subject <code class="docutils literal notranslate"><span class="pre">sub-001</span></code>. This dataset comes from a clinical partner who segmented spinal cord injury (SCI) lesions and created point labels for spinal cord (SC) compressions. Based on this dataset, we decide to generate SC segmentations and disc labels. Here is the structure of the final dataset:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sci-bordeaux
     ├── README.md
     ├── dataset_description.json
@@ -993,34 +993,34 @@ script should then be saved under the <code class="docutils literal notranslate"
         │   ├── README.md
         │   └── sub-001
         │           └── anat
-        │               ├── sub-001_acq-sag_desc-T1w_label-SCIL_mask.nii.gz
-        │               ├── sub-001_acq-sag_desc-T1w_label-SCIL_mask.json
-        │               ├── sub-001_acq-sag_desc-T1w_atlas-Comp_plabel.nii.gz
-        │               ├── sub-001_acq-sag_desc-T1w_atlas-Comp_plabel.json
-        │               ├── sub-001_acq-sag_desc-T2w_label-SCIL_mask.nii.gz
-        │               ├── sub-001_acq-sag_desc-T2w_label-SCIL_mask.json
-        │               ├── sub-001_acq-sag_desc-T2w_atlas-Comp_plabel.nii.gz
-        │               └── sub-001_acq-sag_desc-T2w_atlas-Comp_plabel.json
+        │               ├── sub-001_acq-sag_label-SCI_desc-T1w_mask.nii.gz
+        │               ├── sub-001_acq-sag_label-SCI_desc-T1w_mask.json
+        │               ├── sub-001_acq-sag_label-compression_desc-T1w_blabel.nii.gz
+        │               ├── sub-001_acq-sag_label-compression_desc-T1w_blabel.json
+        │               ├── sub-001_acq-sag_label-SCI_desc-T2w_mask.nii.gz
+        │               ├── sub-001_acq-sag_label-SCI_desc-T2w_mask.json
+        │               ├── sub-001_acq-sag_label-compression_desc-T2w_blabel.nii.gz
+        │               └── sub-001_acq-sag_label-compression_desc-T2w_blabel.json
         │
-        ├── clinical-labels
+        ├── SC-masks
         │   ├── dataset_description.json
         │   ├── README.md
         │   └── sub-001
         │           └── anat
-        │               ├── sub-001_acq-sag_desc-T1w_label-SC_mask.nii.gz
-        │               ├── sub-001_acq-sag_desc-T1w_label-SC_mask.json
-        │               ├── sub-001_acq-sag_desc-T2w_label-SC_mask.nii.gz
-        │               └── sub-001_acq-sag_desc-T2w_label-SC_mask.json
+        │               ├── sub-001_acq-sag_label-SC_desc-T1w_mask.nii.gz
+        │               ├── sub-001_acq-sag_label-SC_desc-T1w_mask.json
+        │               ├── sub-001_acq-sag_label-SC_desc-T2w_mask.nii.gz
+        │               └── sub-001_acq-sag_label-SC_desc-T2w_mask.json
         │
-        └── clinical-labels
+        └── disc-labels
             ├── dataset_description.json
             ├── README.md
             └── sub-001
                     └── anat
-                        ├── sub-001_acq-sag_desc-T1w_atlas-Discs_plabel.nii.gz
-                        ├── sub-001_acq-sag_desc-T1w_atlas-Discs_plabel.json
-                        ├── sub-001_acq-sag_desc-T2w_atlas-Discs_plabel.nii.gz
-                        └── sub-001_acq-sag_desc-T2w_atlas-Discs_plabel.json
+                        ├── sub-001_acq-sag_seg-discs_desc-T1w_dlabel.nii.gz
+                        ├── sub-001_acq-sag_seg-discs_desc-T1w_dlabel.json
+                        ├── sub-001_acq-sag_seg-discs_desc-T2w_dlabel.nii.gz
+                        └── sub-001_acq-sag_seg-discs_desc-T2w_dlabel.json
 
 </pre></div>
 </div>
@@ -1140,7 +1140,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-template">Derivative template</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#json-sidecars">json sidecars</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regions-and-atlases">Regions and atlases</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-and-use-case">Examples and use case</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-and-use-cases">Examples and use cases</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iv-changelog-policy">IV - Changelog policy</a></li>
