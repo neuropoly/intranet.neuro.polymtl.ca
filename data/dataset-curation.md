@@ -458,7 +458,7 @@ JSON sidecars are companion files linked to data files. They share the same file
 Therefore, to improve the way we track our data, `.json` sidecars will have to be generated for each data present in derived datasets. This file will contain information about
 
 <details>
-<summary>JSON sidecar</summary>
+<summary>JSON sidecar (ORIGINAL SPACE)</summary>
     
 ```json
 {
@@ -472,6 +472,53 @@ Therefore, to improve the way we track our data, `.json` sidecars will have to b
             "Name": "Manual",
             "Author": "Nathan Molinier",
             "Date": "2023-07-14 13:43:10"
+        }
+    ]
+}
+```
+
+</details>
+
+<details>
+<summary>JSON sidecar (RESAMPLED)</summary>
+    
+```json
+{
+    "SpatialReference": {
+        "ResamplingFactor": "2",
+        "Interpolation": "spline",
+        "Xmin": 5,
+        "Xmax": 95,
+        "Ymin": 2,
+        "Ymax": 18,
+        "Zmin": 4,
+        "Zmax": 100
+    },
+    "GeneratedBy": [
+        {
+            "Name": "sct_resample",
+            "Version": "SCT v6.1"
+        },
+        {
+            "Name": "sct_crop_image",
+            "Version": "SCT v6.1"
+        }
+    ]
+}
+```
+
+</details>
+
+<details>
+<summary>JSON sidecar (PAM50 SPACE)</summary>
+    
+```json
+{
+    "SpatialReference": "PAM50",
+    "GeneratedBy": [
+        {
+            "Name": "sct_register_to_template",
+            "Version": "SCT v6.1"
         }
     ]
 }
@@ -553,53 +600,6 @@ sci-bordeaux
                         ├── sub-001_acq-sag_seg-discs_desc-T2w_dlabel.nii.gz
                         └── sub-001_acq-sag_seg-discs_desc-T2w_dlabel.json
 
-```
-
-The convention for suffix is inspired from the [BIDS convention](https://bids-specification.readthedocs.io/en/stable/05-derivatives/03-imaging.html#imaging-data-types) and is the following:
-
-- `label-<region>_seg.nii.gz`: binary segmentation of the region `<region>`
-- `label-<region>_softseg.nii.gz`: probabilistic (soft) segmentation (i.e., values can lie between 0 and 1) of the region `<region>`
-- `label-<region>_mask.nii.gz`: binary mask of the region `<region>`, for example, cylinder mask with diameter of 35mm centered at the center of the spinal cord
-- `label-<region>_softmask.nii.gz`: probabilistic mask of the region `<region>`
-- `label-centerline.nii.gz`: binary spinal cord centerline
-- `label-disc.nii.gz`: voxels located at the posterior tip of each intervertebral disc, with values corresponding to [SCT convention](https://spinalcordtoolbox.com/user_section/tutorials/registration-to-template/vertebral-labeling/labeling-conventions.html?highlight=labeling)
-- `label-pmj.nii.gz`: a single voxel with value of `50` corresponding to the pontomedullary junction (PMJ), see [SCT convention](https://spinalcordtoolbox.com/user_section/tutorials/registration-to-template/vertebral-labeling/labeling-conventions.html?highlight=labeling) for details
-- `label-compression.nii.gz`: voxel(s) with value of `1` located at the posterior tip of each intervertebral disc corresponding to the spinal cord compression(s), see [here](https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/3984#issuecomment-1373008539) for details
-- `label-rootlet.nii.gz`: spinal root segmentation
-- `label-<region>_lesion.nii.gz`: lesion (for example in multiple sclerosis), see [here](https://github.com/ivadomed/model_seg_sci#data) for details
-
-```
-Fields:
-- region = {SC, GM, WM, CSF, brain, brainstem, tumor, edema, cavity, axon, myelin}
-```
-
-⚠️ Each label file (such as segmentations or disc label) should be accompanied by a JSON sidecar file. Convention (see this [issue](https://github.com/spinalcordtoolbox/manual-correction/issues/34)) for JSON sidecar files is the following:
-
-```json
-{
-    "GeneratedBy": [
-        {
-            "Author": "Firstname Lastname",
-            "Date": "YYYY-MM-DD HH:MM:SS"
-        }
-    ]
-}
-```
-
-```{note}
-`"Date"` is optional. We include it when running the manual correction via the [manual correction](https://github.com/spinalcordtoolbox/manual-correction) python script.
-```
-
-If you are running multiple processing based on the same `raw` data, you must create a folder for each of them and then follow the same logic as above. For example:
-
-```
-...
-...
-└── derivatives
-    ├── manual_labels
-    |   └── dataset_description_1.json
-    └── manual_labels_softseg
-        └── dataset_description_2.json
 ```
 
 ## IV - Changelog policy
