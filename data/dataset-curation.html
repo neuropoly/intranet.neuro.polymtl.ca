@@ -453,6 +453,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-building-the-derivative-datasets">III - Building the <code class="docutils literal notranslate"><span class="pre">derivative</span></code> datasets</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Folders structure and filenames</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-template">Derivative template</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#json-sidecars">json sidecars</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regions-and-atlases">Regions and atlases</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-and-use-case">Examples and use case</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iv-changelog-policy">IV - Changelog policy</a></li>
@@ -486,7 +489,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 <p>The <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset corresponds to the core dataset that contains all the different acquisition generated for one or several subjects. <strong>NO</strong> postprocessing steps should be applied to these acquisitions.</p>
 <section id="folders-structure-and-filenames">
 <h3>Folders structure and filenames<a class="headerlink" href="#folders-structure-and-filenames" title="Permalink to this heading">#</a></h3>
-<p>Subjects folders in the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset are structured as follows for MRI,</p>
+<p>Subjects folders in the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset are structured as follows for MRI, with folders corresponding to subjects, [sessions] and MRI modalities:</p>
 <details>
 <summary>Raw structure</summary>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;/</span>
@@ -502,7 +505,6 @@ script should then be saved under the <code class="docutils literal notranslate"
 </pre></div>
 </div>
 </details>
-<p>With folders corresponding to subjects, [sessions] and MRI modalities.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Data collected from actual subjects goes under their specific sub-folder</p>
@@ -789,7 +791,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </div>
 <section id="id1">
 <h3>Folders structure and filenames<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
-<p>Derived datasets follow the <strong>same structure</strong> as the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset:</p>
+<p>Derived datasets follow the <strong>same structure</strong> as the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset, with folders corresponding to subjects, [sessions] and MRI modalities.</p>
 <details>
 <summary>Derivatives structure</summary>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;/</span>
@@ -799,7 +801,6 @@ script should then be saved under the <code class="docutils literal notranslate"
 </pre></div>
 </div>
 </details>
-<p>With folders corresponding to subjects, [sessions] and MRI modalities.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The derived dataset must adhere to the identical folder hierarchy used for the raw dataset.</p>
@@ -824,7 +825,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 <summary>Derivative entities</summary>
 <p>Characterized by a key word (space, res, den, etc.) and a value (label = an alphanumeric value, index = a nonnegative integer, etc) separated with a dash <code class="docutils literal notranslate"><span class="pre">-</span></code></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">[space-&lt;space&gt;]</span></code>: image space if different from raw space: template space (i.e. MNI305 etc), individual, study etc. (see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/appendices/coordinate-systems.html">BIDS</a> for allowed spaces)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[space-&lt;space&gt;]</span></code>: image space if different from raw space: template space (i.e. MNI305 etc), individual, study etc. (see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#spatial-references">BIDS</a> for allowed spaces)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[res-&lt;label&gt;]</span></code>: for changes in resolution</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[den-&lt;label&gt;]</span></code>: for changes related to density</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[desc-&lt;label&gt;]</span></code>: <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html#file-naming-conventions">should</a> be used to specify the contrast (i.e. <code class="docutils literal notranslate"><span class="pre">_desc-T1w</span></code> and <code class="docutils literal notranslate"><span class="pre">_desc-T2w</span></code>)</p></li>
@@ -839,6 +840,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 <li><p><code class="docutils literal notranslate"><span class="pre">mask</span></code> for binary masks (0 and 1 only)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dseg</span></code> for discrete segmentations representing multiple anatomical structures</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">probseg</span></code> for probabilistic segmentations representing a single anatomical structure with values ranging from 0 to 1</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plabel</span></code> (<strong>NOT BIDS</strong>)</p></li>
 <li><p>etc.</p></li>
 </ul>
 </details>
@@ -887,6 +889,85 @@ script should then be saved under the <code class="docutils literal notranslate"
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: human readable descriptions</p></li>
 </ul>
 </div>
+</section>
+<section id="json-sidecars">
+<h3>json sidecars<a class="headerlink" href="#json-sidecars" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>This section is part of an initiavite to improve our ability to track our data</p>
+</div></blockquote>
+<p>JSON sidecars are companion files linked to data files. They share the same filenames but have a “.json” extension. These files store essential metadata, serving as guidebooks to provide crucial details about the associated data, ensuring organized and comprehensive information.</p>
+<p>Therefore, to improve the way we track our data, <code class="docutils literal notranslate"><span class="pre">.json</span></code> sidecars will have to be generated for each data present in derived datasets. This file will contain information about</p>
+<details>
+<summary>dataset_description.json</summary>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;Space&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;orig&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mask&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Region&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SC&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sct_deepseg_sc&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SCT v6.1&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Manual&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Nathan Molinier&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Date&quot;</span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;2023-07-14 13:43:10&quot;</span>
+<span class="w">            </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</details>
+</section>
+<section id="regions-and-atlases">
+<h3>Regions and atlases<a class="headerlink" href="#regions-and-atlases" title="Permalink to this heading">#</a></h3>
+<p>To be consistent regarding the way anatomical regions will be reffered to, please follow this table (based on the BIDS <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels">labels</a>):</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Abbreviation (label)</p></th>
+<th class="head text-center"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>SC</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>GM</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>WM</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>MSL</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>SCIL</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>CSF</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>TUM</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>ED</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>CAV</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>AX</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>MYEL</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="examples-and-use-case">
+<h3>Examples and use case<a class="headerlink" href="#examples-and-use-case" title="Permalink to this heading">#</a></h3>
 <p>Example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>...
 ...
@@ -1028,6 +1109,9 @@ script should then be saved under the <code class="docutils literal notranslate"
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-building-the-derivative-datasets">III - Building the <code class="docutils literal notranslate"><span class="pre">derivative</span></code> datasets</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Folders structure and filenames</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-template">Derivative template</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#json-sidecars">json sidecars</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regions-and-atlases">Regions and atlases</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-and-use-case">Examples and use case</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iv-changelog-policy">IV - Changelog policy</a></li>
