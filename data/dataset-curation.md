@@ -444,6 +444,10 @@ If more details about the processing steps used have to be provided (e.g., reori
 - `description`: human readable descriptions
 ```
 
+```{note}
+Because derived datasets are datasets, files and folders presented in the raw template section could also be included in this dataset (e.g. README.md, code/, etc.)
+```
+
 ### json sidecars
 
 > This section is part of an initiavite to improve our ability to track our data 
@@ -494,10 +498,6 @@ To be consistent regarding the way anatomical regions will be reffered to, pleas
 | CAV || Cavity |
 | AX || Axon |
 | MYEL || Myelin |
-
-
-
-
 
 ### Examples and use case
 
