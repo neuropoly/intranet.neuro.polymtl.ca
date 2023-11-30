@@ -487,17 +487,17 @@ To be consistent regarding the way anatomical regions will be reffered to, pleas
 
 | Abbreviation (label) | Description |
 | :---: | :---: |
-| SC || Spinal Cord |
-| GM || Gray Matter |
-| WM || White Matter |
-| MSL || Multiple Sclerosis Lesion |
-| SCIL || Spinal Cord Injury Lesion |
-| CSF || Cerebrospinal Fluid |
-| TUM || Tumor |
-| ED || Edema |
-| CAV || Cavity |
-| AX || Axon |
-| MYEL || Myelin |
+| SC | Spinal Cord |
+| GM | Gray Matter |
+| WM | White Matter |
+| MSL | Multiple Sclerosis Lesion |
+| SCIL | Spinal Cord Injury Lesion |
+| CSF | Cerebrospinal Fluid |
+| TUM | Tumor |
+| ED | Edema |
+| CAV | Cavity |
+| AX | Axon |
+| MYEL | Myelin |
 
 When multiple anatomical regions are present in the image, atlases should be used. When specified, these atlases **SHOULD** be added to a folder `atlases/` at the root of the derivative folder.
 
