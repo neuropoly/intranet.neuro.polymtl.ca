@@ -450,9 +450,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-template">Raw template</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-derivatives-datasets">III - Derivatives datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-building-the-derivative-datasets">III - Building the <code class="docutils literal notranslate"><span class="pre">derivative</span></code> datasets</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Folders structure and filenames</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-template">Derivatives template</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-template">Derivative template</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iv-changelog-policy">IV - Changelog policy</a></li>
@@ -590,7 +590,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </section>
 <section id="raw-template">
 <h3>Raw template<a class="headerlink" href="#raw-template" title="Permalink to this heading">#</a></h3>
-<p>⚠️ In addition to the subjects folders, every dataset must have the following files:</p>
+<p>⚠️ In addition to the subjects folders, every <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset must include the following files:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── README.md
 ├── dataset_description.json
 ├── participants.tsv
@@ -771,8 +771,8 @@ script should then be saved under the <code class="docutils literal notranslate"
 </details>
 </section>
 </section>
-<section id="iii-derivatives-datasets">
-<h2>III - Derivatives datasets<a class="headerlink" href="#iii-derivatives-datasets" title="Permalink to this heading">#</a></h2>
+<section id="iii-building-the-derivative-datasets">
+<h2>III - Building the <code class="docutils literal notranslate"><span class="pre">derivative</span></code> datasets<a class="headerlink" href="#iii-building-the-derivative-datasets" title="Permalink to this heading">#</a></h2>
 <blockquote>
 <div><p>[Brackets] are characterizing optional informations</p>
 </div></blockquote>
@@ -789,11 +789,74 @@ script should then be saved under the <code class="docutils literal notranslate"
 </div>
 <section id="id1">
 <h3>Folders structure and filenames<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
-<p>Derived datasets follow the <strong>same structure</strong> as the <code class="docutils literal notranslate"><span class="pre">raw</span></code> folders:</p>
+<p>Derived datasets follow the <strong>same structure</strong> as the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset:</p>
+<details>
+<summary>Derivatives structure</summary>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;/</span>
+    <span class="p">[</span><span class="n">ses</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;/</span><span class="p">]</span>
+        <span class="n">modality</span><span class="o">/</span>
+            <span class="o">&lt;</span><span class="n">source_entities</span><span class="o">&gt;</span><span class="p">[</span><span class="n">_space</span><span class="o">-&lt;</span><span class="n">space</span><span class="o">&gt;</span><span class="p">][</span><span class="n">_res</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="p">][</span><span class="n">_den</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="p">][</span><span class="n">_desc</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="p">]</span><span class="n">_</span><span class="o">&lt;</span><span class="n">suffix</span><span class="o">&gt;.&lt;</span><span class="n">extension</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</details>
+<p>With folders corresponding to subjects, [sessions] and MRI modalities.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The derived dataset must adhere to the identical folder hierarchy used for the raw dataset.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Data generated for a specific subject will go under their specific sub-folder</p>
+</div>
+<p>Finally, regarding derivatives filenames, we can identify the same 3 type of elements as before (entities, suffixes and extensions) plus 1 extra-consideration related to the raw data:</p>
+<blockquote>
+<div><p>⚠️ Entities and suffixes are different from those used with the raw filenames and are specific to <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#imaging-data-types">data types</a>.</p>
+</div></blockquote>
+<details>
+<summary>source_entities</summary>
+<p>This element corresponds to the entire source filename, with the <strong>omission</strong> of the source suffix and extension.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For MRI, the contrast will need to be removed from the filename (see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html#file-naming-conventions">here</a>). The desc-<label> entity will be used instead (i.e. <code class="docutils literal notranslate"><span class="pre">_desc-T1w</span></code> and <code class="docutils literal notranslate"><span class="pre">_desc-T2w</span></code>).</p>
+</div>
+</details>
+<details>
+<summary>Derivative entities</summary>
+<p>Characterized by a key word (space, res, den, etc.) and a value (label = an alphanumeric value, index = a nonnegative integer, etc) separated with a dash <code class="docutils literal notranslate"><span class="pre">-</span></code></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[space-&lt;space&gt;]</span></code>: image space if different from raw space: template space (i.e. MNI305 etc), individual, study etc. (see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/appendices/coordinate-systems.html">BIDS</a> for allowed spaces)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[res-&lt;label&gt;]</span></code>: for changes in resolution</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[den-&lt;label&gt;]</span></code>: for changes related to density</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[desc-&lt;label&gt;]</span></code>: <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html#file-naming-conventions">should</a> be used to specify the contrast (i.e. <code class="docutils literal notranslate"><span class="pre">_desc-T1w</span></code> and <code class="docutils literal notranslate"><span class="pre">_desc-T2w</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[label-&lt;label&gt;]</span></code>: to avoid confusion if multiple masks are available we can specify the masked <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels">structure</a> (i.e. <code class="docutils literal notranslate"><span class="pre">_label-WM</span></code> for white matter, <code class="docutils literal notranslate"><span class="pre">_label-GM</span></code> for gray matter, <code class="docutils literal notranslate"><span class="pre">_label-L</span></code> for lesions etc.)</p></li>
+</ul>
+<p>Entities are then separated using underscores <code class="docutils literal notranslate"><span class="pre">_</span></code></p>
+</details>
+<details>
+<summary>Derivative suffixes</summary>
+<p>An alphanumeric string located after all the entities following a final underscore <code class="docutils literal notranslate"><span class="pre">_</span></code> :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mask</span></code> for binary masks (0 and 1 only)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dseg</span></code> for discrete segmentations representing multiple anatomical structures</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">probseg</span></code> for probabilistic segmentations representing a single anatomical structure with values ranging from 0 to 1</p></li>
+<li><p>etc.</p></li>
+</ul>
+</details>
+<details>
+<summary>Derivatives extensions</summary>
+<p>Files extensions:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.nii.gz</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.json</span></code></p></li>
+<li><p>etc.</p></li>
+</ul>
+</details>
 </section>
-<section id="derivatives-template">
-<h3>Derivatives template<a class="headerlink" href="#derivatives-template" title="Permalink to this heading">#</a></h3>
-<p>⚠️  Derived datasets must include their own <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> file to track all the processed used to create the data. Example:</p>
+<section id="derivative-template">
+<h3>Derivative template<a class="headerlink" href="#derivative-template" title="Permalink to this heading">#</a></h3>
+<p>⚠️  In addition to the subjects folders, derived datasets must include their own <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> file to track all the processing steps used to create the data. Example:</p>
+<details>
+<summary>dataset_description.json</summary>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;BIDSVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.9.0&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;dataset_name&gt;&quot;</span><span class="p">,</span>
@@ -815,9 +878,10 @@ script should then be saved under the <code class="docutils literal notranslate"
 <p class="admonition-title">Warning</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> file within the derived dataset should include <code class="docutils literal notranslate"><span class="pre">&quot;DatasetType&quot;:</span> <span class="pre">&quot;derivative&quot;</span></code>.</p>
 </div>
+</details>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If more details about the processing steps used have to be provided (e.g., reorientation, resampling etc.), a <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#descriptionstsv"><code class="docutils literal notranslate"><span class="pre">descriptions.tsv</span></code></a> file may added at the root of the folder. This file must contain at least two columns:</p>
+<p>If more details about the processing steps used have to be provided (e.g., reorientation, resampling etc.), a <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#descriptionstsv"><code class="docutils literal notranslate"><span class="pre">descriptions.tsv</span></code></a> file may be added at the root of the folder. This file must contain at least two columns:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">desc_id</span></code>: contains all the labels used with the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/appendices/entities.html#desc">desc</a> entity within the filenames accross the entire dataset.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: human readable descriptions</p></li>
@@ -961,9 +1025,9 @@ script should then be saved under the <code class="docutils literal notranslate"
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-template">Raw template</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-derivatives-datasets">III - Derivatives datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-building-the-derivative-datasets">III - Building the <code class="docutils literal notranslate"><span class="pre">derivative</span></code> datasets</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Folders structure and filenames</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-template">Derivatives template</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-template">Derivative template</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iv-changelog-policy">IV - Changelog policy</a></li>

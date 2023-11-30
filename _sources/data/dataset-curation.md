@@ -145,7 +145,7 @@ Many kinds of data have a place specified for them by BIDS. See [file naming con
 
 ### Raw template
 
-⚠️ In addition to the subjects folders, every dataset must have the following files: 
+⚠️ In addition to the subjects folders, every `raw` dataset must include the following files: 
 
 ```
 ├── README.md
@@ -317,7 +317,7 @@ Analysis scripts should not be kept here. Keep them in separate repositories, us
 ```
 </details>
 
-## III - Derivatives datasets
+## III - Building the `derivative` datasets
 
 > [Brackets] are characterizing optional informations
 
@@ -337,14 +337,86 @@ According to BIDS, derived datasets could be stored inside a parent folder [`der
 
 ### Folders structure and filenames
 
-Derived datasets follow the **same structure** as the `raw` folders:
+Derived datasets follow the **same structure** as the `raw` dataset:
+
+<details>
+<summary>Derivatives structure</summary>
+
+```
+sub-<label>/
+    [ses-<label>/]
+        modality/
+            <source_entities>[_space-<space>][_res-<label>][_den-<label>][_desc-<label>]_<suffix>.<extension>
+```
+</details>
+
+With folders corresponding to subjects, [sessions] and MRI modalities. 
+
+```{warning}
+The derived dataset must adhere to the identical folder hierarchy used for the raw dataset.
+```
+
+```{note}
+Data generated for a specific subject will go under their specific sub-folder
+```
+
+Finally, regarding derivatives filenames, we can identify the same 3 type of elements as before (entities, suffixes and extensions) plus 1 extra-consideration related to the raw data:
+> ⚠️ Entities and suffixes are different from those used with the raw filenames and are specific to [data types](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#imaging-data-types).
+
+<details>
+<summary>source_entities</summary>
+
+This element corresponds to the entire source filename, with the **omission** of the source suffix and extension. 
+
+```{note}
+For MRI, the contrast will need to be removed from the filename (see [here](https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html#file-naming-conventions)). The desc-<label> entity will be used instead (i.e. `_desc-T1w` and `_desc-T2w`).
+```
+
+</details>
+
+<details>
+<summary>Derivative entities</summary>
+
+Characterized by a key word (space, res, den, etc.) and a value (label = an alphanumeric value, index = a nonnegative integer, etc) separated with a dash `-`
+- `[space-<space>]`: image space if different from raw space: template space (i.e. MNI305 etc), individual, study etc. (see [BIDS](https://bids-specification.readthedocs.io/en/stable/appendices/coordinate-systems.html) for allowed spaces)
+- `[res-<label>]`: for changes in resolution
+- `[den-<label>]`: for changes related to density
+- `[desc-<label>]`: [should](https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html#file-naming-conventions) be used to specify the contrast (i.e. `_desc-T1w` and `_desc-T2w`)
+- `[label-<label>]`: to avoid confusion if multiple masks are available we can specify the masked [structure](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels) (i.e. `_label-WM` for white matter, `_label-GM` for gray matter, `_label-L` for lesions etc.)
+
+Entities are then separated using underscores `_`
+
+</details>
+
+<details>
+<summary>Derivative suffixes</summary>
+
+An alphanumeric string located after all the entities following a final underscore `_` :
+- `mask` for binary masks (0 and 1 only)
+- `dseg` for discrete segmentations representing multiple anatomical structures
+- `probseg` for probabilistic segmentations representing a single anatomical structure with values ranging from 0 to 1
+- etc.
+
+</details>
+
+<details>
+<summary>Derivatives extensions</summary>
+
+ Files extensions:
+- `.nii.gz`
+- `.json`
+- etc.
+
+</details>
 
 
+### Derivative template
 
-### Derivatives template
+⚠️  In addition to the subjects folders, derived datasets must include their own `dataset_description.json` file to track all the processing steps used to create the data. Example:
 
-⚠️  Derived datasets must include their own `dataset_description.json` file to track all the processed used to create the data. Example:
-
+<details>
+<summary>dataset_description.json</summary>
+    
 ```json
 {
     "BIDSVersion": "1.9.0",
@@ -365,13 +437,18 @@ Derived datasets follow the **same structure** as the `raw` folders:
 
 ```{warning}
 The `dataset_description.json` file within the derived dataset should include `"DatasetType": "derivative"`.
- ```
+```
+
+</details>
 
 ```{note}
-If more details about the processing steps used have to be provided (e.g., reorientation, resampling etc.), a [`descriptions.tsv`](https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#descriptionstsv) file may added at the root of the folder. This file must contain at least two columns:
+If more details about the processing steps used have to be provided (e.g., reorientation, resampling etc.), a [`descriptions.tsv`](https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#descriptionstsv) file may be added at the root of the folder. This file must contain at least two columns:
 - `desc_id`: contains all the labels used with the [desc](https://bids-specification.readthedocs.io/en/stable/appendices/entities.html#desc) entity within the filenames accross the entire dataset.
 - `description`: human readable descriptions
 ```
+
+
+
 
 
 
