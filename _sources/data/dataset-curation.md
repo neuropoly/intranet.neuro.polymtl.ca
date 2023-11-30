@@ -463,8 +463,6 @@ Therefore, to improve the way we track our data, `.json` sidecars will have to b
 ```json
 {
     "SpatialReference": "orig",
-    "Type": "mask",
-    "Region": "SC",
     "GeneratedBy": [
         {
             "Name": "sct_deepseg_sc",
@@ -474,7 +472,6 @@ Therefore, to improve the way we track our data, `.json` sidecars will have to b
             "Name": "Manual",
             "Author": "Nathan Molinier",
             "Date": "2023-07-14 13:43:10"
-            "Description": ""
         }
     ]
 }
@@ -494,6 +491,7 @@ To be consistent regarding the way anatomical regions will be reffered to, pleas
 | MS | Multiple Sclerosis Lesion |
 | SCI | Spinal Cord Injury Lesion |
 | CSF | Cerebrospinal Fluid |
+| compression | Spinal Cord Compression |
 | tumor | Tumor |
 | edema | Edema |
 | cavity | Cavity |
