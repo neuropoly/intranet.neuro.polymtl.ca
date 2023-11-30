@@ -903,7 +903,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 <p>JSON sidecars are companion files linked to data files. They share the same filenames but have a “.json” extension. These files store essential metadata, serving as guidebooks to provide crucial details about the associated data, ensuring organized and comprehensive information.</p>
 <p>Therefore, to improve the way we track our data, <code class="docutils literal notranslate"><span class="pre">.json</span></code> sidecars will have to be generated for each data present in derived datasets. This file will contain information about</p>
 <details>
-<summary>JSON sidecar</summary>
+<summary>JSON sidecar (ORIGINAL SPACE)</summary>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;SpatialReference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;orig&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -915,6 +915,47 @@ script should then be saved under the <code class="docutils literal notranslate"
 <span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Manual&quot;</span><span class="p">,</span>
 <span class="w">            </span><span class="nt">&quot;Author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Nathan Molinier&quot;</span><span class="p">,</span>
 <span class="w">            </span><span class="nt">&quot;Date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-07-14 13:43:10&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</details>
+<details>
+<summary>JSON sidecar (RESAMPLED)</summary>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;SpatialReference&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;ResamplingFactor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Interpolation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;spline&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Xmin&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Xmax&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">95</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Ymin&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Ymax&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Zmin&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Zmax&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sct_resample&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SCT v6.1&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sct_crop_image&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SCT v6.1&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</details>
+<details>
+<summary>JSON sidecar (PAM50 SPACE)</summary>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;SpatialReference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PAM50&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sct_register_to_template&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SCT v6.1&quot;</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">]</span>
 <span class="p">}</span>
@@ -1023,48 +1064,6 @@ script should then be saved under the <code class="docutils literal notranslate"
                         ├── sub-001_acq-sag_seg-discs_desc-T2w_dlabel.nii.gz
                         └── sub-001_acq-sag_seg-discs_desc-T2w_dlabel.json
 
-</pre></div>
-</div>
-<p>The convention for suffix is inspired from the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/05-derivatives/03-imaging.html#imaging-data-types">BIDS convention</a> and is the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">label-&lt;region&gt;_seg.nii.gz</span></code>: binary segmentation of the region <code class="docutils literal notranslate"><span class="pre">&lt;region&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">label-&lt;region&gt;_softseg.nii.gz</span></code>: probabilistic (soft) segmentation (i.e., values can lie between 0 and 1) of the region <code class="docutils literal notranslate"><span class="pre">&lt;region&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">label-&lt;region&gt;_mask.nii.gz</span></code>: binary mask of the region <code class="docutils literal notranslate"><span class="pre">&lt;region&gt;</span></code>, for example, cylinder mask with diameter of 35mm centered at the center of the spinal cord</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">label-&lt;region&gt;_softmask.nii.gz</span></code>: probabilistic mask of the region <code class="docutils literal notranslate"><span class="pre">&lt;region&gt;</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">label-centerline.nii.gz</span></code>: binary spinal cord centerline</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">label-disc.nii.gz</span></code>: voxels located at the posterior tip of each intervertebral disc, with values corresponding to <a class="reference external" href="https://spinalcordtoolbox.com/user_section/tutorials/registration-to-template/vertebral-labeling/labeling-conventions.html?highlight=labeling">SCT convention</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">label-pmj.nii.gz</span></code>: a single voxel with value of <code class="docutils literal notranslate"><span class="pre">50</span></code> corresponding to the pontomedullary junction (PMJ), see <a class="reference external" href="https://spinalcordtoolbox.com/user_section/tutorials/registration-to-template/vertebral-labeling/labeling-conventions.html?highlight=labeling">SCT convention</a> for details</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">label-compression.nii.gz</span></code>: voxel(s) with value of <code class="docutils literal notranslate"><span class="pre">1</span></code> located at the posterior tip of each intervertebral disc corresponding to the spinal cord compression(s), see <a class="reference external" href="https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/3984#issuecomment-1373008539">here</a> for details</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">label-rootlet.nii.gz</span></code>: spinal root segmentation</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">label-&lt;region&gt;_lesion.nii.gz</span></code>: lesion (for example in multiple sclerosis), see <a class="reference external" href="https://github.com/ivadomed/model_seg_sci#data">here</a> for details</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Fields</span><span class="p">:</span>
-<span class="o">-</span> <span class="n">region</span> <span class="o">=</span> <span class="p">{</span><span class="n">SC</span><span class="p">,</span> <span class="n">GM</span><span class="p">,</span> <span class="n">WM</span><span class="p">,</span> <span class="n">CSF</span><span class="p">,</span> <span class="n">brain</span><span class="p">,</span> <span class="n">brainstem</span><span class="p">,</span> <span class="n">tumor</span><span class="p">,</span> <span class="n">edema</span><span class="p">,</span> <span class="n">cavity</span><span class="p">,</span> <span class="n">axon</span><span class="p">,</span> <span class="n">myelin</span><span class="p">}</span>
-</pre></div>
-</div>
-<p>⚠️ Each label file (such as segmentations or disc label) should be accompanied by a JSON sidecar file. Convention (see this <a class="reference external" href="https://github.com/spinalcordtoolbox/manual-correction/issues/34">issue</a>) for JSON sidecar files is the following:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;Author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Firstname Lastname&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;Date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;YYYY-MM-DD HH:MM:SS&quot;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">]</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">&quot;Date&quot;</span></code> is optional. We include it when running the manual correction via the <a class="reference external" href="https://github.com/spinalcordtoolbox/manual-correction">manual correction</a> python script.</p>
-</div>
-<p>If you are running multiple processing based on the same <code class="docutils literal notranslate"><span class="pre">raw</span></code> data, you must create a folder for each of them and then follow the same logic as above. For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>...
-...
-└── derivatives
-    ├── manual_labels
-    |   └── dataset_description_1.json
-    └── manual_labels_softseg
-        └── dataset_description_2.json
 </pre></div>
 </div>
 </section>
