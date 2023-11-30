@@ -490,20 +490,20 @@ To be consistent regarding the way anatomical regions will be reffered to, pleas
 | SC | Spinal Cord |
 | GM | Gray Matter |
 | WM | White Matter |
-| MSL | Multiple Sclerosis Lesion |
-| SCIL | Spinal Cord Injury Lesion |
+| MS | Multiple Sclerosis Lesion |
+| SCI | Spinal Cord Injury Lesion |
 | CSF | Cerebrospinal Fluid |
-| TUM | Tumor |
-| ED | Edema |
-| CAV | Cavity |
-| AX | Axon |
-| MYEL | Myelin |
+| tumor | Tumor |
+| edema | Edema |
+| cavity | Cavity |
+| axon | Axon |
+| myelin | Myelin |
 
 When multiple anatomical regions are present in the image, atlases should be used. When specified, these atlases **SHOULD** be added to a folder `atlases/` at the root of the derivative folder.
 
-### Examples and use case
+### Examples and use cases
 
-Let's consider a dataset with one single subject `sub-001`. This dataset comes from a clinical partner who segmented spinal cord injuries (SCI) lesions and created point labels for spinal cord (SC) compressions. Based on this dataset, we decide to generate SC segmentations and discs labels. Here is the structure of the final dataset:
+Let's consider a dataset with one single subject `sub-001`. This dataset comes from a clinical partner who segmented spinal cord injury (SCI) lesions and created point labels for spinal cord (SC) compressions. Based on this dataset, we decide to generate SC segmentations and disc labels. Here is the structure of the final dataset:
 
 ```
 sci-bordeaux
@@ -525,34 +525,34 @@ sci-bordeaux
         │   ├── README.md
         │   └── sub-001
         │           └── anat
-        │               ├── sub-001_acq-sag_desc-T1w_label-SCIL_mask.nii.gz
-        │               ├── sub-001_acq-sag_desc-T1w_label-SCIL_mask.json
-        │               ├── sub-001_acq-sag_desc-T1w_atlas-Comp_plabel.nii.gz
-        │               ├── sub-001_acq-sag_desc-T1w_atlas-Comp_plabel.json
-        │               ├── sub-001_acq-sag_desc-T2w_label-SCIL_mask.nii.gz
-        │               ├── sub-001_acq-sag_desc-T2w_label-SCIL_mask.json
-        │               ├── sub-001_acq-sag_desc-T2w_atlas-Comp_plabel.nii.gz
-        │               └── sub-001_acq-sag_desc-T2w_atlas-Comp_plabel.json
+        │               ├── sub-001_acq-sag_label-SCI_desc-T1w_mask.nii.gz
+        │               ├── sub-001_acq-sag_label-SCI_desc-T1w_mask.json
+        │               ├── sub-001_acq-sag_label-compression_desc-T1w_blabel.nii.gz
+        │               ├── sub-001_acq-sag_label-compression_desc-T1w_blabel.json
+        │               ├── sub-001_acq-sag_label-SCI_desc-T2w_mask.nii.gz
+        │               ├── sub-001_acq-sag_label-SCI_desc-T2w_mask.json
+        │               ├── sub-001_acq-sag_label-compression_desc-T2w_blabel.nii.gz
+        │               └── sub-001_acq-sag_label-compression_desc-T2w_blabel.json
         │
-        ├── clinical-labels
+        ├── SC-masks
         │   ├── dataset_description.json
         │   ├── README.md
         │   └── sub-001
         │           └── anat
-        │               ├── sub-001_acq-sag_desc-T1w_label-SC_mask.nii.gz
-        │               ├── sub-001_acq-sag_desc-T1w_label-SC_mask.json
-        │               ├── sub-001_acq-sag_desc-T2w_label-SC_mask.nii.gz
-        │               └── sub-001_acq-sag_desc-T2w_label-SC_mask.json
+        │               ├── sub-001_acq-sag_label-SC_desc-T1w_mask.nii.gz
+        │               ├── sub-001_acq-sag_label-SC_desc-T1w_mask.json
+        │               ├── sub-001_acq-sag_label-SC_desc-T2w_mask.nii.gz
+        │               └── sub-001_acq-sag_label-SC_desc-T2w_mask.json
         │
-        └── clinical-labels
+        └── disc-labels
             ├── dataset_description.json
             ├── README.md
             └── sub-001
                     └── anat
-                        ├── sub-001_acq-sag_desc-T1w_atlas-Discs_plabel.nii.gz
-                        ├── sub-001_acq-sag_desc-T1w_atlas-Discs_plabel.json
-                        ├── sub-001_acq-sag_desc-T2w_atlas-Discs_plabel.nii.gz
-                        └── sub-001_acq-sag_desc-T2w_atlas-Discs_plabel.json
+                        ├── sub-001_acq-sag_seg-discs_desc-T1w_dlabel.nii.gz
+                        ├── sub-001_acq-sag_seg-discs_desc-T1w_dlabel.json
+                        ├── sub-001_acq-sag_seg-discs_desc-T2w_dlabel.nii.gz
+                        └── sub-001_acq-sag_seg-discs_desc-T2w_dlabel.json
 
 ```
 
