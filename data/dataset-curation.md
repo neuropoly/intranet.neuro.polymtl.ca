@@ -503,6 +503,7 @@ When multiple anatomical regions are present in the image, atlases should be use
 
 ### Examples and use case
 
+Let's consider a dataset with one single subject `sub-001`. This dataset comes from a clinical partner who segmented spinal cord injuries (SCI) lesions and created point labels for spinal cord (SC) compressions. Based on this dataset, we decide to generate SC segmentations and discs labels.
 
 Example:
 
