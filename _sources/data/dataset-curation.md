@@ -499,6 +499,8 @@ To be consistent regarding the way anatomical regions will be reffered to, pleas
 | AX || Axon |
 | MYEL || Myelin |
 
+When multiple anatomical regions are present in the image, atlases should be used. When specified, these atlases **SHOULD** be added to a folder `atlases/` at the root of the derivative folder.
+
 ### Examples and use case
 
 
