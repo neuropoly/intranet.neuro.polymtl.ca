@@ -16,6 +16,8 @@ Once the data are converted to BIDS and [uploaded](git-datasets.md#upload) to gi
 
 > [Brackets] are characterizing optional informations
 
+The `raw` dataset corresponds to the core dataset that contains all the different acquisition generated for one or several subjects. **NO** postprocessing steps should be applied to these acquisitions.
+
 ### Folders structure and filenames
 
 Subjects folders in the `raw` dataset are structured as follows for MRI,
