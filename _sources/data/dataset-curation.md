@@ -480,7 +480,7 @@ Therefore, to improve the way we track our data, `.json` sidecars will have to b
 </details>
 
 <details>
-<summary>JSON sidecar (RESAMPLED)</summary>
+<summary>JSON sidecar (RESAMPLED and CROPPED)</summary>
     
 ```json
 {
