@@ -503,35 +503,35 @@ When multiple anatomical regions are present in the image, atlases should be use
 
 ### Examples and use case
 
-Let's consider a dataset with one single subject `sub-001`. This dataset comes from a clinical partner who segmented spinal cord injuries (SCI) lesions and created point labels for spinal cord (SC) compressions. Based on this dataset, we decide to generate SC segmentations and discs labels.
-
-Example:
+Let's consider a dataset with one single subject `sub-001`. This dataset comes from a clinical partner who segmented spinal cord injuries (SCI) lesions and created point labels for spinal cord (SC) compressions. Based on this dataset, we decide to generate SC segmentations and discs labels. Here is the structure of the final dataset:
 
 ```
-...
-...
-├── sub-XXX
-│   └── anat
-│       └──sub-XXX_T1w.nii.gz
-...
-...
-└── derivatives
-    └── labels
-        ├── dataset_description.json
-        ├── sub-XXX
-        │   ├── anat
-        │   │   ├──sub-XXX_T1w_label-SC_seg.nii.gz
-        │   │   ├──sub-XXX_T1w_label-SC_softseg.nii.gz
-        │   │   ├──sub-XXX_T1w_label-SC_mask.nii.gz
-        │   │   ├──sub-XXX_T1w_label-GM_seg.nii.gz
-        │   │   ├──sub-XXX_T1w_label-WM_seg.nii.gz
-        │   │   ├──sub-XXX_T1w_label-centerline.nii.gz
-        │   │   ├──sub-XXX_T1w_label-disc.nii.gz
-        │   │   ├──sub-XXX_T1w_label-lesion.nii.gz
-        │   │   ├──sub-XXX_T1w_label-compression.nii.gz
-        │   │   ├──sub-XXX_T1w_label-rootlet.nii.gz
-        ...
-        ...
+sci-bordeaux
+    ├── README.md
+    ├── dataset_description.json
+    ├── participants.tsv
+    ├── participants.json
+    ├── code/
+    │   └── curate.py
+    ├── sub-001
+    │   └── anat
+    │       └──sub-001_acq-sag_T1w.nii.gz
+    │       └──sub-001_acq-sag_T2w.nii.gz
+    └── derivatives
+        └── clinical-labels
+            ├── dataset_description.json
+            ├── README.md
+            └── sub-001
+                    └── anat
+                        ├── sub-001_acq-sag_desc-T1w_label-SC_mask.nii.gz
+                        ├── sub-001_acq-sag_desc-T1w_label-SC_mask.json
+                        ├── sub-001_acq-sag_desc-T1w_atlas-Comp_plabel.nii.gz
+                        ├── sub-001_acq-sag_desc-T1w_atlas-Comp_plabel.json
+                        ├── sub-001_acq-sag_desc-T2w_label-SC_mask.nii.gz
+                        ├── sub-001_acq-sag_desc-T2w_label-SC_mask.json
+                        ├── sub-001_acq-sag_desc-T2w_atlas-Comp_plabel.nii.gz
+                        └── sub-001_acq-sag_desc-T2w_atlas-Comp_plabel.json
+
 ```
 
 The convention for suffix is inspired from the [BIDS convention](https://bids-specification.readthedocs.io/en/stable/05-derivatives/03-imaging.html#imaging-data-types) and is the following:
