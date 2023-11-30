@@ -840,7 +840,8 @@ script should then be saved under the <code class="docutils literal notranslate"
 <li><p><code class="docutils literal notranslate"><span class="pre">mask</span></code> for binary masks (0 and 1 only)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">dseg</span></code> for discrete segmentations representing multiple anatomical structures</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">probseg</span></code> for probabilistic segmentations representing a single anatomical structure with values ranging from 0 to 1</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">plabel</span></code> (<strong>NOT BIDS</strong>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">blabel</span></code> for binary labels (0 and 1 only) (<strong>NOT BIDS</strong>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dlabel</span></code> for discrete labels representing multiple anatomical structures (<strong>NOT BIDS</strong>)</p></li>
 <li><p>etc.</p></li>
 </ul>
 </details>
@@ -902,9 +903,9 @@ script should then be saved under the <code class="docutils literal notranslate"
 <p>JSON sidecars are companion files linked to data files. They share the same filenames but have a “.json” extension. These files store essential metadata, serving as guidebooks to provide crucial details about the associated data, ensuring organized and comprehensive information.</p>
 <p>Therefore, to improve the way we track our data, <code class="docutils literal notranslate"><span class="pre">.json</span></code> sidecars will have to be generated for each data present in derived datasets. This file will contain information about</p>
 <details>
-<summary>dataset_description.json</summary>
+<summary>JSON sidecar</summary>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;Space&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;orig&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;SpatialReference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;orig&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mask&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;Region&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SC&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>

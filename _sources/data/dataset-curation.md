@@ -391,7 +391,8 @@ An alphanumeric string located after all the entities following a final undersco
 - `mask` for binary masks (0 and 1 only)
 - `dseg` for discrete segmentations representing multiple anatomical structures
 - `probseg` for probabilistic segmentations representing a single anatomical structure with values ranging from 0 to 1
-- `plabel` (**NOT BIDS**)
+- `blabel` for binary labels (0 and 1 only) (**NOT BIDS**)
+- `dlabel` for discrete labels representing multiple anatomical structures (**NOT BIDS**)
 - etc.
 
 </details>
@@ -457,11 +458,11 @@ JSON sidecars are companion files linked to data files. They share the same file
 Therefore, to improve the way we track our data, `.json` sidecars will have to be generated for each data present in derived datasets. This file will contain information about
 
 <details>
-<summary>dataset_description.json</summary>
+<summary>JSON sidecar</summary>
     
 ```json
 {
-    "Space": "orig",
+    "SpatialReference": "orig",
     "Type": "mask",
     "Region": "SC",
     "GeneratedBy": [
