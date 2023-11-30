@@ -513,24 +513,46 @@ sci-bordeaux
     ├── participants.json
     ├── code/
     │   └── curate.py
+    │
     ├── sub-001
     │   └── anat
     │       └──sub-001_acq-sag_T1w.nii.gz
     │       └──sub-001_acq-sag_T2w.nii.gz
+    │
     └── derivatives
+        ├── clinical-labels
+        │   ├── dataset_description.json
+        │   ├── README.md
+        │   └── sub-001
+        │           └── anat
+        │               ├── sub-001_acq-sag_desc-T1w_label-SCIL_mask.nii.gz
+        │               ├── sub-001_acq-sag_desc-T1w_label-SCIL_mask.json
+        │               ├── sub-001_acq-sag_desc-T1w_atlas-Comp_plabel.nii.gz
+        │               ├── sub-001_acq-sag_desc-T1w_atlas-Comp_plabel.json
+        │               ├── sub-001_acq-sag_desc-T2w_label-SCIL_mask.nii.gz
+        │               ├── sub-001_acq-sag_desc-T2w_label-SCIL_mask.json
+        │               ├── sub-001_acq-sag_desc-T2w_atlas-Comp_plabel.nii.gz
+        │               └── sub-001_acq-sag_desc-T2w_atlas-Comp_plabel.json
+        │
+        ├── clinical-labels
+        │   ├── dataset_description.json
+        │   ├── README.md
+        │   └── sub-001
+        │           └── anat
+        │               ├── sub-001_acq-sag_desc-T1w_label-SC_mask.nii.gz
+        │               ├── sub-001_acq-sag_desc-T1w_label-SC_mask.json
+        │               ├── sub-001_acq-sag_desc-T2w_label-SC_mask.nii.gz
+        │               └── sub-001_acq-sag_desc-T2w_label-SC_mask.json
+        │
         └── clinical-labels
             ├── dataset_description.json
             ├── README.md
             └── sub-001
                     └── anat
-                        ├── sub-001_acq-sag_desc-T1w_label-SC_mask.nii.gz
-                        ├── sub-001_acq-sag_desc-T1w_label-SC_mask.json
-                        ├── sub-001_acq-sag_desc-T1w_atlas-Comp_plabel.nii.gz
-                        ├── sub-001_acq-sag_desc-T1w_atlas-Comp_plabel.json
-                        ├── sub-001_acq-sag_desc-T2w_label-SC_mask.nii.gz
-                        ├── sub-001_acq-sag_desc-T2w_label-SC_mask.json
-                        ├── sub-001_acq-sag_desc-T2w_atlas-Comp_plabel.nii.gz
-                        └── sub-001_acq-sag_desc-T2w_atlas-Comp_plabel.json
+                        ├── sub-001_acq-sag_desc-T1w_atlas-Discs_plabel.nii.gz
+                        ├── sub-001_acq-sag_desc-T1w_atlas-Discs_plabel.json
+                        ├── sub-001_acq-sag_desc-T2w_atlas-Discs_plabel.nii.gz
+                        └── sub-001_acq-sag_desc-T2w_atlas-Discs_plabel.json
 
 ```
 
