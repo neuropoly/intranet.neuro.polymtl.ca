@@ -20,7 +20,7 @@ The `raw` dataset corresponds to the core dataset that contains all the differen
 
 ### Folders structure and filenames
 
-Subjects folders in the `raw` dataset are structured as follows for MRI,
+Subjects folders in the `raw` dataset are structured as follows for MRI, with folders corresponding to subjects, [sessions] and MRI modalities:
 
 <details>
 <summary>Raw structure</summary>
@@ -39,8 +39,6 @@ sub-<label>/
 ```
 
 </details>
-
-With folders corresponding to subjects, [sessions] and MRI modalities.
 
 ```{note}
 Data collected from actual subjects goes under their specific sub-folder
@@ -337,7 +335,7 @@ According to BIDS, derived datasets could be stored inside a parent folder [`der
 
 ### Folders structure and filenames
 
-Derived datasets follow the **same structure** as the `raw` dataset:
+Derived datasets follow the **same structure** as the `raw` dataset, with folders corresponding to subjects, [sessions] and MRI modalities. 
 
 <details>
 <summary>Derivatives structure</summary>
@@ -349,8 +347,6 @@ sub-<label>/
             <source_entities>[_space-<space>][_res-<label>][_den-<label>][_desc-<label>]_<suffix>.<extension>
 ```
 </details>
-
-With folders corresponding to subjects, [sessions] and MRI modalities. 
 
 ```{warning}
 The derived dataset must adhere to the identical folder hierarchy used for the raw dataset.
@@ -378,7 +374,7 @@ For MRI, the contrast will need to be removed from the filename (see [here](http
 <summary>Derivative entities</summary>
 
 Characterized by a key word (space, res, den, etc.) and a value (label = an alphanumeric value, index = a nonnegative integer, etc) separated with a dash `-`
-- `[space-<space>]`: image space if different from raw space: template space (i.e. MNI305 etc), individual, study etc. (see [BIDS](https://bids-specification.readthedocs.io/en/stable/appendices/coordinate-systems.html) for allowed spaces)
+- `[space-<space>]`: image space if different from raw space: template space (i.e. MNI305 etc), individual, study etc. (see [BIDS](https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#spatial-references) for allowed spaces)
 - `[res-<label>]`: for changes in resolution
 - `[den-<label>]`: for changes related to density
 - `[desc-<label>]`: [should](https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html#file-naming-conventions) be used to specify the contrast (i.e. `_desc-T1w` and `_desc-T2w`)
@@ -395,6 +391,7 @@ An alphanumeric string located after all the entities following a final undersco
 - `mask` for binary masks (0 and 1 only)
 - `dseg` for discrete segmentations representing multiple anatomical structures
 - `probseg` for probabilistic segmentations representing a single anatomical structure with values ranging from 0 to 1
+- `plabel` (**NOT BIDS**)
 - etc.
 
 </details>
@@ -447,9 +444,62 @@ If more details about the processing steps used have to be provided (e.g., reori
 - `description`: human readable descriptions
 ```
 
+### json sidecars
+
+> This section is part of an initiavite to improve our ability to track our data 
+
+JSON sidecars are companion files linked to data files. They share the same filenames but have a ".json" extension. These files store essential metadata, serving as guidebooks to provide crucial details about the associated data, ensuring organized and comprehensive information.
+
+Therefore, to improve the way we track our data, `.json` sidecars will have to be generated for each data present in derived datasets. This file will contain information about
+
+<details>
+<summary>dataset_description.json</summary>
+    
+```json
+{
+    "Space": "orig",
+    "Type": "mask",
+    "Region": "SC",
+    "GeneratedBy": [
+        {
+            "Name": "sct_deepseg_sc",
+            "Version": "SCT v6.1"
+        },
+        {
+            "Name": "Manual",
+            "Author": "Nathan Molinier",
+            "Date": "2023-07-14 13:43:10"
+            "Description": ""
+        }
+    ]
+}
+```
+
+</details>
+
+### Regions and atlases
+
+To be consistent regarding the way anatomical regions will be reffered to, please follow this table (based on the BIDS [labels](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels)):
+
+| Abbreviation (label) | Description |
+| :---: | :---: |
+| SC || Spinal Cord |
+| GM || Gray Matter |
+| WM || White Matter |
+| MSL || Multiple Sclerosis Lesion |
+| SCIL || Spinal Cord Injury Lesion |
+| CSF || Cerebrospinal Fluid |
+| TUM || Tumor |
+| ED || Edema |
+| CAV || Cavity |
+| AX || Axon |
+| MYEL || Myelin |
 
 
 
+
+
+### Examples and use case
 
 
 Example:
