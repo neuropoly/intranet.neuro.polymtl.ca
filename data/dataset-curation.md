@@ -357,7 +357,10 @@ Data generated for a specific subject will go under their specific sub-folder
 ```
 
 Finally, regarding derivatives filenames, we can identify the same 3 type of elements as before (entities, suffixes and extensions) plus 1 extra-consideration related to the raw data:
-> ⚠️ Entities and suffixes are different from those used with the raw filenames and are specific to [data types](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#imaging-data-types).
+
+```{warning}
+Entities and suffixes are different from those used with the raw filenames and are specific to [data types](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#imaging-data-types).
+```
 
 <details>
 <summary>source_entities</summary>
