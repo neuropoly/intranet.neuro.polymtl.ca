@@ -374,11 +374,12 @@ For MRI, the contrast will need to be removed from the filename (see [here](http
 <summary>Derivative entities</summary>
 
 Characterized by a key word (space, res, den, etc.) and a value (label = an alphanumeric value, index = a nonnegative integer, etc) separated with a dash `-`
-- `[space-<space>]`: image space if different from raw space: template space (i.e. MNI305 etc), individual, study etc. (see [BIDS](https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#spatial-references) for allowed spaces)
+- `[space-<space>]`: image space if different from raw space: template space (i.e. MNI305 etc), orig, other etc. (see [BIDS](https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#spatial-references))
 - `[res-<label>]`: for changes in resolution
 - `[den-<label>]`: for changes related to density
 - `[desc-<label>]`: [should](https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html#file-naming-conventions) be used to specify the contrast (i.e. `_desc-T1w` and `_desc-T2w`)
 - `[label-<label>]`: to avoid confusion if multiple masks are available we can specify the masked [structure](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels) (i.e. `_label-WM` for white matter, `_label-GM` for gray matter, `_label-L` for lesions etc.)
+- `[seg-<label>]`
 
 Entities are then separated using underscores `_`
 
@@ -407,6 +408,15 @@ An alphanumeric string located after all the entities following a final undersco
 
 </details>
 
+⚠️ Some entities can only be used with specific suffixes ! This association depends on the imaging data [type](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#imaging-data-types). Here is a table showing some associations:
+
+| Image type (suffix) | Required entities | Description |
+| :---: | :---: | --- |
+|`mask`|  | The entity is used to specify the mask structure |
+|`dseg`|||
+|`probseg`|||
+|`blabel` (**NOT BIDS**)|||
+|`dlabel` (**NOT BIDS**)|||
 
 ### Derivative template
 
