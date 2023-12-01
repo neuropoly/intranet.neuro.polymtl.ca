@@ -416,7 +416,7 @@ An alphanumeric string located after all the entities following a final undersco
 |`dseg`| `seg-<label>` | The entity is used to specify the atlas used to map the different structures |
 |`probseg`| `seg-<label>` or `label-<label>` | The entity `label` is used if only one structure is present in the image. If more structures are present (image with more dimensions) the `seg` entity must be used and structures have to be added to the JSON file (see [BIDS](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#probabilistic-segmentations))|
 |`blabel` (**NOT BIDS**)| `label-<label>` | The entity is used to specify the type of structure labeled in the image |
-|`dlabel` (**NOT BIDS**)| `seg-<label>` | The entity is used to specify the atlas used to map the different structures |
+|`dlabel` (**NOT BIDS**)| `seg-<label>` | The entity is used to specify the atlas used to label the different structures |
 
 ### Derivative template
 
@@ -535,6 +535,10 @@ Therefore, to improve the way we track our data, `.json` sidecars will have to b
 ```
 
 </details>
+
+```{note}
+If the image space is different from the original image, the entity `space-<label>` has to be used. The entity `space-template` may be used for templates and `space-other` for other transformations.
+```
 
 ### Regions and atlases
 
