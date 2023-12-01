@@ -379,7 +379,7 @@ Characterized by a key word (space, res, den, etc.) and a value (label = an alph
 - `[den-<label>]`: for changes related to density
 - `[desc-<label>]`: [should](https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html#file-naming-conventions) be used to specify the contrast (i.e. `_desc-T1w` and `_desc-T2w`)
 - `[label-<label>]`: to avoid confusion if multiple masks are available we can specify the masked [structure](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels) (i.e. `_label-WM` for white matter, `_label-GM` for gray matter, `_label-L` for lesions etc.)
-- `[seg-<label>]`
+- `[seg-<label>]`: to specify the atlas used when multiple structure are present in the image
 
 Entities are then separated using underscores `_`
 
@@ -412,11 +412,11 @@ An alphanumeric string located after all the entities following a final undersco
 
 | Image type (suffix) | Required entities | Description |
 | :---: | :---: | --- |
-|`mask`|  | The entity is used to specify the mask structure |
-|`dseg`|||
-|`probseg`|||
-|`blabel` (**NOT BIDS**)|||
-|`dlabel` (**NOT BIDS**)|||
+|`mask`| `label-<label>` | The entity is used to specify the structure masked in the image |
+|`dseg`| `seg-<label>` | The entity is used to specify the atlas used to map the different structures |
+|`probseg`| `seg-<label>` or `label-<label>` | The entity `label` is used if only one structure is present in the image. If more structures are present (image with more dimensions) the `seg` entity must be used and structures have to be added to the JSON file (see [BIDS](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#probabilistic-segmentations))|
+|`blabel` (**NOT BIDS**)| `label-<label>` | The entity is used to specify the type of structure labeled in the image |
+|`dlabel` (**NOT BIDS**)| `seg-<label>` | The entity is used to specify the atlas used to map the different structures |
 
 ### Derivative template
 

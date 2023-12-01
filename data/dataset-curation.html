@@ -830,7 +830,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 <li><p><code class="docutils literal notranslate"><span class="pre">[den-&lt;label&gt;]</span></code>: for changes related to density</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[desc-&lt;label&gt;]</span></code>: <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html#file-naming-conventions">should</a> be used to specify the contrast (i.e. <code class="docutils literal notranslate"><span class="pre">_desc-T1w</span></code> and <code class="docutils literal notranslate"><span class="pre">_desc-T2w</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[label-&lt;label&gt;]</span></code>: to avoid confusion if multiple masks are available we can specify the masked <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels">structure</a> (i.e. <code class="docutils literal notranslate"><span class="pre">_label-WM</span></code> for white matter, <code class="docutils literal notranslate"><span class="pre">_label-GM</span></code> for gray matter, <code class="docutils literal notranslate"><span class="pre">_label-L</span></code> for lesions etc.)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[seg-&lt;label&gt;]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[seg-&lt;label&gt;]</span></code>: to specify the atlas used when multiple structure are present in the image</p></li>
 </ul>
 <p>Entities are then separated using underscores <code class="docutils literal notranslate"><span class="pre">_</span></code></p>
 </details>
@@ -865,24 +865,24 @@ script should then be saved under the <code class="docutils literal notranslate"
 </thead>
 <tbody>
 <tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">mask</span></code></p></td>
-<td class="text-center"><p></p></td>
-<td><p>The entity is used to specify the mask structure</p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">label-&lt;label&gt;</span></code></p></td>
+<td><p>The entity is used to specify the structure masked in the image</p></td>
 </tr>
 <tr class="row-odd"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">dseg</span></code></p></td>
-<td class="text-center"><p></p></td>
-<td><p></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">seg-&lt;label&gt;</span></code></p></td>
+<td><p>The entity is used to specify the atlas used to map the different structures</p></td>
 </tr>
 <tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">probseg</span></code></p></td>
-<td class="text-center"><p></p></td>
-<td><p></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">seg-&lt;label&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">label-&lt;label&gt;</span></code></p></td>
+<td><p>The entity <code class="docutils literal notranslate"><span class="pre">label</span></code> is used if only one structure is present in the image. If more structures are present (image with more dimensions) the <code class="docutils literal notranslate"><span class="pre">seg</span></code> entity must be used and structures have to be added to the JSON file (see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#probabilistic-segmentations">BIDS</a>)</p></td>
 </tr>
 <tr class="row-odd"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">blabel</span></code> (<strong>NOT BIDS</strong>)</p></td>
-<td class="text-center"><p></p></td>
-<td><p></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">label-&lt;label&gt;</span></code></p></td>
+<td><p>The entity is used to specify the type of structure labeled in the image</p></td>
 </tr>
 <tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">dlabel</span></code> (<strong>NOT BIDS</strong>)</p></td>
-<td class="text-center"><p></p></td>
-<td><p></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">seg-&lt;label&gt;</span></code></p></td>
+<td><p>The entity is used to specify the atlas used to map the different structures</p></td>
 </tr>
 </tbody>
 </table>
