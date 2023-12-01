@@ -415,7 +415,7 @@ An alphanumeric string located after all the entities following a final undersco
 Some entities can only be used with specific suffixes ! This association depends on the imaging data [type](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#imaging-data-types). Here is a table showing some associations:
 ```
 
-| Image type (suffix) | Required entities | Description |
+| Image type (suffix) | Associated entities | Description |
 | :---: | :---: | --- |
 |`mask`| `label-<label>` | The entity is used to specify the structure masked in the image |
 |`dseg`| `seg-<label>` | The entity is used to specify the atlas used to map the different structures |
