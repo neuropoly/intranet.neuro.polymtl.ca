@@ -382,7 +382,7 @@ Characterized by a key word (space, res, den, etc.) and a value (label = an alph
 - `[den-<label>]`: for changes related to density
 - `[desc-<label>]`: [should](https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html#file-naming-conventions) be used to specify the contrast (i.e. `_desc-T1w` and `_desc-T2w`)
 - `[label-<label>]`: to avoid confusion if multiple masks are available we can specify the masked [structure](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels) (i.e. `_label-WM` for white matter, `_label-GM` for gray matter, `_label-L` for lesions etc.)
-- `[seg-<label>]`: to specify the atlas used when multiple structure are present in the image
+- `[seg-<label>]`: to specify the atlas used when multiple structures are present in the image
 
 Entities are then separated using underscores `_`
 
