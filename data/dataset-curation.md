@@ -464,7 +464,7 @@ If more details about the processing steps used have to be provided (e.g., reori
 Because derived datasets are datasets, files and folders presented in the raw template section could also be included in this dataset (e.g. README.md, code/, etc.)
 ```
 
-### json sidecars
+### JSON sidecars
 
 > This section is part of an initiavite to improve our ability to track our data 
 
