@@ -466,8 +466,6 @@ Because derived datasets are datasets, files and folders presented in the raw te
 
 ### JSON sidecars
 
-> This section is part of an initiavite to improve our ability to track our data 
-
 JSON sidecars are companion files linked to data files. They share the same filenames but have a ".json" extension. These files store essential metadata, serving as guidebooks to provide crucial details about the associated data, ensuring organized and comprehensive information.
 
 Therefore, to improve the way we track our data, `.json` sidecars will have to be generated for each data present in derived datasets. This file will contain information about
