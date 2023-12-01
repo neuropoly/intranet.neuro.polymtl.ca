@@ -394,7 +394,7 @@ Entities are then separated using underscores `_`
 An alphanumeric string located after all the entities following a final underscore `_` :
 - `mask` for binary masks (0 and 1 only)
 - `dseg` for discrete segmentations representing multiple anatomical structures
-- `probseg` for probabilistic segmentations representing a single anatomical structure with values ranging from 0 to 1
+- `probseg` for probabilistic segmentations representing anatomical structures with values ranging from 0 to 1
 - `blabel` for binary labels (0 and 1 only) (**NOT BIDS**)
 - `dlabel` for discrete labels representing multiple anatomical structures (**NOT BIDS**)
 - etc.
