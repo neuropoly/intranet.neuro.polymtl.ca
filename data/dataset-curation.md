@@ -22,8 +22,7 @@ The `raw` dataset corresponds to the core dataset that contains all the differen
 
 Subjects folders in the `raw` dataset are structured as follows for MRI, with folders corresponding to subjects, [sessions] and MRI modalities:
 
-<details>
-<summary>Raw structure</summary>
+#### Raw structure
 
 ```
 sub-<label>/
@@ -38,14 +37,11 @@ sub-<label>/
             sub-<label>[_ses-<label>][_acq-<label>][_rec-<label>][_dir-<label>][_run-<index>][_part-<mag|phase|real|imag>]_dwi.nii[.gz]
 ```
 
-</details>
-
 ```{note}
 Data collected from actual subjects goes under their specific sub-folder
 ```
 
-<details>
-<summary>Subject naming convention</summary>
+#### Subject naming convention
 
 **Basic convention**: sub-XXX
 
@@ -74,12 +70,11 @@ sub-torDCM001      # tor stands for Toronto and DCM stands for Degenerative Cerv
 sub-torHC001       # tor stands for Toronto and HC stands for Healthy Controls
 sub-zurSCI001      # zur stands for Zurich and SCI stands for Spinal Cord Injury
 ```
-</details>
 
 Regarding BIDS filenames, they are constructed using 3 types of elements:
 
-<details>
-<summary>Raw entities</summary>
+
+#### Raw entities
 
 Characterized by a key word (sub, ses, acq, etc.) and a value (label = an alphanumeric value, index = a nonnegative integer, etc) separated with a dash `-`
 - `sub-<label>`
@@ -93,10 +88,8 @@ Characterized by a key word (sub, ses, acq, etc.) and a value (label = an alphan
 
 Multiple entities can be used, but they must be separated using underscores `_`
 
-</details>
 
-<details>
-<summary>Raw suffixes</summary>
+#### Raw suffixes
 
 An alphanumeric string located after all the entities following a final underscore `_` (i.e. the `<suffix>`). This suffix corresponds for MRI to the MRI contrast:
 - `T1w`
@@ -106,10 +99,8 @@ An alphanumeric string located after all the entities following a final undersco
 
 Only **ONE** suffix can be used within the filename.
 
-</details>
 
-<details>
-<summary>Raw extensions</summary>
+#### Raw extensions
 
  Files extensions:
 - `.nii.gz`
@@ -117,7 +108,6 @@ Only **ONE** suffix can be used within the filename.
 - `.bval`
 - etc.
 
-</details>
 
 ```{note}
 If you need to differentiate spinal cord images from the brain, use the `acq-cspine` tag. For example, `sub-001_acq-cspine_T1w.nii.gz`.
