@@ -787,15 +787,22 @@ script should then be saved under the <code class="docutils literal notranslate"
 <div><p>[Brackets] are characterizing optional informations</p>
 </div></blockquote>
 <p>First, it is important to understand what are <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html#bids-derivatives">BIDS derivatives</a> folders:</p>
-<p>“Derivatives are outputs of common processing pipelines, capturing data and meta-data sufficient for a researcher to understand and (critically) reuse those outputs in subsequent processing. Standardizing derivatives is motivated by use cases where formalized machine-readable access to processed data enables higher level processing.”</p>
+<blockquote>
+<div><p>Derivatives are outputs of common processing pipelines, capturing data and meta-data sufficient for a researcher to understand and (critically) reuse those outputs in subsequent processing. Standardizing derivatives is motivated by use cases where formalized machine-readable access to processed data enables higher level processing.</p>
+</div></blockquote>
 <p>Basically, derivative folders are derived datasets generated from a raw dataset. They must include <strong>ONLY</strong> processed data obtained from a specific raw dataset (i.e. segmentations, masks, labels…).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>DIFFERENT data obtained using DIFFERENT processes/workflows should be stored using DIFFERENT derivatives folders.</p>
+<p>Derivative data obtained using DIFFERENT processes/workflows should be stored using DIFFERENT derivatives folders. Eg:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">derivatives/labels/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">derivatives/sct_5.6/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">derivatives/fmriprep_2.3/</span></code></p></li>
+</ul>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>According to BIDS, derived datasets could be stored inside a parent folder <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#storage-of-derived-datasets"><code class="docutils literal notranslate"><span class="pre">derivatives/</span></code></a> “to make a clear distinction between raw data and results of data processing”. This folder should also follow the same folder logic as the one used for the <code class="docutils literal notranslate"><span class="pre">raw</span></code> data.</p>
+<p>According to BIDS, derived datasets could be stored inside a parent folder <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#storage-of-derived-datasets"><code class="docutils literal notranslate"><span class="pre">derivatives/</span></code></a> <em>“to make a clear distinction between raw data and results of data processing”</em>. This folder should also follow the same folder logic as the one used for the <code class="docutils literal notranslate"><span class="pre">raw</span></code> data.</p>
 </div>
 <section id="id1">
 <h3>Folders structure and filenames<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>

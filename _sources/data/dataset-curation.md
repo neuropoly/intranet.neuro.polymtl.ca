@@ -295,16 +295,19 @@ Analysis scripts should not be kept here. Keep them in separate repositories, us
 
 First, it is important to understand what are [BIDS derivatives](https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html#bids-derivatives) folders:
 
-"Derivatives are outputs of common processing pipelines, capturing data and meta-data sufficient for a researcher to understand and (critically) reuse those outputs in subsequent processing. Standardizing derivatives is motivated by use cases where formalized machine-readable access to processed data enables higher level processing."
+> Derivatives are outputs of common processing pipelines, capturing data and meta-data sufficient for a researcher to understand and (critically) reuse those outputs in subsequent processing. Standardizing derivatives is motivated by use cases where formalized machine-readable access to processed data enables higher level processing.
 
 Basically, derivative folders are derived datasets generated from a raw dataset. They must include **ONLY** processed data obtained from a specific raw dataset (i.e. segmentations, masks, labels...).
 
 ```{warning}
-DIFFERENT data obtained using DIFFERENT processes/workflows should be stored using DIFFERENT derivatives folders.
+Derivative data obtained using DIFFERENT processes/workflows should be stored using DIFFERENT derivatives folders. Eg:
+- `derivatives/labels/`
+- `derivatives/sct_5.6/`
+- `derivatives/fmriprep_2.3/`
 ```
 
 ```{note}
-According to BIDS, derived datasets could be stored inside a parent folder [`derivatives/`](https://bids-specification.readthedocs.io/en/stable/common-principles.html#storage-of-derived-datasets) "to make a clear distinction between raw data and results of data processing". This folder should also follow the same folder logic as the one used for the `raw` data.
+According to BIDS, derived datasets could be stored inside a parent folder [`derivatives/`](https://bids-specification.readthedocs.io/en/stable/common-principles.html#storage-of-derived-datasets) _"to make a clear distinction between raw data and results of data processing"_. This folder should also follow the same folder logic as the one used for the `raw` data.
 ```
 
 ### Folders structure and filenames
