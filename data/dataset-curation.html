@@ -452,6 +452,7 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-entities">Raw entities</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-suffixes">Raw suffixes</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-extensions">Raw extensions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#other-modalities">Other modalities</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-template">Raw template</a></li>
@@ -553,6 +554,16 @@ script should then be saved under the <code class="docutils literal notranslate"
 <li><p><code class="docutils literal notranslate"><span class="pre">[dir-&lt;label&gt;]</span></code></p></li>
 </ul>
 <p>Multiple entities can be used, but they must be separated using underscores <code class="docutils literal notranslate"><span class="pre">_</span></code></p>
+<p>Examples of special cases below:</p>
+<ul class="simple">
+<li><p>If you need to <strong>differentiate spinal cord images from the brain</strong> within the same dataset, use the <code class="docutils literal notranslate"><span class="pre">acq-cspine</span></code> tag. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_acq-cspine_T1w.nii.gz</span></code>. We opted for <code class="docutils literal notranslate"><span class="pre">acq-cspine</span></code> tag (see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html#anatomy-imaging-data">BIDS template</a>) because <code class="docutils literal notranslate"><span class="pre">bp-cspine</span></code> is not currently supported by the BIDS convention (see <a class="reference external" href="https://docs.google.com/document/d/1chZv7vAPE-ebPDxMktfI9i1OkLNR2FELIfpVYsaZPr4/edit">BEP25</a> BIDS extension proposal).</p></li>
+<li><p>If you need to differentiate between sequences acquired with <strong>different orientations</strong>, use the <code class="docutils literal notranslate"><span class="pre">acq-ax</span></code>, <code class="docutils literal notranslate"><span class="pre">acq-cor</span></code>, or <code class="docutils literal notranslate"><span class="pre">acq-sag</span></code> tag. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_acq-ax_T1w.nii.gz</span></code>.</p></li>
+<li><p>If you need to differentiate between different <strong>magnetization transfer (MT)</strong> sequences, use the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html#anatomy-imaging-data"><code class="docutils literal notranslate"><span class="pre">flip-&lt;index&gt;_mt-&lt;on|off&gt;</span></code></a> tag. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_flip-1_mt-on_MTS.nii.gz</span></code>, <code class="docutils literal notranslate"><span class="pre">sub-001_flip-1_mt-off_MTS.nii.gz</span></code> or <code class="docutils literal notranslate"><span class="pre">sub-001_flip-2_mt-off_MTS.nii.gz</span></code>.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you to combine several above mentioned tags, use camelCase. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_acq-cspineSagittal_T1w.nii.gz</span></code>.</p>
+</div>
 </section>
 <section id="raw-suffixes">
 <h4>Raw suffixes<a class="headerlink" href="#raw-suffixes" title="Permalink to this heading">#</a></h4>
@@ -574,27 +585,10 @@ script should then be saved under the <code class="docutils literal notranslate"
 <li><p><code class="docutils literal notranslate"><span class="pre">.bval</span></code></p></li>
 <li><p>etc.</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you need to differentiate spinal cord images from the brain, use the <code class="docutils literal notranslate"><span class="pre">acq-cspine</span></code> tag. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_acq-cspine_T1w.nii.gz</span></code>.</p>
-<p>ℹ️ We opted for <code class="docutils literal notranslate"><span class="pre">acq-cspine</span></code> tag (see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html#anatomy-imaging-data">BIDS template</a>) because <code class="docutils literal notranslate"><span class="pre">bp-cspine</span></code> is not currently supported by the BIDS convention (see <a class="reference external" href="https://docs.google.com/document/d/1chZv7vAPE-ebPDxMktfI9i1OkLNR2FELIfpVYsaZPr4/edit">BEP25</a> BIDS extension proposal).</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you need to differentiate between sequences acquired with different orientations, use the <code class="docutils literal notranslate"><span class="pre">acq-ax</span></code>, <code class="docutils literal notranslate"><span class="pre">acq-cor</span></code>, or <code class="docutils literal notranslate"><span class="pre">acq-sag</span></code> tag. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_acq-ax_T1w.nii.gz</span></code>.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you need to differentiate between different magnetization transfer (MT) sequences, use the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html#anatomy-imaging-data"><code class="docutils literal notranslate"><span class="pre">flip-&lt;index&gt;_mt-&lt;on|off&gt;</span></code></a> tag. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_flip-1_mt-on_MTS.nii.gz</span></code>, <code class="docutils literal notranslate"><span class="pre">sub-001_flip-1_mt-off_MTS.nii.gz</span></code> or <code class="docutils literal notranslate"><span class="pre">sub-001_flip-2_mt-off_MTS.nii.gz</span></code>.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you to combine several above mentioned tags, use camelCase. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_acq-cspineSagittal_T1w.nii.gz</span></code>.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+</section>
+<section id="other-modalities">
+<h4>Other modalities<a class="headerlink" href="#other-modalities" title="Permalink to this heading">#</a></h4>
 <p>Many kinds of data have a place specified for them by BIDS. See <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#filesystem-structure">file naming conventions</a> and the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html">MRI</a> and <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html">Microscopy</a> extensions for full details.</p>
-</div>
 </section>
 </section>
 <section id="raw-template">
@@ -1181,6 +1175,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-entities">Raw entities</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-suffixes">Raw suffixes</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-extensions">Raw extensions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#other-modalities">Other modalities</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-template">Raw template</a></li>
