@@ -270,6 +270,7 @@ The [`participants.json`](https://bids-specification.readthedocs.io/en/stable/03
         "LongName": "Additional notes"
     }
 }
+```
 
 #### `code/`
 
