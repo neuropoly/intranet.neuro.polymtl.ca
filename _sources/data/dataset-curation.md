@@ -333,12 +333,12 @@ Regarding derivatives filenames, we can identify the same 3 type of elements as 
 Entities and suffixes are different from those used with the raw filenames and are specific to [data types](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#imaging-data-types).
 ```
 
-#### `source_entities`
+#### `<source_entities>`
 
-This element corresponds to the entire source filename, with the **omission** of the source suffix and extension. 
+This element corresponds to the entire source filename, with the **omission** of the source suffix and extension. For example, if the source file name is `sub-02_acq-MTon_MTS.nii.gz`, the `<source_entities>` to be used for the derivatives is `sub-02_acq-MTon`.
 
 ```{note}
-For MRI, the contrast will need to be removed from the filename (see [here](https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html#file-naming-conventions)). The desc-<label> entity will be used instead (i.e. `_desc-T1w` and `_desc-T2w`).
+For MRI, it means that the contrast needs to be removed from the filename (see [here](https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html#file-naming-conventions)). The desc-<label> entity will be used instead (i.e. `_desc-T1w` and `_desc-T2w`).
 ```
 
 
@@ -387,6 +387,7 @@ Some entities can only be used with specific suffixes! This association depends 
 ### Derivative template
 
 In addition to the subjects folders, derived datasets must include their own `dataset_description.json` file to track all the processing steps used to create the data. Example:
+
 
 #### `dataset_description.json`
     
