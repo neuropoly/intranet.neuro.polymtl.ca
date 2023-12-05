@@ -444,13 +444,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-converting-data-to-bids">I - Converting data to BIDS</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-building-the-raw-dataset">II - Building the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-data-to-bids">Converting data to BIDS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-raw-dataset">Building the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#folders-structure-and-filenames">Folders structure and filenames</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-template">Raw template</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-building-the-derivative-datasets">III - Building the <code class="docutils literal notranslate"><span class="pre">derivative</span></code> datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-derivative-datasets">Building the <code class="docutils literal notranslate"><span class="pre">derivative</span></code> datasets</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Folders structure and filenames</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-template">Derivative template</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#json-sidecars">JSON sidecars</a></li>
@@ -458,7 +458,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-and-use-cases">Examples and use cases</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iv-changelog-policy">IV - Changelog policy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changelog-policy">Changelog policy</a></li>
 </ul>
             </nav>
         </div>
@@ -472,8 +472,8 @@ document.write(`
                   
   <section id="dataset-curation">
 <h1>Dataset curation<a class="headerlink" href="#dataset-curation" title="Permalink to this heading">#</a></h1>
-<section id="i-converting-data-to-bids">
-<h2>I - Converting data to BIDS<a class="headerlink" href="#i-converting-data-to-bids" title="Permalink to this heading">#</a></h2>
+<section id="converting-data-to-bids">
+<h2>Converting data to BIDS<a class="headerlink" href="#converting-data-to-bids" title="Permalink to this heading">#</a></h2>
 <p>All git-annex datasets should be BIDS-compliant. For more information about the BIDS standard, please visit <a class="reference external" href="http://bids.neuroimaging.io">http://bids.neuroimaging.io</a>.</p>
 <p>When you receive data from an external collaborator, you can save them under a temporary location: <code class="docutils literal notranslate"><span class="pre">duke/temp</span></code>.</p>
 <p>Then, inspect the data and convert them to BIDS. It is recommended to write a script that does the conversion. The
@@ -481,8 +481,8 @@ script should then be saved under the <code class="docutils literal notranslate"
 <a class="reference external" href="https://github.com/neuropoly/data-management/tree/master/scripts">GitHub</a> or under the <code class="docutils literal notranslate"><span class="pre">code</span></code> folder of already existing datasets.</p>
 <p>Once the data are converted to BIDS and <a class="reference internal" href="git-datasets.html#upload"><span class="std std-ref">uploaded</span></a> to git-annex repository, delete the temporary folder to save space.</p>
 </section>
-<section id="ii-building-the-raw-dataset">
-<h2>II - Building the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset<a class="headerlink" href="#ii-building-the-raw-dataset" title="Permalink to this heading">#</a></h2>
+<section id="building-the-raw-dataset">
+<h2>Building the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset<a class="headerlink" href="#building-the-raw-dataset" title="Permalink to this heading">#</a></h2>
 <blockquote>
 <div><p>[Brackets] are characterizing optional informations</p>
 </div></blockquote>
@@ -773,8 +773,8 @@ script should then be saved under the <code class="docutils literal notranslate"
 </details>
 </section>
 </section>
-<section id="iii-building-the-derivative-datasets">
-<h2>III - Building the <code class="docutils literal notranslate"><span class="pre">derivative</span></code> datasets<a class="headerlink" href="#iii-building-the-derivative-datasets" title="Permalink to this heading">#</a></h2>
+<section id="building-the-derivative-datasets">
+<h2>Building the <code class="docutils literal notranslate"><span class="pre">derivative</span></code> datasets<a class="headerlink" href="#building-the-derivative-datasets" title="Permalink to this heading">#</a></h2>
 <blockquote>
 <div><p>[Brackets] are characterizing optional informations</p>
 </div></blockquote>
@@ -1105,8 +1105,8 @@ script should then be saved under the <code class="docutils literal notranslate"
 </div>
 </section>
 </section>
-<section id="iv-changelog-policy">
-<h2>IV - Changelog policy<a class="headerlink" href="#iv-changelog-policy" title="Permalink to this heading">#</a></h2>
+<section id="changelog-policy">
+<h2>Changelog policy<a class="headerlink" href="#changelog-policy" title="Permalink to this heading">#</a></h2>
 <p>We use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code> to track our changes. That means care should be taken to <a class="reference internal" href="../geek-tips/git.html#commit-message-convention"><span class="std std-ref">write good messages</span></a>: they are there to help both you and future researchers understand how the dataset evolved.</p>
 <p>Good commit message examples:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;Segment spines of subjects 010 through 023</span>
@@ -1166,13 +1166,13 @@ script should then be saved under the <code class="docutils literal notranslate"
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-converting-data-to-bids">I - Converting data to BIDS</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-building-the-raw-dataset">II - Building the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-data-to-bids">Converting data to BIDS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-raw-dataset">Building the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#folders-structure-and-filenames">Folders structure and filenames</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-template">Raw template</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iii-building-the-derivative-datasets">III - Building the <code class="docutils literal notranslate"><span class="pre">derivative</span></code> datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-derivative-datasets">Building the <code class="docutils literal notranslate"><span class="pre">derivative</span></code> datasets</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Folders structure and filenames</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-template">Derivative template</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#json-sidecars">JSON sidecars</a></li>
@@ -1180,7 +1180,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-and-use-cases">Examples and use cases</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iv-changelog-policy">IV - Changelog policy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changelog-policy">Changelog policy</a></li>
 </ul>
   </nav></div>
 
