@@ -446,7 +446,14 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-data-to-bids">Converting data to BIDS</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-raw-dataset">Building the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#folders-structure-and-filenames">Folders structure and filenames</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#folders-structure-and-filenames">Folders structure and filenames</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-structure">Raw structure</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#subject-naming-convention">Subject naming convention</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-entities">Raw entities</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-suffixes">Raw suffixes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-extensions">Raw extensions</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-template">Raw template</a></li>
 </ul>
 </li>
@@ -490,8 +497,8 @@ script should then be saved under the <code class="docutils literal notranslate"
 <section id="folders-structure-and-filenames">
 <h3>Folders structure and filenames<a class="headerlink" href="#folders-structure-and-filenames" title="Permalink to this heading">#</a></h3>
 <p>Subjects folders in the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset are structured as follows for MRI, with folders corresponding to subjects, [sessions] and MRI modalities:</p>
-<details>
-<summary>Raw structure</summary>
+<section id="raw-structure">
+<h4>Raw structure<a class="headerlink" href="#raw-structure" title="Permalink to this heading">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;/</span>
     <span class="p">[</span><span class="n">ses</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;/</span><span class="p">]</span>
         <span class="n">anat</span><span class="o">/</span>
@@ -504,13 +511,13 @@ script should then be saved under the <code class="docutils literal notranslate"
             <span class="n">sub</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="p">[</span><span class="n">_ses</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="p">][</span><span class="n">_acq</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="p">][</span><span class="n">_rec</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="p">][</span><span class="n">_dir</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="p">][</span><span class="n">_run</span><span class="o">-&lt;</span><span class="n">index</span><span class="o">&gt;</span><span class="p">][</span><span class="n">_part</span><span class="o">-&lt;</span><span class="n">mag</span><span class="o">|</span><span class="n">phase</span><span class="o">|</span><span class="n">real</span><span class="o">|</span><span class="n">imag</span><span class="o">&gt;</span><span class="p">]</span><span class="n">_dwi</span><span class="o">.</span><span class="n">nii</span><span class="p">[</span><span class="o">.</span><span class="n">gz</span><span class="p">]</span>
 </pre></div>
 </div>
-</details>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Data collected from actual subjects goes under their specific sub-folder</p>
 </div>
-<details>
-<summary>Subject naming convention</summary>
+</section>
+<section id="subject-naming-convention">
+<h4>Subject naming convention<a class="headerlink" href="#subject-naming-convention" title="Permalink to this heading">#</a></h4>
 <p><strong>Basic convention</strong>: sub-XXX</p>
 <p>Example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">-</span><span class="mi">001</span>
@@ -530,10 +537,10 @@ script should then be saved under the <code class="docutils literal notranslate"
 <span class="n">sub</span><span class="o">-</span><span class="n">zurSCI001</span>      <span class="c1"># zur stands for Zurich and SCI stands for Spinal Cord Injury</span>
 </pre></div>
 </div>
-</details>
 <p>Regarding BIDS filenames, they are constructed using 3 types of elements:</p>
-<details>
-<summary>Raw entities</summary>
+</section>
+<section id="raw-entities">
+<h4>Raw entities<a class="headerlink" href="#raw-entities" title="Permalink to this heading">#</a></h4>
 <p>Characterized by a key word (sub, ses, acq, etc.) and a value (label = an alphanumeric value, index = a nonnegative integer, etc) separated with a dash <code class="docutils literal notranslate"><span class="pre">-</span></code></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;label&gt;</span></code></p></li>
@@ -546,9 +553,9 @@ script should then be saved under the <code class="docutils literal notranslate"
 <li><p><code class="docutils literal notranslate"><span class="pre">[dir-&lt;label&gt;]</span></code></p></li>
 </ul>
 <p>Multiple entities can be used, but they must be separated using underscores <code class="docutils literal notranslate"><span class="pre">_</span></code></p>
-</details>
-<details>
-<summary>Raw suffixes</summary>
+</section>
+<section id="raw-suffixes">
+<h4>Raw suffixes<a class="headerlink" href="#raw-suffixes" title="Permalink to this heading">#</a></h4>
 <p>An alphanumeric string located after all the entities following a final underscore <code class="docutils literal notranslate"><span class="pre">_</span></code> (i.e. the <code class="docutils literal notranslate"><span class="pre">&lt;suffix&gt;</span></code>). This suffix corresponds for MRI to the MRI contrast:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">T1w</span></code></p></li>
@@ -557,9 +564,9 @@ script should then be saved under the <code class="docutils literal notranslate"
 <li><p>etc.</p></li>
 </ul>
 <p>Only <strong>ONE</strong> suffix can be used within the filename.</p>
-</details>
-<details>
-<summary>Raw extensions</summary>
+</section>
+<section id="raw-extensions">
+<h4>Raw extensions<a class="headerlink" href="#raw-extensions" title="Permalink to this heading">#</a></h4>
 <p>Files extensions:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">.nii.gz</span></code></p></li>
@@ -567,7 +574,6 @@ script should then be saved under the <code class="docutils literal notranslate"
 <li><p><code class="docutils literal notranslate"><span class="pre">.bval</span></code></p></li>
 <li><p>etc.</p></li>
 </ul>
-</details>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you need to differentiate spinal cord images from the brain, use the <code class="docutils literal notranslate"><span class="pre">acq-cspine</span></code> tag. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_acq-cspine_T1w.nii.gz</span></code>.</p>
@@ -589,6 +595,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 <p class="admonition-title">Note</p>
 <p>Many kinds of data have a place specified for them by BIDS. See <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#filesystem-structure">file naming conventions</a> and the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html">MRI</a> and <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html">Microscopy</a> extensions for full details.</p>
 </div>
+</section>
 </section>
 <section id="raw-template">
 <h3>Raw template<a class="headerlink" href="#raw-template" title="Permalink to this heading">#</a></h3>
@@ -1168,7 +1175,14 @@ script should then be saved under the <code class="docutils literal notranslate"
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-data-to-bids">Converting data to BIDS</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-raw-dataset">Building the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#folders-structure-and-filenames">Folders structure and filenames</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#folders-structure-and-filenames">Folders structure and filenames</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-structure">Raw structure</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#subject-naming-convention">Subject naming convention</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-entities">Raw entities</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-suffixes">Raw suffixes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-extensions">Raw extensions</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-template">Raw template</a></li>
 </ul>
 </li>
