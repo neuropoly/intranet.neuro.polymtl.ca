@@ -505,7 +505,7 @@ If the image space is different from the original image, the entity `space-<labe
 
 ### Regions and atlases
 
-To be consistent regarding the way anatomical regions will be reffered to, please follow this table (based on the BIDS [labels](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels)):
+To be consistent regarding the way anatomical regions will be referred to, please follow this table (based on the BIDS [labels](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels)):
 
 | Abbreviation (label) | Description |
 | :---: | :---: |
