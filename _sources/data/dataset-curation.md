@@ -141,8 +141,7 @@ Many kinds of data have a place specified for them by BIDS. See [file naming con
 
 For details, see [BIDS specification](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#code).
 
-<details>
-<summary>README.md</summary>
+#### `README.md`
 
 The [`README.md`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#readme) is a [markdown](https://markdown-guide.readthedocs.io/en/latest/index.html) file describing the dataset in more detail.
 
@@ -164,10 +163,8 @@ Dataset shared by: <NAME AND EMAIL>
 
 <LIST HERE MISSING SUBJECTS>
 ```
-</details>
 
-<details>
-<summary>dataset_description.json</summary>
+#### `dataset_description.json`
 
 The [`dataset_description.json`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#dataset_descriptionjson) is a JSON file describing the dataset.
 
@@ -188,10 +185,9 @@ Refer to the [BIDS spec](https://bids-specification.readthedocs.io/) to know wha
  ```{warning}
 The `dataset_description.json` file within the top-level dataset should include `"DatasetType": "raw"`.
  ```
-</details>
 
-<details>
-<summary>participants.tsv</summary>
+
+#### `participants.tsv`
 
 The [`participants.tsv`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file) is a TSV file and should include at least the following columns:
 
@@ -221,10 +217,9 @@ Indicate missing values with `n/a` (for "not available"), not by empty cells!
 ```{warning}
 This is a Tab-Separated-Values file. Make sure to use tabs between entries if editing with a text editor. Most spreadsheet software can read and write .tsv correctly.
 ```
-</details>
 
-<details>
-<summary>participants.json</summary>
+
+#### `participants.json`
 
 The [`participants.json`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file) is a JSON file providing a legend for the columns in `participants.tsv`, with longer descriptions, units, and in the case of categorical variables, allowed levels. Please use the template below:
 
@@ -275,11 +270,8 @@ The [`participants.json`](https://bids-specification.readthedocs.io/en/stable/03
         "LongName": "Additional notes"
     }
 }
-```
-</details>
 
-<details>
-<summary>code/</summary>
+#### `code/`
 
 The data cleaning and curation script(s) that create the `sub-XXX/` folders should be kept with them, under the [`code/`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#code) folder. Within reason, every dataset should have a script that when run like
 
@@ -294,7 +286,7 @@ This program should be committed first, before the curated data it produces. Aft
 ```{note}
 Analysis scripts should not be kept here. Keep them in separate repositories, usually in public on GitHub, with instructions about. See [PIPELINE-DOC](TODO-PIPELINE-DOC).
 ```
-</details>
+
 
 ## Building the `derivative` datasets
 

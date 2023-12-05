@@ -455,7 +455,13 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#other-modalities">Other modalities</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-template">Raw template</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-template">Raw template</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#readme-md"><code class="docutils literal notranslate"><span class="pre">README.md</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-description-json"><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#participants-tsv"><code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#participants-json"><code class="docutils literal notranslate"><span class="pre">participants.json</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-derivative-datasets">Building the <code class="docutils literal notranslate"><span class="pre">derivative</span></code> datasets</a><ul class="nav section-nav flex-column">
@@ -607,8 +613,8 @@ script should then be saved under the <code class="docutils literal notranslate"
 </pre></div>
 </div>
 <p>For details, see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#code">BIDS specification</a>.</p>
-<details>
-<summary>README.md</summary>
+<section id="readme-md">
+<h4><code class="docutils literal notranslate"><span class="pre">README.md</span></code><a class="headerlink" href="#readme-md" title="Permalink to this heading">#</a></h4>
 <p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#readme"><code class="docutils literal notranslate"><span class="pre">README.md</span></code></a> is a <a class="reference external" href="https://markdown-guide.readthedocs.io/en/latest/index.html">markdown</a> file describing the dataset in more detail.</p>
 <p>Please use the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> template below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># &lt;NAME OF DATASET&gt;</span>
@@ -627,9 +633,9 @@ script should then be saved under the <code class="docutils literal notranslate"
 <span class="o">&lt;</span><span class="n">LIST</span> <span class="n">HERE</span> <span class="n">MISSING</span> <span class="n">SUBJECTS</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</details>
-<details>
-<summary>dataset_description.json</summary>
+</section>
+<section id="dataset-description-json">
+<h4><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code><a class="headerlink" href="#dataset-description-json" title="Permalink to this heading">#</a></h4>
 <p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#dataset_descriptionjson"><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code></a> is a JSON file describing the dataset.</p>
 <p>Please use the <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> template below:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -647,9 +653,9 @@ script should then be saved under the <code class="docutils literal notranslate"
 <p class="admonition-title">Warning</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> file within the top-level dataset should include <code class="docutils literal notranslate"><span class="pre">&quot;DatasetType&quot;:</span> <span class="pre">&quot;raw&quot;</span></code>.</p>
 </div>
-</details>
-<details>
-<summary>participants.tsv</summary>
+</section>
+<section id="participants-tsv">
+<h4><code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code><a class="headerlink" href="#participants-tsv" title="Permalink to this heading">#</a></h4>
 <p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file"><code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code></a> is a TSV file and should include at least the following columns:</p>
 <table class="table">
 <thead>
@@ -689,7 +695,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </tr>
 </tbody>
 </table>
-<p>Authorized values for <code class="docutils literal notranslate"><span class="pre">pathology</span></code> are listed under <a class="reference internal" href="#participantsjson"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">participants.json</span></code></span></a>.</p>
+<p>Authorized values for <code class="docutils literal notranslate"><span class="pre">pathology</span></code> are listed under <a class="reference internal" href="#participants-json"><code class="docutils literal notranslate"><span class="pre">participants.json</span></code></a>.</p>
 <p>Please use the <code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code> template below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">participant_id</span>	<span class="n">source_id</span>	<span class="n">species</span>	<span class="n">age</span>	<span class="n">sex</span>	<span class="n">pathology</span>	<span class="n">institution</span>
 <span class="n">sub</span><span class="o">-</span><span class="mi">001</span>	<span class="mi">001</span>	<span class="n">homo</span> <span class="n">sapiens</span>	<span class="mi">30</span>	<span class="n">F</span>	<span class="n">HC</span>	<span class="n">montreal</span>
@@ -706,72 +712,74 @@ script should then be saved under the <code class="docutils literal notranslate"
 <p class="admonition-title">Warning</p>
 <p>This is a Tab-Separated-Values file. Make sure to use tabs between entries if editing with a text editor. Most spreadsheet software can read and write .tsv correctly.</p>
 </div>
-</details>
-<details>
-<summary>participants.json</summary>
+</section>
+<section id="participants-json">
+<h4><code class="docutils literal notranslate"><span class="pre">participants.json</span></code><a class="headerlink" href="#participants-json" title="Permalink to this heading">#</a></h4>
 <p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file"><code class="docutils literal notranslate"><span class="pre">participants.json</span></code></a> is a JSON file providing a legend for the columns in <code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code>, with longer descriptions, units, and in the case of categorical variables, allowed levels. Please use the template below:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;participant_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Unique Participant ID&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Participant ID&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;source_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Subject ID in the source unprocessed data&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Subject ID in the source unprocessed data&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;species&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Binomial species name of participant&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Species&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Participant age&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Participant age&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Units&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;years&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;sex&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sex of the participant as reported by the participant&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Levels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;M&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;male&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;F&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;female&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;O&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;other&quot;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;pathology&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The diagnosis of pathology of the participant&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Pathology name&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Levels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;HC&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Healthy Control&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;DCM&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Degenerative Cervical Myelopathy (synonymous with CSM - Cervical Spondylotic Myelopathy)&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;MildCompression&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Asymptomatic cord compression, without myelopathy&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;MS&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Multiple Sclerosis&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;SCI&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Traumatic Spinal Cord Injury&quot;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;institution&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Human-friendly institution name&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BIDS Institution ID&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Additional notes about the participant. For example, if there is more information about a disease, indicate it here.&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Additional notes&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+    &quot;participant_id&quot;: {
+        &quot;Description&quot;: &quot;Unique Participant ID&quot;,
+        &quot;LongName&quot;: &quot;Participant ID&quot;
+    },
+    &quot;source_id&quot;: {
+        &quot;Description&quot;: &quot;Subject ID in the source unprocessed data&quot;,
+        &quot;LongName&quot;: &quot;Subject ID in the source unprocessed data&quot;
+    },
+    &quot;species&quot;: {
+        &quot;Description&quot;: &quot;Binomial species name of participant&quot;,
+        &quot;LongName&quot;: &quot;Species&quot;
+    },
+    &quot;age&quot;: {
+        &quot;Description&quot;: &quot;Participant age&quot;,
+        &quot;LongName&quot;: &quot;Participant age&quot;,
+        &quot;Units&quot;: &quot;years&quot;
+    },
+    &quot;sex&quot;: {
+        &quot;Description&quot;: &quot;sex of the participant as reported by the participant&quot;,
+        &quot;Levels&quot;: {
+            &quot;M&quot;: &quot;male&quot;,
+            &quot;F&quot;: &quot;female&quot;,
+            &quot;O&quot;: &quot;other&quot;
+        }
+    },
+    &quot;pathology&quot;: {
+        &quot;Description&quot;: &quot;The diagnosis of pathology of the participant&quot;,
+        &quot;LongName&quot;: &quot;Pathology name&quot;,
+        &quot;Levels&quot;: {
+            &quot;HC&quot;: &quot;Healthy Control&quot;,
+            &quot;DCM&quot;: &quot;Degenerative Cervical Myelopathy (synonymous with CSM - Cervical Spondylotic Myelopathy)&quot;,
+            &quot;MildCompression&quot;: &quot;Asymptomatic cord compression, without myelopathy&quot;,
+            &quot;MS&quot;: &quot;Multiple Sclerosis&quot;,
+            &quot;SCI&quot;: &quot;Traumatic Spinal Cord Injury&quot;
+        }
+    },
+    &quot;institution&quot;: {
+        &quot;Description&quot;: &quot;Human-friendly institution name&quot;,
+        &quot;LongName&quot;: &quot;BIDS Institution ID&quot;
+    }
+    &quot;notes&quot;: {
+        &quot;Description&quot;: &quot;Additional notes about the participant. For example, if there is more information about a disease, indicate it here.&quot;,
+        &quot;LongName&quot;: &quot;Additional notes&quot;
+    }
+}
+
+#### `code/`
+
+The data cleaning and curation script(s) that create the `sub-XXX/` folders should be kept with them, under the [`code/`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#code) folder. Within reason, every dataset should have a script that when run like
+
 </pre></div>
 </div>
-</details>
-<details>
-<summary>code/</summary>
-<p>The data cleaning and curation script(s) that create the <code class="docutils literal notranslate"><span class="pre">sub-XXX/</span></code> folders should be kept with them, under the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#code"><code class="docutils literal notranslate"><span class="pre">code/</span></code></a> folder. Within reason, every dataset should have a script that when run like</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">code</span><span class="o">/</span><span class="n">curate</span><span class="o">.</span><span class="n">py</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">sourcedata</span> <span class="o">./</span>
+<p>python code/curate.py path/to/sourcedata ./</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    
+unpacks, converts and renames all the images and related files in `path/to/sourcedata/` into BIDS format in the current dataset `./`.
+
+This program should be committed first, before the curated data it produces. Afterwards, every commit that modifies the code should also re-run it, and the code and re-curated data should be committed in tandem.
+
+```{note}
+Analysis scripts should not be kept here. Keep them in separate repositories, usually in public on GitHub, with instructions about. See [PIPELINE-DOC](TODO-PIPELINE-DOC).
 </pre></div>
 </div>
-<p>unpacks, converts and renames all the images and related files in <code class="docutils literal notranslate"><span class="pre">path/to/sourcedata/</span></code> into BIDS format in the current dataset <code class="docutils literal notranslate"><span class="pre">./</span></code>.</p>
-<p>This program should be committed first, before the curated data it produces. Afterwards, every commit that modifies the code should also re-run it, and the code and re-curated data should be committed in tandem.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Analysis scripts should not be kept here. Keep them in separate repositories, usually in public on GitHub, with instructions about. See <a class="reference internal" href="#TODO-PIPELINE-DOC"><span class="xref myst">PIPELINE-DOC</span></a>.</p>
-</div>
-</details>
+</section>
 </section>
 </section>
 <section id="building-the-derivative-datasets">
@@ -1178,7 +1186,13 @@ script should then be saved under the <code class="docutils literal notranslate"
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#other-modalities">Other modalities</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-template">Raw template</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-template">Raw template</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#readme-md"><code class="docutils literal notranslate"><span class="pre">README.md</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-description-json"><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#participants-tsv"><code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#participants-json"><code class="docutils literal notranslate"><span class="pre">participants.json</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-derivative-datasets">Building the <code class="docutils literal notranslate"><span class="pre">derivative</span></code> datasets</a><ul class="nav section-nav flex-column">
