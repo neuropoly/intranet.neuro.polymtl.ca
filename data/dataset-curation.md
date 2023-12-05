@@ -1,6 +1,6 @@
 # Dataset curation
 
-## I - Converting data to BIDS
+## Converting data to BIDS
 
 All git-annex datasets should be BIDS-compliant. For more information about the BIDS standard, please visit [http://bids.neuroimaging.io](http://bids.neuroimaging.io).
 
@@ -12,7 +12,7 @@ script should then be saved under the `code` folder of the final dataset. Some p
 
 Once the data are converted to BIDS and [uploaded](git-datasets.md#upload) to git-annex repository, delete the temporary folder to save space.
 
-## II - Building the `raw` dataset
+## Building the `raw` dataset
 
 > [Brackets] are characterizing optional informations
 
@@ -315,7 +315,7 @@ Analysis scripts should not be kept here. Keep them in separate repositories, us
 ```
 </details>
 
-## III - Building the `derivative` datasets
+## Building the `derivative` datasets
 
 > [Brackets] are characterizing optional informations
 
@@ -619,7 +619,7 @@ sci-bordeaux
 
 ```
 
-## IV - Changelog policy
+## Changelog policy
 
 We use `git log` to track our changes. That means care should be taken to [write good messages](../geek-tips/git.md#commit-message-convention): they are there to help both you and future researchers understand how the dataset evolved.
 
