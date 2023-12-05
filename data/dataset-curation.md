@@ -291,8 +291,6 @@ Analysis scripts should not be kept here. Keep them in separate repositories, us
 
 ## Building the `derivative` datasets
 
-> [Brackets] are characterizing optional informations
-
 First, it is important to understand what are [BIDS derivatives](https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html#bids-derivatives) folders:
 
 > Derivatives are outputs of common processing pipelines, capturing data and meta-data sufficient for a researcher to understand and (critically) reuse those outputs in subsequent processing. Standardizing derivatives is motivated by use cases where formalized machine-readable access to processed data enables higher level processing.
@@ -312,10 +310,15 @@ According to BIDS, derived datasets could be stored inside a parent folder [`der
 
 ### Folders structure and filenames
 
-Derived datasets follow the **same structure** as the `raw` dataset, with folders corresponding to subjects, [sessions] and MRI modalities. 
+Here, we describe how the `derivative` folder should be organized.
 
-<details>
-<summary>Derivatives structure</summary>
+```{note}
+In the guideline below, [brackets] refer to optional items.
+```
+
+#### Derivatives structure
+
+Derived datasets follow the **same structure and hierarchy** as the `raw` dataset, with folders corresponding to subjects, [sessions] and MRI modalities:
 
 ```
 sub-<label>/
@@ -323,24 +326,14 @@ sub-<label>/
         modality/
             <source_entities>[_space-<space>][_res-<label>][_den-<label>][_desc-<label>]_<suffix>.<extension>
 ```
-</details>
 
-```{warning}
-The derived dataset must adhere to the identical folder hierarchy used for the raw dataset.
-```
-
-```{note}
-Data generated for a specific subject will go under their specific sub-folder
-```
-
-Finally, regarding derivatives filenames, we can identify the same 3 type of elements as before (entities, suffixes and extensions) plus 1 extra-consideration related to the raw data:
+Regarding derivatives filenames, we can identify the same 3 type of elements as before (entities, suffixes and extensions) plus 1 extra-consideration related to the raw data:
 
 ```{warning}
 Entities and suffixes are different from those used with the raw filenames and are specific to [data types](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#imaging-data-types).
 ```
 
-<details>
-<summary>source_entities</summary>
+#### `source_entities`
 
 This element corresponds to the entire source filename, with the **omission** of the source suffix and extension. 
 
@@ -348,10 +341,8 @@ This element corresponds to the entire source filename, with the **omission** of
 For MRI, the contrast will need to be removed from the filename (see [here](https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html#file-naming-conventions)). The desc-<label> entity will be used instead (i.e. `_desc-T1w` and `_desc-T2w`).
 ```
 
-</details>
 
-<details>
-<summary>Derivative entities</summary>
+#### Derivative entities
 
 Characterized by a key word (space, res, den, etc.) and a value (label = an alphanumeric value, index = a nonnegative integer, etc) separated with a dash `-`
 - `[space-<space>]`: image space if different from raw space: template space (i.e. MNI305 etc), orig, other etc. (see [BIDS](https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#spatial-references))
@@ -363,10 +354,8 @@ Characterized by a key word (space, res, den, etc.) and a value (label = an alph
 
 Entities are then separated using underscores `_`
 
-</details>
 
-<details>
-<summary>Derivative suffixes</summary>
+#### Derivative suffixes
 
 An alphanumeric string located after all the entities following a final underscore `_` :
 - `mask` for binary masks (0 and 1 only)
@@ -376,21 +365,7 @@ An alphanumeric string located after all the entities following a final undersco
 - `dlabel` for discrete labels representing multiple anatomical structures (**NOT BIDS**)
 - etc.
 
-</details>
-
-<details>
-<summary>Derivatives extensions</summary>
-
- Files extensions:
-- `.nii.gz`
-- `.json`
-- etc.
-
-</details>
-
-```{warning}
-Some entities can only be used with specific suffixes ! This association depends on the imaging data [type](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#imaging-data-types). Here is a table showing some associations:
-```
+Some entities can only be used with specific suffixes! This association depends on the imaging data [type](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#imaging-data-types). Here is a table showing some associations:
 
 | Image type (suffix) | Associated entities | Description |
 | :---: | :---: | --- |
@@ -400,12 +375,20 @@ Some entities can only be used with specific suffixes ! This association depends
 |`blabel` (**NOT BIDS**)| `label-<label>` | The entity is used to specify the type of structure labeled in the image |
 |`dlabel` (**NOT BIDS**)| `seg-<label>` | The entity is used to specify the atlas used to label the different structures |
 
+
+#### Derivatives extensions
+
+ Files extensions:
+- `.nii.gz`
+- `.json`
+- etc.
+
+
 ### Derivative template
 
-⚠️  In addition to the subjects folders, derived datasets must include their own `dataset_description.json` file to track all the processing steps used to create the data. Example:
+In addition to the subjects folders, derived datasets must include their own `dataset_description.json` file to track all the processing steps used to create the data. Example:
 
-<details>
-<summary>dataset_description.json</summary>
+#### `dataset_description.json`
     
 ```json
 {
@@ -429,7 +412,6 @@ Some entities can only be used with specific suffixes ! This association depends
 The `dataset_description.json` file within the derived dataset should include `"DatasetType": "derivative"`.
 ```
 
-</details>
 
 ```{note}
 If more details about the processing steps used have to be provided (e.g., reorientation, resampling etc.), a [`descriptions.tsv`](https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#descriptionstsv) file may be added at the root of the folder. This file must contain at least two columns:
