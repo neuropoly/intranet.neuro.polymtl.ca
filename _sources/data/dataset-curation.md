@@ -264,7 +264,7 @@ The [`participants.json`](https://bids-specification.readthedocs.io/en/stable/03
     "institution": {
         "Description": "Human-friendly institution name",
         "LongName": "BIDS Institution ID"
-    }
+    },
     "notes": {
         "Description": "Additional notes about the participant. For example, if there is more information about a disease, indicate it here.",
         "LongName": "Additional notes"
