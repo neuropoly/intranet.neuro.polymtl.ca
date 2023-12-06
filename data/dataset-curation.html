@@ -857,15 +857,6 @@ script should then be saved under the <code class="docutils literal notranslate"
 <section id="derivative-suffixes">
 <h4>Derivative suffixes<a class="headerlink" href="#derivative-suffixes" title="Permalink to this heading">#</a></h4>
 <p>An alphanumeric string located after all the entities following a final underscore <code class="docutils literal notranslate"><span class="pre">_</span></code> :</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">mask</span></code> for binary masks (0 and 1 only)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dseg</span></code> for discrete segmentations representing multiple anatomical structures</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">probseg</span></code> for probabilistic segmentations representing anatomical structures with values ranging from 0 to 1</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">blabel</span></code> for binary labels (0 and 1 only) (<strong>NOT BIDS</strong>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dlabel</span></code> for discrete labels representing multiple anatomical structures (<strong>NOT BIDS</strong>)</p></li>
-<li><p>etc.</p></li>
-</ul>
-<p>Some entities can only be used with specific suffixes! This association depends on the imaging data <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#imaging-data-types">type</a>. Here is a table showing some associations:</p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p>Image type (suffix)</p></th>
@@ -876,26 +867,30 @@ script should then be saved under the <code class="docutils literal notranslate"
 <tbody>
 <tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">mask</span></code></p></td>
 <td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">label-&lt;label&gt;</span></code></p></td>
-<td><p>The entity is used to specify the structure masked in the image</p></td>
+<td><p>Suffix used for binary masks (0 and 1 only). The entity is used to specify the structure masked in the image.</p></td>
 </tr>
 <tr class="row-odd"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">dseg</span></code></p></td>
 <td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">seg-&lt;label&gt;</span></code></p></td>
-<td><p>The entity is used to specify the atlas used to map the different structures</p></td>
+<td><p>Suffix used for discrete segmentations representing multiple anatomical structures. The entity is used to specify the atlas used to map the different structures.</p></td>
 </tr>
 <tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">probseg</span></code></p></td>
 <td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">seg-&lt;label&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">label-&lt;label&gt;</span></code></p></td>
-<td><p>The entity <code class="docutils literal notranslate"><span class="pre">label</span></code> is used if only one structure is present in the image. If more structures are present (image with more dimensions) the <code class="docutils literal notranslate"><span class="pre">seg</span></code> entity must be used and structures have to be added to the JSON file (see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#probabilistic-segmentations">BIDS</a>)</p></td>
+<td><p>Suffix used for probabilistic segmentations representing anatomical structures with values ranging from 0 to 1. The entity <code class="docutils literal notranslate"><span class="pre">label</span></code> is used if only one structure is present in the image. If more structures are present (image with more dimensions) the <code class="docutils literal notranslate"><span class="pre">seg</span></code> entity must be used and structures have to be added to the JSON file (see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#probabilistic-segmentations">BIDS</a>).</p></td>
 </tr>
 <tr class="row-odd"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">blabel</span></code> (<strong>NOT BIDS</strong>)</p></td>
 <td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">label-&lt;label&gt;</span></code></p></td>
-<td><p>The entity is used to specify the type of structure labeled in the image</p></td>
+<td><p>Suffix used for binary labels (0 and 1 only). The entity is used to specify the type of structure labeled in the image.</p></td>
 </tr>
 <tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">dlabel</span></code> (<strong>NOT BIDS</strong>)</p></td>
 <td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">seg-&lt;label&gt;</span></code></p></td>
-<td><p>The entity is used to specify the atlas used to label the different structures</p></td>
+<td><p>Suffix used for discrete labels representing multiple anatomical structures. The entity is used to specify the atlas used to label the different structures</p></td>
 </tr>
 </tbody>
 </table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>These associated entities can only be used with these specific suffixes! This association depends on the imaging data <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#imaging-data-types">type</a>.</p>
+</div>
 </section>
 <section id="derivatives-extensions">
 <h4>Derivatives extensions<a class="headerlink" href="#derivatives-extensions" title="Permalink to this heading">#</a></h4>
