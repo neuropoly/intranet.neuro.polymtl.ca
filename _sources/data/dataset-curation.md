@@ -535,22 +535,29 @@ sci-bordeaux
     ├── sub-001
     │   └── anat
     │       └──sub-001_acq-sag_T1w.nii.gz
-    │       └──sub-001_acq-sag_T2w.nii.gz
+    │       ├──sub-001_acq-sag_T1w.json
+    │       ├──sub-001_acq-sag_T2w.nii.gz
+    │       └──sub-001_acq-sag_T2w.json
     │
     └── derivatives
-        ├── clinical-labels
+        ├── labels
         │   ├── dataset_description.json
         │   ├── README.md
         │   └── sub-001
-        │           └── anat
-        │               ├── sub-001_acq-sag_label-SCI_desc-T1w_mask.nii.gz
-        │               ├── sub-001_acq-sag_label-SCI_desc-T1w_mask.json
-        │               ├── sub-001_acq-sag_label-compression_desc-T1w_blabel.nii.gz
-        │               ├── sub-001_acq-sag_label-compression_desc-T1w_blabel.json
-        │               ├── sub-001_acq-sag_label-SCI_desc-T2w_mask.nii.gz
-        │               ├── sub-001_acq-sag_label-SCI_desc-T2w_mask.json
-        │               ├── sub-001_acq-sag_label-compression_desc-T2w_blabel.nii.gz
-        │               └── sub-001_acq-sag_label-compression_desc-T2w_blabel.json
+        │       └── anat
+        │           ├── sub-001_acq-sag_T1w_label-SC_seg.nii.gz  # SC seg binary
+        │           ├── sub-001_acq-sag_T1w_label-SC_softseg.nii.gz  # SC seg soft
+        │           ├── sub-001_acq-sag_T1w_label-vertebrae_dseg  # segmentation of vertebrae discrete (each value refers to the vertebral level)
+        │           ├── sub-001_acq-sag_T1w_label-rootlets_dseg  # segmentation of nerve rootlets discrete (each value refers to the spinal level)
+        │           ├── sub-001_acq-sag_label-SCI_desc-T1w_mask.nii.gz
+        │           ├── sub-001_acq-sag_label-SCI_desc-T1w_mask.nii.gz
+        │           ├── sub-001_acq-sag_label-SCI_desc-T1w_mask.json
+        │           ├── sub-001_acq-sag_label-compression_desc-T1w_blabel.nii.gz
+        │           ├── sub-001_acq-sag_label-compression_desc-T1w_blabel.json
+        │           ├── sub-001_acq-sag_label-SCI_desc-T2w_mask.nii.gz
+        │           ├── sub-001_acq-sag_label-SCI_desc-T2w_mask.json
+        │           ├── sub-001_acq-sag_label-compression_desc-T2w_blabel.nii.gz
+        │           └── sub-001_acq-sag_label-compression_desc-T2w_blabel.json
         │
         ├── SC-masks
         │   ├── dataset_description.json
