@@ -10,7 +10,7 @@ The shared folders are:
 |-----------------|-----------------------------------------------|
 | `histology`       | Raw histology files                           |
 | `mri`             | Raw MRI files (restricted access)             |
-| `projects`        | Various active projects. In general, we only keep files that are processed in their final form, and that have been used for journal publications or for conferences. Avoid keeping large temporary that are not an absolute necessity. |
+| `projects`        | Various active projects. In general, we only keep files that are processed in their final form, and that have been used for journal publications or for conferences. Avoid keeping large temporary that are not an absolute necessity. Also, please **do not** put any files that are versioned with git or git annex. |
 | `public`          | Contains useful software binaries             |
 | `temp`            | Use for temporary files, to share between you. Please clean up your files regularly. Files not used for a certain amount of time will be deleted. |
 | `sct_testing`     | Data for testing SCT                          |
