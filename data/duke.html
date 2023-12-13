@@ -463,14 +463,36 @@ document.write(`
 <p>This server includes a variety of data: raw MRI and histology data, project data (processed and non-processed), temporary data to share with colleagues.</p>
 <p><code class="docutils literal notranslate"><span class="pre">{smb,afp}://duke.neuro.polymtl.ca</span></code> has a max size of ~15TB and is backed up nightly at two different locations.</p>
 <p>The shared folders are:</p>
-<ul class="simple">
-<li><p><strong>histology</strong> –&gt; Raw histology files</p></li>
-<li><p><strong>mri</strong> –&gt; Raw MRI files (restricted access)</p></li>
-<li><p><strong>projects</strong> –&gt; Shared project files (subfolders containing different projects)</p></li>
-<li><p><strong>public</strong> –&gt; Contains useful software binaries</p></li>
-<li><p><strong>sct_testing</strong> –&gt; Data for testing SCT</p></li>
-<li><p><strong>temp</strong> –&gt; Use for temporary files, to share between you. Files are deleted after 15 days.</p></li>
-</ul>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Folder Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">histology</span></code></p></td>
+<td><p>Raw histology files</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mri</span></code></p></td>
+<td><p>Raw MRI files (restricted access)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">projects</span></code></p></td>
+<td><p>Various active projects. In general, we only keep files that are processed in their final form, and that have been used for journal publications or for conferences. Avoid keeping large temporary that are not an absolute necessity.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">public</span></code></p></td>
+<td><p>Contains useful software binaries</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">temp</span></code></p></td>
+<td><p>Use for temporary files, to share between you. Please clean up your files regularly. Files not used for a certain amount of time will be deleted.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">sct_testing</span></code></p></td>
+<td><p>Data for testing SCT</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">archives</span></code></p></td>
+<td><p>Terminated projects are archived here (restricted access).</p></td>
+</tr>
+</tbody>
+</table>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Please do not run processing scripts or <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">annex</span></code> inside <code class="docutils literal notranslate"><span class="pre">duke</span></code>.
