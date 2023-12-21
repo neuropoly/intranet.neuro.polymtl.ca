@@ -127,7 +127,7 @@ Many kinds of data have a place specified for them by BIDS. See [file naming con
 ⚠️ In addition to the subjects folders, every `raw` dataset must include the following files: 
 
 ```
-├── README.md
+├── README
 ├── dataset_description.json
 ├── participants.tsv
 ├── participants.json
@@ -142,11 +142,11 @@ Many kinds of data have a place specified for them by BIDS. See [file naming con
 For details, see [BIDS specification](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#code).
 For examples, see [BIDS examples](https://github.com/bids-standard/bids-examples).
 
-#### `README.md`
+#### `README`
 
-The [`README.md`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#readme) is a [markdown](https://markdown-guide.readthedocs.io/en/latest/index.html) file describing the dataset in more detail.
+The [`README`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#readme) is a [markdown](https://markdown-guide.readthedocs.io/en/latest/index.html) file describing the dataset in more detail.
 
-Please use the `README.md` template below:
+Please use the `README` template below:
 
 ```
 # <NAME OF DATASET>
