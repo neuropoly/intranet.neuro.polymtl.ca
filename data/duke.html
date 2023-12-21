@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>duke &#8212; NeuroPoly Internal Wiki  documentation</title>
   
@@ -29,21 +28,21 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme.css?v=ec48f040" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
   <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=c607423c"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'data/duke';</script>
     <link rel="icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -187,7 +186,7 @@
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ressources</span></p>
 <ul class="current nav bd-sidenav">
@@ -459,7 +458,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="duke">
-<h1><code class="docutils literal notranslate"><span class="pre">duke</span></code><a class="headerlink" href="#duke" title="Permalink to this heading">#</a></h1>
+<h1><code class="docutils literal notranslate"><span class="pre">duke</span></code><a class="headerlink" href="#duke" title="Link to this heading">#</a></h1>
 <p>This server includes a variety of data: raw MRI and histology data, project data (processed and non-processed), temporary data to share with colleagues.</p>
 <p><code class="docutils literal notranslate"><span class="pre">{smb,afp}://duke.neuro.polymtl.ca</span></code> has a max size of ~15TB and is backed up nightly at two different locations.</p>
 <p>The shared folders are:</p>
@@ -505,7 +504,7 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">duke</span></code> is not accessible when using SSH key login to linux stations.</p>
 </div>
 <section id="access-from-stations">
-<h2>Access from stations<a class="headerlink" href="#access-from-stations" title="Permalink to this heading">#</a></h2>
+<h2>Access from stations<a class="headerlink" href="#access-from-stations" title="Link to this heading">#</a></h2>
 <p>When <a class="reference internal" href="../computing-resources/neuropoly/README.html#ssh-command-line"><span class="std std-ref">connecting with <code class="docutils literal notranslate"><span class="pre">ssh</span></code></span></a>, <code class="docutils literal notranslate"><span class="pre">duke</span></code> is available at <code class="docutils literal notranslate"><span class="pre">/mnt/duke/</span></code>, e.g.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>u932945@joplin:~$ ls -l /mnt/duke
 total 36
@@ -519,7 +518,7 @@ drwxr-xr-x 2 u108545 domain users  4096 Jun  8 16:44 temp
 </div>
 </section>
 <section id="mount-with-gui">
-<h2>Mount with GUI<a class="headerlink" href="#mount-with-gui" title="Permalink to this heading">#</a></h2>
+<h2>Mount with GUI<a class="headerlink" href="#mount-with-gui" title="Link to this heading">#</a></h2>
 <p>When working on campus or <a class="reference internal" href="../computing-resources/neuropoly/README.html#vpn"><span class="std std-ref">over the VPN</span></a>, you can connect your computer to <code class="docutils literal notranslate"><span class="pre">duke</span></code>:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
@@ -584,7 +583,7 @@ Windows 10</label><div class="sd-tab-content docutils">
 </div>
 </section>
 <section id="mount-with-terminal">
-<h2>Mount with Terminal<a class="headerlink" href="#mount-with-terminal" title="Permalink to this heading">#</a></h2>
+<h2>Mount with Terminal<a class="headerlink" href="#mount-with-terminal" title="Link to this heading">#</a></h2>
 <p>You can also connect your computer from the CLI, or with a script, which might be more efficient in the long run:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">

@@ -140,6 +140,7 @@ Many kinds of data have a place specified for them by BIDS. See [file naming con
 ```
 
 For details, see [BIDS specification](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#code).
+For examples, see [BIDS examples](https://github.com/bids-standard/bids-examples).
 
 #### `README.md`
 

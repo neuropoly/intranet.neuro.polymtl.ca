@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>git-annex &#8212; NeuroPoly Internal Wiki  documentation</title>
   
@@ -29,21 +28,21 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme.css?v=ec48f040" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
   <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=c607423c"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/git-annex';</script>
     <link rel="icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -187,7 +186,7 @@
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ressources</span></p>
 <ul class="nav bd-sidenav">
@@ -470,7 +469,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="git-annex">
-<h1>git-annex<a class="headerlink" href="#git-annex" title="Permalink to this heading">#</a></h1>
+<h1>git-annex<a class="headerlink" href="#git-annex" title="Link to this heading">#</a></h1>
 <p><a class="reference external" href="https://git-annex.branchable.com/"><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">annex</span></code></a> is an extension to git that lets it handle large repos spread in pieces across multiple servers/disks/accounts.</p>
 <p>We are using it because</p>
 <ol class="arabic simple">
@@ -480,7 +479,7 @@ document.write(`
 <p>It has about a thousand variants and options. This covers only the parts we use.</p>
 <p><code class="docutils literal notranslate"><span class="pre">git-annex</span></code> brings with it all the power of <code class="docutils literal notranslate"><span class="pre">git</span></code>. You should be somewhat familiar with branches, tags,. Please read <a class="reference external" href="https://git-scm.com/book/en/v2">the git book</a>. The <a class="reference external" href="https://handbook.datalad.org/">datalad handbook</a> also has useful perspective, though not all of it is relevant to how we do things.</p>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
 <p>You must have a unix OS. <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> is simply not compatible with anything else.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
@@ -533,7 +532,7 @@ upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 </div>
 </div>
 <section id="global-git-config">
-<h3>Global <code class="docutils literal notranslate"><span class="pre">git</span></code> config<a class="headerlink" href="#global-git-config" title="Permalink to this heading">#</a></h3>
+<h3>Global <code class="docutils literal notranslate"><span class="pre">git</span></code> config<a class="headerlink" href="#global-git-config" title="Link to this heading">#</a></h3>
 <p>For smooth operation, everyone should do on all of their machines:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">push</span><span class="o">.</span><span class="n">default</span> <span class="n">current</span>
 </pre></div>
@@ -547,7 +546,7 @@ upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 </section>
 </section>
 <section id="new-repo">
-<h2>New repo<a class="headerlink" href="#new-repo" title="Permalink to this heading">#</a></h2>
+<h2>New repo<a class="headerlink" href="#new-repo" title="Link to this heading">#</a></h2>
 <p>Use this recipe to make new datasets:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">my</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">repo</span>
 <span class="n">cd</span> <span class="n">my</span><span class="o">-</span><span class="n">new</span><span class="o">-</span><span class="n">repo</span>
@@ -591,7 +590,7 @@ upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 <p>If you are working on a private, internal dataset, continue by <a class="reference internal" href="../data/git-datasets.html#new-repository"><span class="std std-ref">uploading to <code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code></span></a>.</p>
 </section>
 <section id="annex-thin-hardlinks">
-<h2><code class="docutils literal notranslate"><span class="pre">annex.thin</span></code> Hardlinks <a id="hardlinks"><a class="headerlink" href="#annex-thin-hardlinks" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">annex.thin</span></code> Hardlinks <a id="hardlinks"><a class="headerlink" href="#annex-thin-hardlinks" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">annex.thin</span></code> saves a lot of space by deduplicating file content via <a class="reference external" href="https://wiki.debian.org/ln">hard links</a>:
 the files your checkout <code class="docutils literal notranslate"><span class="pre">repo/</span></code> will be physically the same content as their sources in <code class="docutils literal notranslate"><span class="pre">repo/.git/annex/objects/</span></code>, instead of copies.</p>
 <p>To confirm this is working, you can compare the size of the content with the annex.
@@ -624,13 +623,13 @@ nguenther@data:~/datasets/uk-biobank-processed$ du -hs uk-biobank-processed/.git
 </div>
 </section>
 <section id="troubleshooting">
-<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading">#</a></h2>
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
 <section id="version-problems">
-<h3>version problems<a class="headerlink" href="#version-problems" title="Permalink to this heading">#</a></h3>
+<h3>version problems<a class="headerlink" href="#version-problems" title="Link to this heading">#</a></h3>
 <p>If you have any error at all, the first thing to check is that you have <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> version 8, <a class="reference internal" href="#installation">as explained above</a>.</p>
 </section>
 <section id="checking-annex-file-locations">
-<h3>checking annex file locations<a class="headerlink" href="#checking-annex-file-locations" title="Permalink to this heading">#</a></h3>
+<h3>checking annex file locations<a class="headerlink" href="#checking-annex-file-locations" title="Link to this heading">#</a></h3>
 <p>The content of annexed files that have been downloaded locally is stored under <code class="docutils literal notranslate"><span class="pre">repo/.git/annex/objects/</span></code>. You can find which specific file corresponds to by using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">show</span></code> or <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span> <span class="pre">-p</span></code> to see the content that <code class="docutils literal notranslate"><span class="pre">git</span></code> has recorded for the file – which will be a string giving the “annex pointer”:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git show HEAD:derivatives/labels/sub-1140317/anat/sub-1140317_T1w_seg-manual.nii.gz
 /annex/objects/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
@@ -644,7 +643,7 @@ nguenther@data:~/datasets/uk-biobank-processed$ du -hs uk-biobank-processed/.git
 </div>
 </section>
 <section id="a-cosmetic-problem-affecting-git-status">
-<h3>“a cosmetic problem affecting git status”<a class="headerlink" href="#a-cosmetic-problem-affecting-git-status" title="Permalink to this heading">#</a></h3>
+<h3>“a cosmetic problem affecting git status”<a class="headerlink" href="#a-cosmetic-problem-affecting-git-status" title="Link to this heading">#</a></h3>
 <p>Sometimes the <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> filter will glitch, particularly during long uploads or downloads.
 It will usually – but not always – give you a warning in these cases saying “a cosmetic problem affecting git status”.
 Despite the innocuous sounded warning, this glitch prevents git operating.
@@ -657,7 +656,7 @@ A symptom of this glitch is that <code class="docutils literal notranslate"><spa
 <p>The issue is that git-annex v8 uses a filter to expand the small pointers committed to git to full files and vice versa, and if interrupted while doing its work, it can leave files with full annexed contents that do not match the annex pointers git is expecting to see. <code class="docutils literal notranslate"><span class="pre">update-index</span></code> gives git a kickstart to fix it.</p>
 </section>
 <section id="resetting">
-<h3>Resetting<a class="headerlink" href="#resetting" title="Permalink to this heading">#</a></h3>
+<h3>Resetting<a class="headerlink" href="#resetting" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">git-annex</span> <span class="pre">init</span></code> writes to a lot of places: the <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> branch,
 <code class="docutils literal notranslate"><span class="pre">.git/annex</span></code> (including several sqlite databases?), <code class="docutils literal notranslate"><span class="pre">.git</span></code>/config,
 and, sometimes, <code class="docutils literal notranslate"><span class="pre">.git/info/attributes</span></code>.</p>
@@ -673,7 +672,7 @@ complete repo, you can use</p>
 </div>
 </section>
 <section id="rm-cannot-remove">
-<h3><code class="docutils literal notranslate"><span class="pre">rm:</span> <span class="pre">cannot</span> <span class="pre">remove</span></code><a class="headerlink" href="#rm-cannot-remove" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">rm:</span> <span class="pre">cannot</span> <span class="pre">remove</span></code><a class="headerlink" href="#rm-cannot-remove" title="Link to this heading">#</a></h3>
 <p>When trying to get rid of a git-annex dataset, you will run into, for example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rm -rf data-single-subject/
 [...]

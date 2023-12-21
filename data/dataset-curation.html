@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Dataset curation &#8212; NeuroPoly Internal Wiki  documentation</title>
   
@@ -29,21 +28,21 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme.css?v=ec48f040" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
   <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/documentation_options.js?v=c607423c"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'data/dataset-curation';</script>
     <link rel="icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -187,7 +186,7 @@
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ressources</span></p>
 <ul class="current nav bd-sidenav">
@@ -496,9 +495,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="dataset-curation">
-<h1>Dataset curation<a class="headerlink" href="#dataset-curation" title="Permalink to this heading">#</a></h1>
+<h1>Dataset curation<a class="headerlink" href="#dataset-curation" title="Link to this heading">#</a></h1>
 <section id="converting-data-to-bids">
-<h2>Converting data to BIDS<a class="headerlink" href="#converting-data-to-bids" title="Permalink to this heading">#</a></h2>
+<h2>Converting data to BIDS<a class="headerlink" href="#converting-data-to-bids" title="Link to this heading">#</a></h2>
 <p>All git-annex datasets should be BIDS-compliant. For more information about the BIDS standard, please visit <a class="reference external" href="http://bids.neuroimaging.io">http://bids.neuroimaging.io</a>.</p>
 <p>When you receive data from an external collaborator, you can save them under a temporary location: <code class="docutils literal notranslate"><span class="pre">duke/temp</span></code>.</p>
 <p>Then, inspect the data and convert them to BIDS. It is recommended to write a script that does the conversion. The
@@ -507,16 +506,16 @@ script should then be saved under the <code class="docutils literal notranslate"
 <p>Once the data are converted to BIDS and <a class="reference internal" href="git-datasets.html#upload"><span class="std std-ref">uploaded</span></a> to git-annex repository, delete the temporary folder to save space.</p>
 </section>
 <section id="building-the-raw-dataset">
-<h2>Building the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset<a class="headerlink" href="#building-the-raw-dataset" title="Permalink to this heading">#</a></h2>
+<h2>Building the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset<a class="headerlink" href="#building-the-raw-dataset" title="Link to this heading">#</a></h2>
 <blockquote>
 <div><p>[Brackets] are characterizing optional informations</p>
 </div></blockquote>
 <p>The <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset corresponds to the core dataset that contains all the different acquisition generated for one or several subjects. <strong>NO</strong> postprocessing steps should be applied to these acquisitions.</p>
 <section id="folders-structure-and-filenames">
-<h3>Folders structure and filenames<a class="headerlink" href="#folders-structure-and-filenames" title="Permalink to this heading">#</a></h3>
+<h3>Folders structure and filenames<a class="headerlink" href="#folders-structure-and-filenames" title="Link to this heading">#</a></h3>
 <p>Subjects folders in the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset are structured as follows for MRI, with folders corresponding to subjects, [sessions] and MRI modalities:</p>
 <section id="raw-structure">
-<h4>Raw structure<a class="headerlink" href="#raw-structure" title="Permalink to this heading">#</a></h4>
+<h4>Raw structure<a class="headerlink" href="#raw-structure" title="Link to this heading">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;/</span>
     <span class="p">[</span><span class="n">ses</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;/</span><span class="p">]</span>
         <span class="n">anat</span><span class="o">/</span>
@@ -535,7 +534,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </div>
 </section>
 <section id="subject-naming-convention">
-<h4>Subject naming convention<a class="headerlink" href="#subject-naming-convention" title="Permalink to this heading">#</a></h4>
+<h4>Subject naming convention<a class="headerlink" href="#subject-naming-convention" title="Link to this heading">#</a></h4>
 <p><strong>Basic convention</strong>: sub-XXX</p>
 <p>Example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">-</span><span class="mi">001</span>
@@ -558,7 +557,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 <p>Regarding BIDS filenames, they are constructed using 3 types of elements:</p>
 </section>
 <section id="raw-entities">
-<h4>Raw entities<a class="headerlink" href="#raw-entities" title="Permalink to this heading">#</a></h4>
+<h4>Raw entities<a class="headerlink" href="#raw-entities" title="Link to this heading">#</a></h4>
 <p>Characterized by a key word (sub, ses, acq, etc.) and a value (label = an alphanumeric value, index = a nonnegative integer, etc) separated with a dash <code class="docutils literal notranslate"><span class="pre">-</span></code></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;label&gt;</span></code></p></li>
@@ -583,7 +582,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </div>
 </section>
 <section id="raw-suffixes">
-<h4>Raw suffixes<a class="headerlink" href="#raw-suffixes" title="Permalink to this heading">#</a></h4>
+<h4>Raw suffixes<a class="headerlink" href="#raw-suffixes" title="Link to this heading">#</a></h4>
 <p>An alphanumeric string located after all the entities following a final underscore <code class="docutils literal notranslate"><span class="pre">_</span></code> (i.e. the <code class="docutils literal notranslate"><span class="pre">&lt;suffix&gt;</span></code>). This suffix corresponds for MRI to the MRI contrast:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">T1w</span></code></p></li>
@@ -594,7 +593,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 <p>Only <strong>ONE</strong> suffix can be used within the filename.</p>
 </section>
 <section id="raw-extensions">
-<h4>Raw extensions<a class="headerlink" href="#raw-extensions" title="Permalink to this heading">#</a></h4>
+<h4>Raw extensions<a class="headerlink" href="#raw-extensions" title="Link to this heading">#</a></h4>
 <p>Files extensions:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">.nii.gz</span></code></p></li>
@@ -604,12 +603,12 @@ script should then be saved under the <code class="docutils literal notranslate"
 </ul>
 </section>
 <section id="other-modalities">
-<h4>Other modalities<a class="headerlink" href="#other-modalities" title="Permalink to this heading">#</a></h4>
+<h4>Other modalities<a class="headerlink" href="#other-modalities" title="Link to this heading">#</a></h4>
 <p>Many kinds of data have a place specified for them by BIDS. See <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#filesystem-structure">file naming conventions</a> and the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html">MRI</a> and <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html">Microscopy</a> extensions for full details.</p>
 </section>
 </section>
 <section id="raw-template">
-<h3>Raw template<a class="headerlink" href="#raw-template" title="Permalink to this heading">#</a></h3>
+<h3>Raw template<a class="headerlink" href="#raw-template" title="Link to this heading">#</a></h3>
 <p>⚠️ In addition to the subjects folders, every <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset must include the following files:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── README.md
 ├── dataset_description.json
@@ -623,9 +622,10 @@ script should then be saved under the <code class="docutils literal notranslate"
  ...
 </pre></div>
 </div>
-<p>For details, see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#code">BIDS specification</a>.</p>
+<p>For details, see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#code">BIDS specification</a>.
+For examples, see <a class="reference external" href="https://github.com/bids-standard/bids-examples">BIDS examples</a>.</p>
 <section id="readme-md">
-<h4><code class="docutils literal notranslate"><span class="pre">README.md</span></code><a class="headerlink" href="#readme-md" title="Permalink to this heading">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">README.md</span></code><a class="headerlink" href="#readme-md" title="Link to this heading">#</a></h4>
 <p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#readme"><code class="docutils literal notranslate"><span class="pre">README.md</span></code></a> is a <a class="reference external" href="https://markdown-guide.readthedocs.io/en/latest/index.html">markdown</a> file describing the dataset in more detail.</p>
 <p>Please use the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> template below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># &lt;NAME OF DATASET&gt;</span>
@@ -646,7 +646,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </div>
 </section>
 <section id="dataset-description-json">
-<h4><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code><a class="headerlink" href="#dataset-description-json" title="Permalink to this heading">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code><a class="headerlink" href="#dataset-description-json" title="Link to this heading">#</a></h4>
 <p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#dataset_descriptionjson"><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code></a> is a JSON file describing the dataset.</p>
 <p>Please use the <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> template below:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -666,7 +666,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </div>
 </section>
 <section id="participants-tsv">
-<h4><code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code><a class="headerlink" href="#participants-tsv" title="Permalink to this heading">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code><a class="headerlink" href="#participants-tsv" title="Link to this heading">#</a></h4>
 <p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file"><code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code></a> is a TSV file and should include at least the following columns:</p>
 <table class="table">
 <thead>
@@ -725,7 +725,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </div>
 </section>
 <section id="participants-json">
-<h4><code class="docutils literal notranslate"><span class="pre">participants.json</span></code><a class="headerlink" href="#participants-json" title="Permalink to this heading">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">participants.json</span></code><a class="headerlink" href="#participants-json" title="Link to this heading">#</a></h4>
 <p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file"><code class="docutils literal notranslate"><span class="pre">participants.json</span></code></a> is a JSON file providing a legend for the columns in <code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code>, with longer descriptions, units, and in the case of categorical variables, allowed levels. Please use the template below:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;participant_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -777,7 +777,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </div>
 </section>
 <section id="code">
-<h4><code class="docutils literal notranslate"><span class="pre">code/</span></code><a class="headerlink" href="#code" title="Permalink to this heading">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">code/</span></code><a class="headerlink" href="#code" title="Link to this heading">#</a></h4>
 <p>The data cleaning and curation script(s) that create the <code class="docutils literal notranslate"><span class="pre">sub-XXX/</span></code> folders should be kept with them, under the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#code"><code class="docutils literal notranslate"><span class="pre">code/</span></code></a> folder. Within reason, every dataset should have a script that when run like</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">code</span><span class="o">/</span><span class="n">curate</span><span class="o">.</span><span class="n">py</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">sourcedata</span> <span class="o">./</span>
 </pre></div>
@@ -792,7 +792,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </section>
 </section>
 <section id="building-the-derivative-datasets">
-<h2>Building the <code class="docutils literal notranslate"><span class="pre">derivative</span></code> datasets<a class="headerlink" href="#building-the-derivative-datasets" title="Permalink to this heading">#</a></h2>
+<h2>Building the <code class="docutils literal notranslate"><span class="pre">derivative</span></code> datasets<a class="headerlink" href="#building-the-derivative-datasets" title="Link to this heading">#</a></h2>
 <p>First, it is important to understand what are <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html#bids-derivatives">BIDS derivatives</a> folders:</p>
 <blockquote>
 <div><p>Derivatives are outputs of common processing pipelines, capturing data and meta-data sufficient for a researcher to understand and (critically) reuse those outputs in subsequent processing. Standardizing derivatives is motivated by use cases where formalized machine-readable access to processed data enables higher level processing.</p>
@@ -812,14 +812,14 @@ script should then be saved under the <code class="docutils literal notranslate"
 <p>According to BIDS, derived datasets could be stored inside a parent folder <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#storage-of-derived-datasets"><code class="docutils literal notranslate"><span class="pre">derivatives/</span></code></a> <em>“to make a clear distinction between raw data and results of data processing”</em>. This folder should also follow the same folder logic as the one used for the <code class="docutils literal notranslate"><span class="pre">raw</span></code> data.</p>
 </div>
 <section id="id1">
-<h3>Folders structure and filenames<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3>Folders structure and filenames<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>Here, we describe how the <code class="docutils literal notranslate"><span class="pre">derivative</span></code> folder should be organized.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In the guideline below, [brackets] refer to optional items.</p>
 </div>
 <section id="derivatives-structure">
-<h4>Derivatives structure<a class="headerlink" href="#derivatives-structure" title="Permalink to this heading">#</a></h4>
+<h4>Derivatives structure<a class="headerlink" href="#derivatives-structure" title="Link to this heading">#</a></h4>
 <p>Derived datasets follow the <strong>same structure and hierarchy</strong> as the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset, with folders corresponding to subjects, [sessions] and MRI modalities:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;/</span>
     <span class="p">[</span><span class="n">ses</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;/</span><span class="p">]</span>
@@ -834,7 +834,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </div>
 </section>
 <section id="source-entities">
-<h4><code class="docutils literal notranslate"><span class="pre">&lt;source_entities&gt;</span></code><a class="headerlink" href="#source-entities" title="Permalink to this heading">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">&lt;source_entities&gt;</span></code><a class="headerlink" href="#source-entities" title="Link to this heading">#</a></h4>
 <p>This element corresponds to the entire source filename, with the <strong>omission</strong> of the source suffix and extension. For example, if the source file name is <code class="docutils literal notranslate"><span class="pre">sub-02_acq-MTon_MTS.nii.gz</span></code>, the <code class="docutils literal notranslate"><span class="pre">&lt;source_entities&gt;</span></code> to be used for the derivatives is <code class="docutils literal notranslate"><span class="pre">sub-02_acq-MTon</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -842,7 +842,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </div>
 </section>
 <section id="derivative-entities">
-<h4>Derivative entities<a class="headerlink" href="#derivative-entities" title="Permalink to this heading">#</a></h4>
+<h4>Derivative entities<a class="headerlink" href="#derivative-entities" title="Link to this heading">#</a></h4>
 <p>Characterized by a key word (space, res, den, etc.) and a value (label = an alphanumeric value, index = a nonnegative integer, etc) separated with a dash <code class="docutils literal notranslate"><span class="pre">-</span></code></p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[space-&lt;space&gt;]</span></code>: image space if different from raw space: template space (i.e. MNI305 etc), orig, other etc. (see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#spatial-references">BIDS</a>)</p></li>
@@ -855,7 +855,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 <p>Entities are then separated using underscores <code class="docutils literal notranslate"><span class="pre">_</span></code></p>
 </section>
 <section id="derivative-suffixes">
-<h4>Derivative suffixes<a class="headerlink" href="#derivative-suffixes" title="Permalink to this heading">#</a></h4>
+<h4>Derivative suffixes<a class="headerlink" href="#derivative-suffixes" title="Link to this heading">#</a></h4>
 <p>An alphanumeric string located after all the entities following a final underscore <code class="docutils literal notranslate"><span class="pre">_</span></code> :</p>
 <table class="table">
 <thead>
@@ -893,7 +893,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </div>
 </section>
 <section id="derivatives-extensions">
-<h4>Derivatives extensions<a class="headerlink" href="#derivatives-extensions" title="Permalink to this heading">#</a></h4>
+<h4>Derivatives extensions<a class="headerlink" href="#derivatives-extensions" title="Link to this heading">#</a></h4>
 <p>Files extensions:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">.nii.gz</span></code></p></li>
@@ -903,10 +903,10 @@ script should then be saved under the <code class="docutils literal notranslate"
 </section>
 </section>
 <section id="derivative-template">
-<h3>Derivative template<a class="headerlink" href="#derivative-template" title="Permalink to this heading">#</a></h3>
+<h3>Derivative template<a class="headerlink" href="#derivative-template" title="Link to this heading">#</a></h3>
 <p>In addition to the subjects folders, derived datasets must include their own <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> file to track all the processing steps used to create the data. Example:</p>
 <section id="id2">
-<h4><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<h4><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code><a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;BIDSVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.9.0&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;dataset_name&gt;&quot;</span><span class="p">,</span>
@@ -943,7 +943,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </section>
 </section>
 <section id="json-sidecars">
-<h3>JSON sidecars<a class="headerlink" href="#json-sidecars" title="Permalink to this heading">#</a></h3>
+<h3>JSON sidecars<a class="headerlink" href="#json-sidecars" title="Link to this heading">#</a></h3>
 <p>JSON sidecars are companion files linked to data files. They share the same filenames but have a “.json” extension. These files store essential metadata, serving as guidebooks to provide crucial details about the associated data, ensuring organized and comprehensive information.</p>
 <p>Therefore, to improve the way we track our data, <code class="docutils literal notranslate"><span class="pre">.json</span></code> sidecars will have to be generated for each data present in derived datasets. Here are few examples of JSON sidecar:</p>
 <details>
@@ -1012,7 +1012,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </div>
 </section>
 <section id="regions-and-atlases">
-<h3>Regions and atlases<a class="headerlink" href="#regions-and-atlases" title="Permalink to this heading">#</a></h3>
+<h3>Regions and atlases<a class="headerlink" href="#regions-and-atlases" title="Link to this heading">#</a></h3>
 <p>To be consistent regarding the way anatomical regions will be referred to, please follow this table (based on the BIDS <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels">labels</a>):</p>
 <table class="table">
 <thead>
@@ -1062,7 +1062,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 <p>When multiple anatomical regions are present in the image, atlases should be used. When specified, these atlases <strong>SHOULD</strong> be added to a folder <code class="docutils literal notranslate"><span class="pre">atlases/</span></code> at the root of the derivative folder.</p>
 </section>
 <section id="examples-and-use-cases">
-<h3>Examples and use cases<a class="headerlink" href="#examples-and-use-cases" title="Permalink to this heading">#</a></h3>
+<h3>Examples and use cases<a class="headerlink" href="#examples-and-use-cases" title="Link to this heading">#</a></h3>
 <p>Let’s consider a dataset with one single subject <code class="docutils literal notranslate"><span class="pre">sub-001</span></code>. This dataset comes from a clinical partner who segmented spinal cord injury (SCI) lesions and created point labels for spinal cord (SC) compressions. Based on this dataset, we decide to generate SC segmentations and disc labels. Here is the structure of the final dataset:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sci-bordeaux
     ├── README.md
@@ -1124,7 +1124,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </section>
 </section>
 <section id="changelog-policy">
-<h2>Changelog policy<a class="headerlink" href="#changelog-policy" title="Permalink to this heading">#</a></h2>
+<h2>Changelog policy<a class="headerlink" href="#changelog-policy" title="Link to this heading">#</a></h2>
 <p>We use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code> to track our changes. That means care should be taken to <a class="reference internal" href="../geek-tips/git.html#commit-message-convention"><span class="std std-ref">write good messages</span></a>: they are there to help both you and future researchers understand how the dataset evolved.</p>
 <p>Good commit message examples:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;Segment spines of subjects 010 through 023</span>

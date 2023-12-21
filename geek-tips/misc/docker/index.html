@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../../../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Docker &#8212; NeuroPoly Internal Wiki  documentation</title>
   
@@ -29,21 +28,21 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/theme.css?v=ec48f040" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
   <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=c607423c"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/misc/docker/README';</script>
     <link rel="icon" href="../../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -187,7 +186,7 @@
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ressources</span></p>
 <ul class="nav bd-sidenav">
@@ -469,27 +468,27 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="docker">
-<h1>Docker<a class="headerlink" href="#docker" title="Permalink to this heading">#</a></h1>
+<h1>Docker<a class="headerlink" href="#docker" title="Link to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <section id="docker-terminology">
-<h2>Docker Terminology<a class="headerlink" href="#docker-terminology" title="Permalink to this heading">#</a></h2>
+<h2>Docker Terminology<a class="headerlink" href="#docker-terminology" title="Link to this heading">#</a></h2>
 <p><strong>Images</strong> - The blueprints of our application which form the basis of containers.</p>
 <p><strong>Containers</strong> - Created from Docker images and run the actual application. A list of running containers can be seen using the docker ps command. <strong>Docker Daemon</strong> - The background service running on the host that manages building, running and distributing Docker containers. The daemon is the process that runs in the operating system to which clients talk to.</p>
 <p><strong>Docker Client</strong> - The command line tool that allows the user to interact with the daemon.</p>
 <p><strong>Docker Hub</strong> - A registry of Docker images. You can think of the registry as a directory of all available Docker images. If required, one can host their own Docker registries and can use them for pulling images.</p>
 </section>
 <section id="using-docker">
-<h2>Using Docker<a class="headerlink" href="#using-docker" title="Permalink to this heading">#</a></h2>
+<h2>Using Docker<a class="headerlink" href="#using-docker" title="Link to this heading">#</a></h2>
 <section id="search-for-remote-image">
-<h3>Search for remote image<a class="headerlink" href="#search-for-remote-image" title="Permalink to this heading">#</a></h3>
+<h3>Search for remote image<a class="headerlink" href="#search-for-remote-image" title="Link to this heading">#</a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>docker search ubuntu  # will search for ubuntu distrib
 </pre></div>
 </div>
 <p><a class="reference external" href="https://hub.docker.com/_/ubuntu">List of Ubuntu images</a></p>
 </section>
 <section id="install-run-linux-distribution">
-<h3>Install &amp; Run Linux distribution <a id="install_run_linux_distribution"></a><a class="headerlink" href="#install-run-linux-distribution" title="Permalink to this heading">#</a></h3>
+<h3>Install &amp; Run Linux distribution <a id="install_run_linux_distribution"></a><a class="headerlink" href="#install-run-linux-distribution" title="Link to this heading">#</a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>docker pull debian  # will install debian
 docker pull ubuntu:16.04
 docker pull centos
@@ -497,13 +496,13 @@ docker pull centos
 </div>
 </section>
 <section id="list-local-docker-images">
-<h3>List local Docker images <a id="list_local_docker_images"></a><a class="headerlink" href="#list-local-docker-images" title="Permalink to this heading">#</a></h3>
+<h3>List local Docker images <a id="list_local_docker_images"></a><a class="headerlink" href="#list-local-docker-images" title="Link to this heading">#</a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>docker images
 </pre></div>
 </div>
 </section>
 <section id="run-docker-image">
-<h3>Run Docker image <a id="run_docker_image"></a><a class="headerlink" href="#run-docker-image" title="Permalink to this heading">#</a></h3>
+<h3>Run Docker image <a id="run_docker_image"></a><a class="headerlink" href="#run-docker-image" title="Link to this heading">#</a></h3>
 <p>To run in interactive mode, use flag <code class="docutils literal notranslate"><span class="pre">-i</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>IMAGE<span class="w"> </span>/bin/bash
 docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>ubuntu:trusty<span class="w"> </span>/bin/bash
@@ -512,7 +511,7 @@ docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </s
 </div>
 </section>
 <section id="remove-docker-image-or-containers-force-deletion">
-<h3>Remove Docker image or containers (force deletion) <a id="remove_docker_image_or_containers_force_deletion"></a><a class="headerlink" href="#remove-docker-image-or-containers-force-deletion" title="Permalink to this heading">#</a></h3>
+<h3>Remove Docker image or containers (force deletion) <a id="remove_docker_image_or_containers_force_deletion"></a><a class="headerlink" href="#remove-docker-image-or-containers-force-deletion" title="Link to this heading">#</a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>docker rmi -f IMAGE_ID
 docker rmi $(docker images -a -q)  # WARNING!!! This will remove all images
 docker rm $(docker ps -a -f status=exited -q)  # WARNING!!! This will remove all containers
@@ -520,7 +519,7 @@ docker rm $(docker ps -a -f status=exited -q)  # WARNING!!! This will remove all
 </div>
 </section>
 <section id="save-a-docker-image">
-<h3>Save a Docker image <a id="save_a_docker_image"></a><a class="headerlink" href="#save-a-docker-image" title="Permalink to this heading">#</a></h3>
+<h3>Save a Docker image <a id="save_a_docker_image"></a><a class="headerlink" href="#save-a-docker-image" title="Link to this heading">#</a></h3>
 <p>The example below shows how to install useful items on a standard ubuntu image, and then save the image locally.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span># launch docker
 docker pull ubuntu:16.04
@@ -537,7 +536,7 @@ docker commit &lt;container_id&gt; your_name/ubuntu:16.04
 </div>
 </section>
 <section id="build-docker-container-from-dockerfile">
-<h3>Build Docker container from Dockerfile <a id="build_docker_container_from_dockerfile"></a><a class="headerlink" href="#build-docker-container-from-dockerfile" title="Permalink to this heading">#</a></h3>
+<h3>Build Docker container from Dockerfile <a id="build_docker_container_from_dockerfile"></a><a class="headerlink" href="#build-docker-container-from-dockerfile" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Create a Dockerfile by running `touch Dockerfile`</p></li>
 <li><p>Inside the Dockerfile write the following (items below are just given as an example):</p></li>
@@ -566,7 +565,7 @@ ENV PATH &quot;/sct/bin:${PATH}&quot;
 </ol>
 </section>
 <section id="run-with-display-redirection">
-<h3>Run with DISPLAY redirection <a id="run_with_display_redirection"></a><a class="headerlink" href="#run-with-display-redirection" title="Permalink to this heading">#</a></h3>
+<h3>Run with DISPLAY redirection <a id="run_with_display_redirection"></a><a class="headerlink" href="#run-with-display-redirection" title="Link to this heading">#</a></h3>
 <p>In order to run scripts with GUI you need to allow X11 redirection:</p>
 <ol class="arabic simple">
 <li><p>Install XQuartz X11 server and run it.</p></li>
@@ -582,7 +581,7 @@ ENV PATH &quot;/sct/bin:${PATH}&quot;
 </ol>
 </section>
 <section id="copy-file-into-container">
-<h3>Copy file into container <a id="copy_file_into_container"></a><a class="headerlink" href="#copy-file-into-container" title="Permalink to this heading">#</a></h3>
+<h3>Copy file into container <a id="copy_file_into_container"></a><a class="headerlink" href="#copy-file-into-container" title="Link to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># list container</span>
 docker<span class="w"> </span>ps
 <span class="c1"># copy file</span>

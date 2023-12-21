@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../../../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>FSLeyes &#8212; NeuroPoly Internal Wiki  documentation</title>
   
@@ -29,21 +28,21 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/theme.css?v=ec48f040" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
   <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=c607423c"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/image-processing-software/fsl/fsleyes';</script>
     <link rel="icon" href="../../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -187,7 +186,7 @@
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ressources</span></p>
 <ul class="nav bd-sidenav">
@@ -460,13 +459,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="fsleyes">
-<h1>FSLeyes<a class="headerlink" href="#fsleyes" title="Permalink to this heading">#</a></h1>
+<h1>FSLeyes<a class="headerlink" href="#fsleyes" title="Link to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FSLeyes">FSLeyes</a>, which is part of the <a class="reference external" href="https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/">FMRIB Software Library (FSL)</a>, is an image viewer for 3D and 4D neuroimages. It is a commonly used package in the field of neuroimaging, and our lab has several plugins that integrate with FSLeyes.</p>
 </section>
 <section id="installation">
-<h2>Installation <a id="install_fsleyes"></a><a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
+<h2>Installation <a id="install_fsleyes"></a><a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
 <p>The FSLeyes documentation provides two different install options:</p>
 <ol class="arabic simple">
 <li><p><a class="reference external" href="https://open.win.ox.ac.uk/pages/fsl/fsleyes/fsleyes/userdoc/install.html#install-as-part-of-fsl-recommended">Install as part of FSL</a></p></li>
@@ -481,7 +480,7 @@ conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> <
 </div>
 </section>
 <section id="running-remotely">
-<h2>Running Remotely<a class="headerlink" href="#running-remotely" title="Permalink to this heading">#</a></h2>
+<h2>Running Remotely<a class="headerlink" href="#running-remotely" title="Link to this heading">#</a></h2>
 <p>To run FSLeyes remotely, please see the documentation <a class="reference external" href="https://open.win.ox.ac.uk/pages/fsl/fsleyes/fsleyes/userdoc/troubleshooting.html#running-fsleyes-remotely">here</a>.</p>
 <p>After installing, do an ssh for X forwarding:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>-X<span class="w"> </span>username@remotehost
@@ -492,7 +491,7 @@ fsleyes
 <p>If you have an XQuartz error follow the instructions <a class="reference external" href="https://open.win.ox.ac.uk/pages/fsl/fsleyes/fsleyes/userdoc/troubleshooting.html#xquartz-fsleyes-doesn-t-start-and-just-shows-an-error">here</a>.</p>
 </section>
 <section id="plugins">
-<h2>Plugins<a class="headerlink" href="#plugins" title="Permalink to this heading">#</a></h2>
+<h2>Plugins<a class="headerlink" href="#plugins" title="Link to this heading">#</a></h2>
 <p>We have several different projects with FSLeyes-integrated plugins:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://spinalcordtoolbox.com/en/latest/user_section/fsleyes.html">Plugin for Spinal Cord Toolbox (SCT)</a></p></li>

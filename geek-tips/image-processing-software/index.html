@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Image Processing Software &#8212; NeuroPoly Internal Wiki  documentation</title>
   
@@ -29,21 +28,21 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=ec48f040" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
   <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/documentation_options.js?v=c607423c"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/image-processing-software/README';</script>
     <link rel="icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -187,7 +186,7 @@
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ressources</span></p>
 <ul class="nav bd-sidenav">
@@ -470,20 +469,20 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="image-processing-software">
-<h1>Image Processing Software<a class="headerlink" href="#image-processing-software" title="Permalink to this heading">#</a></h1>
+<h1>Image Processing Software<a class="headerlink" href="#image-processing-software" title="Link to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <section id="smoothing">
-<h2>Smoothing<a class="headerlink" href="#smoothing" title="Permalink to this heading">#</a></h2>
+<h2>Smoothing<a class="headerlink" href="#smoothing" title="Link to this heading">#</a></h2>
 <section id="gaussian-filter">
-<h3>Gaussian Filter<a class="headerlink" href="#gaussian-filter" title="Permalink to this heading">#</a></h3>
+<h3>Gaussian Filter<a class="headerlink" href="#gaussian-filter" title="Link to this heading">#</a></h3>
 <p>To smooth an image choosing the dimension(s) in which you want to apply the smoothing</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c3d<span class="w"> </span>&lt;input_image&gt;<span class="w"> </span>-smooth<span class="w"> </span>&lt;std_dim1&gt;x&lt;std_dim2&gt;x&lt;std_dim3&gt;vox<span class="w"> </span>-o<span class="w"> </span>&lt;output_image&gt;
 </pre></div>
 </div>
 <p>where &lt;std_dim1&gt;, &lt;std_dim2&gt; and &lt;std_dim3&gt; are the standard deviation of the Gaussian kernel in each dimension.</p>
 <section id="example">
-<h4>Example:<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h4>
+<h4>Example:<a class="headerlink" href="#example" title="Link to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c3d<span class="w"> </span>t2.nii.gz<span class="w"> </span>-smooth<span class="w"> </span>0x0x5vox<span class="w"> </span>-o<span class="w"> </span>t2_z_smoothed.nii.gz
 </pre></div>
 </div>
@@ -495,7 +494,7 @@ document.write(`
 </section>
 </section>
 <section id="median-filter">
-<h3>Median Filter<a class="headerlink" href="#median-filter" title="Permalink to this heading">#</a></h3>
+<h3>Median Filter<a class="headerlink" href="#median-filter" title="Link to this heading">#</a></h3>
 <p>The median filter, contrary to the gaussian filter, smooth an image by preserving the edges. It can be applied using fslmaths:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>fslmaths &lt;input_image&gt; -fmedian &lt;output_image&gt;
 </pre></div>
@@ -503,10 +502,10 @@ document.write(`
 </section>
 </section>
 <section id="intensity-correction">
-<h2>Intensity Correction<a class="headerlink" href="#intensity-correction" title="Permalink to this heading">#</a></h2>
+<h2>Intensity Correction<a class="headerlink" href="#intensity-correction" title="Link to this heading">#</a></h2>
 <p>It happens that an image has not a homogeneous intensity field. In MRI, the intensity is proportional to the antena proximity.</p>
 <section id="n3-non-parametric-non-uniform-intensity-normalization">
-<h3>N3 - Non-parametric Non-uniform Intensity Normalization<a class="headerlink" href="#n3-non-parametric-non-uniform-intensity-normalization" title="Permalink to this heading">#</a></h3>
+<h3>N3 - Non-parametric Non-uniform Intensity Normalization<a class="headerlink" href="#n3-non-parametric-non-uniform-intensity-normalization" title="Link to this heading">#</a></h3>
 <p>Information can be found on <a class="reference external" href="http://en.wikibooks.org/wiki/MINC/Tools/N3">http://en.wikibooks.org/wiki/MINC/Tools/N3</a></p>
 <p>This filter can be applied using the following command (MNI tools): (Problem –&gt; lost the image intensity dynamic)</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mri_nu_correct.mni<span class="w"> </span>--i<span class="w"> </span>&lt;input_image&gt;<span class="w"> </span>--o<span class="w"> </span>&lt;output_image&gt;
@@ -518,7 +517,7 @@ document.write(`
 </div>
 </section>
 <section id="n4">
-<h3>N4<a class="headerlink" href="#n4" title="Permalink to this heading">#</a></h3>
+<h3>N4<a class="headerlink" href="#n4" title="Link to this heading">#</a></h3>
 <p>The N4 algorithm is a variation of the original N3 algorithm with the additional benefits of an improved B-spline fitting routine which allows for multiple resolutions to be used during the correction process.</p>
 <p>This algorithm is implemented on ITK (<a class="reference external" href="http://www.itk.org/Doxygen/html/classitk_1_1N4BiasFieldCorrectionImageFilter.html">http://www.itk.org/Doxygen/html/classitk_1_1N4BiasFieldCorrectionImageFilter.html</a>)</p>
 <p>or in c3d:</p>
@@ -530,7 +529,7 @@ document.write(`
 </section>
 </section>
 <section id="manual-segmentations">
-<h2>Manual Segmentations<a class="headerlink" href="#manual-segmentations" title="Permalink to this heading">#</a></h2>
+<h2>Manual Segmentations<a class="headerlink" href="#manual-segmentations" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="http://www.bmc.med.utoronto.ca/bmcwiki/doku.php/technologies:imaging_processing_software">http://www.bmc.med.utoronto.ca/bmcwiki/doku.php/technologies:imaging_processing_software</a></p>
 </section>
 </section>

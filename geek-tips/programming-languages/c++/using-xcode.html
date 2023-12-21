@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../../../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Using XCode &#8212; NeuroPoly Internal Wiki  documentation</title>
   
@@ -29,21 +28,21 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/theme.css?v=ec48f040" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
   <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=c607423c"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/programming-languages/c++/using-xcode';</script>
     <link rel="icon" href="../../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -187,7 +186,7 @@
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ressources</span></p>
 <ul class="nav bd-sidenav">
@@ -472,13 +471,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="using-xcode">
-<h1>Using XCode<a class="headerlink" href="#using-xcode" title="Permalink to this heading">#</a></h1>
+<h1>Using XCode<a class="headerlink" href="#using-xcode" title="Link to this heading">#</a></h1>
 <section id="creation-of-an-xcode-project-linked-with-itk-and-vtk">
-<h2>Creation of an XCode project linked with ITK and VTK<a class="headerlink" href="#creation-of-an-xcode-project-linked-with-itk-and-vtk" title="Permalink to this heading">#</a></h2>
+<h2>Creation of an XCode project linked with ITK and VTK<a class="headerlink" href="#creation-of-an-xcode-project-linked-with-itk-and-vtk" title="Link to this heading">#</a></h2>
 <p>This page provides a guide to properly create a project using ITK and/or VTK libraries on XCode. Furthermore, it gives a way to export your project as an executable which are usable as a command-line. The paths to VTK and ITK present in this page follow the guide about the installation of VTK and ITK and depend on the version of the libraries.</p>
 <p>The creation of the project follows these steps:</p>
 <section id="create-a-new-project">
-<h3>1. Create a New Project<a class="headerlink" href="#create-a-new-project" title="Permalink to this heading">#</a></h3>
+<h3>1. Create a New Project<a class="headerlink" href="#create-a-new-project" title="Link to this heading">#</a></h3>
 <p>File → New Project</p>
 <ul class="simple">
 <li><p>Choose a template for your project → OS X → Application → Command Line Tool</p></li>
@@ -487,10 +486,10 @@ document.write(`
 </ul>
 </section>
 <section id="edit-settings">
-<h3>2. Edit Settings<a class="headerlink" href="#edit-settings" title="Permalink to this heading">#</a></h3>
+<h3>2. Edit Settings<a class="headerlink" href="#edit-settings" title="Link to this heading">#</a></h3>
 <p>Once your project is created, some settings have to be changed to compile your project with ITK and VTK and to assure that the IDE recognize the libraries during editing:</p>
 <section id="build-settings">
-<h4>Build Settings<a class="headerlink" href="#build-settings" title="Permalink to this heading">#</a></h4>
+<h4>Build Settings<a class="headerlink" href="#build-settings" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Search Paths →  HEADER_SEARCH_PATHS → add “/usr/local/itk/include/ITK-4.4” and “/usr/local/vtk/include/vtk-6.0” You need to verify paths before you copy-paste these ones.</p></li>
 <li><p>Search Paths → LIBRARY_SEARCH_PATHS → add ‘’/usr/local/itk/lib’’ and ‘’/usr/local/vtk/lib’’</p></li>
@@ -499,7 +498,7 @@ document.write(`
 </ul>
 </section>
 <section id="build-phases">
-<h4>Build Phases<a class="headerlink" href="#build-phases" title="Permalink to this heading">#</a></h4>
+<h4>Build Phases<a class="headerlink" href="#build-phases" title="Link to this heading">#</a></h4>
 <p>You should find in the part “Compile Sources” all your sources created or added to the project. If one file or your project isn’t in that list, it’ll not be compiled. Therefore, you must add them manually.</p>
 <p>In the part “Link Binary With Library”, you have to add all the libraries necessary to your project (not all the VTK and ITK libraries).<br />
 Typical ITK libraries are (to read, make basic treatments and write an image) :</p>
@@ -523,12 +522,12 @@ Typical ITK libraries are (to read, make basic treatments and write an image) :<
 </section>
 </section>
 <section id="add-files">
-<h3>3. Add Files<a class="headerlink" href="#add-files" title="Permalink to this heading">#</a></h3>
+<h3>3. Add Files<a class="headerlink" href="#add-files" title="Link to this heading">#</a></h3>
 <p>You can now add your file .h and .cpp to the project, or create new files/classes directly with a right-click on the project in the Project Navigator.<br />
 If you add files by dragging and dropping them to the project navigator, assure yourself that they are in the Compile Sources in Build Phases.</p>
 </section>
 <section id="set-dyld-library-path">
-<h3>4. Set DYLD_LIBRARY_PATH<a class="headerlink" href="#set-dyld-library-path" title="Permalink to this heading">#</a></h3>
+<h3>4. Set DYLD_LIBRARY_PATH<a class="headerlink" href="#set-dyld-library-path" title="Link to this heading">#</a></h3>
 <p>To tell to Xcode where to find libraries at the execution of your program, you have to set manually the Environment Variable <code class="docutils literal notranslate"><span class="pre">DYLD_LIBRARY_PATH</span></code> to the libraries. Go to:</p>
 <p>Product (in the menu) -&gt; Scheme -&gt; Edit Scheme -&gt; Arguments -&gt; Environment Variables -&gt; add the variable:</p>
 <p>    Name = <code class="docutils literal notranslate"><span class="pre">DYLD_LIBRARY_PATH</span></code><br />
@@ -538,7 +537,7 @@ If you add files by dragging and dropping them to the project navigator, assure 
 </section>
 </section>
 <section id="distribution">
-<h2>Distribution<a class="headerlink" href="#distribution" title="Permalink to this heading">#</a></h2>
+<h2>Distribution<a class="headerlink" href="#distribution" title="Link to this heading">#</a></h2>
 <p>To distribute your project as an executable, your have to go to : Product → Archive → Click on Distribute → Save Built Products → Save</p>
 <p>Your executable will be available in the new created folder.</p>
 <p>To distribute this executable without installing ITK and VTK, you may add to the executable folder the needed libraries (<code class="docutils literal notranslate"><span class="pre">.dylib</span></code>).<br />
@@ -553,9 +552,9 @@ The executable can be called by the command if you are in the folder of your pro
 <p>This path is only valid if you place your program in /Applications. To make definitive changes to PATH, add this line to <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code></p>
 </section>
 <section id="troubleshooting">
-<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading">#</a></h2>
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
 <section id="how-to-use-xcode-toolchain-as-a-non-admin-user">
-<h3>How to use XCode toolchain as a non-admin user?<a class="headerlink" href="#how-to-use-xcode-toolchain-as-a-non-admin-user" title="Permalink to this heading">#</a></h3>
+<h3>How to use XCode toolchain as a non-admin user?<a class="headerlink" href="#how-to-use-xcode-toolchain-as-a-non-admin-user" title="Link to this heading">#</a></h3>
 <p>Usually when you use XCode as a non-admin user, it ask you for admin login and password for building your project in debugging mode. This is required to enable the Developer Tools. To allow a non-admin user to use debugging mode on XCode, you may enter in a Terminal the following command :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dscl<span class="w"> </span>.<span class="w"> </span>append<span class="w"> </span>/Groups/_developer<span class="w"> </span>GroupMembership<span class="w"> </span>&lt;username&gt;
 </pre></div>

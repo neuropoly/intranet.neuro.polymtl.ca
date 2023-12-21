@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>GPU Clusters &#8212; NeuroPoly Internal Wiki  documentation</title>
   
@@ -29,21 +28,21 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=ec48f040" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
   <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/documentation_options.js?v=c607423c"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'computing-resources/neuropoly/gpus';</script>
     <link rel="icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -187,7 +186,7 @@
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ressources</span></p>
 <ul class="current nav bd-sidenav">
@@ -477,7 +476,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="gpu-clusters">
-<h1>GPU Clusters<a class="headerlink" href="#gpu-clusters" title="Permalink to this heading">#</a></h1>
+<h1>GPU Clusters<a class="headerlink" href="#gpu-clusters" title="Link to this heading">#</a></h1>
 <p>This document is being ported from <a class="reference external" href="https://docs.google.com/document/d/1X--A2kql4GypfI6fNFIOYA_b6uQdeu2_Kue7n8KkTOU/edit#">here</a>.</p>
 <p>Neuropoly has several GPUs available for training deep learning models.</p>
 <ul class="simple">
@@ -487,11 +486,11 @@ document.write(`
 </ul>
 <p>We have spent money and time on this infrastructure for it to push science forward, so please take advantage of it!</p>
 <section id="connecting">
-<h2>Connecting<a class="headerlink" href="#connecting" title="Permalink to this heading">#</a></h2>
+<h2>Connecting<a class="headerlink" href="#connecting" title="Link to this heading">#</a></h2>
 <p>Like <a class="reference internal" href="README.html#connect-to-neuropoly-computers"><span class="std std-ref">other machines</span></a>, connect with ssh using your <a class="reference internal" href="README.html#poly-grames"><span class="std std-ref">polygrames</span></a> account.</p>
 </section>
 <section id="hardware">
-<h2>Hardware<a class="headerlink" href="#hardware" title="Permalink to this heading">#</a></h2>
+<h2>Hardware<a class="headerlink" href="#hardware" title="Link to this heading">#</a></h2>
 <p>You can inspect the available GPUs on machine, and their current state, with <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ nvidia-smi
 Fri Jun  4 01:26:14 2021       
@@ -540,7 +539,7 @@ Fri Jun  4 01:26:14 2021
 </div>
 </section>
 <section id="software">
-<h2>Software<a class="headerlink" href="#software" title="Permalink to this heading">#</a></h2>
+<h2>Software<a class="headerlink" href="#software" title="Link to this heading">#</a></h2>
 <p>Both <a class="reference external" href="https://tensorflow.org"><code class="docutils literal notranslate"><span class="pre">tensorflow</span></code></a> and <a class="reference external" href="https://pytorch.org/"><code class="docutils literal notranslate"><span class="pre">torch</span></code></a> are included on all of these machines,
 or you can install your own versions in a <code class="docutils literal notranslate"><span class="pre">venv</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment.</p>
 <p>You can check your environemnt is set up right for accessing the GPUs by running <code class="docutils literal notranslate"><span class="pre">nvverify</span></code>:</p>
@@ -1378,7 +1377,7 @@ Wed May 18 06:29:28 2022
 </details>
 <p>To get your software onto these servers, download it with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code>.</p>
 <section id="gpu-agnostic-code">
-<h3>GPU-Agnostic code<a class="headerlink" href="#gpu-agnostic-code" title="Permalink to this heading">#</a></h3>
+<h3>GPU-Agnostic code<a class="headerlink" href="#gpu-agnostic-code" title="Link to this heading">#</a></h3>
 <p>For the benefit of being able to test code out locally, without the GPU servers, it’s helpful to write device-agnostic code, code that falls back to running on slower CPU emulation if GPUs are not available.</p>
 <p>For tensorflow, this</p>
 <p>For pytorch, this <a class="reference external" href="https://pytorch.org/docs/stable/notes/cuda.html#device-agnostic-code">looks like this</a></p>
@@ -1396,13 +1395,13 @@ model = Network(...).to(device=device)
 </section>
 </section>
 <section id="data">
-<h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
+<h2>Data<a class="headerlink" href="#data" title="Link to this heading">#</a></h2>
 <p>As with the <a class="reference internal" href="cpus.html"><span class="std std-doc">other stations</span></a>, you should prefer getting data in via <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> in the <a class="reference internal" href="#../data/git-datasets.md"><span class="xref myst">git <code class="docutils literal notranslate"><span class="pre">data</span></code> server</span></a>, but you have the option of using <a class="reference internal" href="#../data/duke.md"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">duke</span></code></span></a> (which is available to you at <code class="docutils literal notranslate"><span class="pre">~/duke/temp</span></code>) or any other method (<code class="docutils literal notranslate"><span class="pre">scp</span></code>, <code class="docutils literal notranslate"><span class="pre">curl</span></code>, <code class="docutils literal notranslate"><span class="pre">wget</span></code>, etc).</p>
 </section>
 <section id="storage">
-<h2>Storage<a class="headerlink" href="#storage" title="Permalink to this heading">#</a></h2>
+<h2>Storage<a class="headerlink" href="#storage" title="Link to this heading">#</a></h2>
 <section id="long-term-slow-access-with-backup">
-<h3>Long term, slow access (with backup)<a class="headerlink" href="#long-term-slow-access-with-backup" title="Permalink to this heading">#</a></h3>
+<h3>Long term, slow access (with backup)<a class="headerlink" href="#long-term-slow-access-with-backup" title="Link to this heading">#</a></h3>
 <p>For projects and permanent storage: <code class="docutils literal notranslate"><span class="pre">~/duke</span></code></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1410,11 +1409,11 @@ model = Network(...).to(device=device)
 </div>
 </section>
 <section id="mid-term-rapid-access-no-backup">
-<h3>Mid-term, rapid access (no backup)<a class="headerlink" href="#mid-term-rapid-access-no-backup" title="Permalink to this heading">#</a></h3>
+<h3>Mid-term, rapid access (no backup)<a class="headerlink" href="#mid-term-rapid-access-no-backup" title="Link to this heading">#</a></h3>
 <p>This corresponds to your home <code class="docutils literal notranslate"><span class="pre">~/</span></code>. This is where you keep your software (conda envs, virtualenvs, etc.).</p>
 </section>
 <section id="short-term-very-rapid-access-no-backup">
-<h3>Short-term, very rapid access (no backup)<a class="headerlink" href="#short-term-very-rapid-access-no-backup" title="Permalink to this heading">#</a></h3>
+<h3>Short-term, very rapid access (no backup)<a class="headerlink" href="#short-term-very-rapid-access-no-backup" title="Link to this heading">#</a></h3>
 <p>This is where you run your experiments (eg: deep learning training). On <code class="docutils literal notranslate"><span class="pre">rosenberg</span></code>, go to <code class="docutils literal notranslate"><span class="pre">~/data_nvme_$USER</span></code>or <code class="docutils literal notranslate"><span class="pre">~/data_extrassd_$USER</span></code>. On <code class="docutils literal notranslate"><span class="pre">bireli</span></code> and <code class="docutils literal notranslate"><span class="pre">romane</span></code> , go to your home <code class="docutils literal notranslate"><span class="pre">~/</span></code> .</p>
 <p>To keep track of your disk space, you can run <code class="docutils literal notranslate"><span class="pre">df</span></code>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u108545@rosenberg:~$ # to see how much space is available on the spare disk
@@ -1430,7 +1429,7 @@ u108545@rosenberg:~$ du -hs data_extrassd_u108545/miniconda3/
 </section>
 </section>
 <section id="good-training-habits">
-<h2>Good Training Habits<a class="headerlink" href="#good-training-habits" title="Permalink to this heading">#</a></h2>
+<h2>Good Training Habits<a class="headerlink" href="#good-training-habits" title="Link to this heading">#</a></h2>
 <p>Instead of loading the whole dataset to memory:</p>
 <ul class="simple">
 <li><p>Use HDF5Matrix: <a class="reference external" href="https://gist.github.com/jfsantos/e2ef822c744357a4ed16ec0c885100a3">https://gist.github.com/jfsantos/e2ef822c744357a4ed16ec0c885100a3</a></p></li>
@@ -1442,7 +1441,7 @@ u108545@rosenberg:~$ du -hs data_extrassd_u108545/miniconda3/
 </ul>
 </section>
 <section id="bookings">
-<h2>Bookings<a class="headerlink" href="#bookings" title="Permalink to this heading">#</a></h2>
+<h2>Bookings<a class="headerlink" href="#bookings" title="Link to this heading">#</a></h2>
 <p>Please allocate your GPUs cooperatively on the <a class="reference external" href="https://calendar.google.com/calendar?cid=NG1nNmJnZDlwdjU1dGhmOTQ4NnQybWlodDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">computer resource calendar</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1461,7 +1460,7 @@ u108545@rosenberg:~$ du -hs data_extrassd_u108545/miniconda3/
 </div>
 </section>
 <section id="monitoring">
-<h2>Monitoring<a class="headerlink" href="#monitoring" title="Permalink to this heading">#</a></h2>
+<h2>Monitoring<a class="headerlink" href="#monitoring" title="Link to this heading">#</a></h2>
 <p>You can monitor what the system is doing with</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>htop   # CPU processes
 </pre></div>
@@ -1486,7 +1485,7 @@ Core 1:        +25.0°C  (high = +80.0°C, crit = +90.0°C)
 <li><p><a class="reference external" href="https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/">https://monitor.neuro.polymtl.ca/host/romane.neuro.polymtl.ca/</a></p></li>
 </ul>
 <section id="monitoring-gpus">
-<h3>Monitoring GPUs<a class="headerlink" href="#monitoring-gpus" title="Permalink to this heading">#</a></h3>
+<h3>Monitoring GPUs<a class="headerlink" href="#monitoring-gpus" title="Link to this heading">#</a></h3>
 <p>As above, you can see the computation amount, allocated RAM, temperature, fan speed of the GPUs on the command line with</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>nvidia-smi
 </pre></div>
@@ -1506,7 +1505,7 @@ Core 1:        +25.0°C  (high = +80.0°C, crit = +90.0°C)
 </section>
 </section>
 <section id="tensorboard">
-<h2>Tensorboard<a class="headerlink" href="#tensorboard" title="Permalink to this heading">#</a></h2>
+<h2>Tensorboard<a class="headerlink" href="#tensorboard" title="Link to this heading">#</a></h2>
 <p><img alt="" src="../../_images/tensorboard.png" /></p>
 <p>This feature allows you to monitor various training and validation metrics across epochs. If training is happening on a remote station (typically the case), you need to run tensorboard on the remote station and establish an SSH tunnel to be able to see the TensorBoard on your local browser.</p>
 <p>To do on the remote GPU cluster:</p>
@@ -1540,7 +1539,7 @@ tensorboard<span class="w"> </span>--logdir<span class="w"> </span>PATH_TO_MODEL
 </ul>
 </section>
 <section id="ssh-tunnelling">
-<span id="id1"></span><h2>SSH tunnelling<a class="headerlink" href="#ssh-tunnelling" title="Permalink to this heading">#</a></h2>
+<span id="id1"></span><h2>SSH tunnelling<a class="headerlink" href="#ssh-tunnelling" title="Link to this heading">#</a></h2>
 <p>If you want to run a Jupyter notebook from a remote server, or monitor a model training using tensorboard, you will need to do an SSH tunnelling to be able to pass the display from the remote cluster to your local station.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">

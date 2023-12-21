@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../../../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Docker for Deep Learning &#8212; NeuroPoly Internal Wiki  documentation</title>
   
@@ -29,21 +28,21 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/theme.css?v=ec48f040" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
   <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/sphinx_highlight.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../../_static/design-tabs.js"></script>
+    <script src="../../../_static/documentation_options.js?v=c607423c"></script>
+    <script src="../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/misc/docker/docker-for-deep-learning';</script>
     <link rel="icon" href="../../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
@@ -187,7 +186,7 @@
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ressources</span></p>
 <ul class="nav bd-sidenav">
@@ -461,13 +460,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="docker-for-deep-learning">
-<h1>Docker for Deep Learning<a class="headerlink" href="#docker-for-deep-learning" title="Permalink to this heading">#</a></h1>
+<h1>Docker for Deep Learning<a class="headerlink" href="#docker-for-deep-learning" title="Link to this heading">#</a></h1>
 <section id="docker-environment">
-<h2>Docker Environment <a id="docker_environment"></a><a class="headerlink" href="#docker-environment" title="Permalink to this heading">#</a></h2>
+<h2>Docker Environment <a id="docker_environment"></a><a class="headerlink" href="#docker-environment" title="Link to this heading">#</a></h2>
 <p>In this page you’ll find information on how to use Docker for Deep Learning. You’re of course not required to use Docker, however if you want a different CUDA version or any admin privileges (root account) you’ll see that Docker will be the best choice.</p>
 </section>
 <section id="nvidia-docker">
-<h2>NVIDIA Docker<a class="headerlink" href="#nvidia-docker" title="Permalink to this heading">#</a></h2>
+<h2>NVIDIA Docker<a class="headerlink" href="#nvidia-docker" title="Link to this heading">#</a></h2>
 <p><img alt="" src="../../../_images/docker_arch.png" /></p>
 <p>Docker alone has no support for NVIDIA GPUs, therefore we use t he <a class="reference external" href="https://github.com/NVIDIA/nvidia-docker">NVIDIA Docker</a> in order to have access to the host GPUs from the Docker containers.</p>
 <p><a class="reference external" href="https://www.neuro.polymtl.ca/_detail/internal_resources/deep_learning/docker_arch.png?id=internal_resources%3Adeep_learning%3Adocker"><img alt="" src="https://www.neuro.polymtl.ca/_media/internal_resources/deep_learning/docker_arch.png" /></a>As you can see in the image on the left, we have the GPUs and the NVIDIA CUDA Drivers on <strong>the host</strong> (Ubuntu in our case), and then you can have different <strong>containers with different CUDA Toolkit versions installed and isolated from the host environment</strong>.</p>
@@ -475,7 +474,7 @@ document.write(`
 <p>NVIDIA also provides many images, so you don’t even need to install CUDA toolkit or cuDNN by yourself, the list can be <a class="reference external" href="https://hub.docker.com/r/nvidia/cuda/">seen here</a>. You can use Ubuntu 14.04 or Ubuntu 16.04 with CUDA 6.5/7.0/7.5 or 8.0 together with different cuDNN versions.</p>
 </section>
 <section id="creating-containers">
-<h2>Creating Containers<a class="headerlink" href="#creating-containers" title="Permalink to this heading">#</a></h2>
+<h2>Creating Containers<a class="headerlink" href="#creating-containers" title="Link to this heading">#</a></h2>
 <p>If you want to create containers, you just need to use the <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code> command. Here is an example on how to start a container with CUDA 8.0 and cuDNN 5:</p>
 <p><code class="docutils literal notranslate"><span class="pre">nvidia-docker</span> <span class="pre">run</span> <span class="pre">-it</span> <span class="pre">nvidia/cuda:8.0-cudnn5-devel</span></code></p>
 <p>After executing this, Docker will download all required images from Docker Hub (this is done only once, later it is used as a cache) and it will start the container with the Ubuntu 16.04 with CUDA 8.0 and cuDNN 5 preconfigured.</p>
@@ -483,13 +482,13 @@ document.write(`
 <p>More NVIDIA Images are <a class="reference external" href="https://hub.docker.com/r/nvidia/cuda/">available here</a>.</p>
 </section>
 <section id="exposing-container-ports">
-<h2>Exposing Container Ports<a class="headerlink" href="#exposing-container-ports" title="Permalink to this heading">#</a></h2>
+<h2>Exposing Container Ports<a class="headerlink" href="#exposing-container-ports" title="Link to this heading">#</a></h2>
 <p>If you want to expose a container port to the host system, you can use the flag <code class="docutils literal notranslate"><span class="pre">-p</span></code>, like in the example below where we use a Tensorflow image with Jupyter:</p>
 <p><code class="docutils literal notranslate"><span class="pre">nvidia-docker</span> <span class="pre">run</span> <span class="pre">-it</span> <span class="pre">-p</span> <span class="pre">8888:8888</span> <span class="pre">gcr.io/tensorflow/tensorflow:latest-gpu</span></code></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">-p</span></code> flag tells two ports, one is from the container and the other is the port that will be opened in the host that will forward to the container. After executing the command above, you’ll be able to open a Jupyter notebook from your browser by accessing <a class="reference external" href="http://localhost:8888/"><code class="docutils literal notranslate"><span class="pre">http://localhost:8888</span></code></a>.</p>
 </section>
 <section id="accessing-datasets-external-volumes">
-<h2>Accessing Datasets (external volumes)<a class="headerlink" href="#accessing-datasets-external-volumes" title="Permalink to this heading">#</a></h2>
+<h2>Accessing Datasets (external volumes)<a class="headerlink" href="#accessing-datasets-external-volumes" title="Link to this heading">#</a></h2>
 <p>You can mount a host directory inside your Docker container using the following volume parameter:</p>
 <p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-i</span> <span class="pre">-t</span> <span class="pre">-v</span> <span class="pre">[host</span> <span class="pre">full</span> <span class="pre">path]:[container</span> <span class="pre">path]</span> <span class="pre">[image]</span> <span class="pre">[command]</span></code></p>
 <p>Using the <code class="docutils literal notranslate"><span class="pre">-v</span></code> option, allow you to mount the host <code class="docutils literal notranslate"><span class="pre">[host</span> <span class="pre">full</span> <span class="pre">path]</span></code> directory inside the <code class="docutils literal notranslate"><span class="pre">[container</span> <span class="pre">path]</span></code> path of the container.</p>

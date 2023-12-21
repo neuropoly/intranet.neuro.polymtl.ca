@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" data-theme="light">
+<html lang="en" data-content_root="../../" data-theme="light">
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Linux &#8212; NeuroPoly Internal Wiki  documentation</title>
   
@@ -29,21 +28,21 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/theme.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=ec48f040" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
   <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/documentation_options.js?v=c607423c"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/os-guides/linux';</script>
     <link rel="icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -187,7 +186,7 @@
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Ressources</span></p>
 <ul class="nav bd-sidenav">
@@ -463,9 +462,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="linux">
-<h1>Linux<a class="headerlink" href="#linux" title="Permalink to this heading">#</a></h1>
+<h1>Linux<a class="headerlink" href="#linux" title="Link to this heading">#</a></h1>
 <section id="automatic-mount-on-startup">
-<h2><strong>Automatic <strong>M</strong>ount on Startup</strong><a class="headerlink" href="#automatic-mount-on-startup" title="Permalink to this heading">#</a></h2>
+<h2><strong>Automatic <strong>M</strong>ount on Startup</strong><a class="headerlink" href="#automatic-mount-on-startup" title="Link to this heading">#</a></h2>
 <p>For the following steps you need admin permissions.</p>
 <p>1. Create data_processing &amp; data_shared folders in <code class="docutils literal notranslate"><span class="pre">/mnt</span></code>, type:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>mkdir<span class="w"> </span>/mnt/data_processing
@@ -503,9 +502,9 @@ Debian Wheezy 8</label><div class="sd-tab-content docutils">
 <p>4. Remount drives and type: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">mount</span> <span class="pre">-a</span></code></p>
 </section>
 <section id="centos-fedora-red-hat">
-<h2>CentOS/Fedora/Red Hat<a class="headerlink" href="#centos-fedora-red-hat" title="Permalink to this heading">#</a></h2>
+<h2>CentOS/Fedora/Red Hat<a class="headerlink" href="#centos-fedora-red-hat" title="Link to this heading">#</a></h2>
 <section id="ants-c3d">
-<h3>Ants &amp; c3d<a class="headerlink" href="#ants-c3d" title="Permalink to this heading">#</a></h3>
+<h3>Ants &amp; c3d<a class="headerlink" href="#ants-c3d" title="Link to this heading">#</a></h3>
 <p>Binaries for debian work well, just make sure the paths are set in the bashrc as follow:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PATH=${PATH}:${SCT_DIR}/install/debian/ants
 
@@ -514,7 +513,7 @@ PATH=${PATH}:${SCT_DIR}/install/debian/c3d
 </div>
 </section>
 <section id="fsl">
-<h3>FSL<a class="headerlink" href="#fsl" title="Permalink to this heading">#</a></h3>
+<h3>FSL<a class="headerlink" href="#fsl" title="Link to this heading">#</a></h3>
 <p>Need <code class="docutils literal notranslate"><span class="pre">libmng</span></code> installed for fslview:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">~</span> <span class="n">sudo</span> <span class="n">yum</span> <span class="n">install</span> <span class="n">libmng</span> <span class="n">libpng12</span>
 </pre></div>
@@ -528,7 +527,7 @@ PATH=${PATH}:${SCT_DIR}/install/debian/c3d
 </div>
 </section>
 <section id="miniconda">
-<h3>Miniconda<a class="headerlink" href="#miniconda" title="Permalink to this heading">#</a></h3>
+<h3>Miniconda<a class="headerlink" href="#miniconda" title="Link to this heading">#</a></h3>
 <p>Run the miniconda installer shell script for linux you can get there <a class="reference external" href="http://conda.pydata.org/miniconda.html">http://conda.pydata.org/miniconda.html</a></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>~<span class="w"> </span>bash<span class="w"> </span>Miniconda-*.sh
 </pre></div>
