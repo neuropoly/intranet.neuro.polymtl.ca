@@ -7,6 +7,8 @@ This server includes private MRI and microscopy datasets, which have been curate
 It hosts [BIDS](https://bids-specification.readthedocs.io) datasets, version-controlled using [`git-annex`](https://git-annex.branchable.com/).
 It is locked behind a [VPN](../computing-resources/neuropoly/README.md#vpn) because much of our data is under medical ethics protections, and needs to be kept off the general internet.
 
+Therefore, it should only be accessed from machines which are also on campus.
+
 
 Initial setup
 -------------
@@ -15,38 +17,58 @@ Initial setup
 
 0. You must have a \*nix OS with `git-annex>=8` installed. See [`git-annex` installation](../geek-tips/git-annex.md#installation).
 2. Make sure you have an ssh key.
-    * If not, run `ssh-keygen -t ed25519 -C your.name@polymtl.ca`. Your keys will be in the hidden folder `~/.ssh/`.
 
 ### Getting an account
 
 ```{note}
-If you already have an account on a server and/or laptop, and you want to have access from a new machine, see the section on [adding extra devices](#add-extra-devices) instead.
+If you already have an account, see the section on [adding extra devices](#add-extra-devices) instead.
 ```
 
-If not already done, reopen your [onboarding ticket](https://github.com/neuropoly/onboarding/issues/) to request to be added to the git-annex by providing the contents of your **public key** (examples: `~/.ssh/id_rsa.pub`, `~/.ssh/id_ed25519.pub`).
-
-A **public key** should look like
+You should only access this server from within the Polytechnique firewall. For most, that means first [sshing into the machine](../computing-resources/neuropoly/README.md#ssh-command-line) you plan to work from. There, generate an ssh key with
 
 ```
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDE+b5vj+WvS5l6j56NF/leMpC2xT7JUCMUWDAqvWoVmNZ7UR3dGXQeTPTlmPmxPGD2Hk9/zFzxO2kYOt9o4lHQ0QQSKLUmTyuieyJE26wL1ZiLilmTgvgMxxkxvInF/Vr78V5Ll72zAmXzUxVSvuDGY2GRjnLreYheiqg1F3xTuD68uWInX8ZwA7NDtKpoZ7Aat063vD79WBrtiCfvAMbM8QhC3294zxqAjjy9fxs+TMTqAxtKdaWCA/eCs7sx9uvtFcj2Q9jxCMB3br5HyPLotgJMoIMt+fywj+vQG907LODRcqm9J0+ih+38/3Y6aqECMkHA9WWIfFywwjeA7EGr your.name@polymtl.ca
+ssh-keygen -t ed25519 -C your.name@polymtl.ca  # EDIT your.name to match your actual email address
 ```
 
-or
+You will be prompted for a path to save to -- press enter to accept the default -- and for a passphrase that adds a layer of protection against anyone breaking into your account -- enter a **strong password** here, and *save it to your password manager*. 
 
 ```
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJwsjlem+acuTOZGyNQKjyI7kJe9ULkhZo7N04QfC/tA your.name@polymtl.ca
+yourname@joplin:~$ ssh-keygen -t ed25519 -C your.name@polymtl.ca
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/yourname/.ssh/id_ed25519): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/yourname/.ssh/id_ed25519
+Your public key has been saved in /home/yourname/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:ACFOJqCClthWMaksgJy4sLSUTBW3cQEQmdAjtk+2ijE your.name@polymtl.ca
+The key's randomart image is:
++--[ED25519 256]--+
+|XoX=%B.o.        |
+|O/.Boo+          |
+|@*B....          |
+|*+oo   .         |
+| .+ .   S        |
+|E  o             |
+|.o.              |
+|..               |
+|                 |
++----[SHA256]-----+
+
 ```
 
-Current **server admins** are:
 
-* jcohen@polymtl.ca
-* eva.alonso-ortiz@polymtl.ca
-* nick.guenther@polymtl.ca
-* joshua.newton@polymtl.ca
-* mathieu.boudreau@polymtl.ca
-* mathieu.guay-paquet@polymtl.ca
 
-The admins should follow [Admin Guide > Add Users](#add-users) to create your account.
+Display and copy the `.pub` part by
+
+```
+p115628@marsalis:~$ cat ~/.ssh/id_*.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBflJjOyQjGAvsrmeP6tgsQU4kdRfE+fVwPaC9G4n8PD your.name@polymtl.ca
+```
+
+Copy the entire line, making sure that it starts "ssh-ed25519" and ending with your email address.
+
+Find your [onboarding ticket](https://github.com/neuropoly/onboarding/issues/) and paste it in, with a request to be added to the git server. Your assigned onboarding lead will follow [Admin Guide > Add Users](#add-users) to create your account.
 
 ### Connecting to `data.neuro.polymtl.ca`
 
@@ -393,6 +415,19 @@ Once added, you should be able to see the newly added key by running:
 ```
 ssh git@data.neuro.polymtl.ca keys list
 ```
+
+### Troubleshooting
+
+Current **server admins** are:
+
+* jcohen@polymtl.ca
+* eva.alonso-ortiz@polymtl.ca
+* nick.guenther@polymtl.ca
+* joshua.newton@polymtl.ca
+* mathieu.boudreau@polymtl.ca
+* mathieu.guay-paquet@polymtl.ca
+
+Contact them with any questions.
 
 Admin Guide
 -----------
