@@ -571,7 +571,7 @@ macOS</label><div class="sd-tab-content docutils">
 <section id="list-of-computers-at-neuropoly">
 <h2>List of Computers at NeuroPoly<a class="headerlink" href="#list-of-computers-at-neuropoly" title="Link to this heading">#</a></h2>
 <p>Are you new to NeuroPoly and looking for a desk and a station? Please check the <a class="reference external" href="https://docs.google.com/document/d/11GEh5YvYRnWnERv26TezcyvyPF2W5KF0uoI2U6p7XsM/edit">list of Desktop/Server/Clusters computers and Printers</a> so you can pick one that is free. If you’d like a particular desk and someone else is using a station remotely, please ask the admins to move the station to another location.</p>
-<p>If you prefer to work on your laptop, please let the admins know and we will give you a screen you can connect your laptop to.</p>
+<p>If you prefer to work on your laptop, please let the admins know in your <a class="reference external" href="https://github.com/neuropoly/onboarding/issues/">onboarding ticket</a> and they will find you an available screen you can connect to your laptop.</p>
 </section>
 <section id="vpn">
 <h2>VPN<a class="headerlink" href="#vpn" title="Link to this heading">#</a></h2>
@@ -665,32 +665,22 @@ Windows</label><div class="sd-tab-content docutils">
 </section>
 <section id="ssh-command-line">
 <h3>SSH (command line)<a class="headerlink" href="#ssh-command-line" title="Link to this heading">#</a></h3>
-<p>Once the VPN connection established, connect via ssh using the <code class="docutils literal notranslate"><span class="pre">STATION</span></code> you want:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If working off-campus, start your <a class="reference internal" href="#vpn">VPN</a> first.</p>
+</div>
+<p>Connect via ssh using the <code class="docutils literal notranslate"><span class="pre">STATION</span></code> you want:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>ssh<span class="w"> </span>&lt;POLYGRAMES_USERNAME&gt;@&lt;STATION&gt;.neuro.polymtl.ca
 </pre></div>
 </div>
-<p>Note: For Windows systems, you can<a class="reference external" href="https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse"> install Microsoft’s ssh package</a>, <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a>, <a class="reference external" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>, or <a class="reference external" href="https://cmder.net">cmder</a>.</p>
-<p>Optionally, this shortcut. It allows you to just type <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;STATION&gt;</span></code> and be connected:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To get ssh on Windows, you can <a class="reference external" href="https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse">install Microsoft’s ssh package</a>, <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a>, <a class="reference external" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>, or <a class="reference external" href="https://cmder.net">cmder</a>, or <a class="reference external" href="https://git-scm.com/download/win">Git-Bash</a>.</p>
+</div>
+<p>Optionally, install this shortcut which allows you to just type <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">&lt;STATION&gt;</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>&gt;~/.ssh/config_neuropoly<span class="w"> </span><span class="s">&lt;&lt;EOF</span>
-<span class="s"># GPU servers</span>
-<span class="s">Match Host romane,rosenberg,bireli</span>
+<span class="s">Match Host abbey,betty,bireli,coltrane,davis,django,ella,ferguson,jarrett,joplin,kirk,marsalis,mingus,parker,romane,rosenberg,tatum</span>
 <span class="s">HostName %h.neuro.polymtl.ca</span>
-
-<span class="s"># CPU servers</span>
-<span class="s">Match Host joplin,abbey,tristano</span>
-<span class="s">HostName %h.neuro.polymtl.ca</span>
-
-<span class="s"># Workstations</span>
-<span class="s">Match Host ferguson,davis</span>
-<span class="s">HostName %h.neuro.polymtl.ca</span>
-
-<span class="s"># data servers</span>
-<span class="s">Match Host data</span>
-<span class="s">HostName %h.neuro.polymtl.ca</span>
-
-<span class="s">Match Host data.neuro.polymtl.ca</span>
-<span class="s">User git</span>
-<span class="s">PreferredAuthentications publickey</span>
 
 <span class="s">Match host *.neuro.polymtl.ca</span>
 <span class="s">User &lt;POLYGRAMES USERNAME&gt; # fill in your username and remove this comment</span>
@@ -701,8 +691,9 @@ Windows</label><div class="sd-tab-content docutils">
 <span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;Include ~/.ssh/config_neuropoly&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.ssh/config
 </pre></div>
 </div>
-<p>Add this to your <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> to make multiple ssh connections faster and without retyping your password:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Host</span> <span class="o">*</span>
+<p>Optionally, add this shortcut which makes simultaneous ssh connections possible without retyping your password:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">&gt;&gt;~/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">config</span> <span class="o">&lt;&lt;</span><span class="n">EOF</span>
+<span class="n">Host</span> <span class="o">*</span>
 <span class="n">ControlMaster</span> <span class="n">auto</span>
 <span class="n">ControlPath</span> <span class="o">~/.</span><span class="n">ssh</span><span class="o">/%</span><span class="n">r</span><span class="o">@%</span><span class="n">h</span><span class="p">:</span><span class="o">%</span><span class="n">p</span>
 <span class="n">ControlPersist</span> <span class="mi">3</span><span class="n">s</span>
