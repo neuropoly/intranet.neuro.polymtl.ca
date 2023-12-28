@@ -57,8 +57,6 @@ The key's randomart image is:
 
 ```
 
-
-
 Display and copy the `.pub` part by
 
 ```
@@ -420,12 +418,13 @@ ssh git@data.neuro.polymtl.ca keys list
 
 Current **server admins** are:
 
-* jcohen@polymtl.ca
-* eva.alonso-ortiz@polymtl.ca
+* mathieu.guay-paquet@polymtl.ca
+* mathieu.boudreau@polymtl.ca
+* nathan.gorvett@polymtl.ca
 * nick.guenther@polymtl.ca
 * joshua.newton@polymtl.ca
-* mathieu.boudreau@polymtl.ca
-* mathieu.guay-paquet@polymtl.ca
+* jcohen@polymtl.ca
+* eva.alonso-ortiz@polymtl.ca
 
 Contact them with any questions.
 
