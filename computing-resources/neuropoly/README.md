@@ -66,7 +66,7 @@ Password: your_polygrames_password
 
 Are you new to NeuroPoly and looking for a desk and a station? Please check the [list of Desktop/Server/Clusters computers and Printers](https://docs.google.com/document/d/11GEh5YvYRnWnERv26TezcyvyPF2W5KF0uoI2U6p7XsM/edit) so you can pick one that is free. If you'd like a particular desk and someone else is using a station remotely, please ask the admins to move the station to another location.
 
-If you prefer to work on your laptop, please let the admins know and we will give you a screen you can connect your laptop to.
+If you prefer to work on your laptop, please let the admins know in your [onboarding ticket](https://github.com/neuropoly/onboarding/issues/) and they will find you an available screen you can connect to your laptop.
 
 ## VPN
 
@@ -161,37 +161,26 @@ To log into a local station at NeuroPoly use your GRAMES account.
 
 ### SSH (command line)
 
-Once the VPN connection established, connect via ssh using the `STATION` you want:
+```{note}
+If working off-campus, start your [VPN](#vpn) first.
+```
+
+Connect via ssh using the `STATION` you want:
 
 ```bash
  ssh <POLYGRAMES_USERNAME>@<STATION>.neuro.polymtl.ca
 ```
 
-Note: For Windows systems, you can[ install Microsoft's ssh package](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse), [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10), [PuTTY](https://www.chiark.greenend.org.uk/\~sgtatham/putty/), or [cmder](https://cmder.net).
+```{note}
+To get ssh on Windows, you can [install Microsoft's ssh package](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse), [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10), [PuTTY](https://www.chiark.greenend.org.uk/\~sgtatham/putty/), or [cmder](https://cmder.net), or [Git-Bash](https://git-scm.com/download/win).
+```
 
-Optionally, this shortcut. It allows you to just type `ssh <STATION>` and be connected:
+Optionally, install this shortcut which allows you to just type `ssh <STATION>`:
 
 ```bash
 cat >~/.ssh/config_neuropoly <<EOF
-# GPU servers
-Match Host romane,rosenberg,bireli
+Match Host abbey,betty,bireli,coltrane,davis,django,ella,ferguson,jarrett,joplin,kirk,marsalis,mingus,parker,romane,rosenberg,tatum
 HostName %h.neuro.polymtl.ca
-
-# CPU servers
-Match Host joplin,abbey,tristano
-HostName %h.neuro.polymtl.ca
-
-# Workstations
-Match Host ferguson,davis
-HostName %h.neuro.polymtl.ca
-
-# data servers
-Match Host data
-HostName %h.neuro.polymtl.ca
-
-Match Host data.neuro.polymtl.ca
-User git
-PreferredAuthentications publickey
 
 Match host *.neuro.polymtl.ca
 User <POLYGRAMES USERNAME> # fill in your username and remove this comment
@@ -202,9 +191,10 @@ EOF
 echo 'Include ~/.ssh/config_neuropoly' >> ~/.ssh/config
 ```
 
-Add this to your `~/.ssh/config` to make multiple ssh connections faster and without retyping your password:
+Optionally, add this shortcut which makes simultaneous ssh connections possible without retyping your password:
 
 ```
+cat >>~/.ssh/config <<EOF
 Host *
 ControlMaster auto
 ControlPath ~/.ssh/%r@%h:%p
