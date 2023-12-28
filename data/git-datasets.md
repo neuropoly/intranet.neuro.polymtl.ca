@@ -5,10 +5,7 @@ This server includes private MRI and microscopy datasets, which have been curate
 `git+ssh://data.neuro.polymtl.ca` has a max size of ~1TB.
 
 It hosts [BIDS](https://bids-specification.readthedocs.io) datasets, version-controlled using [`git-annex`](https://git-annex.branchable.com/).
-It is locked behind a [VPN](../computing-resources/neuropoly/README.md#vpn) because much of our data is under medical ethics protections, and needs to be kept off the general internet.
-
-Therefore, it should only be accessed from machines which are also on campus.
-
+It is locked behind a [VPN](../computing-resources/neuropoly/README.md#vpn) because much of our data is under medical ethics protections, and needs to be kept behind the Polytechnique firewall.
 
 Initial setup
 -------------
@@ -19,7 +16,7 @@ Initial setup
 If you already have an account, see the section on [adding extra devices](#add-extra-devices) instead.
 ```
 
-You should only access this server from within the Polytechnique firewall. For most, that means first [sshing into the machine](../computing-resources/neuropoly/README.md#ssh-command-line) you plan to work from. There, generate an ssh key with
+You should only access this server from within the Polytechnique firewall. That means logging in at a [desktop in the lab](../computing-resources/neuropoly/README.md#list-of-computers-at-neuropoly) or [sshing in](../computing-resources/neuropoly/README.md#ssh-command-line) you plan to work from. Once logged in, there, generate an ssh key with
 
 ```
 ssh-keygen -t ed25519 -C your.name@polymtl.ca  # EDIT your.name to match your actual email address
@@ -63,15 +60,9 @@ Copy the entire line, making sure that it starts "ssh-ed25519" and ending with y
 
 Find your [onboarding ticket](https://github.com/neuropoly/onboarding/issues/) and paste it in, with a request to be added to the git server. Your assigned onboarding lead will follow [Admin Guide > Add Users](#add-users) to create your account.
 
-### Connecting to `data.neuro.polymtl.ca`
+### Connecting
 
-Because this server contains private medical data, you need to be on campus, connected to the VPN, or working from a server on campus, like `joplin` or `rosenberg` to access it.
-
-*If connecting from off-campus*, connect to [polyvpn](http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn).
-
-> 🏚️ Verify connectivity by running `ping data.neuro.polymtl.ca`. If **you cannot ping** then you need to double-check your VPN connection; make sure it is connected, make sure you can reach `joplin`, and if it still isn't working *ask the [Poly network admins](mailto:dge.informatique@polymtl.ca)* to unblock your account from this server.
-
-Verify you can use the server by running `ssh git@data.neuro.polymtl.ca help`. If it hangs, triple-check again your VPN. If it asks for `git@data.neuro.polymtl.ca's password`, double-check that `ls -la ~/.ssh` shows permissions of `drwx------` for the `.` folder, and that the files `id_ed25519` and `id_ed25519.pub` (or `id_rsa` and `id_rsa.pub`) exist with exactly those names. A successful connection looks like:
+Once your account is created, verify you can use the server by running `ssh git@data.neuro.polymtl.ca help`. A successful connection looks like:
 
 ```
 $ ssh git@data.neuro.polymtl.ca help
@@ -94,10 +85,6 @@ list of remote commands available:
 
 Usage
 -----
-
-During daily usage, you will need to be [*on the polyvpn network*](../computing-resources/neuropoly/README.md#vpn) to access the server.
-
-You should also make sure to [configure git annex](../geek-tips/git-annex.md#global-git-config) for the best performance.
 
 ### List
 
