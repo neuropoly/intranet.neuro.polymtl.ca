@@ -13,11 +13,6 @@ Therefore, it should only be accessed from machines which are also on campus.
 Initial setup
 -------------
 
-### Prerequisites
-
-0. You must have a \*nix OS with `git-annex>=8` installed. See [`git-annex` installation](../geek-tips/git-annex.md#installation).
-2. Make sure you have an ssh key.
-
 ### Getting an account
 
 ```{note}
@@ -412,6 +407,13 @@ Once added, you should be able to see the newly added key by running:
 
 ```
 ssh git@data.neuro.polymtl.ca keys list
+```
+
+
+```{warning}
+It is possible to install all the necessary tools on a laptop and grant it access by yourself but you should avoid this to protect the data protection agreements that surround these data.
+
+For graphical work with these datasets, prefer connecting over [RDP](../computing-resources/neuropoly/README.html#rdp-graphical-interface) or [SSH](../computing-resources/neuropoly/README.html#ssh-graphical-interface) to an on-campus station.
 ```
 
 ### Troubleshooting
