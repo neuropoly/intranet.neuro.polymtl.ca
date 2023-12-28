@@ -16,14 +16,25 @@ Initial setup
 If you already have an account, see the section on [adding extra devices](#add-extra-devices) instead.
 ```
 
-You should only access this server from within the Polytechnique firewall. That means logging in at a [desktop in the lab](../computing-resources/neuropoly/README.md#list-of-computers-at-neuropoly) or [sshing in](../computing-resources/neuropoly/README.md#ssh-command-line) you plan to work from. Once logged in, there, generate an ssh key with
+You should only access this server from within the Polytechnique firewall. That means logging in at the [desktop in the lab](../computing-resources/neuropoly/README.md#list-of-computers-at-neuropoly) or [sshing to the station in the server room](../computing-resources/neuropoly/README.md#ssh-command-line) that plan to work from. 
+
+Check for a usable ssh key on your chosen machine with `cat ~/.ssh/id_*.pub` just in case you have set one up already for another reason; if it comes up blank like
+
+```
+yourname@marsalis:~$ cat ~/.ssh/id_*.pub
+yourname@marsalis:~$
+```
+
+generate a key with:
 
 ```
 ssh-keygen -t ed25519 -C your.name@polymtl.ca  # EDIT your.name to match your actual email address
 ```
 
-You will be prompted for a path to save to -- press enter to accept the default -- and for a passphrase that adds a layer of protection against anyone breaking into your account -- enter a **strong password** here, and *save it to your password manager*. 
+You will be prompted for a path to save to -- press enter to accept the default -- and for a passphrase that adds a layer of protection against anyone breaking into your account -- enter a **strong password** here, and *save it to your password manager*.
 
+<details><summary>For example:</summary>
+	
 ```
 yourname@joplin:~$ ssh-keygen -t ed25519 -C your.name@polymtl.ca
 Generating public/private ed25519 key pair.
@@ -49,16 +60,18 @@ The key's randomart image is:
 
 ```
 
-Display and copy the `.pub` part by
+</details>
+
+When you have your key, copy the `.pub` part out by
 
 ```
-p115628@marsalis:~$ cat ~/.ssh/id_*.pub
+yourname@marsalis:~$ cat ~/.ssh/id_*.pub
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBflJjOyQjGAvsrmeP6tgsQU4kdRfE+fVwPaC9G4n8PD your.name@polymtl.ca
 ```
 
-Copy the entire line, making sure that it starts "ssh-ed25519" and ending with your email address.
+and copying the entire line, making sure that it starts "ssh-" (ideally "ssh-ed25519" but "ssh-rsa" is also possible) and ending with your email address.
 
-Find your [onboarding ticket](https://github.com/neuropoly/onboarding/issues/) and paste it in, with a request to be added to the git server. Your assigned onboarding lead will follow [Admin Guide > Add Users](#add-users) to create your account.
+Find your [onboarding ticket](https://github.com/neuropoly/onboarding/issues/) and paste your key in there, with a request to be added to the git server. Your assigned onboarding lead will follow [Admin Guide > Add Users](#add-users) to create your account.
 
 ### Connecting
 
