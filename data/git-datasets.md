@@ -130,7 +130,7 @@ git annex get sub-karo*                                        	# download image
 > **Note**: If you want to download images together with corresponding derivatives files for a specific subject(s), use: 
 
 ```
-git annex get $(find . -name "sub-karo*")			# download images and derivatives for sub-karo* subjects
+git annex get {./,derivatives/**/}sub-karo*                       # download images and derivatives for sub-karo* subjects
 ```
 
 ### Update
