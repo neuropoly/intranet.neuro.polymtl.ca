@@ -376,11 +376,9 @@ The corresponding entity `label-<label>` is here mandatory to specify the labele
 - `.json`
 - etc.
 
-
 ### Derivative template
 
 In addition to the subjects folders, derived datasets must include their own `dataset_description.json` file to track all the processing steps used to create the data. Example:
-
 
 #### `dataset_description.json`
     
@@ -405,7 +403,6 @@ In addition to the subjects folders, derived datasets must include their own `da
 ```{warning}
 The `dataset_description.json` file within the derived dataset should include `"DatasetType": "derivative"`.
 ```
-
 
 ```{note}
 If more details about the processing steps used have to be provided (e.g., reorientation, resampling etc.), a [`descriptions.tsv`](https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#descriptionstsv) file may be added at the root of the folder. This file must contain at least two columns:
@@ -473,6 +470,10 @@ Therefore, to improve the way we track our data, `.json` sidecars will have to b
 }
 ```
 
+```{warning}
+Because the space used for the derived data is different from the original raw data, the entity `space-other` **MUST** also be used in the filename.
+```
+
 </details>
 
 <details>
@@ -490,6 +491,10 @@ Therefore, to improve the way we track our data, `.json` sidecars will have to b
 }
 ```
 
+```{warning}
+Because the space used for the derived data is different from the original raw data, the entity `space-template` or `space-PAM50` **MUST** also be used in the filename.
+```
+
 </details>
 
 ```{note}
@@ -505,8 +510,7 @@ To be consistent regarding the way anatomical regions will be referred to, pleas
 | SC | Spinal Cord |
 | GM | Gray Matter |
 | WM | White Matter |
-| MS | Multiple Sclerosis Lesion |
-| SCI | Spinal Cord Injury Lesion |
+| lesion | Lesion (MS, SCI etc.) |
 | CSF | Cerebrospinal Fluid |
 | compression | Spinal Cord Compression |
 | tumor | Tumor |
