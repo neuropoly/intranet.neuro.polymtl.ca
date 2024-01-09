@@ -329,7 +329,7 @@ Derived datasets follow the **same structure and hierarchy** as the `raw` datase
 sub-<label>/
     [ses-<label>/]
         modality/
-            <source_entities>[_space-<space>][_res-<label>][_den-<label>][_desc-<label>]_<suffix>.<extension>
+            <source_filename>[_space-<space>][_res-<label>][_den-<label>][_desc-<label>]_<suffix>.<extension>
 ```
 
 Regarding derivatives filenames, we can identify the same 3 type of elements as before (entities, suffixes and extensions) plus 1 extra-consideration related to the raw data:
@@ -338,27 +338,21 @@ Regarding derivatives filenames, we can identify the same 3 type of elements as 
 Entities and suffixes are different from those used with the raw filenames and are specific to [data types](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#imaging-data-types).
 ```
 
-#### `<source_entities>`
+#### `<source_filename>`
 
-This element corresponds to the entire source filename, with the **omission** of the source suffix and extension. For example, if the source file name is `sub-02_acq-MTon_MTS.nii.gz`, the `<source_entities>` to be used for the derivatives is `sub-02_acq-MTon`.
-
-```{note}
-For MRI, it means that the contrast needs to be removed from the filename (see [here](https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html#file-naming-conventions)). The desc-<label> entity will be used instead (i.e. `_desc-T1w` and `_desc-T2w`).
-```
-
+This element corresponds to the entire source filename, with the **omission** of the extension. For example, if the source file name is `sub-02_acq-MTon_MTS.nii.gz`, the `<source_filename>` to be used for the derivatives is `sub-02_acq-MTon_MTS`.
 
 #### Derivative entities
 
 Characterized by a key word (space, res, den, etc.) and a value (label = an alphanumeric value, index = a nonnegative integer, etc) separated with a dash `-`
-- `[space-<space>]`: image space if different from raw space: template space (i.e. MNI305 etc), orig, other etc. (see [BIDS](https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#spatial-references))
+- `[space-<space>]`: image space if different from raw space: template space (e.g. MNI305 etc), orig, other etc. (see [BIDS](https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#spatial-references))
 - `[res-<label>]`: for changes in resolution
 - `[den-<label>]`: for changes related to density
-- `[desc-<label>]`: [should](https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html#file-naming-conventions) be used to specify the contrast (i.e. `_desc-T1w` and `_desc-T2w`)
+- `[desc-<label>]`: should be used to distinguish two files that do not otherwise have a distinguishing entity. (e.g. `sub-001_UNIT1_desc-denoised.nii.gz`)
 - `[label-<label>]`: to avoid confusion if multiple masks are available we can specify the masked [structure](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels) (i.e. `_label-WM` for white matter, `_label-GM` for gray matter, `_label-L` for lesions etc.)
 - `[seg-<label>]`: to specify the atlas used when multiple structures are present in the image
 
 Entities are then separated using underscores `_`
-
 
 #### Derivative suffixes
 

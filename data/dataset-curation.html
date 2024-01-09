@@ -473,7 +473,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-derivative-datasets">Building the <code class="docutils literal notranslate"><span class="pre">derivative</span></code> datasets</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Folders structure and filenames</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-structure">Derivatives structure</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#source-entities"><code class="docutils literal notranslate"><span class="pre">&lt;source_entities&gt;</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#source-filename"><code class="docutils literal notranslate"><span class="pre">&lt;source_filename&gt;</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-entities">Derivative entities</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-suffixes">Derivative suffixes</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-extensions">Derivatives extensions</a></li>
@@ -834,7 +834,7 @@ For examples, see <a class="reference external" href="https://github.com/bids-st
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;/</span>
     <span class="p">[</span><span class="n">ses</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;/</span><span class="p">]</span>
         <span class="n">modality</span><span class="o">/</span>
-            <span class="o">&lt;</span><span class="n">source_entities</span><span class="o">&gt;</span><span class="p">[</span><span class="n">_space</span><span class="o">-&lt;</span><span class="n">space</span><span class="o">&gt;</span><span class="p">][</span><span class="n">_res</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="p">][</span><span class="n">_den</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="p">][</span><span class="n">_desc</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="p">]</span><span class="n">_</span><span class="o">&lt;</span><span class="n">suffix</span><span class="o">&gt;.&lt;</span><span class="n">extension</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">source_filename</span><span class="o">&gt;</span><span class="p">[</span><span class="n">_space</span><span class="o">-&lt;</span><span class="n">space</span><span class="o">&gt;</span><span class="p">][</span><span class="n">_res</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="p">][</span><span class="n">_den</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="p">][</span><span class="n">_desc</span><span class="o">-&lt;</span><span class="n">label</span><span class="o">&gt;</span><span class="p">]</span><span class="n">_</span><span class="o">&lt;</span><span class="n">suffix</span><span class="o">&gt;.&lt;</span><span class="n">extension</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>Regarding derivatives filenames, we can identify the same 3 type of elements as before (entities, suffixes and extensions) plus 1 extra-consideration related to the raw data:</p>
@@ -843,22 +843,18 @@ For examples, see <a class="reference external" href="https://github.com/bids-st
 <p>Entities and suffixes are different from those used with the raw filenames and are specific to <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#imaging-data-types">data types</a>.</p>
 </div>
 </section>
-<section id="source-entities">
-<h4><code class="docutils literal notranslate"><span class="pre">&lt;source_entities&gt;</span></code><a class="headerlink" href="#source-entities" title="Link to this heading">#</a></h4>
-<p>This element corresponds to the entire source filename, with the <strong>omission</strong> of the source suffix and extension. For example, if the source file name is <code class="docutils literal notranslate"><span class="pre">sub-02_acq-MTon_MTS.nii.gz</span></code>, the <code class="docutils literal notranslate"><span class="pre">&lt;source_entities&gt;</span></code> to be used for the derivatives is <code class="docutils literal notranslate"><span class="pre">sub-02_acq-MTon</span></code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For MRI, it means that the contrast needs to be removed from the filename (see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html#file-naming-conventions">here</a>). The desc-<label> entity will be used instead (i.e. <code class="docutils literal notranslate"><span class="pre">_desc-T1w</span></code> and <code class="docutils literal notranslate"><span class="pre">_desc-T2w</span></code>).</p>
-</div>
+<section id="source-filename">
+<h4><code class="docutils literal notranslate"><span class="pre">&lt;source_filename&gt;</span></code><a class="headerlink" href="#source-filename" title="Link to this heading">#</a></h4>
+<p>This element corresponds to the entire source filename, with the <strong>omission</strong> of the extension. For example, if the source file name is <code class="docutils literal notranslate"><span class="pre">sub-02_acq-MTon_MTS.nii.gz</span></code>, the <code class="docutils literal notranslate"><span class="pre">&lt;source_filename&gt;</span></code> to be used for the derivatives is <code class="docutils literal notranslate"><span class="pre">sub-02_acq-MTon_MTS</span></code>.</p>
 </section>
 <section id="derivative-entities">
 <h4>Derivative entities<a class="headerlink" href="#derivative-entities" title="Link to this heading">#</a></h4>
 <p>Characterized by a key word (space, res, den, etc.) and a value (label = an alphanumeric value, index = a nonnegative integer, etc) separated with a dash <code class="docutils literal notranslate"><span class="pre">-</span></code></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">[space-&lt;space&gt;]</span></code>: image space if different from raw space: template space (i.e. MNI305 etc), orig, other etc. (see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#spatial-references">BIDS</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[space-&lt;space&gt;]</span></code>: image space if different from raw space: template space (e.g. MNI305 etc), orig, other etc. (see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#spatial-references">BIDS</a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[res-&lt;label&gt;]</span></code>: for changes in resolution</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[den-&lt;label&gt;]</span></code>: for changes related to density</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[desc-&lt;label&gt;]</span></code>: <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/introduction.html#file-naming-conventions">should</a> be used to specify the contrast (i.e. <code class="docutils literal notranslate"><span class="pre">_desc-T1w</span></code> and <code class="docutils literal notranslate"><span class="pre">_desc-T2w</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[desc-&lt;label&gt;]</span></code>: should be used to distinguish two files that do not otherwise have a distinguishing entity. (e.g. <code class="docutils literal notranslate"><span class="pre">sub-001_UNIT1_desc-denoised.nii.gz</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[label-&lt;label&gt;]</span></code>: to avoid confusion if multiple masks are available we can specify the masked <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels">structure</a> (i.e. <code class="docutils literal notranslate"><span class="pre">_label-WM</span></code> for white matter, <code class="docutils literal notranslate"><span class="pre">_label-GM</span></code> for gray matter, <code class="docutils literal notranslate"><span class="pre">_label-L</span></code> for lesions etc.)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[seg-&lt;label&gt;]</span></code>: to specify the atlas used when multiple structures are present in the image</p></li>
 </ul>
@@ -1219,7 +1215,7 @@ For examples, see <a class="reference external" href="https://github.com/bids-st
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-derivative-datasets">Building the <code class="docutils literal notranslate"><span class="pre">derivative</span></code> datasets</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Folders structure and filenames</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-structure">Derivatives structure</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#source-entities"><code class="docutils literal notranslate"><span class="pre">&lt;source_entities&gt;</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#source-filename"><code class="docutils literal notranslate"><span class="pre">&lt;source_filename&gt;</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-entities">Derivative entities</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-suffixes">Derivative suffixes</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-extensions">Derivatives extensions</a></li>
