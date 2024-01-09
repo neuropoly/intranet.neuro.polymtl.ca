@@ -2,7 +2,7 @@
 
 ## Converting data to BIDS
 
-All git-annex datasets should be BIDS-compliant. For more information about the BIDS standard, please visit [http://bids.neuroimaging.io](http://bids.neuroimaging.io).
+All git-annex datasets should be BIDS-compliant. For more information about the BIDS standard, please visit [http://bids.neuroimaging.io](http://bids.neuroimaging.io). 
 
 When you receive data from an external collaborator, you can save them under a temporary location: `duke/temp`.
 
@@ -297,6 +297,10 @@ First, it is important to understand what are [BIDS derivatives](https://bids-sp
 > Derivatives are outputs of common processing pipelines, capturing data and meta-data sufficient for a researcher to understand and (critically) reuse those outputs in subsequent processing. Standardizing derivatives is motivated by use cases where formalized machine-readable access to processed data enables higher level processing.
 
 Basically, derivative folders are derived datasets generated from a raw dataset. They must include **ONLY** processed data obtained from a specific raw dataset (i.e. segmentations, masks, labels...).
+
+```{warning}
+In this section we decided not to fully follow the BIDS derivatives convention. For more information please see our related [issue](https://github.com/neuropoly/data-management/issues/282). 
+```
 
 ```{warning}
 Derivative data obtained using DIFFERENT processes/workflows should be stored using DIFFERENT derivatives folders. Eg:
