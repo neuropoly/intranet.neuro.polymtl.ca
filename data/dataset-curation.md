@@ -290,7 +290,7 @@ Analysis scripts should not be kept here. Keep them in separate repositories, us
 ```
 
 
-## Building the `derivative` datasets
+## Building the `derivatives` datasets
 
 First, it is important to understand what are [BIDS derivatives](https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html#bids-derivatives) folders:
 
