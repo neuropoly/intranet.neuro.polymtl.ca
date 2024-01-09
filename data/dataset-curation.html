@@ -856,7 +856,6 @@ For examples, see <a class="reference external" href="https://github.com/bids-st
 <li><p><code class="docutils literal notranslate"><span class="pre">[den-&lt;label&gt;]</span></code>: for changes related to density</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[desc-&lt;label&gt;]</span></code>: should be used to distinguish two files that do not otherwise have a distinguishing entity. (e.g. <code class="docutils literal notranslate"><span class="pre">sub-001_UNIT1_desc-denoised.nii.gz</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[label-&lt;label&gt;]</span></code>: to avoid confusion if multiple masks are available we can specify the masked <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels">structure</a> (i.e. <code class="docutils literal notranslate"><span class="pre">_label-WM</span></code> for white matter, <code class="docutils literal notranslate"><span class="pre">_label-GM</span></code> for gray matter, <code class="docutils literal notranslate"><span class="pre">_label-L</span></code> for lesions etc.)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[seg-&lt;label&gt;]</span></code>: to specify the atlas used when multiple structures are present in the image</p></li>
 </ul>
 <p>Entities are then separated using underscores <code class="docutils literal notranslate"><span class="pre">_</span></code></p>
 </section>
@@ -871,31 +870,31 @@ For examples, see <a class="reference external" href="https://github.com/bids-st
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">mask</span></code></p></td>
+<tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">seg</span></code></p></td>
 <td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">label-&lt;label&gt;</span></code></p></td>
-<td><p>Suffix used for binary masks (0 and 1 only). The entity is used to specify the structure masked in the image.</p></td>
+<td><p>Suffix used for binary masks (0 and 1 only). The entity is used to specify the segmented structure in the image.</p></td>
 </tr>
 <tr class="row-odd"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">dseg</span></code></p></td>
-<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">seg-&lt;label&gt;</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">label-&lt;label&gt;</span></code></p></td>
 <td><p>Suffix used for discrete segmentations representing multiple anatomical structures. The entity is used to specify the atlas used to map the different structures.</p></td>
 </tr>
-<tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">probseg</span></code></p></td>
-<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">seg-&lt;label&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">label-&lt;label&gt;</span></code></p></td>
-<td><p>Suffix used for probabilistic segmentations representing anatomical structures with values ranging from 0 to 1. The entity <code class="docutils literal notranslate"><span class="pre">label</span></code> is used if only one structure is present in the image. If more structures are present (image with more dimensions) the <code class="docutils literal notranslate"><span class="pre">seg</span></code> entity must be used and structures have to be added to the JSON file (see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#probabilistic-segmentations">BIDS</a>).</p></td>
+<tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">softseg</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">label-&lt;label&gt;</span></code></p></td>
+<td><p>Suffix used for soft segmentations representing anatomical structures with values ranging from 0 to 1. The entity is used to specify the segmented structure in the image.</p></td>
 </tr>
-<tr class="row-odd"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">blabel</span></code> (<strong>NOT BIDS</strong>)</p></td>
+<tr class="row-odd"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">label</span></code></p></td>
 <td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">label-&lt;label&gt;</span></code></p></td>
 <td><p>Suffix used for binary labels (0 and 1 only). The entity is used to specify the type of structure labeled in the image.</p></td>
 </tr>
-<tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">dlabel</span></code> (<strong>NOT BIDS</strong>)</p></td>
-<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">seg-&lt;label&gt;</span></code></p></td>
+<tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">dlabel</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">label-&lt;label&gt;</span></code></p></td>
 <td><p>Suffix used for discrete labels representing multiple anatomical structures. The entity is used to specify the atlas used to label the different structures</p></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>These associated entities can only be used with these specific suffixes! This association depends on the imaging data <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#imaging-data-types">type</a>.</p>
+<p>The corresponding entity <code class="docutils literal notranslate"><span class="pre">label-&lt;label&gt;</span></code> is here mandatory to specify the labeled region !</p>
 </div>
 </section>
 <section id="derivatives-extensions">
