@@ -350,7 +350,6 @@ Characterized by a key word (space, res, den, etc.) and a value (label = an alph
 - `[den-<label>]`: for changes related to density
 - `[desc-<label>]`: should be used to distinguish two files that do not otherwise have a distinguishing entity. (e.g. `sub-001_UNIT1_desc-denoised.nii.gz`)
 - `[label-<label>]`: to avoid confusion if multiple masks are available we can specify the masked [structure](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels) (i.e. `_label-WM` for white matter, `_label-GM` for gray matter, `_label-L` for lesions etc.)
-- `[seg-<label>]`: to specify the atlas used when multiple structures are present in the image
 
 Entities are then separated using underscores `_`
 
@@ -360,14 +359,14 @@ An alphanumeric string located after all the entities following a final undersco
 
 | Image type (suffix) | Associated entities | Description |
 | :---: | :---: | --- |
-|`mask`| `label-<label>` | Suffix used for binary masks (0 and 1 only). The entity is used to specify the structure masked in the image. |
-|`dseg`| `seg-<label>` | Suffix used for discrete segmentations representing multiple anatomical structures. The entity is used to specify the atlas used to map the different structures. |
-|`probseg`| `seg-<label>` or `label-<label>` | Suffix used for probabilistic segmentations representing anatomical structures with values ranging from 0 to 1. The entity `label` is used if only one structure is present in the image. If more structures are present (image with more dimensions) the `seg` entity must be used and structures have to be added to the JSON file (see [BIDS](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#probabilistic-segmentations)).|
-|`blabel` (**NOT BIDS**)| `label-<label>` | Suffix used for binary labels (0 and 1 only). The entity is used to specify the type of structure labeled in the image. |
-|`dlabel` (**NOT BIDS**)| `seg-<label>` | Suffix used for discrete labels representing multiple anatomical structures. The entity is used to specify the atlas used to label the different structures |
+|`seg`| `label-<label>` | Suffix used for binary masks (0 and 1 only). The entity is used to specify the segmented structure in the image. |
+|`dseg`| `label-<label>` | Suffix used for discrete segmentations representing multiple anatomical structures. The entity is used to specify the atlas used to map the different structures. |
+|`softseg`| `label-<label>` | Suffix used for soft segmentations representing anatomical structures with values ranging from 0 to 1. The entity is used to specify the segmented structure in the image.|
+|`label`| `label-<label>` | Suffix used for binary labels (0 and 1 only). The entity is used to specify the type of structure labeled in the image. |
+|`dlabel`| `label-<label>` | Suffix used for discrete labels representing multiple anatomical structures. The entity is used to specify the atlas used to label the different structures |
 
 ```{warning}
-These associated entities can only be used with these specific suffixes! This association depends on the imaging data [type](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#imaging-data-types).
+The corresponding entity `label-<label>` is here mandatory to specify the labeled region !
 ```
 
 #### Derivatives extensions
