@@ -996,6 +996,10 @@ For examples, see <a class="reference external" href="https://github.com/bids-st
 <span class="p">}</span>
 </pre></div>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Because the space used for the derived data is different from the original raw data, the entity <code class="docutils literal notranslate"><span class="pre">space-other</span></code> <strong>MUST</strong> also be used in the filename.</p>
+</div>
 </details>
 <details>
 <summary>JSON sidecar (PAM50 SPACE)</summary>
@@ -1009,6 +1013,10 @@ For examples, see <a class="reference external" href="https://github.com/bids-st
 <span class="w">    </span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Because the space used for the derived data is different from the original raw data, the entity <code class="docutils literal notranslate"><span class="pre">space-template</span></code> or <code class="docutils literal notranslate"><span class="pre">space-PAM50</span></code> <strong>MUST</strong> also be used in the filename.</p>
 </div>
 </details>
 <div class="admonition note">
@@ -1035,31 +1043,28 @@ For examples, see <a class="reference external" href="https://github.com/bids-st
 <tr class="row-even"><td class="text-center"><p>WM</p></td>
 <td class="text-center"><p>White Matter</p></td>
 </tr>
-<tr class="row-odd"><td class="text-center"><p>MS</p></td>
-<td class="text-center"><p>Multiple Sclerosis Lesion</p></td>
+<tr class="row-odd"><td class="text-center"><p>lesion</p></td>
+<td class="text-center"><p>Lesion (MS, SCI etc.)</p></td>
 </tr>
-<tr class="row-even"><td class="text-center"><p>SCI</p></td>
-<td class="text-center"><p>Spinal Cord Injury Lesion</p></td>
-</tr>
-<tr class="row-odd"><td class="text-center"><p>CSF</p></td>
+<tr class="row-even"><td class="text-center"><p>CSF</p></td>
 <td class="text-center"><p>Cerebrospinal Fluid</p></td>
 </tr>
-<tr class="row-even"><td class="text-center"><p>compression</p></td>
+<tr class="row-odd"><td class="text-center"><p>compression</p></td>
 <td class="text-center"><p>Spinal Cord Compression</p></td>
 </tr>
-<tr class="row-odd"><td class="text-center"><p>tumor</p></td>
+<tr class="row-even"><td class="text-center"><p>tumor</p></td>
 <td class="text-center"><p>Tumor</p></td>
 </tr>
-<tr class="row-even"><td class="text-center"><p>edema</p></td>
+<tr class="row-odd"><td class="text-center"><p>edema</p></td>
 <td class="text-center"><p>Edema</p></td>
 </tr>
-<tr class="row-odd"><td class="text-center"><p>cavity</p></td>
+<tr class="row-even"><td class="text-center"><p>cavity</p></td>
 <td class="text-center"><p>Cavity</p></td>
 </tr>
-<tr class="row-even"><td class="text-center"><p>axon</p></td>
+<tr class="row-odd"><td class="text-center"><p>axon</p></td>
 <td class="text-center"><p>Axon</p></td>
 </tr>
-<tr class="row-odd"><td class="text-center"><p>myelin</p></td>
+<tr class="row-even"><td class="text-center"><p>myelin</p></td>
 <td class="text-center"><p>Myelin</p></td>
 </tr>
 </tbody>
