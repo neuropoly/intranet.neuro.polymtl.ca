@@ -205,6 +205,17 @@ Public access to the Spinal Cord Toolbox ([https://spinalcordtoolbox.com](https:
 
 If you want to promote SCT, you can print stickers. Printing can be done by Polytechnique Montreal Reprography (C-225, Main pavilion). Just send them an email (`reprographie@polymtl.ca`) with this PDF [SCT logo](https://drive.google.com/file/d/1PZrpx6ywsgtFzVZgRdnjIIYqK5wfFa-5/view?usp=sharing). They are able to print stickers with both transparent and white backgrounds. Recommended size: 8cm (width) × 3.5cm (height). 
 
+## Planning Travel
+
+* Flights: Select the best priced flight (within reason, no need to have unreasonably long layovers)
+* Accomodation: Try to share accommodation with other conference goers (again, within reason, no need to share in a scenario that makes you uncomfortable)
+* Scholarships: Where possible try and get conference allowance from scholarships 
+  Some options are listed below. 
+    - QBIN: https://rbiq-qbin.qc.ca/research/
+    - Please add to this list if you know of others
+* Communicate with your supervisor: Send a budget with planned expenses to your supervisor before booking
+
+
 ## Reimbursement
 
 The typical policy of the lab is that you can get your conference subscription reimbursed if you have something to present. If you don't, please ask your supervisor if they can reimburse the attendance.
