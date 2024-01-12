@@ -820,10 +820,20 @@ You can <a class="reference internal" href="#id2">ask an admin to do it</a>.</p>
 </section>
 <section id="add-extra-devices">
 <h3>Add extra devices<a class="headerlink" href="#add-extra-devices" title="Link to this heading">#</a></h3>
-<p>Like with Github, you can authorize any number of secondary devices. Assuming you already have authorization on <code class="docutils literal notranslate"><span class="pre">romane</span></code> and want to authorize yourself on <code class="docutils literal notranslate"><span class="pre">joplin</span></code>, here is the procedure:</p>
+<p>Like with Github, you can authorize any number of secondary devices. Assuming you already have authorization on your computer and want to authorize yourself on <code class="docutils literal notranslate"><span class="pre">joplin</span></code>, here is the procedure:</p>
 <ul class="simple">
-<li><p>Log on to <code class="docutils literal notranslate"><span class="pre">joplin</span></code> and create a new ssh key with <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code>. Once this is done, the public part of the new ssh key can be found in the file <code class="docutils literal notranslate"><span class="pre">~/.ssh/id_*.pub</span></code>.</p></li>
-<li><p>In a new terminal, log on to <code class="docutils literal notranslate"><span class="pre">romane</span></code> and run <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">git&#64;data.neuro.polymtl.ca</span> <span class="pre">keys</span> <span class="pre">add</span> <span class="pre">&#64;joplin</span></code>. This asks for the public part of the new ssh key created on <code class="docutils literal notranslate"><span class="pre">joplin</span></code>. Copy-paste the contents of the file and press Enter!</p></li>
+<li><p>Log on to <code class="docutils literal notranslate"><span class="pre">joplin</span></code> via ssh :</p>
+<ul>
+<li><p>If you already have a ssh key, you can get it by looking into <code class="docutils literal notranslate"><span class="pre">/.ssh/</span></code>: the key will either be <code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code> or <code class="docutils literal notranslate"><span class="pre">id_ed25519.pub</span></code>. You can display it by doing: <code class="docutils literal notranslate"><span class="pre">more</span> <span class="pre">~/.ssh/id_*.pub</span></code>. Now that you have the public key, copy it.</p></li>
+<li><p>If you don’t have a public key, generate it by running <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code>. Then copy it using the explanation above.</p></li>
+</ul>
+</li>
+<li><p>In a terminal on your computer (either at NeuroPoly or on a VPN):</p>
+<ul>
+<li><p>Check if you have access to git annex by doing: <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">git&#64;data.neuro.polymtl.ca</span> <span class="pre">info</span></code></p></li>
+<li><p>Then, from here, you can add the public key you copied from <code class="docutils literal notranslate"><span class="pre">joplin</span></code> by doing : <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">git&#64;data.neuro.polymtl.ca</span> <span class="pre">keys</span> <span class="pre">add</span> <span class="pre">&#64;joplin</span></code> (this will create a new point of access to git annex with your account called ‘joplin’). This asks for the public part of the new ssh key created on <code class="docutils literal notranslate"><span class="pre">joplin</span></code>. Copy-paste the contents of the file and press Enter!</p></li>
+</ul>
+</li>
 </ul>
 <p>Once added, you should be able to see the newly added key by running:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">git</span><span class="nd">@data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span> <span class="n">keys</span> <span class="nb">list</span>

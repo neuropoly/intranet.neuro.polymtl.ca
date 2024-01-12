@@ -382,10 +382,14 @@ If you no longer are working on a specific, make sure that it is deleted (in ord
 
 ### Add extra devices
 
-Like with Github, you can authorize any number of secondary devices. Assuming you already have authorization on `romane` and want to authorize yourself on `joplin`, here is the procedure: 
+Like with Github, you can authorize any number of secondary devices. Assuming you already have authorization on your computer and want to authorize yourself on `joplin`, here is the procedure: 
 
-* Log on to `joplin` and create a new ssh key with `ssh-keygen`. Once this is done, the public part of the new ssh key can be found in the file `~/.ssh/id_*.pub`. 
-* In a new terminal, log on to `romane` and run `ssh git@data.neuro.polymtl.ca keys add @joplin`. This asks for the public part of the new ssh key created on `joplin`. Copy-paste the contents of the file and press Enter!
+* Log on to `joplin` via ssh :
+	* If you already have a ssh key, you can get it by looking into `/.ssh/`: the key will either be `id_rsa.pub` or `id_ed25519.pub`. You can display it by doing: `more ~/.ssh/id_*.pub`. Now that you have the public key, copy it.
+ 	* If you don't have a public key, generate it by running `ssh-keygen`. Then copy it using the explanation above.
+* In a terminal on your computer (either at NeuroPoly or on a VPN):
+	* Check if you have access to git annex by doing: `ssh git@data.neuro.polymtl.ca info`
+	* Then, from here, you can add the public key you copied from `joplin` by doing : `ssh git@data.neuro.polymtl.ca keys add @joplin` (this will create a new point of access to git annex with your account called 'joplin'). This asks for the public part of the new ssh key created on `joplin`. Copy-paste the contents of the file and press Enter!
 
 Once added, you should be able to see the newly added key by running:
 
