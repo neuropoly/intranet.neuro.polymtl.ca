@@ -349,7 +349,7 @@ Characterized by a key word (space, res, den, etc.) and a value (label = an alph
 - `[res-<label>]`: for changes in resolution
 - `[den-<label>]`: for changes related to density
 - `[desc-<label>]`: should be used to distinguish two files that do not otherwise have a distinguishing entity. (e.g. `sub-001_UNIT1_desc-denoised.nii.gz`)
-- `[label-<label>]`: to avoid confusion if multiple masks are available we can specify the masked [structure](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels) (i.e. `_label-WM` for white matter, `_label-GM` for gray matter, `_label-L` for lesions etc.)
+- `[label-<label>]`: to avoid confusion if multiple masks are available we have to specify the masked [structure](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels) (i.e. `_label-WM` for white matter, `_label-GM` for gray matter, `_label-lesion` for lesions etc.)
 
 Entities are then separated using underscores `_`
 
@@ -501,7 +501,7 @@ Because the space used for the derived data is different from the original raw d
 If the image space is different from the original image, the entity `space-<label>` has to be used. The entity `space-template` may be used for templates and `space-other` for other transformations.
 ```
 
-### Regions and atlases
+### Regions of interest and atlases
 
 To be consistent regarding the way anatomical regions will be referred to, please follow this table (based on the BIDS [labels](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels)):
 
@@ -511,6 +511,10 @@ To be consistent regarding the way anatomical regions will be referred to, pleas
 | GM | Gray Matter |
 | WM | White Matter |
 | lesion | Lesion (MS, SCI etc.) |
+| discs | Intervertebral discs |
+| vertebrae | Vertebrae |
+| rootlets | Spinal rootlets |
+| PMJ | Pontomedullary Junction |
 | CSF | Cerebrospinal Fluid |
 | compression | Spinal Cord Compression |
 | tumor | Tumor |
@@ -519,11 +523,11 @@ To be consistent regarding the way anatomical regions will be referred to, pleas
 | axon | Axon |
 | myelin | Myelin |
 
-When multiple anatomical regions are present in the image, atlases should be used. When specified, these atlases **SHOULD** be added to a folder `atlases/` at the root of the derivative folder.
+When multiple anatomical regions are present in the image, atlases should be used. When specified, these atlases **SHOULD** be added to a folder `atlases/` at the root of the derivative folder or a URL should be included inside the json sidecars.
 
 ### Examples and use cases
 
-Let's consider a dataset with one single subject `sub-001`. This dataset comes from a clinical partner who segmented spinal cord injury (SCI) lesions and created point labels for spinal cord (SC) compressions. Based on this dataset, we decide to generate SC segmentations and disc labels. Here is the structure of the final dataset:
+Let's consider a dataset with one single subject `sub-001`. Here is an example of the structure of the final dataset:
 
 ```
 sci-bordeaux
@@ -536,50 +540,23 @@ sci-bordeaux
     │
     ├── sub-001
     │   └── anat
-    │       └──sub-001_acq-sag_T1w.nii.gz
-    │       ├──sub-001_acq-sag_T1w.json
     │       ├──sub-001_acq-sag_T2w.nii.gz
     │       └──sub-001_acq-sag_T2w.json
     │
     └── derivatives
-        ├── labels
-        │   ├── dataset_description.json
-        │   ├── README.md
-        │   └── sub-001
-        │       └── anat
-        │           ├── sub-001_acq-sag_T1w_label-SC_seg.nii.gz  # SC seg binary
-        │           ├── sub-001_acq-sag_T1w_label-SC_softseg.nii.gz  # SC seg soft
-        │           ├── sub-001_acq-sag_T1w_label-vertebrae_dseg  # segmentation of vertebrae discrete (each value refers to the vertebral level)
-        │           ├── sub-001_acq-sag_T1w_label-rootlets_dseg  # segmentation of nerve rootlets discrete (each value refers to the spinal level)
-        │           ├── sub-001_acq-sag_label-SCI_desc-T1w_mask.nii.gz
-        │           ├── sub-001_acq-sag_label-SCI_desc-T1w_mask.nii.gz
-        │           ├── sub-001_acq-sag_label-SCI_desc-T1w_mask.json
-        │           ├── sub-001_acq-sag_label-compression_desc-T1w_blabel.nii.gz
-        │           ├── sub-001_acq-sag_label-compression_desc-T1w_blabel.json
-        │           ├── sub-001_acq-sag_label-SCI_desc-T2w_mask.nii.gz
-        │           ├── sub-001_acq-sag_label-SCI_desc-T2w_mask.json
-        │           ├── sub-001_acq-sag_label-compression_desc-T2w_blabel.nii.gz
-        │           └── sub-001_acq-sag_label-compression_desc-T2w_blabel.json
-        │
-        ├── SC-masks
-        │   ├── dataset_description.json
-        │   ├── README.md
-        │   └── sub-001
-        │           └── anat
-        │               ├── sub-001_acq-sag_label-SC_desc-T1w_mask.nii.gz
-        │               ├── sub-001_acq-sag_label-SC_desc-T1w_mask.json
-        │               ├── sub-001_acq-sag_label-SC_desc-T2w_mask.nii.gz
-        │               └── sub-001_acq-sag_label-SC_desc-T2w_mask.json
-        │
-        └── disc-labels
+        └── labels
             ├── dataset_description.json
             ├── README.md
             └── sub-001
-                    └── anat
-                        ├── sub-001_acq-sag_seg-discs_desc-T1w_dlabel.nii.gz
-                        ├── sub-001_acq-sag_seg-discs_desc-T1w_dlabel.json
-                        ├── sub-001_acq-sag_seg-discs_desc-T2w_dlabel.nii.gz
-                        └── sub-001_acq-sag_seg-discs_desc-T2w_dlabel.json
+                └── anat
+                    ├── sub-001_acq-sag_T2w_label-SC_seg.nii.gz  # spinal cord (SC) binary segmentation 
+                    ├── sub-001_acq-sag_T2w_label-SC_softseg.nii.gz  # spinal cord (SC) soft segmentation
+                    ├── sub-001_acq-sag_T2w_label-discs_dlabel.nii.gz  # discrete discs labeling (SC) soft segmentation
+                    ├── sub-001_acq-sag_T2w_label-vertebrae_dseg  # vertebrae discrete segmentation (segmented stuctures have different values based on the vertebral levels)
+                    ├── sub-001_acq-sag_T2w_label-rootlets_dseg  # nerve rootlets discrete segmentation (segmented stuctures have different values based on the spinal level)
+                    ├── sub-001_acq-sag_T2w_label-compression_label.nii.gz # binary compression labeling (compression levels are located using only binary labels)
+                    ├── sub-001_acq-sag_T2w_label-pmj_dlabel # single point-wise label of pmj with value 50
+                    └── sub-001_acq-sag_T2w_label-lesion_seg # binary lesion segmentation (the related disease is here SCI base on the name of the dataset)
 
 ```
 
