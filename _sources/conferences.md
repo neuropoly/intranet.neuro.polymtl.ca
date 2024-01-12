@@ -211,7 +211,7 @@ If you want to promote SCT, you can print stickers. Printing can be done by Poly
 * Accomodation: Try to share accommodation with other conference goers (again, within reason, no need to share in a scenario that makes you uncomfortable)
 * Scholarships: Where possible try and get conference allowance from scholarships 
   Some options are listed below. 
-    - QBIN: https://rbiq-qbin.qc.ca/research/
+    - [QBIN](https://rbiq-qbin.qc.ca/research/) - to have access to QBIN funding opportunities, you have to become a QBIN member. To do so, fill out the form at the bottom of this page ([Become a member – RBIQ-QBIN](https://rbiq-qbin.qc.ca/fr/become-a-member/)). Then, send an email to `rbiq@usherbrooke.ca` to to verify that they received your form.
     - Please add to this list if you know of others
 * Communicate with your supervisor: Send a budget with planned expenses to your supervisor before booking
 
