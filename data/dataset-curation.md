@@ -554,7 +554,7 @@ sci-bordeaux
                 └── anat
                     ├── sub-001_acq-sag_T2w_label-SC_seg.nii.gz  # spinal cord (SC) binary segmentation 
                     ├── sub-001_acq-sag_T2w_label-SC_softseg.nii.gz  # spinal cord (SC) soft segmentation
-                    ├── sub-001_acq-sag_T2w_label-discs_dlabel.nii.gz  # discrete discs labeling
+                    ├── sub-001_acq-sag_T2w_label-discs_dlabel.nii.gz  # discrete discs labeling using the following convention: https://spinalcordtoolbox.com/user_section/tutorials/vertebral-labeling/labeling-conventions.html
                     ├── sub-001_acq-sag_T2w_label-vertebrae_dseg  # vertebrae discrete segmentation (segmented stuctures have different values based on the vertebral levels)
                     ├── sub-001_acq-sag_T2w_label-rootlets_dseg  # nerve rootlets discrete segmentation (segmented stuctures have different values based on the spinal level)
                     ├── sub-001_acq-sag_T2w_label-compression_label.nii.gz  # binary compression labeling (compression levels are indicated as a single voxel with a value '1' at the point of compression)
