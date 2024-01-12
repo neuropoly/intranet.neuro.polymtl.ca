@@ -213,6 +213,7 @@ If you want to promote SCT, you can print stickers. Printing can be done by Poly
   Some options are listed below. 
     - [QBIN](https://rbiq-qbin.qc.ca/research/) - to have access to QBIN funding opportunities, you have to become a QBIN member. To do so, fill out the form at the bottom of this page ([Become a member – RBIQ-QBIN](https://rbiq-qbin.qc.ca/fr/become-a-member/)). Then, send an email to `rbiq@usherbrooke.ca` to to verify that they received your form.
     - [UNIQUE Conference Travel Grants](https://www.unique.quebec/funding)
+    - Also see this [Scholarships](https://intranet.neuro.polymtl.ca/scholarships.html) intranet page
     - Please add to this list if you know of others
 * Communicate with your supervisor: Send a budget with planned expenses to your supervisor before booking
 
