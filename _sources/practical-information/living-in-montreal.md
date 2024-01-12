@@ -1,5 +1,10 @@
 # <span>🇨🇦</span> Living in Montreal
 
+## ✈️ Flights
+
+If you're travelling to Canada from France, you can check out [this offer](https://pvtistes.net/bonsplans/aircanada/) 
+from Air Canada allowing two pieces of luggage of 23 kg each.
+
 ## 🏠 Accommodation
 
 * Housing info from Polytechnique: [English version](https://www.polymtl.ca/etudiants-internationaux/en/housing/finding-housing) | [Version française](https://www.polymtl.ca/etudiants-internationaux/logement/chercher-un-logement).
