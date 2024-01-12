@@ -385,7 +385,7 @@ If you no longer are working on a specific, make sure that it is deleted (in ord
 Like with Github, you can authorize any number of secondary devices. Assuming you already have authorization on your computer and want to authorize yourself on `joplin`, here is the procedure: 
 
 * Log on to `joplin` via ssh :
-	* If you already have a ssh key, you can get it by looking into `/.ssh/`: the key will either be `id_rsa.pub` or `id_ed25519.pub`. You can display it by doing: `more ~/.ssh/id_*.pub`. Now that you have the public key, copy it.
+	* If you already have a ssh key, you can get it by looking into `~/.ssh/`: the key will either be `id_rsa.pub` or `id_ed25519.pub`. You can display it by doing: `cat ~/.ssh/id_*.pub`. Now that you have the public key, copy it.
  	* If you don't have a public key, generate it by running `ssh-keygen`. Then copy it using the explanation above.
 * In a terminal on your computer (either at NeuroPoly or on a VPN):
 	* Check if you have access to git annex by doing: `ssh git@data.neuro.polymtl.ca info`
