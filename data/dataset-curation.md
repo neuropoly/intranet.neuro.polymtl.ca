@@ -551,12 +551,12 @@ sci-bordeaux
                 └── anat
                     ├── sub-001_acq-sag_T2w_label-SC_seg.nii.gz  # spinal cord (SC) binary segmentation 
                     ├── sub-001_acq-sag_T2w_label-SC_softseg.nii.gz  # spinal cord (SC) soft segmentation
-                    ├── sub-001_acq-sag_T2w_label-discs_dlabel.nii.gz  # discrete discs labeling (SC) soft segmentation
+                    ├── sub-001_acq-sag_T2w_label-discs_dlabel.nii.gz  # discrete discs labeling
                     ├── sub-001_acq-sag_T2w_label-vertebrae_dseg  # vertebrae discrete segmentation (segmented stuctures have different values based on the vertebral levels)
                     ├── sub-001_acq-sag_T2w_label-rootlets_dseg  # nerve rootlets discrete segmentation (segmented stuctures have different values based on the spinal level)
-                    ├── sub-001_acq-sag_T2w_label-compression_label.nii.gz # binary compression labeling (compression levels are located using only binary labels)
-                    ├── sub-001_acq-sag_T2w_label-PMJ_dlabel # single point-wise label of pmj with value 50
-                    └── sub-001_acq-sag_T2w_label-lesion_seg # binary lesion segmentation (the related disease is here SCI base on the name of the dataset)
+                    ├── sub-001_acq-sag_T2w_label-compression_label.nii.gz  # binary compression labeling (compression levels are indicated as a single voxel with a value '1' at the point of compression)
+                    ├── sub-001_acq-sag_T2w_label-PMJ_dlabel  # Pontomedullary junction is indicated as a single voxel with a value '50'
+                    └── sub-001_acq-sag_T2w_label-lesion_seg  # lesion binary segmentation (the associated disease could be SCI, MS, etc. and is indicated in the file participants.tsv)
 
 ```
 
