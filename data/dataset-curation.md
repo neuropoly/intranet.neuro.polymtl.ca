@@ -303,10 +303,11 @@ In this section we decided not to fully follow the BIDS derivatives convention. 
 ```
 
 ```{warning}
-Derivative data obtained using DIFFERENT processes/workflows should be stored using DIFFERENT derivatives folders. Eg:
+Derivative data obtained using different processes/workflows should ideally be stored using different derivatives folders. Eg:
 - `derivatives/labels/`
 - `derivatives/sct_5.6/`
 - `derivatives/fmriprep_2.3/`
+However, to streamline data identification and reduce the need for extensive folder crawling, we [opted](https://github.com/neuropoly/data-management/issues/282) to gather common labels, such as binary segmentation and point-wise labeling, into the same derivative folder called labels.
 ```
 
 ```{note}
@@ -399,6 +400,8 @@ In addition to the subjects folders, derived datasets must include their own `da
     ]
 }
 ```
+
+The field `GeneratedBy` has to be used to name the different functions and processes used to generate the data.
 
 ```{warning}
 The `dataset_description.json` file within the derived dataset should include `"DatasetType": "derivative"`.
