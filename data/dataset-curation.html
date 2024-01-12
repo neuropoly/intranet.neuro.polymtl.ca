@@ -484,7 +484,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#json-sidecars">JSON sidecars</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regions-and-atlases">Regions and atlases</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regions-of-interest-and-atlases">Regions of interest and atlases</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-and-use-cases">Examples and use cases</a></li>
 </ul>
 </li>
@@ -855,7 +855,7 @@ For examples, see <a class="reference external" href="https://github.com/bids-st
 <li><p><code class="docutils literal notranslate"><span class="pre">[res-&lt;label&gt;]</span></code>: for changes in resolution</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[den-&lt;label&gt;]</span></code>: for changes related to density</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">[desc-&lt;label&gt;]</span></code>: should be used to distinguish two files that do not otherwise have a distinguishing entity. (e.g. <code class="docutils literal notranslate"><span class="pre">sub-001_UNIT1_desc-denoised.nii.gz</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[label-&lt;label&gt;]</span></code>: to avoid confusion if multiple masks are available we can specify the masked <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels">structure</a> (i.e. <code class="docutils literal notranslate"><span class="pre">_label-WM</span></code> for white matter, <code class="docutils literal notranslate"><span class="pre">_label-GM</span></code> for gray matter, <code class="docutils literal notranslate"><span class="pre">_label-L</span></code> for lesions etc.)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[label-&lt;label&gt;]</span></code>: to avoid confusion if multiple masks are available we have to specify the masked <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels">structure</a> (i.e. <code class="docutils literal notranslate"><span class="pre">_label-WM</span></code> for white matter, <code class="docutils literal notranslate"><span class="pre">_label-GM</span></code> for gray matter, <code class="docutils literal notranslate"><span class="pre">_label-lesion</span></code> for lesions etc.)</p></li>
 </ul>
 <p>Entities are then separated using underscores <code class="docutils literal notranslate"><span class="pre">_</span></code></p>
 </section>
@@ -1024,8 +1024,8 @@ For examples, see <a class="reference external" href="https://github.com/bids-st
 <p>If the image space is different from the original image, the entity <code class="docutils literal notranslate"><span class="pre">space-&lt;label&gt;</span></code> has to be used. The entity <code class="docutils literal notranslate"><span class="pre">space-template</span></code> may be used for templates and <code class="docutils literal notranslate"><span class="pre">space-other</span></code> for other transformations.</p>
 </div>
 </section>
-<section id="regions-and-atlases">
-<h3>Regions and atlases<a class="headerlink" href="#regions-and-atlases" title="Link to this heading">#</a></h3>
+<section id="regions-of-interest-and-atlases">
+<h3>Regions of interest and atlases<a class="headerlink" href="#regions-of-interest-and-atlases" title="Link to this heading">#</a></h3>
 <p>To be consistent regarding the way anatomical regions will be referred to, please follow this table (based on the BIDS <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels">labels</a>):</p>
 <table class="table">
 <thead>
@@ -1045,6 +1045,18 @@ For examples, see <a class="reference external" href="https://github.com/bids-st
 </tr>
 <tr class="row-odd"><td class="text-center"><p>lesion</p></td>
 <td class="text-center"><p>Lesion (MS, SCI etc.)</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>discs</p></td>
+<td class="text-center"><p>Intervertebral discs</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>vertebrae</p></td>
+<td class="text-center"><p>Vertebrae</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>rootlets</p></td>
+<td class="text-center"><p>Spinal rootlets</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>PMJ</p></td>
+<td class="text-center"><p>Pontomedullary Junction</p></td>
 </tr>
 <tr class="row-even"><td class="text-center"><p>CSF</p></td>
 <td class="text-center"><p>Cerebrospinal Fluid</p></td>
@@ -1069,11 +1081,11 @@ For examples, see <a class="reference external" href="https://github.com/bids-st
 </tr>
 </tbody>
 </table>
-<p>When multiple anatomical regions are present in the image, atlases should be used. When specified, these atlases <strong>SHOULD</strong> be added to a folder <code class="docutils literal notranslate"><span class="pre">atlases/</span></code> at the root of the derivative folder.</p>
+<p>When multiple anatomical regions are present in the image, atlases should be used. When specified, these atlases <strong>SHOULD</strong> be added to a folder <code class="docutils literal notranslate"><span class="pre">atlases/</span></code> at the root of the derivative folder or a URL should be included inside the json sidecars.</p>
 </section>
 <section id="examples-and-use-cases">
 <h3>Examples and use cases<a class="headerlink" href="#examples-and-use-cases" title="Link to this heading">#</a></h3>
-<p>Let’s consider a dataset with one single subject <code class="docutils literal notranslate"><span class="pre">sub-001</span></code>. This dataset comes from a clinical partner who segmented spinal cord injury (SCI) lesions and created point labels for spinal cord (SC) compressions. Based on this dataset, we decide to generate SC segmentations and disc labels. Here is the structure of the final dataset:</p>
+<p>Let’s consider a dataset with one single subject <code class="docutils literal notranslate"><span class="pre">sub-001</span></code>. Here is an example of the structure of the final dataset:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sci-bordeaux
     ├── README.md
     ├── dataset_description.json
@@ -1084,50 +1096,23 @@ For examples, see <a class="reference external" href="https://github.com/bids-st
     │
     ├── sub-001
     │   └── anat
-    │       └──sub-001_acq-sag_T1w.nii.gz
-    │       ├──sub-001_acq-sag_T1w.json
     │       ├──sub-001_acq-sag_T2w.nii.gz
     │       └──sub-001_acq-sag_T2w.json
     │
     └── derivatives
-        ├── labels
-        │   ├── dataset_description.json
-        │   ├── README.md
-        │   └── sub-001
-        │       └── anat
-        │           ├── sub-001_acq-sag_T1w_label-SC_seg.nii.gz  # SC seg binary
-        │           ├── sub-001_acq-sag_T1w_label-SC_softseg.nii.gz  # SC seg soft
-        │           ├── sub-001_acq-sag_T1w_label-vertebrae_dseg  # segmentation of vertebrae discrete (each value refers to the vertebral level)
-        │           ├── sub-001_acq-sag_T1w_label-rootlets_dseg  # segmentation of nerve rootlets discrete (each value refers to the spinal level)
-        │           ├── sub-001_acq-sag_label-SCI_desc-T1w_mask.nii.gz
-        │           ├── sub-001_acq-sag_label-SCI_desc-T1w_mask.nii.gz
-        │           ├── sub-001_acq-sag_label-SCI_desc-T1w_mask.json
-        │           ├── sub-001_acq-sag_label-compression_desc-T1w_blabel.nii.gz
-        │           ├── sub-001_acq-sag_label-compression_desc-T1w_blabel.json
-        │           ├── sub-001_acq-sag_label-SCI_desc-T2w_mask.nii.gz
-        │           ├── sub-001_acq-sag_label-SCI_desc-T2w_mask.json
-        │           ├── sub-001_acq-sag_label-compression_desc-T2w_blabel.nii.gz
-        │           └── sub-001_acq-sag_label-compression_desc-T2w_blabel.json
-        │
-        ├── SC-masks
-        │   ├── dataset_description.json
-        │   ├── README.md
-        │   └── sub-001
-        │           └── anat
-        │               ├── sub-001_acq-sag_label-SC_desc-T1w_mask.nii.gz
-        │               ├── sub-001_acq-sag_label-SC_desc-T1w_mask.json
-        │               ├── sub-001_acq-sag_label-SC_desc-T2w_mask.nii.gz
-        │               └── sub-001_acq-sag_label-SC_desc-T2w_mask.json
-        │
-        └── disc-labels
+        └── labels
             ├── dataset_description.json
             ├── README.md
             └── sub-001
-                    └── anat
-                        ├── sub-001_acq-sag_seg-discs_desc-T1w_dlabel.nii.gz
-                        ├── sub-001_acq-sag_seg-discs_desc-T1w_dlabel.json
-                        ├── sub-001_acq-sag_seg-discs_desc-T2w_dlabel.nii.gz
-                        └── sub-001_acq-sag_seg-discs_desc-T2w_dlabel.json
+                └── anat
+                    ├── sub-001_acq-sag_T2w_label-SC_seg.nii.gz  # spinal cord (SC) binary segmentation 
+                    ├── sub-001_acq-sag_T2w_label-SC_softseg.nii.gz  # spinal cord (SC) soft segmentation
+                    ├── sub-001_acq-sag_T2w_label-discs_dlabel.nii.gz  # discrete discs labeling (SC) soft segmentation
+                    ├── sub-001_acq-sag_T2w_label-vertebrae_dseg  # vertebrae discrete segmentation (segmented stuctures have different values based on the vertebral levels)
+                    ├── sub-001_acq-sag_T2w_label-rootlets_dseg  # nerve rootlets discrete segmentation (segmented stuctures have different values based on the spinal level)
+                    ├── sub-001_acq-sag_T2w_label-compression_label.nii.gz # binary compression labeling (compression levels are located using only binary labels)
+                    ├── sub-001_acq-sag_T2w_label-pmj_dlabel # single point-wise label of pmj with value 50
+                    └── sub-001_acq-sag_T2w_label-lesion_seg # binary lesion segmentation (the related disease is here SCI base on the name of the dataset)
 
 </pre></div>
 </div>
@@ -1230,7 +1215,7 @@ For examples, see <a class="reference external" href="https://github.com/bids-st
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#json-sidecars">JSON sidecars</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regions-and-atlases">Regions and atlases</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regions-of-interest-and-atlases">Regions of interest and atlases</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-and-use-cases">Examples and use cases</a></li>
 </ul>
 </li>
