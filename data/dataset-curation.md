@@ -424,7 +424,25 @@ JSON sidecars are companion files linked to data files. They share the same file
 Therefore, to improve the way we track our data, `.json` sidecars will have to be generated for each data present in derived datasets. Here are few examples of JSON sidecar:
 
 <details>
-<summary>JSON sidecar (ORIGINAL SPACE)</summary>
+<summary>JSON sidecar (Manually created in the ORIGINAL SPACE)</summary>
+    
+```json
+{
+    "SpatialReference": "orig",
+    "GeneratedBy": [
+        {
+            "Name": "Manual",
+            "Author": "Nathan Molinier",
+            "Date": "2023-07-14 13:43:10"
+        }
+    ]
+}
+```
+
+</details>
+
+<details>
+<summary>JSON sidecar (Data automatically created then manually corrected in the ORIGINAL SPACE)</summary>
     
 ```json
 {
@@ -446,7 +464,7 @@ Therefore, to improve the way we track our data, `.json` sidecars will have to b
 </details>
 
 <details>
-<summary>JSON sidecar (RESAMPLED and CROPPED)</summary>
+<summary>JSON sidecar (Data RESAMPLED and CROPPED)</summary>
     
 ```json
 {
@@ -480,7 +498,7 @@ Because the space used for the derived data is different from the original raw d
 </details>
 
 <details>
-<summary>JSON sidecar (PAM50 SPACE)</summary>
+<summary>JSON sidecar (Data moved to the PAM50 SPACE)</summary>
     
 ```json
 {
