@@ -152,7 +152,7 @@ Excellent [recommendations](https://twitter.com/drbreaky/status/1385863882816647
 
 ## Addressing Reviewer Comments
 
-* If using gdoc, create a new 'r1' folder. Duplicate the r0 version of the manuscript inside this folder. 
+* If using gdoc, create a new 'r1' folder. Duplicate the r0 version of the manuscript inside this folder. This new r1 version is modified using 'suggestion' mode to keep track of the modifications. That version has the suffix '_versiontracking'. If a clean version is asked for, also create a version (without any suffix) without any version tracking and comments. That one will be copied for r2.
 * Copy/paste comments in a new file `responses_to_reviews` (see [template](https://docs.google.com/document/d/17e17Ps5k7H_mt_2L32lBYF7Ns0Q5jLva86fSN2ZDpkA)). Address comments point-by-point. Each comment is under: RX.Y (for reviewer X, comment #Y). In the updated manuscript, label each modification with the comment "RX.Y". 
 * For most comments, the manuscript will need to be updated and the modified text copied in the responses. Please **do not** duplicate this text during the review process, because the manuscript might be edited later by another coauthor, and there will be discrepancies between the manuscript and the responses. Therefore, edit the manuscript first, and in the responses, indicate a placeholder with a comment “will be copy/pasted when final version of the manuscript is ready”.
 * Please read these [ten simple rules for writing a response to reviewers](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005730).
