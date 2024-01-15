@@ -307,7 +307,7 @@ Derivative data obtained using different processes/workflows should ideally be s
 - `derivatives/labels/`
 - `derivatives/sct_5.6/`
 - `derivatives/fmriprep_2.3/`
-However, to streamline data identification and reduce the need for extensive folder crawling, we [opted](https://github.com/neuropoly/data-management/issues/282) to gather common labels, such as binary segmentation and point-wise labeling, into the same derivative folder called labels.
+However, to streamline data identification and reduce the need for extensive folder crawling, we [opted](https://github.com/neuropoly/data-management/issues/282) to gather common labels, such as binary segmentation and point-wise labeling, into the same derivative folder called labels. For particular project, having a separe derived folder can still be envisioned.
 ```
 
 ```{note}
