@@ -42,6 +42,8 @@ The example below applies for MRI data:
 │        ├── anat/
 │        │   ├── sub-<label>[_ses-<label>][_acq-<label>][_ce-<label>][_rec-<label>][_run-<index>][_part-<mag|phase|real|imag>]_<suffix>.json
 │        │   └── sub-<label>[_ses-<label>][_acq-<label>][_ce-<label>][_rec-<label>][_run-<index>][_part-<mag|phase|real|imag>]_<suffix>.nii[.gz]
+│        ├── fmap/
+│        ├── fmri/
 │        └── dwi/
 │            ├── sub-<label>[_ses-<label>][_acq-<label>][_rec-<label>][_dir-<label>][_run-<index>][_part-<mag|phase|real|imag>]_dwi.bval
 │            ├── sub-<label>[_ses-<label>][_acq-<label>][_rec-<label>][_dir-<label>][_run-<index>][_part-<mag|phase|real|imag>]_dwi.bvec
@@ -264,54 +266,58 @@ First, it is important to understand what are [BIDS derivatives](https://bids-sp
 
 > Derivatives are outputs of common processing pipelines, capturing data and meta-data sufficient for a researcher to understand and (critically) reuse those outputs in subsequent processing. Standardizing derivatives is motivated by use cases where formalized machine-readable access to processed data enables higher level processing.
 
-Basically, derivative folders are derived datasets generated from a raw dataset. They must include **ONLY** processed data obtained from a specific raw dataset (i.e. segmentations, masks, labels...).
+Derivative folders are derived datasets generated from a raw dataset. They must include **ONLY** processed data obtained from a specific raw dataset (e.g., segmentations, masks, labels).
 
 ```{warning}
 In this section we decided not to fully follow the BIDS derivatives convention. For more information please see our related [issue](https://github.com/neuropoly/data-management/issues/282). 
 ```
 
-```{warning}
+
+### Derivatives structure
+
+According to BIDS, derived datasets could be stored inside a parent folder [`derivatives/`](https://bids-specification.readthedocs.io/en/stable/common-principles.html#storage-of-derived-datasets) _"to make a clear distinction between raw data and results of data processing"_. This folder should also follow the same folder logic as the one used for the `raw` data.
+
 Derivative data obtained using different processes/workflows should ideally be stored using different derivatives folders. Eg:
 - `derivatives/labels/`
 - `derivatives/sct_5.6/`
 - `derivatives/fmriprep_2.3/`
-However, to streamline data identification and reduce the need for extensive folder crawling, we [opted](https://github.com/neuropoly/data-management/issues/282) to gather common labels, such as binary segmentation and point-wise labeling, into the same derivative folder called labels. For particular project, having a separe derived folder can still be envisioned.
-```
 
 ```{note}
-According to BIDS, derived datasets could be stored inside a parent folder [`derivatives/`](https://bids-specification.readthedocs.io/en/stable/common-principles.html#storage-of-derived-datasets) _"to make a clear distinction between raw data and results of data processing"_. This folder should also follow the same folder logic as the one used for the `raw` data.
+Despite what is written above, to streamline data identification and reduce the need for extensive folder crawling, we [opted](https://github.com/neuropoly/data-management/issues/282) for common folder names, such as `labels/`, that typically contains binary segmentation and point-wise labels.
 ```
-
-### Folders structure and filenames
-
-Here, we describe how the `derivative` folder should be organized.
-
-```{note}
-In the guideline below, [brackets] refer to optional items.
-```
-
-#### Derivatives structure
 
 Derived datasets follow the **same structure and hierarchy** as the `raw` dataset, with folders corresponding to subjects, [sessions] and MRI modalities:
 
 ```
-sub-<label>/
-    [ses-<label>/]
-        modality/
-            <source_filename>[_space-<space>][_res-<label>][_den-<label>][_desc-<label>]_<suffix>.<extension>
+├── README
+├── dataset_description.json
+├── participants.tsv
+├── participants.json
+├── code/
+├── sub-<label>/
+└── derivatives/
+    └── <label>                  <-- name of the label derivatives
+        └── sub-<label>/]
+            └── [ses-<label>/]
+                └── modality/   <-- could be 'anat', 'fmap', 'fmri', etc.
+                    └── <source_filename>[_space-<space>][_res-<label>][_den-<label>][_desc-<label>]_<suffix>.<extension>
 ```
-
-Regarding derivatives filenames, we can identify the same 3 type of elements as before (entities, suffixes and extensions) plus 1 extra-consideration related to the raw data:
 
 ```{warning}
 Entities and suffixes are different from those used with the raw filenames and are specific to [data types](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#imaging-data-types).
 ```
 
-#### `<source_filename>`
+```{note}
+Because derived datasets are datasets, files and folders presented in the raw template section could also be included in this dataset (e.g. README, code/, etc.)
+```
+
+
+### `<source_filename>`
 
 This element corresponds to the entire source filename, with the **omission** of the extension. For example, if the source file name is `sub-02_acq-MTon_MTS.nii.gz`, the `<source_filename>` to be used for the derivatives is `sub-02_acq-MTon_MTS`.
 
-#### Derivative entities
+
+### Derivative entities
 
 Characterized by a key word (space, res, den, etc.) and a value (label = an alphanumeric value, index = a nonnegative integer, etc) separated with a dash `-`
 - `[space-<space>]`: image space if different from raw space: template space (e.g. MNI305 etc), orig, other etc. (see [BIDS](https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#spatial-references))
@@ -322,7 +328,8 @@ Characterized by a key word (space, res, den, etc.) and a value (label = an alph
 
 Entities are then separated using underscores `_`
 
-#### Derivative suffixes
+
+### Derivative suffixes
 
 An alphanumeric string located after all the entities following a final underscore `_` :
 
@@ -335,64 +342,45 @@ An alphanumeric string located after all the entities following a final undersco
 |`dlabel`| `label-<label>` | Suffix used for discrete labels representing multiple anatomical structures. The entity is used to specify the atlas used to label the different structures |
 
 ```{warning}
-The corresponding entity `label-<label>` is here mandatory to specify the labeled region !
+Here, the corresponding entity `label-<label>` is mandatory to specify the labeled region.
 ```
 
-#### Derivatives extensions
+
+### Derivatives extensions
 
  Files extensions:
 - `.nii.gz`
 - `.json`
 - etc.
 
-### Derivative template
-
 In addition to the subjects folders, derived datasets must include their own `dataset_description.json` file to track all the processing steps used to create the data. Example:
 
-#### `dataset_description.json`
+
+### `derivatives/labels/dataset_description.json`
     
 ```json
 {
     "BIDSVersion": "1.9.0",
     "Name": "<dataset_name>",
-    "DatasetType": "derivative",
-    "GeneratedBy": [
-        {
-            "Name": "sct_deepseg_sc",
-            "Version": "SCT v6.1"
-        },
-        {
-            "Name": "Manual",
-            "Description": "Manually corrected by Nathan Molinier and Pierre-Louis Benveniste."
-        }
-    ]
+    "DatasetType": "derivative"
 }
 ```
 
-The field `GeneratedBy` has to be used to name the different functions and processes used to generate the data.
 
-```{warning}
-The `dataset_description.json` file within the derived dataset should include `"DatasetType": "derivative"`.
-```
+### `derivatives/labels/descriptions.tsv`
 
-```{note}
-If more details about the processing steps used have to be provided (e.g., reorientation, resampling etc.), a [`descriptions.tsv`](https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#descriptionstsv) file may be added at the root of the folder. This file must contain at least two columns:
+To provide more details about the processing steps (e.g., reorientation, resampling), a [`descriptions.tsv`](https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#descriptionstsv) file may be added at the root of the folder. This file must contain at least two columns:
 - `desc_id`: contains all the labels used with the [desc](https://bids-specification.readthedocs.io/en/stable/appendices/entities.html#desc) entity within the filenames accross the entire dataset.
 - `description`: human readable descriptions
-```
 
-```{note}
-Because derived datasets are datasets, files and folders presented in the raw template section could also be included in this dataset (e.g. README.md, code/, etc.)
-```
 
 ### JSON sidecars
 
 JSON sidecars are companion files linked to data files. They share the same filenames but have a ".json" extension. These files store essential metadata, serving as guidebooks to provide crucial details about the associated data, ensuring organized and comprehensive information.
 
-Therefore, to improve the way we track our data, `.json` sidecars will have to be generated for each data present in derived datasets. Here are few examples of JSON sidecar:
+Therefore, to improve the way we track our data, `.json` sidecars have to be generated for each data present in derived datasets. Here are few examples of JSON sidecar:
 
-<details>
-<summary>JSON sidecar (Manually created in the ORIGINAL SPACE)</summary>
+Below is a JSON sidecar describing a fully-manual labels created in the ORIGINAL SPACE:
     
 ```json
 {
@@ -407,10 +395,7 @@ Therefore, to improve the way we track our data, `.json` sidecars will have to b
 }
 ```
 
-</details>
-
-<details>
-<summary>JSON sidecar (Data automatically created then manually corrected in the ORIGINAL SPACE)</summary>
+If the label was previously produced by an automatic algorithm, append to the `GeneratedBy` section:
     
 ```json
 {
@@ -429,10 +414,7 @@ Therefore, to improve the way we track our data, `.json` sidecars will have to b
 }
 ```
 
-</details>
-
-<details>
-<summary>JSON sidecar (Data RESAMPLED and CROPPED)</summary>
+If the label is created _after_ the data was resampled and cropped, indicate it under `SpatialReference`:
     
 ```json
 {
@@ -459,15 +441,8 @@ Therefore, to improve the way we track our data, `.json` sidecars will have to b
 }
 ```
 
-```{warning}
-Because the space used for the derived data is different from the original raw data, the entity `space-other` **MUST** also be used in the filename.
-```
+Another example of a label created in another space than the image (here: the PAM50 template):
 
-</details>
-
-<details>
-<summary>JSON sidecar (Data moved to the PAM50 SPACE)</summary>
-    
 ```json
 {
     "SpatialReference": "PAM50",
@@ -481,73 +456,70 @@ Because the space used for the derived data is different from the original raw d
 ```
 
 ```{warning}
-Because the space used for the derived data is different from the original raw data, the entity `space-template` or `space-PAM50` **MUST** also be used in the filename.
+For better clarity, if the image space is different between the raw data and the label (as is the case above), the entity `space-other` **MUST** also be used in the filename.
 ```
 
-</details>
 
-```{note}
-If the image space is different from the original image, the entity `space-<label>` has to be used. The entity `space-template` may be used for templates and `space-other` for other transformations.
-```
 
-### Regions of interest and atlases
+### Label names
 
 To be consistent regarding the way anatomical regions will be referred to, please follow this table (based on the BIDS [labels](https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels)):
 
-| Abbreviation (label) | Description |
-| :---: | :---: |
+| label | Description |
+| --- | --- |
 | SC | Spinal Cord |
 | GM | Gray Matter |
 | WM | White Matter |
-| lesion | Lesion (MS, SCI etc.) |
-| discs | Intervertebral discs |
-| vertebrae | Vertebrae |
+| discs | Intervertebral discs, with values following [this convention](https://spinalcordtoolbox.com/user_section/tutorials/vertebral-labeling/labeling-conventions.html) |
+| vertebrae | Vertebrae, with values following [this convention](https://spinalcordtoolbox.com/user_section/tutorials/vertebral-labeling/labeling-conventions.html) |
 | rootlets | Spinal rootlets |
-| PMJ | Pontomedullary Junction |
+| PMJ | Pontomedullary Junction, indicated as a single voxel with a value '50' |
 | CSF | Cerebrospinal Fluid |
-| compression | Spinal Cord Compression |
+| compression | Spinal Cord Compression, indicated as a single voxel with a value '1' at the point of compression. There can be more than one compression. |
+| lesion | Lesion (e.g., multiple sclerosis plaques, spinal cord injury lesions). The pathology associated with the lesion is indicated in the file `participants.tsv` |
 | tumor | Tumor |
 | edema | Edema |
 | cavity | Cavity |
-| axon | Axon |
-| myelin | Myelin |
+| axon | Axon (used in microscopy datasets) |
+| myelin | Myelin (used in microscopy datasets) |
 
 When multiple anatomical regions are present in the image, atlases should be used. When specified, these atlases **SHOULD** be added to a folder `atlases/` at the root of the derivative folder or a URL should be included inside the json sidecars.
 
+
 ### Examples and use cases
 
-Let's consider a dataset with one single subject `sub-001`. Here is an example of the structure of the final dataset:
+Here is an example of a dataset structure with a single subject `sub-001`:
 
 ```
 sci-bordeaux
-    ├── README.md
-    ├── dataset_description.json
-    ├── participants.tsv
-    ├── participants.json
-    ├── code/
-    │   └── curate.py
-    │
-    ├── sub-001
-    │   └── anat
-    │       ├──sub-001_acq-sag_T2w.nii.gz
-    │       └──sub-001_acq-sag_T2w.json
-    │
-    └── derivatives
-        └── labels
-            ├── dataset_description.json
-            ├── README.md
-            └── sub-001
-                └── anat
-                    ├── sub-001_acq-sag_T2w_label-SC_seg.nii.gz  # spinal cord (SC) binary segmentation 
-                    ├── sub-001_acq-sag_T2w_label-SC_softseg.nii.gz  # spinal cord (SC) soft segmentation
-                    ├── sub-001_acq-sag_T2w_label-discs_dlabel.nii.gz  # discrete discs labeling using the following convention: https://spinalcordtoolbox.com/user_section/tutorials/vertebral-labeling/labeling-conventions.html
-                    ├── sub-001_acq-sag_T2w_label-vertebrae_dseg  # vertebrae discrete segmentation (segmented stuctures have different values based on the vertebral levels)
-                    ├── sub-001_acq-sag_T2w_label-rootlets_dseg  # nerve rootlets discrete segmentation (segmented stuctures have different values based on the spinal level)
-                    ├── sub-001_acq-sag_T2w_label-compression_label.nii.gz  # binary compression labeling (compression levels are indicated as a single voxel with a value '1' at the point of compression)
-                    ├── sub-001_acq-sag_T2w_label-PMJ_dlabel  # Pontomedullary junction is indicated as a single voxel with a value '50'
-                    └── sub-001_acq-sag_T2w_label-lesion_seg  # lesion binary segmentation (the associated disease could be SCI, MS, etc. and is indicated in the file participants.tsv)
-
+├── README
+├── dataset_description.json
+├── participants.tsv
+├── participants.json
+├── code/
+│   └── curate.py
+│
+├── sub-001
+│   └── anat
+│       ├──sub-001_acq-sag_T2w.nii.gz
+│       └──sub-001_acq-sag_T2w.json
+│
+└── derivatives
+    └── labels
+        ├── dataset_description.json
+        ├── README
+        └── sub-001
+            └── anat
+                ├── sub-001_acq-sag_T2w_label-SC_seg.nii.gz  # spinal cord (SC) binary segmentation 
+                ├── sub-001_acq-sag_T2w_label-SC_softseg.nii.gz  # spinal cord (SC) soft segmentation
+                ├── sub-001_acq-sag_T2w_label-discs_dlabel.nii.gz  # discrete discs labeling
+                ├── sub-001_acq-sag_T2w_label-vertebrae_dseg  # vertebrae discrete segmentation (segmented stuctures have different values based on the vertebral levels)
+                ├── sub-001_acq-sag_T2w_label-rootlets_dseg  # nerve rootlets discrete segmentation
+                ├── sub-001_acq-sag_T2w_label-compression_label.nii.gz  # binary compression labeling
+                ├── sub-001_acq-sag_T2w_label-PMJ_dlabel  # Pontomedullary junction, indicated as a single voxel with a value '50'
+                └── sub-001_acq-sag_T2w_label-lesion_seg  # lesion binary segmentation
 ```
+
 
 ## Changelog policy
 
