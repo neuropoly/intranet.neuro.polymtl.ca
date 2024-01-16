@@ -2,48 +2,60 @@
 
 ## Converting data to BIDS
 
-All git-annex datasets should be BIDS-compliant. For more information about the BIDS standard, please visit [http://bids.neuroimaging.io](http://bids.neuroimaging.io). 
+All git-annex datasets should be BIDS-compliant. For more information about the BIDS standard, please visit [http://bids.neuroimaging.io](http://bids.neuroimaging.io). For some examples of BIDS datasets, visit [this page](https://github.com/bids-standard/bids-examples). A quick way to verify compliance with the convention is this [online BIDS validator](https://bids-standard.github.io/bids-validator/).
 
-When you receive data from an external collaborator, you can save them under a temporary location: `duke/temp`.
+When you receive raw data from an external collaborator, save them under a temporary location on one of NeuroPoly's server, e.g.: `duke/temp`.
 
 Then, inspect the data and convert them to BIDS. It is recommended to write a script that does the conversion. The 
 script should then be saved under the `code` folder of the final dataset. Some previous scripts can be found on 
 [GitHub](https://github.com/neuropoly/data-management/tree/master/scripts) or under the `code` folder of already existing datasets.
 
-Once the data are converted to BIDS and [uploaded](git-datasets.md#upload) to git-annex repository, delete the temporary folder to save space.
+```{important}
+Once the data are converted to BIDS and [uploaded](git-datasets.md#upload) to git-annex repository, please delete the temporary folder.
+```
 
 ## Building the `raw` dataset
 
-> [Brackets] are characterizing optional informations
-
-The `raw` dataset corresponds to the core dataset that contains all the different acquisition generated for one or several subjects. **NO** postprocessing steps should be applied to these acquisitions.
-
-### Folders structure and filenames
+The `raw` dataset corresponds to the core dataset that contains all the different acquisitions generated for one or several subjects. **NO** postprocessing steps should be applied to these acquisitions.
 
 Subjects folders in the `raw` dataset are structured as follows for MRI, with folders corresponding to subjects, [sessions] and MRI modalities:
 
-#### Raw structure
+### Raw structure
+
+Useful BIDS specifications are:
+- [File naming conventions](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#filesystem-structure), 
+- [Modality-agnostic conventions](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#code),
+- [MRI-specific conventions](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html),
+- [Microscopy-specific conventions](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html)
+
+The example below applies for MRI data:
 
 ```
-sub-<label>/
-    [ses-<label>/]
-        anat/
-            sub-<label>[_ses-<label>][_acq-<label>][_ce-<label>][_rec-<label>][_run-<index>][_part-<mag|phase|real|imag>]_<suffix>.json
-            sub-<label>[_ses-<label>][_acq-<label>][_ce-<label>][_rec-<label>][_run-<index>][_part-<mag|phase|real|imag>]_<suffix>.nii[.gz]
-        dwi/
-            sub-<label>[_ses-<label>][_acq-<label>][_rec-<label>][_dir-<label>][_run-<index>][_part-<mag|phase|real|imag>]_dwi.bval
-            sub-<label>[_ses-<label>][_acq-<label>][_rec-<label>][_dir-<label>][_run-<index>][_part-<mag|phase|real|imag>]_dwi.bvec
-            sub-<label>[_ses-<label>][_acq-<label>][_rec-<label>][_dir-<label>][_run-<index>][_part-<mag|phase|real|imag>]_dwi.json
-            sub-<label>[_ses-<label>][_acq-<label>][_rec-<label>][_dir-<label>][_run-<index>][_part-<mag|phase|real|imag>]_dwi.nii[.gz]
+├── README
+├── dataset_description.json
+├── participants.tsv
+├── participants.json
+├── code/
+│   └── curate.py
+├── sub-<label>/
+│   └── [ses-<label>/]
+│        ├── anat/
+│        │   ├── sub-<label>[_ses-<label>][_acq-<label>][_ce-<label>][_rec-<label>][_run-<index>][_part-<mag|phase|real|imag>]_<suffix>.json
+│        │   └── sub-<label>[_ses-<label>][_acq-<label>][_ce-<label>][_rec-<label>][_run-<index>][_part-<mag|phase|real|imag>]_<suffix>.nii[.gz]
+│        └── dwi/
+│            ├── sub-<label>[_ses-<label>][_acq-<label>][_rec-<label>][_dir-<label>][_run-<index>][_part-<mag|phase|real|imag>]_dwi.bval
+│            ├── sub-<label>[_ses-<label>][_acq-<label>][_rec-<label>][_dir-<label>][_run-<index>][_part-<mag|phase|real|imag>]_dwi.bvec
+│            ├── sub-<label>[_ses-<label>][_acq-<label>][_rec-<label>][_dir-<label>][_run-<index>][_part-<mag|phase|real|imag>]_dwi.json
+│            └── sub-<label>[_ses-<label>][_acq-<label>][_rec-<label>][_dir-<label>][_run-<index>][_part-<mag|phase|real|imag>]_dwi.nii[.gz]
 ```
 
 ```{note}
-Data collected from actual subjects goes under their specific sub-folder
+[Brackets] are characterizing optional informations
 ```
 
-#### Subject naming convention
+### Subject naming convention
 
-**Basic convention**: sub-XXX
+**Basic convention**: `sub-XXX`
 
 Example:
 
@@ -52,7 +64,7 @@ sub-001
 sub-002
 ```
 
-**Multi-institution/Multi-pathology convention**: sub-\<site>\<pathology>XXX
+**Multi-institution/Multi-pathology convention**: `sub-\<site>\<pathology>XXX`
 
 Example of Multi-institution dataset:
 
@@ -71,10 +83,8 @@ sub-torHC001       # tor stands for Toronto and HC stands for Healthy Controls
 sub-zurSCI001      # zur stands for Zurich and SCI stands for Spinal Cord Injury
 ```
 
-Regarding BIDS filenames, they are constructed using 3 types of elements:
 
-
-#### Raw entities
+### Raw entities
 
 Characterized by a key word (sub, ses, acq, etc.) and a value (label = an alphanumeric value, index = a nonnegative integer, etc) separated with a dash `-`
 - `sub-<label>`
@@ -98,7 +108,7 @@ Examples of special cases below:
 If you to combine several above mentioned tags, use camelCase. For example, `sub-001_acq-cspineSag_T1w.nii.gz`.
 ```
 
-#### Raw suffixes
+### Raw suffixes
 
 An alphanumeric string located after all the entities following a final underscore `_` (i.e. the `<suffix>`). This suffix corresponds for MRI to the MRI contrast:
 - `T1w`
@@ -109,7 +119,7 @@ An alphanumeric string located after all the entities following a final undersco
 Only **ONE** suffix can be used within the filename.
 
 
-#### Raw extensions
+### Raw extensions
 
  Files extensions:
 - `.nii.gz`
@@ -117,32 +127,8 @@ Only **ONE** suffix can be used within the filename.
 - `.bval`
 - etc.
 
-#### Other modalities
 
-Many kinds of data have a place specified for them by BIDS. See [file naming conventions](https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#filesystem-structure) and the [MRI](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html) and [Microscopy](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html) extensions for full details.
-
-
-### Raw template
-
-⚠️ In addition to the subjects folders, every `raw` dataset must include the following files: 
-
-```
-├── README
-├── dataset_description.json
-├── participants.tsv
-├── participants.json
-├── code/
-│   └── curate.py
-├── sub-XXX
-│   └── anat
-│       └──sub-XXX_T1w.nii.gz
- ...
-```
-
-For details, see [BIDS specification](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#code).
-For examples, see [BIDS examples](https://github.com/bids-standard/bids-examples).
-
-#### `README`
+### `README`
 
 The [`README`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#readme) is a [markdown](https://markdown-guide.readthedocs.io/en/latest/index.html) file describing the dataset in more detail.
 
@@ -165,7 +151,7 @@ Dataset shared by: <NAME AND EMAIL>
 <LIST HERE MISSING SUBJECTS>
 ```
 
-#### `dataset_description.json`
+### `dataset_description.json`
 
 The [`dataset_description.json`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#dataset_descriptionjson) is a JSON file describing the dataset.
 
@@ -182,26 +168,12 @@ Please use the `dataset_description.json` template below:
 ```{note}
 Refer to the [BIDS spec](https://bids-specification.readthedocs.io/) to know what version to fill in here.
 ```
-    
- ```{warning}
-The `dataset_description.json` file within the top-level dataset should include `"DatasetType": "raw"`.
- ```
 
 
-#### `participants.tsv`
+### `participants.tsv`
 
-The [`participants.tsv`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file) is a TSV file and should include at least the following columns:
+The [`participants.tsv`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file) is a Tab-separated value file that lists all subjects in the dataset with useful metadata. Please start off from the example below:
 
-| participant_id | source_id | species | age | sex | pathology  | institution |
-| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
-| sub-001 | 001 | homo sapiens | 30 | F | HC | montreal |
-| sub-002 | 005 | homo sapiens | 40 | O | MS | montreal |
-| sub-003 | 007 | homo sapiens  | n/a | n/a | MS | toronto |
-
-Authorized values for `pathology` are listed under [`participants.json`](#participantsjson).
-
-Please use the `participants.tsv` template below:
-    
 ```
 participant_id	source_id	species	age	sex	pathology	institution
 sub-001	001	homo sapiens	30	F	HC	montreal
@@ -209,18 +181,14 @@ sub-002	005	homo sapiens	40	O	MS	montreal
 sub-003	007	homo sapiens	n/a	n/a	MS	toronto
 ```
 
-Other columns may be added if the data exists to fill them and it would be useful to keep.
-
-```{warning}
-Indicate missing values with `n/a` (for "not available"), not by empty cells!
-```
-
-```{warning}
-This is a Tab-Separated-Values file. Make sure to use tabs between entries if editing with a text editor. Most spreadsheet software can read and write .tsv correctly.
-```
+Additional notes:
+- Authorized values for `pathology` are listed under [`participants.json`](#participantsjson).
+- Indicate missing values with `n/a` (for "not available"), not by empty cells!
+- In the example above, the apparent mismatch between 'pathology' and the values is caused by the tabs
+- Other columns can be added if the metadata are relevant
 
 
-#### `participants.json`
+### `participants.json`
 
 The [`participants.json`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file) is a JSON file providing a legend for the columns in `participants.tsv`, with longer descriptions, units, and in the case of categorical variables, allowed levels. Please use the template below:
 
@@ -273,7 +241,7 @@ The [`participants.json`](https://bids-specification.readthedocs.io/en/stable/03
 }
 ```
 
-#### `code/`
+### `code/`
 
 The data cleaning and curation script(s) that create the `sub-XXX/` folders should be kept with them, under the [`code/`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#code) folder. Within reason, every dataset should have a script that when run like
 
@@ -286,7 +254,7 @@ unpacks, converts and renames all the images and related files in `path/to/sourc
 This program should be committed first, before the curated data it produces. Afterwards, every commit that modifies the code should also re-run it, and the code and re-curated data should be committed in tandem.
 
 ```{note}
-Analysis scripts should not be kept here. Keep them in separate repositories, usually in public on GitHub, with instructions about. See [PIPELINE-DOC](TODO-PIPELINE-DOC).
+Analysis scripts should not be kept here. Keep them in separate repositories, usually in public on GitHub, with instructions about.
 ```
 
 
