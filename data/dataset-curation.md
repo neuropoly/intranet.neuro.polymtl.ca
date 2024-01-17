@@ -296,10 +296,10 @@ Derived datasets follow the **same structure and hierarchy** as the `raw` datase
 ├── code/
 ├── sub-<label>/
 └── derivatives/
-    └── <label>                  <-- name of the label derivatives
+    └── <label>  <-- name of the derivative folder
         └── sub-<label>/]
             └── [ses-<label>/]
-                └── modality/   <-- could be 'anat', 'fmap', 'fmri', etc.
+                └── modality/  <-- could be 'anat', 'fmap', 'fmri', etc.
                     └── <source_filename>[_space-<space>][_res-<label>][_den-<label>][_desc-<label>]_<suffix>.<extension>
 ```
 
