@@ -441,7 +441,7 @@ If the label is created _after_ the data was resampled and cropped, indicate it 
 }
 ```
 
-Another example of a label created in another space than the image (here: the PAM50 template):
+Another example of a label created in another space than the image (here: the PAM50 template space):
 
 ```json
 {
@@ -456,7 +456,7 @@ Another example of a label created in another space than the image (here: the PA
 ```
 
 ```{warning}
-For better clarity, if the image space is different between the raw data and the label (as is the case above), the entity `space-other` **MUST** also be used in the filename.
+For better clarity, if the image space is different between the raw data and the label (as is the case above), the entity `space-other` **MUST** also be used in the filename. For templates, the entity `space-template` or `space-<template_name>` (e.g. `space-PAM50`) may be used instead.
 ```
 
 

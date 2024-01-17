@@ -918,7 +918,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Another example of a label created in another space than the image (here: the PAM50 template):</p>
+<p>Another example of a label created in another space than the image (here: the PAM50 template space):</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;SpatialReference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PAM50&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -932,7 +932,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>For better clarity, if the image space is different between the raw data and the label (as is the case above), the entity <code class="docutils literal notranslate"><span class="pre">space-other</span></code> <strong>MUST</strong> also be used in the filename.</p>
+<p>For better clarity, if the image space is different between the raw data and the label (as is the case above), the entity <code class="docutils literal notranslate"><span class="pre">space-other</span></code> <strong>MUST</strong> also be used in the filename. For templates, the entity <code class="docutils literal notranslate"><span class="pre">space-template</span></code> or <code class="docutils literal notranslate"><span class="pre">space-&lt;template_name&gt;</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">space-PAM50</span></code>) may be used instead.</p>
 </div>
 </section>
 <section id="label-names">
