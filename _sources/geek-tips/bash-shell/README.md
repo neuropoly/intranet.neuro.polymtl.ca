@@ -10,6 +10,7 @@ script
 * [SHELL tutorials](https://swcarpentry.github.io/shell-novice/)
 * [Bash scripting cheatsheet](https://devhints.io/bash)
 * [explainshell.com: Comprehensive help for SHELL commands](https://explainshell.com/)
+* [Unix for Neuroimagers YouTube tutorial](https://www.youtube.com/playlist?list=PLIQIswOrUH69xOiblvvEz5KBwWaNRMEUp)
 
 ## HDD parameters
 
