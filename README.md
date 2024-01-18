@@ -1,7 +1,7 @@
 # <span>⚗️</span> Lab Manual
 
 ```{toctree}
-:caption: Ressources
+:caption: Resources
 :hidden:
 onboarding/README
 agenda-and-calendar
