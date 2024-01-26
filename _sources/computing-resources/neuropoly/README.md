@@ -6,19 +6,17 @@ cpus
 gpus
 ```
 
-## Poly-Grames
+## GE
 
-### Poly-Grames Network Account
+A [**GE**](https://www.ge.polymtl.ca/compte-informatique/) network account is required to have access to internal computational resources.
 
-A **Poly-Grames** network account is required to have access to various computation resources available in the laboratory.
-
-In order to request a **Poly-Grames** network account you need to have your Polytechnique ID number, which you get during your [onboarding](https://github.com/neuropoly/onboarding/issues).
+You will receive a GE account during your [onboarding](https://github.com/neuropoly/onboarding/issues).
 
 
 ```{note}
 If you want to find out who is behind u/pXXXXXX Grames account, type this:
 ~~~
-getent passwd <GRAMES_ACCOUNT>
+getent passwd <ID>
 ~~~
 To list all lab members:
 ~~~
@@ -32,27 +30,11 @@ getent group neuropoly | cut -f 4 -d : | tr , '\n' | xargs -n1 getent passwd | l
 Once in a while, you are requested to change your password. To do so, log onto another machine (eg `bireli`, `joplin`) and use the command `passwd` to change your password. 
 ```
 
+### Groups
 
-### Home folder
+The list of permissions for shared folders on `duke` are available [here](https://docs.google.com/document/d/1ZJUUBpiZPl0wxFsUPxkkR6vXZgfSAd3YBK5vlIpf_aA/edit).
 
-Every [GRAMES](#poly-grames) account has a school-wide personal home folder. It is backed-up nightly.
-
-::::{tab-set}
-:::{tab-item} macOS
-1. Open Finder
-2. CMD+K
-3. for students:
-   1. `smb://hvclusterfs.grames.polymtl.ca/usagers/etudiants/USERNAME`
-4. for personnel:
-   1. `smb://hvclusterfs.grames.polymtl.ca/usagers/personnels/USERNAME`
-:::
-::::
-
-### Poly-Grames Groups
-
-The list permissions for shared folders on `duke` are available [here](https://docs.google.com/document/d/1ZJUUBpiZPl0wxFsUPxkkR6vXZgfSAd3YBK5vlIpf_aA/edit).
-
-### Connect to Poly-Grames Server
+### Connect to Windows Servers
 
 Use Microsoft Remote Desktop Connection on creer51, creer52, creer53.
 
@@ -87,7 +69,7 @@ brew install openconnect
 
 Open your Keychain program and click '+' to add a new item:
 - Name: `poly-vpn`
-- Account: your `YOUR_CAS_USERNAME` (corresponds to your GRAMES username)
+- Account: your `YOUR_CAS_USERNAME`
 - Password: enter your password here.
 
 Note: the new item has to be added as an `application password` to your `login` Keychain (i.e., not to your `iCloud` Keychain).
@@ -157,7 +139,7 @@ In case the above links ever break, the steps are:
 
 ### Locally
 
-To log into a local station at NeuroPoly use your GRAMES account.
+To log into a desktop station while at NeuroPoly use your GE account.
 
 ### SSH (command line)
 
@@ -168,7 +150,7 @@ If working off-campus, start your [VPN](#vpn) first.
 Connect via ssh using the `STATION` you want:
 
 ```bash
- ssh <POLYGRAMES_USERNAME>@<STATION>.neuro.polymtl.ca
+ ssh <GE_USERNAME>@<STATION>.neuro.polymtl.ca
 ```
 
 ```{note}
@@ -183,7 +165,7 @@ Match Host abbey,betty,bireli,coltrane,davis,django,ella,ferguson,jarrett,joplin
 HostName %h.neuro.polymtl.ca
 
 Match host *.neuro.polymtl.ca
-User <POLYGRAMES USERNAME> # fill in your username and remove this comment
+User <GE USERNAME> # fill in your username and remove this comment
 # passwords are required to access /mnt/duke: https://github.com/neuropoly/computers/issues/90:
 PreferredAuthentications password
 EOF
@@ -242,7 +224,7 @@ If you use `~` or nothing (as shown) after the `:`, the connection will be relat
 sshfs <USERNAME>@<STATION>:~/project1/ cluster_folder
 ```
 
-will attach the remote `/home/GRAMES.POLYMTL.CA/$USER/project1/` to the local `./cluster_folder`, and
+will attach the remote `/home/ge.polymtl.ca/$USER/project1/` to the local `./cluster_folder`, and
 
 ```
 sshfs <USERNAME>@<STATION>:project1/ cluster_folder
@@ -375,7 +357,7 @@ _For system administrators_: Please log all the changes on the station by updati
 | **VNC**      | [NeuroPoly Internal Document: Bireli TeamViewer Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.zc65h9q5641z) |
 
 * Add event to the computer calendar
-* Use your **Poly-Grames** account to connect on the machine
+* Use your **GE** account to connect on the machine
 * [How to use GPU Clusters at NeuroPoly](https://intranet.neuro.polymtl.ca/computing-resources/computing-resources-neuropoly/gpus)
 
 ### joplin
@@ -387,14 +369,7 @@ _For system administrators_: Please log all the changes on the station by updati
 | **Hostname** |                |
 | **VNC**      |                |
 
-The server is bound to the GRAMES domain.
-
-Connect to the server via ssh using the **Poly-Grames** account.
-
-To access the sct_testing_management development webpage use the username: sct_test_user; passwd: management.
-
-For fast I/O, use the NVMe hard drive, which is automatically mounted on your home at: `~/data_nvme_XXX` (XXX being your GRAMES matricule). If there is no more space on this disk, use `/mnt/extrassd1/`.
-
+The server is bound to the GRAMES which is linked to the GE domain.
 
 ### abbey
 
@@ -469,7 +444,7 @@ For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.
 | **Model** | PC, NVIDIA RTX A6000 (1x) |
 | **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
 | **Hostname**    | `peterson.grames.polymtl.ca` |
-| **Credentials** | <GRAMES_USERNAME>/<GRAMES_PASSWORD> |
+| **Credentials** | <GE_USERNAME>/<GE_PASSWORD> |
 
 
 ### node006 (Poly-Grames)
@@ -480,7 +455,7 @@ For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.
 | **Model** | PC, NVIDIA Tesla V100S-PCIE-32GB (1x) |
 | **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
 | **Hostname**    | `node006.grames.polymtl.ca` |
-| **Credentials** | <GRAMES_USERNAME>/<GRAMES_PASSWORD> |
+| **Credentials** | <GE_USERNAME>/<GE_PASSWORD> |
 
 
 ### node007 (Poly-Grames)
