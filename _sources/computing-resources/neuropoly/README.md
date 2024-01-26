@@ -12,18 +12,6 @@ A [**GE**](https://www.ge.polymtl.ca/compte-informatique/) network account is re
 
 You will receive a GE account during your [onboarding](https://github.com/neuropoly/onboarding/issues).
 
-
-```{note}
-If you want to find out who is behind u/pXXXXXX Grames account, type this:
-~~~
-getent passwd <ID>
-~~~
-To list all lab members:
-~~~
-getent group neuropoly | cut -f 4 -d : | tr , '\n' | xargs -n1 getent passwd | less
-~~~
-```
-
 ### Password
 
 ```{important}
