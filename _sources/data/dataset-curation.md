@@ -43,7 +43,7 @@ The example below applies for MRI data:
 │        │   ├── sub-<label>[_ses-<label>][_acq-<label>][_ce-<label>][_rec-<label>][_run-<index>][_part-<mag|phase|real|imag>]_<suffix>.json
 │        │   └── sub-<label>[_ses-<label>][_acq-<label>][_ce-<label>][_rec-<label>][_run-<index>][_part-<mag|phase|real|imag>]_<suffix>.nii[.gz]
 │        ├── fmap/
-│        ├── fmri/
+│        ├── func/
 │        └── dwi/
 │            ├── sub-<label>[_ses-<label>][_acq-<label>][_rec-<label>][_dir-<label>][_run-<index>][_part-<mag|phase|real|imag>]_dwi.bval
 │            ├── sub-<label>[_ses-<label>][_acq-<label>][_rec-<label>][_dir-<label>][_run-<index>][_part-<mag|phase|real|imag>]_dwi.bvec
@@ -299,7 +299,7 @@ Derived datasets follow the **same structure and hierarchy** as the `raw` datase
     └── <label>  <-- name of the derivative folder
         └── sub-<label>/]
             └── [ses-<label>/]
-                └── modality/  <-- could be 'anat', 'fmap', 'fmri', etc.
+                └── data type/  <-- could be 'anat', 'fmap', 'func', etc.
                     └── <source_filename>[_space-<space>][_res-<label>][_den-<label>][_desc-<label>]_<suffix>.<extension>
 ```
 
