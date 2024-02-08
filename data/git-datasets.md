@@ -5,59 +5,77 @@ This server includes private MRI and microscopy datasets, which have been curate
 `git+ssh://data.neuro.polymtl.ca` has a max size of ~1TB.
 
 It hosts [BIDS](https://bids-specification.readthedocs.io) datasets, version-controlled using [`git-annex`](https://git-annex.branchable.com/).
-It is locked behind a [VPN](../computing-resources/neuropoly/README.md#vpn) because much of our data is under medical ethics protections, and needs to be kept off the general internet.
-
+It is locked behind a [VPN](../computing-resources/neuropoly/README.md#vpn) because much of our data is under medical ethics protections, and needs to be kept behind the Polytechnique firewall.
 
 Initial setup
 -------------
 
-### Prerequisites
-
-0. You must have a \*nix OS with `git-annex>=8` installed. See [`git-annex` installation](../geek-tips/git-annex.md#installation).
-2. Make sure you have an ssh key.
-    * If not, run `ssh-keygen -t ed25519 -C your.name@polymtl.ca`. Your keys will be in the hidden folder `~/.ssh/`.
-
 ### Getting an account
 
 ```{note}
-If you already have an account on a server and/or laptop, and you want to have access from a new machine, see the section on [adding extra devices](#add-extra-devices) instead.
+If you already have an account, see the section on [adding extra devices](#add-extra-devices) instead.
 ```
 
-If not already done, reopen your [onboarding ticket](https://github.com/neuropoly/onboarding/issues/) to request to be added to the git-annex by providing the contents of your **public key** (examples: `~/.ssh/id_rsa.pub`, `~/.ssh/id_ed25519.pub`).
+You should only access this server from within the Polytechnique firewall. That means logging in at the [desktop in the lab](../computing-resources/neuropoly/README.md#list-of-computers-at-neuropoly) or [sshing to the station in the server room](../computing-resources/neuropoly/README.md#ssh-command-line) that plan to work from. 
 
-A **public key** should look like
-
-```
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDE+b5vj+WvS5l6j56NF/leMpC2xT7JUCMUWDAqvWoVmNZ7UR3dGXQeTPTlmPmxPGD2Hk9/zFzxO2kYOt9o4lHQ0QQSKLUmTyuieyJE26wL1ZiLilmTgvgMxxkxvInF/Vr78V5Ll72zAmXzUxVSvuDGY2GRjnLreYheiqg1F3xTuD68uWInX8ZwA7NDtKpoZ7Aat063vD79WBrtiCfvAMbM8QhC3294zxqAjjy9fxs+TMTqAxtKdaWCA/eCs7sx9uvtFcj2Q9jxCMB3br5HyPLotgJMoIMt+fywj+vQG907LODRcqm9J0+ih+38/3Y6aqECMkHA9WWIfFywwjeA7EGr your.name@polymtl.ca
-```
-
-or
+Check for a usable ssh key on your chosen machine with `cat ~/.ssh/id_*.pub` just in case you have set one up already for another reason; if it comes up blank like
 
 ```
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJwsjlem+acuTOZGyNQKjyI7kJe9ULkhZo7N04QfC/tA your.name@polymtl.ca
+yourname@marsalis:~$ cat ~/.ssh/id_*.pub
+yourname@marsalis:~$
 ```
 
-Current **server admins** are:
+generate a key with:
 
-* mathieu.guay-paquet@polymtl.ca
-* mathieu.boudreau@polymtl.ca
-* nathan.gorvett@polymtl.ca
-* nick.guenther@polymtl.ca
-* joshua.newton@polymtl.ca
-* jcohen@polymtl.ca
-* eva.alonso-ortiz@polymtl.ca
+```
+ssh-keygen -t ed25519 -C your.name@polymtl.ca  # EDIT your.name to match your actual email address
+```
 
-The admins should follow [Admin Guide > Add Users](#add-users) to create your account.
+You will be prompted for a path to save to -- press enter to accept the default -- and for a passphrase that adds a layer of protection against anyone breaking into your account -- enter a **strong password** here, and *save it to your password manager*.
 
-### Connecting to `data.neuro.polymtl.ca`
+<details><summary>For example:</summary>
+	
+```
+yourname@joplin:~$ ssh-keygen -t ed25519 -C your.name@polymtl.ca
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/yourname/.ssh/id_ed25519): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/yourname/.ssh/id_ed25519
+Your public key has been saved in /home/yourname/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:ACFOJqCClthWMaksgJy4sLSUTBW3cQEQmdAjtk+2ijE your.name@polymtl.ca
+The key's randomart image is:
++--[ED25519 256]--+
+|XoX=%B.o.        |
+|O/.Boo+          |
+|@*B....          |
+|*+oo   .         |
+| .+ .   S        |
+|E  o             |
+|.o.              |
+|..               |
+|                 |
++----[SHA256]-----+
 
-Because this server contains private medical data, you need to be on campus, connected to the VPN, or working from a server on campus, like `joplin` or `rosenberg` to access it.
+```
 
-*If connecting from off-campus*, connect to [polyvpn](http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn).
+</details>
 
-> 🏚️ Verify connectivity by running `ping data.neuro.polymtl.ca`. If **you cannot ping** then you need to double-check your VPN connection; make sure it is connected, make sure you can reach `joplin`, and if it still isn't working *ask the [Poly network admins](mailto:dge.informatique@polymtl.ca)* to unblock your account from this server.
+When you have your key, copy the `.pub` part out by
 
-Verify you can use the server by running `ssh git@data.neuro.polymtl.ca help`. If it hangs, triple-check again your VPN. If it asks for `git@data.neuro.polymtl.ca's password`, double-check that `ls -la ~/.ssh` shows permissions of `drwx------` for the `.` folder, and that the files `id_ed25519` and `id_ed25519.pub` (or `id_rsa` and `id_rsa.pub`) exist with exactly those names. A successful connection looks like:
+```
+yourname@marsalis:~$ cat ~/.ssh/id_*.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBflJjOyQjGAvsrmeP6tgsQU4kdRfE+fVwPaC9G4n8PD your.name@polymtl.ca
+```
+
+and copying the entire line, making sure that it starts "ssh-" (ideally "ssh-ed25519" but "ssh-rsa" is also possible) and ending with your email address.
+
+Find your [onboarding ticket](https://github.com/neuropoly/onboarding/issues/) and paste your key in there, with a request to be added to the git server. Your assigned onboarding lead will follow [Admin Guide > Add Users](#add-users) to create your account.
+
+### Connecting
+
+Once your account is created, verify you can use the server by running `ssh git@data.neuro.polymtl.ca help`. A successful connection looks like:
 
 ```
 $ ssh git@data.neuro.polymtl.ca help
@@ -80,10 +98,6 @@ list of remote commands available:
 
 Usage
 -----
-
-During daily usage, you will need to be [*on the polyvpn network*](../computing-resources/neuropoly/README.md#vpn) to access the server.
-
-You should also make sure to [configure git annex](../geek-tips/git-annex.md#global-git-config) for the best performance.
 
 ### List
 
@@ -396,6 +410,27 @@ Once added, you should be able to see the newly added key by running:
 ```
 ssh git@data.neuro.polymtl.ca keys list
 ```
+
+
+```{warning}
+It is possible to install all the necessary tools on a laptop and grant it access by yourself but you should avoid this to protect the data protection agreements that surround these data.
+
+For graphical work with these datasets, prefer connecting over [RDP](../computing-resources/neuropoly/README.html#rdp-graphical-interface) or [SSH](../computing-resources/neuropoly/README.html#ssh-graphical-interface) to an on-campus station.
+```
+
+### Troubleshooting
+
+Current **server admins** are:
+
+* mathieu.guay-paquet@polymtl.ca
+* mathieu.boudreau@polymtl.ca
+* nathan.gorvett@polymtl.ca
+* nick.guenther@polymtl.ca
+* joshua.newton@polymtl.ca
+* jcohen@polymtl.ca
+* eva.alonso-ortiz@polymtl.ca
+
+Contact them with any questions.
 
 Admin Guide
 -----------
