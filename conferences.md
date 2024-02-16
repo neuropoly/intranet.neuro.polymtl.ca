@@ -224,14 +224,17 @@ The typical policy of the lab is that you can get your conference subscription r
 
 You are reimbursed for:
 
-* registration fees. Note: The lab will only reimburse the cost of early fee. If you register late, you will have to pay the difference.
+* Registration fees. Note: The lab will only reimburse the cost of early fee. If you register late, you will have to pay the difference.
   * for ISMRM: make sure to be a student member– it reduces the overall cost of the conference– and make sure to do it AHEAD OF TIME (not last minute)
-* transport
-* housing
+* Transport (plane, train)
+* Housing
 
 You are not reimbursed for:
+* Food
 
-* food
+```{important}
+You are *strongly encouraged* to apply for a studentship to help the lab with conference expenses. It is also good for your CV.
+```
 
 You can be reimbursed by two means:
 
