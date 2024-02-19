@@ -452,7 +452,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-entities">Raw entities</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-suffixes">Raw suffixes</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-extensions">Raw extensions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#readme"><code class="docutils literal notranslate"><span class="pre">README</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#readme-md"><code class="docutils literal notranslate"><span class="pre">README.md</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-description-json"><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#participants-tsv"><code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#participants-json"><code class="docutils literal notranslate"><span class="pre">participants.json</span></code></a></li>
@@ -512,7 +512,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 <li><p><a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html">Microscopy-specific conventions</a></p></li>
 </ul>
 <p>The example below applies for MRI data:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── README
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── README.md
 ├── dataset_description.json
 ├── participants.tsv
 ├── participants.json
@@ -605,10 +605,10 @@ script should then be saved under the <code class="docutils literal notranslate"
 <li><p>etc.</p></li>
 </ul>
 </section>
-<section id="readme">
-<h3><code class="docutils literal notranslate"><span class="pre">README</span></code><a class="headerlink" href="#readme" title="Link to this heading">#</a></h3>
-<p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#readme"><code class="docutils literal notranslate"><span class="pre">README</span></code></a> is a <a class="reference external" href="https://markdown-guide.readthedocs.io/en/latest/index.html">markdown</a> file describing the dataset in more detail.</p>
-<p>Please use the <code class="docutils literal notranslate"><span class="pre">README</span></code> template below:</p>
+<section id="readme-md">
+<h3><code class="docutils literal notranslate"><span class="pre">README.md</span></code><a class="headerlink" href="#readme-md" title="Link to this heading">#</a></h3>
+<p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#readme"><code class="docutils literal notranslate"><span class="pre">README.md</span></code></a> is a <a class="reference external" href="https://markdown-guide.readthedocs.io/en/latest/index.html">markdown</a> file describing the dataset in more detail.</p>
+<p>Please use the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> template below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># &lt;NAME OF DATASET&gt;</span>
 
 <span class="n">This</span> <span class="ow">is</span> <span class="n">an</span> <span class="o">&lt;</span><span class="n">MRI</span><span class="o">/</span><span class="n">Microscopy</span><span class="o">&gt;</span> <span class="n">dataset</span> <span class="n">acquired</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">context</span> <span class="n">of</span> <span class="n">the</span> <span class="o">&lt;</span><span class="n">XYZ</span><span class="o">&gt;</span> <span class="n">project</span><span class="o">.</span> 
@@ -750,7 +750,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 <p>Despite what is written above, to streamline data identification and reduce the need for extensive folder crawling, we <a class="reference external" href="https://github.com/neuropoly/data-management/issues/282">opted</a> for common folder names, such as <code class="docutils literal notranslate"><span class="pre">labels/</span></code>, that typically contains binary segmentation and point-wise labels.</p>
 </div>
 <p>Derived datasets follow the <strong>same structure and hierarchy</strong> as the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset, with folders corresponding to subjects, [sessions] and MRI modalities:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── README
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── README.md
 ├── dataset_description.json
 ├── participants.tsv
 ├── participants.json
@@ -770,7 +770,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Because derived datasets are datasets, files and folders presented in the raw template section could also be included in this dataset (e.g. README, code/, etc.)</p>
+<p>Because derived datasets are datasets, files and folders presented in the raw template section could also be included in this dataset (e.g. README.md, code/, etc.)</p>
 </div>
 </section>
 <section id="source-filename">
@@ -994,7 +994,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 <h3>Examples and use cases<a class="headerlink" href="#examples-and-use-cases" title="Link to this heading">#</a></h3>
 <p>Here is an example of a dataset structure with a single subject <code class="docutils literal notranslate"><span class="pre">sub-001</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sci-bordeaux
-├── README
+├── README.md
 ├── dataset_description.json
 ├── participants.tsv
 ├── participants.json
@@ -1009,7 +1009,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 └── derivatives
     └── labels
         ├── dataset_description.json
-        ├── README
+        ├── README.md
         └── sub-001
             └── anat
                 ├── sub-001_acq-sag_T2w_label-SC_seg.nii.gz  # spinal cord (SC) binary segmentation 
@@ -1093,7 +1093,7 @@ script should then be saved under the <code class="docutils literal notranslate"
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-entities">Raw entities</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-suffixes">Raw suffixes</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-extensions">Raw extensions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#readme"><code class="docutils literal notranslate"><span class="pre">README</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#readme-md"><code class="docutils literal notranslate"><span class="pre">README.md</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-description-json"><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#participants-tsv"><code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#participants-json"><code class="docutils literal notranslate"><span class="pre">participants.json</span></code></a></li>
