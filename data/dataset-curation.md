@@ -31,7 +31,7 @@ Useful BIDS specifications are:
 The example below applies for MRI data:
 
 ```
-├── README
+├── README.md
 ├── dataset_description.json
 ├── participants.tsv
 ├── participants.json
@@ -130,11 +130,11 @@ Only **ONE** suffix can be used within the filename.
 - etc.
 
 
-### `README`
+### `README.md`
 
-The [`README`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#readme) is a [markdown](https://markdown-guide.readthedocs.io/en/latest/index.html) file describing the dataset in more detail.
+The [`README.md`](https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#readme) is a [markdown](https://markdown-guide.readthedocs.io/en/latest/index.html) file describing the dataset in more detail.
 
-Please use the `README` template below:
+Please use the `README.md` template below:
 
 ```
 # <NAME OF DATASET>
@@ -289,7 +289,7 @@ Despite what is written above, to streamline data identification and reduce the 
 Derived datasets follow the **same structure and hierarchy** as the `raw` dataset, with folders corresponding to subjects, [sessions] and MRI modalities:
 
 ```
-├── README
+├── README.md
 ├── dataset_description.json
 ├── participants.tsv
 ├── participants.json
@@ -308,7 +308,7 @@ Entities and suffixes are different from those used with the raw filenames and a
 ```
 
 ```{note}
-Because derived datasets are datasets, files and folders presented in the raw template section could also be included in this dataset (e.g. README, code/, etc.)
+Because derived datasets are datasets, files and folders presented in the raw template section could also be included in this dataset (e.g. README.md, code/, etc.)
 ```
 
 
@@ -492,7 +492,7 @@ Here is an example of a dataset structure with a single subject `sub-001`:
 
 ```
 sci-bordeaux
-├── README
+├── README.md
 ├── dataset_description.json
 ├── participants.tsv
 ├── participants.json
@@ -507,7 +507,7 @@ sci-bordeaux
 └── derivatives
     └── labels
         ├── dataset_description.json
-        ├── README
+        ├── README.md
         └── sub-001
             └── anat
                 ├── sub-001_acq-sag_T2w_label-SC_seg.nii.gz  # spinal cord (SC) binary segmentation 
