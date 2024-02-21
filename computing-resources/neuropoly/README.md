@@ -323,10 +323,10 @@ Please indicate in [NeuroPoly's "Computer resource" calendar](https://calendar.g
 
 | Spec         | Description                  |
 | ------------ | ---------------------------- |
-| **GPU**      | 8 x P100                     |
-| **RAM**      | 16 x 32GB DDR4               |
+| **CPU**      | 2x Intel E5-2630             |
+| **GPU**      | 8x P100                      |
+| **RAM**      | 16x 32GB DDR4                |
 | **Hostname** | `rosenberg.neuro.polymtl.ca` |
-| **VNC**      |                              |
 
 * By default, the root (OS and home folder) mount point is on the NVME disk
 * Shared **scratch** located under **/scratch**. Please clean the unnecessary data after you finish the processing.
@@ -340,10 +340,10 @@ _For system administrators_: Please log all the changes on the station by updati
 
 | Spec         | Description                  |
 | ------------ | ---------------------------- |
-| **GPU**      | 4 x RTX A6000 48GB           |
-| **RAM**      | 16 x 32GB DDR4               |
+| **CPU**      | AMD EPYC 7452 32-Core        |
+| **GPU**      | 4x RTX A6000 48GB            |
+| **RAM**      | 16x 32GB DDR4                |
 | **Hostname** | `romane.neuro.polymtl.ca`    |
-| **VNC**      |                              |
 
 * By default, the root (OS and home folder) mount point is on the NVME disk. You can train your model on your /home
 * [How to use GPU Clusters at NeuroPoly](https://intranet.neuro.polymtl.ca/computing-resources/neuropoly/gpus.html)
@@ -354,12 +354,12 @@ _For system administrators_: Please log all the changes on the station by updati
 
 ### bireli
 
-| Spec         | Description                                                                                                                                                               |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Model**    | 2 x Tesla GPU                                                                                                                                                             |
-| **OS**       | Ubuntu                                                                                                                                                                    |
-| **Hostname** | `bireli.neuro.polymtl.ca`                                                                                                                                                 |
-| **VNC**      | [NeuroPoly Internal Document: Bireli TeamViewer Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.zc65h9q5641z) |
+| Spec         | Description                |
+| ------------ | -------------------------- |
+| **CPU**      | i7-5930K 3.5GHz 6 Cores    |
+| **GPU**      | 2x GTX Titan X 12GB        |
+| **RAM**      | 1x 64GB DDR4               |
+| **Hostname** | `bireli.neuro.polymtl.ca`  |
 
 * Add event to the computer calendar
 * Use your **GE** account to connect on the machine
@@ -368,12 +368,11 @@ _For system administrators_: Please log all the changes on the station by updati
 
 ### joplin
 
-| Spec         | Description    |
-| ------------ | -------------- |
-| **Model**    | 64-core CPU    |
-| **OS**       | Ubuntu         |
-| **Hostname** |                |
-| **VNC**      |                |
+| Spec         | Description                           |
+| ------------ | ------------------------------------- |
+| **CPU**      | 8x Intel E7-4809v4 8-Core 2.10GHz     |
+| **RAM**      | 16x 16GB DDR4                         |
+| **Hostname** | `joplin.neuro.polymtl.ca`             |
 
 The server is bound to the GRAMES which is linked to the GE domain.
 
@@ -381,7 +380,7 @@ The server is bound to the GRAMES which is linked to the GE domain.
 
 | Spec            | Description                                                                                                                                                              |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Model**       | Xeon 12-core                                                                                                                                                             |
+| **CPU**         | Xeon 12-core                                                                                                                                                             |
 | **OS**          | Ubuntu                                                                                                                                                                   |
 | **Hostname**    |                                                                                                                                                                          |
 | **Credentials** | [NeuroPoly Internal Document: Abbey Teamviewer Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.mtnjvepco2an) |
