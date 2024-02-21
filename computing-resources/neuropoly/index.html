@@ -466,6 +466,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cpu-gpu-clusters">CPU/GPU Clusters</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rosenberg">rosenberg</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#romane">romane</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bireli">bireli</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joplin">joplin</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abbey">abbey</a></li>
@@ -808,11 +809,11 @@ PC/Linux</label><div class="sd-tab-content docutils">
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>Model</strong></p></td>
-<td><p>8 x P100 GPU</p></td>
+<tr class="row-even"><td><p><strong>GPU</strong></p></td>
+<td><p>8 x P100</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>OS</strong></p></td>
-<td><p>Ubuntu 18.04.2</p></td>
+<tr class="row-odd"><td><p><strong>RAM</strong></p></td>
+<td><p>16 x 32GB DDR4</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Hostname</strong></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">rosenberg.neuro.polymtl.ca</span></code></p></td>
@@ -825,6 +826,39 @@ PC/Linux</label><div class="sd-tab-content docutils">
 <ul class="simple">
 <li><p>By default, the root (OS and home folder) mount point is on the NVME disk</p></li>
 <li><p>Shared <strong>scratch</strong> located under <strong>/scratch</strong>. Please clean the unnecessary data after you finish the processing.</p></li>
+<li><p><a class="reference external" href="https://intranet.neuro.polymtl.ca/computing-resources/neuropoly/gpus.html">How to use GPU Clusters at NeuroPoly</a></p>
+<ul>
+<li><p><a class="reference external" href="https://drive.google.com/file/d/17-eLVBiMNA8bNbfzpD6NLxHApZRDoy1B/view?usp=sharing">Video tutorial to get started</a></p></li>
+</ul>
+</li>
+</ul>
+<p><em>For system administrators</em>: Please log all the changes on the station by updating the ansible scripts from <a class="github reference external" href="https://github.com/neuropoly/computers">neuropoly/computers</a>.</p>
+</section>
+<section id="romane">
+<h3>romane<a class="headerlink" href="#romane" title="Link to this heading">#</a></h3>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Spec</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>GPU</strong></p></td>
+<td><p>4 x RTX A6000 48GB</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>RAM</strong></p></td>
+<td><p>16 x 32GB DDR4</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Hostname</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">romane.neuro.polymtl.ca</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>VNC</strong></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>By default, the root (OS and home folder) mount point is on the NVME disk. You can train your model on your /home</p></li>
 <li><p><a class="reference external" href="https://intranet.neuro.polymtl.ca/computing-resources/neuropoly/gpus.html">How to use GPU Clusters at NeuroPoly</a></p>
 <ul>
 <li><p><a class="reference external" href="https://drive.google.com/file/d/17-eLVBiMNA8bNbfzpD6NLxHApZRDoy1B/view?usp=sharing">Video tutorial to get started</a></p></li>
@@ -846,7 +880,7 @@ PC/Linux</label><div class="sd-tab-content docutils">
 <td><p>2 x Tesla GPU</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>OS</strong></p></td>
-<td><p>Ubuntu 16.04</p></td>
+<td><p>Ubuntu</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Hostname</strong></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">bireli.neuro.polymtl.ca</span></code></p></td>
@@ -875,7 +909,7 @@ PC/Linux</label><div class="sd-tab-content docutils">
 <td><p>64-core CPU</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>OS</strong></p></td>
-<td><p>Ubuntu 20.04.4</p></td>
+<td><p>Ubuntu</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Hostname</strong></p></td>
 <td><p></p></td>
@@ -900,7 +934,7 @@ PC/Linux</label><div class="sd-tab-content docutils">
 <td><p>Xeon 12-core</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>OS</strong></p></td>
-<td><p>Ubuntu 20.04.3</p></td>
+<td><p>Ubuntu</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Hostname</strong></p></td>
 <td><p></p></td>
@@ -1268,6 +1302,7 @@ PC/Linux</label><div class="sd-tab-content docutils">
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cpu-gpu-clusters">CPU/GPU Clusters</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rosenberg">rosenberg</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#romane">romane</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bireli">bireli</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joplin">joplin</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abbey">abbey</a></li>
