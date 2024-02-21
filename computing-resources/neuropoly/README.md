@@ -323,8 +323,8 @@ Please indicate in [NeuroPoly's "Computer resource" calendar](https://calendar.g
 
 | Spec         | Description                  |
 | ------------ | ---------------------------- |
-| **Model**    | 8 x P100 GPU                 |
-| **OS**       | Ubuntu 18.04.2               |
+| **GPU**      | 8 x P100                     |
+| **RAM**      | 16 x 32GB DDR4               |
 | **Hostname** | `rosenberg.neuro.polymtl.ca` |
 | **VNC**      |                              |
 
@@ -335,12 +335,29 @@ Please indicate in [NeuroPoly's "Computer resource" calendar](https://calendar.g
 
 _For system administrators_: Please log all the changes on the station by updating the ansible scripts from [https://github.com/neuropoly/computers](https://github.com/neuropoly/computers).
 
+
+### romane
+
+| Spec         | Description                  |
+| ------------ | ---------------------------- |
+| **GPU**      | 4 x RTX A6000 48GB           |
+| **RAM**      | 16 x 32GB DDR4               |
+| **Hostname** | `romane.neuro.polymtl.ca`    |
+| **VNC**      |                              |
+
+* By default, the root (OS and home folder) mount point is on the NVME disk. You can train your model on your /home
+* [How to use GPU Clusters at NeuroPoly](https://intranet.neuro.polymtl.ca/computing-resources/neuropoly/gpus.html)
+  * [Video tutorial to get started](https://drive.google.com/file/d/17-eLVBiMNA8bNbfzpD6NLxHApZRDoy1B/view?usp=sharing)
+
+_For system administrators_: Please log all the changes on the station by updating the ansible scripts from [https://github.com/neuropoly/computers](https://github.com/neuropoly/computers).
+
+
 ### bireli
 
 | Spec         | Description                                                                                                                                                               |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Model**    | 2 x Tesla GPU                                                                                                                                                             |
-| **OS**       | Ubuntu 16.04                                                                                                                                                              |
+| **OS**       | Ubuntu                                                                                                                                                                    |
 | **Hostname** | `bireli.neuro.polymtl.ca`                                                                                                                                                 |
 | **VNC**      | [NeuroPoly Internal Document: Bireli TeamViewer Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.zc65h9q5641z) |
 
@@ -348,12 +365,13 @@ _For system administrators_: Please log all the changes on the station by updati
 * Use your **GE** account to connect on the machine
 * [How to use GPU Clusters at NeuroPoly](https://intranet.neuro.polymtl.ca/computing-resources/computing-resources-neuropoly/gpus)
 
+
 ### joplin
 
 | Spec         | Description    |
 | ------------ | -------------- |
 | **Model**    | 64-core CPU    |
-| **OS**       | Ubuntu 20.04.4 |
+| **OS**       | Ubuntu         |
 | **Hostname** |                |
 | **VNC**      |                |
 
@@ -364,7 +382,7 @@ The server is bound to the GRAMES which is linked to the GE domain.
 | Spec            | Description                                                                                                                                                              |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Model**       | Xeon 12-core                                                                                                                                                             |
-| **OS**          | Ubuntu 20.04.3                                                                                                                                                           |
+| **OS**          | Ubuntu                                                                                                                                                                   |
 | **Hostname**    |                                                                                                                                                                          |
 | **Credentials** | [NeuroPoly Internal Document: Abbey Teamviewer Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.mtnjvepco2an) |
 
