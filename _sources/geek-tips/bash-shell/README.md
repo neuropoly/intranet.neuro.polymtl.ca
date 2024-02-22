@@ -467,6 +467,8 @@ screen -X kill  # (if you only have one screen running)
 screen -X -S [session # you want to kill] kill
 ```
 
+Or, using a shortcut: press <kbd>CTRL</kbd>+<kbd>D</kbd>.
+
 Give specific name to a screen session
 
 ```bash
