@@ -473,6 +473,10 @@ Give specific name to a screen session
 screen -S <NAME_OF_SESSION>
 ```
 
+Scroll inside a screen
+
+Use combination <kbd>CTRL</kbd>+<kbd>A</kbd>+<kbd>[</kbd>. Then, move up and down with the arrow keys (<kbd>↑</kbd> and <kbd>↓</kbd>).
+
 ## SSH Public Key
 
 Create key on the client (do this only once):
