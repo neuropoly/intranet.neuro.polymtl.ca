@@ -438,9 +438,9 @@ Detach from the screen:
 
 ```bash
 screen -d
-# or
-CTRL+a d
 ```
+
+Or, using a shortcut: press and hold <kbd>CTRL</kbd>+<kbd>A</kbd>, then hit <kbd>D</kbd>.
 
 Attach to a detached screen:
 
