@@ -1,5 +1,9 @@
 # `data`
 
+```{warning}
+This needs updating following the Gitolite -> Gitea migration. See https://github.com/neuropoly/computers/issues/457.
+```
+
 This server includes private MRI and microscopy datasets, which have been curated and organized according to the [BIDS](https://bids.neuroimaging.io/) convention.
 
 `git+ssh://data.neuro.polymtl.ca` has a max size of ~1TB.
