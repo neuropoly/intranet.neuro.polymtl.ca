@@ -319,6 +319,10 @@ The following CPU and GPU clusters are available for internal use at **NeuroPoly
 Please indicate in [NeuroPoly's "Computer resource" calendar](https://calendar.google.com/calendar/u/0/embed?src=4mg6bgd9pv55thf9486t2miht8@group.calendar.google.com) if you plan to launch intensive calculations on a computer. These are shared resources, so it helps to know which computer is being used and by who, in order to prioritize tasks and make the best of our resources. Your calendar entry could span several days, and should specify your name and the ID or number of GPU/CPU used. Example: `julien@rosenberg:gpu[4,5]`, or `naga@joplin:cpu[n=20]` If you don't have writing permission on this calendar please post a request on [the ticket tracker](https://github.com/neuropoly/computers/issues/).
 ```
 
+```{note}
+If you wish to monitor the CPU/GPU/RAM/disk and other aspects of the server you are using, you can use our [monitoring system](https://monitor.neuro.polymtl.ca/v1). You need to be inside the VLAN to see the monitoring system.
+```
+
 ### rosenberg
 
 | Spec         | Description                  |
