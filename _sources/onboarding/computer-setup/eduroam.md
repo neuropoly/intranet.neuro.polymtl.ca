@@ -1,4 +1,4 @@
-# <span>📶</span> Eduroam
+# <span>📶</span> Eduroam 
 
 ## Overview
 
@@ -14,11 +14,9 @@ When on campus, you may see a WiFi network called 'eduroam'. However, to use thi
 
 ## Setup
 
-PolyMTL [recommends](https://www.polymtl.ca/si/reseaux/reseau-sans-fil#WIFI_Personnel_Etudiant) using the ["Eduroam CAT tool"](https://cat.eduroam.org/) to set up the network connection on each of your devices. This tool is available for Windows, macOS, and Linux, as well as Android and iOS.
+PolyMTL [provides instructions](https://www.polymtl.ca/si/reseaux/wifi-onboarding) for using a closed-source tool to set up the network connection on each of your devices. The tool will require admin access to work. It is available for Windows, macOS, and Linux, as well as Android and iOS.
 
 Before downloading and installing the tool, make sure that you delete any previously saved profiles for the 'eduroam' network. You can do this by going into your device's WiFi settings and looking for the "Saved networks" or "Known WiFi networks" menu option, or similar.
-
-If you are using a tool for computers, you will need to select your institution on the download page. If you are using a smartphone app, then the app itself will prompt you for your institution. In either case, choose "École Polytechnique de Montréal", which you can find by searching "Polytechnique".
 
 Once you download and run the tool, it will prompt for a username and password.
 
@@ -28,16 +26,12 @@ Once you download and run the tool, it will prompt for a username and password.
   * uNumero@polymtl.ca -> Invités
 * **Password**: This will be your CAS account password (i.e. the same password used for your `@polymtl.ca` email, VPN access, etc.)
 
-Once entered, the tool will create a wireless connection profile for 'eduroam' on your behalf, so you should be able to connect to the network without needing to do anything else. 
+Once entered, the tool will create a client certificate and a wireless connection profile for 'eduroam' on your behalf, so you should be able to connect to the network without needing to do anything else. 
 
-## Why do I need to use this tool? Why can't I just sign into the network directly?
+## What if I don't want to use the closed-source tool?
 
-The tool is meant to help set up some additional login information beyond your username and password:
+You can use this [PolyRoam](https://www.pointedset.ca/polyroam) python script to generate the client certificate needed to authenticate to eduroam.
 
-* **Authentication**: Protected EAP (PEAP)
-* **Inner/Phase 2 authentication**: MSCHAPv2
-* **CA Certificate**: Entrust Root Certification Authority - G2
-    * Setting this certificate will vary depending on device. (Some instructions say "Use system certificates", others will create a custom certificate just for 'eduroam'.)
-* **Anonymous identity**: anonymous#####@polymtl.ca
+## I heard that the WiFi is changing? Could this affect my access? 
 
-It's possible to set some or all of these yourself if you know what you're doing, but using the tool helps to automate this procedure.
+Yes. Polytechnique is in the process of switching its eduroam authentication protocol from EAP-PEAP to EAP-TLS. Support for EAP-PEAP ends after March 2024. In order to continue to connect to eduroam, you will need to use the new tool or the python script to generate a client certificate. Depending on your device you may need to delete previous network profiles for eduroam. More information is available [here](https://www.polymtl.ca/si/reseaux/wifi).
