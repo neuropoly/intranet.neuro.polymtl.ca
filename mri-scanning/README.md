@@ -9,6 +9,7 @@ description: Available MRI facilities and useful information about experiments.
 unf-3t-prisma
 mni-mcgill-7t-terra
 mhi-7t-agilent
+concordia-ge
 ```
 
 ## MRI facilities
