@@ -14,4 +14,4 @@ GE Discovery MR750 3.0T
 
 ## Book scanner
 
-https://schoolofhealth.concordia.ca/BookR/browse.asp?asset=38
+👉 [Book here!](https://schoolofhealth.concordia.ca/BookR/browse.asp?asset=38)
