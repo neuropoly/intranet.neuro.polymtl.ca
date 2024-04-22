@@ -6,12 +6,19 @@ the material before starting working on your project.
 Depending on the type of project you will be working on, select the appropriate ressources to 
 get familiar with (ask your supervisor if you are unsure).
 
+## Informatics
+
+- [](../geek-tips/bash-shell/README.md)
+- [](../geek-tips/git.md)
+
 ## Medical imaging
 
 - [Spinal Cord Toolbox course](https://spinalcordtoolbox.com/user_section/courses.html) (pick the latest course)
-- [](../bibliography/mri-analysis.md#fundamentals)
+- [](#neuroimaging-analysis)
 
 ## AI and deep learning
+
+
 
 ## MRI physics
 
