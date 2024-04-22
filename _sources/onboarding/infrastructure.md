@@ -4,7 +4,7 @@
 
 Please submit IT questions [on GitHub](https://github.com/neuropoly/computers/issues/new).
 
-Our systems are documented in [](../computing-resources/neuropoly/README.md)
+Our systems are documented in [](#computing-resources-neuropoly)
 
 ## Data
 

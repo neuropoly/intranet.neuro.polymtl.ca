@@ -1,3 +1,5 @@
+
+(computing-resources-neuropoly)=
 # <span>🖥</span> Computers \@NeuroPoly
 
 ```{toctree}
