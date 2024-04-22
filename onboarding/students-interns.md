@@ -15,11 +15,11 @@ get familiar with (ask your supervisor if you are unsure).
 
 - [Spinal Cord Toolbox course](https://spinalcordtoolbox.com/user_section/courses.html) (pick the latest course)
 - [](#neuroimaging-analysis)
-- [mriquestions.com](https://mriquestions.com/index.html)
 
 ## AI and deep learning
 
 
 
 ## MRI physics
+- [Bibliography/MRI](https://intranet.neuro.polymtl.ca/bibliography/mri.html#general)
 
