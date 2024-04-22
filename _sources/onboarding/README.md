@@ -8,6 +8,7 @@ infrastructure
 dropbox-google-drive
 computer-setup/README
 software-development
+students-interns
 consultants-ra
 postdoc
 ```
