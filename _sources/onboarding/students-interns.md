@@ -9,7 +9,7 @@ get familiar with (ask your supervisor if you are unsure).
 ## Medical imaging
 
 - [Spinal Cord Toolbox course](https://spinalcordtoolbox.com/user_section/courses.html) (pick the latest course)
-- [MRI analysis](../bibliography/mri-analysis.md#fundamentals)
+- [](../bibliography/mri-analysis.md#fundamentals)
 
 ## AI and deep learning
 
