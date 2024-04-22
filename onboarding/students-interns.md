@@ -8,8 +8,8 @@ get familiar with (ask your supervisor if you are unsure).
 
 ## Informatics
 
-- [](../geek-tips/bash-shell/README.md)
-- [](../geek-tips/git.md)
+- [](#bash-shell)
+- [](#git)
 
 ## Medical imaging
 
