@@ -4,10 +4,7 @@
 
 Please submit IT questions [on GitHub](https://github.com/neuropoly/computers/issues/new).
 
-Our systems are documented in
-
-* [Computer facilities - Neuropoly](../computing-resources/neuropoly/)
-* [Computer facilities - Compute Canada](../computing-resources/compute-canada.html)
+Our systems are documented in [](../computing-resources/neuropoly/README.md)
 
 ## Data
 
