@@ -21,5 +21,5 @@ get familiar with (ask your supervisor if you are unsure).
 
 
 ## MRI physics
-- [Bibliography/MRI](https://intranet.neuro.polymtl.ca/bibliography/mri.html#general)
+- [](#mri)
 
