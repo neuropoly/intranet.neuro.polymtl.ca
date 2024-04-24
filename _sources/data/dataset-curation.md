@@ -475,6 +475,7 @@ To be consistent regarding the way anatomical regions will be referred to, pleas
 | rootlets | Spinal rootlets |
 | PMJ | Pontomedullary Junction, indicated as a single voxel with a value '50' |
 | CSF | Cerebrospinal Fluid |
+| canal | Spinal canal |
 | compression | Spinal Cord Compression, indicated as a single voxel with a value '1' at the point of compression. There can be more than one compression. |
 | lesion | Lesion (e.g., multiple sclerosis plaques, spinal cord injury lesions). The pathology associated with the lesion is indicated in the file `participants.tsv` |
 | tumor | Tumor |
