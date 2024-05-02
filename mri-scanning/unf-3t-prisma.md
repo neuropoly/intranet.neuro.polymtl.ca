@@ -41,6 +41,8 @@ See info here: [https://unf-montreal.ca/documentation/your\_data/download\_data/
 
 Data for NeuroPoly group are located under: `elm:/unf/dicoms/by_groups/neuropoly/`
 
+In case you need to [reset your password](https://pwd.unf-montreal.ca/).
+
 ## Reconstruct raw data
 
 [GitHub NeuroPoly: Siemens Recon](https://github.com/neuropoly/siemens-recon)
