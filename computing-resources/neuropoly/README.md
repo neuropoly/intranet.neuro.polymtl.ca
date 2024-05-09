@@ -46,7 +46,9 @@ When working remotely from off-campus you need to use the [VPN](http://www.polym
 
 To connect to the VPN, you need to have an account with École Polytechnique, specifically with [CAS](https://cas5.polymtl.ca/cas/login). Students should already have this. Consultants and Research Associates will need to have an account created for them. This should have happened during your onboarding.
 
-You can change your password at [Gestion des Codes](https://codes.si.polymtl.ca/gestion/). Also, you can double-check you have VPN access by looking for `VPN_* = Actif` here.
+You can change your password at [Gestion des Codes](https://codes.si.polymtl.ca/gestion/). Consultants and Research Associates can double-check that they have VPN access by looking for `VPN_EMPLOYEE = Actif` here. Students should have this access by default, although it will not be displayed on the Gestion des Codes page.
+
+_NB: The VPN will not work if you are already accessing wifi on campus via Eduroam, it is typically intended for off-campus use only._
 
 The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing a VPN client such as `openconnect` (recommended) or `Cisco AnyConnect Secure Mobility Client` (if `openconnect` is not available for your OS/distro):
 
@@ -105,6 +107,22 @@ To connect to the VPN, you need to run:
 ```
 ./vpn.sh
 ```
+Depending on your Linux set up, you may also be able to create a graphical interface for your VPN. The following instructions were tested on a system using `NetworkManager` and the GNOME desktop environment:
+1. Install the [NetworkManager openconnect plugin](https://gitlab.gnome.org/GNOME/NetworkManager-openvpn/). For example, with: 
+```
+sudo apt install network-manager-openconnect-gnome
+```
+2. Under `Settings` go to `Network`.
+3. Under `VPN` select `+` to `Add VPN`.
+4. Select `Multi-protocol VPN client (openconnect)`.
+5. Under `Gateway` put `ssl.vpn.polymtl.ca`.
+6. Click `Apply`.
+7. Activate the VPN.
+8. Under `GROUP:` select `PolySSL`.
+9. Under `Username:`  put your CAS username.
+10. Under `Password:` put your CAS password.
+11. Click `Connect`.
+    
 :::
 
 :::{tab-item} Windows
