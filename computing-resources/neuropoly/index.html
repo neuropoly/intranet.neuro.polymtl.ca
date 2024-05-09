@@ -542,7 +542,8 @@ document.write(`
 <h2>VPN<a class="headerlink" href="#vpn" title="Link to this heading">#</a></h2>
 <p>When working remotely from off-campus you need to use the <a class="reference external" href="http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn">VPN</a>.</p>
 <p>To connect to the VPN, you need to have an account with École Polytechnique, specifically with <a class="reference external" href="https://cas5.polymtl.ca/cas/login">CAS</a>. Students should already have this. Consultants and Research Associates will need to have an account created for them. This should have happened during your onboarding.</p>
-<p>You can change your password at <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a>. Also, you can double-check you have VPN access by looking for <code class="docutils literal notranslate"><span class="pre">VPN_*</span> <span class="pre">=</span> <span class="pre">Actif</span></code> here.</p>
+<p>You can change your password at <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a>. Consultants and Research Associates can double-check that they have VPN access by looking for <code class="docutils literal notranslate"><span class="pre">VPN_EMPLOYEE</span> <span class="pre">=</span> <span class="pre">Actif</span></code> here. Students should have this access by default, although it will not be displayed on the Gestion des Codes page.</p>
+<p><em>NB: The VPN will not work if you are already accessing wifi on campus via Eduroam, it is typically intended for off-campus use only.</em></p>
 <p>The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing a VPN client such as <code class="docutils literal notranslate"><span class="pre">openconnect</span></code> (recommended) or <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">AnyConnect</span> <span class="pre">Secure</span> <span class="pre">Mobility</span> <span class="pre">Client</span></code> (if <code class="docutils literal notranslate"><span class="pre">openconnect</span></code> is not available for your OS/distro):</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
@@ -597,6 +598,25 @@ Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">vpn</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
+<p>Depending on your Linux set up, you may also be able to create a graphical interface for your VPN. The following instructions were tested on a system using <code class="docutils literal notranslate"><span class="pre">NetworkManager</span></code> and the GNOME desktop environment:</p>
+<ol class="arabic simple">
+<li><p>Install the <a class="reference external" href="https://gitlab.gnome.org/GNOME/NetworkManager-openvpn/">NetworkManager openconnect plugin</a>. For example, with:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">network</span><span class="o">-</span><span class="n">manager</span><span class="o">-</span><span class="n">openconnect</span><span class="o">-</span><span class="n">gnome</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Settings</span></code> go to <code class="docutils literal notranslate"><span class="pre">Network</span></code>.</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">VPN</span></code> select <code class="docutils literal notranslate"><span class="pre">+</span></code> to <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">VPN</span></code>.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Multi-protocol</span> <span class="pre">VPN</span> <span class="pre">client</span> <span class="pre">(openconnect)</span></code>.</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Gateway</span></code> put <code class="docutils literal notranslate"><span class="pre">ssl.vpn.polymtl.ca</span></code>.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Apply</span></code>.</p></li>
+<li><p>Activate the VPN.</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">GROUP:</span></code> select <code class="docutils literal notranslate"><span class="pre">PolySSL</span></code>.</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Username:</span></code>  put your CAS username.</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Password:</span></code> put your CAS password.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Connect</span></code>.</p></li>
+</ol>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
