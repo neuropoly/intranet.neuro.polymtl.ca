@@ -179,7 +179,7 @@ If you want to modify a dataset, you should make a pull request, which can then 
 4. For the previous steps, only read access was needed. For the following steps, you will need [write access](#getting-write-access-to-a-repository).
 5. To push the changes to the server (both the changes in your branch `xyz/some-topic` and in the special branch `git-annex`), you can use the command:
    ```sh
-   git annex push
+   git annex push --all
    ```
    If your version of `git-annex` is older, you may need to use this command instead:
    ```sh
