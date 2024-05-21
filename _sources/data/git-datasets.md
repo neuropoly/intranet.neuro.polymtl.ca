@@ -147,7 +147,7 @@ If you have already cloned a repository and would like to get the latest version
 
 ## Getting write access to a repository
 
-By default, all lab members have _read_ access to all repositories, so you can [clone repositories]() and [pull changes from the server](#getting-changes-from-the-server). If you want to [open issues](#opening-an-issue) or [push changes to the server](#making-a-pull-request), you will need _write_ access to the repository in question.
+By default, all lab members have _read_ access to all repositories, so you can [clone repositories](#connecting-from-the-command-line-cloning-a-repo) and [pull changes from the server](#getting-changes-from-the-server). If you want to [open issues](#opening-an-issue) or [push changes to the server](#making-a-pull-request), you will need _write_ access to the repository in question.
 
 To get write access to a repository, ask [one of the current admins](#getting-help). They will need to use the web interface, go to the repository's "Settings" tab, and add your username to the list of "Collaborators".
 
@@ -166,7 +166,7 @@ If you're working with a dataset, and you notice that something is wrong, or som
 
 If you want to modify a dataset, you should make a pull request, which can then be reviewed and merged into the master branch.
 
-1. First make sure you have a [local clone]() of the repo, and that it's [up to date](#getting-changes-from-the-server).
+1. First make sure you have a [local clone](#connecting-from-the-command-line-cloning-a-repo) of the repo, and that it's [up to date](#getting-changes-from-the-server).
 2. Create a new branch for your work, starting from the current `master` branch. If your initials are `xyz` and you want to work on `some-topic`, your branch should be called `xyz/some-topic`. From inside your local clone of the repo, use the command:
    ```sh
    git checkout -b xyz/some-topic master

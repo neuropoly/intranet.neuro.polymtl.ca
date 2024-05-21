@@ -638,7 +638,7 @@ git<span class="w"> </span>annex<span class="w"> </span>get
 </section>
 <section id="getting-write-access-to-a-repository">
 <h2>Getting write access to a repository<a class="headerlink" href="#getting-write-access-to-a-repository" title="Link to this heading">#</a></h2>
-<p>By default, all lab members have <em>read</em> access to all repositories, so you can <a class="reference internal" href="#"><span class="xref myst">clone repositories</span></a> and <a class="reference internal" href="#getting-changes-from-the-server">pull changes from the server</a>. If you want to <a class="reference internal" href="#opening-an-issue">open issues</a> or <a class="reference internal" href="#making-a-pull-request">push changes to the server</a>, you will need <em>write</em> access to the repository in question.</p>
+<p>By default, all lab members have <em>read</em> access to all repositories, so you can <a class="reference internal" href="#connecting-from-the-command-line-cloning-a-repo">clone repositories</a> and <a class="reference internal" href="#getting-changes-from-the-server">pull changes from the server</a>. If you want to <a class="reference internal" href="#opening-an-issue">open issues</a> or <a class="reference internal" href="#making-a-pull-request">push changes to the server</a>, you will need <em>write</em> access to the repository in question.</p>
 <p>To get write access to a repository, ask <a class="reference internal" href="#getting-help">one of the current admins</a>. They will need to use the web interface, go to the repository’s “Settings” tab, and add your username to the list of “Collaborators”.</p>
 </section>
 <section id="opening-an-issue">
@@ -657,7 +657,7 @@ git<span class="w"> </span>annex<span class="w"> </span>get
 <h2>Making a pull request<a class="headerlink" href="#making-a-pull-request" title="Link to this heading">#</a></h2>
 <p>If you want to modify a dataset, you should make a pull request, which can then be reviewed and merged into the master branch.</p>
 <ol class="arabic">
-<li><p>First make sure you have a <a class="reference internal" href="#"><span class="xref myst">local clone</span></a> of the repo, and that it’s <a class="reference internal" href="#getting-changes-from-the-server">up to date</a>.</p></li>
+<li><p>First make sure you have a <a class="reference internal" href="#connecting-from-the-command-line-cloning-a-repo">local clone</a> of the repo, and that it’s <a class="reference internal" href="#getting-changes-from-the-server">up to date</a>.</p></li>
 <li><p>Create a new branch for your work, starting from the current <code class="docutils literal notranslate"><span class="pre">master</span></code> branch. If your initials are <code class="docutils literal notranslate"><span class="pre">xyz</span></code> and you want to work on <code class="docutils literal notranslate"><span class="pre">some-topic</span></code>, your branch should be called <code class="docutils literal notranslate"><span class="pre">xyz/some-topic</span></code>. From inside your local clone of the repo, use the command:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>xyz/some-topic<span class="w"> </span>master
 </pre></div>
