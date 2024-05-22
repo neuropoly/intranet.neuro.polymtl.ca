@@ -14,6 +14,7 @@
   * [Learn By Doing](https://githowto.com)
   * [sr.ht's Learn By Doing](https://git-send-email.io)
   * [http://www.atlassian.com/git](http://www.atlassian.com/git)
+  * [Learn with dynamic git tree](https://learngitbranching.js.org/?locale=fr_EN)
 
 
 ### Courses:
