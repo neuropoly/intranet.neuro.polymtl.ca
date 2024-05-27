@@ -15,7 +15,7 @@ from Air Canada allowing two pieces of luggage of 23 kg each.
 * [Rentals.ca](https://rentals.ca): Apartments, houses, and condos for rent across Canada
 
 
-## Doing your taxes: 
+## 💸 Doing your taxes  
 
 Here is a short description of how to do your taxes when studying at Polytechnique. 
 Before getting into how to do it, you must know that taxes are to be done once a year and are usually due by the end of April. Taxes should be submitted at both the provincial and federal levels. 
