@@ -23,11 +23,11 @@ Before getting into how to do it, you must know that taxes are to be done once a
 * Gather all your required documents:
   
   First, you should gather all the documents which are going to be required to fill your tax declaration. Without those, you won’t be able to move forward. You will need documents regarding:
-research scholarship funding (or internship funding): T4A and either R1 or R2
-TAing or work activities: T4 and either R1 or R2
-tuition fees: T2202 and R8
-your Social Insurance Number (SIN / NAS in French)
-your residence: R31 (should be given to you by your landlord
+  * Research scholarship funding (or internship funding): T4A and either R1 or R2
+  * TAing or work activities: T4 and either R1 or R2
+  * Tuition fees: T2202 and R8
+  * Your Social Insurance Number (SIN / NAS in French)
+  * Your residence: R31 (should be given to you by your landlord
 
 * First year doing taxes:
   
