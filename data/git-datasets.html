@@ -656,13 +656,17 @@ git<span class="w"> </span>annex<span class="w"> </span>get
 <section id="making-a-pull-request">
 <h2>Making a pull request<a class="headerlink" href="#making-a-pull-request" title="Link to this heading">#</a></h2>
 <p>If you want to modify a dataset, you should make a pull request, which can then be reviewed and merged into the master branch.</p>
-<ol class="arabic">
+<ol class="arabic simple">
 <li><p>First make sure you have a <a class="reference internal" href="#connecting-from-the-command-line-cloning-a-repo">local clone</a> of the repo, and that it’s <a class="reference internal" href="#getting-changes-from-the-server">up to date</a>.</p></li>
-<li><p>Create a new branch for your work, starting from the current <code class="docutils literal notranslate"><span class="pre">master</span></code> branch. If your initials are <code class="docutils literal notranslate"><span class="pre">xyz</span></code> and you want to work on <code class="docutils literal notranslate"><span class="pre">some-topic</span></code>, your branch should be called <code class="docutils literal notranslate"><span class="pre">xyz/some-topic</span></code>. From inside your local clone of the repo, use the command:</p>
+<li><p>Create a new branch for your work, starting from the current <code class="docutils literal notranslate"><span class="pre">master</span></code> branch. If your initials are <code class="docutils literal notranslate"><span class="pre">xyz</span></code> and you want to work on <code class="docutils literal notranslate"><span class="pre">some-topic</span></code>, your branch should be called <code class="docutils literal notranslate"><span class="pre">xyz/some-topic</span></code>. From inside your local clone of the repo, use the command:</p></li>
+</ol>
+<blockquote>
+<div><p>If you are pushing data for the first time, and you did not run any <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">annex</span></code> command, please run a command like <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">annex</span> <span class="pre">dead</span> <span class="pre">here</span></code> before doing the next steps.</p>
+</div></blockquote>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>xyz/some-topic<span class="w"> </span>master
 </pre></div>
 </div>
-</li>
+<ol class="arabic" start="4">
 <li><p>Make the changes you want to the files in the repo, then save the changes in a commit (or several commits). You can use the commands:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>.
 git<span class="w"> </span>commit
