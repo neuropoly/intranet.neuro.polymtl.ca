@@ -168,10 +168,10 @@ If you want to modify a dataset, you should make a pull request, which can then 
 
 1. First make sure you have a [local clone](#connecting-from-the-command-line-cloning-a-repo) of the repo, and that it's [up to date](#getting-changes-from-the-server).
 2. Create a new branch for your work, starting from the current `master` branch. If your initials are `xyz` and you want to work on `some-topic`, your branch should be called `xyz/some-topic`. From inside your local clone of the repo, use the command:
-> If you are pushing data for the first time, and you did not run any `git annex` command, please run a command like `git annex dead here` before doing the next steps.
    ```sh
    git checkout -b xyz/some-topic master
    ```
+   > If you are pushing data for the first time, and you did not run any `git annex` command, please run a command like `git annex dead here` before doing the next steps.
 3. Make the changes you want to the files in the repo, then save the changes in a commit (or several commits). You can use the commands:
    ```sh
    git add .
