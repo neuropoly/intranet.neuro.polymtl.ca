@@ -172,13 +172,13 @@ If you want to modify a dataset, you should make a pull request, which can then 
    ```sh
    git checkout -b xyz/some-topic master
    ```
-4. Make the changes you want to the files in the repo, then save the changes in a commit (or several commits). You can use the commands:
+3. Make the changes you want to the files in the repo, then save the changes in a commit (or several commits). You can use the commands:
    ```sh
    git add .
    git commit
    ```
-5. For the previous steps, only read access was needed. For the following steps, you will need [write access](#getting-write-access-to-a-repository).
-6. To push the changes to the server (both the changes in your branch `xyz/some-topic` and in the special branch `git-annex`), you can use the command:
+4. For the previous steps, only read access was needed. For the following steps, you will need [write access](#getting-write-access-to-a-repository).
+5. To push the changes to the server (both the changes in your branch `xyz/some-topic` and in the special branch `git-annex`), you can use the command:
    ```sh
    git annex push --all
    ```
@@ -186,7 +186,7 @@ If you want to modify a dataset, you should make a pull request, which can then 
    ```sh
    git annex sync --all --content
    ```
-7. On the web interface <https://data.neuro.polymtl/ca/>, open a pull request:
+6. On the web interface <https://data.neuro.polymtl/ca/>, open a pull request:
    1. Go the the repository's page.
    2. Click on the "Pull Requests" tab.
    3. Click the "New Pull Request" button.
