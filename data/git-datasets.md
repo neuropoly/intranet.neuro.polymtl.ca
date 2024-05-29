@@ -142,7 +142,7 @@ To get write access to a repository, ask [one of the current admins](#getting-he
 
 If you're working with a dataset, and you notice that something is wrong, or something could be better, consider opening an issue!
 
-Since we sometimes want to discuss issues with people outside the lab, we use [Github issues in `neuropoly/data-management`](https://github.com/neuropoly/data-management/issues), which is publically visible to the whole internet. Open an issue there, and avoid putting private information there (but you can include links to <https://data.neuro.polymtl.ca/>).
+Since we sometimes want to discuss issues with people outside the lab, we use [Github issues in `neuropoly/data-management`](https://github.com/neuropoly/data-management/issues), which is publicly visible to the whole internet. Open an issue there, and avoid putting private information there (but you can include links to <https://data.neuro.polymtl.ca/>).
 
 ## Making a pull request
 
