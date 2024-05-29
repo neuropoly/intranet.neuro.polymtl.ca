@@ -97,6 +97,8 @@ While you're [logged in to the web interface](#connecting-to-the-web-interface):
 
 To view the existing repositories, [connect to the web interface](#connecting-to-the-web-interface) and use the "[Explore](https://data.neuro.polymtl.ca/explore/repos)" tab, which is linked from the top of every page. Keep in mind that there are multiple pages, so either use the search box or click "Next" if you're looking for a specific repository or username.
 
+If you're a lab member and you don't see any datasets, it's possible that you weren't added to [the "Lab-members" team](https://data.neuro.polymtl.ca/org/datasets/teams/lab-members) during your onboarding. If that's the case, [ask an admin](#getting-help) to add you.
+
 ## Connecting from the command-line (cloning a repo)
 
 If you want to run `git` commands from the command-line (`clone`, `pull`, `push`, etc.):
