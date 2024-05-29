@@ -1,6 +1,6 @@
 # `data.neuro.polymtl.ca`
 
-Link to the web interface (only accessible from a wired connection on-campus):
+Link to the web interface (only accessible on-campus or through the VPN):
 <https://data.neuro.polymtl.ca/>
 
 This server includes private MRI and microscopy datasets, which have been curated and organized according to the [BIDS](https://bids.neuroimaging.io/) convention.
@@ -10,42 +10,31 @@ This server includes private MRI and microscopy datasets, which have been curate
 It hosts [BIDS](https://bids-specification.readthedocs.io) datasets, version-controlled using [`git-annex`](https://git-annex.branchable.com/).
 It is locked behind a [VPN](../computing-resources/neuropoly/README.md#vpn) because much of our data is under medical ethics protections, and needs to be kept off the general internet.
 
-## Connecting from a wired connection on-campus
+## Connecting to the web interface
 
-If you want to use the web interface:
+You can use the web interface to:
+* view our list of datasets,
+* browse/preview the content of each dataset,
+* create and review pull requests,
+* update your user settings, including your registered SSH keys,
+* (if you are an admin) manage users and repositories.
 
-1. In your web browser, go to <https://data.neuro.polymtl.ca/>.
+How to connect:
+1. If you're off-campus: first connect to the [VPN](../computing-resources/neuropoly/README.md#vpn).
+2. In your web browser, go to <https://data.neuro.polymtl.ca/>.
 
-   If this takes a long time and/or times out, it's probably because you're not actually using a wired (ethernet) connection on-campus. Try [the next section](#connecting-from-wifi-or-off-campus).
+   If this takes a long time and/or times out, it's probably because you're not on-campus and not on the VPN. Go back to Step 1.
 
    If it's the first time you visit this URL, you will probably get a security warning about the [self-signed HTTPS certificate we're using](https://github.com/neuropoly/computers/issues/337#issuecomment-1976098453). You may have to add a security exception in your browser.
-2. Click "Sign In" at the top right of the page.
-3. The username and password should be the same as the ones you normally use to connect to lab computers (that is, your [GRAMES / GE account](../computing-resources/neuropoly/README.md#ge)).
-4. If it's your first time using the web interface, you may want to start by [changing some of your settings](#initial-setup).
 
-## Connecting from wifi or off-campus
-
-If you want to use the web interface:
-
-1. If you're off-campus: first connect to the [VPN](../computing-resources/neuropoly/README.md#vpn).
-2. Next, set up port forwarding for the duration of your task, by running the following command in a terminal window. You should replace `"$USER"` with your [GRAMES / GE](../computing-resources/neuropoly/README.md#ge) username:
-
-   ```sh
-   ssh -N -L 3000:localhost:3000 "$USER"@data.neuro.polymtl.ca
-   ```
-
-   This command won't produce any output while it's running. Once you're done using the web interface, you should terminate the SSH command with ctrl-C.
-3. In your web browser, go to <http://localhost:3000/>.
-
-   Note that this is an HTTP (not HTTPS) address, but your connection to the server is protected by SSH. This also means that you won't have to accept the server's self-signed HTTPS certificate.
+   Note that there's a language selector (English / français) at the bottom right of every page.
 4. Click "Sign In" at the top right of the page.
-5. The username and password is the same as your [GRAMES / GE account](../computing-resources/neuropoly/README.md#ge), again.
+5. The username and password should be the same as the ones you normally use to connect to lab computers (that is, your [GRAMES / GE account](../computing-resources/neuropoly/README.md#ge)).
 6. If it's your first time using the web interface, you may want to start by [changing some of your settings](#initial-setup).
-7. Remember to terminate the SSH command with ctrl-C when you're done using the web interface.
 
 ## Initial setup
 
-While you're logged in to the web interface:
+While you're [logged in to the web interface](#connecting-to-the-web-interface):
 
 1. (Optional) You may want to change the default language between French and English.
    1. Click your user icon at the top right of any page.
@@ -106,15 +95,15 @@ While you're logged in to the web interface:
 
 ## Listing the available datasets
 
-To view the existing repositories, connect to the web interface and use the "[Explore](https://data.neuro.polymtl.ca/explore/repos)" tab, which is linked from the top of every page. Keep in mind that there are multiple pages, so either use the search box or click "Next" if you're looking for a specific repository or username.
+To view the existing repositories, [connect to the web interface](#connecting-to-the-web-interface) and use the "[Explore](https://data.neuro.polymtl.ca/explore/repos)" tab, which is linked from the top of every page. Keep in mind that there are multiple pages, so either use the search box or click "Next" if you're looking for a specific repository or username.
+
+If you're a lab member and you don't see any datasets, it's possible that you weren't added to [the "Lab-members" team](https://data.neuro.polymtl.ca/org/datasets/teams/lab-members) during your onboarding. If that's the case, [ask an admin](#getting-help) to add you.
 
 ## Connecting from the command-line (cloning a repo)
 
-If you just want to run `git` commands from the command-line (`clone`, `pull`, `push`, etc.):
+If you want to run `git` commands from the command-line (`clone`, `pull`, `push`, etc.):
 
 1. If you're off-campus: first connect to the [VPN](../computing-resources/neuropoly/README.md#vpn).
-
-   Note that there's no need to do SSH port forwarding.
 2. To make a local clone, replace `"$REPO"` with the actual repository name in the following commands:
    ```sh
    git clone git@data.neuro.polymtl.ca:datasets/"$REPO"
@@ -147,7 +136,7 @@ If you have already cloned a repository and would like to get the latest version
 
 ## Getting write access to a repository
 
-By default, all lab members have _read_ access to all repositories, so you can [clone repositories](#connecting-from-the-command-line-cloning-a-repo) and [pull changes from the server](#getting-changes-from-the-server). If you want to [open issues](#opening-an-issue) or [push changes to the server](#making-a-pull-request), you will need _write_ access to the repository in question.
+By default, all lab members have _read_ access to all repositories, so you can [clone repositories](#connecting-from-the-command-line-cloning-a-repo) and [pull changes from the server](#getting-changes-from-the-server). If you want to [push changes to the server](#making-a-pull-request), you will need _write_ access to the repository in question.
 
 To get write access to a repository, ask [one of the current admins](#getting-help). They will need to use the web interface, go to the repository's "Settings" tab, and add your username to the list of "Collaborators".
 
@@ -155,12 +144,7 @@ To get write access to a repository, ask [one of the current admins](#getting-he
 
 If you're working with a dataset, and you notice that something is wrong, or something could be better, consider opening an issue!
 
-1. If it's your first issue or pull request for the repository, [ask for write access](#getting-write-access-to-a-repository).
-2. In the web interface, go to the repository page.
-3. Click on the "Issues" tab.
-4. Click "New Issue".
-5. Fill in the title and describe the issue in as little or as much detail as you want.
-6. Click "Create Issue".
+Since we sometimes want to discuss issues with people outside the lab, we use [Github issues in `neuropoly/data-management`](https://github.com/neuropoly/data-management/issues), which is publicly visible to the whole internet. Open an issue there, and avoid putting private information there (but you can include links to <https://data.neuro.polymtl.ca/>).
 
 ## Making a pull request
 
