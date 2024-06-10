@@ -10,6 +10,7 @@ get familiar with (ask your supervisor if you are unsure).
 
 - [](#bash-shell)
 - [](#git)
+- [The Good Research Code Handbook](https://goodresearch.dev/#)
 
 ## Medical imaging
 
