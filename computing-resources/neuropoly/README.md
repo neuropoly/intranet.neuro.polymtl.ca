@@ -155,6 +155,10 @@ To log into a desktop station while at NeuroPoly use your GE account.
 If working off-campus, start your [VPN](#vpn) first.
 ```
 
+```{note}
+If working on-campus using `eduroam` wifi, make sure you are connected to `eduroam` using your Poly credentials. The `ssh` command below will probably not work if you are using `eduroam` credentials from another university. Alternatively, you can use the cable connection.
+```
+
 Connect via ssh using the `STATION` you want:
 
 ```bash
