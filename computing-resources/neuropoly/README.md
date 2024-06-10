@@ -166,6 +166,10 @@ Connect via ssh using the `STATION` you want:
 ```
 
 ```{note}
+Use the password you received by email. Not the password you received on printed paper. To change the password, see the section `Password` above.
+```
+
+```{note}
 To get ssh on Windows, you can [install Microsoft's ssh package](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse), [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10), [PuTTY](https://www.chiark.greenend.org.uk/\~sgtatham/putty/), or [cmder](https://cmder.net), or [Git-Bash](https://git-scm.com/download/win).
 ```
 
