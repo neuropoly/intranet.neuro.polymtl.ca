@@ -80,6 +80,10 @@ description: >-
 * [arXiv: GAN-based Synthetic Medical Image Augmentation for increased CNN Performance in Liver Lesion Classification](https://arxiv.org/pdf/1803.01229.pdf)
 * [https://link.springer.com/chapter/10.1007/978-3-319-66179-7\_48](https://link.springer.com/chapter/10.1007/978-3-319-66179-7\_48)
 
+## Diffusion Models
+
+* [Beginner's Tutorial on Diffusion Models and Flow Matching](https://arxiv.org/abs/2406.08929)
+
 ## Few-shot Learning and Meta-Learning
 
 * [https://medium.com/quick-code/understanding-few-shot-learning-in-machine-learning-bede251a0f67](https://medium.com/quick-code/understanding-few-shot-learning-in-machine-learning-bede251a0f67)
