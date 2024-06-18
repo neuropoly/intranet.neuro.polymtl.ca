@@ -8,9 +8,12 @@
 
 ## IDE
 
+Below are popular IDE that are used at NeuroPoly, alongside useful tips/modules/extensions
+
+* [VS Code](https://code.visualstudio.com/)
+  * [Open In GitHub](https://marketplace.visualstudio.com/items?itemName=sysoev.vscode-open-in-github)
 * [Pycharm](https://www.neuro.polymtl.ca/tips_and_tricks/python/pycharm)
-* Interactive debugging using iPython: [http://www.scipy-lectures.org/advanced/debugging/#using-the-python-debugger](http://www.scipy-lectures.org/advanced/debugging/#using-the-python-debugger)
-* [iPython](http://ipython.org)
+  * If you're looking at code in PyCharm and want to share a link to specific lines on GitHub, you can highlight a snippet, then right click and select "Open In -> GitHub" and it will take you directly to a permalink to those lines on GitHub
 
 ## Virtual Environments
 
