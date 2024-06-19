@@ -108,6 +108,7 @@ If you want to run `git` commands from the command-line (`clone`, `pull`, `push`
    ```sh
    git clone git@data.neuro.polymtl.ca:datasets/"$REPO"
    cd "$REPO"
+   git annex init
    git annex dead here
    git annex get
    ```
