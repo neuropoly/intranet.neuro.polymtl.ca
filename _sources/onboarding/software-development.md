@@ -130,6 +130,10 @@ If you are adding a new feature, please be sure to add accompanying tests which 
 
 In both cases, please refer to the GitHub Wiki for your specific project for testing protocols.
 
+If you are using Visual Studio Code as an IDE, below is a tutorial on how to set up its testing features (using Spinal Cord Toolbox as an example).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/V-1Sgv3xaaI?si=qXTKp2wddB9ILCE5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Licensing
 
 Ensure that you are the original author of your changes, and if that is not the case, ensure that the borrowed/adapted code is compatible with the license.
