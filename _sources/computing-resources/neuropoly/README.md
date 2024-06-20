@@ -196,7 +196,6 @@ cat >>~/.ssh/config <<EOF
 Host *
 ControlMaster auto
 ControlPath ~/.ssh/%r@%h:%p
-ControlPersist 3s
 ```
 
 
