@@ -10,9 +10,9 @@
 
 Below are popular IDE that are used at NeuroPoly:
 
-- Visual Studio Code ([VSCode](https://code.visualstudio.com/))
-    - Since VSCode is a "general" IDE, you will need to install extensions to work with specific languages. For Python, you will need to install the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python). 
-- JetBrains [PyCharm](https://www.jetbrains.com/pycharm/)
+* Visual Studio Code ([VSCode](https://code.visualstudio.com/))
+    * Since VSCode is a "general" IDE, you will need to install extensions to work with specific languages. For Python, you will need to install the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python). 
+* JetBrains [PyCharm](https://www.jetbrains.com/pycharm/)
 
 Here are some useful tips/modules/extensions to get the most out of your IDE:
 
@@ -24,6 +24,7 @@ First, make sure you have run the installation instructions for your project, an
 
 <details>
 <summary>VSCode</summary>
+
 1. First, select the correct interpreter by first opening up the Command Palette (SHIFT+CMD+P or CTRL+SHIFT+P), typing "Python: Select Interpreter", then selecting the virtual environment corresponding to the project. (For SCT, this is `venv_sct`)
    ![image](https://github.com/neuropoly/intranet.neuro.polymtl.ca/assets/16181459/a2798fab-8dcc-499a-b979-c11f1c7927a2)
 2. After selecting the correct interpreter, click on the flask icon in the sidebar, then click "Configure Python Tests", then "pytest". Then, select the directory containing the test files ("testing", "tests", etc.)
@@ -36,16 +37,16 @@ First, make sure you have run the installation instructions for your project, an
 <details>
 <summary>PyCharm</summary>
 
- 1. File > Settings > Project: spinalcordtoolbox > **Python interpreter**
+1. File > Settings > Project: spinalcordtoolbox > **Python interpreter**
 2. Gear in top-right > **Show all**
 
-![image](https://github.com/neuropoly/intranet.neuro.polymtl.ca/assets/16181459/f7e9cc00-d7cd-43be-9b87-c8ecbbbce389)
+   ![image](https://github.com/neuropoly/intranet.neuro.polymtl.ca/assets/16181459/f7e9cc00-d7cd-43be-9b87-c8ecbbbce389)
 
 3. `+` in top-right > **Add Local Interpreter...**
 
-![image](https://github.com/neuropoly/intranet.neuro.polymtl.ca/assets/16181459/cb74a403-4b1b-4f5e-9bc5-5baf986fbe10)
+   ![image](https://github.com/neuropoly/intranet.neuro.polymtl.ca/assets/16181459/cb74a403-4b1b-4f5e-9bc5-5baf986fbe10)
 
-5. **"Conda environment"** in top-left > Check "Existing environment", then set **Interpreter:** to `${SCT_DIR}/python/envs/venv_sct/bin/python`. (NB: Replace ${SCT_DIR} with the location of the SCT installation directory.)
+4. **"Conda environment"** in top-left > Check "Existing environment", then set **Interpreter:** to `${SCT_DIR}/python/envs/venv_sct/bin/python`. (NB: Replace ${SCT_DIR} with the location of the SCT installation directory.)
 
 </details>
 
@@ -62,7 +63,6 @@ However, you can skip much of this work by going right from your IDE to GitHub u
 2. Next, highlight a snippet, then right click and select "Open In GitHub: Copy File URL" and it will take you directly to a permalink to those lines on GitHub.
 
 ![image](https://github.com/neuropoly/intranet.neuro.polymtl.ca/assets/16181459/9aa6bd77-edcf-4ae0-940b-9ba6ff1c8ed7)
-
 
 </details>
  
