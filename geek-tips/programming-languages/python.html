@@ -449,7 +449,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ide">IDE</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ides">IDEs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-tests-by-changing-the-python-interpreter-to-an-existing-virtual-environment">1. Run tests by changing the Python interpreter to an existing Virtual Environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-lines-of-code-on-github">2. Opening lines of code on GitHub</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environments">Virtual Environments</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packaging-code">Packaging Code</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-packages">Useful Packages</a><ul class="nav section-nav flex-column">
@@ -485,21 +489,68 @@ document.write(`
 <li><p><a class="reference external" href="https://www.neuro.polymtl.ca/tips_and_tricks/python/miniconda">Miniconda (preferred)</a></p></li>
 </ul>
 </section>
-<section id="ide">
-<h2>IDE<a class="headerlink" href="#ide" title="Link to this heading">#</a></h2>
-<p>Below are popular IDE that are used at NeuroPoly, alongside useful tips/modules/extensions</p>
+<section id="ides">
+<h2>IDEs<a class="headerlink" href="#ides" title="Link to this heading">#</a></h2>
+<p>Below are popular IDE that are used at NeuroPoly:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://code.visualstudio.com/">VS Code</a></p>
+<li><p>Visual Studio Code (<a class="reference external" href="https://code.visualstudio.com/">VSCode</a>)</p>
 <ul>
-<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=sysoev.vscode-open-in-github">Open In GitHub</a></p></li>
+<li><p>Since VSCode is a “general” IDE, you will need to install extensions to work with specific languages. For Python, you will need to install the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python extension</a>.</p></li>
 </ul>
 </li>
-<li><p><a class="reference external" href="https://www.neuro.polymtl.ca/tips_and_tricks/python/pycharm">Pycharm</a></p>
-<ul>
-<li><p>If you’re looking at code in PyCharm and want to share a link to specific lines on GitHub, you can highlight a snippet, then right click and select “Open In -&gt; GitHub” and it will take you directly to a permalink to those lines on GitHub</p></li>
+<li><p>JetBrains <a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a></p></li>
 </ul>
+<p>Here are some useful tips/modules/extensions to get the most out of your IDE:</p>
+<section id="run-tests-by-changing-the-python-interpreter-to-an-existing-virtual-environment">
+<h3>1. Run tests by changing the Python interpreter to an existing Virtual Environment<a class="headerlink" href="#run-tests-by-changing-the-python-interpreter-to-an-existing-virtual-environment" title="Link to this heading">#</a></h3>
+<p>If you are working on a project that installs itself into a Python/Conda virtual environment, then it is a good idea to attach the virtual environment to your IDE. (This will let you run tests directly from IDE, using the packages installed in the project’s virtual envrionment.)</p>
+<p>First, make sure you have run the installation instructions for your project, and that you have opened the project folder in your IDE. Next, follow the instructions corresponding to your IDE:</p>
+<details>
+<summary>VSCode</summary>
+<ol class="arabic">
+<li><p>First, select the correct interpreter by first opening up the Command Palette (SHIFT+CMD+P or CTRL+SHIFT+P), typing “Python: Select Interpreter”, then selecting the virtual environment corresponding to the project. (For SCT, this is <code class="docutils literal notranslate"><span class="pre">venv_sct</span></code>)
+<img alt="image" src="https://github.com/neuropoly/intranet.neuro.polymtl.ca/assets/16181459/a2798fab-8dcc-499a-b979-c11f1c7927a2" /></p></li>
+<li><p>After selecting the correct interpreter, click on the flask icon in the sidebar, then click “Configure Python Tests”, then “pytest”. Then, select the directory containing the test files (“testing”, “tests”, etc.)
+<img alt="image" src="https://github.com/neuropoly/intranet.neuro.polymtl.ca/assets/16181459/351e2f4b-9962-498a-9764-c981dced8d72" /></p></li>
+<li><p>Once tests are configured, you will now be able to Run and Debug tests directly from the Python test files by clicking (or right clicking) on the green arrow next to each test.</p>
+<p><img alt="image" src="https://github.com/neuropoly/intranet.neuro.polymtl.ca/assets/16181459/21e9d5b3-f2f9-44f4-a893-e0a99973e33d" /></p>
 </li>
-</ul>
+</ol>
+</details>
+<details>
+<summary>PyCharm</summary>
+<ol class="arabic">
+<li><p>File &gt; Settings &gt; Project: spinalcordtoolbox &gt; <strong>Python interpreter</strong></p></li>
+<li><p>Gear in top-right &gt; <strong>Show all</strong></p>
+<p><img alt="image" src="https://github.com/neuropoly/intranet.neuro.polymtl.ca/assets/16181459/f7e9cc00-d7cd-43be-9b87-c8ecbbbce389" /></p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">+</span></code> in top-right &gt; <strong>Add Local Interpreter…</strong></p>
+<p><img alt="image" src="https://github.com/neuropoly/intranet.neuro.polymtl.ca/assets/16181459/cb74a403-4b1b-4f5e-9bc5-5baf986fbe10" /></p>
+</li>
+<li><p><strong>“Conda environment”</strong> in top-left &gt; Check “Existing environment”, then set <strong>Interpreter:</strong> to <code class="docutils literal notranslate"><span class="pre">${SCT_DIR}/python/envs/venv_sct/bin/python</span></code>. (NB: Replace ${SCT_DIR} with the location of the SCT installation directory.)</p></li>
+</ol>
+</details>
+</section>
+<section id="opening-lines-of-code-on-github">
+<h3>2. Opening lines of code on GitHub<a class="headerlink" href="#opening-lines-of-code-on-github" title="Link to this heading">#</a></h3>
+<p>If you are looking at code in your text editor and want to share a link to specific lines on GitHub, normally you would have to go to GitHub, find the same file, select the lines (by clicking with “shift” held down), right click, click “Copy permalink”. (“Permalinks” are links that reference a specific commit, so that the links will not change even if the git branch is updated in the future.)</p>
+<p>However, you can skip much of this work by going right from your IDE to GitHub using a single click:</p>
+<details>
+<summary>VS Code</summary>
+<ol class="arabic simple">
+<li><p>First, install the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=sysoev.vscode-open-in-github">Open In GitHub</a> extension.</p></li>
+<li><p>Next, highlight a snippet, then right click and select “Open In GitHub: Copy File URL” and it will take you directly to a permalink to those lines on GitHub.</p></li>
+</ol>
+<p><img alt="image" src="https://github.com/neuropoly/intranet.neuro.polymtl.ca/assets/16181459/9aa6bd77-edcf-4ae0-940b-9ba6ff1c8ed7" /></p>
+</details>
+<details>
+<summary>PyCharm</summary>
+<p>PyCharm has this feature baked directly into the IDE. Just highlight a snippet, then right click and select “Open In -&gt; GitHub” and it will take you directly to a permalink to those lines on GitHub.</p>
+<p><img alt="image" src="https://github.com/neuropoly/intranet.neuro.polymtl.ca/assets/16181459/ee2c50cc-bbd8-42f4-b812-7d5dfa0daec7" /></p>
+</details>
+<p>If you then paste the permalink in a GitHub comment on issues/PRs, GitHub will automatically render those lines in your comment. (This is super useful for when you’re debugging an issue locally, and you want to communicate exactly which lines you’re looking at locally.)</p>
+<p><img alt="image" src="https://github.com/neuropoly/intranet.neuro.polymtl.ca/assets/16181459/11225781-78dc-4972-8ab5-9dc403e05ebe" /></p>
+</section>
 </section>
 <section id="virtual-environments">
 <h2>Virtual Environments<a class="headerlink" href="#virtual-environments" title="Link to this heading">#</a></h2>
@@ -672,7 +723,11 @@ $ virtualenv venv
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ide">IDE</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ides">IDEs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-tests-by-changing-the-python-interpreter-to-an-existing-virtual-environment">1. Run tests by changing the Python interpreter to an existing Virtual Environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-lines-of-code-on-github">2. Opening lines of code on GitHub</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environments">Virtual Environments</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packaging-code">Packaging Code</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-packages">Useful Packages</a><ul class="nav section-nav flex-column">
