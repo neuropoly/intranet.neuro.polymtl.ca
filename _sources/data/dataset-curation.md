@@ -120,6 +120,9 @@ An alphanumeric string located after all the entities following a final undersco
 
 Only **ONE** suffix can be used within the filename.
 
+```{note}
+For localizer/scout images, you can use `<entities>_acq-localizer_T1w.nii.gz`. (Relevant discussion [here](https://github.com/neuropoly/data-management/issues/325#issuecomment-2186894284) and [here](https://neurostars.org/t/how-to-name-localizer-scans-in-bids/29720/2).)
+```
 
 ### Raw extensions
 
