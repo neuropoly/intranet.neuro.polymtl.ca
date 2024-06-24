@@ -51,7 +51,7 @@
 | --------------------------------------------------------------------------------- | ------------- | ---- |
 | [NeuroImage: Clinical](https://www.sciencedirect.com/journal/neuroimage-clinical) | 4.4           |      |
 | [American Journal of Neuroadiology (AJNR)](http://www.ajnr.org)                   | 3.4           |      |
-| [Radiology](https://pubs.rsna.org/journal/radiology)                              | 7.9           |      |
+| [Radiology](https://pubs.rsna.org/journal/radiology)                              | 12.1          |      |
 | [Radiology: Artificial Intelligence](https://pubs.rsna.org/journal/ai)            | 8.1           |      |
 | [Brain](https://academic.oup.com/brain)                                           | 11.3          |      |
 | [Annals of Neurology](https://onlinelibrary.wiley.com/journal/15318249)           | 9.0           |      |
