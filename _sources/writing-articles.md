@@ -42,7 +42,8 @@
 | [Magnetic Resonance in Medicine](https://onlinelibrary.wiley.com/journal/15222594)                       | 3.6           |      |
 | [NMR in Biomedicine](https://analyticalsciencejournals.onlinelibrary.wiley.com/journal/10991492)         | 3.2           |      |
 | [Human Brain Mapping](https://onlinelibrary.wiley.com/journal/10970193)                                  | 4.4           | yes  |
-| [NeuroImage](https://www.journals.elsevier.com/neuroimage)                                               | 6.4           |      |
+| <s>[NeuroImage](https://www.journals.elsevier.com/neuroimage)</s> --> Imaging Neuroscience ([details](https://direct.mit.edu/DocumentLibrary/IMAG/ImagingNeuroscienceStatementonImpact-ENGLISH.pdf))                  | 6.4           |      |
+| [Imaging Neuroscience](https://direct.mit.edu/imag)                                                      | none (new)    | yes  |
 
 ### Clinical
 
