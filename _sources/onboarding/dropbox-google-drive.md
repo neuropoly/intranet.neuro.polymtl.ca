@@ -10,7 +10,7 @@ If you are a student, please create a Google Drive folder and share it with your
 | `Conferences/` | subfolder prefix is the date of the event, e.g. **`20150530_ISMRM/`** |
 | `Fellowships/` | subfolder prefix is the date of the deadline, e.g. **`20150314_FRQS/`** |
 | `Manuscripts/` | subfolder name is year of first submission + journal, e.g. `2015_neuroimage`. Inside the folder, please follow [this organization](https://intranet.neuro.polymtl.ca/writing-articles.html#organizing-folders). |
-| `Reports/` | Include progress reports (format: Google Slides, pptx, keynote or pdf). Google Slides are preferred because comments can easily be added. Prefix name should start with YYYYMMDD\_. Example: **`20170515_report.pptx`** |
+| `Reports/` | Include progress reports (format: Google Slides, created directly from this folder). Prefix name should start with YYYYMMDD\_. Example: **`20170515_ArtefactDetection.pptx`** |
 | `Results/` | Snapshots/results of your experiments. Prefix should start with YYYYMMDD. Example: **`20150120_dmri_nogse/`** |
 
 ```{note}
