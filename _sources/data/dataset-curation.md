@@ -29,7 +29,7 @@ Convention --> **{animal}-{pathology}-{anatomy}-{study/site}-{field strength}-{c
 | pathology | hc (healthy control), ms (multiple sclerosis), dcm (degenerative cervical myelopathy), tumor, ... | None |  |
 | anatomy | brain, brainstem, cervical, lumbar, foot, ... | None | if brain and brainstem and cervical, do not mention this |
 | study/site | canproco, leipzig, ... | None | Study associated with the dataset |
-| field_strength | 3t, 7t, ... | 3t |  |
+| field strength | 3t, 7t, ... | 3t |  |
 | contrast/modality | t1, t2, t2star, dwi, psir, stir, sem, tem, oi, ct, ... | None | Do not specify if multiple contrasts/modalities are present |
 
 Examples:
