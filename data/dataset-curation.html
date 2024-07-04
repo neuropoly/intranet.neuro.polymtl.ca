@@ -452,6 +452,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-data-to-bids">Converting data to BIDS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-the-dataset">Naming the dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fields">Fields</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-raw-dataset">Building the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-structure">Raw structure</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subject-naming-convention">Subject naming convention</a></li>
@@ -503,6 +507,64 @@ script should then be saved under the <code class="docutils literal notranslate"
 <p class="admonition-title">Important</p>
 <p>Once the data are converted to BIDS and <a class="reference internal" href="git-datasets.html#upload"><span class="std std-ref">uploaded</span></a> to git-annex repository, please delete the temporary folder.</p>
 </div>
+</section>
+<section id="naming-the-dataset">
+<h2>Naming the dataset<a class="headerlink" href="#naming-the-dataset" title="Link to this heading">#</a></h2>
+<p>Accurately naming our datasets is essential for effective data management and eliminating any ambiguity about their content. This practice significantly reduces the time required to select data for any project.</p>
+<p>Convention –&gt; <strong>{animal}-{pathology}-{anatomy}-{study/site}-{field strength}-{contrast/modality}</strong></p>
+<section id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p>⚠️ When it is default, don’t mention it.</p>
+</div></blockquote>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Field</p></th>
+<th class="head text-center"><p>Keys</p></th>
+<th class="head text-center"><p>Default</p></th>
+<th class="head text-center"><p>Note</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>animal</p></td>
+<td class="text-center"><p>human, dog, cat, rat, mouse, …</p></td>
+<td class="text-center"><p>human</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>pathology</p></td>
+<td class="text-center"><p>hc (healthy control), ms (multiple sclerosis), dcm (degenerative cervical myelopathy), tumor, …</p></td>
+<td class="text-center"><p>None</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>anatomy</p></td>
+<td class="text-center"><p>brain, brainstem, cervical, lumbar, foot, …</p></td>
+<td class="text-center"><p>None</p></td>
+<td class="text-center"><p>if brain and brainstem and cervical, do not mention this</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>study/site</p></td>
+<td class="text-center"><p>canproco, leipzig, …</p></td>
+<td class="text-center"><p>None</p></td>
+<td class="text-center"><p>Study associated with the dataset</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p>field_strength</p></td>
+<td class="text-center"><p>3t, 7t, …</p></td>
+<td class="text-center"><p>3t</p></td>
+<td class="text-center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p>contrast/modality</p></td>
+<td class="text-center"><p>t1, t2, t2star, dwi, psir, stir, sem, tem, oi, ct, …</p></td>
+<td class="text-center"><p>None</p></td>
+<td class="text-center"><p>Do not specify if multiple contrasts/modalities are present</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Examples:</p>
+<ul class="simple">
+<li><p>ms-basel-mp2rage</p></li>
+<li><p>hc-spinegeneric</p></li>
+</ul>
+</section>
 </section>
 <section id="building-the-raw-dataset">
 <h2>Building the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset<a class="headerlink" href="#building-the-raw-dataset" title="Link to this heading">#</a></h2>
@@ -1102,6 +1164,10 @@ script should then be saved under the <code class="docutils literal notranslate"
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-data-to-bids">Converting data to BIDS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-the-dataset">Naming the dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fields">Fields</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-raw-dataset">Building the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-structure">Raw structure</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subject-naming-convention">Subject naming convention</a></li>

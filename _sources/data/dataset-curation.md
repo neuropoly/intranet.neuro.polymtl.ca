@@ -14,6 +14,28 @@ script should then be saved under the `code` folder of the final dataset. Some p
 Once the data are converted to BIDS and [uploaded](git-datasets.md#upload) to git-annex repository, please delete the temporary folder.
 ```
 
+## Naming the dataset
+
+Accurately naming our datasets is essential for effective data management and eliminating any ambiguity about their content. This practice significantly reduces the time required to select data for any project.
+
+Convention --> **{animal}-{pathology}-{anatomy}-{study/site}-{field strength}-{contrast/modality}**
+
+### Fields
+> ⚠️ When it is default, don't mention it.
+
+| Field | Keys | Default | Note |
+| :---: | :---: | :---: | :---:|
+| animal | human, dog, cat, rat, mouse, ... | human | |
+| pathology | hc (healthy control), ms (multiple sclerosis), dcm (degenerative cervical myelopathy), tumor, ... | None |  |
+| anatomy | brain, brainstem, cervical, lumbar, foot, ... | None | if brain and brainstem and cervical, do not mention this |
+| study/site | canproco, leipzig, ... | None | Study associated with the dataset |
+| field_strength | 3t, 7t, ... | 3t |  |
+| contrast/modality | t1, t2, t2star, dwi, psir, stir, sem, tem, oi, ct, ... | None | Do not specify if multiple contrasts/modalities are present |
+
+Examples:
+- ms-basel-mp2rage
+- hc-spinegeneric
+
 ## Building the `raw` dataset
 
 The `raw` dataset corresponds to the core dataset that contains all the different acquisitions generated for one or several subjects. **NO** postprocessing steps should be applied to these acquisitions.
