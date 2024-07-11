@@ -90,6 +90,12 @@ For example, if my name is Regina Phalange, and I am working on updating the doc
 rp/new-theme-for-docs
 ```
 
+Or if my name is John Doe and I am fixing issue #12 that is related to the registration CLI:
+
+```bash
+jd/12-registration-cli
+```
+
 ### Branch Conflicts
 
 Make sure the PR changes are not in conflict with the master branch.
