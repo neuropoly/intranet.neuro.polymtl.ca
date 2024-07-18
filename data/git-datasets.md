@@ -99,7 +99,7 @@ To view the existing repositories, [connect to the web interface](#connecting-to
 
 If you're a lab member and you don't see any datasets, it's possible that you weren't added to [the "Lab-members" team](https://data.neuro.polymtl.ca/org/datasets/teams/lab-members) during your onboarding. If that's the case, [ask an admin](#getting-help) to add you.
 
-## Connecting from the command-line (cloning a repo)
+## Downloading a datasete
 
 If you want to run `git` commands from the command-line (`clone`, `pull`, `push`, etc.):
 
