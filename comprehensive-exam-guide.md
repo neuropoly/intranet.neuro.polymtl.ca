@@ -10,7 +10,14 @@ This exam must be completed by the **end of 4th semester** after the student's i
 
 ## What is the first step/Where do I start?
 
-Start by discussing with your supervisor about whom you would want to include in your committee. The jury should consist of at least 3 members out of which 1 member must be outside the department (not necessarily outside Poly, although this is also accepted). However, if you already have 2 supervisors, then the jury should consist of 4 members. 
+Start by discussing with your supervisor about whom you would want to include in your jury (see below). 
+
+## Jury
+
+The jury should consist of at least 3 members out of which:
+- **President**: Must be at Polytechnique
+- **External member**: Must be outside the department (not necessarily outside Poly, although this is also accepted)
+- **Supervisor(s)**: one or two supervisors.
 
 ## What is the structure of the exam?
 
