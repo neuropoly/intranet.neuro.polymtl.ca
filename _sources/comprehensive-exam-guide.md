@@ -10,7 +10,7 @@ This exam must be completed by the **end of 4th semester** after the student's i
 
 ## What is the first step/Where do I start?
 
-Start by discussing with your supervisor about whom you would want to include in your jury (see below). 
+Contact the secretary of études supérieures for your program (eg: Amal Bennani if you are in biomedical engineering) and ask for the up-to-date procedure for the "examen de synthèse". Then, discuss with your supervisor about whom you would want to include in your jury (see below). 
 
 ## Jury
 
