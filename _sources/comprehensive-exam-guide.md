@@ -16,7 +16,7 @@ Start by discussing with your supervisor about whom you would want to include in
 
 The jury should consist of at least 3 members out of which:
 - **President**: Must be at Polytechnique
-- **External member**: Must be outside the department (not necessarily outside Poly, although this is also accepted)
+- **External member**: Must be outside the department (preferably outside of Poly)
 - **Supervisor(s)**: one or two supervisors.
 
 ## What is the structure of the exam?
