@@ -2,7 +2,7 @@
 
 ## Converting data to BIDS
 
-All git-annex datasets should be BIDS-compliant. For more information about the BIDS standard, please visit [http://bids.neuroimaging.io](http://bids.neuroimaging.io). For some examples of BIDS datasets, visit [this page](https://github.com/bids-standard/bids-examples). A quick way to verify compliance with the convention is this [online BIDS validator](https://bids-standard.github.io/bids-validator/).
+All git-annex datasets should be BIDS-compliant. For more information about the BIDS standard, please visit [http://bids.neuroimaging.io](http://bids.neuroimaging.io). For some examples of BIDS datasets, visit [this page](https://github.com/bids-standard/bids-examples). If you have questions, go to the [Neurostars BIDS forum](https://neurostars.org/tag/bids). A quick way to verify compliance with the convention is this [online BIDS validator](https://bids-standard.github.io/bids-validator/).
 
 When you receive raw data from an external collaborator, save them under a temporary location on one of NeuroPoly's server, e.g.: `duke/temp`.
 
