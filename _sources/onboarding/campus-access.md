@@ -37,6 +37,11 @@ To request an affiliation for interns/postdocs, ask Julien to fill up [this form
 
 To request an affiliation for graduate students, send request to: academic.affairs@mila.quebec
 
+## Affiliation with CHU Sainte-Justine
+
+For Benjamin's students working on pediatric related projects, you could request an affiliation with the Azrieli Research Center at CHU Sainte-Justine. 
+
+To gain access, including your identity card, network code, institutional email, and other relevant information, follow the steps provided [in their guide](https://research.chusj.org/en/Students/Student-Guide)
 
 ## Requirements for room access
 
