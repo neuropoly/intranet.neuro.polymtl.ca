@@ -128,6 +128,14 @@ Examples of special cases below:
 - If you need to differentiate between sequences acquired with **different orientations**, use the `acq-ax`, `acq-cor`, or `acq-sag` tag. For example, `sub-001_acq-ax_T1w.nii.gz`.
 - If you need to differentiate between different **magnetization transfer (MT)** sequences, use the [`flip-<index>_mt-<on|off>`](https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html#anatomy-imaging-data) tag. For example, `sub-001_flip-1_mt-on_MTS.nii.gz`, `sub-001_flip-1_mt-off_MTS.nii.gz` or `sub-001_flip-2_mt-off_MTS.nii.gz`.
 
+> [!NOTE]
+> "old" vs "new" MT naming ([source](https://github.com/spine-generic/data-multi-subject/pull/135#issue-1535423905)):
+> ```console
+> acq-MTon_MTS → flip-1_mt-on_MTS
+> acq-MToff_MTS → flip-1_mt-off_MTS
+> acq-T1w_MTS → flip-2_mt-off_MTS
+> ```
+
 ```{note}
 If you to combine several above mentioned tags, use camelCase. For example, `sub-001_acq-cspineSag_T1w.nii.gz`.
 ```
