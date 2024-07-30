@@ -647,6 +647,15 @@ script should then be saved under the <code class="docutils literal notranslate"
 <li><p>If you need to differentiate between sequences acquired with <strong>different orientations</strong>, use the <code class="docutils literal notranslate"><span class="pre">acq-ax</span></code>, <code class="docutils literal notranslate"><span class="pre">acq-cor</span></code>, or <code class="docutils literal notranslate"><span class="pre">acq-sag</span></code> tag. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_acq-ax_T1w.nii.gz</span></code>.</p></li>
 <li><p>If you need to differentiate between different <strong>magnetization transfer (MT)</strong> sequences, use the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html#anatomy-imaging-data"><code class="docutils literal notranslate"><span class="pre">flip-&lt;index&gt;_mt-&lt;on|off&gt;</span></code></a> tag. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_flip-1_mt-on_MTS.nii.gz</span></code>, <code class="docutils literal notranslate"><span class="pre">sub-001_flip-1_mt-off_MTS.nii.gz</span></code> or <code class="docutils literal notranslate"><span class="pre">sub-001_flip-2_mt-off_MTS.nii.gz</span></code>.</p></li>
 </ul>
+<blockquote>
+<div><p>[!NOTE]
+“old” vs “new” MT naming (<a class="reference external" href="https://github.com/spine-generic/data-multi-subject/pull/135#issue-1535423905">source</a>):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">acq-MTon_MTS → flip-1_mt-on_MTS</span>
+<span class="go">acq-MToff_MTS → flip-1_mt-off_MTS</span>
+<span class="go">acq-T1w_MTS → flip-2_mt-off_MTS</span>
+</pre></div>
+</div>
+</div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you to combine several above mentioned tags, use camelCase. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_acq-cspineSag_T1w.nii.gz</span></code>.</p>
