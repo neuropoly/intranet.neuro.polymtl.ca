@@ -190,6 +190,9 @@ If you publish with this dataset, please add the following co-authors:
 - <NAME>, <EMAIL>
 ...
 
+Please also include the following grant/funding acknowledgment in your publication:
+"Supported by ..."
+
 ## <IF DATA ARE MISSING FOR SOME SUBJECT(S)>missing data
 
 <LIST HERE MISSING SUBJECTS>
