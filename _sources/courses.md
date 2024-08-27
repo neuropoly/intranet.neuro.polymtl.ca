@@ -146,7 +146,7 @@ Electrical and Computer Engineering Course List: [http://www.mcgill.ca/ece/progr
 ## Programming & Software
 
 * INF1010 - Programmation orienté objet (C++)
-* https://www.polymtl.ca/programmes/cours/langages-de-script
+* https://www.polymtl.ca/programmes/cours/langages-de-script / INF8007 (1 credit)
 
 ## Biomedical
 
