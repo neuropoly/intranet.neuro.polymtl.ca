@@ -47,14 +47,14 @@ Also see this list of [Bio-imaging courses offered by Quebec Universities](https
 
 ### Polytechnique Montréal
 
-| Code                                                                                          | Title / Notes                                                          | Lang.    | Prof.              |
-| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | -------- | ------------------ |
-| [GBM8378](https://www.polymtl.ca/programmes/cours/principes-dimagerie-biomedicale)            | <p>Principes d'imagerie biomédicale</p><p><em>(3 credits)</em></p>     | Français | Julien Cohen-Adad  |
-| [GBM6103A](https://www.polymtl.ca/programmes/cours/traitement-dimages-et-signaux-biomedicaux) | Traitement d'images et signaux biomédicaux                             | Français | Goussard           |
-| [GBM8770](https://www.polymtl.ca/programmes/cours/traitement-numerique-dimages-medicales-0)   | Traitement numérique d'images médicales                                | Français | Benjamin De Leener |
-| [GBM6330](https://www.polymtl.ca/programmes/cours/technologies-biomedicales-emergentes)       | <p>Technologies biomédicales émergentes</p><p><em>(3 credits)</em></p> | Français | Nikola Stikov      |
-| [ELE8812](https://www.polymtl.ca/programmes/cours/traitement-et-analyse-dimages)              | <p>Traitement et analyse d'images</p><p><em>(3 credits)</em></p>       | Français | Eva Alonso Ortiz  |
-| [GBM6953EE](https://www.polymtl.ca/programmes/cours/cspec-brainhack-school)              | <p>C.SPEC. BRAINHACK SCHOOL</p><p><em>(3 credits)</em></p>       | English | Eva Alonso Ortiz  |
+| Code                                                                                          | Title / Notes                                           | Credits  | Lang.    | Prof.              |
+| --------------------------------------------------------------------------------------------- | ------------------------------------------------------- | -------- | -------- | ------------------ |
+| [GBM8378](https://www.polymtl.ca/programmes/cours/principes-dimagerie-biomedicale)            | Principes d'imagerie biomédicale                        | 3        | 🇫🇷       | Julien Cohen-Adad  |
+| [GBM6103A](https://www.polymtl.ca/programmes/cours/traitement-dimages-et-signaux-biomedicaux) | Traitement d'images et signaux biomédicaux              | 3        | 🇫🇷       | Goussard           |
+| [GBM8770](https://www.polymtl.ca/programmes/cours/traitement-numerique-dimages-medicales-0)   | Traitement numérique d'images médicales                 | 3        | 🇫🇷       | Benjamin De Leener |
+| [GBM6330](https://www.polymtl.ca/programmes/cours/technologies-biomedicales-emergentes)       | Technologies biomédicales émergentes                    | 3        | 🇬🇧       | Nikola Stikov      |
+| [ELE8812](https://www.polymtl.ca/programmes/cours/traitement-et-analyse-dimages)              | Traitement et analyse d'images                          | 3        | 🇫🇷       | Eva Alonso Ortiz  |
+| [GBM6953EE](https://www.polymtl.ca/programmes/cours/cspec-brainhack-school)                   | C.SPEC. BRAINHACK SCHOOL                                | 3        | 🇬🇧       | Eva Alonso Ortiz  |
 
 
 ### Université de Montréal
