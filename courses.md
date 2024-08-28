@@ -61,7 +61,7 @@ Also see this list of [Bio-imaging courses offered by Quebec Universities](https
 
 | Code                                                                                          | Title / Notes                                           | Credits  | Lang.    | Prof.              |
 | --------------------------------------------------------------------------------------------- | ------------------------------------------------------- | -------- | -------- | ------------------ |
-| [PSY6983](https://admission.umontreal.ca/cours-et-horaires/cours/psy-6983/)                   | Projet en sciences des données neuronales (VERY GOOD! Coding for open-science with neuro application. Who took it: Andjela Dimitrijevic)                        | 3        | 🇫🇷       | Julien Cohen-Adad  |
+| [PSY6983](https://admission.umontreal.ca/cours-et-horaires/cours/psy-6983/)                   | Projet en sciences des données neuronales<br> _Excellent! Coding for open-science with neuro application (Andjela)_ | 3        | 🇫🇷       | Julien Cohen-Adad  |
 | [PHY2300](https://admission.umontreal.ca/cours-et-horaires/cours/phy-2300/)                   | Physique médicale                                       | 3        | 🇫🇷       | ?                  |
 | [PHY6985](https://admission.umontreal.ca/cours-et-horaires/cours/phy-6985/)                   | Imagerie en physique médicale 1                         | 3        | 🇫🇷       | ?                  |
 | [PHY6990](https://admission.umontreal.ca/cours-et-horaires/cours/phy-6990/)                   | Imagerie en physique médicale 2                         | 3        | 🇫🇷       | ?                  |
@@ -74,10 +74,10 @@ Also see this list of [Bio-imaging courses offered by Quebec Universities](https
 | --------------------------------------------------------------------------------------------- | ------------------------------------------------------- | -------- | -------- | ------------------ |
 | [MDPH607](https://www.mcgill.ca/study/2024-2025/courses/mdph-607)                             | Introduction to Medical Imaging                         | 3        | 🇬🇧       | Ives Levesque      |
 | [BMDE650](https://www.mcgill.ca/study/2023-2024/courses/bmde-650)                             | Advanced Medical Imaging                                | 3        | 🇬🇧       | Louis Collins, Amir Shmuel |
-| [BMDE660](https://www.mcgill.ca/study/2023-2024/courses/bmde-660)                             | Advanced MR Imaging and Spectroscopy of the Brain (Excellent but need to put in extra hours. Who took it: Nadia, Andjela)                                                                                                                                                                  | 3        | 🇬🇧       | Christine Tardif, David Rudko |
+| [BMDE660](https://www.mcgill.ca/study/2023-2024/courses/bmde-660)                             | Advanced MR Imaging and Spectroscopy of the Brain <br> _Excellent but need to put in extra hours (Nadia, Andjela)_ | 3        | 🇬🇧       | Christine Tardif, David Rudko |
 | [NEUR606](https://www.mcgill.ca/study/2020-2021/courses/neur-606)                             | Methods in Neuroimaging                                 | 3        | 🇬🇧       | Nathan Spreng      |
 | [NEUR602](https://www.mcgill.ca/study/2018-2019/courses/neur-602)                             | Current Topics in Neuroscience                          | 3        | 🇬🇧       | ? |
-| [QLSC612](https://neurodatascience.github.io/QLS612-Overview/)                                | Fundamentals for Neuro Data Science (1-week 8am-5pm summer intensive. Manageable and pairs well with Brainhack summer course. Who took it: Andjela Dimitrijevic)                                                                                                                        | 3        | 🇬🇧       | ? |
+| [QLSC612](https://neurodatascience.github.io/QLS612-Overview/)                                | Fundamentals for Neuro Data Science <br> _1-week 8am-5pm summer intensive. Manageable and pairs well with Brainhack summer course (Andjela)_ | 3        | 🇬🇧       | ? |
 
 
 ## Machine Learning / Statistics
