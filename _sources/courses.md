@@ -54,14 +54,14 @@ Also see this list of [Bio-imaging courses offered by Quebec Universities](https
 | [GBM8770](https://www.polymtl.ca/programmes/cours/traitement-numerique-dimages-medicales-0)   | Traitement numérique d'images médicales                 | 3        | 🇫🇷       | Benjamin De Leener |
 | [GBM6330](https://www.polymtl.ca/programmes/cours/technologies-biomedicales-emergentes)       | Technologies biomédicales émergentes                    | 3        | 🇬🇧       | Nikola Stikov      |
 | [ELE8812](https://www.polymtl.ca/programmes/cours/traitement-et-analyse-dimages)              | Traitement et analyse d'images                          | 3        | 🇫🇷       | Eva Alonso Ortiz  |
-| [GBM6953EE](https://www.polymtl.ca/programmes/cours/cspec-brainhack-school)                   | C.SPEC. BRAINHACK SCHOOL                                | 3        | 🇬🇧       | Eva Alonso Ortiz  |
+| [GBM6953EE](https://www.polymtl.ca/programmes/cours/cspec-brainhack-school)                   | C.SPEC. Brainhack School <br> _Must have!_              | 3        | 🇬🇧       | Eva Alonso Ortiz  |
 
 
 ### Université de Montréal
 
 | Code                                                                                          | Title / Notes                                           | Credits  | Lang.    | Prof.              |
 | --------------------------------------------------------------------------------------------- | ------------------------------------------------------- | -------- | -------- | ------------------ |
-| [PSY6983](https://admission.umontreal.ca/cours-et-horaires/cours/psy-6983/)                   | Projet en sciences des données neuronales<br> _Excellent! Coding for open-science with neuro application (Andjela)_ | 3        | 🇫🇷       | Julien Cohen-Adad  |
+| [PSY6983](https://admission.umontreal.ca/cours-et-horaires/cours/psy-6983/)                   | Projet en sciences des données neuronales<br> _Excellent! Coding for open-science with neuro application (Andjela)_ | 3        | 🇫🇷       | ? |
 | [PHY2300](https://admission.umontreal.ca/cours-et-horaires/cours/phy-2300/)                   | Physique médicale                                       | 3        | 🇫🇷       | ?                  |
 | [PHY6985](https://admission.umontreal.ca/cours-et-horaires/cours/phy-6985/)                   | Imagerie en physique médicale 1                         | 3        | 🇫🇷       | ?                  |
 | [PHY6990](https://admission.umontreal.ca/cours-et-horaires/cours/phy-6990/)                   | Imagerie en physique médicale 2                         | 3        | 🇫🇷       | ?                  |
