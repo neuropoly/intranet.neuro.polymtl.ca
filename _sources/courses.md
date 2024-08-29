@@ -112,7 +112,7 @@ Also see this list of [Bio-imaging courses offered by Quebec Universities](https
 | Code                                                               | Title / Notes                         | Credits | Lang.   | Prof.        |
 | ------------------------------------------------------------------ | ------------------------------------- | ------- | ------- | ------------ |
 | [BMDE520A](https://www.mcgill.ca/study/2023-2024/courses/bmde-520)  | Machine Learning for Biomedical Data <br> _Assignment heavy, no CV application (Rohan)_ | 3 | 🇬🇧 | Danilo Bzdok |
-| [COMP551AH](https://www.mcgill.ca/study/2023-2024/courses/comp-551) | Applied Machine Learning [outline](http://www.reirab.com/Teaching/AML23/index.html) _Great overview of classical ML but not much DL. No CV. (Nadia)_ |4 | 🇬🇧 | Yue Li (Fall), Reihaneh Rabbany (Winter)|
+| [COMP551AH](https://www.mcgill.ca/study/2023-2024/courses/comp-551) | Applied Machine Learning [outline](http://www.reirab.com/Teaching/AML23/index.html) <br> _Great overview of classical ML but not much DL. No CV. (Nadia)_ |4 | 🇬🇧 | Yue Li (Fall), Reihaneh Rabbany (Winter)|
 
 ## **Computer Vision**
 
