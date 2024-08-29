@@ -84,34 +84,35 @@ Also see this list of [Bio-imaging courses offered by Quebec Universities](https
 
 ### Polytechnique Montréal
 
-| Code                                                                    | Title / Notes                                                                                                     | Lang.    | Prof.              |
-| ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | -------- | ------------------ |
-| [INF8245E](https://chandar-lab.github.io/INF8245E/)                     | Machine Learning                                                                                                  | English  | Sarath Chandar     |
-| [INF8250E](https://chandar-lab.github.io/INF8953DE/)                    | Reinforcement Learning                                                                                            | English  | Sarath Chandar     |
-| MTH6312                                                                 | <p>Méthodes statistiques d'apprentissage</p><p><em>(trés théorique)</em></p>                                      | Français | Partovi Nia, Vahid |
-| MTH6305A                                                                | Reconnaissance de formes: approches statistiques                                                                  | Français |                    |
-| [INF6953H](https://www.polymtl.ca/programmes/cours/cspec-deep-learning) | C.SPÉC.: Deep Learning                                                                                            | English  | Chris Pal          |
-| [MTH3302](http://www.polymtl.ca/etudes/cours/details.php?sigle=MTH3302) | Probabilité et statistiques pour intelligence artificielle                                                        | Français | Jonathan Jalbert   |
-| [INF8215](http://www.polymtl.ca/etudes/cours/details.php?sigle=INF8215) | Intelligence artif.: méthodes et algorithmes                                                                      | Français | Daniel Aloise      |
-| [INF8225](http://www.polymtl.ca/etudes/cours/details.php?sigle=INF8225) | <p>I.A.: tech. probabilistes et d'apprentissage</p><p><em>(Cours intense. Qui l'a pris: Andréanne Lemay)</em></p> | Français | Chris Pal          |
+| Code                                                                    | Title / Notes                                                                | Credits  | Lang.    | Prof.              |
+| ----------------------------------------------------------------------- | -----------------------------------------------------------------------------| -------- | -------- | ------------------ |
+| [INF8245E](https://chandar-lab.github.io/INF8245E/)                     | Machine Learning                                                             | 3        | 🇬🇧  | Sarath Chandar     |
+| [INF8250E](https://chandar-lab.github.io/INF8953DE/)                    | Reinforcement Learning                                                       | 3        | 🇬🇧  | Sarath Chandar     |
+| [MTH6312](https://www.polymtl.ca/programmes/cours/methodes-statistiques-dapprentissage) | Méthodes statistiques d'apprentissage <br> _Trés théorique_  | 3        | 🇫🇷 | Luc Adjengue |
+| [MTH6305A](https://www.polymtl.ca/programmes/cours/reconn-de-formes-approches-statistiques) | Reconnaissance de formes: approches statistiques         | 3        | 🇫🇷 | ?                   |
+| [INF6953H](https://www.polymtl.ca/programmes/cours/cspec-deep-learning) | C.SPÉC.: Deep Learning                                                       | 3        | 🇬🇧  | Chris Pal          |
+| [MTH3302](http://www.polymtl.ca/etudes/cours/details.php?sigle=MTH3302) | Probabilité et statistiques pour intelligence artificielle                   | 3        | 🇫🇷 | Jonathan Jalbert   |
+| [INF8215](http://www.polymtl.ca/etudes/cours/details.php?sigle=INF8215) | Intelligence artif.: méthodes et algorithmes                                 | 3        | 🇫🇷 | Daniel Aloise      |
+| [INF8225](http://www.polymtl.ca/etudes/cours/details.php?sigle=INF8225) | I.A.: tech. probabilistes et d'apprentissage <br> _Cours intense (Andréanne)_| 3        | 🇫🇷 | Chris Pal          |
 
 ### Université de Montréal
 
-| Code                                                                                      | Title / Notes                                                                                                                                                                                                                                                    | Lang.    | Prof                 |
-| ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | -------------------- |
-| [BIO 2043B](https://www.neuro.polymtl.ca/\_media/internal\_resources/pcbio2043b\_a16.pdf) | <p>Statistique pratique pour sciences de la vie</p><p><em>First 4 courses not really relevant</em></p><p><em>Last 4 courses interesting</em></p><p><em>(Pearson correlation, Kendall correlation,</em></p><p><em>Simple and Multiple Regression, ANOVA)</em></p> | Français |                      |
-| [IFT6268](https://sites.google.com/view/ift6268-a2020/course-description?authuser=0)      | Self-Supervised Representation Learning                                                                                                                                                                                                                          | English  | Aaron Courville      |
-| [IFT6269](https://www.iro.umontreal.ca/\~slacoste/teaching/ift6269/A20/)                  | <p>Probabilistic Graphical Models</p><p><em>(Given in Fall. Math heavy, assignment with proofs + coding exercises. Really interesting course! Who took: Naga Karthik)</em> </p>                                                                                  | English  | Simon Lacoste-Julien |
-| [IFT6135](https://sites.google.com/view/ift6135-h2021)                                    | <p>Representation Learning</p><p><em>(Given in Winter. Intense course but very rewarding. Who took: Naga Karthik)</em></p>                                                                                                                                      | English  | Aaron Courville      |
-| [IFT6167](https://sites.google.com/view/nsl-course/) | Neural Scaling Laws and Foundation Models [outline](https://sites.google.com/view/nsl-course/course-description) <p><em>(Easy course, project-based. Who took: Naga Karthik)</em> </p> | English | Irina Rish |
-| [IFT6760](https://admission.umontreal.ca/rechercher/?q=ift+6760&target=admission&cx=011926736769028447783%3Aqlpu3so2kqq&ie=UTF-8) | Seminars in deep learning                                                                                                                                                                                                | ?        | ?                    |
+| Code                                                                                      | Title / Notes                                              | Credits  | Lang.    | Prof                 |
+| ----------------------------------------------------------------------------------------- | -----------------------------------------------------------| -------- | -------- | -------------------- |
+| [BIO2043B](https://admission.umontreal.ca/cours-et-horaires/cours/bio-2043/)              | Statistique pratique pour sciences de la vie <br> _First 4 classes not really relevant, Last 4 classes interesting, on Pearson, Kendall correlation, Multiple Regressions, ANOVA (Maxime)_ | 3 | 🇫🇷 | ?  |
+| [IFT6268](https://admission.umontreal.ca/cours-et-horaires/cours/ift-6268/)               | Self-Supervised Representation Learning                    | 4         | 🇬🇧      | Aaron Courville      |
+| [IFT6269](https://www-labs.iro.umontreal.ca/~slacoste/teaching/ift6269/)                  | Probabilistic Graphical Models <br> _Given in Fall. Math heavy, assignment with proofs + coding exercises. Really interesting course! (Naga)_  | 4 | 🇬🇧  | Simon Lacoste-Julien |
+| [IFT6135H](https://sites.google.com/view/ift6135b-h2023/course-description)               | Representation Learning <br> _Intense course but very rewarding (Naga)_ | 4 | 🇬🇧 | Aaron Courville      |
+| [IFT6167H](https://sites.google.com/view/nsl-course/schedule) | Neural Scaling Laws and Foundation Models <br> _Easy course, project-based (Naga)_ | 4 | 🇬🇧 | Irina Rish |
+| [IFT6758A](https://admission.umontreal.ca/cours-et-horaires/cours/ift-6758/) | Data Science | 4 | 🇬🇧 | Gauthier Gidel, Glen Berseth |
+| [IFT6760](https://admission.umontreal.ca/rechercher/?q=ift+6760&target=admission&cx=011926736769028447783%3Aqlpu3so2kqq&ie=UTF-8) | Seminars in deep learning | ?        | ?                    |
 
 ### Mcgill
 
-| Code                                                               | Title / Notes                        | Lang.   | Prof.        |
-| ------------------------------------------------------------------ | ------------------------------------ | ------- | ------------ |
-| [BMDE 520](https://www.mcgill.ca/study/2021-2022/courses/bmde-520) | Machine Learning for Biomedical Data [outline](http://bzdok.lab.mcgill.ca/media/M4BD_course_outline_fall_2021.pdf)<p><em>(Assignment heavy, no CV application Who took: Rohan Banerjee)</em></p> | English | Danilo Bzdok |
-| [COMP 551](https://www.mcgill.ca/study/2022-2023/courses/comp-551) | Applied Machine Learning [outline](http://www.reirab.com/Teaching/AML23/index.html)<p><em>(great overview of classical ML but not much DL. No CV. Who took it: Nadia Blostein )</em></p>                                                  | English | Yue Li (Fall), Reihaneh Rabbany (Winter)|
+| Code                                                               | Title / Notes                         | Credits | Lang.   | Prof.        |
+| ------------------------------------------------------------------ | ------------------------------------- | ------- | ------- | ------------ |
+| [BMDE520A](https://www.mcgill.ca/study/2023-2024/courses/bmde-520)  | Machine Learning for Biomedical Data <br> _Assignment heavy, no CV application (Rohan)_ | 3 | 🇬🇧 | Danilo Bzdok |
+| [COMP551AH](https://www.mcgill.ca/study/2023-2024/courses/comp-551) | Applied Machine Learning [outline](http://www.reirab.com/Teaching/AML23/index.html) _Great overview of classical ML but not much DL. No CV. (Nadia)_ |4 | 🇬🇧 | Yue Li (Fall), Reihaneh Rabbany (Winter)|
 
 ## **Computer Vision**
 
