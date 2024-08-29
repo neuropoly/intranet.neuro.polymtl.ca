@@ -53,7 +53,6 @@ Also see this list of [Bio-imaging courses offered by Quebec Universities](https
 | [GBM6103A](https://www.polymtl.ca/programmes/cours/traitement-dimages-et-signaux-biomedicaux) | Traitement d'images et signaux biomédicaux              | 3        | 🇫🇷       | Goussard           |
 | [GBM8770](https://www.polymtl.ca/programmes/cours/traitement-numerique-dimages-medicales-0)   | Traitement numérique d'images médicales                 | 3        | 🇫🇷       | Benjamin De Leener |
 | [GBM6330](https://www.polymtl.ca/programmes/cours/technologies-biomedicales-emergentes)       | Technologies biomédicales émergentes                    | 3        | 🇬🇧       | Nikola Stikov      |
-| [ELE8812](https://www.polymtl.ca/programmes/cours/traitement-et-analyse-dimages)              | Traitement et analyse d'images                          | 3        | 🇫🇷       | Eva Alonso Ortiz  |
 | [GBM6953EE](https://www.polymtl.ca/programmes/cours/cspec-brainhack-school)                   | C.SPEC. Brainhack School <br> _Must have!_              | 3        | 🇬🇧       | Eva Alonso Ortiz  |
 
 
@@ -118,9 +117,11 @@ Also see this list of [Bio-imaging courses offered by Quebec Universities](https
 
 ### Polytechnique Montréal
 
-| Code                                                                                          | Title / Notes                                                                                                                                                                                     | Lang.    | Prof.           |
-| --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | --------------- |
-| [GBM6700](https://www.polymtl.ca/programmes/cours/reconstruction-3d-partir-dimages-medicales) | <p>Reconstruction 3D à partir d'images médicales</p><p><a href="https://www.neuro.polymtl.ca/_media/links/gbm_6700_3d_reconstruction_from_medical_images_curriculum_.pdf">Curriculum 2013</a></p> | Français | Cheriet         |
+| Code                                                                                          | Title / Notes                                                                                                                                                                                     | Credits | Lang.    | Prof.           |
+| --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | -------- | --------------- |
+| [GBM6700](https://www.polymtl.ca/programmes/cours/reconstruction-3d-partir-dimages-medicales) | Reconstruction 3D à partir d'images médicales [Curriculum]("https://www.neuro.polymtl.ca/_media/links/gbm_6700_3d_reconstruction_from_medical_images_curriculum_.pdf") | 3 | 🇫🇷 | Cheriet         |
+| [ELE8812](https://www.polymtl.ca/programmes/cours/traitement-et-analyse-dimages)              | Traitement et analyse d'images                          | 3        | 🇫🇷       | Eva Alonso Ortiz  |
+
 
 ### **Université de Montréal**
 
