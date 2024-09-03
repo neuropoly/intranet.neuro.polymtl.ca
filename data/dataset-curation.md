@@ -177,9 +177,21 @@ This is an <MRI/Microscopy> dataset acquired in the context of the <XYZ> project
 
 ## Contact Person
 
-Dataset shared by: <NAME AND EMAIL>
+Dataset shared by:
+- <NAME>, <EMAIL>
 <IF THERE WAS EMAIL COMM>Email communication: <DATE OF EMAIL AND SUBJECT>
 <IF THERE IS A PRIMARY PROJECT/MODEL>Repository: https://github.com/<organization>/<repository_name>
+
+## Publishing with the dataset
+
+If you publish with this dataset, please add the following co-authors:
+- <NAME>, <EMAIL>
+- <NAME>, <EMAIL>
+- <NAME>, <EMAIL>
+...
+
+Please also include the following grant/funding acknowledgment in your publication:
+"Supported by ..."
 
 ## <IF DATA ARE MISSING FOR SOME SUBJECT(S)>missing data
 
