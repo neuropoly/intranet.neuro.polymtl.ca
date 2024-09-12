@@ -79,49 +79,15 @@ See [below](#annexthin-hardlinks) to understand what this setting offers.
 
 ## New repo
 
-Use this recipe to make new datasets:
+There is a template repository on our [internal server](../data/git-datasets.md) at git+ssh://data.neuro.polymtl.ca/datasets/template.
+
+The key is to ensure each filetype has a line added to `.gitattributes` like
 
 ```
-mkdir my-new-repo
-cd my-new-repo
-
-git init
-vi README
-# write something useful in README
-git add README && git commit -m "Initial commit"
-
-cat <<EOF > .gitignore
-.DS_Store
-EOF
-
-cat <<EOF > .gitattributes
-# Normalize line-endings to \n
-*             text=auto
-
-# Configure filetypes stored by git-annex.
-# by default git-annex sets * filter=annex, but that is very slow:
-# it copies even non-annexed files through git-annex even though it will decide not to handle them.
-# this overrides that behaviour so that only annexed files must be processed.
-*             annex.largefiles=nothing
-*.nii.gz      filter=annex annex.largefiles=anything
-*.nii         filter=annex annex.largefiles=anything
-*.tif         filter=annex annex.largefiles=anything
-EOF
-
-git add .gitignore .gitattributes && git commit -m "Configure git-annex"
-
-git annex init
-# .gitattributes runs the filter on 'git add', which leaves files 'unlocked'; i.e. as themselves, instead of as symlinks into .git/annex/objects; this setting ensures files added with 'git annex add' are also 'unlocked'.
-git annex config --set annex.addunlocked true 
-                                        
-# Here, copy in or create initial files, wherever they are from:
-# rsync, wget, curl, tar, dropbox, etc <...>, then run the following commands.
-
-git add .
-git commit -m "Initial data"
+echo '*.nii.gz      filter=annex annex.largefiles=anything' >> .gitattributes
 ```
 
-If you are working on a private, internal dataset, continue by [uploading to `data.neuro.polymtl.ca`](../data/git-datasets.md#new-repository).
+If you are working on a private, internal dataset, you can use [this script](../data/git-datasets.md#new-repository).
 
 ## `annex.thin` Hardlinks <a id="hardlinks">
 
