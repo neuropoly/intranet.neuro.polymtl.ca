@@ -30,4 +30,20 @@ Incoming Mail Server: zimbra.polymtl.ca
 Outgoing Mail Server: smtp.polymtl.ca
 ```
 
-Click `Sign In`
+## Add PolyMTL email to Thunderbird
+
+***Note 1:*** A similar process should work for other non-Exchange email provides as well, though this has not been formally tested. 
+
+***Note 2:*** This requires the use of OAuth2, and as such will require you to re-log-in in once a month. Unfortunately, its this or paying 10$ per month for a plugin.
+
+1. Open the settings for your accounts (right click on an email you already have -> `settings`)
+
+2. Near the bottom right, click the `Account Actions` drop-down and select `Add Mail Account`
+
+3. Fill in your credentials as requested, and click `Continue`
+
+4. Once the auto-config has run (which may prompt you to login again via a pop-up), select `IMAP` then click the `Configure Manually` button at the bottom
+
+5. Change the `Authentication Method` to `OAuth2` for both the **Incoming** and **Outgoing** servers. Everything else should be safe to leave alone.
+
+6. Click `Done`; if everything worked, you should see your email synchronize shortly!
