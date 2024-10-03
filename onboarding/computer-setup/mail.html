@@ -452,6 +452,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-polymtl-email-to-the-macos-mail-app">Add PolyMTL email to the macOS Mail app</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-polymtl-email-to-email-clients-without-exchange">Add PolyMTL email to Email Clients without Exchange</a></li>
 </ul>
             </nav>
         </div>
@@ -487,7 +488,16 @@ document.write(`
 <span class="n">Outgoing</span> <span class="n">Mail</span> <span class="n">Server</span><span class="p">:</span> <span class="n">smtp</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span>
 </pre></div>
 </div>
-<p>Click <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">In</span></code></p>
+</section>
+<section id="add-polymtl-email-to-email-clients-without-exchange">
+<h2>Add PolyMTL email to Email Clients without Exchange<a class="headerlink" href="#add-polymtl-email-to-email-clients-without-exchange" title="Link to this heading">#</a></h2>
+<p>This solution uses OAuth2 instead of Exchange, avoiding the need for your client to have root level permission on your operating system. However, this requires you to log-in in once a month</p>
+<p>⚠️ <strong>Only tested on Ubuntu <code class="docutils literal notranslate"><span class="pre">22.04</span></code> w/ Thunderbird version <code class="docutils literal notranslate"><span class="pre">128.0.1esr</span></code>; if you have confirmed this method works on another email client and/or operating system, please update this site or let <a class="reference external" href="mailto:kalum&#46;ost&#37;&#52;&#48;polymtl&#46;ca">Kalum Ost</a> know so he may do so</strong> ⚠️</p>
+<ol class="arabic simple">
+<li><p>Begin to add a new account to your client, as normal, proceeding until you reach the server configurations (this may require you to click a button labelled “Configure Manually” or the like).</p></li>
+<li><p>Change the server type to <code class="docutils literal notranslate"><span class="pre">IMAP</span></code> if it is not already, and the <code class="docutils literal notranslate"><span class="pre">Authentication</span> <span class="pre">Method</span></code> to <code class="docutils literal notranslate"><span class="pre">OAuth2</span></code> for both the <strong>Incoming</strong> and <strong>Outgoing</strong> servers. Everything else should be safe to leave alone.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Done</span></code>; if everything worked correctly, you should see your email synchronize shortly!</p></li>
+</ol>
 </section>
 </section>
 
@@ -537,6 +547,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-polymtl-email-to-the-macos-mail-app">Add PolyMTL email to the macOS Mail app</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-polymtl-email-to-email-clients-without-exchange">Add PolyMTL email to Email Clients without Exchange</a></li>
 </ul>
   </nav></div>
 
