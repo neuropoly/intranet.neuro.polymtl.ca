@@ -171,7 +171,11 @@ If you want to modify a dataset, you should make a pull request, which can then 
    ```sh
    git annex sync --all --content
    ```
-6. On the web interface <https://data.neuro.polymtl.ca/>, open a pull request:
+6. Then you can run BIDS validator to check if the modifications are in line with the BIDS standards. It is already installed on NeuroPoly stations. When inside the dataset you can run:
+   ```sh
+   bids-validator .
+   ```   
+8. On the web interface <https://data.neuro.polymtl.ca/>, open a pull request:
    1. Go the the repository's page.
    2. Click on the "Pull Requests" tab.
    3. Click the "New Pull Request" button.
