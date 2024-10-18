@@ -167,7 +167,7 @@ Excellent [recommendations](https://twitter.com/drbreaky/status/1385863882816647
 
 **For everyone:**
 
-> NeuroPoly Lab, Institute of Biomedical Engineering, Polytechnique Montreal, Montreal, QC, Canada
+> NeuroPoly Lab, Department of Electrical Engineering, Polytechnique Montreal, Montreal, QC, Canada
 
 **Affiliation for Julien Cohen-Adad:**
 
