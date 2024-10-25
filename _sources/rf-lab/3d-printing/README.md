@@ -1,6 +1,20 @@
 # 3D Printing
 
-## 3D Printer - Big Builder - Dual feed \(RF lab\)
+## Modix Big-60 V2 - Dual feed (L5613.1)
+
+| Spec            | Description                                                                                                                                                          |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Model**       | Raspberry Pi                                                                                                                                                         |
+| **OS**          | OctoPrint                                                                                                                                                            |
+| **Hostname**    | `http://132.207.154.91`                                                                                                                                              |
+| **Credentials** | [NeuroPoly Internal Document: Modix Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.125uuajyox5y) |
+
+* [SOP Modix](https://docs.google.com/document/d/1N1sCdYy1kLsIw_NDbPVM3fTg5EPaR50NNuACbf_dI6s/edit?usp=sharing)
+* {doc}`octoprint` configuration
+* [Modix adjustments](https://drive.google.com/file/d/1rtaKlBJ2HbZDDPxSDA0-g0miDM7aZjVB/view?usp=sharing)
+
+
+## Big Builder - Dual feed (L5613)
 
 * [http://3dprinter4u.nl/shop/3d-printers/big-builder-dual-feed-extruder/](http://3dprinter4u.nl/shop/3d-printers/big-builder-dual-feed-extruder/)
 * Before you start printing you need to do the following steps:
@@ -16,21 +30,6 @@
 * [Google Sheets: PLA Temperature](https://docs.google.com/spreadsheets/d/1gmXddcYgUFuz7tX-zO_UynaxlylWnnej0PF7d3u6ikM/edit?usp=sharing)
 * [Slic3r settings](https://www.neuro.polymtl.ca/internal_resources/3dprinter/settings)
 * [How to print a brain](https://www.neuro.polymtl.ca/internal_resources/3dprinter/print_brain)
-
-## Modix Big-60 V2 - Dual feed \(RF lab\)
-
-| Spec            | Description                                                                                                                                                          |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Model**       | Raspberry Pi                                                                                                                                                         |
-| **OS**          | OctoPrint                                                                                                                                                            |
-| **Hostname**    | `http://132.207.154.91`                                                                                                                                              |
-| **Credentials** | [NeuroPoly Internal Document: Modix Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.125uuajyox5y) |
-
-The Modix 3D printer is remotely controlled using [OctoPrint](https://octoprint.org). To access the control interface go to the hostname and use the credentials provided above.
-
-* [SOP Modix](https://docs.google.com/document/d/1N1sCdYy1kLsIw_NDbPVM3fTg5EPaR50NNuACbf_dI6s/edit?usp=sharing)
-* {doc}`octoprint` configuration
-* [Modix adjustments](https://drive.google.com/file/d/1rtaKlBJ2HbZDDPxSDA0-g0miDM7aZjVB/view?usp=sharing)
 
 
 ## Very small 3D printer \(in technician's office\)

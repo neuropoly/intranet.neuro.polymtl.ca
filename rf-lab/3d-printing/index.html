@@ -16,27 +16,30 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=ec48f040" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../../_static/documentation_options.js?v=c607423c"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
@@ -51,6 +54,7 @@
     <link rel="prev" title="Phantoms" href="../mri-phantoms.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -66,19 +70,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -86,7 +79,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -94,8 +86,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -111,7 +103,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -139,7 +132,7 @@
     
     
     <img src="../../_static/logo.png" class="logo__image only-light" alt=""/>
-    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt=""/>`);</script>
+    <img src="../../_static/logo.png" class="logo__image only-dark pst-js-only" alt=""/>
   
   
     <p class="title logo__title">NeuroPoly Lab Manual</p>
@@ -182,7 +175,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search..."
          aria-label="Search..."
          autocomplete="off"
@@ -410,24 +402,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -451,8 +435,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-printer-big-builder-dual-feed-rf-lab">3D Printer - Big Builder - Dual feed (RF lab)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modix-big-60-v2-dual-feed-rf-lab">Modix Big-60 V2 - Dual feed (RF lab)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modix-big-60-v2-dual-feed-l5613-1">Modix Big-60 V2 - Dual feed (L5613.1)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#big-builder-dual-feed-l5613">Big Builder - Dual feed (L5613)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#very-small-3d-printer-in-technician-s-office">Very small 3D printer (in technician’s office)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#small-3d-printer-in-frederic-lesage-s-lab">Small 3D printer (in Frederic Lesage’s lab)</a></li>
 </ul>
@@ -468,29 +452,8 @@ document.write(`
                   
   <section id="d-printing">
 <h1>3D Printing<a class="headerlink" href="#d-printing" title="Link to this heading">#</a></h1>
-<section id="d-printer-big-builder-dual-feed-rf-lab">
-<h2>3D Printer - Big Builder - Dual feed (RF lab)<a class="headerlink" href="#d-printer-big-builder-dual-feed-rf-lab" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="http://3dprinter4u.nl/shop/3d-printers/big-builder-dual-feed-extruder/">http://3dprinter4u.nl/shop/3d-printers/big-builder-dual-feed-extruder/</a></p></li>
-<li><p>Before you start printing you need to do the following steps:</p></li>
-</ul>
-<ol class="arabic simple">
-<li><p>Check the paper tape mounted on the bed, change or clean if necessary</p></li>
-<li><p>Prepare - Auto Home</p></li>
-<li><p>Prepare - Preheat 210</p></li>
-</ol>
-<ul class="simple">
-<li><p><a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.c26775aojtto">Big Builder Credentials</a></p></li>
-<li><p>Use CURA to load and configure your file before printing. You can also find the CURA manual on the desktop.</p></li>
-<li><p>Reduce shifting by reducing the print &amp; travel speed to 50mm/s.</p></li>
-<li><p>Useful information for troubleshooting: <a class="reference external" href="http://support.3dverkstan.se/article/23-a-visual-ultimaker-troubleshooting-guide">http://support.3dverkstan.se/article/23-a-visual-ultimaker-troubleshooting-guide</a></p></li>
-<li><p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1gmXddcYgUFuz7tX-zO_UynaxlylWnnej0PF7d3u6ikM/edit?usp=sharing">Google Sheets: PLA Temperature</a></p></li>
-<li><p><a class="reference external" href="https://www.neuro.polymtl.ca/internal_resources/3dprinter/settings">Slic3r settings</a></p></li>
-<li><p><a class="reference external" href="https://www.neuro.polymtl.ca/internal_resources/3dprinter/print_brain">How to print a brain</a></p></li>
-</ul>
-</section>
-<section id="modix-big-60-v2-dual-feed-rf-lab">
-<h2>Modix Big-60 V2 - Dual feed (RF lab)<a class="headerlink" href="#modix-big-60-v2-dual-feed-rf-lab" title="Link to this heading">#</a></h2>
+<section id="modix-big-60-v2-dual-feed-l5613-1">
+<h2>Modix Big-60 V2 - Dual feed (L5613.1)<a class="headerlink" href="#modix-big-60-v2-dual-feed-l5613-1" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Spec</p></th>
@@ -513,11 +476,31 @@ document.write(`
 </tbody>
 </table>
 </div>
-<p>The Modix 3D printer is remotely controlled using <a class="reference external" href="https://octoprint.org">OctoPrint</a>. To access the control interface go to the hostname and use the credentials provided above.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.google.com/document/d/1N1sCdYy1kLsIw_NDbPVM3fTg5EPaR50NNuACbf_dI6s/edit?usp=sharing">SOP Modix</a></p></li>
 <li><p><a class="reference internal" href="octoprint.html"><span class="doc">OctoPrint</span></a> configuration</p></li>
 <li><p><a class="reference external" href="https://drive.google.com/file/d/1rtaKlBJ2HbZDDPxSDA0-g0miDM7aZjVB/view?usp=sharing">Modix adjustments</a></p></li>
+</ul>
+</section>
+<section id="big-builder-dual-feed-l5613">
+<h2>Big Builder - Dual feed (L5613)<a class="headerlink" href="#big-builder-dual-feed-l5613" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://3dprinter4u.nl/shop/3d-printers/big-builder-dual-feed-extruder/">http://3dprinter4u.nl/shop/3d-printers/big-builder-dual-feed-extruder/</a></p></li>
+<li><p>Before you start printing you need to do the following steps:</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Check the paper tape mounted on the bed, change or clean if necessary</p></li>
+<li><p>Prepare - Auto Home</p></li>
+<li><p>Prepare - Preheat 210</p></li>
+</ol>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.c26775aojtto">Big Builder Credentials</a></p></li>
+<li><p>Use CURA to load and configure your file before printing. You can also find the CURA manual on the desktop.</p></li>
+<li><p>Reduce shifting by reducing the print &amp; travel speed to 50mm/s.</p></li>
+<li><p>Useful information for troubleshooting: <a class="reference external" href="http://support.3dverkstan.se/article/23-a-visual-ultimaker-troubleshooting-guide">http://support.3dverkstan.se/article/23-a-visual-ultimaker-troubleshooting-guide</a></p></li>
+<li><p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1gmXddcYgUFuz7tX-zO_UynaxlylWnnej0PF7d3u6ikM/edit?usp=sharing">Google Sheets: PLA Temperature</a></p></li>
+<li><p><a class="reference external" href="https://www.neuro.polymtl.ca/internal_resources/3dprinter/settings">Slic3r settings</a></p></li>
+<li><p><a class="reference external" href="https://www.neuro.polymtl.ca/internal_resources/3dprinter/print_brain">How to print a brain</a></p></li>
 </ul>
 </section>
 <section id="very-small-3d-printer-in-technician-s-office">
@@ -575,7 +558,8 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -584,8 +568,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-printer-big-builder-dual-feed-rf-lab">3D Printer - Big Builder - Dual feed (RF lab)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modix-big-60-v2-dual-feed-rf-lab">Modix Big-60 V2 - Dual feed (RF lab)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modix-big-60-v2-dual-feed-l5613-1">Modix Big-60 V2 - Dual feed (L5613.1)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#big-builder-dual-feed-l5613">Big Builder - Dual feed (L5613)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#very-small-3d-printer-in-technician-s-office">Very small 3D printer (in technician’s office)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#small-3d-printer-in-frederic-lesage-s-lab">Small 3D printer (in Frederic Lesage’s lab)</a></li>
 </ul>
@@ -636,8 +620,8 @@ By NeuroPoly
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
   </footer>
