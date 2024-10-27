@@ -227,13 +227,13 @@ You are reimbursed for:
 * Registration fees. Note: The lab will only reimburse the cost of early fee. If you register late, you will have to pay the difference.
   * for ISMRM: make sure to be a student member– it reduces the overall cost of the conference– and make sure to do it AHEAD OF TIME (not last minute)
 * Transport (plane, train)
-* Housing
+* Housing. On that note, you are highly encouraged to share accommodation with your labmates.
 
 You are not reimbursed for:
 * Food
 
 ```{important}
-You are *strongly encouraged* to apply for a studentship to help the lab with conference expenses. It is also good for your CV.
+If the conference offers travel grants, you *have* to apply to them. If you don't, you will only be reimbursed the total amount minus the value of the travel grant. If you get the travel grant, it will be used to reimburse your conference (the rest will be paid by the lab). Note that travel awards are good for your CV.
 ```
 
 You can be reimbursed by two means:
