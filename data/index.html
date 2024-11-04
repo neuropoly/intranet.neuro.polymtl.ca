@@ -222,10 +222,10 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#"><span>💾</span> Data</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="dataset-curation.html">Dataset curation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide.html">Dataset admin guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git-datasets.html"><code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="duke.html"><code class="docutils literal notranslate"><span class="pre">duke</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="django.html"><code class="docutils literal notranslate"><span class="pre">django</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin-guide.html">Dataset admin guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deeplearning-models.html">Deep Learning Models</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../mri-scanning/README.html"><span>🧲</span> MRI Scanning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -412,7 +412,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -428,6 +430,17 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Page Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-curation">Dataset curation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-storage">Dataset storage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-management-admin">Dataset management (admin)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-learning-models">Deep learning models</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -439,27 +452,44 @@
                   
   <section id="data">
 <h1><span>💾</span> Data<a class="headerlink" href="#data" title="Link to this heading">#</a></h1>
+<section id="dataset-curation">
+<h2>Dataset curation<a class="headerlink" href="#dataset-curation" title="Link to this heading">#</a></h2>
 <p>For the details of how we structure datasets at the lab, see:</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="dataset-curation.html">Dataset curation</a></li>
 </ul>
 </div>
+</section>
+<section id="dataset-storage">
+<h2>Dataset storage<a class="headerlink" href="#dataset-storage" title="Link to this heading">#</a></h2>
+<p>MRI, microscopy and other research data are stored in the following servers:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="git-datasets.html"><code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="duke.html"><code class="docutils literal notranslate"><span class="pre">duke</span></code></a></li>
+</ul>
+</div>
+<p>And <a class="reference external" href="https://docs.google.com/spreadsheets/d/1yjcA8Z0COn4OZxusIDHjStH2DpeXvscsj-aWE2X-_sg">here</a> is a useful list of MRI data to use for various projects.</p>
+</section>
+<section id="dataset-management-admin">
+<h2>Dataset management (admin)<a class="headerlink" href="#dataset-management-admin" title="Link to this heading">#</a></h2>
 <p>For instructions on how to do various admin tasks on our data server, see:</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="admin-guide.html">Dataset admin guide</a></li>
 </ul>
 </div>
-<p>MRI, microscopy and other research data are stored in the following servers:</p>
+</section>
+<section id="deep-learning-models">
+<h2>Deep learning models<a class="headerlink" href="#deep-learning-models" title="Link to this heading">#</a></h2>
+<p>If you train deep learning models, here’s how to organize them:</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="git-datasets.html"><code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="duke.html"><code class="docutils literal notranslate"><span class="pre">duke</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="django.html"><code class="docutils literal notranslate"><span class="pre">django</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="deeplearning-models.html">Deep Learning Models</a></li>
 </ul>
 </div>
-<p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1yjcA8Z0COn4OZxusIDHjStH2DpeXvscsj-aWE2X-_sg">Here</a> is a useful list of MRI data to use for various projects.</p>
+</section>
 </section>
 
 
@@ -497,6 +527,25 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Page Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-curation">Dataset curation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-storage">Dataset storage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-management-admin">Dataset management (admin)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-learning-models">Deep learning models</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
