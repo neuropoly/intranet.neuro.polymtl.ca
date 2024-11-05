@@ -44,14 +44,35 @@ If you prefer to work on your laptop, please let the admins know in your [onboar
 
 When working remotely from off-campus you need to use the [VPN](http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn).
 
-To connect to the VPN, you need to have an account with École Polytechnique, specifically with [CAS](https://cas5.polymtl.ca/cas/login). Students should already have this. Consultants and Research Associates will need to have an account created for them. This should have happened during your onboarding.
+To connect to the VPN, you need to have an account with École Polytechnique, specifically with [CAS](https://cas5.polymtl.ca/cas/login). **Students** should already have this. **Consultants** and **Research Associates** will need to have an account created for them. This should have happened during your onboarding.
 
-You can change your password at [Gestion des Codes](https://codes.si.polymtl.ca/gestion/). Consultants and Research Associates can double-check that they have VPN access by looking for `VPN_EMPLOYEE = Actif` here. Students should have this access by default, although it will not be displayed on the Gestion des Codes page.
+You can change your CAS password at [Gestion des Codes](https://codes.si.polymtl.ca/gestion/). 
+
+The VPN uses the Cisco AnyConnect protocol, and to use it, you must first install a compatible VPN client.
+
+**Depending on your status at Polytechnique, you will be assigned to a different VPN group. Your assigned group will determine how authentication will for you, as well as which VPN clients will be compatible with your needs.**
+
+Instructions for different user scenarios are provided below.
 
 _NB: The VPN will not work if you are already accessing wifi on campus via Eduroam, it is typically intended for off-campus use only._
 
-The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing a VPN client such as `openconnect` (recommended) or `Cisco AnyConnect Secure Mobility Client` (if `openconnect` is not available for your OS/distro):
+### Background on VPN changes
 
+In September 2024, Polytechnique reconfigured their VPN management strategy. 
+
+Previously, VPN authentication worked similarly for all Neuropoly members. `Linux` and `macOS` users wishing to avoid installing proprietary `Cisco AnyConnect` software could follow the instruction provided for students (below).
+
+Because of the changes implemented by Polytechnique, these instructions _no longer work for non-students._
+
+If you are not a student, please follow the instructions provided for your specific use case.
+
+### Students
+
+Students should be approved for VPN access by default. They are assigned to the `PolySSL` group.
+
+For `Linux` and `macOS` users, `openconnect` is the recommended VPN client. 
+
+`Windows` users should typically follow the official Polytechnique instructions. Advanced users concerned about the monitoring capabilities of the `Cisco AnyConnect` client might consider adapting the instructions for a VM-based workaround documented under `Polytechnique Staff` to their needs. 
 
 ::::{tab-set}
 :::{tab-item} MacOS
@@ -107,10 +128,11 @@ To connect to the VPN, you need to run:
 ```
 ./vpn.sh
 ```
-Depending on your Linux set up, you may also be able to create a graphical interface for your VPN. The following instructions were tested on a system using `NetworkManager` and the GNOME desktop environment:
+
+Depending on your Linux set up, you may also be able to create a graphical interface for your VPN. The following instructions were tested on a system using `NetworkManager` and the `GNOME` desktop environment:
 1. Install the [NetworkManager openconnect plugin](https://gitlab.gnome.org/GNOME/NetworkManager-openvpn/). For example, with: 
 ```
-sudo apt install network-manager-openconnect-gnome
+apt install network-manager-openconnect-gnome
 ```
 2. Under `Settings` go to `Network`.
 3. Under `VPN` select `+` to `Add VPN`.
@@ -127,7 +149,7 @@ sudo apt install network-manager-openconnect-gnome
 
 :::{tab-item} Windows
 
-Please follow the official steps from PolyMTL ([French](https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/rentree/documentLibrary/Aide-m%C3%A9moire%20tutoriels%20A2020/Aide-Memoire_VPN.pdf?a=true&guest=true) or [English](https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/rentree/documentLibrary/Aide-m%C3%A9moire%20tutoriels%20A2020/Checklist_VPN.pdf?a=true&guest=true).
+Please follow the official steps from PolyMTL ([French](https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/rentree/documentLibrary/Aide-m%C3%A9moire%20tutoriels%20A2020/Aide-Memoire_VPN.pdf?a=true&guest=true) or [English](https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/rentree/documentLibrary/Aide-m%C3%A9moire%20tutoriels%20A2020/Checklist_VPN.pdf?a=true&guest=true)).
 
 In case the above links ever break, the steps are:
 
@@ -142,6 +164,118 @@ In case the above links ever break, the steps are:
 :::
 ::::
 
+### Polytechnique Staff 
+
+Polytechnique staff (including **Professors**, **Research Associates**, and **Post-Docs**) are assigned to the `PolyQuartz` group.
+
+The `PolyQuartz` group relies on an authentication flow that makes use of your `Okta` account. The authentication flow is _not natively supported by the `openconnect` client_. 
+
+Users wishing to avoid installing the officially provisioned `Cisco AnyConnect` client can consider several known workarounds.
+
+`Linux` and `macOS` users can use a workaround involving the `openconnect` client and manual cookie extraction.
+
+All users can implement a workaround involving running the `Cisco AnyConnect` client inside a Virtual Machine.
+
+::::{tab-set}
+:::{tab-item} `openconnect` client and manual cookie extraction
+
+This workaround allows you to complete the `Okta`-based authentication flow while using the `openconnect` client. 
+
+It should be effective for `Linux` and `macOS` users.
+
+1. Ensure that the `openconnect` client is installed on your computer.
+2. Visit https://ssl.vpn.polymtl.ca in a browser
+3. Select `PolyQuartz` and press `Logon`
+4. Logon with your `Okta` credentials
+5. On the `Cisco Secure Client Download` page, open your browser's `DevTools`.
+6. Find the `webvpn` cookie and copy its value. 
+7. Pass this value to the following command on stdin (either by typing it, or piping to it):
+```
+sudo openconnect --protocol=anyconnect --authgroup=PolyQuartz --cookie-on-stdin https://ssl.vpn.polymtl.ca/
+```
+
+A script to automate this process can be found [here](https://github.com/SomeoneInParticular/AutoPolyVPN/tree/master).
+:::
+
+:::{tab-item} running the `Cisco AnyConnect` client in a VM
+
+This workaround allows you to isolate the `Cisco AnyConnect` client in a virtual machine. Additionally it allows you to determine which traffic you send through the VPN. 
+
+It should be effective for `Linux`, `macOS` and `Windows` users.
+
+It is recommended for advanced users.  
+
+1. Create an `Ubuntu` virtual machine using your preferred Virtual Machine Manager (these instructions were tested with QEMU-KVM, but other VMMs should work fine as well).
+2. Network settings for your VM should be set to use `NAT`. 
+3. Inside your new VM, follow [the official Polytechnique instructions](https://www.polymtl.ca/si/acces-securise-rvp-ou-vpn) to install the `Cisco AnyConnect` client. 
+4. Set up your VM as an `SSH server`.
+```
+apt install openssh-server
+```
+```
+systemctl enable ssh
+```
+```
+systemctl start ssh
+```
+5. Get the ip address of your VM (`ip a`) and write it down.
+6. On the host, generate an SSH key pair, (or select an existing key pair to use) then transfer the public key to your VM using `ssh-copy-id`. You can **modify** the following commands with the correct info to do this (replace the ip with the one you just wrote down):
+```
+ssh-keygen -t ed25519 -C "vmuser@vmname" -f ~/.ssh/vmuser_ed25519
+```
+```
+ssh-copy-id -i ~/.ssh/vmuser_ed25519.pub -o PreferredAuthentications=password vmuser@192.168.122.210
+```
+7. Test that you can successfully SSH into the VM.
+8. In your SSH config file (`~/.ssh/config`) configure your VM as a proxy jump for traffic directed to NeuroPoly servers. You can **modify** the following config for your purposes:
+```
+# Needed for proxy jump with AnyConnect vm
+
+# You can call this Host whatever you want, as long as you use the same name for the ProxyJump
+# Replace the HostName with your VM's IP
+# Replace the User with the username on your VM
+# Replace the IdentityFile with the correct path to the relevant SSH key
+Host vmname
+    HostName 192.168.122.210
+    User vmuser
+    IdentityFile ~/.ssh/vmuser_ed25519
+
+# This allows you to proxy ssh traffic to NeuroPoly servers
+Host *.neuro.polymtl.ca 132.207.*
+    ProxyJump vmname
+
+# Needed to use git with data
+
+# Replace the IdentityFile with the correct path to the SSH key you use on data
+Host data.neuro.polymtl.ca
+    User git
+    IdentityFile ~/.ssh/my_ssh_key_for_data
+```
+
+_NB: If you sometimes work on campus, this config will interfere with your onsite access if not disabled. If you want to make it easier to manage alternate ssh config settings, you can create a different config file that includes these settings, and then point to it with the `ssh -F` option._ 
+
+Once you have finished with configuration, you can test your set up. For it to work, you will need to first start your VM and enable the VPN connection using the `Cisco AnyConnect` client inside your VM.
+
+You will then be able to proxy NeuroPoly-destined ssh traffic from your main host through your VM, which will make it easier to connect to NeuroPoly resources without significantly altering your workflow. You can test making an ssh connection to a NeuroPoly server to confirm that this works. 
+
+Additionally, you can use port forwarding to form other kinds of connections through your VM. (e.g. for `XRDP` connections, or to access `data` in your browser) 
+
+:::
+
+:::{tab-item} official Polytechnique instructions
+The official Polytechnique instructions for configuring the `Cisco AnyConnect` client [can be found here](https://www.polymtl.ca/si/acces-securise-rvp-ou-vpn).
+:::
+::::
+
+### Other Members
+
+If you are an **Intern**, a **Contractor**, or are otherwise considered an **Invité** by Polytechnique, this section applies to you. These users are not granted VPN access by default. A specific request must be submitted to [DGE IT](mailto:dge.informatique@polymtl.ca) to give you VPN access (someone on the admin team should help you with this during your onboarding).
+
+Once you are approved for VPN access, DGE IT will provide personalized instructions for you specific use case. Most likely, you will be be added to the `PolyPhoton` group. Like `PolyQuartz`, this group uses `Okta` for authentication. 
+
+If you do not wish to use the official `Cisco AnyConnect` client, you may be able to adapt the instructions under the `Polytechnique Staff` section for your purposes. However, please note that the workarounds described for `PolyQuartz` users have not been adequately tested for `PolyPhoton` users. 
+
+DGE IT's protocols for integration of VPN users with an `invité` status are currently under development, so at the moment we cannot provide much assurance for alternative configurations for these users, and it is probably safest to follow the official instructions provided by DGE IT and Polytechnique. 
 
 ## Connect to NeuroPoly Computers
 
