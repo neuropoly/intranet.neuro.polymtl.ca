@@ -48,7 +48,7 @@ To connect to the VPN, you need to have an account with École Polytechnique, sp
 
 You can change your CAS password at [Gestion des Codes](https://codes.si.polymtl.ca/gestion/). 
 
-The VPN uses the Cisco AnyConnect protocol, and to use it, you must first install a compatible VPN client.
+The VPN uses the `Cisco AnyConnect` protocol, and to use it, you must first install a compatible VPN client.
 
 **Depending on your status at Polytechnique, you will be assigned to a different VPN group. Your assigned group will determine how authentication will for you, as well as which VPN clients will be compatible with your needs.**
 
@@ -62,7 +62,7 @@ In September 2024, Polytechnique reconfigured their VPN management strategy.
 
 Previously, VPN authentication worked similarly for all Neuropoly members. `Linux` and `macOS` users wishing to avoid installing proprietary `Cisco AnyConnect` software could follow the instruction provided for students (below).
 
-Because of the changes implemented by Polytechnique, these instructions _no longer work for non-students._
+Because of the changes implemented by Polytechnique, these instructions **no longer work for non-students.**
 
 If you are not a student, please follow the instructions provided for your specific use case.
 
@@ -206,50 +206,49 @@ It should be effective for `Linux`, `macOS` and `Windows` users.
 It is recommended for advanced users.  
 
 1. Create an `Ubuntu` virtual machine using your preferred Virtual Machine Manager (these instructions were tested with QEMU-KVM, but other VMMs should work fine as well).
-2. Network settings for your VM should be set to use `NAT`. 
+2. Under network settings, your VM should be set to use `NAT`. 
 3. Inside your new VM, follow [the official Polytechnique instructions](https://www.polymtl.ca/si/acces-securise-rvp-ou-vpn) to install the `Cisco AnyConnect` client. 
 4. Set up your VM as an `SSH server`.
 ```
-apt install openssh-server
+sudo apt install openssh-server
 ```
 ```
-systemctl enable ssh
+sudo systemctl enable ssh
 ```
 ```
-systemctl start ssh
+sudo systemctl start ssh
 ```
 5. Get the ip address of your VM (`ip a`) and write it down.
-6. On the host, generate an SSH key pair, (or select an existing key pair to use) then transfer the public key to your VM using `ssh-copy-id`. You can **modify** the following commands with the correct info to do this (replace the ip with the one you just wrote down):
+6. On the host, generate an SSH key pair, (or select an existing key pair to use) then transfer the public key to your VM using `ssh-copy-id`. You can **modify** the following commands with the correct info to do this:
 ```
-ssh-keygen -t ed25519 -C "vmuser@vmname" -f ~/.ssh/vmuser_ed25519
+ssh-keygen -t ed25519 -C "<VM_USER>@<VM_NAME>" -f ~/.ssh/<VM_USER>_ed25519
 ```
 ```
-ssh-copy-id -i ~/.ssh/vmuser_ed25519.pub -o PreferredAuthentications=password vmuser@192.168.122.210
+ssh-copy-id -i ~/.ssh/<VM_USER>_ed25519.pub -o PreferredAuthentications=password <VM_USER>@<VM_IP>
 ```
 7. Test that you can successfully SSH into the VM.
 8. In your SSH config file (`~/.ssh/config`) configure your VM as a proxy jump for traffic directed to NeuroPoly servers. You can **modify** the following config for your purposes:
 ```
 # Needed for proxy jump with AnyConnect vm
 
-# You can call this Host whatever you want, as long as you use the same name for the ProxyJump
 # Replace the HostName with your VM's IP
 # Replace the User with the username on your VM
 # Replace the IdentityFile with the correct path to the relevant SSH key
-Host vmname
-    HostName 192.168.122.210
-    User vmuser
-    IdentityFile ~/.ssh/vmuser_ed25519
+Host jumpvm
+    HostName <VM_IP>
+    User <VM_USER>
+    IdentityFile ~/.ssh/<VM_USER>_ed25519
 
 # This allows you to proxy ssh traffic to NeuroPoly servers
 Host *.neuro.polymtl.ca 132.207.*
-    ProxyJump vmname
+    ProxyJump jumpvm
 
 # Needed to use git with data
 
 # Replace the IdentityFile with the correct path to the SSH key you use on data
 Host data.neuro.polymtl.ca
     User git
-    IdentityFile ~/.ssh/my_ssh_key_for_data
+    IdentityFile ~/.ssh/<KEY_FILE>
 ```
 
 _NB: If you sometimes work on campus, this config will interfere with your onsite access if not disabled. If you want to make it easier to manage alternate ssh config settings, you can create a different config file that includes these settings, and then point to it with the `ssh -F` option._ 
@@ -269,19 +268,19 @@ The official Polytechnique instructions for configuring the `Cisco AnyConnect` c
 
 ### Other Members
 
-If you are an **Intern**, a **Contractor**, or are otherwise considered an **Invité** by Polytechnique, this section applies to you. These users are not granted VPN access by default. A specific request must be submitted to [DGE IT](mailto:dge.informatique@polymtl.ca) to give you VPN access (someone on the admin team should help you with this during your onboarding).
+If you are an **Intern**, a **Contractor**, or are otherwise considered an **"Invité"** by Polytechnique, this section applies to you. Users in your category are **not** granted VPN access by default. A specific request must be submitted to [DGE IT](mailto:dge.informatique@polymtl.ca) to give you VPN access. (Normally, someone on the admin team should help you with this during your onboarding).
 
 Once you are approved for VPN access, DGE IT will provide personalized instructions for you specific use case. Most likely, you will be be added to the `PolyPhoton` group. Like `PolyQuartz`, this group uses `Okta` for authentication. 
 
 If you do not wish to use the official `Cisco AnyConnect` client, you may be able to adapt the instructions under the `Polytechnique Staff` section for your purposes. However, please note that the workarounds described for `PolyQuartz` users have not been adequately tested for `PolyPhoton` users. 
 
-DGE IT's protocols for integration of VPN users with an `invité` status are currently under development, so at the moment we cannot provide much assurance for alternative configurations for these users, and it is probably safest to follow the official instructions provided by DGE IT and Polytechnique. 
+DGE IT's protocols for integration of VPN users with an **"Invité"** status are currently under development, so at the moment we cannot provide much assurance that alternative VPN configurations will work for these users. The most reliable option is to follow the official instructions provided by DGE IT [and Polytechnique](https://www.polymtl.ca/si/acces-securise-rvp-ou-vpn). 
 
 ## Connect to NeuroPoly Computers
 
 ### Locally
 
-To log into a desktop station while at NeuroPoly use your GE account.
+To log into a desktop station while at NeuroPoly, use your GE account.
 
 ### SSH (command line)
 
