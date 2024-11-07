@@ -166,7 +166,7 @@ In case the above links ever break, the steps are:
 
 ### Polytechnique Staff 
 
-Polytechnique staff (including **Professors**, **Research Associates**, and **Post-Docs**) are assigned to the `PolyQuartz` group.
+Polytechnique staff (including **Professors**, **Research Associates**, and **Postdoctoral Researchers**) are assigned to the `PolyQuartz` group.
 
 The `PolyQuartz` group relies on an authentication flow that makes use of your `Okta` account. The authentication flow is _not natively supported by the `openconnect` client_. 
 
