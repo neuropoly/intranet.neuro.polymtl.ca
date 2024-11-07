@@ -287,7 +287,7 @@ The official Polytechnique instructions for configuring the `Cisco AnyConnect` c
 
 ### Other Members
 
-If you are an **Intern**, a **Contractor**, or are otherwise considered an **"Invité"** by Polytechnique, this section applies to you. Users in your category are **not** granted VPN access by default. A specific request must be submitted to [DGE IT](mailto:dge.informatique@polymtl.ca) to give you VPN access. (Normally, someone on the admin team should help you with this during your onboarding).
+If you are an **Intern**, a **Consultant**, or are otherwise considered an **"Invité"** by Polytechnique, this section applies to you. Users in your category are **not** granted VPN access by default. A specific request must be submitted to [DGE IT](mailto:dge.informatique@polymtl.ca) to give you VPN access. (Normally, someone on the admin team should help you with this during your onboarding).
 
 Once you are approved for VPN access, DGE IT will provide personalized instructions for your specific use case. Most likely, you will be be added to the `PolyPhoton` group. Like `PolyQuartz`, this group uses `Okta` for authentication. 
 
