@@ -257,11 +257,30 @@ Once you have finished with configuration, you can test your set up. For it to w
 
 You will then be able to proxy NeuroPoly-destined ssh traffic from your main host through your VM, which will make it easier to connect to NeuroPoly resources without significantly altering your workflow. You can test making an ssh connection to a NeuroPoly server to confirm that this works. 
 
-Additionally, you can use port forwarding to form other kinds of connections through your VM. (e.g. for `XRDP` connections, or to access `data` in your browser) 
+Additionally, you can use port forwarding to form other kinds of connections through your VM. (e.g. for `RDP` connections, to access `duke` or to access `data` in your browser). For example:
 
+**To connect to a station using `RDP`**
+```
+ssh -NL 3389:localhost:3389 <GE_USERNAME@<STATION>.neuro.polymtl.ca
+```
+Then in your `RDP` client put `localhost:3389` for the server.
+
+**To connect to `duke`**
+```
+ssh -NL 1445:duke.neuro.polymtl.ca:445 <VM_USER>@jumpvm  
+```
+Then follow standard instructions for `duke` but replace `duke.neuro.polymtl.ca` with `localhost:1445` (e.g. `smb://localhost:1445/<FOLDER>`).
+
+**To access `data` in your browser**
+```
+ssh -NL 3000:localhost:3000 <GE_USERNAME>@data.neuro.polymtl.ca
+```
+Then in your browser go to: `http://localhost:3000`
+ 
 :::
 
 :::{tab-item} official Polytechnique instructions
+
 The official Polytechnique instructions for configuring the `Cisco AnyConnect` client [can be found here](https://www.polymtl.ca/si/acces-securise-rvp-ou-vpn).
 :::
 ::::
@@ -270,7 +289,7 @@ The official Polytechnique instructions for configuring the `Cisco AnyConnect` c
 
 If you are an **Intern**, a **Contractor**, or are otherwise considered an **"Invité"** by Polytechnique, this section applies to you. Users in your category are **not** granted VPN access by default. A specific request must be submitted to [DGE IT](mailto:dge.informatique@polymtl.ca) to give you VPN access. (Normally, someone on the admin team should help you with this during your onboarding).
 
-Once you are approved for VPN access, DGE IT will provide personalized instructions for you specific use case. Most likely, you will be be added to the `PolyPhoton` group. Like `PolyQuartz`, this group uses `Okta` for authentication. 
+Once you are approved for VPN access, DGE IT will provide personalized instructions for your specific use case. Most likely, you will be be added to the `PolyPhoton` group. Like `PolyQuartz`, this group uses `Okta` for authentication. 
 
 If you do not wish to use the official `Cisco AnyConnect` client, you may be able to adapt the instructions under the `Polytechnique Staff` section for your purposes. However, please note that the workarounds described for `PolyQuartz` users have not been adequately tested for `PolyPhoton` users. 
 
