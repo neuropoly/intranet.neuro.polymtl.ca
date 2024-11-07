@@ -194,7 +194,7 @@ It should be effective for `Linux` and `macOS` users.
 sudo openconnect --protocol=anyconnect --authgroup=PolyQuartz --cookie-on-stdin https://ssl.vpn.polymtl.ca/
 ```
 
-A script to automate this process can be found [here](https://github.com/SomeoneInParticular/AutoPolyVPN/tree/master).
+A script to automate this process can be [found here](https://github.com/SomeoneInParticular/AutoPolyVPN).
 :::
 
 :::{tab-item} running the `Cisco AnyConnect` client in a VM
