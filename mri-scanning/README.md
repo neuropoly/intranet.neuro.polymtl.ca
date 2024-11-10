@@ -50,6 +50,8 @@ If you scan at UNF, you also need to fill up the UNF log book, which you can acc
 
 ## ​Ethics
 
-Check our [internal ethics documents](https://docs.google.com/document/d/16Gkday0rOIOy\_Mn8yOUtXQ9il\_fbOufaHTe\_Ek5pAB0/edit?usp=sharing) (requires NeuroPoly credentials).[\
-](https://neuropoly.gitbook.io/neuropoly-lab/mri-coils/7t-agilent-icm)
+Check our internal ethics documents (requires NeuroPoly credentials):
 
+[Julien Cohen-Adad](https://docs.google.com/document/d/16Gkday0rOIOy\_Mn8yOUtXQ9il\_fbOufaHTe\_Ek5pAB0/edit?usp=sharing)[\
+](https://neuropoly.gitbook.io/neuropoly-lab/mri-coils/7t-agilent-icm)
+[Eva Alonso Ortiz](https://docs.google.com/document/d/1cbg-Mzv7XjKBo6hPEeJ-Dt039AK659LaBETfkH651dQ/edit?tab=t.0)
