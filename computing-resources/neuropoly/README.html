@@ -442,7 +442,13 @@
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-computers-at-neuropoly">List of Computers at NeuroPoly</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vpn">VPN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vpn">VPN</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background-on-vpn-changes">Background on VPN changes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#students">Students</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polytechnique-staff">Polytechnique Staff</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-members">Other Members</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-neuropoly-computers">Connect to NeuroPoly Computers</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#locally">Locally</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh-command-line">SSH (command line)</a></li>
@@ -529,10 +535,30 @@
 <section id="vpn">
 <h2>VPN<a class="headerlink" href="#vpn" title="Link to this heading">#</a></h2>
 <p>When working remotely from off-campus you need to use the <a class="reference external" href="http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn">VPN</a>.</p>
-<p>To connect to the VPN, you need to have an account with École Polytechnique, specifically with <a class="reference external" href="https://cas5.polymtl.ca/cas/login">CAS</a>. Students should already have this. Consultants and Research Associates will need to have an account created for them. This should have happened during your onboarding.</p>
-<p>You can change your password at <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a>. Consultants and Research Associates can double-check that they have VPN access by looking for <code class="docutils literal notranslate"><span class="pre">VPN_EMPLOYEE</span> <span class="pre">=</span> <span class="pre">Actif</span></code> here. Students should have this access by default, although it will not be displayed on the Gestion des Codes page.</p>
-<p><em>NB: The VPN will not work if you are already accessing wifi on campus via Eduroam, it is typically intended for off-campus use only.</em></p>
-<p>The VPN is a Cisco AnyConnect server. For Linux and macOS you can reach it by first installing a VPN client such as <code class="docutils literal notranslate"><span class="pre">openconnect</span></code> (recommended) or <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">AnyConnect</span> <span class="pre">Secure</span> <span class="pre">Mobility</span> <span class="pre">Client</span></code> (if <code class="docutils literal notranslate"><span class="pre">openconnect</span></code> is not available for your OS/distro):</p>
+<p>To connect to the VPN, you need to have an account with École Polytechnique, specifically with <a class="reference external" href="https://cas5.polymtl.ca/cas/login">CAS</a>. <strong>Students</strong> should already have this. <strong>Consultants</strong> and <strong>Research Associates</strong> will need to have an account created for them. This should have happened during your onboarding.</p>
+<p>You can change your CAS password at <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a>.</p>
+<p>The VPN uses the <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">AnyConnect</span></code> protocol, and to use it, you must first install a compatible VPN client.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Depending on your status at Polytechnique, you will be assigned to a different VPN group. Your assigned group will determine how authentication will work for you, as well as which VPN clients will be compatible with your needs.</p>
+<p>Instructions for different user scenarios are provided below.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The VPN will not work if you are already accessing wifi on campus via <code class="docutils literal notranslate"><span class="pre">eduroam</span></code>, it is typically intended for off-campus use only.</p>
+</div>
+<section id="background-on-vpn-changes">
+<h3>Background on VPN changes<a class="headerlink" href="#background-on-vpn-changes" title="Link to this heading">#</a></h3>
+<p>In September 2024, Polytechnique reconfigured their VPN management strategy.</p>
+<p>Previously, VPN authentication worked similarly for all Neuropoly members. <code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">macOS</span></code> users wishing to avoid installing proprietary <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">AnyConnect</span></code> software could follow the instruction provided for students (below).</p>
+<p>Because of the changes implemented by Polytechnique, these instructions <strong>no longer work for non-students.</strong></p>
+<p>If you are not a student, please follow the instructions provided for your specific use case.</p>
+</section>
+<section id="students">
+<h3>Students<a class="headerlink" href="#students" title="Link to this heading">#</a></h3>
+<p>Students should be approved for VPN access by default. They are assigned to the <code class="docutils literal notranslate"><span class="pre">PolySSL</span></code> group.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">macOS</span></code> users, <code class="docutils literal notranslate"><span class="pre">openconnect</span></code> is the recommended VPN client.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Windows</span></code> users should typically follow the official Polytechnique instructions. Advanced users concerned about the monitoring capabilities of the <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">AnyConnect</span></code> client might consider adapting the instructions for a VM-based workaround documented under <code class="docutils literal notranslate"><span class="pre">Polytechnique</span> <span class="pre">Staff</span></code> to their needs.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
@@ -586,11 +612,11 @@ Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">vpn</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
-<p>Depending on your Linux set up, you may also be able to create a graphical interface for your VPN. The following instructions were tested on a system using <code class="docutils literal notranslate"><span class="pre">NetworkManager</span></code> and the GNOME desktop environment:</p>
+<p>Depending on your Linux set up, you may also be able to create a graphical interface for your VPN. The following instructions were tested on a system using <code class="docutils literal notranslate"><span class="pre">NetworkManager</span></code> and the <code class="docutils literal notranslate"><span class="pre">GNOME</span></code> desktop environment:</p>
 <ol class="arabic simple">
 <li><p>Install the <a class="reference external" href="https://gitlab.gnome.org/GNOME/NetworkManager-openvpn/">NetworkManager openconnect plugin</a>. For example, with:</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">network</span><span class="o">-</span><span class="n">manager</span><span class="o">-</span><span class="n">openconnect</span><span class="o">-</span><span class="n">gnome</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">network</span><span class="o">-</span><span class="n">manager</span><span class="o">-</span><span class="n">openconnect</span><span class="o">-</span><span class="n">gnome</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
@@ -609,7 +635,7 @@ Linux</label><div class="sd-tab-content docutils">
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-2">
 Windows</label><div class="sd-tab-content docutils">
-<p>Please follow the official steps from PolyMTL (<a class="reference external" href="https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/rentree/documentLibrary/Aide-m%C3%A9moire%20tutoriels%20A2020/Aide-Memoire_VPN.pdf?a=true&amp;amp;guest=true">French</a> or <a class="reference external" href="https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/rentree/documentLibrary/Aide-m%C3%A9moire%20tutoriels%20A2020/Checklist_VPN.pdf?a=true&amp;amp;guest=true">English</a>.</p>
+<p>Please follow the official steps from PolyMTL (<a class="reference external" href="https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/rentree/documentLibrary/Aide-m%C3%A9moire%20tutoriels%20A2020/Aide-Memoire_VPN.pdf?a=true&amp;amp;guest=true">French</a> or <a class="reference external" href="https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/rentree/documentLibrary/Aide-m%C3%A9moire%20tutoriels%20A2020/Checklist_VPN.pdf?a=true&amp;amp;guest=true">English</a>).</p>
 <p>In case the above links ever break, the steps are:</p>
 <ol class="arabic simple">
 <li><p>Install “Cisco AnyConnect Secure Mobility Client”.</p>
@@ -630,11 +656,146 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </section>
+<section id="polytechnique-staff">
+<h3>Polytechnique Staff<a class="headerlink" href="#polytechnique-staff" title="Link to this heading">#</a></h3>
+<p>Polytechnique staff (including <strong>Professors</strong>, <strong>Research Associates</strong>, and <strong>Postdoctoral Researchers</strong>) are assigned to the <code class="docutils literal notranslate"><span class="pre">PolyQuartz</span></code> group.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">PolyQuartz</span></code> group relies on an authentication flow that makes use of your <code class="docutils literal notranslate"><span class="pre">Okta</span></code> account. The authentication flow is <em>not natively supported by the <code class="docutils literal notranslate"><span class="pre">openconnect</span></code> client</em>.</p>
+<p>Users wishing to avoid installing the officially provisioned <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">AnyConnect</span></code> client can consider several known workarounds.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">macOS</span></code> users can use a workaround involving the <code class="docutils literal notranslate"><span class="pre">openconnect</span></code> client and manual cookie extraction.</p>
+<p>All users can implement a workaround involving running the <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">AnyConnect</span></code> client inside a Virtual Machine.</p>
+<p><em>Instructions for each of these options are as follows:</em></p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Openconnect with cookie extraction</label><div class="sd-tab-content docutils">
+<p>This workaround allows you to complete the <code class="docutils literal notranslate"><span class="pre">Okta</span></code>-based authentication flow while using the <code class="docutils literal notranslate"><span class="pre">openconnect</span></code> client.</p>
+<p>It should be effective for <code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">macOS</span></code> users.</p>
+<ol class="arabic simple">
+<li><p>Ensure that the <code class="docutils literal notranslate"><span class="pre">openconnect</span></code> client is installed on your computer.</p></li>
+<li><p>Visit https://ssl.vpn.polymtl.ca in a browser</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">PolyQuartz</span></code> and press <code class="docutils literal notranslate"><span class="pre">Logon</span></code></p></li>
+<li><p>Logon with your <code class="docutils literal notranslate"><span class="pre">Okta</span></code> credentials</p></li>
+<li><p>On the <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">Secure</span> <span class="pre">Client</span> <span class="pre">Download</span></code> page, open your browser’s <code class="docutils literal notranslate"><span class="pre">DevTools</span></code>.</p></li>
+<li><p>Find the <code class="docutils literal notranslate"><span class="pre">webvpn</span></code> cookie and copy its value.</p></li>
+<li><p>Pass this value to the following command on stdin (either by typing it, or piping to it):</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>openconnect<span class="w"> </span>--protocol<span class="o">=</span>anyconnect<span class="w"> </span>--authgroup<span class="o">=</span>PolyQuartz<span class="w"> </span>--cookie-on-stdin<span class="w"> </span>https://ssl.vpn.polymtl.ca/
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A script to automate this process can be <a class="reference external" href="https://github.com/SomeoneInParticular/AutoPolyVPN">found here</a>.</p>
+</div>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+Cisco AnyConnect in a VM</label><div class="sd-tab-content docutils">
+<p>This workaround allows you to isolate the <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">AnyConnect</span></code> client in a virtual machine. Additionally it allows you to determine which traffic you send through the VPN.</p>
+<p>It should be effective for <code class="docutils literal notranslate"><span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">macOS</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows</span></code> users.</p>
+<p>It is recommended for advanced users.</p>
+<ol class="arabic simple">
+<li><p>Create an <code class="docutils literal notranslate"><span class="pre">Ubuntu</span></code> virtual machine using your preferred Virtual Machine Manager (these instructions were tested with QEMU-KVM, but other VMMs should work fine as well).</p></li>
+<li><p>Under network settings, your VM should be set to use <code class="docutils literal notranslate"><span class="pre">NAT</span></code>.</p></li>
+<li><p>Inside your new VM, follow <a class="reference external" href="https://www.polymtl.ca/si/acces-securise-rvp-ou-vpn">the official Polytechnique instructions</a> to install the <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">AnyConnect</span></code> client.</p></li>
+<li><p>Set up your VM as an <code class="docutils literal notranslate"><span class="pre">SSH</span> <span class="pre">server</span></code>.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>openssh-server
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>ssh
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>ssh
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Get the ip address of your VM (<code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">a</span></code>) and write it down.</p></li>
+<li><p>On the host, generate an SSH key pair, (or select an existing key pair to use) then transfer the public key to your VM using <code class="docutils literal notranslate"><span class="pre">ssh-copy-id</span></code>. You can <strong>modify</strong> the following commands with the correct info to do this:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;&lt;VM_USER&gt;@&lt;VM_NAME&gt;&quot;</span><span class="w"> </span>-f<span class="w"> </span>~/.ssh/&lt;VM_USER&gt;_ed25519
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-copy-id<span class="w"> </span>-i<span class="w"> </span>~/.ssh/&lt;VM_USER&gt;_ed25519.pub<span class="w"> </span>-o<span class="w"> </span><span class="nv">PreferredAuthentications</span><span class="o">=</span>password<span class="w"> </span>&lt;VM_USER&gt;@&lt;VM_IP&gt;
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Test that you can successfully SSH into the VM.</p></li>
+<li><p>In your SSH config file (<code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code>) configure your VM as a proxy jump for traffic directed to NeuroPoly servers. You can <strong>modify</strong> the following config for your purposes:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Needed for proxy jump with AnyConnect vm</span>
+
+<span class="c1"># Replace the HostName with your VM&#39;s IP</span>
+<span class="c1"># Replace the User with the username on your VM</span>
+<span class="c1"># Replace the IdentityFile with the correct path to the relevant SSH key</span>
+Host<span class="w"> </span>jumpvm
+<span class="w">    </span>HostName<span class="w"> </span>&lt;VM_IP&gt;
+<span class="w">    </span>User<span class="w"> </span>&lt;VM_USER&gt;
+<span class="w">    </span>IdentityFile<span class="w"> </span>~/.ssh/&lt;VM_USER&gt;_ed25519
+
+<span class="c1"># This allows you to proxy ssh traffic to NeuroPoly servers</span>
+Host<span class="w"> </span>*.neuro.polymtl.ca<span class="w"> </span><span class="m">132</span>.207.*
+<span class="w">    </span>ProxyJump<span class="w"> </span>jumpvm
+
+<span class="c1"># Needed to use git with data</span>
+
+<span class="c1"># Replace the IdentityFile with the correct path to the SSH key you use on data</span>
+Host<span class="w"> </span>data.neuro.polymtl.ca
+<span class="w">    </span>User<span class="w"> </span>git
+<span class="w">    </span>IdentityFile<span class="w"> </span>~/.ssh/&lt;KEY_FILE&gt;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you sometimes work on campus, this config will interfere with your onsite access if not disabled. If you want to make it easier to manage alternate ssh config settings, you can create a different config file that includes these settings, and then point to it with the <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-F</span></code> option.</p>
+</div>
+<p>Once you have finished with configuration, you can test your set up. For it to work, you will need to first start your VM and enable the VPN connection using the <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">AnyConnect</span></code> client inside your VM.</p>
+<p>You will then be able to proxy NeuroPoly-destined ssh traffic from your main host through your VM, which will make it easier to connect to NeuroPoly resources without significantly altering your workflow. You can test making an ssh connection to a NeuroPoly server to confirm that this works.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can use port forwarding to form other kinds of connections through your VM. (e.g. for <code class="docutils literal notranslate"><span class="pre">RDP</span></code> connections, to access <code class="docutils literal notranslate"><span class="pre">duke</span></code> or to access <code class="docutils literal notranslate"><span class="pre">data</span></code> in your browser). Examples follow.</p>
+</div>
+<p><strong>To connect to a station using <code class="docutils literal notranslate"><span class="pre">RDP</span></code></strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>-NL<span class="w"> </span><span class="m">3389</span>:localhost:3389<span class="w"> </span>&lt;GE_USERNAME@&lt;STATION&gt;.neuro.polymtl.ca
+</pre></div>
+</div>
+<p>Then in your <code class="docutils literal notranslate"><span class="pre">RDP</span></code> client put <code class="docutils literal notranslate"><span class="pre">localhost:3389</span></code> for the server.</p>
+<p><strong>To connect to <code class="docutils literal notranslate"><span class="pre">duke</span></code></strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>-NL<span class="w"> </span><span class="m">1445</span>:duke.neuro.polymtl.ca:445<span class="w"> </span>&lt;VM_USER&gt;@jumpvm<span class="w">  </span>
+</pre></div>
+</div>
+<p>Then follow standard instructions for <code class="docutils literal notranslate"><span class="pre">duke</span></code> but replace <code class="docutils literal notranslate"><span class="pre">duke.neuro.polymtl.ca</span></code> with <code class="docutils literal notranslate"><span class="pre">localhost:1445</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">smb://localhost:1445/&lt;FOLDER&gt;</span></code>).</p>
+<p><strong>To access <code class="docutils literal notranslate"><span class="pre">data</span></code> in your browser</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>-NL<span class="w"> </span><span class="m">3000</span>:localhost:3000<span class="w"> </span>&lt;GE_USERNAME&gt;@data.neuro.polymtl.ca
+</pre></div>
+</div>
+<p>Then in your browser go to: <code class="docutils literal notranslate"><span class="pre">http://localhost:3000</span></code></p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-5">
+Official instructions</label><div class="sd-tab-content docutils">
+<p>The official Polytechnique instructions for configuring the <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">AnyConnect</span></code> client <a class="reference external" href="https://www.polymtl.ca/si/acces-securise-rvp-ou-vpn">can be found here</a>.</p>
+</div>
+</div>
+</section>
+<section id="other-members">
+<h3>Other Members<a class="headerlink" href="#other-members" title="Link to this heading">#</a></h3>
+<p>If you are an <strong>Intern</strong>, a <strong>Consultant</strong>, or are otherwise considered an <strong>“Invité”</strong> by Polytechnique, this section applies to you. Users in your category are <strong>not</strong> granted VPN access by default. A specific request must be submitted to <a class="reference external" href="mailto:dge&#46;informatique&#37;&#52;&#48;polymtl&#46;ca">DGE IT</a> to give you VPN access. (Normally, someone on the admin team should help you with this during your onboarding).</p>
+<p>Once you are approved for VPN access, DGE IT will provide personalized instructions for your specific use case. Most likely, you will be be added to the <code class="docutils literal notranslate"><span class="pre">PolyPhoton</span></code> group. Like <code class="docutils literal notranslate"><span class="pre">PolyQuartz</span></code>, this group uses <code class="docutils literal notranslate"><span class="pre">Okta</span></code> for authentication.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you do not wish to use the official <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">AnyConnect</span></code> client, you may be able to adapt the instructions under the <code class="docutils literal notranslate"><span class="pre">Polytechnique</span> <span class="pre">Staff</span></code> section for your purposes. However, please note that the workarounds described for <code class="docutils literal notranslate"><span class="pre">PolyQuartz</span></code> users have not been adequately tested for <code class="docutils literal notranslate"><span class="pre">PolyPhoton</span></code> users.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>DGE IT’s protocols for integration of VPN users with an <strong>“Invité”</strong> status are currently under development, so at the moment we cannot provide much assurance that alternative VPN configurations will work for these users. The most reliable option is to follow the official instructions provided by DGE IT <a class="reference external" href="https://www.polymtl.ca/si/acces-securise-rvp-ou-vpn">and Polytechnique</a>.</p>
+</div>
+</section>
+</section>
 <section id="connect-to-neuropoly-computers">
 <h2>Connect to NeuroPoly Computers<a class="headerlink" href="#connect-to-neuropoly-computers" title="Link to this heading">#</a></h2>
 <section id="locally">
 <h3>Locally<a class="headerlink" href="#locally" title="Link to this heading">#</a></h3>
-<p>To log into a desktop station while at NeuroPoly use your GE account.</p>
+<p>To log into a desktop station while at NeuroPoly, use your GE account.</p>
 </section>
 <section id="ssh-command-line">
 <h3>SSH (command line)<a class="headerlink" href="#ssh-command-line" title="Link to this heading">#</a></h3>
@@ -686,20 +847,20 @@ Windows</label><div class="sd-tab-content docutils">
 <p>The best way to do this is <code class="docutils literal notranslate"><span class="pre">sshfs</span></code>, which makes them appear as if they were a drive on your computer:</p>
 <p>Install sshfs, if not yet installed:</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-3">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-6">
 Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">sshfs</span>
 </pre></div>
 </div>
 </div>
-<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-4">
+<input id="sd-tab-item-7" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-7">
 mac (Monterey and after)</label><div class="sd-tab-content docutils">
 <p>Follow <a class="reference external" href="https://eengstrom.github.io/musings/install-macfuse-and-sshfs-on-macos-monterey">this procedure</a>.</p>
 </div>
-<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-5">
+<input id="sd-tab-item-8" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-8">
 mac (Before Monterey)</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="o">--</span><span class="n">cask</span> <span class="n">osxfuse</span>
 <span class="n">brew</span> <span class="n">install</span> <span class="n">sshfs</span>
@@ -734,8 +895,8 @@ mac (Before Monterey)</label><div class="sd-tab-content docutils">
 <section id="vnc-graphical-interface">
 <h3>VNC (graphical interface)<a class="headerlink" href="#vnc-graphical-interface" title="Link to this heading">#</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-2" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-6">
+<input checked="checked" id="sd-tab-item-9" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-9">
 macOS</label><div class="sd-tab-content docutils">
 <ol class="arabic simple">
 <li><p>Open Finder</p></li>
@@ -744,8 +905,8 @@ macOS</label><div class="sd-tab-content docutils">
 <li><p>You can use your local/network account information or the <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg">shared account credentials</a></p></li>
 </ol>
 </div>
-<input id="sd-tab-item-7" name="sd-tab-set-2" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-7">
+<input id="sd-tab-item-10" name="sd-tab-set-3" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-10">
 PC/Linux</label><div class="sd-tab-content docutils">
 <ol class="arabic simple">
 <li><p>Establish a VNC connection using <a class="reference external" href="https://wiki.gnome.org/Apps/Vinagre/">vinaigre</a>.</p></li>
@@ -1320,7 +1481,13 @@ PC/Linux</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-computers-at-neuropoly">List of Computers at NeuroPoly</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vpn">VPN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vpn">VPN</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background-on-vpn-changes">Background on VPN changes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#students">Students</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#polytechnique-staff">Polytechnique Staff</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-members">Other Members</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-neuropoly-computers">Connect to NeuroPoly Computers</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#locally">Locally</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh-command-line">SSH (command line)</a></li>
