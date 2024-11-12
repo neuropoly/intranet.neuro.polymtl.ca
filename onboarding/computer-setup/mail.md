@@ -4,6 +4,8 @@ You can access your PolyMTL email account (@polymtl.ca) at https://zimbra.polymt
 
 More info and manuals how to add your PolyMTL email to your phone or mail client are available [here](https://www.polymtl.ca/si/courrier-electronique) under _Utilisation du service_.
 
+_NB: If you are a Research Associate, a Postdoctoral Researcher, or another permanent staff member, you will use `Microsoft Outlook` rather than `Zimbra`. Some of the documentation on the PolyMTL site may not yet have been updated to relect this ongoing transition._
+
 ## Add PolyMTL email to the macOS Mail app
 
 Click on Apple logo () / System Preferences / Internet Accounts / Add Other Account / Mail account
