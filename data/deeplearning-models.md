@@ -28,7 +28,28 @@ model_seg_sc-gm_t1-t2_unet3d
 ## Packaging models
 
 Models to be used by 3rd party software (e.g. [SCT](https://spinalcordtoolbox.com/)) should be uploaded as 'assets' to a release of the repository. The steps are:
-- Create a release of the repository. The tag and title of the release should be `rYYYYMMDD`, example: `r20211223`.
-- Put the model and JSON file inside a folder that has the name of the model.
-- Zip the folder and upload it as an asset in the release
-- Publish the release.
+1. Create a release of the repository. The tag and title of the release should be `rYYYYMMDD`, example: `r20240915`.
+2. Prepare a folder with the model in the following format. Keep the nnUNet folder structure intact. To save space,
+include only `checkpoint_final.pth`. Example:
+
+```bash
+$ tree model-spinal-rootlets-mp2rage-r20240915.zip
+└── nnUNetTrainer_2000epochs__nnUNetPlans__3d_fullres
+    ├── dataset.json
+    ├── dataset_fingerprint.json
+    ├── fold_0
+    │         ├── checkpoint_final.pth
+    │         ├── debug.json
+    │         ├── progress.png
+    │         ├── training_log_2024_9_3_14_06_03.png
+    │         └── training_log_2024_9_3_14_06_03.txt
+    └── plans.json
+```
+
+```{important}
+The `dataset.json` file should contain the `image_orientation` entry, for example: `"image_orientation": "RPI"`. This
+entry is used by the SCT to determine the image orientation.
+```
+
+3. Zip the folder and upload it as an asset in the release
+4. Publish the release.
