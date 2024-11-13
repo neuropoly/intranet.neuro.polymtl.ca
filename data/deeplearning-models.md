@@ -48,7 +48,7 @@ $ tree model-spinal-rootlets-mp2rage-r20240915.zip
 
 ```{important}
 The `dataset.json` file should contain the `image_orientation` entry, for example: `"image_orientation": "RPI"`. This
-entry is used by the SCT to determine the image orientation.
+entry is used by SCT to determine the image orientation.
 ```
 
 3. Zip the folder and upload it as an asset in the release
