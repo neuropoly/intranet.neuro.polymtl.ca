@@ -477,12 +477,34 @@
 <section id="packaging-models">
 <h2>Packaging models<a class="headerlink" href="#packaging-models" title="Link to this heading">#</a></h2>
 <p>Models to be used by 3rd party software (e.g. <a class="reference external" href="https://spinalcordtoolbox.com/">SCT</a>) should be uploaded as ‘assets’ to a release of the repository. The steps are:</p>
-<ul class="simple">
-<li><p>Create a release of the repository. The tag and title of the release should be <code class="docutils literal notranslate"><span class="pre">rYYYYMMDD</span></code>, example: <code class="docutils literal notranslate"><span class="pre">r20211223</span></code>.</p></li>
-<li><p>Put the model and JSON file inside a folder that has the name of the model.</p></li>
+<ol class="arabic simple">
+<li><p>Create a release of the repository. The tag and title of the release should be <code class="docutils literal notranslate"><span class="pre">rYYYYMMDD</span></code>, example: <code class="docutils literal notranslate"><span class="pre">r20240915</span></code>.</p></li>
+<li><p>Prepare a folder with the model in the following format. Keep the nnUNet folder structure intact. To save space,
+include only <code class="docutils literal notranslate"><span class="pre">checkpoint_final.pth</span></code>. Example:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>tree<span class="w"> </span>model-spinal-rootlets-mp2rage-r20240915.zip
+└──<span class="w"> </span>nnUNetTrainer_2000epochs__nnUNetPlans__3d_fullres
+<span class="w">    </span>├──<span class="w"> </span>dataset.json
+<span class="w">    </span>├──<span class="w"> </span>dataset_fingerprint.json
+<span class="w">    </span>├──<span class="w"> </span>fold_0
+<span class="w">    </span>│<span class="w">         </span>├──<span class="w"> </span>checkpoint_final.pth
+<span class="w">    </span>│<span class="w">         </span>├──<span class="w"> </span>debug.json
+<span class="w">    </span>│<span class="w">         </span>├──<span class="w"> </span>progress.png
+<span class="w">    </span>│<span class="w">         </span>├──<span class="w"> </span>training_log_2024_9_3_14_06_03.png
+<span class="w">    </span>│<span class="w">         </span>└──<span class="w"> </span>training_log_2024_9_3_14_06_03.txt
+<span class="w">    </span>└──<span class="w"> </span>plans.json
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">dataset.json</span></code> file should contain the <code class="docutils literal notranslate"><span class="pre">image_orientation</span></code> entry, for example: <code class="docutils literal notranslate"><span class="pre">&quot;image_orientation&quot;:</span> <span class="pre">&quot;RPI&quot;</span></code>. This
+entry is used by SCT to determine the image orientation. But, it is also a good idea to document which orientation was
+used during training (for the sake of reproducibility).</p>
+</div>
+<ol class="arabic simple" start="3">
 <li><p>Zip the folder and upload it as an asset in the release</p></li>
 <li><p>Publish the release.</p></li>
-</ul>
+</ol>
 </section>
 </section>
 
