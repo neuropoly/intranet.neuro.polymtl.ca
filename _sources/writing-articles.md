@@ -2,6 +2,10 @@
 
 ## Journals
 
+```{important}
+Polytechnique has a partnership with some publishers to waive the article processing charges (APC) for some journal. This concerns hybrid journals at Elsevier and Wiley. See full list: 👉 https://guides.biblio.polymtl.ca/libre_acces/rabais
+```
+
 (*) the impact factor is not up to date, but is just given as a 'ballpark' for ranking journal.
 
 ### General
