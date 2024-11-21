@@ -28,14 +28,7 @@ Details to book an MRI scanner are given in the specific MRI sub-section.&#x20;
 
 ### Logbook
 
-During scanning, please keep a log of your experiment:
-* [MRI Acquisition Log 2024](https://docs.google.com/document/d/1vZoTsJZFyg95nKFR7eAA9pQkCwS28A7sO_KPa4QSOOs/edit)
-* [MRI Acquisition Log 2023](https://docs.google.com/document/d/1jOUILCogZZwQpzgjjQC90nJdM0O-FURYzM9iWJFCLu8/edit)
-* [MRI Acquisition Log 2022](https://docs.google.com/document/d/1TdBOc2zbDAyLAB5ps7Ls6vB4iISlsonbDusjUKxeYUc/edit)
-* [MRI Acquisition Log 2021](https://docs.google.com/document/d/1NXUi0mshi7qaN\_Ge3A0J4dU4HSWhsBFGWA10gcXPphg/edit)
-* [MRI Acquisition Log 2020](https://docs.google.com/document/d/1YqSS7ZC2LcPiDEyRfaXpCNyvHEjOPbB5OpELdMt9S1M/edit)
-* [MRI Acquisition Log 2019](https://docs.google.com/document/d/1g8H2KxZ5NNIPmhCu9VIDr34VgskPOHVJBfOqMX7BHR8/edit)
-* [MRI Acquisition Log 2018](https://docs.google.com/document/d/1AgnNL4Kl51Cl8J2h5VJhzOpB3O1EUrWy8\_mgb7dbvVA/edit)
+During scanning, please keep a log of your experiment in the [MRI logbook](https://docs.google.com/document/d/1hhYeRy8zLd8lQMAwFHi6NgE1JTp8-PYe35FXkMWa_S0/edit?tab=t.gs64v4o4dfjq#heading=h.mffm79kw4tje). 
 
 ```{warning}
 If you scan at UNF, you also need to fill up the UNF log book, which you can access from the UNF's reservation booking form under the link "Link to logbook" if you are an operator. If you are _not_ an operator, ask the person who operated the scan to fill the logbook or to send you the link to the logbook to fill it. It is important to fill the log book the day of the scan.
