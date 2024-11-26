@@ -68,8 +68,9 @@ Canadians
 * CIHR
 * NSERC
 
-Non-Canadians \(and Canadians\):
+Non-Canadians (and Canadians):
 
+* https://www.polymtl.ca/aide-financiere/bourses/bourse-de-recherche-postdoctorale-luise-et-gerhard-herzberg-du-cnrc
 * [TransMedTech](https://www.polymtl.ca/transmedtech/programmes-de-financement-et-daccompagnement)
 * FRQNT: [http://www.frqnt.gouv.qc.ca/en/bourses-et-subventions/consulter-les-programmes-remplir-une-demande/bourse/merit-scholarship-program-for-foreign-students-pbeee--f9tcxbzm1430400825724](http://www.frqnt.gouv.qc.ca/en/bourses-et-subventions/consulter-les-programmes-remplir-une-demande/bourse/merit-scholarship-program-for-foreign-students-pbeee--f9tcxbzm1430400825724)
 * NSERC Banting \(highly competitive\): [http://www.nserc-crsng.gc.ca/Students-Etudiants/PD-NP/Banting-Banting\_eng.asp](http://www.nserc-crsng.gc.ca/Students-Etudiants/PD-NP/Banting-Banting_eng.asp)
