@@ -69,6 +69,10 @@
 * [http://innovation.columbia.edu/technologies/cu17130](http://innovation.columbia.edu/technologies/cu17130)
 * [https://github.com/oxsatoolbox/oxsa](https://github.com/oxsatoolbox/oxsa)
 
+## Functional MRI
+
+* 📄 [Chen JE, Glover GH. Functional Magnetic Resonance Imaging methods. Neuropsychol Rev. 2015 Sep;25(3):289–313](https://mriquestions.com/uploads/3/4/5/7/34572113/chen_glover_fmri_review_2015art3a10.10072fs11065-015-9294-9.pdf)
+
 ## Diffusion MRI
 
 * [🎥 Series of talks on diffusion MRI](http://blog.ismrm.org/2018/04/03/interactive-diffusion-course/)
