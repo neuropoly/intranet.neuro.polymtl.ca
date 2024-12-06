@@ -762,7 +762,7 @@ Please be aware that these notices start less than 24 hours before the scheduled
 
 ### How can I request that a scheduled reboot is postponed?
 
-If you started a long computation that you think will be interupted by the scheduled reboot, you can use the `Reboot Postponement Request` template [available here](https://github.com/neuropoly/computers/issues) to request a postponement.
+If you started a long computation that you think will be interupted by the scheduled reboot, you can [use the `Reboot Postponement Request` issue template](https://github.com/neuropoly/computers/issues/new?assignees=&labels=reboot-postponement&projects=&template=reboot-postponement-req.md&title=%5BPOSTPONE%20REBOOT%5D%20%3CStationName%3E) to request a postponement.
 
 More detailed instructions are included in the template.
 
