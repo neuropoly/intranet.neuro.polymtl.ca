@@ -734,9 +734,43 @@ smb://hcifst.grames.polymtl.ca/tools
 
 ## Scheduled reboots
 
-Each computer has a regular unattended upgrade that forces a reboot once a week. The date and time of the next reboot will be indicated in a message when you log in. Do try and consider this when starting your computations. If you started a long computation that you think will be interupted by the scheduled reboot, you can contact neuropoly-admin@liste.polymtl.ca to request that the reboot be exceptionally delayed.
+As part of regularly scheduled system upgrades, all NeuroPoly  stations will automatically reboot once a week. These reboots are critical to system health, which is why they are configured to run automatically. In exceptional circumstances, scheduled reboots can be manually postponed by admins.
 
-**Admins**: Documentation on the standard operating procedure for delaying scheduled reboots is described [here](https://github.com/neuropoly/computers/blob/master/docs/unattended-upgrades.md).
+
+### How do I know when a station will reboot?
+
+When you first login to a station, you will see a message called the `Message Of The Day` (`MOTD`).
+
+This message includes a notice about the reboot schedule for the machine you are using. It will look something like this:
+```
+This system may reboot to install upgrades Mondays at 02:00am.
+```
+
+If you are having a hard time finding this information, you can always regenerate `MOTD` by doing:
+```bash
+run-parts /etc/update-motd.d/
+```
+
+Please try to check the scheduled reboot time and take it into account when starting your computations.
+
+```{note}
+If a reboot is imminent, you may also see wall notices warning you about the upcoming reboot. They will say something like:
+"The system will reboot at Tue 2024-08-13 02:00:00 EDT!"
+
+Please be aware that these notices start less than 24 hours before the scheduled reboot, so relying on them as your main reboot indicator is strongly discouraged. 
+```
+
+### How can I request that a scheduled reboot is postponed?
+
+If you started a long computation that you think will be interupted by the scheduled reboot, you can use the `Reboot Postponement Request` template [available here](https://github.com/neuropoly/computers/issues) to request a postponement.
+
+More detailed instructions are included in the template.
+
+```{important}
+Please try to give admins 24h notice for postponement requests. 
+```
+
+**Admins:** The standard operating procedure for postponing scheduled reboots, along with more details on how automatic reboots work at NeuroPoly [is all documented here](https://github.com/neuropoly/computers/blob/master/docs/unattended-upgrades.md).
 
 ## Admin
 
