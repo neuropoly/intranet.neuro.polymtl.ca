@@ -487,7 +487,11 @@
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scheduled-reboots">Scheduled reboots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scheduled-reboots">Scheduled reboots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-know-when-a-station-will-reboot">How do I know when a station will reboot?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-request-that-a-scheduled-reboot-is-postponed">How can I request that a scheduled reboot is postponed?</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#admin">Admin</a></li>
 </ul>
             </nav>
@@ -1419,8 +1423,36 @@ PC/Linux</label><div class="sd-tab-content docutils">
 </section>
 <section id="scheduled-reboots">
 <h2>Scheduled reboots<a class="headerlink" href="#scheduled-reboots" title="Link to this heading">#</a></h2>
-<p>Each computer has a regular unattended upgrade that forces a reboot once a week. The date and time of the next reboot will be indicated in a message when you log in. Do try and consider this when starting your computations. If you started a long computation that you think will be interupted by the scheduled reboot, you can contact neuropoly-admin&#64;liste.polymtl.ca to request that the reboot be exceptionally delayed.</p>
-<p><strong>Admins</strong>: Documentation on the standard operating procedure for delaying scheduled reboots is described <a class="reference external" href="https://github.com/neuropoly/computers/blob/master/docs/unattended-upgrades.md">here</a>.</p>
+<p>As part of regularly scheduled system upgrades, all NeuroPoly stations will automatically reboot once a week. These reboots are critical to system health, which is why they are configured to run automatically. In exceptional circumstances, scheduled reboots can be manually postponed by admins.</p>
+<section id="how-do-i-know-when-a-station-will-reboot">
+<h3>How do I know when a station will reboot?<a class="headerlink" href="#how-do-i-know-when-a-station-will-reboot" title="Link to this heading">#</a></h3>
+<p>When you first login to a station, you will see a message called the <code class="docutils literal notranslate"><span class="pre">Message</span> <span class="pre">Of</span> <span class="pre">The</span> <span class="pre">Day</span></code> (<code class="docutils literal notranslate"><span class="pre">MOTD</span></code>).</p>
+<p>This message includes a notice about the reboot schedule for the machine you are using. It will look something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="n">system</span> <span class="n">may</span> <span class="n">reboot</span> <span class="n">to</span> <span class="n">install</span> <span class="n">upgrades</span> <span class="n">Mondays</span> <span class="n">at</span> <span class="mi">02</span><span class="p">:</span><span class="mi">00</span><span class="n">am</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>If you are having a hard time finding this information, you can always regenerate <code class="docutils literal notranslate"><span class="pre">MOTD</span></code> by doing:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>run-parts<span class="w"> </span>/etc/update-motd.d/
+</pre></div>
+</div>
+<p>Please try to check the scheduled reboot time and take it into account when starting your computations.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a reboot is imminent, you may also see wall notices warning you about the upcoming reboot. They will say something like:
+“The system will reboot at Tue 2024-08-13 02:00:00 EDT!”</p>
+<p>Please be aware that these notices start less than 24 hours before the scheduled reboot, so relying on them as your main reboot indicator is strongly discouraged.</p>
+</div>
+</section>
+<section id="how-can-i-request-that-a-scheduled-reboot-is-postponed">
+<h3>How can I request that a scheduled reboot is postponed?<a class="headerlink" href="#how-can-i-request-that-a-scheduled-reboot-is-postponed" title="Link to this heading">#</a></h3>
+<p>If you started a long computation that you think will be interupted by the scheduled reboot, you can <a class="reference external" href="https://github.com/neuropoly/computers/issues/new?assignees=&amp;amp;labels=reboot-postponement&amp;amp;projects=&amp;amp;template=reboot-postponement-req.md&amp;amp;title=%5BPOSTPONE%20REBOOT%5D%20%3CStationName%3E">use the <code class="docutils literal notranslate"><span class="pre">Reboot</span> <span class="pre">Postponement</span> <span class="pre">Request</span></code> issue template</a> to request a postponement.</p>
+<p>More detailed instructions are included in the template.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Please try to give admins 24h notice for postponement requests.</p>
+</div>
+<p><strong>Admins:</strong> The standard operating procedure for postponing scheduled reboots, along with more details on how automatic reboots work at NeuroPoly <a class="reference external" href="https://github.com/neuropoly/computers/blob/master/docs/unattended-upgrades.md">is all documented here</a>.</p>
+</section>
 </section>
 <section id="admin">
 <h2>Admin<a class="headerlink" href="#admin" title="Link to this heading">#</a></h2>
@@ -1526,7 +1558,11 @@ PC/Linux</label><div class="sd-tab-content docutils">
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scheduled-reboots">Scheduled reboots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scheduled-reboots">Scheduled reboots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-know-when-a-station-will-reboot">How do I know when a station will reboot?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-request-that-a-scheduled-reboot-is-postponed">How can I request that a scheduled reboot is postponed?</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#admin">Admin</a></li>
 </ul>
   </nav></div>
