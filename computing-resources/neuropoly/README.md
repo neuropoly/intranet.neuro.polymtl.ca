@@ -734,7 +734,7 @@ smb://hcifst.grames.polymtl.ca/tools
 
 ## Scheduled reboots
 
-As part of regularly scheduled system upgrades, all NeuroPoly  stations will automatically reboot once a week. These reboots are critical to system health, which is why they are configured to run automatically. In exceptional circumstances, scheduled reboots can be manually postponed by admins.
+As part of regularly scheduled system upgrades, all NeuroPoly stations will automatically reboot once a week. These reboots are critical to system health, which is why they are configured to run automatically. In exceptional circumstances, scheduled reboots can be manually postponed by admins.
 
 
 ### How do I know when a station will reboot?
