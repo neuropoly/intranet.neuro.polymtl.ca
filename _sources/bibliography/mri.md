@@ -11,6 +11,7 @@
 * [Nishimura, Principles of Magnetic Resonance Imaging (1996)](https://drive.google.com/drive/folders/177c9urmoXCYOiEWhuiGeRzKoKsF42cwM) (NeuroPoly members only)
 * [Questions and Answers in MRI](https://mriquestions.com/index.html)
 * [🇫🇷 MRI Online Course (in French)](https://www.imaios.com/fr/e-Cours/e-MRI)
+* [🇫🇷 Méthodes en neurosciences cognitives](https://methodes-cogneuro.github.io/intro.html)
 * 📄 [Eills et al. Spin Hyperpolarization in Modern Magnetic Resonance. Chem. Rev. 2023](https://pubs.acs.org/doi/10.1021/acs.chemrev.2c00534)
 
 ## Fundamentals
