@@ -10,6 +10,9 @@ If you decide to apply, please let your supervisor know at an early stage (sever
 
 Contact person at Polytechnique: Jacqueline Sanchez (A205.4.6)
 
+```{note}
+By default, all students will receive a stipend paid by the supervisor's research fund. The stipend's amount is based on Polytechnique's recommendation (it is updated every year). When a student receives a scholarship, the lab’s policy is to add a supplement of $3,000 to $5,000, depending on the amount of the scholarship. If the scholarship covers the recommended annual support, then the supplement is generally around $5,000. If the scholarship is partial, then the supplement is around $3,000. The exact supplement is set at the discretion of the supervisor.
+```
 
 ## Masters (MSc)
 
