@@ -146,7 +146,7 @@ manuscripts/
                |- awesome_study_reviewer_suggestions
            |- r1/
                |- awesome_study_manuscript_r1 --> copy awesome_study_manuscript_r0 into this 'r1' folder and 'lock' manuscript_r0 for edition. Now, everyone should work on this version r1.
-               |- awesome_study_responses_to_reviews --> copy/paste reviewers comments, above each comment, indicate a sub-section 'RXCY' with X: reviewer numbers and Y: comment number. Then, in the manuscript, add a comment with this tag. Example: R1C4.
+               |- awesome_study_responses_to_reviews_r1 --> copy/paste reviewers comments, above each comment, indicate a sub-section 'RXCY' with X: reviewer numbers and Y: comment number. Then, in the manuscript, add a comment with this tag. Example: R1C4.
 ```
 
 [Here](https://drive.google.com/drive/folders/1bIZCpsyqr2RBlJLq_WvP0xcmkHxMOeiS?usp=sharing) is an example of manuscript folder/files organization.
