@@ -12,4 +12,5 @@ contributing
 misc/README
 image-processing-software/README
 deep-learning/README
+WandB
 ```
