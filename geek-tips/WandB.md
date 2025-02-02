@@ -8,8 +8,11 @@
 ```
 
 [**Official WandB Model Documentation**](https://docs.wandb.ai/?_gl=1*gp3xf8*_gcl_au*NjI3ODIyMzguMTczMzQxNzc1OA..)
+
 [**Official WandB Weave Documentation**](https://weave-docs.wandb.ai/?utm_source=app&utm_medium=app&utm_campaign=weave-nudge)
+
 [**Official WandB Courses**](https://www.wandb.courses/pages/w-b-courses)
+
 [**Official WandB Educational GitHub Page**](https://github.com/wandb/edu)
 
 ## Install WandB
