@@ -131,13 +131,52 @@ for epoch in range(epochs):
             wandb.log({"training images": wandb.Image(fig)})
             plt.close(fig)
             # Rest of the trainign pipeline ... 
-
-            
-            
-
-           
-
-
 ```
 
+### Save model artifacts 
+
+You can also save the model artifacts in WandB using the following command. 
+
+```python
+artifact = wandb.Artifact("model", type="model")
+artifact.add_file("model.pth")
+wandb.log_artifact(artifact)
+```
+
+### Finish a WandB session
+
+When you want to finish your WandB session add the following line of code: 
+
+```python
+wandb.finish()  
+```
+
+## Check WandB logs
+
+To check WandB logs there are two ways. 
+1. Connect to [WandB](https://wand.ai/)
+2. Use the link provided in the terminal to directly access the logs of your specific training. 
+
+When running your code with WandB init you should get in your terminal: 
+```bash 
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Currently logged in as: <username> (<id>). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.19.0
+wandb: Run data is saved locally in /tmp/wandb/run-20250202_102609-84gg26e2
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run olive-pond-21
+wandb: ⭐️ View project at https://wandb.ai/<id/project_name>
+wandb: 🚀 View run at https://wandb.ai/<id/project_name/run_id>
+wandb: WARNING Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+```
+You can use the link provided in View run to see directly how your training is going. 
+The link is provided again when the WandB session ends: 
+
+```bash
+wandb:
+wandb: 🚀 View run cosmic-frost-20 at: https://wandb.ai/<id/project_name/run_id>
+wandb: ⭐️ View project at: https://wandb.ai/<id/project_name>
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 88920 other file(s)
+wandb: Find logs at: https://wandb.ai/<id/project_name/run_id>
+```
 
