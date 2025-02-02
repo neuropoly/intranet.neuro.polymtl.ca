@@ -1,83 +1,84 @@
 (WandB)=
-# WandB 
+# WandB
 
 ## Tutorials & Courses
 
 ```{note}
-**Everyone training AI models take time to learn how to use WandB to keep track of your trainings and visualize your data.**
+**Everyone training AI models should take time to learn how to use WandB to track their training and visualize data.**
 ```
 
 [**Official WandB Model Documentation**](https://docs.wandb.ai/?_gl=1*gp3xf8*_gcl_au*NjI3ODIyMzguMTczMzQxNzc1OA..)
 [**Official WandB Weave Documentation**](https://weave-docs.wandb.ai/?utm_source=app&utm_medium=app&utm_campaign=weave-nudge)
 [**Official WandB Courses**](https://www.wandb.courses/pages/w-b-courses)
-[**Official WandB educational Github page**] (https://github.com/wandb/edu)
+[**Official WandB Educational GitHub Page**](https://github.com/wandb/edu)
 
-## Install WandB 
+## Install WandB
 
-Full instruction to get started with WandB [here](https://docs.wandb.ai/quickstart/)
-Start installing WandB using pip: 
+Full instructions to get started with WandB can be found [here](https://docs.wandb.ai/quickstart/).
+To install WandB using pip:
 
-```bash 
+```bash
 pip install wandb
 ```
 
-Then log in your W&B account by running: 
+Then log in to your WandB account by running:
 
 ```bash
 wandb login
-``` 
-## Include WandB in your project 
-
-Including WandB in your project provides a lot of advantages since it can help you track your trainings and visualize your data during training which should always be done !
-
-### Initialize WandB 
-
-To start using WandB in your project you need to import it and initialize. 
-
-```python
-import wandb 
-
-wand.init(project='my_project_name')
-
 ```
 
-Choose your project name carefully in order to be able to come back to it to compare the results you got with different versions of your code. You can for example use the name of the git repository or even the name of the code used. 
+## Include WandB in Your Project
+
+Integrating WandB into your project provides numerous benefits, such as tracking training progress and visualizing data in real time.
+
+### Initialize WandB
+
+To start using WandB in your project, import and initialize it:
+
+```python
+import wandb
+
+wandb.init(project='my_project_name')
+```
+
+Choose a meaningful project name so you can easily compare different runs. You can use your Git repository name or a descriptive identifier for your experiment.
 
 ### Log Hyperparameters
 
-In order to be able to distinguish between your different versions of model and compare them a good practice is to create a config dictionnary with all your hyperparameters and add it in your initialization of wandb. You can put in the config dictionnary all the informations you need to be able to distinguish between your models.  
+To differentiate between different model versions and compare results, create a `config` dictionary with hyperparameters and pass it to WandB:
 
-```python 
+```python
 config = {"learning_rate": 0.001, "batch_size": 32}
 wandb.init(project="my_project_name", config=config)
 ```
 
+**Ensure you use the config dictionary values in your training pipeline instead of hardcoded variables:**
 
-**If you use the config dictionnary method to distinguish between your different models be sure to use the infos in config for your training and not to use some local variables like:**
+**Incorrect:**
 ```python
 config = {"learning_rate": 0.001, "batch_size": 32}
 train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
 ```
-**Instead use:**
+
+**Correct:**
 ```python
 config = {"learning_rate": 0.001, "batch_size": 32}
 train_loader = DataLoader(train_dataset, batch_size=config["batch_size"], shuffle=True)
 ```
 
+### Log Metrics
 
-### Log metrics 
+WandB can store computed metrics. Example:
 
-WandB can be used to store your computed metrics, to do so you can use someting like this: 
-
-```python 
+```python
 for epoch in range(10):
     loss = compute_loss()
     wandb.log({"epoch": epoch, "loss": loss})
 ```
 
-### Log images 
+### Log Images
 
-When making transformations of your images on the fly to train a model you have to ensure that the transformations are well applied and visualize your images. To do so you can use WandB to. Here is the function to store images in WandB. 
+When applying transformations to images during training, it’s essential to verify them visually. Use WandB to log images:
 
 ```python
 import numpy as np
@@ -87,55 +88,35 @@ img = np.random.rand(28, 28)
 wandb.log({"random_image": wandb.Image(img, caption="Sample Image")})
 ```
 
-Of course in your case you don't want to see a random image but more likely a nii.gz file. 
-WandB doesn't provide the possibility to store 3D volumes online so you have to select a few slices and look at them. For example you can create a figure using matplotlib with a few slices and save it in WandB. 
-Here is the associated code for a segmentation task. 
+For 3D medical imaging data (e.g., `nii.gz` files), WandB does not support direct 3D visualization. Instead, select key slices and log them as 2D images:
 
 ```python
-# Define a function to put the slices on a plot 
+# Function to visualize slices
 def plot_slices(image):
-    """
-    Plot the image, ground truth and prediction of the mid-sagittal axial slice
-    The orientaion is assumed to RPI
-    """
-
-    # bring everything to numpy 
     image = image.float().numpy()
-    
-
-    mid_sagittal = image.shape[0]//2
-    # plot X slices before and after the mid-sagittal slice in a grid
-    fig, axs = plt.subplots(1, 6, figsize=(1, 6))
-    fig.suptitle('Image')
+    mid_sagittal = image.shape[0] // 2
+    fig, axs = plt.subplots(1, 6, figsize=(12, 6))
     for i in range(6):
-        axs[0, i].imshow(image[mid_sagittal-3+i,:,:].T, cmap='gray'); axs[0, i].axis('off') 
-           
+        axs[i].imshow(image[mid_sagittal - 3 + i, :, :].T, cmap='gray')
+        axs[i].axis('off')
     plt.tight_layout()
-    fig.show()
-    
     return fig
 
-#Then include this in your training pipeline: 
-
+# Include this in your training pipeline:
 for epoch in range(epochs):
-        
-        model.train()
-        
-        for batch in tqdm(train_loader):
-            inputs = batch["image"].cuda()
-            labels = batch["label"].cuda()
-            #Load the image in WandB
-            train_image= inputs[0].detach().cpu().squeeze()
-            fig = plot_slices(image=train_image,                        
-                                )
-            wandb.log({"training images": wandb.Image(fig)})
-            plt.close(fig)
-            # Rest of the trainign pipeline ... 
+    model.train()
+    for batch in train_loader:
+        inputs = batch["image"].cuda()
+        train_image = inputs[0].detach().cpu().squeeze()
+        fig = plot_slices(train_image)
+        wandb.log({"training images": wandb.Image(fig)})
+        plt.close(fig)
+        # Rest of the training pipeline...
 ```
 
-### Save model artifacts 
+### Save Model Artifacts
 
-You can also save the model artifacts in WandB using the following command. 
+Save trained models with WandB:
 
 ```python
 artifact = wandb.Artifact("model", type="model")
@@ -143,40 +124,33 @@ artifact.add_file("model.pth")
 wandb.log_artifact(artifact)
 ```
 
-### Finish a WandB session
+### Finish a WandB Session
 
-When you want to finish your WandB session add the following line of code: 
+At the end of your script, ensure you close the WandB session:
 
 ```python
 wandb.finish()  
 ```
 
-## Check WandB logs
+## Check WandB Logs
 
-To check WandB logs there are two ways. 
-1. Connect to [WandB](https://wand.ai/)
-2. Use the link provided in the terminal to directly access the logs of your specific training. 
+There are two ways to check logs:
 
-When running your code with WandB init you should get in your terminal: 
-```bash 
-wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
-wandb: Currently logged in as: <username> (<id>). Use `wandb login --relogin` to force relogin
-wandb: Tracking run with wandb version 0.19.0
-wandb: Run data is saved locally in /tmp/wandb/run-20250202_102609-84gg26e2
-wandb: Run `wandb offline` to turn off syncing.
-wandb: Syncing run olive-pond-21
-wandb: ⭐️ View project at https://wandb.ai/<id/project_name>
-wandb: 🚀 View run at https://wandb.ai/<id/project_name/run_id>
-wandb: WARNING Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
-```
-You can use the link provided in View run to see directly how your training is going. 
-The link is provided again when the WandB session ends: 
+1. Log in to [WandB](https://wandb.ai/)
+2. Use the link provided in the terminal when running your script.
+
+When running your script with WandB, you should see an output similar to this:
 
 ```bash
-wandb:
-wandb: 🚀 View run cosmic-frost-20 at: https://wandb.ai/<id/project_name/run_id>
-wandb: ⭐️ View project at: https://wandb.ai/<id/project_name>
-wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 88920 other file(s)
-wandb: Find logs at: https://wandb.ai/<id/project_name/run_id>
+wandb: Tracking run with wandb version 0.19.0
+wandb: Run data is saved locally in /tmp/wandb/run-20250202_102609-84gg26e2
+wandb: 🚀 View run at https://wandb.ai/<id/project_name/run_id>
+```
+
+Use the provided `View run` link to directly access the logs and visualizations of your training session. The same link will appear again when the session ends:
+
+```bash
+wandb: 🚀 View run at https://wandb.ai/<id/project_name/run_id>
+wandb: ⭐ View project at https://wandb.ai/<id/project_name>
 ```
 
