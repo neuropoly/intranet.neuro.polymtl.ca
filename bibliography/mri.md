@@ -33,6 +33,7 @@
 * [🎥 ISMRM MR Academy - Magnetic Field B0 Shimming](https://www.youtube.com/watch?v=8MinOsuqrYE)
 * [Shimming Toolbox overview](https://docs.google.com/document/d/1jNm3qS9L3Wv330jYdoXdwHwhJ5fQlDgukkXZcf_ceJA)
 * [MRI Questions](https://mriquestions.com/active-shimming.html)
+* 📄 [Stockmann JP, Wald LL. In vivo B0 field shimming methods for MRI at 7T. Neuroimage. 2018 Mar;168:71–87.](https://pmc.ncbi.nlm.nih.gov/articles/PMC5760477/)
 
 ## B1 Shimming
 
