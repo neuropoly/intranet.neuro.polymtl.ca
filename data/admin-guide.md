@@ -21,9 +21,17 @@ We have a [dataset template](https://data.neuro.polymtl.ca/datasets/template) th
    5. For template items, check the box for "Git Content (Default Branch)".
    6. Click "Create Repository".
 3. In the new repository, click "Watch" so that at least one admin gets notifications (that is, you).
-4. Give write access to the requesting student:
+4. Activate branch protections for the default branch (`main` or `master`):
+   1. Go to the repository's "Settings" tab.
+   2. Select "Branches" for the left-hand menu.
+   3. Note the default branch name (`main` or `master`).
+   4. Click "Add New Rule".
+   5. Put the default branch name for "Protected Branch Name Pattern".
+   6. Set "Required approvals" to 1.
+   7. Click "Save Rule".
+6. Give write access to the requesting student:
    1. Go to the repository's "Settings" tab.
    2. Select "Collaborators" from the left-hand menu.
    3. Search for the student's name and click "Add Collaborator".
    4. Make sure the student's Neurogitea user account contains their actual human-readable name ("Site Administration" -> "User Accounts" -> search for the user -> edit).
-5. Reply on the original [data-management issue](https://github.com/neuropoly/data-management/issues) that you've created the repo and given them write access, with a link to the repo.
+7. Reply on the original [data-management issue](https://github.com/neuropoly/data-management/issues) that you've created the repo and given them write access, with a link to the repo.
