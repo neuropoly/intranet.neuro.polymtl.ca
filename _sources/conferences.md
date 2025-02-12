@@ -240,7 +240,7 @@ You can be reimbursed by two means:
 
 **A priori (travel advance)**
 
-Send an email to `dge.sec-biomedical@polymtl.ca` and ask them for a travel advance.
+Send an email to `dge.finances@polymtl.ca` and ask them for a travel advance.
 
 The amount of the advance is an estimate of all your eligible conference fees \(see above\).
 
@@ -252,7 +252,7 @@ Once the conference is over, you have one month to claim the refunds.
 
 Keep all your receipts and bank statement information\(if using debit or credit card\).
 
-Once the conference is over, send an email to `dge.sec-biomedical@polymtl.ca` with all your receipts.
+Once the conference is over, send an email to `dge.finances@polymtl.ca` with all your receipts.
 
 N.B. You can not be reimbursed for expenses incurred before the conference. If you wish, ask for a travel advance.
 
