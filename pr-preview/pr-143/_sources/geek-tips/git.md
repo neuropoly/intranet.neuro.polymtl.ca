@@ -2,11 +2,6 @@
 (git)=
 # Git & Github
 
-
-```{note}
-Eliot is good at GitHub actions. This is a test.
-```
-
 ## Tutorials & Courses
 
 ```{note}
