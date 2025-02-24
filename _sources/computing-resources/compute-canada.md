@@ -11,7 +11,7 @@ Links to Compute Canada:
   * [Graham](https://docs.computecanada.ca/wiki/Graham)
 * [Compute Canada Documentation](https://docs.computecanada.ca/wiki/Compute_Canada_Documentation)
 * [Compute Canada available resources](https://www.computecanada.ca/research-portal/accessing-resources/available-resources/)
-* [CC documentation \(from Mila\)](https://docs.mila.quebec/compute-canada-cluster/index.html)
+* [CC documentation \(from Mila\)](https://docs.mila.quebec/Extra_compute.html)
 
 Useful resources:
 
