@@ -7,6 +7,7 @@ tensorflow
 conditional-random-fields-crf
 restricted-boltzmann-machines
 misc
+WandB
 ```
 
 ​[http://scikit-learn.org/](http://scikit-learn.org/)
