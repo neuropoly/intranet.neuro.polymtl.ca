@@ -56,6 +56,8 @@
 
 * [List of MRI-related software from the _Open Source Imaging Initiative_](https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/nbm.5052)
 * [List of software from ISMRM MRHub](https://github.com/ISMRM/mrhub)
+* [Magpylib](https://magpylib.readthedocs.io/en/latest/): Calculating static magnetic fields of magnets, currents, and other sources
+* [openEMS](https://www.openems.de/): Electromagnetic field solver using the FDTD method
 * [Reconstruction tools from NYU](https://cai2r.net/resources/)
 * [Gadgetron](http://gadgetron.sourceforge.net/): Open source framework for medical image reconstruction
 * [ISMRM Raw data format: A proposed standard for MRI raw datasets](https://onlinelibrary.wiley.com/doi/10.1002/mrm.26089)
