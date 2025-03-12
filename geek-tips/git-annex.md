@@ -21,7 +21,7 @@ You must have a unix OS. `git-annex` is simply not compatible with anything else
 * **Fedora/RedHat/CentOS**: `dnf install git-annex`
 * **Debian/Ubuntu**: `apt-get install git-annex`
 * **[ComputeCanada](https://docs.computecanada.ca/)**, a supercomputer we have accounts on: `module load StdEnv/2020  && module load git-annex` *in [every session or batch job](https://docs.alliancecan.ca/wiki/Utiliser_des_modules/en#Loading_modules_automatically)*
-* if on an older system and can't upgrade, you can try [installing `conda`](https://docs.conda.io/en/latest/miniconda.html) (or [miniforge](https://github.com/conda-forge/miniforge/#miniforge3) or [mambaforge](https://github.com/conda-forge/miniforge/#mambaforge)) and then using `conda install -f conda-forge git-annex` (or `mamba install -f conda-forge git-annex).
+* if on an older system and can't upgrade, you can try [installing `conda`](https://docs.conda.io/en/latest/miniconda.html) (or [miniforge](https://github.com/conda-forge/miniforge/#miniforge3)) and then using `conda install -f conda-forge git-annex` (or `mamba install -f conda-forge git-annex`).
 :::
 
 :::{tab-item} macOS
