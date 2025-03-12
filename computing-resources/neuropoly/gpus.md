@@ -983,7 +983,7 @@ And:
 Please allocate your GPUs cooperatively on the [computer resource calendar](https://calendar.google.com/calendar?cid=NG1nNmJnZDlwdjU1dGhmOTQ4NnQybWlodDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
 
 ```{warning}
-**IMPORTANT:** If you don't have writing permission on this calendar please contact [alexandrufoias@gmail.com](mailto:alexandrufoias@gmail.com).
+**IMPORTANT:** If you don't have writing permission on this calendar please contact your supervisor; all NeuroPoly accounts should have access by default.
 ```
 
 Use this format: u918374@rosenberg:gpu\[3\].
