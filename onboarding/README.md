@@ -11,6 +11,7 @@ software-development
 students-interns
 consultants-ra
 postdoc
+admin
 ```
 
 Welcome to NeuroPoly Lab!
