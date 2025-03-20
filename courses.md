@@ -54,6 +54,7 @@ Also see this list of [Bio-imaging courses offered by Quebec Universities](https
 | [GBM8770](https://www.polymtl.ca/programmes/cours/traitement-numerique-dimages-medicales-0)   | Traitement numérique d'images médicales                 | 3        | 🇫🇷       | Benjamin De Leener |
 | [GBM6330](https://www.polymtl.ca/programmes/cours/technologies-biomedicales-emergentes)       | Technologies biomédicales émergentes                    | 3        | 🇬🇧       | Nikola Stikov      |
 | [GBM6332E](https://www.polymtl.ca/programmes/cours/brainhack-school)                          | Brainhack School <br> _Must have!_                      | 3        | 🇬🇧       | Eva Alonso Ortiz  |
+| [ELE8812](https://www.polymtl.ca/programmes/cours/traitement-et-analyse-dimages)              | Traitement et analyse d'images                          | 3        | 🇫🇷       | Eva Alonso Ortiz  |
 
 
 ### Université de Montréal
