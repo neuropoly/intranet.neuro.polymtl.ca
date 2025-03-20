@@ -141,6 +141,10 @@ By default, all lab members have _read_ access to all repositories, so you can [
 
 To get write access to a repository, ask [one of the current admins](#getting-help). They will need to use the web interface, go to the repository's "Settings" tab, and add your username to the list of "Collaborators".
 
+## Creating a new repository
+
+New repositories on <https://data.neuro.polymtl.ca/> have to be created by [one of the current admins](#getting-help), following [the instructions in the admin guide](admin-guide.md#new-repository). To ask for a new repository, first pick a name which follows [the lab's naming convention](dataset-curation.md#naming-the-dataset), then [open a Github issue in `neuropoly/data-management`](https://github.com/neuropoly/data-management/issues).
+
 ## Opening an issue
 
 If you're working with a dataset, and you notice that something is wrong, or something could be better, consider opening an issue!
@@ -174,7 +178,7 @@ If you want to modify a dataset, you should make a pull request, which can then 
 6. Then you can run BIDS validator to check if the modifications are in line with the BIDS standards. It is already installed on NeuroPoly stations. When inside the dataset you can run:
    ```sh
    bids-validator .
-   ```   
+   ```
 8. On the web interface <https://data.neuro.polymtl.ca/>, open a pull request:
    1. Go the the repository's page.
    2. Click on the "Pull Requests" tab.
