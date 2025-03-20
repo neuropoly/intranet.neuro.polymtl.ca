@@ -1,6 +1,35 @@
 # MATLAB
 
-MATLAB is installed on some [internal machines](/computing-resources/neuropoly/README.md) (but [not yet all](https://github.com/neuropoly/computers/issues/326)). If you install MATLAB on your local machine, download the institutional license from [duke](/data/duke), at `duke:/public/software/matlab/license_laboslicsent.dat` and use it to activate your copy. Thereafter, **you must be connected to the [VPN](/computing-resources/neuropoly/README.md#vpn)** when using MATLAB because it is a _network license_, meaning the school runs a licensing server, behind the VPN, that authenticates your right to use MATLAB.
+MATLAB is installed on some [internal machines](/computing-resources/neuropoly/README.md) (but [not yet all](https://github.com/neuropoly/computers/issues/326)). 
+
+To run MATLAB on your personal computer, follow these instructions:
+
+1. Create a MathWorks Account:
+  * Go to the [MathWorks account](https://www.mathworks.com/mwaccount/account/create) creation page and sign up using your PolyMtl email address.
+2. Download MATLAB:
+  * Visit the [download MATLAB](https://www.mathworks.com/downloads/) page.
+  * Select the MATLAB release version you want to download from the dropdown menu.
+  * Click the download button.
+    * Note: If you are using a recent Mac computer with an M1/M2/M3 chip, click the "Get Apple silicon MATLAB" button.
+3. Run the Installer:
+  * Open the downloaded installer file.
+    * Note: Your operating system may prompt you to provide credentials to install new software.
+  * When prompted, log in using your PolyMtl email account credentials associated with your MathWorks account.
+  * Read and accept the terms of the license agreement.
+4. Select Toolboxes:
+  * On the "Select product" tab, choose the toolboxes you need.
+    * Note: Selecting all toolboxes will consume significant disk space (~30 GB). Start with the essentials (e.g., core MATLAB, Curve Fitting, Deep Learning, Image Processing, Optimization, Statistics and Machine Learning) and add more later if needed.
+5. Complete Installation:
+  * Follow the prompts and click "Begin install."
+  * Once the installation is complete, you can create a shortcut by navigating to the installation directory and following your operating system's standard procedure.
+6. Verify Installation:
+  * Launch MATLAB to ensure it opens without errors.
+
+**Additional Notes:**
+
+* You do not need to be connected to the PolyMtl VPN to activate or run MATLAB, as long as you use your PolyMtl email account for licensing.
+* If you encounter issues during installation, refer to the MathWorks Support page for troubleshooting.
+* To uninstall MATLAB, use the standard uninstallation process for your operating system.
 
 ## Figures
 
