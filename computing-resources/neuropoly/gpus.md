@@ -1015,14 +1015,14 @@ u918374@rosenberg:~$ CUDA_VISIBLE_DEVICES="2,3,5" ./train.sh
 At the moment, this section only applies to romane
 ```
 
-```{note} Some context
-:class: dropdown
+<details>
+<summary>Some context</summary>
 
 In order to prevent unresponsive systems due to resource intensive ML processes, romane has strict
 resource controls in place. Essentially, we impose limits on the amount of CPU and RAM available to a user
 (i.e., a single core of the CPU and a few GB of RAM). Most regular commands (git, scp, etc) should
 run fine under these limitations.
-```
+</details>
 
 Most commands (git, scp, tmux, etc) should run just fine without modification.
 
@@ -1030,7 +1030,7 @@ For processes that need to use the full resources of the system, we have dedicat
 a share of the system's RAM and CPU.
 
 **To run a heavy process**:
-1. Book one or more GPU slots (See [](###gpu-booking) above)
+1. Book one or more GPU slots (See [](#gpu-booking-2) above)
 2. Use the `set_slot` utility script to assign your process to the appropriate slice:
 ```
 set_slot <slot_number> <command> [args...]
@@ -1064,6 +1064,7 @@ should do so in this order:
 - **set_slot does not know anything about GPUs**, so you still need to set the options with your tooling
 to use the appropriate GPU, e.g., `CUDA_VISIBLE_DEVICES`
 
+### set_slot FAQ
 #### What happens if I forget to do this, and accidentally run my training without set_slot?
 
 - Your training won't have enough resources to run properly
