@@ -782,7 +782,7 @@ Host<span class="w"> </span>data.neuro.polymtl.ca
 </div>
 <p>Then in your <code class="docutils literal notranslate"><span class="pre">RDP</span></code> client put <code class="docutils literal notranslate"><span class="pre">localhost:3389</span></code> for the server.</p>
 <p><strong>To connect to <code class="docutils literal notranslate"><span class="pre">duke</span></code></strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>-NL<span class="w"> </span><span class="m">1445</span>:duke.neuro.polymtl.ca:445<span class="w"> </span>&lt;VM_USER&gt;@jumpvm<span class="w">  </span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>-NL<span class="w"> </span><span class="m">1445</span>:duke.neuro.polymtl.ca:445<span class="w"> </span>&lt;VM_USER&gt;@jumpvm
 </pre></div>
 </div>
 <p>Then follow standard instructions for <code class="docutils literal notranslate"><span class="pre">duke</span></code> but replace <code class="docutils literal notranslate"><span class="pre">duke.neuro.polymtl.ca</span></code> with <code class="docutils literal notranslate"><span class="pre">localhost:1445</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">smb://localhost:1445/&lt;FOLDER&gt;</span></code>).</p>
@@ -1068,6 +1068,7 @@ PC/Linux</label><div class="sd-tab-content docutils">
 <li><p><a class="reference external" href="https://intranet.neuro.polymtl.ca/computing-resources/neuropoly/gpus.html">How to use GPU Clusters at NeuroPoly</a></p>
 <ul>
 <li><p><a class="reference external" href="https://drive.google.com/file/d/17-eLVBiMNA8bNbfzpD6NLxHApZRDoy1B/view?usp=sharing">Video tutorial to get started</a></p></li>
+<li><p>romane has a <a class="reference internal" href="gpus.html#running-memory-and-cpu-intensive-tasks"><span class="std std-ref">special system for sharing CPU/RAM</span></a></p></li>
 </ul>
 </li>
 </ul>
