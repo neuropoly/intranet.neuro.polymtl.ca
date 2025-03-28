@@ -1030,7 +1030,7 @@ For processes that need to use the full resources of the system, we have dedicat
 a share of the system's RAM and CPU.
 
 **To run a heavy process**:
-1. Book one or more GPU slots (See [](#gpu-booking-2) above)
+1. Book one or more GPU slots (See [GPU booking](#gpu-booking) above)
 2. Use the `set_slot` utility script to assign your process to the appropriate slice:
 ```
 set_slot <slot_number> <command> [args...]
