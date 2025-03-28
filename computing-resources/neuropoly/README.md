@@ -17,7 +17,7 @@ You will receive a GE account during your [onboarding](https://github.com/neurop
 ### Password
 
 ```{important}
-Once in a while, you are requested to change your password. To do so, log onto another machine (eg `bireli`, `joplin`) and use the command `passwd` to change your password. 
+Once in a while, you are requested to change your password. To do so, log onto another machine (eg `bireli`, `joplin`) and use the command `passwd` to change your password.
 ```
 
 ### Groups
@@ -46,7 +46,7 @@ When working remotely from off-campus you need to use the [VPN](http://www.polym
 
 To connect to the VPN, you need to have an account with École Polytechnique, specifically with [CAS](https://cas5.polymtl.ca/cas/login). **Students** should already have this. **Consultants** and **Research Associates** will need to have an account created for them. This should have happened during your onboarding.
 
-You can change your CAS password at [Gestion des Codes](https://codes.si.polymtl.ca/gestion/). 
+You can change your CAS password at [Gestion des Codes](https://codes.si.polymtl.ca/gestion/).
 
 The VPN uses the `Cisco AnyConnect` protocol, and to use it, you must first install a compatible VPN client.
 
@@ -62,7 +62,7 @@ The VPN will not work if you are already accessing wifi on campus via `eduroam`,
 
 ### Background on VPN changes
 
-In September 2024, Polytechnique reconfigured their VPN management strategy. 
+In September 2024, Polytechnique reconfigured their VPN management strategy.
 
 Previously, VPN authentication worked similarly for all Neuropoly members. `Linux` and `macOS` users wishing to avoid installing proprietary `Cisco AnyConnect` software could follow the instruction provided for students (below).
 
@@ -74,9 +74,9 @@ If you are not a student, please follow the instructions provided for your speci
 
 Students should be approved for VPN access by default. They are assigned to the `PolySSL` group.
 
-For `Linux` and `macOS` users, `openconnect` is the recommended VPN client. 
+For `Linux` and `macOS` users, `openconnect` is the recommended VPN client.
 
-`Windows` users should typically follow the official Polytechnique instructions. Advanced users concerned about the monitoring capabilities of the `Cisco AnyConnect` client might consider adapting the instructions for a VM-based workaround documented under `Polytechnique Staff` to their needs. 
+`Windows` users should typically follow the official Polytechnique instructions. Advanced users concerned about the monitoring capabilities of the `Cisco AnyConnect` client might consider adapting the instructions for a VM-based workaround documented under `Polytechnique Staff` to their needs.
 
 ::::{tab-set}
 :::{tab-item} MacOS
@@ -134,7 +134,7 @@ To connect to the VPN, you need to run:
 ```
 
 Depending on your Linux set up, you may also be able to create a graphical interface for your VPN. The following instructions were tested on a system using `NetworkManager` and the `GNOME` desktop environment:
-1. Install the [NetworkManager openconnect plugin](https://gitlab.gnome.org/GNOME/NetworkManager-openvpn/). For example, with: 
+1. Install the [NetworkManager openconnect plugin](https://gitlab.gnome.org/GNOME/NetworkManager-openvpn/). For example, with:
 ```
 apt install network-manager-openconnect-gnome
 ```
@@ -148,7 +148,7 @@ apt install network-manager-openconnect-gnome
 9. Under `Username:`  put your CAS username.
 10. Under `Password:` put your CAS password.
 11. Click `Connect`.
-    
+
 :::
 
 :::{tab-item} Windows
@@ -168,11 +168,11 @@ In case the above links ever break, the steps are:
 :::
 ::::
 
-### Polytechnique Staff 
+### Polytechnique Staff
 
 Polytechnique staff (including **Professors**, **Research Associates**, and **Postdoctoral Researchers**) are assigned to the `PolyQuartz` group.
 
-The `PolyQuartz` group relies on an authentication flow that makes use of your `Okta` account. The authentication flow is _not natively supported by the `openconnect` client_. 
+The `PolyQuartz` group relies on an authentication flow that makes use of your `Okta` account. The authentication flow is _not natively supported by the `openconnect` client_.
 
 Users wishing to avoid installing the officially provisioned `Cisco AnyConnect` client can consider several known workarounds.
 
@@ -185,7 +185,7 @@ _Instructions for each of these options are as follows:_
 ::::{tab-set}
 :::{tab-item} Openconnect with cookie extraction
 
-This workaround allows you to complete the `Okta`-based authentication flow while using the `openconnect` client. 
+This workaround allows you to complete the `Okta`-based authentication flow while using the `openconnect` client.
 
 It should be effective for `Linux` and `macOS` users.
 
@@ -194,7 +194,7 @@ It should be effective for `Linux` and `macOS` users.
 3. Select `PolyQuartz` and press `Logon`
 4. Logon with your `Okta` credentials
 5. On the `Cisco Secure Client Download` page, open your browser's `DevTools`.
-6. Find the `webvpn` cookie and copy its value. 
+6. Find the `webvpn` cookie and copy its value.
 7. Pass this value to the following command on stdin (either by typing it, or piping to it):
 ```bash
 sudo openconnect --protocol=anyconnect --authgroup=PolyQuartz --cookie-on-stdin https://ssl.vpn.polymtl.ca/
@@ -208,15 +208,15 @@ A script to automate this process can be [found here](https://github.com/Someone
 
 :::{tab-item} Cisco AnyConnect in a VM
 
-This workaround allows you to isolate the `Cisco AnyConnect` client in a virtual machine. Additionally it allows you to determine which traffic you send through the VPN. 
+This workaround allows you to isolate the `Cisco AnyConnect` client in a virtual machine. Additionally it allows you to determine which traffic you send through the VPN.
 
 It should be effective for `Linux`, `macOS` and `Windows` users.
 
-It is recommended for advanced users.  
+It is recommended for advanced users.
 
 1. Create an `Ubuntu` virtual machine using your preferred Virtual Machine Manager (these instructions were tested with QEMU-KVM, but other VMMs should work fine as well).
-2. Under network settings, your VM should be set to use `NAT`. 
-3. Inside your new VM, follow [the official Polytechnique instructions](https://www.polymtl.ca/si/acces-securise-rvp-ou-vpn) to install the `Cisco AnyConnect` client. 
+2. Under network settings, your VM should be set to use `NAT`.
+3. Inside your new VM, follow [the official Polytechnique instructions](https://www.polymtl.ca/si/acces-securise-rvp-ou-vpn) to install the `Cisco AnyConnect` client.
 4. Set up your VM as an `SSH server`.
 ```bash
 sudo apt install openssh-server
@@ -266,7 +266,7 @@ If you sometimes work on campus, this config will interfere with your onsite acc
 
 Once you have finished with configuration, you can test your set up. For it to work, you will need to first start your VM and enable the VPN connection using the `Cisco AnyConnect` client inside your VM.
 
-You will then be able to proxy NeuroPoly-destined ssh traffic from your main host through your VM, which will make it easier to connect to NeuroPoly resources without significantly altering your workflow. You can test making an ssh connection to a NeuroPoly server to confirm that this works. 
+You will then be able to proxy NeuroPoly-destined ssh traffic from your main host through your VM, which will make it easier to connect to NeuroPoly resources without significantly altering your workflow. You can test making an ssh connection to a NeuroPoly server to confirm that this works.
 
 ```{note}
 You can use port forwarding to form other kinds of connections through your VM. (e.g. for `RDP` connections, to access `duke` or to access `data` in your browser). Examples follow.
@@ -280,7 +280,7 @@ Then in your `RDP` client put `localhost:3389` for the server.
 
 **To connect to `duke`**
 ```bash
-ssh -NL 1445:duke.neuro.polymtl.ca:445 <VM_USER>@jumpvm  
+ssh -NL 1445:duke.neuro.polymtl.ca:445 <VM_USER>@jumpvm
 ```
 Then follow standard instructions for `duke` but replace `duke.neuro.polymtl.ca` with `localhost:1445` (e.g. `smb://localhost:1445/<FOLDER>`).
 
@@ -289,7 +289,7 @@ Then follow standard instructions for `duke` but replace `duke.neuro.polymtl.ca`
 ssh -NL 3000:localhost:3000 <GE_USERNAME>@data.neuro.polymtl.ca
 ```
 Then in your browser go to: `http://localhost:3000`
- 
+
 :::
 
 :::{tab-item} Official instructions
@@ -302,14 +302,14 @@ The official Polytechnique instructions for configuring the `Cisco AnyConnect` c
 
 If you are an **Intern**, a **Consultant**, or are otherwise considered an **"Invité"** by Polytechnique, this section applies to you. Users in your category are **not** granted VPN access by default. A specific request must be submitted to [DGE IT](mailto:dge.informatique@polymtl.ca) to give you VPN access. (Normally, someone on the admin team should help you with this during your onboarding).
 
-Once you are approved for VPN access, DGE IT will provide personalized instructions for your specific use case. Most likely, you will be be added to the `PolyPhoton` group. Like `PolyQuartz`, this group uses `Okta` for authentication. 
+Once you are approved for VPN access, DGE IT will provide personalized instructions for your specific use case. Most likely, you will be be added to the `PolyPhoton` group. Like `PolyQuartz`, this group uses `Okta` for authentication.
 
 ```{note}
-If you do not wish to use the official `Cisco AnyConnect` client, you may be able to adapt the instructions under the `Polytechnique Staff` section for your purposes. However, please note that the workarounds described for `PolyQuartz` users have not been adequately tested for `PolyPhoton` users. 
+If you do not wish to use the official `Cisco AnyConnect` client, you may be able to adapt the instructions under the `Polytechnique Staff` section for your purposes. However, please note that the workarounds described for `PolyQuartz` users have not been adequately tested for `PolyPhoton` users.
 ```
 
 ```{warning}
-DGE IT's protocols for integration of VPN users with an **"Invité"** status are currently under development, so at the moment we cannot provide much assurance that alternative VPN configurations will work for these users. The most reliable option is to follow the official instructions provided by DGE IT [and Polytechnique](https://www.polymtl.ca/si/acces-securise-rvp-ou-vpn). 
+DGE IT's protocols for integration of VPN users with an **"Invité"** status are currently under development, so at the moment we cannot provide much assurance that alternative VPN configurations will work for these users. The most reliable option is to follow the official instructions provided by DGE IT [and Polytechnique](https://www.polymtl.ca/si/acces-securise-rvp-ou-vpn).
 ```
 
 ## Connect to NeuroPoly Computers
@@ -485,7 +485,7 @@ After starting the vncserver, connect to it as above.
 ```{note}
 **Note:**
 
-* On the first start of the vncserver, you will have to set a personal password for your vnc session  
+* On the first start of the vncserver, you will have to set a personal password for your vnc session
 * The resolution can be defined by changing the value of the `-geometry` flag.
 ```
 
@@ -727,7 +727,7 @@ Then enter your ID and password at poly.
   * Nifti viewer
 * Tanguy's app to open Nifti files with FSLview
 
-To access software from the department (Matlab, Microsoft Office, etc.), connect to: 
+To access software from the department (Matlab, Microsoft Office, etc.), connect to:
 ~~~
 smb://hcifst.grames.polymtl.ca/tools
 ~~~
@@ -757,7 +757,7 @@ Please try to check the scheduled reboot time and take it into account when star
 If a reboot is imminent, you may also see wall notices warning you about the upcoming reboot. They will say something like:
 "The system will reboot at Tue 2024-08-13 02:00:00 EDT!"
 
-Please be aware that these notices start less than 24 hours before the scheduled reboot, so relying on them as your main reboot indicator is strongly discouraged. 
+Please be aware that these notices start less than 24 hours before the scheduled reboot, so relying on them as your main reboot indicator is strongly discouraged.
 ```
 
 ### How can I request that a scheduled reboot is postponed?
@@ -767,7 +767,7 @@ If you started a long computation that you think will be interupted by the sched
 More detailed instructions are included in the template.
 
 ```{important}
-Please try to give admins 24h notice for postponement requests. 
+Please try to give admins 24h notice for postponement requests.
 ```
 
 **Admins:** The standard operating procedure for postponing scheduled reboots, along with more details on how automatic reboots work at NeuroPoly [is all documented here](https://github.com/neuropoly/computers/blob/master/docs/unattended-upgrades.md).
