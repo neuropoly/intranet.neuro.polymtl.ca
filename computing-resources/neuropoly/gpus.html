@@ -467,7 +467,20 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#good-training-habits">Good Training Habits</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bookings">Bookings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bookings">Bookings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-booking">GPU booking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-memory-and-cpu-intensive-tasks">Running memory- and CPU-intensive tasks</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#special-considerations">Special considerations</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-slot-faq">set_slot FAQ</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot">What happens if I forget to do this, and accidentally run my training without set_slot?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0">What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-resources-are-available-to-me-for-trainings">What resources are available to me for trainings?</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monitoring">Monitoring</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monitoring-gpus">Monitoring GPUs</a></li>
 </ul>
@@ -503,7 +516,7 @@ document.write(`
 <h2>Hardware<a class="headerlink" href="#hardware" title="Link to this heading">#</a></h2>
 <p>You can inspect the available GPUs on machine, and their current state, with <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code>:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ nvidia-smi
-Fri Jun  4 01:26:14 2021       
+Fri Jun  4 01:26:14 2021
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 440.33.01    Driver Version: 440.33.01    CUDA Version: 10.2     |
 |-------------------------------+----------------------+----------------------+
@@ -554,7 +567,7 @@ Fri Jun  4 01:26:14 2021
 or you can install your own versions in a <code class="docutils literal notranslate"><span class="pre">venv</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment.</p>
 <p>You can check your environemnt is set up right for accessing the GPUs by running <code class="docutils literal notranslate"><span class="pre">nvverify</span></code>:</p>
 <details><summary><code>nvverify</code> example</summary>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>root@romane:~# nvverify 
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>root@romane:~# nvverify
 ======================== GPU Hardware ========================
 + lspci -vvd 10DE:
 01:00.0 VGA compatible controller: NVIDIA Corporation GA102GL [RTX A6000] (rev a1) (prog-if 00 [VGA controller])
@@ -1098,7 +1111,7 @@ alias:          pci:v000010DEd*sv*sd*bc03sc00i00*
 depends:        drm
 retpoline:      Y
 name:           nvidia
-vermagic:       5.15.0-30-generic SMP mod_unload modversions 
+vermagic:       5.15.0-30-generic SMP mod_unload modversions
 parm:           NvSwitchRegDwords:NvSwitch regkey (charp)
 parm:           NvSwitchBlacklist:NvSwitchBlacklist=uuid[,uuid...] (charp)
 parm:           NVreg_ResmanDebugLevel:int
@@ -1164,7 +1177,7 @@ nvidia-profiler/jammy,now 11.5.114~11.5.1-1ubuntu1 amd64 [installed,automatic]
 nvidia-utils-510/jammy-updates,jammy-security,now 510.73.05-0ubuntu0.22.04.1 amd64 [installed,automatic]
 xserver-xorg-video-nvidia-510/jammy-updates,jammy-security,now 510.73.05-0ubuntu0.22.04.1 amd64 [installed,automatic]
 + nvidia-smi
-Wed May 18 06:29:10 2022       
+Wed May 18 06:29:10 2022
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 510.73.05    Driver Version: 510.73.05    CUDA Version: 11.6     |
 |-------------------------------+----------------------+----------------------+
@@ -1188,7 +1201,7 @@ Wed May 18 06:29:10 2022
 | 30%   24C    P8    16W / 300W |      1MiB / 49140MiB |      0%      Default |
 |                               |                      |                  N/A |
 +-------------------------------+----------------------+----------------------+
-                                                                               
+
 +-----------------------------------------------------------------------------+
 | Processes:                                                                  |
 |  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
@@ -1285,7 +1298,7 @@ tf.Tensor(
  [ -48.38  139.9   157.4  ...  -48.9   -85.5  -194.4 ]], shape=(30000, 20000), dtype=float16)
 device: /job:localhost/replica:0/task:0/device:GPU:0
 We are PID = 57887
-Wed May 18 06:29:20 2022       
+Wed May 18 06:29:20 2022
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 510.73.05    Driver Version: 510.73.05    CUDA Version: 11.6     |
 |-------------------------------+----------------------+----------------------+
@@ -1309,7 +1322,7 @@ Wed May 18 06:29:20 2022
 | 30%   26C    P2    65W / 300W |    428MiB / 49140MiB |      0%      Default |
 |                               |                      |                  N/A |
 +-------------------------------+----------------------+----------------------+
-                                                                               
+
 +-----------------------------------------------------------------------------+
 | Processes:                                                                  |
 |  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
@@ -1347,7 +1360,7 @@ tensor([[   5.1328, -104.2500,   -3.1445,  ..., -115.8125,   25.5625,
            77.6875]], device=&#39;cuda:0&#39;, dtype=torch.float16)
 device: cuda:0
 We are PID = 58390
-Wed May 18 06:29:28 2022       
+Wed May 18 06:29:28 2022
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 510.73.05    Driver Version: 510.73.05    CUDA Version: 11.6     |
 |-------------------------------+----------------------+----------------------+
@@ -1371,7 +1384,7 @@ Wed May 18 06:29:28 2022
 | 30%   25C    P8    17W / 300W |      3MiB / 49140MiB |      0%      Default |
 |                               |                      |                  N/A |
 +-------------------------------+----------------------+----------------------+
-                                                                               
+
 +-----------------------------------------------------------------------------+
 | Processes:                                                                  |
 |  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
@@ -1452,6 +1465,10 @@ u108545@rosenberg:~$ du -hs data_extrassd_u108545/miniconda3/
 </section>
 <section id="bookings">
 <h2>Bookings<a class="headerlink" href="#bookings" title="Link to this heading">#</a></h2>
+<p>There are two systems for resource sharing on GPU clusters: GPU sharing and CPU/memory sharing.
+GPU sharing is managed through a calendar. CPU and memory are shared using resource quotas.</p>
+<section id="gpu-booking">
+<h3>GPU booking<a class="headerlink" href="#gpu-booking" title="Link to this heading">#</a></h3>
 <p>Please allocate your GPUs cooperatively on the <a class="reference external" href="https://calendar.google.com/calendar?cid=NG1nNmJnZDlwdjU1dGhmOTQ4NnQybWlodDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">computer resource calendar</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1468,6 +1485,85 @@ u108545@rosenberg:~$ du -hs data_extrassd_u108545/miniconda3/
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ CUDA_VISIBLE_DEVICES=&quot;2,3,5&quot; ./train.sh
 </pre></div>
 </div>
+</section>
+<section id="running-memory-and-cpu-intensive-tasks">
+<h3>Running memory- and CPU-intensive tasks<a class="headerlink" href="#running-memory-and-cpu-intensive-tasks" title="Link to this heading">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>At the moment, this section only applies to romane</p>
+</div>
+<details>
+<summary>Some context</summary>
+<p>In order to prevent unresponsive systems due to resource intensive ML processes, romane has strict
+resource controls in place. Essentially, we impose limits on the amount of CPU and RAM available to a user
+(i.e., a single core of the CPU and a few GB of RAM). Most regular commands (git, scp, etc) should
+run fine under these limitations.</p>
+</details>
+<p>Most commands (git, scp, tmux, etc) should run just fine without modification.</p>
+<p>For processes that need to use the full resources of the system, we have dedicated “slots” with
+a share of the system’s RAM and CPU.</p>
+<p><strong>To run a heavy process</strong>:</p>
+<ol class="arabic simple">
+<li><p>Book one or more GPU slots (See <a class="reference internal" href="#gpu-booking">GPU booking</a> above)</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> utility script to assign your process to the appropriate slice:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_slot</span> <span class="o">&lt;</span><span class="n">slot_number</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">args</span><span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;slot_number&gt;</span></code> is 0, 1, 2, or 3, corresponding to the GPU you are using, e.g., <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">...</span></code> for GPU0.
+(If you’re using more than one GPU, just pick one of the GPU numbers you have reserved. All the slots
+corresponding to your GPUs are yours to use, but a single process can only be assigned to one of them.)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;command&gt;</span> <span class="pre">[args...]</span></code> is the command as you would normally run it in the shell, e.g., <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">model.py</span></code></p></li>
+</ul>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_slot</span> <span class="mi">2</span> <span class="n">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="mi">2</span> <span class="n">python3</span> <span class="n">myscript</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<section id="special-considerations">
+<h4>Special considerations<a class="headerlink" href="#special-considerations" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Environmnent variables are not currently passed through</strong> by <code class="docutils literal notranslate"><span class="pre">set_slot</span></code>. To run in a specific environment,
+for example a venv, use <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> to start a shell (e.g. <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">bash</span></code>) and then work in that shell.
+(NB: the shell will not persist unless you run it in tmux or screen). We are still improving our
+script, so this may become possible in the future.</p></li>
+<li><p><strong>tmux/screen</strong>: You must start your session before you use set_slot. <code class="docutils literal notranslate"><span class="pre">tmux</span></code> and <code class="docutils literal notranslate"><span class="pre">screen</span></code> manage their own child
+processes, and will bypass our systemd slices and run in the limited user resource pool.
+Do NOT do <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">3</span> <span class="pre">tmux</span> <span class="pre">new</span> <span class="pre">-s</span> <span class="pre">mysession</span></code>! <strong>If you are using a shell AND tmux/screen</strong> you
+should do so in this order:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tmux</span></code> or <code class="docutils literal notranslate"><span class="pre">tmux</span> <span class="pre">new</span> <span class="pre">-s</span> <span class="pre">mysession</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">bash</span></code></p></li>
+</ol>
+</li>
+<li><p><strong>set_slot does not know anything about GPUs</strong>, so you still need to set the options with your tooling
+to use the appropriate GPU, e.g., <code class="docutils literal notranslate"><span class="pre">CUDA_VISIBLE_DEVICES</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="set-slot-faq">
+<h3>set_slot FAQ<a class="headerlink" href="#set-slot-faq" title="Link to this heading">#</a></h3>
+<section id="what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot">
+<h4>What happens if I forget to do this, and accidentally run my training without set_slot?<a class="headerlink" href="#what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Your training won’t have enough resources to run properly</p></li>
+<li><p>Your individual user session may be borked</p></li>
+<li><p>Nobody else’s sessions or work will be borked</p></li>
+</ul>
+</section>
+<section id="what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0">
+<h4>What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)<a class="headerlink" href="#what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>This won’t affect which GPU will be used.</p></li>
+<li><p>BUT, you might end up competing for resources with someone else.</p></li>
+<li><p>Try not to do this, and ask for help if you realize that you have.</p></li>
+</ul>
+</section>
+<section id="what-resources-are-available-to-me-for-trainings">
+<h4>What resources are available to me for trainings?<a class="headerlink" href="#what-resources-are-available-to-me-for-trainings" title="Link to this heading">#</a></h4>
+<p>Right now each GPU pool is limited to about 90G of RAM (hard limit: 110G) and 14 processors (1400% CPU).</p>
+</section>
+</section>
 </section>
 <section id="monitoring">
 <h2>Monitoring<a class="headerlink" href="#monitoring" title="Link to this heading">#</a></h2>
@@ -1644,7 +1740,20 @@ Terminal</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#good-training-habits">Good Training Habits</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bookings">Bookings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bookings">Bookings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-booking">GPU booking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-memory-and-cpu-intensive-tasks">Running memory- and CPU-intensive tasks</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#special-considerations">Special considerations</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-slot-faq">set_slot FAQ</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot">What happens if I forget to do this, and accidentally run my training without set_slot?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0">What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-resources-are-available-to-me-for-trainings">What resources are available to me for trainings?</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monitoring">Monitoring</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monitoring-gpus">Monitoring GPUs</a></li>
 </ul>

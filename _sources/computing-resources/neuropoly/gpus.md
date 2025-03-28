@@ -24,7 +24,7 @@ You can inspect the available GPUs on machine, and their current state, with `nv
 
 ```text
 u918374@rosenberg:~$ nvidia-smi
-Fri Jun  4 01:26:14 2021       
+Fri Jun  4 01:26:14 2021
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 440.33.01    Driver Version: 440.33.01    CUDA Version: 10.2     |
 |-------------------------------+----------------------+----------------------+
@@ -78,7 +78,7 @@ You can check your environemnt is set up right for accessing the GPUs by running
 <details><summary><code>nvverify</code> example</summary>
 
 ```
-root@romane:~# nvverify 
+root@romane:~# nvverify
 ======================== GPU Hardware ========================
 + lspci -vvd 10DE:
 01:00.0 VGA compatible controller: NVIDIA Corporation GA102GL [RTX A6000] (rev a1) (prog-if 00 [VGA controller])
@@ -622,7 +622,7 @@ alias:          pci:v000010DEd*sv*sd*bc03sc00i00*
 depends:        drm
 retpoline:      Y
 name:           nvidia
-vermagic:       5.15.0-30-generic SMP mod_unload modversions 
+vermagic:       5.15.0-30-generic SMP mod_unload modversions
 parm:           NvSwitchRegDwords:NvSwitch regkey (charp)
 parm:           NvSwitchBlacklist:NvSwitchBlacklist=uuid[,uuid...] (charp)
 parm:           NVreg_ResmanDebugLevel:int
@@ -688,7 +688,7 @@ nvidia-profiler/jammy,now 11.5.114~11.5.1-1ubuntu1 amd64 [installed,automatic]
 nvidia-utils-510/jammy-updates,jammy-security,now 510.73.05-0ubuntu0.22.04.1 amd64 [installed,automatic]
 xserver-xorg-video-nvidia-510/jammy-updates,jammy-security,now 510.73.05-0ubuntu0.22.04.1 amd64 [installed,automatic]
 + nvidia-smi
-Wed May 18 06:29:10 2022       
+Wed May 18 06:29:10 2022
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 510.73.05    Driver Version: 510.73.05    CUDA Version: 11.6     |
 |-------------------------------+----------------------+----------------------+
@@ -712,7 +712,7 @@ Wed May 18 06:29:10 2022
 | 30%   24C    P8    16W / 300W |      1MiB / 49140MiB |      0%      Default |
 |                               |                      |                  N/A |
 +-------------------------------+----------------------+----------------------+
-                                                                               
+
 +-----------------------------------------------------------------------------+
 | Processes:                                                                  |
 |  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
@@ -809,7 +809,7 @@ tf.Tensor(
  [ -48.38  139.9   157.4  ...  -48.9   -85.5  -194.4 ]], shape=(30000, 20000), dtype=float16)
 device: /job:localhost/replica:0/task:0/device:GPU:0
 We are PID = 57887
-Wed May 18 06:29:20 2022       
+Wed May 18 06:29:20 2022
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 510.73.05    Driver Version: 510.73.05    CUDA Version: 11.6     |
 |-------------------------------+----------------------+----------------------+
@@ -833,7 +833,7 @@ Wed May 18 06:29:20 2022
 | 30%   26C    P2    65W / 300W |    428MiB / 49140MiB |      0%      Default |
 |                               |                      |                  N/A |
 +-------------------------------+----------------------+----------------------+
-                                                                               
+
 +-----------------------------------------------------------------------------+
 | Processes:                                                                  |
 |  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
@@ -871,7 +871,7 @@ tensor([[   5.1328, -104.2500,   -3.1445,  ..., -115.8125,   25.5625,
            77.6875]], device='cuda:0', dtype=torch.float16)
 device: cuda:0
 We are PID = 58390
-Wed May 18 06:29:28 2022       
+Wed May 18 06:29:28 2022
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 510.73.05    Driver Version: 510.73.05    CUDA Version: 11.6     |
 |-------------------------------+----------------------+----------------------+
@@ -895,7 +895,7 @@ Wed May 18 06:29:28 2022
 | 30%   25C    P8    17W / 300W |      3MiB / 49140MiB |      0%      Default |
 |                               |                      |                  N/A |
 +-------------------------------+----------------------+----------------------+
-                                                                               
+
 +-----------------------------------------------------------------------------+
 | Processes:                                                                  |
 |  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
@@ -916,7 +916,7 @@ To get your software onto these servers, download it with `git clone`.
 
 For the benefit of being able to test code out locally, without the GPU servers, it's helpful to write device-agnostic code, code that falls back to running on slower CPU emulation if GPUs are not available.
 
-For tensorflow, this 
+For tensorflow, this
 
 For pytorch, this [looks like this](https://pytorch.org/docs/stable/notes/cuda.html#device-agnostic-code)
 
@@ -948,7 +948,7 @@ Please, do not use space on duke while training your models. If you need more lo
 
 ### Mid-term, rapid access \(no backup\)
 
-This corresponds to your home `~/`. This is where you keep your software \(conda envs, virtualenvs, etc.\). 
+This corresponds to your home `~/`. This is where you keep your software \(conda envs, virtualenvs, etc.\).
 
 ### Short-term, very rapid access \(no backup\)
 
@@ -980,6 +980,11 @@ And:
 
 ## Bookings
 
+There are two systems for resource sharing on GPU clusters: GPU sharing and CPU/memory sharing.
+GPU sharing is managed through a calendar. CPU and memory are shared using resource quotas.
+
+### GPU booking
+
 Please allocate your GPUs cooperatively on the [computer resource calendar](https://calendar.google.com/calendar?cid=NG1nNmJnZDlwdjU1dGhmOTQ4NnQybWlodDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
 
 ```{warning}
@@ -1003,6 +1008,78 @@ and use them with
 ```text
 u918374@rosenberg:~$ CUDA_VISIBLE_DEVICES="2,3,5" ./train.sh
 ```
+
+### Running memory- and CPU-intensive tasks
+
+```{note}
+At the moment, this section only applies to romane
+```
+
+<details>
+<summary>Some context</summary>
+
+In order to prevent unresponsive systems due to resource intensive ML processes, romane has strict
+resource controls in place. Essentially, we impose limits on the amount of CPU and RAM available to a user
+(i.e., a single core of the CPU and a few GB of RAM). Most regular commands (git, scp, etc) should
+run fine under these limitations.
+</details>
+
+Most commands (git, scp, tmux, etc) should run just fine without modification.
+
+For processes that need to use the full resources of the system, we have dedicated "slots" with
+a share of the system's RAM and CPU.
+
+**To run a heavy process**:
+1. Book one or more GPU slots (See [GPU booking](#gpu-booking) above)
+2. Use the `set_slot` utility script to assign your process to the appropriate slice:
+```
+set_slot <slot_number> <command> [args...]
+```
+
+- `<slot_number>` is 0, 1, 2, or 3, corresponding to the GPU you are using, e.g., `set_slot 0 ...` for GPU0.
+(If you're using more than one GPU, just pick one of the GPU numbers you have reserved. All the slots
+corresponding to your GPUs are yours to use, but a single process can only be assigned to one of them.)
+- `<command> [args...]` is the command as you would normally run it in the shell, e.g., `python model.py`
+
+
+For example:
+```
+set_slot 2 CUDA_VISIBLE_DEVICES=2 python3 myscript.py
+```
+
+#### Special considerations
+
+- **Environmnent variables are not currently passed through** by `set_slot`. To run in a specific environment,
+for example a venv, use `set_slot` to start a shell (e.g. `set_slot 0 bash`) and then work in that shell.
+(NB: the shell will not persist unless you run it in tmux or screen). We are still improving our
+script, so this may become possible in the future.
+
+- **tmux/screen**: You must start your session before you use set_slot. `tmux` and `screen` manage their own child
+processes, and will bypass our systemd slices and run in the limited user resource pool.
+Do NOT do `set_slot 3 tmux new -s mysession`! **If you are using a shell AND tmux/screen** you
+should do so in this order:
+  1. `tmux` or `tmux new -s mysession`
+  2. `set_slot 0 bash`
+
+- **set_slot does not know anything about GPUs**, so you still need to set the options with your tooling
+to use the appropriate GPU, e.g., `CUDA_VISIBLE_DEVICES`
+
+### set_slot FAQ
+#### What happens if I forget to do this, and accidentally run my training without set_slot?
+
+- Your training won't have enough resources to run properly
+- Your individual user session may be borked
+- Nobody else's sessions or work will be borked
+
+#### What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)
+
+- This won't affect which GPU will be used.
+- BUT, you might end up competing for resources with someone else.
+- Try not to do this, and ask for help if you realize that you have.
+
+#### What resources are available to me for trainings?
+
+Right now each GPU pool is limited to about 90G of RAM (hard limit: 110G) and 14 processors (1400% CPU).
 
 ## Monitoring
 
@@ -1087,19 +1164,19 @@ To do on the remote GPU cluster:
   - `PATH_TO_MODEL`: Is the path to the folder that contains the file `*.tfevents.*`
   - `PORTNUMBER`: Pick one number that is different from the port number that other people might be using on the same station. Examples: 6008, 6009, etc.
 
-- Create an {ref}`ssh-tunnelling` between your local station and the remote server. 
+- Create an {ref}`ssh-tunnelling` between your local station and the remote server.
 
 - Open a browser and go to: [http://localhost:8080/](http://localhost:8080/).
 
 (ssh-tunnelling)=
 ## SSH tunnelling
 
-If you want to run a Jupyter notebook from a remote server, or monitor a model training using tensorboard, you will need to do an SSH tunnelling to be able to pass the display from the remote cluster to your local station. 
+If you want to run a Jupyter notebook from a remote server, or monitor a model training using tensorboard, you will need to do an SSH tunnelling to be able to pass the display from the remote cluster to your local station.
 
 ::::{tab-set}
 :::{tab-item} Secure pipes
 
-Install secure pipes and configure it as follows: 
+Install secure pipes and configure it as follows:
 with port_rosenber as the “Port” of the screen session and port_local is a random number (see screenshot below):
 
 ![](../../_media/tunnelling_macos.png)
@@ -1111,18 +1188,18 @@ with port_rosenber as the “Port” of the screen session and port_local is a r
 ssh -N -f -L localhost:8080:localhost:PORTNUMBER username@CLUSTER.neuro.polymtl.ca
 ```
 
-Once the SSH tunnel is established, open a browser and go to: [http://localhost:8080/](http://localhost:8080/). 
+Once the SSH tunnel is established, open a browser and go to: [http://localhost:8080/](http://localhost:8080/).
 
 ```{warning}
-If you get the following error: 
+If you get the following error:
 
-~~~ 
+~~~
 bind: Address already in use
 channel_setup_fwd_listener_tcpip: cannot listen to port: 8080
 Could not request local forwarding.
 ~~~
 You need to kill whatever application is using that port:
-~~~ 
+~~~
 lsof -ti:8080 | xargs kill -9
 ~~~
 ```
