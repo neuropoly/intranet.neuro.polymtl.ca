@@ -193,7 +193,7 @@ For all articles/abstracts, please add the following:
 
 For projects using Digital Alliance (formerly Compute Canada), please add:
 
-> the Digital Research Alliance of Canada (alliance​can​.ca) for supercomputing infrastructure.
+> the Digital Research Alliance of Canada (alliance​can​.ca) for providing the supercomputing infrastructure.
 
 For projects involving SEM, please add:
 
