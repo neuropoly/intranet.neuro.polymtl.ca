@@ -47,6 +47,7 @@ For students in neurosciences:
 * [Fondation Polytechnique \(mostly for canadians](http://www.polymtl.ca/aidefinanciere/chrono/internes-sup.php)
 * [Scholarship for anglophone student: Bourse de la Fondation Richard J. Schmeelk \(For canadians + anglophones only\)](http://schmeelkca.globat.com/wp-content/uploads/2013/06/Schmeelk_applicationform_EN.pdf)
 * [MITACS accelerate](https://www.mitacs.ca/fr/programmes/acceleration)
+* [Google](https://www.polymtl.ca/aide-financiere/bourses/bourses-de-doctorat-google-en-amerique-du-nord)
 
 FOUNDATIONS
 
