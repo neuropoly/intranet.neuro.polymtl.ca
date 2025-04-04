@@ -650,7 +650,7 @@ For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.
 | **Model** | PC, NVIDIA RTX A6000 (1x) |
 | **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
 | **Hostname**    | `peterson.grames.polymtl.ca` |
-| **Credentials** | <GE_USERNAME>/<GE_PASSWORD> |
+| **Credentials** | Username: "GRAMES\***" (***: Your GE username, eg: p101317) | Password: Your GE password |
 
 
 ### node006 (Poly-Grames)
@@ -661,7 +661,7 @@ For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.
 | **Model** | PC, NVIDIA Tesla V100S-PCIE-32GB (1x) |
 | **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
 | **Hostname**    | `node006.grames.polymtl.ca` |
-| **Credentials** | <GE_USERNAME>/<GE_PASSWORD> |
+| **Credentials** | Username: "GRAMES\***" (***: Your GE username, eg: p101317) | Password: Your GE password |
 
 
 ### node007 (Poly-Grames)
@@ -672,7 +672,7 @@ For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.
 | **Model** | PC, NVIDIA Tesla V100S-PCIE-32GB (1x) |
 | **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
 | **Hostname**    | `node007.grames.polymtl.ca` |
-| **Credentials** | <GRAMES_USERNAME>/<GRAMES_PASSWORD> |
+| **Credentials** | Username: "GRAMES\***" (***: Your GE username, eg: p101317) | Password: Your GE password |
 
 
 ## Connect to the Polytechnique public disk
