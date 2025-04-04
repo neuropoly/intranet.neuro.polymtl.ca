@@ -34,6 +34,11 @@ Username: grames\your_polygrames_username
 
 Password: your_polygrames_password
 
+### Home folder
+
+Your home folder at GE is here: `smb://hvclusterfs.grames.polymtl.ca/usagers/personnels`
+
+
 ## List of Computers at NeuroPoly
 
 Are you new to NeuroPoly and looking for a desk and a station? Please check the [list of Desktop/Server/Clusters computers and Printers](https://docs.google.com/document/d/11GEh5YvYRnWnERv26TezcyvyPF2W5KF0uoI2U6p7XsM/edit) so you can pick one that is free. If you'd like a particular desk and someone else is using a station remotely, please ask the admins to move the station to another location.
