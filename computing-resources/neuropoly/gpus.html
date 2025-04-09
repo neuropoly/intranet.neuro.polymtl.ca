@@ -1523,10 +1523,17 @@ corresponding to your GPUs are yours to use, but a single process can only be as
 <section id="special-considerations">
 <h4>Special considerations<a class="headerlink" href="#special-considerations" title="Link to this heading">#</a></h4>
 <ul class="simple">
-<li><p><strong>Environmnent variables are not currently passed through</strong> by <code class="docutils literal notranslate"><span class="pre">set_slot</span></code>. To run in a specific environment,
+<li><p><strong>Environment variables are not currently passed through</strong> by <code class="docutils literal notranslate"><span class="pre">set_slot</span></code>. To run in a specific environment,
 for example a venv, use <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> to start a shell (e.g. <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">bash</span></code>) and then work in that shell.
 (NB: the shell will not persist unless you run it in tmux or screen). We are still improving our
 script, so this may become possible in the future.</p></li>
+<li><p><strong>If you need to access duke inside <code class="docutils literal notranslate"><span class="pre">set_slot</span></code></strong>, run <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> inside a shell (e.g., <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">bash</span></code>), then
+run <code class="docutils literal notranslate"><span class="pre">cifscreds</span> <span class="pre">add</span> <span class="pre">duke.neuro.polymtl.ca</span></code> in that shell. This will ensure that duke is still
+accessible when you detach or logout</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/neuropoly/computers/issues/996">Github issue</a></p></li>
+</ul>
+</li>
 <li><p><strong>tmux/screen</strong>: You must start your session before you use set_slot. <code class="docutils literal notranslate"><span class="pre">tmux</span></code> and <code class="docutils literal notranslate"><span class="pre">screen</span></code> manage their own child
 processes, and will bypass our systemd slices and run in the limited user resource pool.
 Do NOT do <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">3</span> <span class="pre">tmux</span> <span class="pre">new</span> <span class="pre">-s</span> <span class="pre">mysession</span></code>! <strong>If you are using a shell AND tmux/screen</strong> you

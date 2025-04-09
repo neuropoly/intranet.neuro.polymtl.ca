@@ -1049,10 +1049,15 @@ set_slot 2 CUDA_VISIBLE_DEVICES=2 python3 myscript.py
 
 #### Special considerations
 
-- **Environmnent variables are not currently passed through** by `set_slot`. To run in a specific environment,
+- **Environment variables are not currently passed through** by `set_slot`. To run in a specific environment,
 for example a venv, use `set_slot` to start a shell (e.g. `set_slot 0 bash`) and then work in that shell.
 (NB: the shell will not persist unless you run it in tmux or screen). We are still improving our
 script, so this may become possible in the future.
+
+- **If you need to access duke inside `set_slot`**, run `set_slot` inside a shell (e.g., `set_slot 0 bash`), then
+  run `cifscreds add duke.neuro.polymtl.ca` in that shell. This will ensure that duke is still
+  accessible when you detach or logout
+  - [Github issue](https://github.com/neuropoly/computers/issues/996)
 
 - **tmux/screen**: You must start your session before you use set_slot. `tmux` and `screen` manage their own child
 processes, and will bypass our systemd slices and run in the limited user resource pool.
