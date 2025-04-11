@@ -45,6 +45,171 @@ Are you new to NeuroPoly and looking for a desk and a station? Please check the 
 
 If you prefer to work on your laptop, please let the admins know in your [onboarding ticket](https://github.com/neuropoly/onboarding/issues/) and they will find you an available screen you can connect to your laptop.
 
+The following CPU and GPU clusters are available for internal use at **NeuroPoly**.
+
+```{warning}
+Please indicate in [NeuroPoly's "Computer resource" calendar](https://calendar.google.com/calendar/u/0/embed?src=4mg6bgd9pv55thf9486t2miht8@group.calendar.google.com) if you plan to launch intensive calculations on a computer. These are shared resources, so it helps to know which computer is being used and by who, in order to prioritize tasks and make the best of our resources. Your calendar entry could span several days, and should specify your name and the ID or number of GPU/CPU used. Example: `julien@rosenberg:gpu[4,5]`, or `naga@joplin:cpu[n=20]` If you don't have writing permission on this calendar please post a request on [the ticket tracker](https://github.com/neuropoly/computers/issues/).
+```
+
+```{note}
+If you wish to monitor the CPU/GPU/RAM/disk and other aspects of the server you are using, you can use our [monitoring system](https://monitor.neuro.polymtl.ca/v1). You need to be inside the VLAN to see the monitoring system.
+```
+
+### rosenberg
+
+| Spec         | Description                  |
+| ------------ | ---------------------------- |
+| **CPU**      | 2x Intel E5-2630             |
+| **GPU**      | 8x P100                      |
+| **RAM**      | 16x 32GB DDR4                |
+| **Hostname** | `rosenberg.neuro.polymtl.ca` |
+
+* By default, the root (OS and home folder) mount point is on the NVME disk
+* Shared **scratch** located under **/scratch**. Please clean the unnecessary data after you finish the processing.
+* [How to use GPU Clusters at NeuroPoly](https://intranet.neuro.polymtl.ca/computing-resources/neuropoly/gpus.html)
+  * [Video tutorial to get started](https://drive.google.com/file/d/17-eLVBiMNA8bNbfzpD6NLxHApZRDoy1B/view?usp=sharing)
+
+_For system administrators_: Please log all the changes on the station by updating the ansible scripts from [https://github.com/neuropoly/computers](https://github.com/neuropoly/computers).
+
+
+### romane
+
+| Spec         | Description                  |
+| ------------ | ---------------------------- |
+| **CPU**      | AMD EPYC 7452 32-Core        |
+| **GPU**      | 4x RTX A6000 48GB            |
+| **RAM**      | 16x 32GB DDR4                |
+| **Hostname** | `romane.neuro.polymtl.ca`    |
+
+* By default, the root (OS and home folder) mount point is on the NVME disk. You can train your model on your /home
+* [How to use GPU Clusters at NeuroPoly](https://intranet.neuro.polymtl.ca/computing-resources/neuropoly/gpus.html)
+  * [Video tutorial to get started](https://drive.google.com/file/d/17-eLVBiMNA8bNbfzpD6NLxHApZRDoy1B/view?usp=sharing)
+  * romane has a [special system for sharing CPU/RAM](./gpus.md#running-memory-and-cpu-intensive-tasks)
+
+_For system administrators_: Please log all the changes on the station by updating the ansible scripts from [https://github.com/neuropoly/computers](https://github.com/neuropoly/computers).
+
+
+### bireli
+
+| Spec         | Description                |
+| ------------ | -------------------------- |
+| **CPU**      | i7-5930K 3.5GHz 6 Cores    |
+| **GPU**      | 2x GTX Titan X 12GB        |
+| **RAM**      | 1x 64GB DDR4               |
+| **Hostname** | `bireli.neuro.polymtl.ca`  |
+
+* Add event to the computer calendar
+* Use your **GE** account to connect on the machine
+* [How to use GPU Clusters at NeuroPoly](https://intranet.neuro.polymtl.ca/computing-resources/computing-resources-neuropoly/gpus)
+
+
+### joplin
+
+| Spec         | Description                           |
+| ------------ | ------------------------------------- |
+| **CPU**      | 8x Intel E7-4809v4 8-Core 2.10GHz     |
+| **RAM**      | 16x 16GB DDR4                         |
+| **Hostname** | `joplin.neuro.polymtl.ca`             |
+
+The server is bound to the GRAMES which is linked to the GE domain.
+
+### abbey
+
+| Spec            | Description                                                                                                                                                              |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **CPU**         | Xeon 12-core                                                                                                                                                             |
+| **OS**          | Ubuntu                                                                                                                                                                   |
+| **Hostname**    |                                                                                                                                                                          |
+| **Credentials** | [NeuroPoly Internal Document: Abbey Teamviewer Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.mtnjvepco2an) |
+
+### fitzgerald
+
+| Spec            | Description                                                                                                                                                                   |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Model**       |                                                                                                                                                                               |
+| **OS**          | Windows 7                                                                                                                                                                     |
+| **Hostname**    |                                                                                                                                                                               |
+| **Credentials** | [NeuroPoly Internal Document: Fitzgerald TeamViewer Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.9kegj6dmbnac) |
+
+### tristano
+
+| Spec            | Description                                                                                                                                                          |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Model**       | Mac Mini                                                                                                                                                             |
+| **OS**          | Ubuntu 16.04                                                                                                                                                         |
+| **Hostname**    |                                                                                                                                                                      |
+| **Credentials** | [NeuroPoly Internal Document: Tristano VNC Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.wa49ms1v7x01) |
+
+For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.ca)
+
+### vnmrj
+
+| Spec            | Description                                                                                                                                                       |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Model**       | PC Intel Duo Quad Core                                                                                                                                            |
+| **OS**          | RedHat                                                                                                                                                            |
+| **Hostname**    |                                                                                                                                                                   |
+| **Credentials** | [NeuroPoly Internal Document: VNMRJ VNC Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.jzew4w9jgpfp) |
+
+
+### idea3t
+
+| Spec | Description |
+| --------------- | -------------- |
+| **Purpose** | Programming pulse sequences within the Siemens IDEA environment for VE11C (Prisma) |
+| **Model** | PC |
+| **OS** | Windows 10 (⚠️ Connect with Microsoft Remote Desktop) |
+| **Hostname**    | `idea3t.neuro.polymtl.ca` |
+| **Credentials** | [NeuroPoly Internal Document: Idea3t Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.d65wz45n6ho7) |
+
+```{warning}
+**Possible error:** “The certificate or associated chain is not valid.”\
+**Solution:** Install remote Desktop v10 or higher (v8 does not work)
+```
+
+### idea7t
+
+| Spec | Description |
+| --------------- | -------------- |
+| **Purpose** | Programming pulse sequences within the Siemens IDEA environment for VE12U (Terra) |
+| **Model** | PC |
+| **OS** | Windows 10 (⚠️ Connect with Microsoft Remote Desktop) |
+| **Hostname**    | `idea7t.neuro.polymtl.ca` |
+| **Credentials** | [NeuroPoly Internal Document: Idea7t Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.i6g9qdkw050o) |
+
+
+### peterson
+
+| Spec | Description |
+| --------------- | -------------- |
+| **Purpose** | EM simulation with CST |
+| **Model** | PC, NVIDIA RTX A6000 (1x) |
+| **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
+| **Hostname**    | `peterson.grames.polymtl.ca` |
+| **Credentials** | Username: "GRAMES\\\*\*\*" (***: Your GE username, eg: p101317) | Password: Your GE password |
+
+
+### node006 (Poly-Grames)
+
+| Spec | Description |
+| --------------- | -------------- |
+| **Purpose** | EM simulation with CST |
+| **Model** | PC, NVIDIA Tesla V100S-PCIE-32GB (1x) |
+| **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
+| **Hostname**    | `node006.grames.polymtl.ca` |
+| **Credentials** | Username: "GRAMES\\\*\*\*" (***: Your GE username, eg: p101317) | Password: Your GE password |
+
+
+### node007 (Poly-Grames)
+
+| Spec | Description |
+| --------------- | -------------- |
+| **Purpose** | EM simulation with CST |
+| **Model** | PC, NVIDIA Tesla V100S-PCIE-32GB (1x) |
+| **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
+| **Hostname**    | `node007.grames.polymtl.ca` |
+| **Credentials** | Username: "GRAMES\\\*\*\*" (***: Your GE username, eg: p101317) | Password: Your GE password |
+
 ## VPN
 
 When working remotely from off-campus you need to use the [VPN](http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn).
@@ -510,174 +675,6 @@ echo 'export LANG=en_CA.UTF-8' >> ~/.profile
 
 Logout and back in again and apps should now be in English (or the other language code you chose).
 
-
-
-## CPU/GPU Clusters
-
-The following CPU and GPU clusters are available for internal use at **NeuroPoly**.
-
-```{warning}
-Please indicate in [NeuroPoly's "Computer resource" calendar](https://calendar.google.com/calendar/u/0/embed?src=4mg6bgd9pv55thf9486t2miht8@group.calendar.google.com) if you plan to launch intensive calculations on a computer. These are shared resources, so it helps to know which computer is being used and by who, in order to prioritize tasks and make the best of our resources. Your calendar entry could span several days, and should specify your name and the ID or number of GPU/CPU used. Example: `julien@rosenberg:gpu[4,5]`, or `naga@joplin:cpu[n=20]` If you don't have writing permission on this calendar please post a request on [the ticket tracker](https://github.com/neuropoly/computers/issues/).
-```
-
-```{note}
-If you wish to monitor the CPU/GPU/RAM/disk and other aspects of the server you are using, you can use our [monitoring system](https://monitor.neuro.polymtl.ca/v1). You need to be inside the VLAN to see the monitoring system.
-```
-
-### rosenberg
-
-| Spec         | Description                  |
-| ------------ | ---------------------------- |
-| **CPU**      | 2x Intel E5-2630             |
-| **GPU**      | 8x P100                      |
-| **RAM**      | 16x 32GB DDR4                |
-| **Hostname** | `rosenberg.neuro.polymtl.ca` |
-
-* By default, the root (OS and home folder) mount point is on the NVME disk
-* Shared **scratch** located under **/scratch**. Please clean the unnecessary data after you finish the processing.
-* [How to use GPU Clusters at NeuroPoly](https://intranet.neuro.polymtl.ca/computing-resources/neuropoly/gpus.html)
-  * [Video tutorial to get started](https://drive.google.com/file/d/17-eLVBiMNA8bNbfzpD6NLxHApZRDoy1B/view?usp=sharing)
-
-_For system administrators_: Please log all the changes on the station by updating the ansible scripts from [https://github.com/neuropoly/computers](https://github.com/neuropoly/computers).
-
-
-### romane
-
-| Spec         | Description                  |
-| ------------ | ---------------------------- |
-| **CPU**      | AMD EPYC 7452 32-Core        |
-| **GPU**      | 4x RTX A6000 48GB            |
-| **RAM**      | 16x 32GB DDR4                |
-| **Hostname** | `romane.neuro.polymtl.ca`    |
-
-* By default, the root (OS and home folder) mount point is on the NVME disk. You can train your model on your /home
-* [How to use GPU Clusters at NeuroPoly](https://intranet.neuro.polymtl.ca/computing-resources/neuropoly/gpus.html)
-  * [Video tutorial to get started](https://drive.google.com/file/d/17-eLVBiMNA8bNbfzpD6NLxHApZRDoy1B/view?usp=sharing)
-  * romane has a [special system for sharing CPU/RAM](./gpus.md#running-memory-and-cpu-intensive-tasks)
-
-_For system administrators_: Please log all the changes on the station by updating the ansible scripts from [https://github.com/neuropoly/computers](https://github.com/neuropoly/computers).
-
-
-### bireli
-
-| Spec         | Description                |
-| ------------ | -------------------------- |
-| **CPU**      | i7-5930K 3.5GHz 6 Cores    |
-| **GPU**      | 2x GTX Titan X 12GB        |
-| **RAM**      | 1x 64GB DDR4               |
-| **Hostname** | `bireli.neuro.polymtl.ca`  |
-
-* Add event to the computer calendar
-* Use your **GE** account to connect on the machine
-* [How to use GPU Clusters at NeuroPoly](https://intranet.neuro.polymtl.ca/computing-resources/computing-resources-neuropoly/gpus)
-
-
-### joplin
-
-| Spec         | Description                           |
-| ------------ | ------------------------------------- |
-| **CPU**      | 8x Intel E7-4809v4 8-Core 2.10GHz     |
-| **RAM**      | 16x 16GB DDR4                         |
-| **Hostname** | `joplin.neuro.polymtl.ca`             |
-
-The server is bound to the GRAMES which is linked to the GE domain.
-
-### abbey
-
-| Spec            | Description                                                                                                                                                              |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **CPU**         | Xeon 12-core                                                                                                                                                             |
-| **OS**          | Ubuntu                                                                                                                                                                   |
-| **Hostname**    |                                                                                                                                                                          |
-| **Credentials** | [NeuroPoly Internal Document: Abbey Teamviewer Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.mtnjvepco2an) |
-
-### fitzgerald
-
-| Spec            | Description                                                                                                                                                                   |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Model**       |                                                                                                                                                                               |
-| **OS**          | Windows 7                                                                                                                                                                     |
-| **Hostname**    |                                                                                                                                                                               |
-| **Credentials** | [NeuroPoly Internal Document: Fitzgerald TeamViewer Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.9kegj6dmbnac) |
-
-### tristano
-
-| Spec            | Description                                                                                                                                                          |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Model**       | Mac Mini                                                                                                                                                             |
-| **OS**          | Ubuntu 16.04                                                                                                                                                         |
-| **Hostname**    |                                                                                                                                                                      |
-| **Credentials** | [NeuroPoly Internal Document: Tristano VNC Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.wa49ms1v7x01) |
-
-For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.ca)
-
-### vnmrj
-
-| Spec            | Description                                                                                                                                                       |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Model**       | PC Intel Duo Quad Core                                                                                                                                            |
-| **OS**          | RedHat                                                                                                                                                            |
-| **Hostname**    |                                                                                                                                                                   |
-| **Credentials** | [NeuroPoly Internal Document: VNMRJ VNC Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.jzew4w9jgpfp) |
-
-
-### idea3t
-
-| Spec | Description |
-| --------------- | -------------- |
-| **Purpose** | Programming pulse sequences within the Siemens IDEA environment for VE11C (Prisma) |
-| **Model** | PC |
-| **OS** | Windows 10 (⚠️ Connect with Microsoft Remote Desktop) |
-| **Hostname**    | `idea3t.neuro.polymtl.ca` |
-| **Credentials** | [NeuroPoly Internal Document: Idea3t Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.d65wz45n6ho7) |
-
-```{warning}
-**Possible error:** “The certificate or associated chain is not valid.”\
-**Solution:** Install remote Desktop v10 or higher (v8 does not work)
-```
-
-### idea7t
-
-| Spec | Description |
-| --------------- | -------------- |
-| **Purpose** | Programming pulse sequences within the Siemens IDEA environment for VE12U (Terra) |
-| **Model** | PC |
-| **OS** | Windows 10 (⚠️ Connect with Microsoft Remote Desktop) |
-| **Hostname**    | `idea7t.neuro.polymtl.ca` |
-| **Credentials** | [NeuroPoly Internal Document: Idea7t Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.i6g9qdkw050o) |
-
-
-### peterson
-
-| Spec | Description |
-| --------------- | -------------- |
-| **Purpose** | EM simulation with CST |
-| **Model** | PC, NVIDIA RTX A6000 (1x) |
-| **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
-| **Hostname**    | `peterson.grames.polymtl.ca` |
-| **Credentials** | Username: "GRAMES\***" (***: Your GE username, eg: p101317) | Password: Your GE password |
-
-
-### node006 (Poly-Grames)
-
-| Spec | Description |
-| --------------- | -------------- |
-| **Purpose** | EM simulation with CST |
-| **Model** | PC, NVIDIA Tesla V100S-PCIE-32GB (1x) |
-| **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
-| **Hostname**    | `node006.grames.polymtl.ca` |
-| **Credentials** | Username: "GRAMES\***" (***: Your GE username, eg: p101317) | Password: Your GE password |
-
-
-### node007 (Poly-Grames)
-
-| Spec | Description |
-| --------------- | -------------- |
-| **Purpose** | EM simulation with CST |
-| **Model** | PC, NVIDIA Tesla V100S-PCIE-32GB (1x) |
-| **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
-| **Hostname**    | `node007.grames.polymtl.ca` |
-| **Credentials** | Username: "GRAMES\***" (***: Your GE username, eg: p101317) | Password: Your GE password |
 
 
 ## Connect to the Polytechnique public disk
