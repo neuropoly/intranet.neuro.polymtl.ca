@@ -1037,14 +1037,14 @@ set_slot <slot_number> <command> [args...]
 ```
 
 - `<slot_number>` is 0, 1, 2, or 3, corresponding to the GPU you are using, e.g., `set_slot 0 ...` for GPU0.
-(If you're using more than one GPU, just pick one of the GPU numbers you have reserved. All the slots
-corresponding to your GPUs are yours to use, but a single process can only be assigned to one of them.)
+  - If you've reserved more than one GPU, you can specify an inclusive range, e.g., `set_slot 0-1 ...`
+    for slots 0 and 1.
 - `<command> [args...]` is the command as you would normally run it in the shell, e.g., `python model.py`
-
 
 For example:
 ```
 set_slot 2 CUDA_VISIBLE_DEVICES=2 python3 myscript.py
+set_slot 0-3 bash
 ```
 
 #### Special considerations

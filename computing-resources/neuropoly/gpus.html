@@ -1511,13 +1511,17 @@ a share of the system’s RAM and CPU.</p>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;slot_number&gt;</span></code> is 0, 1, 2, or 3, corresponding to the GPU you are using, e.g., <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">...</span></code> for GPU0.
-(If you’re using more than one GPU, just pick one of the GPU numbers you have reserved. All the slots
-corresponding to your GPUs are yours to use, but a single process can only be assigned to one of them.)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;slot_number&gt;</span></code> is 0, 1, 2, or 3, corresponding to the GPU you are using, e.g., <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">...</span></code> for GPU0.</p>
+<ul>
+<li><p>If you’ve reserved more than one GPU, you can specify an inclusive range, e.g., <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0-1</span> <span class="pre">...</span></code>
+for slots 0 and 1.</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;command&gt;</span> <span class="pre">[args...]</span></code> is the command as you would normally run it in the shell, e.g., <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">model.py</span></code></p></li>
 </ul>
 <p>For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_slot</span> <span class="mi">2</span> <span class="n">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="mi">2</span> <span class="n">python3</span> <span class="n">myscript</span><span class="o">.</span><span class="n">py</span>
+<span class="n">set_slot</span> <span class="mi">0</span><span class="o">-</span><span class="mi">3</span> <span class="n">bash</span>
 </pre></div>
 </div>
 <section id="special-considerations">
