@@ -2,10 +2,21 @@
 
 ## Booting Options
 
-| Key | Action |
-| :--- | :--- |
-| cmd+R | Recovery |
-| alt | Boot from External Device |
+It depends if you have an Intel or Silicon chip. See options: https://support.apple.com/en-ca/102603
+
+To boot with verbose mode on an Apple Silicon, do this:
+```shell
+nvram boot-args="-v"
+```
+
+## Check login items
+
+Sometimes items that start at login are note listed under System>Login Items. To list them all, run this:
+```shell
+ls -la ~/Library/LaunchAgents
+ls -la /Library/LaunchAgents
+ll -la /Library/LaunchDaemons
+```
 
 ## Nice Software
 
