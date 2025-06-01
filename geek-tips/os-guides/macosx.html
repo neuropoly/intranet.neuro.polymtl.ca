@@ -454,6 +454,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#booting-options">Booting Options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-login-items">Check login items</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nice-software">Nice Software</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general">General</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#global-default-config">Global default config <a id="global_default_config"></a></a></li>
@@ -556,21 +557,19 @@ document.write(`
 <h1>MacOSX<a class="headerlink" href="#macosx" title="Link to this heading">#</a></h1>
 <section id="booting-options">
 <h2>Booting Options<a class="headerlink" href="#booting-options" title="Link to this heading">#</a></h2>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-left"><p>Key</p></th>
-<th class="head text-left"><p>Action</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-left"><p>cmd+R</p></td>
-<td class="text-left"><p>Recovery</p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>alt</p></td>
-<td class="text-left"><p>Boot from External Device</p></td>
-</tr>
-</tbody>
-</table>
+<p>It depends if you have an Intel or Silicon chip. See options: https://support.apple.com/en-ca/102603</p>
+<p>To boot with verbose mode on an Apple Silicon, do this:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nvram<span class="w"> </span>boot-args<span class="o">=</span><span class="s2">&quot;-v&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="check-login-items">
+<h2>Check login items<a class="headerlink" href="#check-login-items" title="Link to this heading">#</a></h2>
+<p>Sometimes items that start at login are note listed under System&gt;Login Items. To list them all, run this:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-la<span class="w"> </span>~/Library/LaunchAgents
+ls<span class="w"> </span>-la<span class="w"> </span>/Library/LaunchAgents
+ll<span class="w"> </span>-la<span class="w"> </span>/Library/LaunchDaemons
+</pre></div>
 </div>
 </section>
 <section id="nice-software">
@@ -1135,6 +1134,7 @@ chmod<span class="w"> </span>-RN<span class="w"> </span>&lt;FOLDER&gt;<span clas
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#booting-options">Booting Options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-login-items">Check login items</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nice-software">Nice Software</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general">General</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#global-default-config">Global default config <a id="global_default_config"></a></a></li>
