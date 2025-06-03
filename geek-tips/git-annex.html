@@ -651,9 +651,9 @@ rm: cannot remove &#39;data-single-subject/.git/annex/objects/Vq/vF/SHA256E-s155
 rm: cannot remove &#39;data-single-subject/.git/annex/objects/79/G6/SHA256E-s7183853--3262ac5d6c5f573720c5e508da47608bd9fa49d6cd4dd547f75046c1a2f0d5b6.nii.gz/SHA256E-s7183853--3262ac5d6c5f573720c5e508da47608bd9fa49d6cd4dd547f75046c1a2f0d5b6.nii.gz&#39;: Permission denied
 </pre></div>
 </div>
-<p>This is because git-annex <a class="reference external" href="https://git-annex.branchable.com/internals/lockdown/">tries extra hard</a> to make it hard to lose data, by marking its contents read-only. If you really intend to erase the dataset you need to open the permissions first with <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">-R</span> <span class="pre">+w</span></code>, for example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ chmod -R +w data-single-subject/.git/annex/
-$ rm -rf data-single-subject/
+<p>This is because git-annex <a class="reference external" href="https://git-annex.branchable.com/internals/lockdown/">tries extra hard</a> to make it hard to lose data, by marking its contents read-only. If you really intend to erase the dataset you need to open the permissions first with <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">-R</span> <span class="pre">u+w</span></code>, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ chmod -R u+w data-single-subject/
+$ rm -r data-single-subject/
 </pre></div>
 </div>
 </section>

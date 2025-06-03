@@ -197,9 +197,9 @@ rm: cannot remove 'data-single-subject/.git/annex/objects/Vq/vF/SHA256E-s1556439
 rm: cannot remove 'data-single-subject/.git/annex/objects/79/G6/SHA256E-s7183853--3262ac5d6c5f573720c5e508da47608bd9fa49d6cd4dd547f75046c1a2f0d5b6.nii.gz/SHA256E-s7183853--3262ac5d6c5f573720c5e508da47608bd9fa49d6cd4dd547f75046c1a2f0d5b6.nii.gz': Permission denied
 ```
 
-This is because git-annex [tries extra hard](https://git-annex.branchable.com/internals/lockdown/) to make it hard to lose data, by marking its contents read-only. If you really intend to erase the dataset you need to open the permissions first with `chmod -R +w`, for example:
+This is because git-annex [tries extra hard](https://git-annex.branchable.com/internals/lockdown/) to make it hard to lose data, by marking its contents read-only. If you really intend to erase the dataset you need to open the permissions first with `chmod -R u+w`, for example:
  
 ```
-$ chmod -R +w data-single-subject/.git/annex/
-$ rm -rf data-single-subject/
+$ chmod -R u+w data-single-subject/
+$ rm -r data-single-subject/
 ```
