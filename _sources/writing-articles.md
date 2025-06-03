@@ -41,16 +41,17 @@ Our institutions have a partnership with some publishers to waive the article pr
 
 ### Neuroimaging
 
-| Journal                                                                                                  | Impact Factor | Open |
-| -------------------------------------------------------------------------------------------------------- | ------------- | ---- |
-| [Aperture](https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=4022)                            | none (new)    | yes  |
-| [Computers in Biology and Medicine](https://www.journals.elsevier.com/computers-in-biology-and-medicine) | 3.4           |      |
-| [Biomedical Optics Express](https://www.osapublishing.org/boe/home.cfm)                                  | 3.9           |      |
-| [Magnetic Resonance in Medicine](https://onlinelibrary.wiley.com/journal/15222594)                       | 3.6           |      |
-| [NMR in Biomedicine](https://analyticalsciencejournals.onlinelibrary.wiley.com/journal/10991492)         | 3.2           |      |
-| [Human Brain Mapping](https://onlinelibrary.wiley.com/journal/10970193)                                  | 4.4           | yes  |
-| <s>[NeuroImage](https://www.journals.elsevier.com/neuroimage)</s> --> Imaging Neuroscience ([details](https://direct.mit.edu/DocumentLibrary/IMAG/ImagingNeuroscienceStatementonImpact-ENGLISH.pdf))                  | 6.4           |      |
-| [Imaging Neuroscience](https://direct.mit.edu/imag)                                                      | none (new)    | yes  |
+| Journal                                                                                                  | Impact Factor | Open | APC |
+| -------------------------------------------------------------------------------------------------------- | ------------- | ---- | --- |
+| [Aperture](https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=4022)                            | none (new)    | yes  |     |
+| [Computers in Biology and Medicine](https://www.journals.elsevier.com/computers-in-biology-and-medicine) | 3.4           |      |     |
+| [Biomedical Optics Express](https://www.osapublishing.org/boe/home.cfm)                                  | 3.9           |      |     |
+| [Magnetic Resonance in Medicine](https://onlinelibrary.wiley.com/journal/15222594)                       | 3.6           |      |     |
+| [NMR in Biomedicine](https://analyticalsciencejournals.onlinelibrary.wiley.com/journal/10991492)         | 3.2           |      |     |
+| [Human Brain Mapping](https://onlinelibrary.wiley.com/journal/10970193)                                  | 4.4           | yes  |     |
+| <s>[NeuroImage](https://www.journals.elsevier.com/neuroimage)</s> --> Imaging Neuroscience ([details](https://direct.mit.edu/DocumentLibrary/IMAG/ImagingNeuroscienceStatementonImpact-ENGLISH.pdf))                  | 6.4           |      |     |
+| [Imaging Neuroscience](https://direct.mit.edu/imag)                                                      | none (new)    | yes  |     |
+| [Journal of Neuroimaging](https://onlinelibrary.wiley.com/journal/15526569)                              | 2.3           | ✅   | waived |
 
 ### Clinical
 
