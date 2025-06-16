@@ -8,6 +8,7 @@ description: >-
 
 ## Deep Learning Resources
 
+* Deep Learning. by Ian Goodfellow, Yoshua Bengio, et al. Hard copy in the lab
 * [Deep Learning State of the Art (2019) - MIT (Youtube Video)](https://www.youtube.com/watch?v=53YvP6gdD7U)
 * [Deep Learning Fundamentals course from Lightning AI (PyTorch Lightning)](https://lightning.ai/pages/courses/deep-learning-fundamentals/)
 
