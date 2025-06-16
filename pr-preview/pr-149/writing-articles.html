@@ -1,0 +1,1065 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>✍️ Academic Writing &#8212; NeuroPoly Internal Wiki  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/theme.css?v=ec48f040" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=c607423c"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'writing-articles';</script>
+    <link rel="icon" href="_static/logo.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="📎 Practical Information" href="practical-information/README.html" />
+    <link rel="prev" title="💡 Ideas for Cool Projects" href="ideas-for-cool-projects.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="README.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">NeuroPoly Lab Manual</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><!-- GTranslate: https://gtranslate.io/ -->
+<div class="center-g-translate">
+    <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl" style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png" height="24" width="24" alt="English" /></a><a href="#" onclick="doGTranslate('en|fr');return false;" title="French" class="gflag nturl" style="background-position:-200px -100px;"><img src="//gtranslate.net/flags/blank.png" height="24" width="24" alt="French" /></a>
+
+    <style type="text/css">
+        <!--
+        a.gflag {vertical-align:middle;font-size:24px;padding:1px 0;background-repeat:no-repeat;background-image:url(//gtranslate.net/flags/24.png);}
+        a.gflag img {border:0;}
+        a.gflag:hover {background-image:url(//gtranslate.net/flags/24a.png);}
+        #goog-gt-tt {display:none !important;}
+        .goog-te-banner-frame {display:none !important;}
+        .goog-te-menu-value:hover {text-decoration:none !important;}
+        body {top:0 !important;}
+        #google_translate_element2 {display:none!important;}
+        -->
+    </style>
+
+    <div id="google_translate_element2"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'en',autoDisplay: false}, 'google_translate_element2');}
+    </script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
+        /* ]]> */
+    </script>
+</div></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="onboarding/README.html"><span>👋</span> Onboarding</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="onboarding/getting-started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onboarding/campus-access.html">Campus Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onboarding/infrastructure.html">Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onboarding/dropbox-google-drive.html">Google Drive</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="onboarding/computer-setup/README.html">Computer Setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="onboarding/computer-setup/mail.html"><span>📧</span> Email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="onboarding/computer-setup/slack.html"><span>🗣</span> Slack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="onboarding/computer-setup/eduroam.html"><span>📶</span> Eduroam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="onboarding/computer-setup/shell-profile.html"><span>💻</span> Shell Profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="onboarding/computer-setup/configuration-tips.html"><span>💡</span> Other configuration tips</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="onboarding/software-development.html">Software development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onboarding/students-interns.html">Students and Interns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onboarding/consultants-ra.html">Consultants and RA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onboarding/postdoc.html">Postdoctoral fellows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onboarding/admin.html">Administrators</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="agenda-and-calendar.html"><span>📅</span> Calendar &amp; Meetings</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="computing-resources/README.html"><span>🖥</span> Computing Resources</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="computing-resources/neuropoly/README.html"><span>🖥</span> Computers @NeuroPoly</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="computing-resources/neuropoly/cpus.html">CPU Clusters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="computing-resources/neuropoly/gpus.html">GPU Clusters</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="computing-resources/clusters-at-criugm.html"><span>🖥</span> Computers @CRIUGM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computing-resources/compute-canada.html"><span>🖥</span> Compute Canada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computing-resources/printer.html"><span>🖨</span> Printer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computing-resources/microsoft365.html"><span>☁️</span> Microsoft 365</a></li>
+<li class="toctree-l2"><a class="reference internal" href="computing-resources/youtube.html">YouTube Procedure</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="data/README.html"><span>💾</span> Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="data/dataset-curation.html">Dataset curation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data/git-datasets.html"><code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data/duke.html"><code class="docutils literal notranslate"><span class="pre">duke</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="data/admin-guide.html">Dataset admin guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data/deeplearning-models.html">Deep Learning Models</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="mri-scanning/README.html"><span>🧲</span> MRI Scanning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="mri-scanning/unf-3t-prisma.html">UNF (3T Prisma)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mri-scanning/mni-mcgill-7t-terra.html">MNI/McGill (7T Terra)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mri-scanning/mhi-7t-agilent.html">MHI (7T Agilent)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mri-scanning/concordia-ge.html">Concordia (3T GE)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="rf-lab/README.html"><span>🔧</span> RF Lab</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="rf-lab/mri-coils-at-neuropoly.html">NeuroPoly Coils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rf-lab/misc.html">Misc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rf-lab/mri-phantoms.html">Phantoms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rf-lab/3d-printing/README.html">3D Printing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rf-lab/3d-printing/octoprint.html">OctoPrint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rf-lab/pcb-manufacturing.html">PCB Manufacturing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rf-lab/cnc-machine.html">CNC machine</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Academic Life</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="courses.html"><span>🎓</span> University Courses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="comprehensive-exam-guide.html"><span>📖</span> Comprehensive Exam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scholarships.html"><span>💰</span> Scholarships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conferences.html"><span>✈️</span> Conferences</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="bibliography/README.html"><span>📚</span> Bibliography</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="bibliography/lab-theses.html">Theses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibliography/spinal-cord-injury.html">Spinal Cord Injury</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibliography/mri.html">MRI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibliography/mri-analysis.html">MRI Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibliography/deep-learning.html">Deep Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibliography/histology.html">Histology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bibliography/shared-paperpile-folder.html">Paperpile Folder</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="ideas-for-cool-projects.html"><span>💡</span> Ideas for Cool Projects</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><span>✍️</span>     Academic Writing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="practical-information/README.html"><span>📎</span> Practical Information</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="practical-information/visa.html"><span>🌎</span> VISAs and Work Permits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-information/medical.html"><span>🏥</span> Medical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-information/living-in-montreal.html"><span>🇨🇦</span> Living in Montreal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="practical-information/purchasing-hardware-and-lab-supplies.html"><span>🛠</span> Purchasing Supplies</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="geek-tips/README.html"><span>🤓</span> Geek tips</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="geek-tips/useful-links.html">Useful links/Software</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="geek-tips/bash-shell/README.html">Bash/Shell</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/bash-shell/script.html">Script</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="geek-tips/programming-languages/README.html">Programming Languages</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/programming-languages/python.html">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/programming-languages/matlab.html">MATLAB</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="geek-tips/programming-languages/c%2B%2B/README.html">C++</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="geek-tips/programming-languages/c%2B%2B/installation-of-vtk-and-itk-on-mac-os-x.html">Installation of VTK and ITK on Mac OS X</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geek-tips/programming-languages/c%2B%2B/using-xcode.html">Using XCode</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="geek-tips/git.html">Git &amp; Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geek-tips/git-annex.html">git-annex</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="geek-tips/os-guides/README.html">OS Guides</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/os-guides/linux.html">Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/os-guides/macosx.html">MacOSX</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="geek-tips/misc/README.html">Various Software &amp; Tools</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="geek-tips/misc/virtual-machines/README.html">Virtual Machines</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="geek-tips/misc/virtual-machines/virtualbox.html">VirtualBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geek-tips/misc/virtual-machines/vagrant.html">Vagrant</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/misc/bitbucket.html">BitBucket</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="geek-tips/misc/docker/README.html">Docker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="geek-tips/misc/docker/docker-for-deep-learning.html">Docker for Deep Learning</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/misc/dropbox.html">Dropbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/misc/jekyll.html">Jekyll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/misc/microsoft-word.html">Microsoft Word</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/misc/openneuro.html">OpenNeuro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/misc/sketchup.html">Sketchup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/misc/xquartz.html">XQuartz</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="geek-tips/image-processing-software/README.html">Image Processing Software</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/image-processing-software/advanced-normalization-tools-ants.html">Advanced Normalization Tools (ANTs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/image-processing-software/anima.html">Anima</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/image-processing-software/diffusion-simulator.html">Diffusion Simulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/image-processing-software/freesurfer.html">FreeSurfer</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="geek-tips/image-processing-software/fsl/README.html">FSL</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="geek-tips/image-processing-software/fsl/fsleyes.html">FSLeyes</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/image-processing-software/itk-snap.html">ITK-SNAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/image-processing-software/nifti.html">NIfTI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/image-processing-software/openneuro-cli.html">OpenNeuro CLI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/image-processing-software/osirix.html">OsiriX</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="geek-tips/deep-learning/README.html">Deep Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/deep-learning/cuda.html">CUDA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/deep-learning/tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/deep-learning/conditional-random-fields-crf.html">Conditional Random Fields (CRF)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/deep-learning/restricted-boltzmann-machines.html">Restricted Boltzmann Machines (RBM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/deep-learning/misc.html">Misc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="geek-tips/deep-learning/WandB.html">WandB</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="edi.html"><span>🧩</span> EDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contact.html"><span>📞</span> Contact</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://neuro.polymtl.ca">NeuroPoly Website</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/writing-articles.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button"
+   title="Suggest edit"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+
+</a>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><span>✍️</span>     Academic Writing</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Page Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#journals">Journals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general">General</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medical-image-analysis-deep-learning">Medical Image Analysis / Deep Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#neuroimaging">Neuroimaging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clinical">Clinical</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mri-coils">MRI / Coils</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-platforms">Writing Platforms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#google-docs">Google Docs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overleaf">Overleaf</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-manager">Reference manager</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paperpile">Paperpile</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figures-in-vectorial-format">Figures (in vectorial format)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organizing-folders">Organizing Folders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cover-letter">Cover letter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addressing-reviewer-comments">Addressing Reviewer Comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-grammar">Check grammar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#affiliations">Affiliations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips-for-writing-scientific-articles">Tips for writing scientific articles</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="academic-writing">
+<h1><span>✍️</span>     Academic Writing<a class="headerlink" href="#academic-writing" title="Link to this heading">#</a></h1>
+<section id="journals">
+<h2>Journals<a class="headerlink" href="#journals" title="Link to this heading">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Our institutions have a partnership with some publishers to waive the article processing charges (APC) for some journal. This notably concerns hybrid journals at Elsevier and Wiley. See full list <a class="reference external" href="https://www.crkn-rcdr.ca/fr/publication-en-libre-acc%C3%A8s">here</a>.</p>
+</div>
+<p>(*) the impact factor is not up to date, but is just given as a ‘ballpark’ for ranking journal.</p>
+<section id="general">
+<h3>General<a class="headerlink" href="#general" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Journal</p></th>
+<th class="head"><p>Impact Factor</p></th>
+<th class="head"><p>Open</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><p><a href="https://www.nature.com/ncomms/">Nature Communications</a></p><p><em>Dr. Heather Partner, Associate Editor (correspondence with JCA)</em></p></p></td>
+<td><p>12.1</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><p><a href="https://www.nature.com/commsbio/">Nature Communications Biology</a></p><p><em>Editor: yomayra.guzman “at” nature “dot” com</em></p></p></td>
+<td><p>12.1</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://journals.plos.org/plosone/">PLOS ONE</a></p></td>
+<td><p>3.2</p></td>
+<td><p>yes</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.nature.com/srep/">Nature Scientific Reports</a></p></td>
+<td><p>4.0</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.nature.com/sdata/about">Nature Scientific Data</a></p></td>
+<td><p>5.5</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.nature.com/nmeth/">Nature Methods</a></p></td>
+<td><p>30.8</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.nature.com/nprot/">Nature Protocols</a></p></td>
+<td><p>11.3</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://www.journals.elsevier.com/journal-of-neuroscience-methods">Journal of Neuroscience Methods</a></p></td>
+<td><p>2.2</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.frontiersin.org/journals/neuroinformatics">Frontiers in Neuroinformatics</a></p></td>
+<td><p>2.6</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://elifesciences.org">eLife</a></p></td>
+<td><p>7.1</p></td>
+<td><p>yes</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="medical-image-analysis-deep-learning">
+<h3>Medical Image Analysis / Deep Learning<a class="headerlink" href="#medical-image-analysis-deep-learning" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Journal</p></th>
+<th class="head"><p>Publisher</p></th>
+<th class="head"><p>Impact Factor</p></th>
+<th class="head"><p>Open</p></th>
+<th class="head"><p>APC</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.jmlr.org">Journal of Machine Learning Research (JMLR)</a></p></td>
+<td><p></p></td>
+<td><p>4.0</p></td>
+<td><p>yes</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.journals.elsevier.com/medical-image-analysis">Medical Image Analysis</a></p></td>
+<td><p>Elsevier</p></td>
+<td><p>10.7</p></td>
+<td><p></p></td>
+<td><p>Waived</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.sciencedirect.com/journal/computers-in-biology-and-medicine">Comput Biol Med</a></p></td>
+<td><p>Elsevier</p></td>
+<td><p>7.0</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.sciencedirect.com/journal/computerized-medical-imaging-and-graphics">Computerized Medical Imaging &amp; Graphics</a></p></td>
+<td><p>Elsevier</p></td>
+<td><p>5.4</p></td>
+<td><p></p></td>
+<td><p>Waived</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=83">IEEE Transactions on Image Processing</a></p></td>
+<td><p></p></td>
+<td><p>9.3</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5962385">IEEE Transactions on Neural Networks and Learning Systems</a></p></td>
+<td><p></p></td>
+<td><p>10.4</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.sciencedirect.com/journal/signal-processing">Signal Processing</a></p></td>
+<td><p></p></td>
+<td><p>4.4</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.sciencedirect.com/journal/artificial-intelligence-in-medicine">Artificial Intelligence in Medicine</a></p></td>
+<td><p>Elsevier</p></td>
+<td><p>4.3</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.melba-journal.org">Machine Learning for Biomedical Imaging (MELBA)</a></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>yes</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://onlinelibrary.wiley.com/journal/10970193">Human Brain Mapping</a></p></td>
+<td><p>Wiley</p></td>
+<td><p>4.4</p></td>
+<td><p>yes</p></td>
+<td><p>Waived</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="neuroimaging">
+<h3>Neuroimaging<a class="headerlink" href="#neuroimaging" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Journal</p></th>
+<th class="head"><p>Impact Factor</p></th>
+<th class="head"><p>Open</p></th>
+<th class="head"><p>APC</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageid=4022">Aperture</a></p></td>
+<td><p>none (new)</p></td>
+<td><p>yes</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.journals.elsevier.com/computers-in-biology-and-medicine">Computers in Biology and Medicine</a></p></td>
+<td><p>3.4</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.osapublishing.org/boe/home.cfm">Biomedical Optics Express</a></p></td>
+<td><p>3.9</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://onlinelibrary.wiley.com/journal/15222594">Magnetic Resonance in Medicine</a></p></td>
+<td><p>3.6</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://analyticalsciencejournals.onlinelibrary.wiley.com/journal/10991492">NMR in Biomedicine</a></p></td>
+<td><p>3.2</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://onlinelibrary.wiley.com/journal/10970193">Human Brain Mapping</a></p></td>
+<td><p>4.4</p></td>
+<td><p>yes</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><s><a class="reference external" href="https://www.journals.elsevier.com/neuroimage">NeuroImage</a></s> –&gt; Imaging Neuroscience (<a class="reference external" href="https://direct.mit.edu/DocumentLibrary/IMAG/ImagingNeuroscienceStatementonImpact-ENGLISH.pdf">details</a>)</p></td>
+<td><p>6.4</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://direct.mit.edu/imag">Imaging Neuroscience</a></p></td>
+<td><p>none (new)</p></td>
+<td><p>yes</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://onlinelibrary.wiley.com/journal/15526569">Journal of Neuroimaging</a></p></td>
+<td><p>2.3</p></td>
+<td><p>✅</p></td>
+<td><p>waived</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="clinical">
+<h3>Clinical<a class="headerlink" href="#clinical" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Journal</p></th>
+<th class="head"><p>Impact Factor</p></th>
+<th class="head"><p>Open</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.sciencedirect.com/journal/neuroimage-clinical">NeuroImage: Clinical</a></p></td>
+<td><p>4.4</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://www.ajnr.org">American Journal of Neuroadiology (AJNR)</a></p></td>
+<td><p>3.4</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://pubs.rsna.org/journal/radiology">Radiology</a></p></td>
+<td><p>12.1</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://pubs.rsna.org/journal/ai">Radiology: Artificial Intelligence</a></p></td>
+<td><p>8.1</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://academic.oup.com/brain">Brain</a></p></td>
+<td><p>11.3</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://onlinelibrary.wiley.com/journal/15318249">Annals of Neurology</a></p></td>
+<td><p>9.0</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="mri-coils">
+<h3>MRI / Coils<a class="headerlink" href="#mri-coils" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Journal</p></th>
+<th class="head"><p>Impact Factor</p></th>
+<th class="head"><p>Open</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://onlinelibrary.wiley.com/journal/15222594">Magnetic Resonance in Medicine (MRM)</a></p></td>
+<td><p>3.6</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.sciencedirect.com/journal/journal-of-magnetic-resonance">Journal of Magnetic Resonance</a></p></td>
+<td><p>2.6</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://analyticalsciencejournals.onlinelibrary.wiley.com/journal/10991492">NMR in Biomedicine</a></p></td>
+<td><p>3.2</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://onlinelibrary.wiley.com/journal/1552504x">Concepts in Magnetic Resonance Part B</a></p></td>
+<td><p>0.3</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://aapm.onlinelibrary.wiley.com/journal/24734209">Medical Physics</a></p></td>
+<td><p>3.3</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8">IEEE Transactions on Antennas and Propagation</a></p></td>
+<td><p>4.4</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=7260">IEEE Microwave and Wireless Components Letters</a></p></td>
+<td><p>2.3</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.journals.elsevier.com/magnetic-resonance-imaging">Magnetic Resonance Imaging (MRI)</a></p></td>
+<td><p>2.1</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://onlinelibrary.wiley.com/journal/15222586">Journal of Magnetic Resonance Imaging (JMRI)</a></p></td>
+<td><p>4.0</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="writing-platforms">
+<h2>Writing Platforms<a class="headerlink" href="#writing-platforms" title="Link to this heading">#</a></h2>
+<section id="google-docs">
+<h3>Google Docs<a class="headerlink" href="#google-docs" title="Link to this heading">#</a></h3>
+<p>Google Doc is great for collaborating on a paper. We recommend you install (and use) the following Adds-on:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Add-on</p></th>
+<th class="head"><p><strong>Purpose</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://workspace.google.com/marketplace/app/cross_reference/269114033347">Cross Reference</a></p></td>
+<td><p>Cross-referencing figures on Google Docs</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://workspace.google.com/u/0/marketplace/app/markdown_tools/788541604518">Markdown Tools</a></p></td>
+<td><p>Enables adding heading numbers and the creation of a table of contents for markdown.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="overleaf">
+<h3>Overleaf<a class="headerlink" href="#overleaf" title="Link to this heading">#</a></h3>
+<p>Overleaf is a good platform for writing papers with Latex. Mila provides the <a class="reference external" href="https://www.overleaf.com/edu/mila#overview">Overleaf Pro license</a> for its students. If you’re Julien’s student, please contact him to get you added to Mila’s account. Then, send an email to <code class="docutils literal notranslate"><span class="pre">it-support&#64;mila.quebec</span></code> requesting an Overleaf Pro license. Having access to the Pro license enables the ‘tracking’ mode in Overleaf, which is essential when collaborating on a paper with multiple authors.</p>
+</section>
+</section>
+<section id="reference-manager">
+<h2>Reference manager<a class="headerlink" href="#reference-manager" title="Link to this heading">#</a></h2>
+<section id="paperpile">
+<h3>Paperpile<a class="headerlink" href="#paperpile" title="Link to this heading">#</a></h3>
+<p>If you write your article with Google Doc, we recommend using <a class="reference external" href="https://paperpile.com">Paperpile</a> for managing your bibliography.</p>
+<p>We have a Paperpile account for the lab. For login please use the Google account <code class="docutils literal notranslate"><span class="pre">neuropolylab</span> <span class="pre">&quot;at&quot;</span> <span class="pre">gmail</span> <span class="pre">&quot;dot&quot;</span> <span class="pre">com</span></code></p>
+<p>If you prefer to have your own Paperpile license please request it to your supervisor.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Paperpile on Google Docs works only with Google Chrome.</p>
+</div>
+<p>To install Paperpile:</p>
+<ol class="arabic simple">
+<li><p>Connect to <a class="reference external" href="https://paperpile.com">Paperpile website</a> with the NeuroPoly Google account (or with your account if you have a license). Sometimes if you only have a single Google account logged in, you will have to add another account here: <a class="reference external" href="https://accounts.google.com/AccountChooser?service=lso">https://accounts.google.com/AccountChooser?service=lso</a></p></li>
+<li><p>Install Paperpile chrome extension on the browser (Google Chrome)</p></li>
+<li><p>Use your personal account to connect on Google Docs, start a new document page. Insert citations, when you do Paperpile/Format citations/ it will require you to authorize Paperpile into Google docs.</p></li>
+<li><p>Authorize Paperpile on Google using your personal account.</p></li>
+</ol>
+</section>
+</section>
+<section id="figures-in-vectorial-format">
+<h2>Figures (in vectorial format)<a class="headerlink" href="#figures-in-vectorial-format" title="Link to this heading">#</a></h2>
+<p>Create and manage figures:</p>
+<ul class="simple">
+<li><p>make your figure in <strong>Keynote</strong> (or <strong>Power Point</strong>)</p></li>
+<li><p>keep only one keynote file</p></li>
+<li><p>number the slide for a specific fig, eg.: slide 1 –&gt; fig 1, slide 2 –&gt; fig 2. The material/old slides go after a big slide called “OLD”.</p></li>
+<li><p>when using phantom and MRI data please indicate the session number, slice, TE, etc. anything so we can reproduce the figure in the future.</p></li>
+</ul>
+<p>Incorporate figure in article:</p>
+<ul class="simple">
+<li><p>Export all your figures into a single PDF document (select: best quality).</p></li>
+<li><p>Open PDF with <strong>Preview</strong></p></li>
+<li><p>Tools &gt; Rectangular selection</p></li>
+<li><p>CMD+c, CMD+n</p></li>
+<li><p>Save figure</p></li>
+<li><p>Import your figure into Word and use “crop” tool.</p></li>
+<li></li>
+</ul>
+</section>
+<section id="organizing-folders">
+<h2>Organizing Folders<a class="headerlink" href="#organizing-folders" title="Link to this heading">#</a></h2>
+<p><img alt="" src="_images/phd101212s.gif" /></p>
+<p>Recommended file structure (hosted under google drive):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">manuscripts</span><span class="o">/</span>
+     <span class="o">|-</span> <span class="mi">2017</span><span class="n">_MRM</span><span class="o">/</span>
+           <span class="o">|-</span> <span class="n">README</span> <span class="o">--&gt;</span> <span class="n">google</span> <span class="n">document</span> <span class="n">that</span> <span class="n">indicates</span> <span class="n">everything</span> <span class="n">that</span> <span class="n">needs</span> <span class="n">to</span> <span class="n">be</span> <span class="n">known</span> <span class="ow">in</span> <span class="n">order</span> <span class="n">to</span> <span class="n">be</span> <span class="n">able</span> <span class="n">to</span> <span class="n">reproduce</span> <span class="n">results</span><span class="p">,</span> <span class="n">figures</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span> <span class="n">that</span> <span class="n">includes</span><span class="p">:</span> <span class="n">link</span> <span class="n">to</span> <span class="n">GitHub</span> <span class="n">repository</span> <span class="p">(</span><span class="n">which</span> <span class="n">itself</span> <span class="n">should</span> <span class="n">have</span> <span class="n">a</span> <span class="n">README</span> <span class="k">with</span> <span class="s1">&#39;getting started&#39;</span> <span class="n">instructions</span><span class="p">),</span> <span class="n">link</span> <span class="n">to</span> <span class="n">data</span> <span class="n">repository</span> <span class="p">(</span><span class="k">if</span> <span class="n">exists</span><span class="p">)</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">version</span> <span class="n">of</span> <span class="n">the</span> <span class="n">data</span> <span class="n">used</span> <span class="p">(</span><span class="n">ideally</span> <span class="n">this</span> <span class="n">should</span> <span class="n">be</span> <span class="n">indicated</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">article</span> <span class="n">itself</span><span class="p">)</span><span class="o">.</span>
+           <span class="o">|-</span> <span class="n">fig</span><span class="o">/</span>
+               <span class="o">|-</span> <span class="n">figures</span><span class="o">.</span><span class="n">key</span> <span class="p">(</span><span class="ow">or</span> <span class="n">pptx</span><span class="p">)</span> <span class="o">--&gt;</span> <span class="nb">all</span> <span class="n">your</span> <span class="n">figures</span><span class="p">,</span> <span class="n">one</span> <span class="n">per</span> <span class="n">slide</span>
+           <span class="o">|-</span> <span class="n">r0</span><span class="o">/</span>
+               <span class="o">|-</span> <span class="n">cover_letter_r0</span><span class="o">.</span><span class="n">docx</span> <span class="o">--&gt;</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">microsoft</span> <span class="n">Word</span>
+               <span class="o">|-</span> <span class="n">awesome_study_manuscript_r0</span> <span class="o">--&gt;</span> <span class="n">google</span> <span class="n">doc</span> <span class="n">document</span><span class="p">,</span> <span class="n">other</span> <span class="n">co</span><span class="o">-</span><span class="n">authors</span> <span class="n">can</span> <span class="n">edit</span> <span class="k">with</span> <span class="s1">&#39;suggestion&#39;</span> <span class="n">mode</span>
+               <span class="o">|-</span> <span class="n">awesome_study_reviewer_suggestions</span>
+           <span class="o">|-</span> <span class="n">r1</span><span class="o">/</span>
+               <span class="o">|-</span> <span class="n">awesome_study_manuscript_r1</span> <span class="o">--&gt;</span> <span class="n">copy</span> <span class="n">awesome_study_manuscript_r0</span> <span class="n">into</span> <span class="n">this</span> <span class="s1">&#39;r1&#39;</span> <span class="n">folder</span> <span class="ow">and</span> <span class="s1">&#39;lock&#39;</span> <span class="n">manuscript_r0</span> <span class="k">for</span> <span class="n">edition</span><span class="o">.</span> <span class="n">Now</span><span class="p">,</span> <span class="n">everyone</span> <span class="n">should</span> <span class="n">work</span> <span class="n">on</span> <span class="n">this</span> <span class="n">version</span> <span class="n">r1</span><span class="o">.</span>
+               <span class="o">|-</span> <span class="n">awesome_study_responses_to_reviews_r1</span> <span class="o">--&gt;</span> <span class="n">copy</span><span class="o">/</span><span class="n">paste</span> <span class="n">reviewers</span> <span class="n">comments</span><span class="p">,</span> <span class="n">above</span> <span class="n">each</span> <span class="n">comment</span><span class="p">,</span> <span class="n">indicate</span> <span class="n">a</span> <span class="n">sub</span><span class="o">-</span><span class="n">section</span> <span class="s1">&#39;RXCY&#39;</span> <span class="k">with</span> <span class="n">X</span><span class="p">:</span> <span class="n">reviewer</span> <span class="n">numbers</span> <span class="ow">and</span> <span class="n">Y</span><span class="p">:</span> <span class="n">comment</span> <span class="n">number</span><span class="o">.</span> <span class="n">Then</span><span class="p">,</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">manuscript</span><span class="p">,</span> <span class="n">add</span> <span class="n">a</span> <span class="n">comment</span> <span class="k">with</span> <span class="n">this</span> <span class="n">tag</span><span class="o">.</span> <span class="n">Example</span><span class="p">:</span> <span class="n">R1C4</span><span class="o">.</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://drive.google.com/drive/folders/1bIZCpsyqr2RBlJLq_WvP0xcmkHxMOeiS?usp=sharing">Here</a> is an example of manuscript folder/files organization.</p>
+</section>
+<section id="cover-letter">
+<h2>Cover letter<a class="headerlink" href="#cover-letter" title="Link to this heading">#</a></h2>
+<p>Excellent <a class="reference external" href="https://twitter.com/drbreaky/status/1385863882816647169?s=27">recommendations</a> from Michael Breakspear on how to write a cover letter.</p>
+</section>
+<section id="addressing-reviewer-comments">
+<h2>Addressing Reviewer Comments<a class="headerlink" href="#addressing-reviewer-comments" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>If using gdoc, create a new ‘r1’ folder. Duplicate the r0 version of the manuscript inside this folder. This new r1 version is modified using ‘suggestion’ mode to keep track of the modifications. That version has the suffix ‘_versiontracking’. If a clean version is asked for, also create a version (without any suffix) without any version tracking and comments. That one will be copied for r2.</p></li>
+<li><p>Copy/paste comments in a new file <code class="docutils literal notranslate"><span class="pre">responses_to_reviews</span></code> (see <a class="reference external" href="https://docs.google.com/document/d/17e17Ps5k7H_mt_2L32lBYF7Ns0Q5jLva86fSN2ZDpkA">template</a>). Address comments point-by-point. Each comment is under: RX.Y (for reviewer X, comment #Y). In the updated manuscript, label each modification with the comment “RX.Y”.</p></li>
+<li><p>For most comments, the manuscript will need to be updated and the modified text copied in the responses. Please <strong>do not</strong> duplicate this text during the review process, because the manuscript might be edited later by another coauthor, and there will be discrepancies between the manuscript and the responses. Therefore, edit the manuscript first, and in the responses, indicate a placeholder with a comment “will be copy/pasted when final version of the manuscript is ready”.</p></li>
+<li><p>Please read these <a class="reference external" href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005730">ten simple rules for writing a response to reviewers</a>.</p></li>
+</ul>
+</section>
+<section id="check-grammar">
+<h2>Check grammar<a class="headerlink" href="#check-grammar" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://www.grammarly.com/">https://www.grammarly.com/</a></p>
+</section>
+<section id="affiliations">
+<h2>Affiliations<a class="headerlink" href="#affiliations" title="Link to this heading">#</a></h2>
+<p><strong>For everyone:</strong></p>
+<blockquote>
+<div><p>NeuroPoly Lab, Department of Electrical Engineering, Polytechnique Montreal, Montreal, QC, Canada</p>
+</div></blockquote>
+<p><strong>Affiliation for Julien Cohen-Adad:</strong></p>
+<blockquote>
+<div><p>Functional Neuroimaging Unit, CRIUGM, Université de Montréal, Montreal, QC, Canada</p>
+</div></blockquote>
+<blockquote>
+<div><p>Mila - Quebec AI Institute, Montreal, QC, Canada</p>
+</div></blockquote>
+<blockquote>
+<div><p>Centre de recherche du CHU Sainte-Justine, Université de Montréal, Montreal, QC, Canada</p>
+</div></blockquote>
+<p><strong>Affiliation for Nikola Stikov:</strong></p>
+<blockquote>
+<div><p>Montreal Heart Institute, Montréal, QC, Canada</p>
+</div></blockquote>
+</section>
+<section id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Link to this heading">#</a></h2>
+<p>For all articles/abstracts, please add the following:</p>
+<blockquote>
+<div><p>Funded by the Canada Research Chair in Quantitative Magnetic Resonance Imaging [CRC-2020-00179], the Canadian Institute of Health Research [PJT-190258], the Canada Foundation for Innovation [32454, 34824], the Fonds de Recherche du Québec - Santé [322736, 324636], the Natural Sciences and Engineering Research Council of Canada [RGPIN-2019-07244], the Canada First Research Excellence Fund (IVADO and TransMedTech), the Courtois NeuroMod project, the Quebec BioImaging Network [5886, 35450], INSPIRED (Spinal Research, UK; Wings for Life, Austria; Craig H. Neilsen Foundation, USA), Mila - Tech Transfer Funding Program.</p>
+</div></blockquote>
+<p>For projects using Digital Alliance (formerly Compute Canada), please add:</p>
+<blockquote>
+<div><p>the Digital Research Alliance of Canada (alliance​can​.ca) for providing the supercomputing infrastructure.</p>
+</div></blockquote>
+<p>For projects involving SEM, please add:</p>
+<blockquote>
+<div><p>the Center for Characterization and Microscopy of Materials (CM)² for electron microscopy scanning</p>
+</div></blockquote>
+<p>If using the GPU on Bireli, add:</p>
+<blockquote>
+<div><p>NVIDIA Corporation for the donation of a Titan X GPU</p>
+</div></blockquote>
+<p>For those with the <strong>Polytechnique MEDITIS</strong> fellowship and other fellowships, please don’t forget to mention them.</p>
+</section>
+<section id="tips-for-writing-scientific-articles">
+<h2>Tips for writing scientific articles<a class="headerlink" href="#tips-for-writing-scientific-articles" title="Link to this heading">#</a></h2>
+<ul>
+<li><p><a class="reference external" href="https://app.readable.com/text/">Measure the readability of a text</a></p></li>
+<li><p><a class="reference external" href="https://www.elsevier.com/books/communicate-science-papers-presentations-and-posters-effectively/patience/978-0-12-801500-1">https://www.elsevier.com/books/communicate-science-papers-presentations-and-posters-effectively/patience/978-0-12-801500-1</a></p></li>
+<li><p><a class="reference external" href="https://twitter.com/jbhuang0604/status/1279992087497314305?s=27">Tips when making figures</a></p></li>
+<li><p>A paper on <a class="reference external" href="https://web.stanford.edu/class/ee384m/Handouts/HowtoReadPaper.pdf">How to Read a Paper</a></p></li>
+<li><p><a class="reference external" href="https://twitter.com/jbhuang0604/status/1397058827405742085">Useful tips for Presentations</a></p></li>
+<li><p><a class="reference external" href="http://abacus.bates.edu/~ganderso/biology/resources/writing/HTWtoc.html">http://abacus.bates.edu/~ganderso/biology/resources/writing/HTWtoc.html</a></p>
+<p><a class="reference external" href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3178846/">http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3178846/</a></p>
+<p><a class="reference external" href="http://www.columbia.edu/cu/biology/ug/research/paper.html">http://www.columbia.edu/cu/biology/ug/research/paper.html</a></p>
+</li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ideas-for-cool-projects.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span>💡</span> Ideas for Cool Projects</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="practical-information/README.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span>📎</span> Practical Information</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Page Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#journals">Journals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general">General</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medical-image-analysis-deep-learning">Medical Image Analysis / Deep Learning</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#neuroimaging">Neuroimaging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clinical">Clinical</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mri-coils">MRI / Coils</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-platforms">Writing Platforms</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#google-docs">Google Docs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overleaf">Overleaf</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-manager">Reference manager</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paperpile">Paperpile</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figures-in-vectorial-format">Figures (in vectorial format)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organizing-folders">Organizing Folders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cover-letter">Cover letter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#addressing-reviewer-comments">Addressing Reviewer Comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-grammar">Check grammar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#affiliations">Affiliations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips-for-writing-scientific-articles">Tips for writing scientific articles</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NeuroPoly
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2021, NeuroPoly.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
