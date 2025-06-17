@@ -20,7 +20,7 @@ import os.path
 # -- Project information -----------------------------------------------------
 
 project = 'NeuroPoly Internal Wiki'
-copyright = '2021, NeuroPoly'
+copyright = '2021-2025, NeuroPoly'
 author = 'NeuroPoly'
 
 
