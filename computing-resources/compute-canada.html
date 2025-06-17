@@ -465,6 +465,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips-and-tricks">Tips and Tricks</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#runing-consecutive-jobs">Runing consecutive jobs</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-servers">List of Servers</a><ul class="nav section-nav flex-column">
@@ -624,6 +625,19 @@ virtualenv<span class="w"> </span>&lt;VENV_NAME&gt;
 deactivate
 </pre></div>
 </div>
+</section>
+<section id="runing-consecutive-jobs">
+<h3>Runing consecutive jobs<a class="headerlink" href="#runing-consecutive-jobs" title="Link to this heading">#</a></h3>
+<p>TamIA has a 24h time limit for job runs. To avoid having to wait until job terminates to launch a training, you can launch jobs when others end/fail with dependencies.
+Example:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sbatch train.sh</span>
+<span class="go">-&gt; training 32561</span>
+<span class="go">sbatch --dependency=afterany:32561   train.sh</span>
+<span class="go">-&gt; training 32562</span>
+<span class="go">...</span>
+</pre></div>
+</div>
+<p>You can also use <code class="docutils literal notranslate"><span class="pre">afterok</span></code> or <code class="docutils literal notranslate"><span class="pre">afternotok</span></code>. More details <a class="reference external" href="https://hpc.nih.gov/docs/job_dependencies.html">here</a>.</p>
 </section>
 </section>
 <section id="list-of-servers">
@@ -798,6 +812,7 @@ ls /software/gpu/apps/python/wheelhouse/tensorflow-0.*
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips-and-tricks">Tips and Tricks</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#runing-consecutive-jobs">Runing consecutive jobs</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-servers">List of Servers</a><ul class="nav section-nav flex-column">
