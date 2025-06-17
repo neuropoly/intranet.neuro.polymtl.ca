@@ -76,7 +76,7 @@ html_sourcelink_suffix = ".md" # our sources are in markdown; but this only has 
 html_theme_options = {
     "logo": {
         "image_light": "_static/logo.png",
-        "image_dark": "_static/logo.png",
+        "image_dark": "_static/logo_dark.png",
         "text": "NeuroPoly Lab Manual",
     },
     "toc_title": "Page Contents",
@@ -88,7 +88,7 @@ html_theme_options = {
 }
 
 html_context = {
-    "default_mode": "light",
+    "default_mode": "auto",
     "github_user": "neuropoly",
     "github_repo": "intranet.neuro.polymtl.ca",
     "github_version": "master",
