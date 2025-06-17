@@ -1,0 +1,773 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" data-theme="auto">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Installation of VTK and ITK on Mac OS X &#8212; NeuroPoly Internal Wiki  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "auto";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "auto";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/theme.css?v=9a9c6050" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=c607423c"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/programming-languages/c++/installation-of-vtk-and-itk-on-mac-os-x';</script>
+    <link rel="icon" href="../../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Using XCode" href="using-xcode.html" />
+    <link rel="prev" title="C++" href="README.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="auto">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../README.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../../_static/logo_dark.png" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">NeuroPoly Lab Manual</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><!-- GTranslate: https://gtranslate.io/ -->
+<div class="center-g-translate">
+    <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl" style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png" height="24" width="24" alt="English" /></a><a href="#" onclick="doGTranslate('en|fr');return false;" title="French" class="gflag nturl" style="background-position:-200px -100px;"><img src="//gtranslate.net/flags/blank.png" height="24" width="24" alt="French" /></a>
+
+    <style type="text/css">
+        <!--
+        a.gflag {vertical-align:middle;font-size:24px;padding:1px 0;background-repeat:no-repeat;background-image:url(//gtranslate.net/flags/24.png);}
+        a.gflag img {border:0;}
+        a.gflag:hover {background-image:url(//gtranslate.net/flags/24a.png);}
+        #goog-gt-tt {display:none !important;}
+        .goog-te-banner-frame {display:none !important;}
+        .goog-te-menu-value:hover {text-decoration:none !important;}
+        body {top:0 !important;}
+        #google_translate_element2 {display:none!important;}
+        -->
+    </style>
+
+    <div id="google_translate_element2"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'en',autoDisplay: false}, 'google_translate_element2');}
+    </script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
+        /* ]]> */
+    </script>
+</div></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../onboarding/README.html"><span>👋</span> Onboarding</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../onboarding/getting-started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../onboarding/campus-access.html">Campus Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../onboarding/infrastructure.html">Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../onboarding/dropbox-google-drive.html">Google Drive</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../onboarding/computer-setup/README.html">Computer Setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../onboarding/computer-setup/mail.html"><span>📧</span> Email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../onboarding/computer-setup/slack.html"><span>🗣</span> Slack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../onboarding/computer-setup/eduroam.html"><span>📶</span> Eduroam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../onboarding/computer-setup/shell-profile.html"><span>💻</span> Shell Profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../onboarding/computer-setup/configuration-tips.html"><span>💡</span> Other configuration tips</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../onboarding/software-development.html">Software development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../onboarding/students-interns.html">Students and Interns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../onboarding/consultants-ra.html">Consultants and RA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../onboarding/postdoc.html">Postdoctoral fellows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../onboarding/admin.html">Administrators</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../agenda-and-calendar.html"><span>📅</span> Calendar &amp; Meetings</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../computing-resources/README.html"><span>🖥</span> Computing Resources</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../computing-resources/neuropoly/README.html"><span>🖥</span> Computers @NeuroPoly</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../computing-resources/neuropoly/cpus.html">CPU Clusters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../computing-resources/neuropoly/gpus.html">GPU Clusters</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../computing-resources/clusters-at-criugm.html"><span>🖥</span> Computers @CRIUGM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../computing-resources/compute-canada.html"><span>🖥</span> Compute Canada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../computing-resources/printer.html"><span>🖨</span> Printer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../computing-resources/microsoft365.html"><span>☁️</span> Microsoft 365</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../computing-resources/youtube.html">YouTube Procedure</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../data/README.html"><span>💾</span> Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../data/dataset-curation.html">Dataset curation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data/git-datasets.html"><code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data/duke.html"><code class="docutils literal notranslate"><span class="pre">duke</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data/admin-guide.html">Dataset admin guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data/deeplearning-models.html">Deep Learning Models</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../mri-scanning/README.html"><span>🧲</span> MRI Scanning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../mri-scanning/unf-3t-prisma.html">UNF (3T Prisma)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../mri-scanning/mni-mcgill-7t-terra.html">MNI/McGill (7T Terra)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../mri-scanning/mhi-7t-agilent.html">MHI (7T Agilent)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../mri-scanning/concordia-ge.html">Concordia (3T GE)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../rf-lab/README.html"><span>🔧</span> RF Lab</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../rf-lab/mri-coils-at-neuropoly.html">NeuroPoly Coils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rf-lab/misc.html">Misc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rf-lab/mri-phantoms.html">Phantoms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rf-lab/3d-printing/README.html">3D Printing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rf-lab/3d-printing/octoprint.html">OctoPrint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rf-lab/pcb-manufacturing.html">PCB Manufacturing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rf-lab/cnc-machine.html">CNC machine</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Academic Life</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../courses.html"><span>🎓</span> University Courses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../comprehensive-exam-guide.html"><span>📖</span> Comprehensive Exam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scholarships.html"><span>💰</span> Scholarships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conferences.html"><span>✈️</span> Conferences</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../bibliography/README.html"><span>📚</span> Bibliography</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../bibliography/lab-theses.html">Theses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../bibliography/spinal-cord-injury.html">Spinal Cord Injury</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../bibliography/mri.html">MRI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../bibliography/mri-analysis.html">MRI Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../bibliography/deep-learning.html">Deep Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../bibliography/histology.html">Histology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../bibliography/shared-paperpile-folder.html">Paperpile Folder</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ideas-for-cool-projects.html"><span>💡</span> Ideas for Cool Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing-articles.html"><span>✍️</span>     Academic Writing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../practical-information/README.html"><span>📎</span> Practical Information</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../practical-information/visa.html"><span>🌎</span> VISAs and Work Permits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../practical-information/medical.html"><span>🏥</span> Medical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../practical-information/living-in-montreal.html"><span>🇨🇦</span> Living in Montreal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../practical-information/purchasing-hardware-and-lab-supplies.html"><span>🛠</span> Purchasing Supplies</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../README.html"><span>🤓</span> Geek tips</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../useful-links.html">Useful links/Software</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../bash-shell/README.html">Bash/Shell</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../bash-shell/script.html">Script</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../README.html">Programming Languages</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../python.html">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../matlab.html">MATLAB</a></li>
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="README.html">C++</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">Installation of VTK and ITK on Mac OS X</a></li>
+<li class="toctree-l4"><a class="reference internal" href="using-xcode.html">Using XCode</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../git.html">Git &amp; Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../git-annex.html">git-annex</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../os-guides/README.html">OS Guides</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os-guides/linux.html">Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os-guides/macosx.html">MacOSX</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../misc/README.html">Various Software &amp; Tools</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../misc/virtual-machines/README.html">Virtual Machines</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../misc/virtual-machines/virtualbox.html">VirtualBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../misc/virtual-machines/vagrant.html">Vagrant</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/bitbucket.html">BitBucket</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../misc/docker/README.html">Docker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../misc/docker/docker-for-deep-learning.html">Docker for Deep Learning</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/dropbox.html">Dropbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/jekyll.html">Jekyll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/microsoft-word.html">Microsoft Word</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/openneuro.html">OpenNeuro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/sketchup.html">Sketchup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/xquartz.html">XQuartz</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../image-processing-software/README.html">Image Processing Software</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../image-processing-software/advanced-normalization-tools-ants.html">Advanced Normalization Tools (ANTs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../image-processing-software/anima.html">Anima</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../image-processing-software/diffusion-simulator.html">Diffusion Simulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../image-processing-software/freesurfer.html">FreeSurfer</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../image-processing-software/fsl/README.html">FSL</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../image-processing-software/fsl/fsleyes.html">FSLeyes</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../image-processing-software/itk-snap.html">ITK-SNAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../image-processing-software/nifti.html">NIfTI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../image-processing-software/openneuro-cli.html">OpenNeuro CLI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../image-processing-software/osirix.html">OsiriX</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../deep-learning/README.html">Deep Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../deep-learning/cuda.html">CUDA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../deep-learning/tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../deep-learning/conditional-random-fields-crf.html">Conditional Random Fields (CRF)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../deep-learning/restricted-boltzmann-machines.html">Restricted Boltzmann Machines (RBM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../deep-learning/misc.html">Misc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../deep-learning/WandB.html">WandB</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../edi.html"><span>🧩</span> EDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contact.html"><span>📞</span> Contact</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://neuro.polymtl.ca">NeuroPoly Website</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/programming-languages/c++/installation-of-vtk-and-itk-on-mac-os-x.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button"
+   title="Suggest edit"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+
+</a>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Installation of VTK and ITK on Mac OS X</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Page Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-vtk">Install VTK</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-itk">Install ITK</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-vtk-itk-on-mac-osx-10-9"><strong>Installing VTK/ITK on Mac OSX 10.9</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-building-itk-4-6-1-on-mac-osx-10-9-5">Example: Building ITK 4.6.1 on Mac OSX 10.9.5</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-installation-issues"><strong>Fixing Installation Issues</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#be-prepared-to-use-libraries"><strong>Be prepared to use libraries</strong></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="installation-of-vtk-and-itk-on-mac-os-x">
+<h1>Installation of VTK and ITK on Mac OS X<a class="headerlink" href="#installation-of-vtk-and-itk-on-mac-os-x" title="Link to this heading">#</a></h1>
+<p>VTK library is used for 3D computer graphics, image processing and visualization (<a class="reference external" href="http://www.vtk.org">http://www.vtk.org/</a>) and ITK library contains powerful image processing and registration tools (<a class="reference external" href="http://www.itk.org">http://www.itk.org/</a>). ITK doesn’t provide any classes for visualization. A wrapper between ITK and VTK is used for that :ITKVTKGlue. Thus, it’s necessary to install VTK before ITK.</p>
+<p>This installation guide is inspired from different sources on the web and provide a good installation in local on our computer (Mac OS 10.8). It probably won’t work for all OS versions.</p>
+<p>Other documentation :<br />
+<a class="reference external" href="http://www.macresearch.org/installing_vtk_on_mac_os_x">http://www.macresearch.org/installing_vtk_on_mac_os_x</a><br />
+<a class="reference external" href="http://www.vtk.org/Wiki/Cocoa_VTK">http://www.vtk.org/Wiki/Cocoa_VTK</a><br />
+<a class="reference external" href="http://stackoverflow.com/questions/17329258/how-to-install-vtk-6-1-for-osx-10-8-with-cocoa-xcode-support">http://stackoverflow.com/questions/17329258/how-to-install-vtk-6-1-for-osx-10-8-with-cocoa-xcode-support</a><br />
+<a class="reference external" href="http://itkdebug.blogspot.ca/2013/02/install-itk-on-mac-os.html">http://itkdebug.blogspot.ca/2013/02/install-itk-on-mac-os.html</a>\</p>
+<p>This installation uses CMake to build VTK and ITK, which is available on <a class="reference external" href="http://www.cmake.org/cmake/resources/software.html">http://www.cmake.org/cmake/resources/software.html</a>.</p>
+<section id="install-vtk">
+<h2>Install VTK<a class="headerlink" href="#install-vtk" title="Link to this heading">#</a></h2>
+<p>1. Download VTK sources (the latest release) on VTK website (<a class="reference external" href="http://www.vtk.org/VTK/resources/software.html">http://www.vtk.org/VTK/resources/software.html</a>) and unpack for example on Desktop</p>
+<p>2. In the VTK folder, create a new folder named “VTKBuild” (or anything else). Open a terminal in VTKBuild folder and open CMake Gui with the command :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ccmake<span class="w"> </span>..
+</pre></div>
+</div>
+<p>If you have the message <code class="docutils literal notranslate"><span class="pre">EMPTY_CACHE</span></code>, then press “c” to configure.</p>
+<p>3. Numerous options are available and you need to change some of these ones :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BUILD_DOCUMENTATION</span><span class="o">=</span>OFF<span class="w"> </span><span class="c1"># (if ON, need Doxygen)</span>
+<span class="nv">BUILD_EXAMPLES</span><span class="o">=</span>OFF
+<span class="nv">BUILD_TESTING</span><span class="o">=</span>OFF
+<span class="nv">BUILD_SHARED_LIBS</span><span class="o">=</span>ON<span class="w"> </span><span class="c1"># (ON to compile dynamically, OFF to compile statically)</span>
+<span class="nv">CMAKE_INSTALL_PREFIX</span><span class="o">=</span>/usr/local/vtk
+<span class="w">    </span><span class="c1"># Probably the most important option to change. It is where the library</span>
+<span class="w">    </span><span class="c1"># will be installed. In this case, it&#39;s in local but you can provide another</span>
+<span class="w">    </span><span class="c1"># folder. Installing ITK and VTK in the same folder is also important.</span>
+<span class="w">    </span><span class="c1"># This way will put all library files (.dylib) in the same folder and it&#39;s</span>
+<span class="w">    </span><span class="c1"># easier to link with your project.</span>
+<span class="nv">CMAKE_OSX_ARCHITECTURES</span><span class="o">=</span>x86_64
+<span class="w">    </span><span class="c1"># Some authors suggest changing this feature. You can add architecture like</span>
+<span class="w">    </span><span class="c1"># i386 or pcc</span>
+<span class="nv">CMAKE_OSX_DEPLOYMENT_TARGET</span><span class="o">=</span><span class="m">10</span>.8
+<span class="nv">CMAKE_OSX_SYSROOT</span><span class="o">=</span>/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+<span class="w">    </span><span class="c1"># This path is required to link Xcode with VTK. If you don&#39;t have XCode</span>
+<span class="w">    </span><span class="c1"># installed the path will be different.</span>
+<span class="nv">VTK_Group_Qt</span><span class="o">=</span>OFF<span class="w"> </span><span class="c1"># (building doesn&#39;t work with Qt...)</span>
+<span class="nv">VTK_Group_Rendering</span><span class="o">=</span>ON
+<span class="nv">VTK_Group_StandAlone</span><span class="o">=</span>ON
+<span class="nv">VTK_USE_64BITS_IDS</span><span class="o">=</span>ON
+</pre></div>
+</div>
+<p>4. Press “c” to configure and “g” to generate VTK. Once generated, you can build VTK using commands :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>..<span class="w">  </span><span class="c1"># (maybe redundant)</span>
+make<span class="w"> </span>-j<span class="w"> </span><span class="m">4</span>
+<span class="w">    </span><span class="c1"># The option -j allows you to build libraries using multiple cores and</span>
+<span class="w">    </span><span class="c1"># accelerate the process (which may be very long!)</span>
+</pre></div>
+</div>
+<p>5. At this point, library is build in the folder “VTKBuild” and you have to install it in the local folder using command :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>make<span class="w"> </span>install<span class="w"> </span><span class="c1"># (sudo is needed because installation is made in local)</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="install-itk">
+<h2>Install ITK<a class="headerlink" href="#install-itk" title="Link to this heading">#</a></h2>
+<p>1. Download ITK sources named “InsightToolkit-x.x.x.tar.gz” (the latest official release) on ITK website (<a class="reference external" href="http://www.itk.org/ITK/resources/software.html">http://www.itk.org/ITK/resources/software.html</a>) and unpack for example on Desktop</p>
+<p>2. In the ITK folder, create a new folder named “ITKBuild” (or anything else). Open a terminal in ITKBuild folder and open CMake gui with the command :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ccmake<span class="w"> </span>..
+</pre></div>
+</div>
+<p>3. Numerous options are available and you need to change some of these ones :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BUILD_DOCUMENTATION</span><span class="o">=</span>OFF<span class="w"> </span><span class="c1"># (if ON, need Doxygen)</span>
+<span class="nv">BUILD_EXAMPLES</span><span class="o">=</span>OFF
+<span class="nv">BUILD_SHARED_LIBS</span><span class="o">=</span>ON<span class="w"> </span><span class="c1"># (ON to compile dynamically, OFF to compile statically)</span>
+<span class="nv">BUILD_TESTING</span><span class="o">=</span>OFF
+<span class="nv">CMAKE_INSTALL_PREFIX</span><span class="o">=</span>/usr/local/itk
+<span class="w">    </span><span class="c1"># Probably the most important option to change. It is where the library</span>
+<span class="w">    </span><span class="c1"># will be installed. In this case, it&#39;s in local but you can provide another</span>
+<span class="w">    </span><span class="c1"># folder. Installing ITK and VTK in the same folder is also important.</span>
+<span class="w">    </span><span class="c1"># This way will put all library files (.dylib) in the same folder and it&#39;s</span>
+<span class="w">    </span><span class="c1"># easier to link with your project.</span>
+<span class="nv">CMAKE_OSX_ARCHITECTURES</span><span class="o">=</span>x86_64
+<span class="w">    </span><span class="c1"># Some authors suggest changing this feature. You can add architecture</span>
+<span class="w">    </span><span class="c1"># like i386 or pcc</span>
+<span class="nv">CMAKE_OSX_DEPLOYMENT_TARGET</span><span class="o">=</span><span class="m">10</span>.8
+<span class="nv">CMAKE_OSX_SYSROOT</span><span class="o">=</span>/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+<span class="w">    </span><span class="c1"># This path is required to link Xcode with VTK. If you don&#39;t have Xcode</span>
+<span class="w">    </span><span class="c1"># installed the path will be different.</span>
+<span class="nv">ITK_BUILD_ALL_MODULES</span><span class="o">=</span>ON
+<span class="nv">ITK_USE_64BITS_IDS</span><span class="o">=</span>ON
+<span class="nv">Module_ITKV3Compatibility</span><span class="o">=</span>ON
+<span class="w">    </span><span class="c1"># used if you want to use classes people have built from different</span>
+<span class="w">    </span><span class="c1"># versions (e.g., v3)</span>
+<span class="nv">Module_ITKVtkGlue</span><span class="o">=</span>ON<span class="w"> </span><span class="c1"># (probably not necessary if ITK_BUILD_ALL_MODULES is ON)</span>
+<span class="nv">VTK_DIR</span><span class="o">=</span>/usr/local/vtk/lib/cmake/vtk-6.0
+<span class="w">    </span><span class="c1"># path may change depending on VTK version and folder installation</span>
+</pre></div>
+</div>
+<p>4. Press “c” to configure and “g” to generate ITK. Once generated, you can build ITK using commands :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>..<span class="w"> </span><span class="c1"># (maybe redundant)</span>
+make<span class="w"> </span>-j<span class="w"> </span><span class="m">4</span>
+</pre></div>
+</div>
+<p>5. Installation of ITK in the same local folder :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>make<span class="w"> </span>install
+</pre></div>
+</div>
+</section>
+<section id="installing-vtk-itk-on-mac-osx-10-9">
+<h2><strong>Installing VTK/ITK on Mac OSX 10.9</strong><a class="headerlink" href="#installing-vtk-itk-on-mac-osx-10-9" title="Link to this heading">#</a></h2>
+<p>Since Apple completely changed the way the compiler are installed, using VTK/ITK on recent version of Mac OSX was quite difficult… Hereafter is a quick tutorial from (<a class="reference external" href="http://avansp.github.io/build/2014/10/30/building-ITK-4.7-on-macosx-10.9.5/">http://avansp.github.io/build/2014/10/30/building-ITK-4.7-on-macosx-10.9.5/</a>) to install VTK/ITK on Mac OSX to avoid annoying error to appear during compilation. Do the same follow procedure for VTK and ITK.</p>
+<section id="example-building-itk-4-6-1-on-mac-osx-10-9-5">
+<h3>Example: Building ITK 4.6.1 on Mac OSX 10.9.5<a class="headerlink" href="#example-building-itk-4-6-1-on-mac-osx-10-9-5" title="Link to this heading">#</a></h3>
+<p><strong>Date:</strong> October 2014</p>
+<p><strong>System Info:</strong></p>
+<blockquote>
+<div><p>OSX: 10.9.5<br />
+XCode: SDK 10.9 (have 10.10, but my OS is still 9)<br />
+CMAKE: 3.1.0-rc1<br />
+ITK: 4.7</p>
+</div></blockquote>
+<p>From a fresh start, meaning new directory to build. Run CMAKE and generate. You can use any generator, but I chose CodeBlocks - Unix Makefile, because Qt can read CMake project structure if we use CodeBlocks generator.</p>
+<p>Set the correct C &amp; C++ compiler (I don’t want to mix up with GNU):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">CMAKE_CXX_COMPILER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/usr/bin/clang++
+<span class="nv">CMAKE_C_COMPILER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/usr/bin/clang
+</pre></div>
+</div>
+<p>Set the correct compiler flags:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">CMAKE_CXX_FLAGS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-stdlib<span class="o">=</span>libstdc++<span class="w"> </span>-std<span class="o">=</span>c++11
+<span class="nv">CMAKE_OSX_SYSROOT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+<span class="nv">CMAKE_OSX_DEPLOYMENT_TARGET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span>.9
+<span class="nv">CMAKE_OSX_ARCHITECTURES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>x86_64
+</pre></div>
+</div>
+<p>Other settings are:</p>
+<p><code class="docutils literal notranslate"><span class="pre">CMAKE_INSTALL_PREFIX</span></code>: Make sure it does not install directly to /usr/local/ folder by default.</p>
+<p>If this still doesn’t work, you may need to until I hack directly into the <code class="docutils literal notranslate"><span class="pre">CMakeCache.txt</span></code> file.</p>
+<p>It appears that even though I told CMake that I used LLVM’s clang compiler (Apple changed that since 10.9 from GNU), CMake still uses <code class="docutils literal notranslate"><span class="pre">&lt;type_traits&gt;</span></code> inclusion instead of <code class="docutils literal notranslate"><span class="pre">&lt;tr1/type_traits&gt;</span></code>.</p>
+<p>I forced CMake, by changing these lines in the CMakeCache.txt file manually:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>//Have<span class="w"> </span>include<span class="w"> </span>tr1/type_traits
+ITK_HAS_STLTR1_TR1_TYPE_TRAITS:INTERNAL<span class="o">=</span>
+//Have<span class="w"> </span>include<span class="w"> </span>type_traits
+ITK_HAS_STLTR1_TYPE_TRAITS:INTERNAL<span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+<p>into:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>//Have<span class="w"> </span>include<span class="w"> </span>tr1/type_traits
+ITK_HAS_STLTR1_TR1_TYPE_TRAITS:INTERNAL<span class="o">=</span><span class="m">1</span>
+//Have<span class="w"> </span>include<span class="w"> </span>type_traits
+ITK_HAS_STLTR1_TYPE_TRAITS:INTERNAL<span class="o">=</span>
+</pre></div>
+</div>
+<p>It seems to work… still compiling. No complaints about type traits.</p>
+</section>
+</section>
+<section id="fixing-installation-issues">
+<h2><strong>Fixing Installation Issues</strong><a class="headerlink" href="#fixing-installation-issues" title="Link to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>garbage collection is no longer supported</p>
+<p>You can simply remove the -fobjc-gc flag from VTK_REQUIRED_OBJCXX_FLAGS</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>traits error</p>
+<p>Add <code class="docutils literal notranslate"><span class="pre">libc++.dylib</span></code> to your project:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Select your project (the blue file) in your project navigator (Command 1 if it’s hidden)</p></li>
+<li><p>Select your target</p></li>
+<li><p>Go to Build Phases</p></li>
+<li><p>Expand “Link Binary with Libraries”</p></li>
+<li><p>Click the “+”</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">libc++.dylib</span></code> in the search bar</p></li>
+<li><p>Select the <code class="docutils literal notranslate"><span class="pre">libc++.dylib</span></code> file and click “Add”</p></li>
+</ol>
+</div></blockquote>
+</div>
+</section>
+<section id="be-prepared-to-use-libraries">
+<h2><strong>Be prepared to use libraries</strong><a class="headerlink" href="#be-prepared-to-use-libraries" title="Link to this heading">#</a></h2>
+<p>At this point, ITK and VTK are correctly installed your <code class="docutils literal notranslate"><span class="pre">/usr/local</span></code> folder. Installation have created four folder :</p>
+<ul class="simple">
+<li><p>?tk/bin ⇒ binaries of ITK and VTK</p></li>
+<li><p>?tk/lib ⇒ libraries (.dylib) of ITK and VTK</p></li>
+<li><p>?tk/include ⇒ include files of libraries (header files)</p></li>
+<li><p>?tk/share ⇒ contain documentation, license and so on.</p></li>
+</ul>
+<p>ITK and VTK may now be used in Xcode. Documentation for creating a new project linked to ITK and VTK on Xcode is located here : <a class="reference external" href="https://www.neuro.polymtl.ca/tips_and_tricks/cpp/create_project_xcode">Create a new Xcode project linked with ITK and VTK</a></p>
+<p>To use executable linked with ITK or VTK you need to set your environment variables. Edit your <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> and add:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/usr/local/itk/bin:<span class="nv">$PATH</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">DYLD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/ITKVTK/lib:<span class="nv">$DYLD_LIBRARY_PATH</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="README.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">C++</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="using-xcode.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Using XCode</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Page Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-vtk">Install VTK</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-itk">Install ITK</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-vtk-itk-on-mac-osx-10-9"><strong>Installing VTK/ITK on Mac OSX 10.9</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-building-itk-4-6-1-on-mac-osx-10-9-5">Example: Building ITK 4.6.1 on Mac OSX 10.9.5</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-installation-issues"><strong>Fixing Installation Issues</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#be-prepared-to-use-libraries"><strong>Be prepared to use libraries</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NeuroPoly
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2021, NeuroPoly.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
