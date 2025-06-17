@@ -145,9 +145,9 @@ source <VENV_NAME>/bin/activate
 deactivate
 ```
 
-### Runing consecutive jobs
+### Running consecutive jobs
 
-TamIA has a 24h time limit for job runs. To avoid having to wait until job terminates to launch a training, you can launch jobs when others end/fail with dependencies. 
+TamIA has a 24h time limit for job runs. To avoid having to wait until the job terminates to launch a training, you can launch jobs when others end/fail with dependencies. 
 Example: 
 ```console
 sbatch train.sh
