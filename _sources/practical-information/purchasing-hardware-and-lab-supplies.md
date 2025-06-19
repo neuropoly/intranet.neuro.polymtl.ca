@@ -2,7 +2,7 @@
 
 ## Computers
 
-* [System76](https://www.system76.com/home/)
+* [System76](https://system76.com/)
 
 ## RF Lab
 
