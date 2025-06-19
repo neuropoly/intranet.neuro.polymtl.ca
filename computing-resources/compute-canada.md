@@ -145,6 +145,19 @@ source <VENV_NAME>/bin/activate
 deactivate
 ```
 
+### Running consecutive jobs
+
+TamIA has a 24h time limit for job runs. To avoid having to wait until the job terminates to launch a training, you can launch jobs when others end/fail with dependencies. 
+Example: 
+```console
+sbatch train.sh
+-> training 32561
+sbatch --dependency=afterany:32561   train.sh
+-> training 32562
+...
+```
+You can also use `afterok` or `afternotok`. More details [here](https://hpc.nih.gov/docs/job_dependencies.html).
+
 ## List of Servers
 
 [Compute Canada: Running jobs](https://docs.computecanada.ca/wiki/Running_jobs)
