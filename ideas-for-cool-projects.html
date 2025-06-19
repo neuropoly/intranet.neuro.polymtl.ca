@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" data-theme="light">
+<html lang="en" data-content_root="./" data-theme="auto">
 
   <head>
     <meta charset="utf-8" />
@@ -13,8 +13,8 @@
   
   
   <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "auto";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "auto";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/theme.css?v=ec48f040" />
+    <link rel="stylesheet" type="text/css" href="_static/theme.css?v=9a9c6050" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -54,7 +54,7 @@
   </head>
   
   
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="auto">
 
   
   
@@ -137,9 +137,11 @@
   
     
     
+      
+    
     
     <img src="_static/logo.png" class="logo__image only-light" alt=""/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt=""/>`);</script>
+    <script>document.write(`<img src="_static/logo_dark.png" class="logo__image only-dark" alt=""/>`);</script>
   
   
     <p class="title logo__title">NeuroPoly Lab Manual</p>
