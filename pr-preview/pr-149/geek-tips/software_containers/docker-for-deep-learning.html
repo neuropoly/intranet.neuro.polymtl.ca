@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Restricted Boltzmann Machines (RBM) &#8212; NeuroPoly Internal Wiki  documentation</title>
+    <title>Docker for Deep Learning &#8212; NeuroPoly Internal Wiki  documentation</title>
   
   
   
@@ -43,12 +43,12 @@
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/deep-learning/restricted-boltzmann-machines';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/software_containers/docker-for-deep-learning';</script>
     <link rel="icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Misc" href="misc.html" />
-    <link rel="prev" title="Conditional Random Fields (CRF)" href="conditional-random-fields-crf.html" />
+    <link rel="next" title="Various Software &amp; Tools" href="../misc/README.html" />
+    <link rel="prev" title="Docker" href="docker.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -308,9 +308,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../os-guides/macosx.html">MacOSX</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../software_containers/README.html">Software Containers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../software_containers/docker.html">Docker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="../software_containers/docker-for-deep-learning.html">Docker for Deep Learning</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="README.html">Software Containers</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="docker.html">Docker</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">Docker for Deep Learning</a></li>
 </ul>
 </details></li>
 </ul>
@@ -345,13 +345,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../image-processing-software/osirix.html">OsiriX</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="README.html">Deep Learning</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="cuda.html">CUDA</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tensorflow.html">Tensorflow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conditional-random-fields-crf.html">Conditional Random Fields (CRF)</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Restricted Boltzmann Machines (RBM)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="misc.html">Misc</a></li>
-<li class="toctree-l3"><a class="reference internal" href="WandB.html">WandB</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../deep-learning/README.html">Deep Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/cuda.html">CUDA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/conditional-random-fields-crf.html">Conditional Random Fields (CRF)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/restricted-boltzmann-machines.html">Restricted Boltzmann Machines (RBM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/misc.html">Misc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/WandB.html">WandB</a></li>
 </ul>
 </details></li>
 </ul>
@@ -402,7 +402,7 @@
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/deep-learning/restricted-boltzmann-machines.md" target="_blank"
+<a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/software_containers/docker-for-deep-learning.md" target="_blank"
    class="btn btn-sm btn-source-edit-button"
    title="Suggest edit"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -448,7 +448,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Restricted Boltzmann Machines (RBM)</h1>
+    <h1>Docker for Deep Learning</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -458,8 +458,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation <a id="documentation"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sci-kit-learn-tools">Sci-Kit Learn Tools <a id="sci-kit-learn-tools"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#docker-environment">Docker Environment <a id="docker_environment"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nvidia-docker">NVIDIA Docker</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-containers">Creating Containers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exposing-container-ports">Exposing Container Ports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-datasets-external-volumes">Accessing Datasets (external volumes)</a></li>
 </ul>
             </nav>
         </div>
@@ -471,20 +474,39 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="restricted-boltzmann-machines-rbm">
-<h1>Restricted Boltzmann Machines (RBM)<a class="headerlink" href="#restricted-boltzmann-machines-rbm" title="Link to this heading">#</a></h1>
-<section id="documentation">
-<h2>Documentation <a id="documentation"></a><a class="headerlink" href="#documentation" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>A Beginner’s Tutorial for Restricted Boltzmann Machines : <a class="reference external" href="http://deeplearning4j.org/restrictedboltzmannmachine.html">http://deeplearning4j.org/restrictedboltzmannmachine.html</a>​</p></li>
-<li><p>Sklearn Documentation: <a class="reference external" href="http://scikit-learn.org/stable/modules/neural_networks.html">http://scikit-learn.org/stable/modules/neural_networks.html</a>​</p></li>
-</ul>
+  <section id="docker-for-deep-learning">
+<h1>Docker for Deep Learning<a class="headerlink" href="#docker-for-deep-learning" title="Link to this heading">#</a></h1>
+<section id="docker-environment">
+<h2>Docker Environment <a id="docker_environment"></a><a class="headerlink" href="#docker-environment" title="Link to this heading">#</a></h2>
+<p>In this page you’ll find information on how to use Docker for Deep Learning. You’re of course not required to use Docker, however if you want a different CUDA version or any admin privileges (root account) you’ll see that Docker will be the best choice.</p>
 </section>
-<section id="sci-kit-learn-tools">
-<h2>Sci-Kit Learn Tools <a id="sci-kit-learn-tools"></a><a class="headerlink" href="#sci-kit-learn-tools" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>User guide: <a class="reference external" href="http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.BernoulliRBM.html">http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.BernoulliRBM.html</a>​</p></li>
-</ul>
+<section id="nvidia-docker">
+<h2>NVIDIA Docker<a class="headerlink" href="#nvidia-docker" title="Link to this heading">#</a></h2>
+<p><img alt="" src="../.gitbook/assets/docker_arch.png" /></p>
+<p>Docker alone has no support for NVIDIA GPUs, therefore we use t he <a class="reference external" href="https://github.com/NVIDIA/nvidia-docker">NVIDIA Docker</a> in order to have access to the host GPUs from the Docker containers.</p>
+<p><a class="reference external" href="https://www.neuro.polymtl.ca/_detail/internal_resources/deep_learning/docker_arch.png?id=internal_resources%3Adeep_learning%3Adocker"><img alt="" src="https://www.neuro.polymtl.ca/_media/internal_resources/deep_learning/docker_arch.png" /></a>As you can see in the image on the left, we have the GPUs and the NVIDIA CUDA Drivers on <strong>the host</strong> (Ubuntu in our case), and then you can have different <strong>containers with different CUDA Toolkit versions installed and isolated from the host environment</strong>.</p>
+<p>In these containers you have <strong>administrative privileges (root account)</strong> where you can do whatever you want and still be able to <strong>access the GPU</strong> from all Deep Learning frameworks.</p>
+<p>NVIDIA also provides many images, so you don’t even need to install CUDA toolkit or cuDNN by yourself, the list can be <a class="reference external" href="https://hub.docker.com/r/nvidia/cuda/">seen here</a>. You can use Ubuntu 14.04 or Ubuntu 16.04 with CUDA 6.5/7.0/7.5 or 8.0 together with different cuDNN versions.</p>
+</section>
+<section id="creating-containers">
+<h2>Creating Containers<a class="headerlink" href="#creating-containers" title="Link to this heading">#</a></h2>
+<p>If you want to create containers, you just need to use the <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code> command. Here is an example on how to start a container with CUDA 8.0 and cuDNN 5:</p>
+<p><code class="docutils literal notranslate"><span class="pre">nvidia-docker</span> <span class="pre">run</span> <span class="pre">-it</span> <span class="pre">nvidia/cuda:8.0-cudnn5-devel</span></code></p>
+<p>After executing this, Docker will download all required images from Docker Hub (this is done only once, later it is used as a cache) and it will start the container with the Ubuntu 16.04 with CUDA 8.0 and cuDNN 5 preconfigured.</p>
+<p>Please note that after you exit the container, it will stop the container. So if you want to leave a container running you should run it in <strong>detached mode</strong> passing the flag <code class="docutils literal notranslate"><span class="pre">-d</span></code>.</p>
+<p>More NVIDIA Images are <a class="reference external" href="https://hub.docker.com/r/nvidia/cuda/">available here</a>.</p>
+</section>
+<section id="exposing-container-ports">
+<h2>Exposing Container Ports<a class="headerlink" href="#exposing-container-ports" title="Link to this heading">#</a></h2>
+<p>If you want to expose a container port to the host system, you can use the flag <code class="docutils literal notranslate"><span class="pre">-p</span></code>, like in the example below where we use a Tensorflow image with Jupyter:</p>
+<p><code class="docutils literal notranslate"><span class="pre">nvidia-docker</span> <span class="pre">run</span> <span class="pre">-it</span> <span class="pre">-p</span> <span class="pre">8888:8888</span> <span class="pre">gcr.io/tensorflow/tensorflow:latest-gpu</span></code></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">-p</span></code> flag tells two ports, one is from the container and the other is the port that will be opened in the host that will forward to the container. After executing the command above, you’ll be able to open a Jupyter notebook from your browser by accessing <a class="reference external" href="http://localhost:8888/"><code class="docutils literal notranslate"><span class="pre">http://localhost:8888</span></code></a>.</p>
+</section>
+<section id="accessing-datasets-external-volumes">
+<h2>Accessing Datasets (external volumes)<a class="headerlink" href="#accessing-datasets-external-volumes" title="Link to this heading">#</a></h2>
+<p>You can mount a host directory inside your Docker container using the following volume parameter:</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-i</span> <span class="pre">-t</span> <span class="pre">-v</span> <span class="pre">[host</span> <span class="pre">full</span> <span class="pre">path]:[container</span> <span class="pre">path]</span> <span class="pre">[image]</span> <span class="pre">[command]</span></code></p>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">-v</span></code> option, allow you to mount the host <code class="docutils literal notranslate"><span class="pre">[host</span> <span class="pre">full</span> <span class="pre">path]</span></code> directory inside the <code class="docutils literal notranslate"><span class="pre">[container</span> <span class="pre">path]</span></code> path of the container.</p>
 </section>
 </section>
 
@@ -500,20 +522,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="conditional-random-fields-crf.html"
+       href="docker.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Conditional Random Fields (CRF)</p>
+        <p class="prev-next-title">Docker</p>
       </div>
     </a>
     <a class="right-next"
-       href="misc.html"
+       href="../misc/README.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Misc</p>
+        <p class="prev-next-title">Various Software &amp; Tools</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -533,8 +555,11 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation <a id="documentation"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sci-kit-learn-tools">Sci-Kit Learn Tools <a id="sci-kit-learn-tools"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#docker-environment">Docker Environment <a id="docker_environment"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nvidia-docker">NVIDIA Docker</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-containers">Creating Containers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exposing-container-ports">Exposing Container Ports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-datasets-external-volumes">Accessing Datasets (external volumes)</a></li>
 </ul>
   </nav></div>
 

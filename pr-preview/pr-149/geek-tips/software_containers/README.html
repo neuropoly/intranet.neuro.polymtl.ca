@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Restricted Boltzmann Machines (RBM) &#8212; NeuroPoly Internal Wiki  documentation</title>
+    <title>Software Containers &#8212; NeuroPoly Internal Wiki  documentation</title>
   
   
   
@@ -43,12 +43,12 @@
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/deep-learning/restricted-boltzmann-machines';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/software_containers/README';</script>
     <link rel="icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Misc" href="misc.html" />
-    <link rel="prev" title="Conditional Random Fields (CRF)" href="conditional-random-fields-crf.html" />
+    <link rel="next" title="Docker" href="docker.html" />
+    <link rel="prev" title="MacOSX" href="../os-guides/macosx.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -308,9 +308,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../os-guides/macosx.html">MacOSX</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../software_containers/README.html">Software Containers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../software_containers/docker.html">Docker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="../software_containers/docker-for-deep-learning.html">Docker for Deep Learning</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Software Containers</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="docker.html">Docker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="docker-for-deep-learning.html">Docker for Deep Learning</a></li>
 </ul>
 </details></li>
 </ul>
@@ -345,13 +345,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../image-processing-software/osirix.html">OsiriX</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="README.html">Deep Learning</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="cuda.html">CUDA</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tensorflow.html">Tensorflow</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conditional-random-fields-crf.html">Conditional Random Fields (CRF)</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Restricted Boltzmann Machines (RBM)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="misc.html">Misc</a></li>
-<li class="toctree-l3"><a class="reference internal" href="WandB.html">WandB</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../deep-learning/README.html">Deep Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/cuda.html">CUDA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/conditional-random-fields-crf.html">Conditional Random Fields (CRF)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/restricted-boltzmann-machines.html">Restricted Boltzmann Machines (RBM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/misc.html">Misc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/WandB.html">WandB</a></li>
 </ul>
 </details></li>
 </ul>
@@ -402,7 +402,7 @@
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/deep-learning/restricted-boltzmann-machines.md" target="_blank"
+<a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/software_containers/README.md" target="_blank"
    class="btn btn-sm btn-source-edit-button"
    title="Suggest edit"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -448,7 +448,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Restricted Boltzmann Machines (RBM)</h1>
+    <h1>Software Containers</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -458,8 +458,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation <a id="documentation"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sci-kit-learn-tools">Sci-Kit Learn Tools <a id="sci-kit-learn-tools"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-software-containers">What are Software Containers?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-terms">Common Terms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-containerize">When to Containerize:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-containerization-tools">Common Containerization Tools:</a></li>
 </ul>
             </nav>
         </div>
@@ -471,20 +473,45 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="restricted-boltzmann-machines-rbm">
-<h1>Restricted Boltzmann Machines (RBM)<a class="headerlink" href="#restricted-boltzmann-machines-rbm" title="Link to this heading">#</a></h1>
-<section id="documentation">
-<h2>Documentation <a id="documentation"></a><a class="headerlink" href="#documentation" title="Link to this heading">#</a></h2>
+  <section id="software-containers">
+<h1>Software Containers<a class="headerlink" href="#software-containers" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="what-are-software-containers">
+<h2>What are Software Containers?<a class="headerlink" href="#what-are-software-containers" title="Link to this heading">#</a></h2>
+<p>In the context of programming, <strong>Software Containers</strong> are fully isolated, portable software environments which can be run as a standalone process on your machine. You can think of them as a “middle ground” between a <a class="reference external" href="https://en.wikipedia.org/wiki/Package_manager">package manager</a> (which is not isolated from the rest of the machine) and a <a class="reference external" href="https://en.wikipedia.org/wiki/Virtual_machine">virtual machine</a> (where the operating system, and sometimes specific hardware, is emulated as well). You can read more on the difference between containers and virtual machines <a class="reference external" href="https://www.ibm.com/think/topics/containers-vs-vms">here</a>.</p>
+</section>
+<section id="common-terms">
+<h2>Common Terms<a class="headerlink" href="#common-terms" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>A Beginner’s Tutorial for Restricted Boltzmann Machines : <a class="reference external" href="http://deeplearning4j.org/restrictedboltzmannmachine.html">http://deeplearning4j.org/restrictedboltzmannmachine.html</a>​</p></li>
-<li><p>Sklearn Documentation: <a class="reference external" href="http://scikit-learn.org/stable/modules/neural_networks.html">http://scikit-learn.org/stable/modules/neural_networks.html</a>​</p></li>
+<li><p><strong>Image:</strong>  The precursor to a container; contains all data required to instantiate and run a container, as well as any software managed within them.</p></li>
+<li><p><strong>Definition:</strong> A file containing the instructions on how to build a container image. Can contain everything from downloading dependencies to setting up file structures to running other software!</p></li>
+<li><p><strong>Client:</strong> A tool which manages how to build, run, and manage images and their associated containers. Usually a command-line interface, though some containerization tools provide GUI clients as well.</p></li>
+<li><p><strong>OCI:</strong> Short for the “<a class="reference external" href="https://opencontainers.org/">Open Container Initiative</a>”, provides a standard for how images and containers should be built and run. If an image is OCI compliant, it can usually be run by any client which is also OCI compliant.</p></li>
 </ul>
 </section>
-<section id="sci-kit-learn-tools">
-<h2>Sci-Kit Learn Tools <a id="sci-kit-learn-tools"></a><a class="headerlink" href="#sci-kit-learn-tools" title="Link to this heading">#</a></h2>
+<section id="when-to-containerize">
+<h2>When to Containerize:<a class="headerlink" href="#when-to-containerize" title="Link to this heading">#</a></h2>
+<p>There are a number of reason to “containerize” a piece of software:</p>
+<ol class="arabic simple">
+<li><p><strong>Reproducibility:</strong> Once built, an image will always run exactly the same, as all dependencies and environmental settings are ensured to be static and insulated from change.</p></li>
+<li><p><strong>Portability:</strong> An image can be used to spawn associated containers on (almost) any other machine which has the same container client software, even if that machine does not/cannot install the dependencies required of the software!</p></li>
+</ol>
+<p>A number of drawbacks exist, however:</p>
+<ol class="arabic simple">
+<li><p><strong>Heavyweight:</strong> Due to their isolated design, containers won’t share their dependencies with one another or try to use those already on your machine. As a result, it is not uncommon to for multiple images to have duplicates of common tools and/or software, which can add up over time.</p></li>
+<li><p><strong>Security:</strong> As images are immutable and isolated, but still run on your operating system, containerized software often run without the same scrutiny as an “installed” program. While tools exist to check the contents of an image/container, you should generally be wary of running any container you didn’t build yourself or get from a trusted source.</p></li>
+</ol>
+</section>
+<section id="common-containerization-tools">
+<h2>Common Containerization Tools:<a class="headerlink" href="#common-containerization-tools" title="Link to this heading">#</a></h2>
+<p>Tools used in our research group are all OCI complient. They include:</p>
 <ul class="simple">
-<li><p>User guide: <a class="reference external" href="http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.BernoulliRBM.html">http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.BernoulliRBM.html</a>​</p></li>
+<li><p><a class="reference external" href="https://www.docker.com/">Docker</a>: Well documented and widely used. Most of NeuroPoly’s computing resources support this; however, as it’s client is daemon based, it is less secure and not available on many other shared resources.</p></li>
+<li><p><a class="reference external" href="https://podman.io/">Podman</a>: Lightweight and open source. Follows most of the same standards as Docker, but uses a CLI-based client instead; as such, it is what we tend use at NeuroPoly for our shared computing resources.</p></li>
+<li><p><a class="reference external" href="https://apptainer.org/">Apptainer</a> (Formerly Singularity): Extremely lightweight and, due to its much more stringent definition specification than Docker/Podman, extremely secure. As a result, most high-performance compute clusters (including <a class="reference external" href="https://docs.alliancecan.ca/wiki/Apptainer">Alliance Canada</a>, formerly Compute Canada) only support this containerization tool. Only available for Linux-based operating systems!</p></li>
 </ul>
+<p>You can view further details on each from the sidebar to the left.</p>
 </section>
 </section>
 
@@ -500,20 +527,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="conditional-random-fields-crf.html"
+       href="../os-guides/macosx.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Conditional Random Fields (CRF)</p>
+        <p class="prev-next-title">MacOSX</p>
       </div>
     </a>
     <a class="right-next"
-       href="misc.html"
+       href="docker.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Misc</p>
+        <p class="prev-next-title">Docker</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -533,8 +560,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation">Documentation <a id="documentation"></a></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sci-kit-learn-tools">Sci-Kit Learn Tools <a id="sci-kit-learn-tools"></a></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-software-containers">What are Software Containers?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-terms">Common Terms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#when-to-containerize">When to Containerize:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-containerization-tools">Common Containerization Tools:</a></li>
 </ul>
   </nav></div>
 
