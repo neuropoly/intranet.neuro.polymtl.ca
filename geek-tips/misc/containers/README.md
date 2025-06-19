@@ -13,7 +13,7 @@ docker-for-deep-learning
 
 **Docker Client** - The command line tool that allows the user to interact with the daemon.
 
-**Docker Hub** - A registry of Docker images. You can think of the registry as a directory of all available Docker images. If required, one can host their own Docker registries and can use them for pulling images.
+[**Docker Hub**(https://hub.docker.com/)] - A registry of Docker images. You can think of the registry as a directory of all available Docker images. If required, one can host their own Docker registries and can use them for pulling images.
 
 ## Using Docker
 
@@ -102,8 +102,14 @@ RUN git clone https://github.com/neuropoly/spinalcordtoolbox.git sct; \
 ENV PATH "/sct/bin:${PATH}"
 ```
 
-1. Build docker image: \`docker build -t &lt;container\_id&gt; .\`
-2. Run it: \`docker run -it &lt;container\_id&gt;\`
+3. Build docker image: \`docker build -t &lt;container\_id&gt; .\`
+4. Run it: \`docker run -it &lt;container\_id&gt;\`
+
+Useful flags when running a docker container can be: 
+- `it`: makes the docker interactive, can be very useful for debugging 
+- `rm`: the docker will be stopped when the run is over, helps to make sure you don't have running docker you forgot in the background
+- `v`: this flag is used to mount folder, if you want to access some data in your docker or save your output outside of it it's super useful 
+More infos on the `docker run` command [here](https://docs.docker.com/reference/cli/docker/container/run/). 
 
 ### Run with DISPLAY redirection <a id="run_with_display_redirection"></a>
 
