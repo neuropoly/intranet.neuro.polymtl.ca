@@ -27,10 +27,11 @@ Our institutions have a partnership with some publishers to waive the article pr
 
 | Journal                                                                                                                                                 | Publisher | Impact Factor | Open | APC |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------| --------- | ------------- | ---- | --- |
+| [Computerized Medical Imaging & Graphics (CMIG)](https://www.sciencedirect.com/journal/computerized-medical-imaging-and-graphics)                       | Elsevier  | 5.4           |      | Waived |
 | [Journal of Machine Learning Research (JMLR)](https://www.jmlr.org)                                                                                     |           | 4.0           | yes  |     |
+| [IEEE Transactions on Biomedical Engineering (TBME)](https://www.embs.org/tbme/)                                                                        | IEEE      | 4.8           | yes  |     |
 | [Medical Image Analysis](https://www.journals.elsevier.com/medical-image-analysis)                                                                      | Elsevier  | 10.7          |      | Waived |
 | [Comput Biol Med](https://www.sciencedirect.com/journal/computers-in-biology-and-medicine)                                                              | Elsevier  | 7.0           |      |     |
-| [Computerized Medical Imaging & Graphics](https://www.sciencedirect.com/journal/computerized-medical-imaging-and-graphics)                              | Elsevier  | 5.4           |      | Waived |
 | [IEEE Transactions on Image Processing](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=83)                                                    |           | 9.3           |      |     |
 | [IEEE Transactions on Neural Networks and Learning Systems](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5962385)                           |           | 10.4           |      |     |
 | [Signal Processing](https://www.sciencedirect.com/journal/signal-processing)                                                                            |           |  4.4           |      |     |
