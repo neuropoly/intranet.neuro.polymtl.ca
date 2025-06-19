@@ -5,22 +5,16 @@
 docker-for-deep-learning
 ```
 
-## Docker Terminology
+This page serves as a crash-course a common use case; creating a Docker definition, building the corresponding image, and running containers with it. If you would like a working example, you can look at the implementation used by [MS Spine Challenge 2024 Attempt](https://github.com/ivadomed/ms-multi-spine-challenge-2024/tree/main/monomodal-model/docker) 
 
-**Images** - The blueprints of our application which form the basis of containers.
-
-**Containers** - Created from Docker images and run the actual application. A list of running containers can be seen using the docker ps command. **Docker Daemon** - The background service running on the host that manages building, running and distributing Docker containers. The daemon is the process that runs in the operating system to which clients talk to.
-
-**Docker Client** - The command line tool that allows the user to interact with the daemon.
-
-[**Docker Hub**(https://hub.docker.com/)] - A registry of Docker images. You can think of the registry as a directory of all available Docker images. If required, one can host their own Docker registries and can use them for pulling images.
+If you would like further details or specifics, please refer to the [Docker Documentation](https://docs.docker.com/).
 
 ## Using Docker
 
 ### Search for remote image
 
 ```text
-docker search ubuntu  # will search for ubuntu distrib
+docker search ubuntu  # will search for ubuntu distributions
 ```
 
 [List of Ubuntu images](https://hub.docker.com/_/ubuntu)
@@ -102,14 +96,8 @@ RUN git clone https://github.com/neuropoly/spinalcordtoolbox.git sct; \
 ENV PATH "/sct/bin:${PATH}"
 ```
 
-3. Build docker image: \`docker build -t &lt;container\_id&gt; .\`
-4. Run it: \`docker run -it &lt;container\_id&gt;\`
-
-Useful flags when running a docker container can be: 
-- `it`: makes the docker interactive, can be very useful for debugging 
-- `rm`: the docker will be stopped when the run is over, helps to make sure you don't have running docker you forgot in the background
-- `v`: this flag is used to mount folder, if you want to access some data in your docker or save your output outside of it it's super useful 
-More infos on the `docker run` command [here](https://docs.docker.com/reference/cli/docker/container/run/). 
+1. Build docker image: \`docker build -t &lt;container\_id&gt; .\`
+2. Run it: \`docker run -it &lt;container\_id&gt;\`
 
 ### Run with DISPLAY redirection <a id="run_with_display_redirection"></a>
 
