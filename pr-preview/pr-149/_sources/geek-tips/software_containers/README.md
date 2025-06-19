@@ -31,7 +31,7 @@ A number of drawbacks exist, however:
 
 ## Common Containerization Tools:
 
-Tools used in our research group are all OCI complient. They include:
+Tools used in our research group are all OCI compliant. They include:
 
 * [Docker](https://www.docker.com/): Well documented and widely used. Most of NeuroPoly's computing resources support this; however, as it's client is daemon based, it is less secure and not available on many other shared resources.
 * [Podman](https://podman.io/): Lightweight and open source. Follows most of the same standards as Docker, but uses a CLI-based client instead; as such, it is what we tend use at NeuroPoly for our shared computing resources.
