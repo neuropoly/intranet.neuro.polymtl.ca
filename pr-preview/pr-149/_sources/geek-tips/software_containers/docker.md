@@ -5,7 +5,7 @@
 docker-for-deep-learning
 ```
 
-This page serves as a crash-course a common use case; creating a Docker definition, building the corresponding image, and running containers with it. If you would like a working example, you can look at the implementation used by [MS Spine Challenge 2024 Attempt](https://github.com/ivadomed/ms-multi-spine-challenge-2024/tree/main/monomodal-model/docker) 
+This page serves as a crash-course a common use case; creating a Docker definition, building the corresponding image, and running containers with it. If you would like a working example, you can look at the implementation used by [MS Spine Challenge 2024 Attempt](https://github.com/ivadomed/ms-multi-spine-challenge-2024/tree/main/monomodal-model/docker).
 
 If you would like further details or specifics, please refer to the [Docker Documentation](https://docs.docker.com/).
 

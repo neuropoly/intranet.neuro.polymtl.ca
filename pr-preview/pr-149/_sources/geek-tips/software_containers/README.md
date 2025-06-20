@@ -4,6 +4,7 @@
 :hidden:
 :maxdepth: 1
 docker
+apptainer
 ```
 
 ## What are Software Containers?
