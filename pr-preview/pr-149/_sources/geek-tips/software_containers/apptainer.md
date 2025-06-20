@@ -32,13 +32,13 @@ From: /path/to/image/file.sif
 
 You can read more about the available bootstraps and their use [here](https://apptainer.org/docs/user/main/definition_files.html#preferred-bootstrap-agents).
 
-## Sections
+### Sections
 
 These are where you define how the image is built, and how containers generated from it should be run. The order of these sections do not matter, though generally you should place sections related to image generation (i.e. `%arguments` and `%post`) above those related to image use (i.e. `%runscript` and `%test`). 
 
 Below is a summary of the common sections you're likely to need in most definitions; for a full list, see the [Apptainer Sections](https://apptainer.org/docs/user/main/definition_files.html#sections) documentation. 
 
-### `%arguments`
+#### `%arguments`
 
 Here you can define command line arguments which can be provided by the user when building an image. They should be in `key=value` form, with `value` being the default value for the associated variable `key`. You must _always_ provide a default value for each, which will be used if the user does not provide the argument themselves:
 
@@ -52,7 +52,7 @@ Here you can define command line arguments which can be provided by the user whe
 
 You can access these arguments in other sections using `{{ variable }}`, replacing `variable` with the key you specified (i.e. `echo {{ MODEL_VERSION }}`).
 
-### `%post`
+#### `%post`
 
 When an image is built, this script is run before the image is compiled; it is also the **_only time during image construction where you can access the internet!!!_** . As such, this is where you should download any files, install any dependencies, or run any network-dependant scripts/tests. For example:
 
@@ -74,7 +74,7 @@ When an image is built, this script is run before the image is compiled; it is a
 ...
 ```
 
-### `%runscript` and `%startscript` 
+#### `%runscript` and `%startscript` 
 
 Both of these sections define a script which be run when a container is created from an image. By default, they are run with `bash`/`sh` (depending on the BootStrap used); you can specify a different   
 

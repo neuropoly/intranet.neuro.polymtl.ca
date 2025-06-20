@@ -461,12 +461,12 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-definition">Creating the Definition</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#header">Header</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sections">Sections</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#arguments"><code class="docutils literal notranslate"><span class="pre">%arguments</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#post"><code class="docutils literal notranslate"><span class="pre">%post</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#runscript-and-startscript"><code class="docutils literal notranslate"><span class="pre">%runscript</span></code> and <code class="docutils literal notranslate"><span class="pre">%startscript</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sections">Sections</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arguments"><code class="docutils literal notranslate"><span class="pre">%arguments</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post"><code class="docutils literal notranslate"><span class="pre">%post</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#runscript-and-startscript"><code class="docutils literal notranslate"><span class="pre">%runscript</span></code> and <code class="docutils literal notranslate"><span class="pre">%startscript</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-an-image">Building an Image</a></li>
@@ -508,13 +508,12 @@ From:<span class="w"> </span>/path/to/image/file.sif
 </div>
 <p>You can read more about the available bootstraps and their use <a class="reference external" href="https://apptainer.org/docs/user/main/definition_files.html#preferred-bootstrap-agents">here</a>.</p>
 </section>
-</section>
 <section id="sections">
-<h2>Sections<a class="headerlink" href="#sections" title="Link to this heading">#</a></h2>
+<h3>Sections<a class="headerlink" href="#sections" title="Link to this heading">#</a></h3>
 <p>These are where you define how the image is built, and how containers generated from it should be run. The order of these sections do not matter, though generally you should place sections related to image generation (i.e. <code class="docutils literal notranslate"><span class="pre">%arguments</span></code> and <code class="docutils literal notranslate"><span class="pre">%post</span></code>) above those related to image use (i.e. <code class="docutils literal notranslate"><span class="pre">%runscript</span></code> and <code class="docutils literal notranslate"><span class="pre">%test</span></code>).</p>
 <p>Below is a summary of the common sections you’re likely to need in most definitions; for a full list, see the <a class="reference external" href="https://apptainer.org/docs/user/main/definition_files.html#sections">Apptainer Sections</a> documentation.</p>
 <section id="arguments">
-<h3><code class="docutils literal notranslate"><span class="pre">%arguments</span></code><a class="headerlink" href="#arguments" title="Link to this heading">#</a></h3>
+<h4><code class="docutils literal notranslate"><span class="pre">%arguments</span></code><a class="headerlink" href="#arguments" title="Link to this heading">#</a></h4>
 <p>Here you can define command line arguments which can be provided by the user when building an image. They should be in <code class="docutils literal notranslate"><span class="pre">key=value</span></code> form, with <code class="docutils literal notranslate"><span class="pre">value</span></code> being the default value for the associated variable <code class="docutils literal notranslate"><span class="pre">key</span></code>. You must <em>always</em> provide a default value for each, which will be used if the user does not provide the argument themselves:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># nyan.def</span>
 <span class="nn">...</span>
@@ -526,7 +525,7 @@ From:<span class="w"> </span>/path/to/image/file.sif
 <p>You can access these arguments in other sections using <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">variable</span> <span class="pre">}}</span></code>, replacing <code class="docutils literal notranslate"><span class="pre">variable</span></code> with the key you specified (i.e. <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">{{</span> <span class="pre">MODEL_VERSION</span> <span class="pre">}}</span></code>).</p>
 </section>
 <section id="post">
-<h3><code class="docutils literal notranslate"><span class="pre">%post</span></code><a class="headerlink" href="#post" title="Link to this heading">#</a></h3>
+<h4><code class="docutils literal notranslate"><span class="pre">%post</span></code><a class="headerlink" href="#post" title="Link to this heading">#</a></h4>
 <p>When an image is built, this script is run before the image is compiled; it is also the <strong><em>only time during image construction where you can access the internet!!!</em></strong> . As such, this is where you should download any files, install any dependencies, or run any network-dependant scripts/tests. For example:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># nyan.def</span>
 ...
@@ -547,7 +546,7 @@ From:<span class="w"> </span>/path/to/image/file.sif
 </div>
 </section>
 <section id="runscript-and-startscript">
-<h3><code class="docutils literal notranslate"><span class="pre">%runscript</span></code> and <code class="docutils literal notranslate"><span class="pre">%startscript</span></code><a class="headerlink" href="#runscript-and-startscript" title="Link to this heading">#</a></h3>
+<h4><code class="docutils literal notranslate"><span class="pre">%runscript</span></code> and <code class="docutils literal notranslate"><span class="pre">%startscript</span></code><a class="headerlink" href="#runscript-and-startscript" title="Link to this heading">#</a></h4>
 <p>Both of these sections define a script which be run when a container is created from an image. By default, they are run with <code class="docutils literal notranslate"><span class="pre">bash</span></code>/<code class="docutils literal notranslate"><span class="pre">sh</span></code> (depending on the BootStrap used); you can specify a different</p>
 <p>Which of <code class="docutils literal notranslate"><span class="pre">runscript</span></code> or <code class="docutils literal notranslate"><span class="pre">startscript</span></code> is run depends on how the container was created:</p>
 <ul class="simple">
@@ -563,6 +562,7 @@ From:<span class="w"> </span>/path/to/image/file.sif
 ...
 </pre></div>
 </div>
+</section>
 </section>
 </section>
 <section id="building-an-image">
@@ -646,12 +646,12 @@ nyan
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-definition">Creating the Definition</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#header">Header</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sections">Sections</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#arguments"><code class="docutils literal notranslate"><span class="pre">%arguments</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#post"><code class="docutils literal notranslate"><span class="pre">%post</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#runscript-and-startscript"><code class="docutils literal notranslate"><span class="pre">%runscript</span></code> and <code class="docutils literal notranslate"><span class="pre">%startscript</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sections">Sections</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arguments"><code class="docutils literal notranslate"><span class="pre">%arguments</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post"><code class="docutils literal notranslate"><span class="pre">%post</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#runscript-and-startscript"><code class="docutils literal notranslate"><span class="pre">%runscript</span></code> and <code class="docutils literal notranslate"><span class="pre">%startscript</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-an-image">Building an Image</a></li>
