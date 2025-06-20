@@ -135,4 +135,4 @@ nyan
 
 As with any shell, you can terminate the shell's connection with `CTRL + D` and terminate a running process with `CTRL + C`.  In either case, if you replicate the file above, and have nyan'd, you should see something like this appear on your terminal:
 
-<img src="https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2021/02/nyan-cat-1.gif" alt="Pop tart cat running across the screen, from left to right, with a rainbow training behind it. Nyan Cat is 14 years old at time of writing..." width="200"/>
+!["Pop tart cat running across the screen, from left to right, with a rainbow training behind it. Nyan Cat is 14 years old at time of writing..."](../../_media/nyan.png)
