@@ -12,6 +12,7 @@ Should be small letters only.
 Fields:
 - task = {seg, label, find}, default=seg
 - animal = {human, dog, cat, rat, mouse, ...}, default=human
+- type = {invivo, exvivo}, default=invivo
 - pathology = {ms, sci}
 - region = {sc, gm, csf, brainstem, axon, myelin, ...}, default=sc
 - contrast = {t1, t2, t2star, dwi, sem, tem, oi, ...}, default=None
