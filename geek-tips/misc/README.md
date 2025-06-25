@@ -4,7 +4,6 @@
 :hidden:
 virtual-machines/README
 bitbucket
-docker/README
 dropbox
 jekyll
 microsoft-word
