@@ -554,15 +554,9 @@ sudo apt install -y sshfs
 :::
 
 :::{tab-item} mac (Monterey and after)
-Follow [this procedure](https://eengstrom.github.io/musings/install-macfuse-and-sshfs-on-macos-monterey).
+Follow [this procedure](https://www.petergirnus.com/blog/how-to-use-sshfs-on-macos).
 :::
 
-:::{tab-item} mac (Before Monterey)
-```
-brew install --cask osxfuse
-brew install sshfs
-```
-:::
 ::::
 
 Then mount the folder
