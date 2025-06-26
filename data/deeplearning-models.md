@@ -5,22 +5,23 @@
 Each model is saved in its own repository under the [ivadomed](https://github.com/ivadomed) organization. The convention for naming repositories is the following:
 
 ~~~
-model_task_region_animal_pathology_type_contrast_architecture
+model_task_anatomy_animal_pathology_condition_contrast_architecture
 
 Should be small letters only.
 
 Fields:
-- task = {seg, label, find}, default=seg
+- task = {seg, label, find}, default=None
 - anatomy = {sc, gm, csf, brainstem, axon, myelin, ...}, default=sc
 - animal = {human, dog, cat, rat, mouse, ...}, default=human
-- pathology = {ms, sci}
-- type = {invivo, exvivo}, default=invivo
+- pathology = {hc, ms, sci}, default=hc
+- condition = {invivo, exvivo}, default=invivo
 - contrast = {t1, t2, t2star, dwi, sem, tem, oi, ...}, default=None
 - architecture = {unet2d, unet3d, filmCharley, hemisAndreanne}, default=unet2d
 
 Examples: 
 
 model_seg_monkey_sc_t1_unet3d
+model_seg_sc-gm-lesion_human_ms_exvivo_t2star
 
 # multi-channel, multi-class
 model_seg_sc-gm_t1-t2_unet3d
