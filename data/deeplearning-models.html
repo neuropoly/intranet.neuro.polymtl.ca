@@ -473,22 +473,23 @@ document.write(`
 <section id="naming-models">
 <h2>Naming models<a class="headerlink" href="#naming-models" title="Link to this heading">#</a></h2>
 <p>Each model is saved in its own repository under the <a class="reference external" href="https://github.com/ivadomed">ivadomed</a> organization. The convention for naming repositories is the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model_task_region_animal_pathology_type_contrast_architecture</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model_task_anatomy_animal_pathology_condition_contrast_architecture</span>
 
 <span class="n">Should</span> <span class="n">be</span> <span class="n">small</span> <span class="n">letters</span> <span class="n">only</span><span class="o">.</span>
 
 <span class="n">Fields</span><span class="p">:</span>
-<span class="o">-</span> <span class="n">task</span> <span class="o">=</span> <span class="p">{</span><span class="n">seg</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">find</span><span class="p">},</span> <span class="n">default</span><span class="o">=</span><span class="n">seg</span>
+<span class="o">-</span> <span class="n">task</span> <span class="o">=</span> <span class="p">{</span><span class="n">seg</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">find</span><span class="p">},</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span>
 <span class="o">-</span> <span class="n">anatomy</span> <span class="o">=</span> <span class="p">{</span><span class="n">sc</span><span class="p">,</span> <span class="n">gm</span><span class="p">,</span> <span class="n">csf</span><span class="p">,</span> <span class="n">brainstem</span><span class="p">,</span> <span class="n">axon</span><span class="p">,</span> <span class="n">myelin</span><span class="p">,</span> <span class="o">...</span><span class="p">},</span> <span class="n">default</span><span class="o">=</span><span class="n">sc</span>
 <span class="o">-</span> <span class="n">animal</span> <span class="o">=</span> <span class="p">{</span><span class="n">human</span><span class="p">,</span> <span class="n">dog</span><span class="p">,</span> <span class="n">cat</span><span class="p">,</span> <span class="n">rat</span><span class="p">,</span> <span class="n">mouse</span><span class="p">,</span> <span class="o">...</span><span class="p">},</span> <span class="n">default</span><span class="o">=</span><span class="n">human</span>
-<span class="o">-</span> <span class="n">pathology</span> <span class="o">=</span> <span class="p">{</span><span class="n">ms</span><span class="p">,</span> <span class="n">sci</span><span class="p">}</span>
-<span class="o">-</span> <span class="nb">type</span> <span class="o">=</span> <span class="p">{</span><span class="n">invivo</span><span class="p">,</span> <span class="n">exvivo</span><span class="p">},</span> <span class="n">default</span><span class="o">=</span><span class="n">invivo</span>
+<span class="o">-</span> <span class="n">pathology</span> <span class="o">=</span> <span class="p">{</span><span class="n">hc</span><span class="p">,</span> <span class="n">ms</span><span class="p">,</span> <span class="n">sci</span><span class="p">},</span> <span class="n">default</span><span class="o">=</span><span class="n">hc</span>
+<span class="o">-</span> <span class="n">condition</span> <span class="o">=</span> <span class="p">{</span><span class="n">invivo</span><span class="p">,</span> <span class="n">exvivo</span><span class="p">},</span> <span class="n">default</span><span class="o">=</span><span class="n">invivo</span>
 <span class="o">-</span> <span class="n">contrast</span> <span class="o">=</span> <span class="p">{</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">t2star</span><span class="p">,</span> <span class="n">dwi</span><span class="p">,</span> <span class="n">sem</span><span class="p">,</span> <span class="n">tem</span><span class="p">,</span> <span class="n">oi</span><span class="p">,</span> <span class="o">...</span><span class="p">},</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span>
 <span class="o">-</span> <span class="n">architecture</span> <span class="o">=</span> <span class="p">{</span><span class="n">unet2d</span><span class="p">,</span> <span class="n">unet3d</span><span class="p">,</span> <span class="n">filmCharley</span><span class="p">,</span> <span class="n">hemisAndreanne</span><span class="p">},</span> <span class="n">default</span><span class="o">=</span><span class="n">unet2d</span>
 
 <span class="n">Examples</span><span class="p">:</span> 
 
 <span class="n">model_seg_monkey_sc_t1_unet3d</span>
+<span class="n">model_seg_sc</span><span class="o">-</span><span class="n">gm</span><span class="o">-</span><span class="n">lesion_human_ms_exvivo_t2star</span>
 
 <span class="c1"># multi-channel, multi-class</span>
 <span class="n">model_seg_sc</span><span class="o">-</span><span class="n">gm_t1</span><span class="o">-</span><span class="n">t2_unet3d</span>
