@@ -11,7 +11,7 @@ Should be small letters only.
 
 Fields:
 - task = {seg, label, find}, default=seg
-- region = {sc, gm, csf, brainstem, axon, myelin, ...}, default=sc
+- anatomy = {sc, gm, csf, brainstem, axon, myelin, ...}, default=sc
 - animal = {human, dog, cat, rat, mouse, ...}, default=human
 - pathology = {ms, sci}
 - type = {invivo, exvivo}, default=invivo
