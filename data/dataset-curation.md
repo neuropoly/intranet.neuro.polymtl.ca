@@ -18,23 +18,32 @@ Once the data are converted to BIDS and [uploaded](git-datasets.md#upload) to gi
 
 Accurately naming our datasets is essential for effective data management and eliminating any ambiguity about their content. This practice significantly reduces the time required to select data for any project.
 
-Convention --> **{animal}-{pathology}-{anatomy}-{study/site}-{field strength}-{contrast/modality}**
+**Syntax:**
+~~~
+animal-pathology-condition-anatomy-study-field-modality
+~~~
 
-### Fields
-> ⚠️ When it is default, don't mention it.
+**Keys/Values:**
+~~~
+- animal = {human, dog, cat, rat, mouse, ...}. Default=human
+- pathology = {hc, ms, sci}. Default=hc
+- condition = {invivo, exvivo}. Default=invivo
+- anatomy = {sc, gm, csf, brainstem, axon, myelin, ...}. Default=sc
+- study = Study/site associated with the dataset. Example: canproco, zurich, mni. Default=None
+- field = {3t, 7t}. Do not specify if multiple strengths are present Default = 3t.
+- modality = {t1, t2, t2star, dwi, psir, stir, sem, tem, oi, ct, ...}. Do not specify if multiple contrasts/modalities are present. Default=None
+~~~
 
-| Field | Keys | Default | Note |
-| :---: | :---: | :---: | :---:|
-| animal | human, dog, cat, rat, mouse, ... | human | |
-| pathology | hc (healthy control), ms (multiple sclerosis), dcm (degenerative cervical myelopathy), nrc (nerve root compression), tumor, ... | None | |
-| anatomy | brain, brainstem, cervical, lumbar, foot, ... | None | If brain and brainstem and cervical, do not mention this |
-| study/site | canproco, leipzig, ... | None | Study associated with the dataset |
-| field strength | 3t, 7t, ... | 3t | Do not specify if multiple strengths are present |
-| contrast/modality | t1, t2, t2star, dwi, psir, stir, sem, tem, oi, ct, ... | None | Do not specify if multiple contrasts/modalities are present |
+> [!NOTE]  
+> Default fields can be ommited to avoid long names.
 
-Examples:
-- ms-basel-mp2rage
-- hc-spinegeneric
+**Examples:**
+~~~
+ms-basel-mp2rage
+hc-spinegeneric
+ms-exvivo-nih
+~~~
+
 
 ## Building the `raw` dataset
 
