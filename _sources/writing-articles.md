@@ -206,7 +206,7 @@ For projects involving SEM, please add:
 
 If using the GPU on Bireli, add:
 
-> NVIDIA Corporation for the donation of a Titan X GPU
+> NVIDIA Corporation for the donation of GPUs.
 
 For those with the **Polytechnique MEDITIS** fellowship and other fellowships, please don't forget to mention them.
 
