@@ -4,6 +4,7 @@
 
 ```{important}
 Our institutions have a partnership with some publishers to waive the article processing charges (APC) for some journal. This notably concerns hybrid journals at Elsevier and Wiley. See full list [here](https://www.crkn-rcdr.ca/fr/publication-en-libre-acc%C3%A8s).
+In particular if you want to publish with Elsevier and are looking for an appropriate journal you can use their [journal finder](https://journalfinder.elsevier.com/). 
 ```
 
 (*) the impact factor is not up to date, but is just given as a 'ballpark' for ranking journal.
