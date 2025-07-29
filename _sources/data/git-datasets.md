@@ -179,7 +179,7 @@ If you want to modify a dataset, you should make a pull request, which can then 
    ```sh
    bids-validator .
    ```
-8. On the web interface <https://data.neuro.polymtl.ca/>, open a pull request:
+7. On the web interface <https://data.neuro.polymtl.ca/>, open a pull request:
    1. Go the the repository's page.
    2. Click on the "Pull Requests" tab.
    3. Click the "New Pull Request" button.
@@ -188,6 +188,7 @@ If you want to modify a dataset, you should make a pull request, which can then 
    6. Click the "New Pull Request" button that appeared below.
    7. Enter a title and a description of your changes, along with any relevant context, in the text boxes that appeared.
    8. Click "Create Pull Request".
+   9. Once the pull request has been reviewed (or if you have admin powers), select "Create merge commit" to finish.
 
 ## Getting help
 
