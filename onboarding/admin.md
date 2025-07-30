@@ -7,4 +7,4 @@ description: >-
 
 This section is dedicated to administrators of NeuroPoly.
 
-- [Password management (pass)](https://github.com/neuropoly/computers/blob/master/docs/pass.md)
+- [Password management (pass)](https://github.com/neuropoly/computers/wiki/Password-management-(%60pass%60))
