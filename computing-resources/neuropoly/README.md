@@ -214,16 +214,23 @@ For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.
 
 When working remotely from off-campus you need to use the [VPN](http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn).
 
-To connect to the VPN, you need to have an account with École Polytechnique, specifically with [CAS](https://cas5.polymtl.ca/cas/login). **Students** should already have this. **Consultants** and **Research Associates** will need to have an account created for them. This should have happened during your onboarding.
+To connect to the VPN, you must have an account with École Polytechnique, specifically with [CAS](https://cas5.polymtl.ca/cas/login). **Students** should already have this. **Consultants**, **Research Professionals**, and sometimes **Interns** will need to have an account created for them. This should have happened during your onboarding.
 
 You can change your CAS password at [Gestion des Codes](https://codes.si.polymtl.ca/gestion/).
 
 The VPN uses the `Cisco AnyConnect` protocol, and to use it, you must first install a compatible VPN client.
 
 ```{important}
-Depending on your status at Polytechnique, you will be assigned to a different VPN group. Your assigned group will determine how authentication will work for you, as well as which VPN clients will be compatible with your needs.
+Depending on your status at Polytechnique, you will be assigned to a different VPN group. Your assigned group will determine how authentication will work for you, as well as which VPN clients will be compatible.
 
 Instructions for different user scenarios are provided below.
+```
+
+```{note}
+For the purposes of this documentation, the most reliable indicator of official Polytechnique status is the type of matricule (ID number) one is assigned:
+- **Staff** will have a `pMatricule` (an ID number preceded by a `p`).
+- **Consultants** and [certain others](#other-members) will have a `uMatricule` (an ID number preceded by a `u`).
+- **Students** typically have an ID number _without_ any letters at the start.
 ```
 
 ```{note}
@@ -340,7 +347,7 @@ In case the above links ever break, the steps are:
 
 ### Polytechnique Staff
 
-Polytechnique staff (including **Professors**, **Research Associates**, and **Postdoctoral Researchers**) are assigned to the `PolyQuartz` group.
+Polytechnique staff (including **Professors**, **Research Associates**, **Postdoctoral Researchers**, and sometimes **Interns**) are those with a `pMatricule`. Polytechnique members with a `pMatricule` are assigned to the `PolyQuartz` group.
 
 The `PolyQuartz` group relies on an authentication flow that makes use of your `Okta` account. The authentication flow is _not natively supported by the `openconnect` client_.
 
@@ -470,7 +477,7 @@ The official Polytechnique instructions for configuring the `Cisco AnyConnect` c
 
 ### Other Members
 
-If you are an **Intern**, a **Consultant**, or are otherwise considered an **"Invité"** by Polytechnique, this section applies to you. Users in your category are **not** granted VPN access by default. A specific request must be submitted to [DGE IT](mailto:dge.informatique@polymtl.ca) to give you VPN access. (Normally, someone on the admin team should help you with this during your onboarding).
+This section applies to users who have been assigned a `uMatricule`. Typically, this means **Consultants**, some **Interns**, and anyone else considered an **"Invité"** by Polytechnique. Users in this category are **not** granted VPN access by default. A specific request must be submitted to [DGE IT](mailto:dge.informatique@polymtl.ca) to give you VPN access. (Normally, someone on the admin team should help you with this during your onboarding).
 
 Once you are approved for VPN access, DGE IT will provide personalized instructions for your specific use case. Most likely, you will be be added to the `PolyPhoton` group. Like `PolyQuartz`, this group uses `Okta` for authentication.
 
