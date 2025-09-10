@@ -228,9 +228,9 @@ Instructions for different user scenarios are provided below.
 
 ```{note}
 For the purposes of this documentation, the most reliable indicator of official Polytechnique status is the type of matricule (ID number) one is assigned:
-- **Staff** will have a `pMatricule` (an ID number preceded by a `p`).
+- **[Students](#students)** typically have an ID number _without_ any letters at the start.
+- **[Staff](#polytechnique-staff)** will have a `pMatricule` (an ID number preceded by a `p`).
 - **Consultants** and [certain others](#other-members) will have a `uMatricule` (an ID number preceded by a `u`).
-- **Students** typically have an ID number _without_ any letters at the start.
 ```
 
 ```{note}
