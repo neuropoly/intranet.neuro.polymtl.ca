@@ -941,13 +941,22 @@ document.write(`
 <section id="vpn">
 <h2>VPN<a class="headerlink" href="#vpn" title="Link to this heading">#</a></h2>
 <p>When working remotely from off-campus you need to use the <a class="reference external" href="http://www.polymtl.ca/si/reseaux/acces-securise-rvp-ou-vpn">VPN</a>.</p>
-<p>To connect to the VPN, you need to have an account with École Polytechnique, specifically with <a class="reference external" href="https://cas5.polymtl.ca/cas/login">CAS</a>. <strong>Students</strong> should already have this. <strong>Consultants</strong> and <strong>Research Associates</strong> will need to have an account created for them. This should have happened during your onboarding.</p>
+<p>To connect to the VPN, you must have an account with École Polytechnique, specifically with <a class="reference external" href="https://cas5.polymtl.ca/cas/login">CAS</a>. <strong>Students</strong> should already have this. <strong>Consultants</strong>, <strong>Research Professionals</strong>, and sometimes <strong>Interns</strong> will need to have an account created for them. This should have happened during your onboarding.</p>
 <p>You can change your CAS password at <a class="reference external" href="https://codes.si.polymtl.ca/gestion/">Gestion des Codes</a>.</p>
 <p>The VPN uses the <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">AnyConnect</span></code> protocol, and to use it, you must first install a compatible VPN client.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Depending on your status at Polytechnique, you will be assigned to a different VPN group. Your assigned group will determine how authentication will work for you, as well as which VPN clients will be compatible with your needs.</p>
+<p>Depending on your status at Polytechnique, you will be assigned to a different VPN group. Your assigned group will determine how authentication will work for you, as well as which VPN clients will be compatible.</p>
 <p>Instructions for different user scenarios are provided below.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For the purposes of this documentation, the most reliable indicator of official Polytechnique status is the type of matricule (ID number) one is assigned:</p>
+<ul class="simple">
+<li><p><strong><a class="reference internal" href="#students">Students</a></strong> typically have an ID number <em>without</em> any letters at the start.</p></li>
+<li><p><strong><a class="reference internal" href="#polytechnique-staff">Staff</a></strong> will have a <code class="docutils literal notranslate"><span class="pre">pMatricule</span></code> (an ID number preceded by a <code class="docutils literal notranslate"><span class="pre">p</span></code>).</p></li>
+<li><p><strong>Consultants</strong> and <a class="reference internal" href="#other-members">certain others</a> will have a <code class="docutils literal notranslate"><span class="pre">uMatricule</span></code> (an ID number preceded by a <code class="docutils literal notranslate"><span class="pre">u</span></code>).</p></li>
+</ul>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1064,7 +1073,7 @@ Windows</label><div class="sd-tab-content docutils">
 </section>
 <section id="polytechnique-staff">
 <h3>Polytechnique Staff<a class="headerlink" href="#polytechnique-staff" title="Link to this heading">#</a></h3>
-<p>Polytechnique staff (including <strong>Professors</strong>, <strong>Research Associates</strong>, and <strong>Postdoctoral Researchers</strong>) are assigned to the <code class="docutils literal notranslate"><span class="pre">PolyQuartz</span></code> group.</p>
+<p>Polytechnique staff (including <strong>Professors</strong>, <strong>Research Associates</strong>, <strong>Postdoctoral Researchers</strong>, and sometimes <strong>Interns</strong>) are those with a <code class="docutils literal notranslate"><span class="pre">pMatricule</span></code>. Polytechnique members with a <code class="docutils literal notranslate"><span class="pre">pMatricule</span></code> are assigned to the <code class="docutils literal notranslate"><span class="pre">PolyQuartz</span></code> group.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">PolyQuartz</span></code> group relies on an authentication flow that makes use of your <code class="docutils literal notranslate"><span class="pre">Okta</span></code> account. The authentication flow is <em>not natively supported by the <code class="docutils literal notranslate"><span class="pre">openconnect</span></code> client</em>.</p>
 <p>Users wishing to avoid installing the officially provisioned <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">AnyConnect</span></code> client can consider several known workarounds.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">macOS</span></code> users can use a workaround involving the <code class="docutils literal notranslate"><span class="pre">openconnect</span></code> client and manual cookie extraction.</p>
@@ -1185,7 +1194,7 @@ Official instructions</label><div class="sd-tab-content docutils">
 </section>
 <section id="other-members">
 <h3>Other Members<a class="headerlink" href="#other-members" title="Link to this heading">#</a></h3>
-<p>If you are an <strong>Intern</strong>, a <strong>Consultant</strong>, or are otherwise considered an <strong>“Invité”</strong> by Polytechnique, this section applies to you. Users in your category are <strong>not</strong> granted VPN access by default. A specific request must be submitted to <a class="reference external" href="mailto:dge&#46;informatique&#37;&#52;&#48;polymtl&#46;ca">DGE IT</a> to give you VPN access. (Normally, someone on the admin team should help you with this during your onboarding).</p>
+<p>This section applies to users who have been assigned a <code class="docutils literal notranslate"><span class="pre">uMatricule</span></code>. Typically, this means <strong>Consultants</strong>, some <strong>Interns</strong>, and anyone else considered an <strong>“Invité”</strong> by Polytechnique. Users in this category are <strong>not</strong> granted VPN access by default. A specific request must be submitted to <a class="reference external" href="mailto:dge&#46;informatique&#37;&#52;&#48;polymtl&#46;ca">DGE IT</a> to give you VPN access. (Normally, someone on the admin team should help you with this during your onboarding).</p>
 <p>Once you are approved for VPN access, DGE IT will provide personalized instructions for your specific use case. Most likely, you will be be added to the <code class="docutils literal notranslate"><span class="pre">PolyPhoton</span></code> group. Like <code class="docutils literal notranslate"><span class="pre">PolyQuartz</span></code>, this group uses <code class="docutils literal notranslate"><span class="pre">Okta</span></code> for authentication.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
