@@ -1,0 +1,799 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="auto">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Advanced Normalization Tools (ANTs) &#8212; NeuroPoly Internal Wiki  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "auto";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "auto";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=9a9c6050" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=c607423c"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/image-processing-software/advanced-normalization-tools-ants';</script>
+    <link rel="icon" href="../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Anima" href="anima.html" />
+    <link rel="prev" title="Image Processing Software" href="README.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="auto">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../README.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../_static/logo_dark.png" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">NeuroPoly Lab Manual</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><!-- GTranslate: https://gtranslate.io/ -->
+<div class="center-g-translate">
+    <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl" style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png" height="24" width="24" alt="English" /></a><a href="#" onclick="doGTranslate('en|fr');return false;" title="French" class="gflag nturl" style="background-position:-200px -100px;"><img src="//gtranslate.net/flags/blank.png" height="24" width="24" alt="French" /></a>
+
+    <style type="text/css">
+        <!--
+        a.gflag {vertical-align:middle;font-size:24px;padding:1px 0;background-repeat:no-repeat;background-image:url(//gtranslate.net/flags/24.png);}
+        a.gflag img {border:0;}
+        a.gflag:hover {background-image:url(//gtranslate.net/flags/24a.png);}
+        #goog-gt-tt {display:none !important;}
+        .goog-te-banner-frame {display:none !important;}
+        .goog-te-menu-value:hover {text-decoration:none !important;}
+        body {top:0 !important;}
+        #google_translate_element2 {display:none!important;}
+        -->
+    </style>
+
+    <div id="google_translate_element2"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'en',autoDisplay: false}, 'google_translate_element2');}
+    </script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
+        /* ]]> */
+    </script>
+</div></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../onboarding/README.html"><span>👋</span> Onboarding</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/getting-started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/campus-access.html">Campus Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/infrastructure.html">Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/dropbox-google-drive.html">Google Drive</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../onboarding/computer-setup/README.html">Computer Setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../onboarding/computer-setup/mail.html"><span>📧</span> Email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../onboarding/computer-setup/slack.html"><span>🗣</span> Slack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../onboarding/computer-setup/eduroam.html"><span>📶</span> Eduroam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../onboarding/computer-setup/shell-profile.html"><span>💻</span> Shell Profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../onboarding/computer-setup/configuration-tips.html"><span>💡</span> Other configuration tips</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/software-development.html">Software development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/students-interns.html">Students and Interns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/consultants-ra.html">Consultants and RA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/postdoc.html">Postdoctoral fellows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../onboarding/admin.html">Administrators</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../agenda-and-calendar.html"><span>📅</span> Calendar &amp; Meetings</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../computing-resources/README.html"><span>🖥</span> Computing Resources</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../computing-resources/neuropoly/README.html"><span>🖥</span> Computers @NeuroPoly</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../computing-resources/neuropoly/cpus.html">CPU Clusters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../computing-resources/neuropoly/gpus.html">GPU Clusters</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../computing-resources/clusters-at-criugm.html"><span>🖥</span> Computers @CRIUGM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../computing-resources/compute-canada.html"><span>🖥</span> Compute Canada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../computing-resources/printer.html"><span>🖨</span> Printer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../computing-resources/microsoft365.html"><span>☁️</span> Microsoft 365</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../computing-resources/youtube.html">YouTube Procedure</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../data/README.html"><span>💾</span> Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../data/dataset-curation.html">Dataset curation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data/git-datasets.html"><code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data/duke.html"><code class="docutils literal notranslate"><span class="pre">duke</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data/admin-guide.html">Dataset admin guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../data/deeplearning-models.html">Deep Learning Models</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../mri-scanning/README.html"><span>🧲</span> MRI Scanning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../mri-scanning/unf-3t-prisma.html">UNF (3T Prisma)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mri-scanning/mni-mcgill-7t-terra.html">MNI/McGill (7T Terra)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mri-scanning/mhi-7t-agilent.html">MHI (7T Agilent)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../mri-scanning/concordia-ge.html">Concordia (3T GE)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../rf-lab/README.html"><span>🔧</span> RF Lab</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/mri-coils-at-neuropoly.html">NeuroPoly Coils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/misc.html">Misc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/mri-phantoms.html">Phantoms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/3d-printing/README.html">3D Printing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/3d-printing/octoprint.html">OctoPrint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/pcb-manufacturing.html">PCB Manufacturing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rf-lab/cnc-machine.html">CNC machine</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Academic Life</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../courses.html"><span>🎓</span> University Courses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../comprehensive-exam-guide.html"><span>📖</span> Comprehensive Exam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scholarships.html"><span>💰</span> Scholarships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../conferences.html"><span>✈️</span> Conferences</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../bibliography/README.html"><span>📚</span> Bibliography</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/lab-theses.html">Theses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/spinal-cord-injury.html">Spinal Cord Injury</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/mri.html">MRI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/mri-analysis.html">MRI Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/deep-learning.html">Deep Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/histology.html">Histology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bibliography/shared-paperpile-folder.html">Paperpile Folder</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ideas-for-cool-projects.html"><span>💡</span> Ideas for Cool Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing-articles.html"><span>✍️</span>     Academic Writing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../practical-information/README.html"><span>📎</span> Practical Information</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../practical-information/visa.html"><span>🌎</span> VISAs and Work Permits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../practical-information/medical.html"><span>🏥</span> Medical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../practical-information/living-in-montreal.html"><span>🇨🇦</span> Living in Montreal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../practical-information/purchasing-hardware-and-lab-supplies.html"><span>🛠</span> Purchasing Supplies</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../README.html"><span>🤓</span> Geek tips</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../useful-links.html">Useful links/Software</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../bash-shell/README.html">Bash/Shell</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bash-shell/script.html">Script</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../programming-languages/README.html">Programming Languages</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../programming-languages/python.html">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../programming-languages/matlab.html">MATLAB</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../programming-languages/c%2B%2B/README.html">C++</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../programming-languages/c%2B%2B/installation-of-vtk-and-itk-on-mac-os-x.html">Installation of VTK and ITK on Mac OS X</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../programming-languages/c%2B%2B/using-xcode.html">Using XCode</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../git.html">Git &amp; Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git-annex.html">git-annex</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../os-guides/README.html">OS Guides</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../os-guides/linux.html">Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../os-guides/macosx.html">MacOSX</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../misc/README.html">Various Software &amp; Tools</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../misc/virtual-machines/README.html">Virtual Machines</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../misc/virtual-machines/virtualbox.html">VirtualBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../misc/virtual-machines/vagrant.html">Vagrant</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/bitbucket.html">BitBucket</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../misc/docker/README.html">Docker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../misc/docker/docker-for-deep-learning.html">Docker for Deep Learning</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/dropbox.html">Dropbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/jekyll.html">Jekyll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/microsoft-word.html">Microsoft Word</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/openneuro.html">OpenNeuro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/sketchup.html">Sketchup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../misc/xquartz.html">XQuartz</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="README.html">Image Processing Software</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Advanced Normalization Tools (ANTs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="anima.html">Anima</a></li>
+<li class="toctree-l3"><a class="reference internal" href="diffusion-simulator.html">Diffusion Simulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="freesurfer.html">FreeSurfer</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="fsl/README.html">FSL</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="fsl/fsleyes.html">FSLeyes</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="itk-snap.html">ITK-SNAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nifti.html">NIfTI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openneuro-cli.html">OpenNeuro CLI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osirix.html">OsiriX</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../deep-learning/README.html">Deep Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/cuda.html">CUDA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/conditional-random-fields-crf.html">Conditional Random Fields (CRF)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/restricted-boltzmann-machines.html">Restricted Boltzmann Machines (RBM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/misc.html">Misc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../deep-learning/WandB.html">WandB</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../edi.html"><span>🧩</span> EDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html"><span>📞</span> Contact</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://neuro.polymtl.ca">NeuroPoly Website</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/image-processing-software/advanced-normalization-tools-ants.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button"
+   title="Suggest edit"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+
+</a>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Advanced Normalization Tools (ANTs)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Page Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters-for-antsregistration">Parameters for antsRegistration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transform">transform</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metric">metric</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#smoothing-sigmas">smoothing-sigmas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence">convergence</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-warping-field">Visualizing Warping Field</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#translation">Translation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#restrict-gradient-deformation">Restrict Gradient Deformation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#point-set-expectation-pse">Point-Set Expectation (PSE)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example"><strong>Example</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#affine-only-point-match-transformation">Affine-only point-match transformation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-affine-point-match-transformation">Non-affine point-match transformation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#itk-transform-file">ITK Transform File</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="advanced-normalization-tools-ants">
+<h1>Advanced Normalization Tools (ANTs)<a class="headerlink" href="#advanced-normalization-tools-ants" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><p><a class="reference external" href="http://stnava.github.io/ANTs/">ANTs</a> extracts information from complex datasets that include imaging (<a class="reference external" href="http://brianavants.files.wordpress.com/2013/05/avants_wordcloud.jpg">Word Cloud</a>). Paired with <a class="reference external" href="http://stnava.github.io/software/2014/01/08/antsr/">ANTsR</a> (answer), ANTs is useful for managing, interpreting and visualizing multidimensional data. ANTs is <a class="reference external" href="https://sourceforge.net/projects/advants/files/ANTS/stats/timeline?dates=2010-07-19+to+2099-05-25">popularly</a> considered a state-of-the-art medical image registration and segmentation toolkit. ANTsR is an emerging tool supporting standardized multimodality image analysis. ANTs depends on the Insight ToolKit <a class="reference external" href="http://www.itk.org">(ITK)</a>, a widely used medical image processing library to which ANTs developers contribute. A summary of some ANTs findings and tutorial material (most of which is on this page) is <a class="reference external" href="http://rpubs.com/stnava/ANTsTut">here</a>.</p>
+<p>~ <em>Source: <em><a class="reference external" href="http://stnava.github.io/ANTs/"><em>ANTs</em></a></em> webpage</em></p>
+</div></blockquote>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="http://brianavants.wordpress.com">http://brianavants.wordpress.com/</a></p>
+<p>Once you’ve compiled the binaries, you can copy the <code class="docutils literal notranslate"><span class="pre">bin</span></code> folder and the <code class="docutils literal notranslate"><span class="pre">lib</span></code> folder here: <code class="docutils literal notranslate"><span class="pre">/usr/local/ants/</span></code>.</p>
+<p>In case you have previously installed ANTs binaries into <code class="docutils literal notranslate"><span class="pre">/usr/bin</span></code> and you would like to remove them without manually do each for each file, <a class="reference external" href="https://www.neuro.polymtl.ca/_media/tips_and_tricks/remove_ants_files.py">here</a> is a python script that does it.</p>
+<p>To copy ants binaries for SCT, go to your antsbin folder. Then, copy the <code class="docutils literal notranslate"><span class="pre">build_ants_sct.sh</span></code> script found in <code class="docutils literal notranslate"><span class="pre">SCT_DIR/bin/osx</span></code> or linux and then execute it.</p>
+</section>
+<section id="parameters-for-antsregistration">
+<h2>Parameters for antsRegistration<a class="headerlink" href="#parameters-for-antsregistration" title="Link to this heading">#</a></h2>
+<section id="transform">
+<h3>transform<a class="headerlink" href="#transform" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">-transform</span> <span class="pre">SyN[gradientStep,</span> <span class="pre">updateFieldVarianceInVoxelSpace,</span> <span class="pre">totalFieldVarianceInVoxelSpace]</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">gradientStep</span></code>: the higher, the more high frequency deformations (and less stable)</p>
+<p><code class="docutils literal notranslate"><span class="pre">updateFieldVarianceInVoxelSpace</span></code> (default=3) –&gt; the higher, the less high frequency deformations.</p>
+<p><code class="docutils literal notranslate"><span class="pre">totalFieldVarianceInVoxelSpace</span></code>: default=0.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">Exponential</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>does not seem to move a lot</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">BSplineSyN</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">gradientStep</span></code>: 0.5 –&gt; the smaller, the smaller the distortion</p>
+<p><code class="docutils literal notranslate"><span class="pre">updateFieldMeshSizeAtBaseLevel</span></code>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">totalFieldMeshSizeAtBaseLevel</span></code>: The larger, the larger the deform.</p>
+<p><code class="docutils literal notranslate"><span class="pre">splineOrder</span></code>=3</p>
+</section>
+<section id="metric">
+<h3>metric<a class="headerlink" href="#metric" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">-metric</span> <span class="pre">CC[x,</span> <span class="pre">x,</span> <span class="pre">weight,</span> <span class="pre">radius]</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">weight</span></code>: 1. This param has no influence if there is only one transform.</p>
+<p><code class="docutils literal notranslate"><span class="pre">radius</span></code>: 4</p>
+<p>CC is much slower than MI on large images.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">MI</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">weight</span><span class="p">,</span><span class="n">nbBins</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">nbBins</span></code>: 32</p>
+<ul class="simple">
+<li><p>fast! however, does not work if using small mask (not enough values).</p></li>
+</ul>
+</section>
+<section id="smoothing-sigmas">
+<h3>smoothing-sigmas<a class="headerlink" href="#smoothing-sigmas" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">-smoothing-sigmas</span></code></p>
+<ul class="simple">
+<li><p>Can have a HUGE impact on the result. Don’t hesitate to try without smoothing, i.e., 0x0 (if you have 2 iterations).</p></li>
+</ul>
+</section>
+<section id="convergence">
+<h3>convergence<a class="headerlink" href="#convergence" title="Link to this heading">#</a></h3>
+<p>-convergence 20×3 –shrink-factors 2×1 –smoothing-sigmas 1x1mm –Restrict-Deformation 1x1x0 –output [tmp_reg,tmp.src_pad_reg.nii] –collapse-output-transforms 1 –interpolation BSpline[3] –winsorize-image-intensities [0.005,0.995]</p>
+</section>
+</section>
+<section id="visualizing-warping-field">
+<h2>Visualizing Warping Field<a class="headerlink" href="#visualizing-warping-field" title="Link to this heading">#</a></h2>
+<p>ANTs saves the warping field as a component image (5D), not in vector format (4D). Therefore, it cannot be interpreted by FSL. To convert the warping field in component, you can use c3d:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c3d<span class="w"> </span>-mcs<span class="w"> </span>warp_comp.nii<span class="w"> </span>-oo<span class="w"> </span>warp_vecx.nii<span class="w"> </span>warp_vecy.nii<span class="w"> </span>warp_vecz.nii
+</pre></div>
+</div>
+<p>To convert vector-based warping field into component image readable by ANTS, use the following command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>c3d<span class="w"> </span>warp_vecx.nii<span class="w"> </span>warp_vecy.nii<span class="w"> </span>warp_vecz.nii<span class="w"> </span>-omc<span class="w"> </span><span class="m">3</span><span class="w"> </span>warp_comp.nii
+</pre></div>
+</div>
+</section>
+<section id="translation">
+<h2>Translation<a class="headerlink" href="#translation" title="Link to this heading">#</a></h2>
+<p>-t Translation[GradientStep]</p>
+<p><strong>Example:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>antsRegistration<span class="w"> </span>-d<span class="w"> </span><span class="nv">$ImageDimension</span><span class="w"> </span>-r<span class="w"> </span><span class="o">[</span><span class="si">${</span><span class="nv">FILE_DEST</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span>,<span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span><span class="w"> </span>,1<span class="o">]</span><span class="w"> </span>-m<span class="w"> </span><span class="si">${</span><span class="nv">MetricType</span><span class="si">}</span>
+<span class="si">${</span><span class="nv">FILE_DEST</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span>,<span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span>,1,4<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span><span class="nv">$OutPrefix</span><span class="w"> </span>-t<span class="w"> </span>Translation<span class="w"> </span>-c<span class="w"> </span><span class="o">[</span>10000x10000x10000,1.e-8,20<span class="o">]</span><span class="w"> </span>-s<span class="w"> </span>4x2x1vox<span class="w"> </span>-f<span class="w"> </span>3x2x1
+</pre></div>
+</div>
+</section>
+<section id="restrict-gradient-deformation">
+<h2>Restrict Gradient Deformation<a class="headerlink" href="#restrict-gradient-deformation" title="Link to this heading">#</a></h2>
+<p>–Restrict-Deformation XxYxZ</p>
+<p><strong>Example: restrict the gradient in two dimensions (axial)</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ants<span class="w"> </span><span class="nv">$ImageDimension</span><span class="w"> </span>-m<span class="w"> </span><span class="si">${</span><span class="nv">MetricType</span><span class="si">}</span><span class="o">[</span><span class="si">${</span><span class="nv">FILE_DEST</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT_ANAT</span><span class="si">}</span>,<span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span>,1,4<span class="o">]</span><span class="w"> </span>--Restrict-Deformation<span class="w"> </span>1x1x0<span class="w"> </span>-t<span class="w"> </span>SyN<span class="w"> </span>-r<span class="w"> </span>Gauss<span class="o">[</span><span class="m">6</span>,3<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span><span class="si">${</span><span class="nv">PATH_OUTPUT</span><span class="si">}</span>/<span class="w"> </span>-i<span class="w"> </span><span class="si">${</span><span class="nv">MaxIteration</span><span class="si">}</span>
+</pre></div>
+</div>
+<p>Note: this restriction <strong>does not</strong> apply to the affine transformation</p>
+</section>
+<section id="point-set-expectation-pse">
+<h2>Point-Set Expectation (PSE)<a class="headerlink" href="#point-set-expectation-pse" title="Link to this heading">#</a></h2>
+<p>From the <a class="reference external" href="https://github.com/stnava/ANTsDoc/raw/master/ants2.pdf">ANTs Manual PDF</a>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">-m</span> <span class="pre">PSE</span> <span class="pre">[fixedImage,</span> <span class="pre">movingImage,</span> <span class="pre">fixedPoints,</span> <span class="pre">movingPoints,</span> <span class="pre">weight,</span> <span class="pre">pointSetPercentage,</span> <span class="pre">pointSetSigma,</span> <span class="pre">boundaryPointsOnly,</span> <span class="pre">kNeighborhood,</span> <span class="pre">PartialMatchingIterations=100000]</span></code></p>
+<p>– <code class="docutils literal notranslate"><span class="pre">fixedImage</span></code>: defines the space domain of the fixed point set.</p>
+<p>– <code class="docutils literal notranslate"><span class="pre">movingImage</span></code>: defines the space domain of the moving point set.</p>
+<p>– <code class="docutils literal notranslate"><span class="pre">fixedPoints/Image</span></code>: defines the coordinates of the fixed point set or label image. It can be an image with discrete positive labels, a VTK format point set file, or a text file. Details can be found in I/O section (TODO).</p>
+<p>– <code class="docutils literal notranslate"><span class="pre">movingPoints/Image</span></code>: defines the coordinates of the moving point set or label image.</p>
+<p>– <code class="docutils literal notranslate"><span class="pre">weight</span></code>: weight for this metric. 1 weights are relative to the weights on the N other metrics passed to ANTs — N is unlimited.</p>
+<p>– <code class="docutils literal notranslate"><span class="pre">pointSetPercentage</span></code>: the percentage of points to be randomly sampled used in the registration.</p>
+<p>– <code class="docutils literal notranslate"><span class="pre">pointSetSigma</span></code>: the standard deviation of the Parzen window used to estimate the expectation.</p>
+<p>– <code class="docutils literal notranslate"><span class="pre">boundaryPointsOnly</span></code>: 1 (or “true”) means only the boundary points in the label image is used to drive registration.</p>
+<p>– <code class="docutils literal notranslate"><span class="pre">kNeighborhood</span></code> is a positive discrete number. The first k neighbours are used to compute the deformation during the registration.</p>
+<p>– <code class="docutils literal notranslate"><span class="pre">PartialMatchingIterations</span></code> controls the symmetry in the matching. This option assumes the complete labeling is in the first set of label parameters … more iterations leads to more symmetry in the matching - 0 iterations means full asymmetry</p>
+<section id="example">
+<h3><strong>Example</strong><a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ants<span class="w"> </span><span class="m">3</span><span class="w"> </span>-m<span class="w"> </span>PSE<span class="o">[</span>destination.nii,source.nii,mask_destination.nii,mask_source.nii,0.8,100,1,0,1,100000<span class="o">]</span><span class="w"> </span>-o<span class="w"> </span>source_reg<span class="w"> </span>-i<span class="w"> </span><span class="m">0</span><span class="w"> </span>--rigid-affine<span class="w"> </span><span class="nb">true</span><span class="w"> </span>--number-of-affine-iterations<span class="w"> </span>100x10x5<span class="w"> </span>-m<span class="w"> </span>MI<span class="o">[</span>destination.nii,source.nii,0.2,4<span class="o">]</span><span class="w"> </span>--use-all-metrics-for-convergence<span class="w"> </span><span class="m">1</span>
+</pre></div>
+</div>
+<p>This line does an affine registration of the moving to the fixed image. There are 2 metrics used: PSE (point-set expectation) and MI (mutual information). The weight of each of them is the first “non-string” argument (0.8 for PSE and 0.2 for MI here). To do a diffeomorphic transformation, change the -i paramater to something like 50x50x50 (number of iteration to do for the diffeomorphic transformation). The MARKER files can be done with the ITK-snap labelling utility</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="c1"># apply the transformation</span>
+<span class="w"> </span>WarpImageMultiTransform<span class="w"> </span><span class="nv">$DIM</span><span class="w"> </span><span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>_reg_diffeo.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span><span class="w"> </span>-R<span class="w"> </span><span class="si">${</span><span class="nv">FILE_DEST</span><span class="si">}</span>.<span class="si">${</span><span class="nv">EXT</span><span class="si">}</span><span class="w"> </span>--use-BSpline
+<span class="w"> </span><span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>Warp.nii.gz<span class="w"> </span><span class="si">${</span><span class="nv">FILE_SRC</span><span class="si">}</span>Affine.txt
+</pre></div>
+</div>
+<p>This line applies the affine transformation to the moving image. For a diffeomorphic case, simply add ${FILE_SRC}Warp.nii.gz in the transformation parameter (end of the line)</p>
+</section>
+</section>
+<section id="affine-only-point-match-transformation">
+<h2>Affine-only point-match transformation<a class="headerlink" href="#affine-only-point-match-transformation" title="Link to this heading">#</a></h2>
+<p>Cannot be done with ANTs. Use the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ANTSUseLandmarkImagesToGetAffineTransform<span class="w"> </span>fixed_image<span class="w"> </span>moving_image<span class="w"> </span>affine<span class="w"> </span>regAffine.txt
+</pre></div>
+</div>
+</section>
+<section id="non-affine-point-match-transformation">
+<h2>Non-affine point-match transformation<a class="headerlink" href="#non-affine-point-match-transformation" title="Link to this heading">#</a></h2>
+<p>Alternatively to ANTS, you can use the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ANTSUseLandmarkImagesToGetBSplineDisplacementField
+</pre></div>
+</div>
+<p>Note: Images should be in the same space! Otherwise you receive a Segmentation 11 error. Suggestion is to first run <code class="docutils literal notranslate"><span class="pre">ANTSUseLandmarkImagesToGetAffineTransform</span></code>, then this command.</p>
+</section>
+<section id="itk-transform-file">
+<h2>ITK Transform File<a class="headerlink" href="#itk-transform-file" title="Link to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">FixedCenterOfRotationAffineTransform</span></code> performs the following computation:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>X′<span class="w"> </span><span class="o">=</span><span class="w"> </span>R·<span class="o">(</span>S·X<span class="w"> </span>−C<span class="o">)</span>+C+V
+</pre></div>
+</div>
+<p>Where R is the rotation matrix, S is a scaling factor, C is the center of rotation and V is a translation vector or offset. Therefore the affine matrix M and the affine offset T are defined as:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">M</span><span class="o">=</span>R·S
+<span class="nv">T</span><span class="w"> </span><span class="o">=</span>C+V−R·C
+</pre></div>
+</div>
+<p>NOTES ON ITK Transform Files:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">T2d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>
+a<span class="w"> </span>b<span class="w"> </span>o
+c<span class="w"> </span>d<span class="w"> </span>p
+<span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span>
+<span class="o">]</span>
+
+<span class="nv">T3d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span>
+a<span class="w"> </span>b<span class="w"> </span>c<span class="w"> </span>o
+d<span class="w"> </span>e<span class="w"> </span>f<span class="w"> </span>p
+g<span class="w"> </span>h<span class="w"> </span>i<span class="w"> </span>q
+<span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">1</span>
+<span class="o">]</span>
+</pre></div>
+</div>
+<p>The “o p q” are the “offset”, which actually is not given in the file. The offset is computed from the 3×3 matrix (the first 9 parameters), from the translation “l m n” (the last three parameters), and from the center “x y z” (the three fixed parameters). To see how this is done, look at the code for ComputeOffset() itkMatrixOffsetTransformBase.hxx.</p>
+<p>How centered transforms work: p’ = R (p - C) + C + T where p’ = transformed point, p = original point, C = Center, T= Translation. R= Rotation matrix.</p>
+<p>Format for 2d affine transfo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Insight Transform File V1.0</span>
+<span class="c1">#Transform 0</span>
+<span class="n">Transform</span><span class="p">:</span> <span class="n">AffineTransform_double_2_2</span>
+<span class="n">Parameters</span><span class="p">:</span> <span class="n">a</span> <span class="n">b</span> <span class="n">c</span> <span class="n">d</span> <span class="n">o</span> <span class="n">p</span>
+<span class="n">FixedParameters</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Format for 3d affine transfo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Insight Transform File V1.0</span>
+<span class="c1">#Transform 0</span>
+<span class="n">Transform</span><span class="p">:</span> <span class="n">AffineTransform_double_3_3</span>
+<span class="n">Parameters</span><span class="p">:</span> <span class="n">a</span> <span class="n">b</span> <span class="n">c</span> <span class="n">d</span> <span class="n">e</span> <span class="n">f</span> <span class="n">g</span> <span class="n">h</span> <span class="n">i</span> <span class="n">o</span> <span class="n">p</span> <span class="n">q</span>
+<span class="n">FixedParameters</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Documentation:</p>
+<ol class="arabic simple">
+<li><p>ITK Documentation (700 pages): <a class="reference external" href="https://itk.org/ItkSoftwareGuide.pdf">https://itk.org/ItkSoftwareGuide.pdf</a></p></li>
+<li><p><a class="reference external" href="https://itk.org/Wiki/ITK/ImageRegistration">https://itk.org/Wiki/ITK/ImageRegistration</a></p></li>
+<li><p><a class="reference external" href="http://public.kitware.com/pipermail/insight-users/2014-January/049703.html">http://public.kitware.com/pipermail/insight-users/2014-January/049703.html</a></p></li>
+</ol>
+<p>Conversion world-image coordinate:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="http://www.vtk.org/Wiki/Proposals:Orientation">http://www.vtk.org/Wiki/Proposals:Orientation</a></p></li>
+</ol>
+<p>Discussions about ITK world coordinates:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://sourceforge.net/p/advants/discussion/840261/thread/2a1e9307/">https://sourceforge.net/p/advants/discussion/840261/thread/2a1e9307/</a></p></li>
+<li><p><a class="reference external" href="https://sourceforge.net/p/advants/discussion/840261/thread/ee4a6455/">https://sourceforge.net/p/advants/discussion/840261/thread/ee4a6455/</a></p></li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="README.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Image Processing Software</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="anima.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Anima</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Page Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parameters-for-antsregistration">Parameters for antsRegistration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transform">transform</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metric">metric</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#smoothing-sigmas">smoothing-sigmas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence">convergence</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-warping-field">Visualizing Warping Field</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#translation">Translation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#restrict-gradient-deformation">Restrict Gradient Deformation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#point-set-expectation-pse">Point-Set Expectation (PSE)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example"><strong>Example</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#affine-only-point-match-transformation">Affine-only point-match transformation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-affine-point-match-transformation">Non-affine point-match transformation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#itk-transform-file">ITK Transform File</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NeuroPoly
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2021-2025, NeuroPoly.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
