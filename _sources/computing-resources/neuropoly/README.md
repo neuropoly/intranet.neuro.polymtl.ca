@@ -750,31 +750,24 @@ This message includes a notice about the reboot schedule for the machine you are
 This system may reboot to install upgrades Mondays at 02:00am.
 ```
 
-If you are having a hard time finding this information, you can always regenerate `MOTD` by doing:
-```bash
-run-parts /etc/update-motd.d/
+There is also a convenience script which will display the date of the next system update:
 ```
-
-Please try to check the scheduled reboot time and take it into account when starting your computations.
-
-```{note}
-If a reboot is imminent, you may also see wall notices warning you about the upcoming reboot. They will say something like:
-"The system will reboot at Tue 2024-08-13 02:00:00 EDT!"
-
-Please be aware that these notices start less than 24 hours before the scheduled reboot, so relying on them as your main reboot indicator is strongly discouraged.
+$ unattended-upgrades-date
+Mon Aug  4 04:04:38 EDT 2025
 ```
 
 ### How can I request that a scheduled reboot is postponed?
 
-If you started a long computation that you think will be interupted by the scheduled reboot, you can [use the `Reboot Postponement Request` issue template](https://github.com/neuropoly/computers/issues/new?template=reboot-postponement-req.md) to request a postponement.
+If you started or will start a long computation that you think will be interrupted by the scheduled reboot, you can [use the `Reboot Postponement Request` issue template](https://github.com/neuropoly/computers/issues/new?template=reboot-postponement-req.md) to request a postponement.
 
 More detailed instructions are included in the template.
 
 ```{important}
-Please try to give admins 24h notice for postponement requests.
+Please try to give admins a working day's notice for postponement requests.
 ```
 
-**Admins:** The standard operating procedure for postponing scheduled reboots, along with more details on how automatic reboots work at NeuroPoly [is all documented here](https://github.com/neuropoly/computers/blob/master/docs/unattended-upgrades.md).
+**Admins:** The standard operating procedure for postponing scheduled reboots, along with more details on how automatic reboots work at NeuroPoly is all documented
+[on the wiki](https://github.com/neuropoly/computers/wiki/Administering-stations#unattended-upgrades).
 
 ## Admin
 

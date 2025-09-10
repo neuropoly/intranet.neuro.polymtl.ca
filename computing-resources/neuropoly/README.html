@@ -1454,27 +1454,22 @@ PC/Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="n">system</span> <span class="n">may</span> <span class="n">reboot</span> <span class="n">to</span> <span class="n">install</span> <span class="n">upgrades</span> <span class="n">Mondays</span> <span class="n">at</span> <span class="mi">02</span><span class="p">:</span><span class="mi">00</span><span class="n">am</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>If you are having a hard time finding this information, you can always regenerate <code class="docutils literal notranslate"><span class="pre">MOTD</span></code> by doing:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>run-parts<span class="w"> </span>/etc/update-motd.d/
+<p>There is also a convenience script which will display the date of the next system update:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ unattended-upgrades-date
+Mon Aug  4 04:04:38 EDT 2025
 </pre></div>
-</div>
-<p>Please try to check the scheduled reboot time and take it into account when starting your computations.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If a reboot is imminent, you may also see wall notices warning you about the upcoming reboot. They will say something like:
-“The system will reboot at Tue 2024-08-13 02:00:00 EDT!”</p>
-<p>Please be aware that these notices start less than 24 hours before the scheduled reboot, so relying on them as your main reboot indicator is strongly discouraged.</p>
 </div>
 </section>
 <section id="how-can-i-request-that-a-scheduled-reboot-is-postponed">
 <h3>How can I request that a scheduled reboot is postponed?<a class="headerlink" href="#how-can-i-request-that-a-scheduled-reboot-is-postponed" title="Link to this heading">#</a></h3>
-<p>If you started a long computation that you think will be interupted by the scheduled reboot, you can <a class="reference external" href="https://github.com/neuropoly/computers/issues/new?template=reboot-postponement-req.md">use the <code class="docutils literal notranslate"><span class="pre">Reboot</span> <span class="pre">Postponement</span> <span class="pre">Request</span></code> issue template</a> to request a postponement.</p>
+<p>If you started or will start a long computation that you think will be interrupted by the scheduled reboot, you can <a class="reference external" href="https://github.com/neuropoly/computers/issues/new?template=reboot-postponement-req.md">use the <code class="docutils literal notranslate"><span class="pre">Reboot</span> <span class="pre">Postponement</span> <span class="pre">Request</span></code> issue template</a> to request a postponement.</p>
 <p>More detailed instructions are included in the template.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Please try to give admins 24h notice for postponement requests.</p>
+<p>Please try to give admins a working day’s notice for postponement requests.</p>
 </div>
-<p><strong>Admins:</strong> The standard operating procedure for postponing scheduled reboots, along with more details on how automatic reboots work at NeuroPoly <a class="reference external" href="https://github.com/neuropoly/computers/blob/master/docs/unattended-upgrades.md">is all documented here</a>.</p>
+<p><strong>Admins:</strong> The standard operating procedure for postponing scheduled reboots, along with more details on how automatic reboots work at NeuroPoly is all documented
+<a class="reference external" href="https://github.com/neuropoly/computers/wiki/Administering-stations#unattended-upgrades">on the wiki</a>.</p>
 </section>
 </section>
 <section id="admin">
