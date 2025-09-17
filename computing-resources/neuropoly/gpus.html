@@ -1523,7 +1523,7 @@ for slots 0 and 1.</p></li>
 </ul>
 <p>For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_slot</span> <span class="mi">2</span> <span class="n">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="mi">2</span> <span class="n">python3</span> <span class="n">myscript</span><span class="o">.</span><span class="n">py</span>
-<span class="n">set_slot</span> <span class="mi">0</span><span class="o">-</span><span class="mi">3</span> <span class="n">bash</span>
+<span class="n">set_slot</span> <span class="mi">0</span><span class="o">-</span><span class="mi">3</span> <span class="n">bash</span> <span class="o">--</span><span class="n">login</span>
 </pre></div>
 </div>
 <section id="special-considerations">
@@ -1533,6 +1533,8 @@ for slots 0 and 1.</p></li>
 for example a venv, use <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> to start a shell (e.g. <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">bash</span></code>) and then work in that shell.
 (NB: the shell will not persist unless you run it in tmux or screen). We are still improving our
 script, so this may become possible in the future.</p></li>
+<li><p><strong>If you need <code class="docutils literal notranslate"><span class="pre">conda</span></code> inside <code class="docutils literal notranslate"><span class="pre">set_slot</span></code></strong>, run <code class="docutils literal notranslate"><span class="pre">bash</span></code> with the <code class="docutils literal notranslate"><span class="pre">--login</span></code> or <code class="docutils literal notranslate"><span class="pre">-l</span></code> flag, e.g., <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">1-2</span> <span class="pre">bash</span> <span class="pre">-l</span></code>.
+This will put the proper folder inside the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable.</p></li>
 <li><p><strong>If you need to access duke inside <code class="docutils literal notranslate"><span class="pre">set_slot</span></code></strong>, run <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> inside a shell (e.g., <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">bash</span></code>), then
 run <code class="docutils literal notranslate"><span class="pre">cifscreds</span> <span class="pre">add</span> <span class="pre">duke.neuro.polymtl.ca</span></code> in that shell. This will ensure that duke is still
 accessible when you detach or logout</p>
