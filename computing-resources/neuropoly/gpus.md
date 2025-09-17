@@ -1054,7 +1054,7 @@ for example a venv, use `set_slot` to start a shell (e.g. `set_slot 0 bash`) and
 (NB: the shell will not persist unless you run it in tmux or screen). We are still improving our
 script, so this may become possible in the future.
 
-- **If you need conda inside set_slot**, run `bash` with the `--login` or `-l` flag, e.g., `set_slot 1-2 bash -l`.
+- **If you need `conda` inside `set_slot`**, run `bash` with the `--login` or `-l` flag, e.g., `set_slot 1-2 bash -l`.
 This will put the proper folder inside the `PATH` environment variable.
 
 - **If you need to access duke inside `set_slot`**, run `set_slot` inside a shell (e.g., `set_slot 0 bash`), then
