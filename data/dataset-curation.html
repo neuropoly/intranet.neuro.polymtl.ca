@@ -709,11 +709,11 @@ Default fields can be ommited to avoid long names.</p>
 <section id="participants-tsv">
 <h3><code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code><a class="headerlink" href="#participants-tsv" title="Link to this heading">#</a></h3>
 <p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/data-summary-files.html#participants-file"><code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code></a> is a Tab-separated value file that lists all subjects in the dataset with useful metadata. Please start off from the example below:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">participant_id</span>	<span class="n">source_id</span>	<span class="n">species</span>	<span class="n">age</span>	<span class="n">sex</span>	<span class="n">pathology</span>	<span class="n">institution</span>
-<span class="n">sub</span><span class="o">-</span><span class="mi">001</span>	<span class="mi">001</span>	<span class="n">homo</span> <span class="n">sapiens</span>	<span class="mi">30</span>	<span class="n">F</span>	<span class="n">HC</span>	<span class="n">montreal</span>
-<span class="n">sub</span><span class="o">-</span><span class="mi">002</span>	<span class="mi">005</span>	<span class="n">homo</span> <span class="n">sapiens</span>	<span class="mi">40</span>	<span class="n">M</span>	<span class="n">MS</span>	<span class="n">montreal</span>
-<span class="n">sub</span><span class="o">-</span><span class="mi">003</span>	<span class="mi">032</span>	<span class="n">homo</span> <span class="n">sapiens</span>	<span class="n">n</span><span class="o">/</span><span class="n">a</span>	<span class="n">O</span>	<span class="n">MS</span>	<span class="n">montreal</span>
-<span class="n">sub</span><span class="o">-</span><span class="mi">004</span>	<span class="mi">007</span>	<span class="n">homo</span> <span class="n">sapiens</span>	<span class="n">n</span><span class="o">/</span><span class="n">a</span>	<span class="n">n</span><span class="o">/</span><span class="n">a</span>	<span class="n">MS</span>	<span class="n">toronto</span>
+<div class="highlight-tsv notranslate"><div class="highlight"><pre><span></span>participant_id	source_id	species	age	sex	pathology	institution
+sub-001	001	homo sapiens	30	F	HC	montreal
+sub-002	005	homo sapiens	40	M	MS	montreal
+sub-003	032	homo sapiens	n/a	O	MS	montreal
+sub-004	007	homo sapiens	n/a	n/a	MS	toronto
 </pre></div>
 </div>
 <p>Additional notes:</p>
