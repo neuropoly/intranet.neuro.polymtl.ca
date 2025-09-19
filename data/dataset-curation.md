@@ -230,7 +230,7 @@ Refer to the [BIDS spec](https://bids-specification.readthedocs.io/) to know wha
 
 The [`participants.tsv`](https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/data-summary-files.html#participants-file) is a Tab-separated value file that lists all subjects in the dataset with useful metadata. Please start off from the example below:
 
-```
+```tsv
 participant_id	source_id	species	age	sex	pathology	institution
 sub-001	001	homo sapiens	30	F	HC	montreal
 sub-002	005	homo sapiens	40	M	MS	montreal
