@@ -993,8 +993,8 @@ Open your Keychain program and click ‘+’ to add a new item:</p>
 <p class="admonition-title">Note</p>
 <p>The new item has to be added as an <code class="docutils literal notranslate"><span class="pre">application</span> <span class="pre">password</span></code> to your <code class="docutils literal notranslate"><span class="pre">login</span></code> Keychain (i.e., not to your <code class="docutils literal notranslate"><span class="pre">iCloud</span></code> Keychain).</p>
 </div>
-<p><strong>Automate connection with a script:</strong>
-<em><strong>Set up a shell script</strong></em></p>
+<p><strong>Automate connection with a script:</strong></p>
+<p><em><strong>Set up a shell script</strong></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you’re not sure where to put your shell script, we recommend storing shell scripts under <code class="docutils literal notranslate"><span class="pre">~/bin</span></code>. You can modify the path in the following instructions if you prefer a different location.</p>
@@ -1052,8 +1052,8 @@ Linux</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
 </div>
-<p><strong>Automate connection with a script:</strong>
-<em><strong>Set up a shell script</strong></em></p>
+<p><strong>Automate connection with a script:</strong></p>
+<p><em><strong>Set up a shell script</strong></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you’re not sure where to put your shell script, we recommend storing shell scripts under <code class="docutils literal notranslate"><span class="pre">~/bin</span></code>. You can modify the path in the following instructions if you prefer a different location.</p>
@@ -1070,9 +1070,8 @@ Linux</label><div class="sd-tab-content docutils">
 <span class="nb">set</span><span class="w"> </span>-eo<span class="w"> </span>pipefail
 
 <span class="nv">USER</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR_CAS_USERNAME&gt;&quot;</span>
-<span class="nv">PASS</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR_CAS_PASSWORD&gt;&quot;</span>
 <span class="nv">GROUP</span><span class="o">=</span>PolySSL<span class="w"> </span><span class="c1"># or PolyInvites, depending on your account&#39;s status</span>
-sudo<span class="w"> </span>openconnect<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span><span class="w"> </span>--authgroup<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$GROUP</span><span class="s2">&quot;</span><span class="w"> </span>--passwd-on-stdin<span class="w"> </span>--reconnect-timeout<span class="w"> </span><span class="m">20</span><span class="w"> </span>ssl.vpn.polymtl.ca
+sudo<span class="w"> </span>openconnect<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span><span class="w"> </span>--authgroup<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$GROUP</span><span class="s2">&quot;</span><span class="w"> </span>--reconnect-timeout<span class="w"> </span><span class="m">20</span><span class="w"> </span>ssl.vpn.polymtl.ca
 </pre></div>
 </div>
 <p><em>Option 2</em></p>

@@ -273,6 +273,7 @@ The new item has to be added as an `application password` to your `login` Keycha
 ```
 
 **Automate connection with a script:**
+
 _**Set up a shell script**_
 ```{note}
 If you're not sure where to put your shell script, we recommend storing shell scripts under `~/bin`. You can modify the path in the following instructions if you prefer a different location.
@@ -339,6 +340,7 @@ sudo apt install openconnect
 ```
 
 **Automate connection with a script:**
+
 _**Set up a shell script**_
 ```{note}
 If you're not sure where to put your shell script, we recommend storing shell scripts under `~/bin`. You can modify the path in the following instructions if you prefer a different location.
@@ -359,9 +361,8 @@ _Option 1_
 set -eo pipefail
 
 USER="<YOUR_CAS_USERNAME>"
-PASS="<YOUR_CAS_PASSWORD>"
 GROUP=PolySSL # or PolyInvites, depending on your account's status
-sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-stdin --reconnect-timeout 20 ssl.vpn.polymtl.ca
+sudo openconnect -u "$USER" --authgroup "$GROUP" --reconnect-timeout 20 ssl.vpn.polymtl.ca
 ```
 
 _Option 2_
