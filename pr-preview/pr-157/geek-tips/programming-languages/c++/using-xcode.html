@@ -1,0 +1,694 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" data-theme="auto">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Using XCode &#8212; NeuroPoly Internal Wiki  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "auto";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "auto";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/theme.css?v=9a9c6050" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=c607423c"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/programming-languages/c++/using-xcode';</script>
+    <link rel="icon" href="../../../_static/logo.png"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Git &amp; Github" href="../../git.html" />
+    <link rel="prev" title="Installation of VTK and ITK on Mac OS X" href="installation-of-vtk-and-itk-on-mac-os-x.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="auto">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../README.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.png" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../../_static/logo_dark.png" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">NeuroPoly Lab Manual</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><!-- GTranslate: https://gtranslate.io/ -->
+<div class="center-g-translate">
+    <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl" style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png" height="24" width="24" alt="English" /></a><a href="#" onclick="doGTranslate('en|fr');return false;" title="French" class="gflag nturl" style="background-position:-200px -100px;"><img src="//gtranslate.net/flags/blank.png" height="24" width="24" alt="French" /></a>
+
+    <style type="text/css">
+        <!--
+        a.gflag {vertical-align:middle;font-size:24px;padding:1px 0;background-repeat:no-repeat;background-image:url(//gtranslate.net/flags/24.png);}
+        a.gflag img {border:0;}
+        a.gflag:hover {background-image:url(//gtranslate.net/flags/24a.png);}
+        #goog-gt-tt {display:none !important;}
+        .goog-te-banner-frame {display:none !important;}
+        .goog-te-menu-value:hover {text-decoration:none !important;}
+        body {top:0 !important;}
+        #google_translate_element2 {display:none!important;}
+        -->
+    </style>
+
+    <div id="google_translate_element2"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'en',autoDisplay: false}, 'google_translate_element2');}
+    </script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
+        /* ]]> */
+    </script>
+</div></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../onboarding/README.html"><span>👋</span> Onboarding</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../onboarding/getting-started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../onboarding/campus-access.html">Campus Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../onboarding/infrastructure.html">Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../onboarding/dropbox-google-drive.html">Google Drive</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../onboarding/computer-setup/README.html">Computer Setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../onboarding/computer-setup/mail.html"><span>📧</span> Email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../onboarding/computer-setup/slack.html"><span>🗣</span> Slack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../onboarding/computer-setup/eduroam.html"><span>📶</span> Eduroam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../onboarding/computer-setup/shell-profile.html"><span>💻</span> Shell Profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../onboarding/computer-setup/configuration-tips.html"><span>💡</span> Other configuration tips</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../onboarding/software-development.html">Software development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../onboarding/students-interns.html">Students and Interns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../onboarding/consultants-ra.html">Consultants and RA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../onboarding/postdoc.html">Postdoctoral fellows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../onboarding/admin.html">Administrators</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../agenda-and-calendar.html"><span>📅</span> Calendar &amp; Meetings</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../computing-resources/README.html"><span>🖥</span> Computing Resources</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../computing-resources/neuropoly/README.html"><span>🖥</span> Computers @NeuroPoly</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../computing-resources/neuropoly/cpus.html">CPU Clusters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../computing-resources/neuropoly/gpus.html">GPU Clusters</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../computing-resources/clusters-at-criugm.html"><span>🖥</span> Computers @CRIUGM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../computing-resources/compute-canada.html"><span>🖥</span> Compute Canada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../computing-resources/printer.html"><span>🖨</span> Printer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../computing-resources/microsoft365.html"><span>☁️</span> Microsoft 365</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../computing-resources/youtube.html">YouTube Procedure</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../data/README.html"><span>💾</span> Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../data/dataset-curation.html">Dataset curation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data/git-datasets.html"><code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data/duke.html"><code class="docutils literal notranslate"><span class="pre">duke</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data/admin-guide.html">Dataset admin guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../data/deeplearning-models.html">Deep Learning Models</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../mri-scanning/README.html"><span>🧲</span> MRI Scanning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../mri-scanning/unf-3t-prisma.html">UNF (3T Prisma)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../mri-scanning/mni-mcgill-7t-terra.html">MNI/McGill (7T Terra)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../mri-scanning/mhi-7t-agilent.html">MHI (7T Agilent)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../mri-scanning/concordia-ge.html">Concordia (3T GE)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../rf-lab/README.html"><span>🔧</span> RF Lab</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../rf-lab/mri-coils-at-neuropoly.html">NeuroPoly Coils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rf-lab/misc.html">Misc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rf-lab/mri-phantoms.html">Phantoms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rf-lab/3d-printing/README.html">3D Printing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rf-lab/3d-printing/octoprint.html">OctoPrint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rf-lab/pcb-manufacturing.html">PCB Manufacturing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rf-lab/cnc-machine.html">CNC machine</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Academic Life</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../courses.html"><span>🎓</span> University Courses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../comprehensive-exam-guide.html"><span>📖</span> Comprehensive Exam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scholarships.html"><span>💰</span> Scholarships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../conferences.html"><span>✈️</span> Conferences</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../bibliography/README.html"><span>📚</span> Bibliography</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../bibliography/lab-theses.html">Theses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../bibliography/spinal-cord-injury.html">Spinal Cord Injury</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../bibliography/mri.html">MRI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../bibliography/mri-analysis.html">MRI Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../bibliography/deep-learning.html">Deep Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../bibliography/histology.html">Histology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../bibliography/shared-paperpile-folder.html">Paperpile Folder</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ideas-for-cool-projects.html"><span>💡</span> Ideas for Cool Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing-articles.html"><span>✍️</span>     Academic Writing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../practical-information/README.html"><span>📎</span> Practical Information</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../practical-information/visa.html"><span>🌎</span> VISAs and Work Permits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../practical-information/medical.html"><span>🏥</span> Medical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../practical-information/living-in-montreal.html"><span>🇨🇦</span> Living in Montreal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../practical-information/purchasing-hardware-and-lab-supplies.html"><span>🛠</span> Purchasing Supplies</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../README.html"><span>🤓</span> Geek tips</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../useful-links.html">Useful links/Software</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../bash-shell/README.html">Bash/Shell</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../bash-shell/script.html">Script</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../README.html">Programming Languages</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../python.html">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../matlab.html">MATLAB</a></li>
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="README.html">C++</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="installation-of-vtk-and-itk-on-mac-os-x.html">Installation of VTK and ITK on Mac OS X</a></li>
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">Using XCode</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../../git.html">Git &amp; Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../git-annex.html">git-annex</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../os-guides/README.html">OS Guides</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../os-guides/linux.html">Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../os-guides/macosx.html">MacOSX</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../misc/README.html">Various Software &amp; Tools</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../misc/virtual-machines/README.html">Virtual Machines</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../misc/virtual-machines/virtualbox.html">VirtualBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../misc/virtual-machines/vagrant.html">Vagrant</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/bitbucket.html">BitBucket</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../misc/docker/README.html">Docker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../misc/docker/docker-for-deep-learning.html">Docker for Deep Learning</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/dropbox.html">Dropbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/jekyll.html">Jekyll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/microsoft-word.html">Microsoft Word</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/openneuro.html">OpenNeuro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/sketchup.html">Sketchup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/xquartz.html">XQuartz</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../image-processing-software/README.html">Image Processing Software</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../image-processing-software/advanced-normalization-tools-ants.html">Advanced Normalization Tools (ANTs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../image-processing-software/anima.html">Anima</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../image-processing-software/diffusion-simulator.html">Diffusion Simulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../image-processing-software/freesurfer.html">FreeSurfer</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../image-processing-software/fsl/README.html">FSL</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../image-processing-software/fsl/fsleyes.html">FSLeyes</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../image-processing-software/itk-snap.html">ITK-SNAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../image-processing-software/nifti.html">NIfTI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../image-processing-software/openneuro-cli.html">OpenNeuro CLI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../image-processing-software/osirix.html">OsiriX</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../deep-learning/README.html">Deep Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../deep-learning/cuda.html">CUDA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../deep-learning/tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../deep-learning/conditional-random-fields-crf.html">Conditional Random Fields (CRF)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../deep-learning/restricted-boltzmann-machines.html">Restricted Boltzmann Machines (RBM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../deep-learning/misc.html">Misc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../deep-learning/WandB.html">WandB</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../edi.html"><span>🧩</span> EDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contact.html"><span>📞</span> Contact</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://neuro.polymtl.ca">NeuroPoly Website</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/geek-tips/programming-languages/c++/using-xcode.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button"
+   title="Suggest edit"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+
+</a>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Using XCode</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Page Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-an-xcode-project-linked-with-itk-and-vtk">Creation of an XCode project linked with ITK and VTK</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-project">1. Create a New Project</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-settings">2. Edit Settings</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#build-settings">Build Settings</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#build-phases">Build Phases</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-files">3. Add Files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-dyld-library-path">4. Set DYLD_LIBRARY_PATH</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution">Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-xcode-toolchain-as-a-non-admin-user">How to use XCode toolchain as a non-admin user?</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="using-xcode">
+<h1>Using XCode<a class="headerlink" href="#using-xcode" title="Link to this heading">#</a></h1>
+<section id="creation-of-an-xcode-project-linked-with-itk-and-vtk">
+<h2>Creation of an XCode project linked with ITK and VTK<a class="headerlink" href="#creation-of-an-xcode-project-linked-with-itk-and-vtk" title="Link to this heading">#</a></h2>
+<p>This page provides a guide to properly create a project using ITK and/or VTK libraries on XCode. Furthermore, it gives a way to export your project as an executable which are usable as a command-line. The paths to VTK and ITK present in this page follow the guide about the installation of VTK and ITK and depend on the version of the libraries.</p>
+<p>The creation of the project follows these steps:</p>
+<section id="create-a-new-project">
+<h3>1. Create a New Project<a class="headerlink" href="#create-a-new-project" title="Link to this heading">#</a></h3>
+<p>File → New Project</p>
+<ul class="simple">
+<li><p>Choose a template for your project → OS X → Application → Command Line Tool</p></li>
+<li><p>Type the name of your project and change the language (type) to “C++”</p></li>
+<li><p>Choose the emplacement of the folder which will contain your project</p></li>
+</ul>
+</section>
+<section id="edit-settings">
+<h3>2. Edit Settings<a class="headerlink" href="#edit-settings" title="Link to this heading">#</a></h3>
+<p>Once your project is created, some settings have to be changed to compile your project with ITK and VTK and to assure that the IDE recognize the libraries during editing:</p>
+<section id="build-settings">
+<h4>Build Settings<a class="headerlink" href="#build-settings" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Search Paths →  HEADER_SEARCH_PATHS → add “/usr/local/itk/include/ITK-4.4” and “/usr/local/vtk/include/vtk-6.0” You need to verify paths before you copy-paste these ones.</p></li>
+<li><p>Search Paths → LIBRARY_SEARCH_PATHS → add ‘’/usr/local/itk/lib’’ and ‘’/usr/local/vtk/lib’’</p></li>
+<li><p>Apple LLVM compiler 4.2 - Language → CLANG_CXX_LIBRARY → change to “libstdc++” instead of “libc++”</p></li>
+<li><p>Apple LLVM compiler 4.2 - Preprocessing → GCC_PREPROCESSOR_DEFINITIONS → Release → add “RELEASE=1”</p></li>
+</ul>
+</section>
+<section id="build-phases">
+<h4>Build Phases<a class="headerlink" href="#build-phases" title="Link to this heading">#</a></h4>
+<p>You should find in the part “Compile Sources” all your sources created or added to the project. If one file or your project isn’t in that list, it’ll not be compiled. Therefore, you must add them manually.</p>
+<p>In the part “Link Binary With Library”, you have to add all the libraries necessary to your project (not all the VTK and ITK libraries).<br />
+Typical ITK libraries are (to read, make basic treatments and write an image) :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">libITKCommon</span><span class="o">-</span><span class="mf">4.4.1</span><span class="o">.</span><span class="n">dylib</span>
+<span class="n">libitkdouble</span><span class="o">-</span><span class="n">conversion</span><span class="o">-</span><span class="mf">4.4.1</span><span class="o">.</span><span class="n">dylib</span>
+<span class="n">libITKIOImageBase</span><span class="o">-</span><span class="mf">4.4.1</span><span class="o">.</span><span class="n">dylib</span>
+<span class="n">libITKIONIFTI</span><span class="o">-</span><span class="mf">4.4.1</span><span class="o">.</span><span class="n">dylib</span>
+<span class="n">libITKniftiio</span><span class="o">-</span><span class="mf">4.4.1</span><span class="o">.</span><span class="n">dylib</span>
+<span class="n">libITKOptimizers</span><span class="o">-</span><span class="mf">4.4.1</span><span class="o">.</span><span class="n">dylib</span>
+<span class="n">libITKStatistics</span><span class="o">-</span><span class="mf">4.4.1</span><span class="o">.</span><span class="n">dylib</span>
+<span class="n">libitksys</span><span class="o">-</span><span class="mf">4.4.1</span><span class="o">.</span><span class="n">dylib</span>
+<span class="n">libitkv3p_lsqr</span><span class="o">-</span><span class="mf">4.4.1</span><span class="o">.</span><span class="n">dylib</span>
+<span class="n">libitkv3p</span><span class="o">-</span><span class="n">netlib</span><span class="o">-</span><span class="mf">4.4.1</span><span class="o">.</span><span class="n">dylib</span>
+<span class="n">libitkvcl</span><span class="o">-</span><span class="mf">4.4.1</span><span class="o">.</span><span class="n">dylib</span>
+<span class="n">libitkvnl_algo</span><span class="o">-</span><span class="mf">4.4.1</span><span class="o">.</span><span class="n">dylib</span>
+<span class="n">libitkvnl</span><span class="o">-</span><span class="mf">4.4.1</span><span class="o">.</span><span class="n">dylib</span>
+<span class="n">libITKVNLInstantiation</span><span class="o">-</span><span class="mf">4.4.1</span><span class="o">.</span><span class="n">dylib</span>
+</pre></div>
+</div>
+<p>Other libraries may be necessary depending on your project. Basic VTK libraries also need to be provided if you use VTK.</p>
+</section>
+</section>
+<section id="add-files">
+<h3>3. Add Files<a class="headerlink" href="#add-files" title="Link to this heading">#</a></h3>
+<p>You can now add your file .h and .cpp to the project, or create new files/classes directly with a right-click on the project in the Project Navigator.<br />
+If you add files by dragging and dropping them to the project navigator, assure yourself that they are in the Compile Sources in Build Phases.</p>
+</section>
+<section id="set-dyld-library-path">
+<h3>4. Set DYLD_LIBRARY_PATH<a class="headerlink" href="#set-dyld-library-path" title="Link to this heading">#</a></h3>
+<p>To tell to Xcode where to find libraries at the execution of your program, you have to set manually the Environment Variable <code class="docutils literal notranslate"><span class="pre">DYLD_LIBRARY_PATH</span></code> to the libraries. Go to:</p>
+<p>Product (in the menu) -&gt; Scheme -&gt; Edit Scheme -&gt; Arguments -&gt; Environment Variables -&gt; add the variable:</p>
+<p>    Name = <code class="docutils literal notranslate"><span class="pre">DYLD_LIBRARY_PATH</span></code><br />
+    Value = <code class="docutils literal notranslate"><span class="pre">/usr/local/itk/lib:/usr/local/vtk/lib</span></code></p>
+<p>Over the Environment Variables, you can pass arguments on launch to your project.</p>
+<p>Having followed these steps, you are normally able to build and run your project in Debut or Release mode in XCode.</p>
+</section>
+</section>
+<section id="distribution">
+<h2>Distribution<a class="headerlink" href="#distribution" title="Link to this heading">#</a></h2>
+<p>To distribute your project as an executable, your have to go to : Product → Archive → Click on Distribute → Save Built Products → Save</p>
+<p>Your executable will be available in the new created folder.</p>
+<p>To distribute this executable without installing ITK and VTK, you may add to the executable folder the needed libraries (<code class="docutils literal notranslate"><span class="pre">.dylib</span></code>).<br />
+The executable can be called by the command if you are in the folder of your program :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">NameOfYourProgram</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>If you don’t want to add ”./” before the name of your program, you need to add the path of the program’s folder in the environment variable $PATH :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/Applications/NameOfYourProgram
+</pre></div>
+</div>
+<p>This path is only valid if you place your program in /Applications. To make definitive changes to PATH, add this line to <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code></p>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
+<section id="how-to-use-xcode-toolchain-as-a-non-admin-user">
+<h3>How to use XCode toolchain as a non-admin user?<a class="headerlink" href="#how-to-use-xcode-toolchain-as-a-non-admin-user" title="Link to this heading">#</a></h3>
+<p>Usually when you use XCode as a non-admin user, it ask you for admin login and password for building your project in debugging mode. This is required to enable the Developer Tools. To allow a non-admin user to use debugging mode on XCode, you may enter in a Terminal the following command :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>dscl<span class="w"> </span>.<span class="w"> </span>append<span class="w"> </span>/Groups/_developer<span class="w"> </span>GroupMembership<span class="w"> </span>&lt;username&gt;
+</pre></div>
+</div>
+<p>Then, you can provide your login and password to build your project. You have to provide them just once per session.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="installation-of-vtk-and-itk-on-mac-os-x.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Installation of VTK and ITK on Mac OS X</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../git.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Git &amp; Github</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Page Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-of-an-xcode-project-linked-with-itk-and-vtk">Creation of an XCode project linked with ITK and VTK</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-project">1. Create a New Project</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-settings">2. Edit Settings</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#build-settings">Build Settings</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#build-phases">Build Phases</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-files">3. Add Files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-dyld-library-path">4. Set DYLD_LIBRARY_PATH</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution">Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-xcode-toolchain-as-a-non-admin-user">How to use XCode toolchain as a non-admin user?</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NeuroPoly
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2021-2025, NeuroPoly.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
