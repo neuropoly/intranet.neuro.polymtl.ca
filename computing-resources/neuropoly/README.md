@@ -257,18 +257,33 @@ For `Linux` and `macOS` users, `openconnect` is the recommended VPN client.
 
 ::::{tab-set}
 :::{tab-item} MacOS
+
+**Install OpenConnect:**
 ```
 brew install openconnect
 ```
 
+**Add your password to Keychain:**
 Open your Keychain program and click '+' to add a new item:
 - Name: `poly-vpn`
 - Account: your `YOUR_CAS_USERNAME`
 - Password: enter your password here.
+```{note}
+The new item has to be added as an `application password` to your `login` Keychain (i.e., not to your `iCloud` Keychain).
+```
 
-Note: the new item has to be added as an `application password` to your `login` Keychain (i.e., not to your `iCloud` Keychain).
+**Automate connection with a script:**
+_**Set up a shell script**_
+```{note}
+If you're not sure where to put your shell script, we recommend storing shell scripts under `~/bin`. You can modify the path in the following instructions if you prefer a different location.
+```
 
-Then, create the following script:
+Create a directory for shell scripts, and `cd` into it. E.g.:
+```
+mkdir ~/bin && cd ~/bin
+```
+
+Create a file called `vpn.sh` and add the following:
 ```bash
 #!/bin/bash
 # vpn.sh
@@ -281,18 +296,75 @@ GROUP=PolySSL # or PolyInvites, depending on your account's status
 echo -n "$PASS" | sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-stdin --reconnect-timeout 20 ssl.vpn.polymtl.ca
 ```
 
+Make your script executable:
+```
+chmod 755 vpn.sh
+```
+
 To connect to the VPN, you need to run:
 ```
+~/bin/vpn.sh
+```
+
+Or, from _within_ the same directory as your script:
+```
 ./vpn.sh
+```
+
+_**Optional: Create an alias for your script**_
+```{note}
+For `macOS`, we assume you are using `zsh`, if you are using bash instead, replace `.zshrc` with `.bashrc` in the instructions. If the relevant file does not already exist, you should create it. 
+```
+
+Add the following to `~/.zshrc`:
+```
+alias vpn='~/bin/vpn.sh'
+```
+
+Source your shell to make the new alias available:
+```
+source ~/.zshrc
+```
+
+To start your vpn:
+```
+vpn
 ```
 :::
 
 :::{tab-item} Linux
+**Install OpenConnect:**
 ```
-apt install openconnect
+sudo apt install openconnect
 ```
 
-Then, create the following script:
+**Automate connection with a script:**
+_**Set up a shell script**_
+```{note}
+If you're not sure where to put your shell script, we recommend storing shell scripts under `~/bin`. You can modify the path in the following instructions if you prefer a different location.
+```
+
+Create a directory for shell scripts, and `cd` into it. E.g.:
+```
+mkdir ~/bin && cd ~/bin
+```
+
+Create a file called `vpn.sh` and add one of the following:
+
+_Option 1_
+```bash
+#!/bin/bash
+# vpn.sh
+
+set -eo pipefail
+
+USER="<YOUR_CAS_USERNAME>"
+PASS="<YOUR_CAS_PASSWORD>"
+GROUP=PolySSL # or PolyInvites, depending on your account's status
+sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-stdin --reconnect-timeout 20 ssl.vpn.polymtl.ca
+```
+
+_Option 2_
 ```bash
 #!/bin/bash
 # vpn.sh
@@ -305,15 +377,55 @@ GROUP=PolySSL # or PolyInvites, depending on your account's status
 echo -n "$PASS" | sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-stdin --reconnect-timeout 20 ssl.vpn.polymtl.ca
 ```
 
+```{warning}
+_Option 2_ avoids a password prompt each time the script is invoked, **however** it also hardcodes your password, which is insecure and not recommended. We thus prefer _Option 1_. 
+```
+
+Make your script executable:
+```
+chmod 755 vpn.sh
+```
+
 To connect to the VPN, you need to run:
+```
+~/bin/vpn.sh
+```
+
+Or, from _within_ the same directory as your script:
 ```
 ./vpn.sh
 ```
 
-Depending on your Linux set up, you may also be able to create a graphical interface for your VPN. The following instructions were tested on a system using `NetworkManager` and the `GNOME` desktop environment:
+_**Optional: Create an alias for your script**_
+```{note}
+If you are using `zsh` instead of `bash`, replace `.bashrc` with `.zshrc` in the instructions. If the relevant file does not already exist, you should create it. 
+```
+
+Add the following to `~/.bashrc`:
+```
+alias vpn='~/bin/vpn.sh'
+```
+
+Source your shell to make the new alias available:
+```
+source ~/.bashrc
+```
+
+To start your vpn:
+```
+vpn
+```
+
+**Alternative: Graphical OpenConnect:**
+
+Depending on your Linux set up, you may be able to create a graphical interface for your VPN. 
+```{note}
+The following instructions were tested on a system using `NetworkManager` and the `GNOME` desktop environment.
+```
+
 1. Install the [NetworkManager openconnect plugin](https://gitlab.gnome.org/GNOME/NetworkManager-openvpn/). For example, with:
 ```
-apt install network-manager-openconnect-gnome
+sudo apt install network-manager-openconnect-gnome
 ```
 2. Under `Settings` go to `Network`.
 3. Under `VPN` select `+` to `Add VPN`.
