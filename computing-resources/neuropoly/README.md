@@ -361,9 +361,8 @@ _Option 1_
 set -eo pipefail
 
 USER="<YOUR_CAS_USERNAME>"
-PASS="<YOUR_CAS_PASSWORD>"
 GROUP=PolySSL # or PolyInvites, depending on your account's status
-sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-stdin --reconnect-timeout 20 ssl.vpn.polymtl.ca
+sudo openconnect -u "$USER" --authgroup "$GROUP" --reconnect-timeout 20 ssl.vpn.polymtl.ca
 ```
 
 _Option 2_
