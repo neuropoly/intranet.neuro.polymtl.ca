@@ -978,17 +978,32 @@ document.write(`
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-0">
 MacOS</label><div class="sd-tab-content docutils">
+<p><strong>Install OpenConnect:</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
 </div>
-<p>Open your Keychain program and click ‘+’ to add a new item:</p>
+<p><strong>Add your password to Keychain:</strong>
+Open your Keychain program and click ‘+’ to add a new item:</p>
 <ul class="simple">
 <li><p>Name: <code class="docutils literal notranslate"><span class="pre">poly-vpn</span></code></p></li>
 <li><p>Account: your <code class="docutils literal notranslate"><span class="pre">YOUR_CAS_USERNAME</span></code></p></li>
 <li><p>Password: enter your password here.</p></li>
 </ul>
-<p>Note: the new item has to be added as an <code class="docutils literal notranslate"><span class="pre">application</span> <span class="pre">password</span></code> to your <code class="docutils literal notranslate"><span class="pre">login</span></code> Keychain (i.e., not to your <code class="docutils literal notranslate"><span class="pre">iCloud</span></code> Keychain).</p>
-<p>Then, create the following script:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The new item has to be added as an <code class="docutils literal notranslate"><span class="pre">application</span> <span class="pre">password</span></code> to your <code class="docutils literal notranslate"><span class="pre">login</span></code> Keychain (i.e., not to your <code class="docutils literal notranslate"><span class="pre">iCloud</span></code> Keychain).</p>
+</div>
+<p><strong>Automate connection with a script:</strong></p>
+<p><em><strong>Set up a shell script</strong></em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you’re not sure where to put your shell script, we recommend storing shell scripts under <code class="docutils literal notranslate"><span class="pre">~/bin</span></code>. You can modify the path in the following instructions if you prefer a different location.</p>
+</div>
+<p>Create a directory for shell scripts, and <code class="docutils literal notranslate"><span class="pre">cd</span></code> into it. E.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">~/</span><span class="nb">bin</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="o">~/</span><span class="nb">bin</span>
+</pre></div>
+</div>
+<p>Create a file called <code class="docutils literal notranslate"><span class="pre">vpn.sh</span></code> and add the following:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1"># vpn.sh</span>
 
@@ -996,22 +1011,70 @@ MacOS</label><div class="sd-tab-content docutils">
 
 <span class="nv">USER</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR_CAS_USERNAME&gt;&quot;</span>
 <span class="nv">PASS</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>security<span class="w"> </span>find-generic-password<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>-s<span class="w"> </span>poly-vpn<span class="w"> </span>-w<span class="k">)</span><span class="s2">&quot;</span>
-<span class="nv">GROUP</span><span class="o">=</span>PolySSL<span class="w"> </span><span class="c1"># or PolyInvites, depending on your account&#39;s status</span>
+<span class="nv">GROUP</span><span class="o">=</span>PolySSL
 <span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PASS</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>openconnect<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span><span class="w"> </span>--authgroup<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$GROUP</span><span class="s2">&quot;</span><span class="w"> </span>--passwd-on-stdin<span class="w"> </span>--reconnect-timeout<span class="w"> </span><span class="m">20</span><span class="w"> </span>ssl.vpn.polymtl.ca
 </pre></div>
 </div>
+<p>Make your script executable:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="mi">755</span> <span class="n">vpn</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
 <p>To connect to the VPN, you need to run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">~/</span><span class="nb">bin</span><span class="o">/</span><span class="n">vpn</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>Or, from <em>within</em> the same directory as your script:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">vpn</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p><em><strong>Optional: Create an alias for your script</strong></em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">macOS</span></code>, we assume you are using <code class="docutils literal notranslate"><span class="pre">zsh</span></code>, if you are using bash instead, replace <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code> with <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> in the instructions. If the relevant file does not already exist, you should create it.</p>
+</div>
+<p>Add the following to <code class="docutils literal notranslate"><span class="pre">~/.zshrc</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">vpn</span><span class="o">=</span><span class="s1">&#39;~/bin/vpn.sh&#39;</span>
+</pre></div>
+</div>
+<p>Source your shell to make the new alias available:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">~/.</span><span class="n">zshrc</span>
+</pre></div>
+</div>
+<p>To start your vpn:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vpn</span>
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
 Linux</label><div class="sd-tab-content docutils">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">openconnect</span>
+<p><strong>Install OpenConnect:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
 </div>
-<p>Then, create the following script:</p>
+<p><strong>Automate connection with a script:</strong></p>
+<p><em><strong>Set up a shell script</strong></em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you’re not sure where to put your shell script, we recommend storing shell scripts under <code class="docutils literal notranslate"><span class="pre">~/bin</span></code>. You can modify the path in the following instructions if you prefer a different location.</p>
+</div>
+<p>Create a directory for shell scripts, and <code class="docutils literal notranslate"><span class="pre">cd</span></code> into it. E.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">~/</span><span class="nb">bin</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="o">~/</span><span class="nb">bin</span>
+</pre></div>
+</div>
+<p>Create a file called <code class="docutils literal notranslate"><span class="pre">vpn.sh</span></code> and add one of the following:</p>
+<p><em>Option 1</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1"># vpn.sh</span>
+
+<span class="nb">set</span><span class="w"> </span>-eo<span class="w"> </span>pipefail
+
+<span class="nv">USER</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR_CAS_USERNAME&gt;&quot;</span>
+<span class="nv">GROUP</span><span class="o">=</span>PolySSL<span class="w"> </span>
+sudo<span class="w"> </span>openconnect<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span><span class="w"> </span>--authgroup<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$GROUP</span><span class="s2">&quot;</span><span class="w"> </span>--reconnect-timeout<span class="w"> </span><span class="m">20</span><span class="w"> </span>ssl.vpn.polymtl.ca
+</pre></div>
+</div>
+<p><em>Option 2</em></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1"># vpn.sh</span>
 
@@ -1019,19 +1082,53 @@ Linux</label><div class="sd-tab-content docutils">
 
 <span class="nv">USER</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR_CAS_USERNAME&gt;&quot;</span>
 <span class="nv">PASS</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR_CAS_PASSWORD&gt;&quot;</span>
-<span class="nv">GROUP</span><span class="o">=</span>PolySSL<span class="w"> </span><span class="c1"># or PolyInvites, depending on your account&#39;s status</span>
+<span class="nv">GROUP</span><span class="o">=</span>PolySSL
 <span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PASS</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>openconnect<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span><span class="w"> </span>--authgroup<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$GROUP</span><span class="s2">&quot;</span><span class="w"> </span>--passwd-on-stdin<span class="w"> </span>--reconnect-timeout<span class="w"> </span><span class="m">20</span><span class="w"> </span>ssl.vpn.polymtl.ca
 </pre></div>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><em>Option 2</em> avoids a password prompt each time the script is invoked, <strong>however</strong> it also hardcodes your password, which is insecure and not recommended. We thus prefer <em>Option 1</em>.</p>
+</div>
+<p>Make your script executable:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="mi">755</span> <span class="n">vpn</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
 <p>To connect to the VPN, you need to run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">~/</span><span class="nb">bin</span><span class="o">/</span><span class="n">vpn</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>Or, from <em>within</em> the same directory as your script:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">vpn</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
-<p>Depending on your Linux set up, you may also be able to create a graphical interface for your VPN. The following instructions were tested on a system using <code class="docutils literal notranslate"><span class="pre">NetworkManager</span></code> and the <code class="docutils literal notranslate"><span class="pre">GNOME</span></code> desktop environment:</p>
+<p><em><strong>Optional: Create an alias for your script</strong></em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are using <code class="docutils literal notranslate"><span class="pre">zsh</span></code> instead of <code class="docutils literal notranslate"><span class="pre">bash</span></code>, replace <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> with <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code> in the instructions. If the relevant file does not already exist, you should create it.</p>
+</div>
+<p>Add the following to <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">vpn</span><span class="o">=</span><span class="s1">&#39;~/bin/vpn.sh&#39;</span>
+</pre></div>
+</div>
+<p>Source your shell to make the new alias available:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">~/.</span><span class="n">bashrc</span>
+</pre></div>
+</div>
+<p>To start your vpn:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vpn</span>
+</pre></div>
+</div>
+<p><strong>Alternative: Graphical OpenConnect:</strong></p>
+<p>Depending on your Linux set up, you may be able to create a graphical interface for your VPN.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following instructions were tested on a system using <code class="docutils literal notranslate"><span class="pre">NetworkManager</span></code> and the <code class="docutils literal notranslate"><span class="pre">GNOME</span></code> desktop environment.</p>
+</div>
 <ol class="arabic simple">
 <li><p>Install the <a class="reference external" href="https://gitlab.gnome.org/GNOME/NetworkManager-openvpn/">NetworkManager openconnect plugin</a>. For example, with:</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">network</span><span class="o">-</span><span class="n">manager</span><span class="o">-</span><span class="n">openconnect</span><span class="o">-</span><span class="n">gnome</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">network</span><span class="o">-</span><span class="n">manager</span><span class="o">-</span><span class="n">openconnect</span><span class="o">-</span><span class="n">gnome</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
