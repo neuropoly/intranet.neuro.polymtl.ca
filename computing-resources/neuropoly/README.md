@@ -156,7 +156,7 @@ For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.
 
 | Spec | Description |
 | --------------- | -------------- |
-| **Purpose** | Programming pulse sequences within the Siemens IDEA environment for VE11C (Prisma) |
+| **Purpose** | Programming pulse sequences within the Siemens IDEA environment |
 | **Model** | PC |
 | **OS** | Windows 10 (⚠️ Connect with Microsoft Remote Desktop) |
 | **Hostname**    | `idea3t.neuro.polymtl.ca` |
@@ -166,16 +166,6 @@ For SCT database interface use: [SCT annotations](http://tristano.neuro.polymtl.
 **Possible error:** “The certificate or associated chain is not valid.”\
 **Solution:** Install remote Desktop v10 or higher (v8 does not work)
 ```
-
-### idea7t
-
-| Spec | Description |
-| --------------- | -------------- |
-| **Purpose** | Programming pulse sequences within the Siemens IDEA environment for VE12U (Terra) |
-| **Model** | PC |
-| **OS** | Windows 10 (⚠️ Connect with Microsoft Remote Desktop) |
-| **Hostname**    | `idea7t.neuro.polymtl.ca` |
-| **Credentials** | [NeuroPoly Internal Document: Idea7t Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.i6g9qdkw050o) |
 
 
 ### peterson
