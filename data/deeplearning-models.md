@@ -1,5 +1,9 @@
 # Deep Learning Models
 
+## nnUNET
+
+If you want to use nnU-Net to train your model, please use [NeuroPoly's nnU-Net's fork](https://github.com/spinalcordtoolbox/nnUNet-neuropoly) (also available on [PyPI](https://pypi.org/project/nnunetv2-neuropoly/)), which contains custom trainers, inference, and [other improvements](https://github.com/MIC-DKFZ/nnUNet/compare/master...spinalcordtoolbox:nnUNet-neuropoly:neuropoly-fork-patches), and most importantly, which ensures compatibility with SCT (consistent pytorch version between SCT and nnU-Net, more details [here](https://github.com/spinalcordtoolbox/spinalcordtoolbox/blob/0d1a50b3afddb01ba9deeec610d65d44819e71d3/requirements.txt#L37-L43)). Also check our [nnU-Net quickstart guide](https://github.com/ivadomed/utilities/blob/main/quick_start_guides/nnU-Net_quick_start_guide.md).
+
 ## Naming models
 
 Each model is saved in its own repository under the [ivadomed](https://github.com/ivadomed) organization. The convention for naming repositories is the following:
