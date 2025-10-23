@@ -455,6 +455,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nnunet">nnUNET</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-models">Naming models</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packaging-models">Packaging models</a></li>
 </ul>
@@ -470,6 +471,10 @@ document.write(`
                   
   <section id="deep-learning-models">
 <h1>Deep Learning Models<a class="headerlink" href="#deep-learning-models" title="Link to this heading">#</a></h1>
+<section id="nnunet">
+<h2>nnUNET<a class="headerlink" href="#nnunet" title="Link to this heading">#</a></h2>
+<p>If you want to use nnU-Net to train your model, please use <a class="reference external" href="https://github.com/spinalcordtoolbox/nnUNet-neuropoly">NeuroPoly’s nnU-Net’s fork</a> (also available on <a class="reference external" href="https://pypi.org/project/nnunetv2-neuropoly/">PyPI</a>), which contains custom trainers, inference, and <a class="reference external" href="https://github.com/MIC-DKFZ/nnUNet/compare/master...spinalcordtoolbox:nnUNet-neuropoly:neuropoly-fork-patches">other improvements</a>, and most importantly, which ensures compatibility with SCT (consistent pytorch version between SCT and nnU-Net, more details <a class="reference external" href="https://github.com/spinalcordtoolbox/spinalcordtoolbox/blob/0d1a50b3afddb01ba9deeec610d65d44819e71d3/requirements.txt#L37-L43">here</a>). Also check our <a class="reference external" href="https://github.com/ivadomed/utilities/blob/main/quick_start_guides/nnU-Net_quick_start_guide.md">nnU-Net quickstart guide</a>.</p>
+</section>
 <section id="naming-models">
 <h2>Naming models<a class="headerlink" href="#naming-models" title="Link to this heading">#</a></h2>
 <p>Each model is saved in its own repository under the <a class="reference external" href="https://github.com/ivadomed">ivadomed</a> organization. The convention for naming repositories is the following:</p>
@@ -577,6 +582,7 @@ used during training (for the sake of reproducibility).</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nnunet">nnUNET</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-models">Naming models</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packaging-models">Packaging models</a></li>
 </ul>
