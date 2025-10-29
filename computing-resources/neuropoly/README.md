@@ -88,6 +88,17 @@ _For system administrators_: Please log all the changes on the station by updati
 
 _For system administrators_: Please log all the changes on the station by updating the ansible scripts from [https://github.com/neuropoly/computers](https://github.com/neuropoly/computers).
 
+### tassan
+
+| Spec         | Description                  |
+| ------------ | ---------------------------- |
+| **CPU**      | Intel(R) Xeon(R) w7-2495X 24-Core |
+| **GPU**      | 2x RTX PRO 6000 Blackwell Max-Q Workstation Edition |
+| **RAM**      | 128GB DDR5                |
+| **Hostname** | `romane.neuro.polymtl.ca`    |
+
+* [How to use GPU Clusters at NeuroPoly](https://intranet.neuro.polymtl.ca/computing-resources/neuropoly/gpus.html)
+  * [Video tutorial to get started](https://drive.google.com/file/d/17-eLVBiMNA8bNbfzpD6NLxHApZRDoy1B/view?usp=sharing)
 
 ### bireli
 
