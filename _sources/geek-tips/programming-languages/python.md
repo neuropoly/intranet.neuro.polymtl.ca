@@ -2,7 +2,6 @@
 
 ## Installation
 
-* [Individual package installation](https://www.neuro.polymtl.ca/tips_and_tricks/python/installation)
 * [Enthough Canopy](https://www.neuro.polymtl.ca/tips_and_tricks/python/canopy)
 * [Miniconda (preferred)](https://www.neuro.polymtl.ca/tips_and_tricks/python/miniconda)
 
@@ -80,6 +79,9 @@ If you then paste the permalink in a GitHub comment on issues/PRs, GitHub will a
 ![image](https://github.com/neuropoly/intranet.neuro.polymtl.ca/assets/16181459/11225781-78dc-4972-8ab5-9dc403e05ebe)
 
 ## Virtual Environments
+
+Virtual environments are the recommended way to manage your python environment. They allow the use of specific versions
+in your project, which helps reproducibility and stability.
 
 1\. Create a virtual environment for a project:
 
