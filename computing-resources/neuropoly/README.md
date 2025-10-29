@@ -637,7 +637,7 @@ Optionally, install this shortcut which allows you to just type `ssh <STATION>`:
 
 ```bash
 cat >~/.ssh/config_neuropoly <<EOF
-Match Host abbey,betty,bireli,coltrane,davis,django,ella,ferguson,jarrett,joplin,kirk,marsalis,mingus,parker,romane,rosenberg,tatum
+Match Host abbey,betty,bireli,coltrane,davis,django,ella,ferguson,jarrett,joplin,kirk,marsalis,mingus,parker,romane,rosenberg,tatum,tassan
 HostName %h.neuro.polymtl.ca
 
 Match host *.neuro.polymtl.ca
