@@ -93,7 +93,7 @@ _For system administrators_: Please log all the changes on the station by updati
 | Spec         | Description                  |
 | ------------ | ---------------------------- |
 | **CPU**      | Intel(R) Xeon(R) w7-2495X 24-Core |
-| **GPU**      | 2x RTX PRO 6000 Blackwell Max-Q Workstation Edition |
+| **GPU**      | 2x RTX PRO 6000 Blackwell Max-Q Workstation Edition 96GB |
 | **RAM**      | 128GB DDR5                |
 | **Hostname** | `romane.neuro.polymtl.ca`    |
 
