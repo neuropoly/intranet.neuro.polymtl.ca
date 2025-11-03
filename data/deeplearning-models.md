@@ -66,13 +66,20 @@ $ tree model-spinal-rootlets-mp2rage-r20240915.zip
     │         ├── progress.png
     │         ├── training_log_2024_9_3_14_06_03.png
     │         └── training_log_2024_9_3_14_06_03.txt
-    └── plans.json
+    ├── plans.json
+    └── trainer_class.py
+
 ```
 
 ```{important}
 The `dataset.json` file should contain the `image_orientation` entry, for example: `"image_orientation": "RPI"`. This
 entry is used by SCT to determine the image orientation. But, it is also a good idea to document which orientation was 
 used during training (for the sake of reproducibility).
+```
+
+```{warning}
+The `trainer_class.py` file is only necessary if you have used a custom trainer during training. For more information
+on what should be in this file, please refer to the [nnUNet Quick Start Guide](https://github.com/ivadomed/utilities/blob/main/quick_start_guides/nnU-Net_quick_start_guide.md#ii-using-a-custom-trainer).
 ```
 
 3. Zip the folder and upload it as an asset in the release
