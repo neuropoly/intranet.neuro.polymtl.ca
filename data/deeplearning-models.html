@@ -455,9 +455,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nnunet">nnUNET</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-models">Naming models</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packaging-models">Packaging models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-and-naming-the-model-repository">1. Creating and naming the model repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training-the-model">2. Training the model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packaging-models">3. Packaging models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrating-the-model-into-sct">4. Integrating the model into SCT.</a></li>
 </ul>
             </nav>
         </div>
@@ -471,12 +472,20 @@ document.write(`
                   
   <section id="deep-learning-models">
 <h1>Deep Learning Models<a class="headerlink" href="#deep-learning-models" title="Link to this heading">#</a></h1>
-<section id="nnunet">
-<h2>nnUNET<a class="headerlink" href="#nnunet" title="Link to this heading">#</a></h2>
-<p>If you want to use nnU-Net to train your model, please use <a class="reference external" href="https://github.com/spinalcordtoolbox/nnUNet-neuropoly">NeuroPoly’s nnU-Net’s fork</a> (also available on <a class="reference external" href="https://pypi.org/project/nnunetv2-neuropoly/">PyPI</a>), which contains custom trainers, inference, and <a class="reference external" href="https://github.com/MIC-DKFZ/nnUNet/compare/master...spinalcordtoolbox:nnUNet-neuropoly:neuropoly-fork-patches">other improvements</a>, and most importantly, which ensures compatibility with SCT (consistent pytorch version between SCT and nnU-Net, more details <a class="reference external" href="https://github.com/spinalcordtoolbox/spinalcordtoolbox/blob/0d1a50b3afddb01ba9deeec610d65d44819e71d3/requirements.txt#L37-L43">here</a>). Also check our <a class="reference external" href="https://github.com/ivadomed/utilities/blob/main/quick_start_guides/nnU-Net_quick_start_guide.md">nnU-Net quickstart guide</a>.</p>
-</section>
-<section id="naming-models">
-<h2>Naming models<a class="headerlink" href="#naming-models" title="Link to this heading">#</a></h2>
+<p>Creating a new model involves a number of substeps, summarized below:</p>
+<ol class="arabic simple">
+<li><p>Creating a <strong>new GitHub repository</strong> for the model.</p>
+<ul class="simple">
+<li><p>This repository will track issues, as well as store the README and any code or scripts associated with your model.</p></li>
+</ul>
+</li>
+<li><p><strong>Training</strong> the model.</p></li>
+<li><p><strong>Packaging</strong> the trained model into a <code class="docutils literal notranslate"><span class="pre">.zip</span></code>.</p></li>
+<li><p><strong>Integrating</strong> the model into the Spinal Cord Toolbox (SCT), if appropriate.</p></li>
+</ol>
+<p>More details on each step can be found below:</p>
+<section id="creating-and-naming-the-model-repository">
+<h2>1. Creating and naming the model repository<a class="headerlink" href="#creating-and-naming-the-model-repository" title="Link to this heading">#</a></h2>
 <p>Each model is saved in its own repository under the <a class="reference external" href="https://github.com/ivadomed">ivadomed</a> organization. The convention for naming repositories is the following:</p>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model_task_anatomy_animal_pathology_condition_contrast_architecture</span>
@@ -503,8 +512,14 @@ Default fields can be ommited to avoid long names.</p>
 </pre></div>
 </div>
 </section>
+<hr class="docutils" />
+<section id="training-the-model">
+<h2>2. Training the model<a class="headerlink" href="#training-the-model" title="Link to this heading">#</a></h2>
+<p>For instructions on how to train a new model using the nnU-Net framework, please refer to the <a class="reference external" href="https://github.com/ivadomed/utilities/blob/main/quick_start_guides/nnU-Net_quick_start_guide.md">nnU-Net Quick Start Guide</a>.</p>
+</section>
+<hr class="docutils" />
 <section id="packaging-models">
-<h2>Packaging models<a class="headerlink" href="#packaging-models" title="Link to this heading">#</a></h2>
+<h2>3. Packaging models<a class="headerlink" href="#packaging-models" title="Link to this heading">#</a></h2>
 <p>Models to be used by 3rd party software (e.g. <a class="reference external" href="https://spinalcordtoolbox.com/">SCT</a>) should be uploaded as ‘assets’ to a release of the repository. The steps are:</p>
 <ol class="arabic simple">
 <li><p>Create a release of the repository. The tag and title of the release should be <code class="docutils literal notranslate"><span class="pre">rYYYYMMDD</span></code>, example: <code class="docutils literal notranslate"><span class="pre">r20240915</span></code>.</p></li>
@@ -534,6 +549,11 @@ used during training (for the sake of reproducibility).</p>
 <li><p>Zip the folder and upload it as an asset in the release</p></li>
 <li><p>Publish the release.</p></li>
 </ol>
+</section>
+<hr class="docutils" />
+<section id="integrating-the-model-into-sct">
+<h2>4. Integrating the model into SCT.<a class="headerlink" href="#integrating-the-model-into-sct" title="Link to this heading">#</a></h2>
+<p>For instructions on how to integrate the model into the Spinal Cord Toolbox, please refer to the <a class="reference external" href="https://github.com/spinalcordtoolbox/spinalcordtoolbox/wiki/DL-models%3A-Integrating-a-new-model-into-SCT">Integrating a new model into SCT</a> page on the SCT Developer Wiki.</p>
 </section>
 </section>
 
@@ -582,9 +602,10 @@ used during training (for the sake of reproducibility).</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nnunet">nnUNET</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-models">Naming models</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packaging-models">Packaging models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-and-naming-the-model-repository">1. Creating and naming the model repository</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#training-the-model">2. Training the model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#packaging-models">3. Packaging models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrating-the-model-into-sct">4. Integrating the model into SCT.</a></li>
 </ul>
   </nav></div>
 

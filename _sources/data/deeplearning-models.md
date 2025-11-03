@@ -1,10 +1,16 @@
 # Deep Learning Models
 
-## nnUNET
+Creating a new model involves a number of substeps, summarized below:
 
-If you want to use nnU-Net to train your model, please use [NeuroPoly's nnU-Net's fork](https://github.com/spinalcordtoolbox/nnUNet-neuropoly) (also available on [PyPI](https://pypi.org/project/nnunetv2-neuropoly/)), which contains custom trainers, inference, and [other improvements](https://github.com/MIC-DKFZ/nnUNet/compare/master...spinalcordtoolbox:nnUNet-neuropoly:neuropoly-fork-patches), and most importantly, which ensures compatibility with SCT (consistent pytorch version between SCT and nnU-Net, more details [here](https://github.com/spinalcordtoolbox/spinalcordtoolbox/blob/0d1a50b3afddb01ba9deeec610d65d44819e71d3/requirements.txt#L37-L43)). Also check our [nnU-Net quickstart guide](https://github.com/ivadomed/utilities/blob/main/quick_start_guides/nnU-Net_quick_start_guide.md).
+1. Creating a **new GitHub repository** for the model.
+   - This repository will track issues, as well as store the README and any code or scripts associated with your model.
+2. **Training** the model.
+3. **Packaging** the trained model into a `.zip`.
+4. **Integrating** the model into the Spinal Cord Toolbox (SCT), if appropriate.
 
-## Naming models
+More details on each step can be found below:
+
+## 1. Creating and naming the model repository
 
 Each model is saved in its own repository under the [ivadomed](https://github.com/ivadomed) organization. The convention for naming repositories is the following:
 
@@ -34,7 +40,15 @@ model_seg_sc-gm-lesion_human_ms_exvivo_t2star
 model_seg_sc-gm_t1-t2_unet3d  # multi-channel, multi-class
 ~~~
 
-## Packaging models
+----
+
+## 2. Training the model
+
+For instructions on how to train a new model using the nnU-Net framework, please refer to the [nnU-Net Quick Start Guide](https://github.com/ivadomed/utilities/blob/main/quick_start_guides/nnU-Net_quick_start_guide.md).
+
+----
+
+## 3. Packaging models
 
 Models to be used by 3rd party software (e.g. [SCT](https://spinalcordtoolbox.com/)) should be uploaded as 'assets' to a release of the repository. The steps are:
 1. Create a release of the repository. The tag and title of the release should be `rYYYYMMDD`, example: `r20240915`.
@@ -63,3 +77,9 @@ used during training (for the sake of reproducibility).
 
 3. Zip the folder and upload it as an asset in the release
 4. Publish the release.
+
+----
+
+## 4. Integrating the model into SCT.
+
+For instructions on how to integrate the model into the Spinal Cord Toolbox, please refer to the [Integrating a new model into SCT](https://github.com/spinalcordtoolbox/spinalcordtoolbox/wiki/DL-models%3A-Integrating-a-new-model-into-SCT) page on the SCT Developer Wiki.
