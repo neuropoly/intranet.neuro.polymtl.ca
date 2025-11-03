@@ -536,7 +536,8 @@ include only <code class="docutils literal notranslate"><span class="pre">checkp
 <span class="w">    </span>│<span class="w">         </span>├──<span class="w"> </span>progress.png
 <span class="w">    </span>│<span class="w">         </span>├──<span class="w"> </span>training_log_2024_9_3_14_06_03.png
 <span class="w">    </span>│<span class="w">         </span>└──<span class="w"> </span>training_log_2024_9_3_14_06_03.txt
-<span class="w">    </span>└──<span class="w"> </span>plans.json
+<span class="w">    </span>├──<span class="w"> </span>plans.json
+<span class="w">    </span>└──<span class="w"> </span>trainer_class.py
 </pre></div>
 </div>
 <div class="admonition important">
@@ -544,6 +545,11 @@ include only <code class="docutils literal notranslate"><span class="pre">checkp
 <p>The <code class="docutils literal notranslate"><span class="pre">dataset.json</span></code> file should contain the <code class="docutils literal notranslate"><span class="pre">image_orientation</span></code> entry, for example: <code class="docutils literal notranslate"><span class="pre">&quot;image_orientation&quot;:</span> <span class="pre">&quot;RPI&quot;</span></code>. This
 entry is used by SCT to determine the image orientation. But, it is also a good idea to document which orientation was
 used during training (for the sake of reproducibility).</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">trainer_class.py</span></code> file is only necessary if you have used a custom trainer during training. For more information
+on what should be in this file, please refer to the <a class="reference external" href="https://github.com/ivadomed/utilities/blob/main/quick_start_guides/nnU-Net_quick_start_guide.md#ii-using-a-custom-trainer">nnUNet Quick Start Guide</a>.</p>
 </div>
 <ol class="arabic simple" start="3">
 <li><p>Zip the folder and upload it as an asset in the release</p></li>
