@@ -2,10 +2,9 @@
 
 ## Computers
 
-While any reasonably modern workstation with networking capabilities is sufficient for research here, we recommend one of the following retailers; their products are easy to repair/upgrade, and you can configure the specifications of their systems to meet your personal needs:
+While any reasonably modern workstation with networking capabilities is sufficient for research here, we recommend one of the following retailers if you can afford it. Their products are easy to repair/upgrade, and you can configure the specifications of their systems to meet your personal needs:
 
 * [System76](https://system76.com/): Pre-built systems with [Pop!_OS](https://system76.com/pop/) pre-installated.
-* [Framework](https://frame.work/ca/en): Modular I/O systems with Windows 11 compatability (alternatively, you can provide and install your own OS of choice).
 
 ## RF Lab
 
