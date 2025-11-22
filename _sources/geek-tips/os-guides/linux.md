@@ -1,6 +1,6 @@
 # Linux
 
-## **Automatic **M**ount on Startup**
+## **Automatic Mount on Startup**
 
 For the following steps you need admin permissions.
 
@@ -74,16 +74,18 @@ PATH=${FSLDIR}/bin:${PATH}
 export FSLDIR PATH
 ```
 
-### Miniconda
+### Conda (Miniforge)
 
-Run the miniconda installer shell script for linux you can get there [http://conda.pydata.org/miniconda.html](http://conda.pydata.org/miniconda.html)
+```{note}
+Due to recent changes in the Terms of Service for the `default` channel in Anaconda, which puts our users at risk of legal action, the instructions below are for installing `miniforge`. This is a fork of `miniconda` that uses the `conda-forge` channel by default instead. It also uses `mamba` as its installer, instead of native `conda` installer; this can greatly speed up environment set-up. See [this SCT issue](https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/4670) for further details on why you should use `miniforge` instead of `miniconda` for your Python environment management needs.
+```
+
+To install `conda` (via `miniforge`) on your computer:
+
+1. Download the `miniforge` installation script for your Linux distribution; you can find their latest release [here](https://conda-forge.org/miniforge/) (if you don't know which file to get, try the `x86_64` release first).
+
+2. Open a new shell, and run the following command:
 
 ```bash
-~ bash Miniconda-*.sh
-```
-
-Then, in the SCT repo, type:
-
-```
-~ bash ./requirements/requirements.sh
+bash Miniforge3-*.sh
 ```
