@@ -77,7 +77,7 @@ export FSLDIR PATH
 ### Conda (Miniforge)
 
 ```{note}
-Due to recent changes in the Terms of Service for the `default` channel in Anaconda, which puts our users at risk of legal action, the instructions below are for installing `miniforge`. This is a fork of `miniconda` that uses the `conda-forge` channel by default instead. It also uses `mamba` as its installer, instead of native `conda` installer; this can greatly speed up environment set-up. See [this SCT issue](https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/4670) for further details on why you should use `miniforge` instead of `miniconda` for your Python environment management needs.
+Due to recent changes in the Terms of Service for the `default` channel in Anaconda, which puts our users at risk of legal action, the instructions below are for installing `miniforge`. This is a fork of `miniconda` that uses the `conda-forge` channel by default instead. It also uses `mamba` as its installer, instead of the native `conda` installer; this can greatly speed up environment set-up. See [this SCT issue](https://github.com/spinalcordtoolbox/spinalcordtoolbox/issues/4670) for further details on why you should use `miniforge` instead of `miniconda` for your Python environment management needs.
 ```
 
 To install `conda` (via `miniforge`) on your computer:
