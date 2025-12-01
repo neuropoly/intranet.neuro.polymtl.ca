@@ -160,6 +160,10 @@ manuscripts/
 
 Excellent [recommendations](https://twitter.com/drbreaky/status/1385863882816647169?s=27) from Michael Breakspear on how to write a cover letter.
 
+## CLAIM checklist for medical AI papers
+
+For medical imaging AI papers, consider filling the [CLAIM](https://pubs.rsna.org/doi/10.1148/ryai.240300#tbl1) checklist before submission. Mostly relevant for RSNA journals, but potentially for other AI journals as well.
+
 ## Addressing Reviewer Comments
 
 * If using gdoc, create a new 'r1' folder. Duplicate the r0 version of the manuscript inside this folder. This new r1 version is modified using 'suggestion' mode to keep track of the modifications. That version has the suffix '_versiontracking'. If a clean version is asked for, also create a version (without any suffix) without any version tracking and comments. That one will be copied for r2.
