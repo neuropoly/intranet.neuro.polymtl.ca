@@ -28,15 +28,15 @@ Extensive list of BIC how-to information: [https://forum.bic.mni.mcgill.ca/t/how
 
 Short version:
 1. Login to BIC server (you need to ask for an account in the first place): [http://www.bic.mni.mcgill.ca/Services/HowToLogin](http://www.bic.mni.mcgill.ca/Services/HowToLogin)
-2. Type "find_mri sessionname", where MRIID is the name of your scan session (for example acdc_spine_7t_049p)
-3. Note down the full path of the sessionname under _/data/transfer/dicom/sessionname_X_X_ (for example, `/data/dicom/acdc_spine_7t_049p_20220923_111852672`)
-4. Claim the data as yours: "find_mri -claim sessionname"
+2. Type `find_mri <SESSION_NAME>`, where SESSION_NAME is the name of your scan session. Example: `find_mri acdc_spine_7t_049p`.
+3. Note down the FULL_PATH of the SESSION_NAME: `/data/transfer/dicom/sessionname_X_X_`. Example: `/data/dicom/acdc_spine_7t_049p_20220923_111852672`.
+4. Claim the data as yours: `find_mri -claim <FULL_PATH>`
 5. Exit the ssh session
 6. Use scp or rsync or Filezilla to download that data. 
 
    Using scp:
    ```
-   scp -r username@login.bic.mni.mcgill.ca:/data/transfer/dicom/sessionname_X_X ~/local/direction/path
+   scp -r username@login.bic.mni.mcgill.ca:<FULL_PATH> ~/local/direction/path
    ```
    For our example, that would be:
    ```

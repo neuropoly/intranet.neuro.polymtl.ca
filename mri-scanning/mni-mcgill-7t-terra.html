@@ -499,13 +499,13 @@ document.write(`
 <p>Short version:</p>
 <ol class="arabic">
 <li><p>Login to BIC server (you need to ask for an account in the first place): <a class="reference external" href="http://www.bic.mni.mcgill.ca/Services/HowToLogin">http://www.bic.mni.mcgill.ca/Services/HowToLogin</a></p></li>
-<li><p>Type “find_mri sessionname”, where MRIID is the name of your scan session (for example acdc_spine_7t_049p)</p></li>
-<li><p>Note down the full path of the sessionname under <em>/data/transfer/dicom/sessionname_X_X</em> (for example, <code class="docutils literal notranslate"><span class="pre">/data/dicom/acdc_spine_7t_049p_20220923_111852672</span></code>)</p></li>
-<li><p>Claim the data as yours: “find_mri -claim sessionname”</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">find_mri</span> <span class="pre">&lt;SESSION_NAME&gt;</span></code>, where SESSION_NAME is the name of your scan session. Example: <code class="docutils literal notranslate"><span class="pre">find_mri</span> <span class="pre">acdc_spine_7t_049p</span></code>.</p></li>
+<li><p>Note down the FULL_PATH of the SESSION_NAME: <code class="docutils literal notranslate"><span class="pre">/data/transfer/dicom/sessionname_X_X_</span></code>. Example: <code class="docutils literal notranslate"><span class="pre">/data/dicom/acdc_spine_7t_049p_20220923_111852672</span></code>.</p></li>
+<li><p>Claim the data as yours: <code class="docutils literal notranslate"><span class="pre">find_mri</span> <span class="pre">-claim</span> <span class="pre">&lt;FULL_PATH&gt;</span></code></p></li>
 <li><p>Exit the ssh session</p></li>
 <li><p>Use scp or rsync or Filezilla to download that data.</p>
 <p>Using scp:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scp</span> <span class="o">-</span><span class="n">r</span> <span class="n">username</span><span class="nd">@login</span><span class="o">.</span><span class="n">bic</span><span class="o">.</span><span class="n">mni</span><span class="o">.</span><span class="n">mcgill</span><span class="o">.</span><span class="n">ca</span><span class="p">:</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">transfer</span><span class="o">/</span><span class="n">dicom</span><span class="o">/</span><span class="n">sessionname_X_X</span> <span class="o">~/</span><span class="n">local</span><span class="o">/</span><span class="n">direction</span><span class="o">/</span><span class="n">path</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scp</span> <span class="o">-</span><span class="n">r</span> <span class="n">username</span><span class="nd">@login</span><span class="o">.</span><span class="n">bic</span><span class="o">.</span><span class="n">mni</span><span class="o">.</span><span class="n">mcgill</span><span class="o">.</span><span class="n">ca</span><span class="p">:</span><span class="o">&lt;</span><span class="n">FULL_PATH</span><span class="o">&gt;</span> <span class="o">~/</span><span class="n">local</span><span class="o">/</span><span class="n">direction</span><span class="o">/</span><span class="n">path</span>
 </pre></div>
 </div>
 <p>For our example, that would be:</p>
