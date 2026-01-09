@@ -3,7 +3,7 @@
 ## Journals
 
 ```{important}
-Our institutions have a partnership with some publishers to waive the article processing charges (APC) for some journal. This notably concerns hybrid journals at Elsevier and Wiley. See list [here](https://guides.biblio.polymtl.ca/libre_acces/rabais). If you have a doubt, please contact [biblio@polymtl.ca](biblio@polymtl.ca).
+Our institutions have a partnership with some publishers to waive the article processing charges (APC) for some journal. This notably concerns hybrid journals at Elsevier and Wiley. See list [here](https://search.scifree.se/polymtl). If you have a doubt, please contact [biblio@polymtl.ca](biblio@polymtl.ca).
 ```
 
 (*) the impact factor is not up to date, but is just given as a 'ballpark' for ranking journal.
