@@ -8,10 +8,11 @@
 * [🎥 How MRI works / Fourier encoding (check out Parts 1, 2, 3, etc.)](https://www.youtube.com/watch?v=TQegSF4ZiIQ&t=0s&ab_channel=thePIRL)
 * [🎥 The Insane Engineering of MRI Machines](https://www.youtube.com/watch?v=NlYXqRG7lus&list=PLVvBuh5zSlbntrik2LUfTHCzUTTMxSYgr&index=6&ab_channel=RealEngineering)
 * [🎥 Introduction to MRI by Dr. Michael Lipton (intuitive for people with a less technical background](https://www.youtube.com/watch?v=35gfOtjRcic)
-* [Nishimura, Principles of Magnetic Resonance Imaging (1996)](https://drive.google.com/drive/folders/177c9urmoXCYOiEWhuiGeRzKoKsF42cwM) (NeuroPoly members only)
-* [Questions and Answers in MRI](https://mriquestions.com/index.html)
-* [🇫🇷 MRI Online Course (in French)](https://www.imaios.com/fr/e-Cours/e-MRI)
-* [🇫🇷 Méthodes en neurosciences cognitives](https://methodes-cogneuro.github.io/intro.html)
+* [🌐 Peder Larson: Introduction to Principles of MRI](https://larsonlab.github.io/MRI-education-resources)
+* [📘 Nishimura, Principles of Magnetic Resonance Imaging (1996)](https://drive.google.com/drive/folders/177c9urmoXCYOiEWhuiGeRzKoKsF42cwM) (NeuroPoly members only)
+* [🌐 Questions and Answers in MRI](https://mriquestions.com/index.html)
+* [🌐🇫🇷 MRI Online Course (in French)](https://www.imaios.com/fr/e-Cours/e-MRI)
+* [🌐🇫🇷 Méthodes en neurosciences cognitives](https://methodes-cogneuro.github.io/intro.html)
 * 📄 [Eills et al. Spin Hyperpolarization in Modern Magnetic Resonance. Chem. Rev. 2023](https://pubs.acs.org/doi/10.1021/acs.chemrev.2c00534)
 
 ## Fundamentals
