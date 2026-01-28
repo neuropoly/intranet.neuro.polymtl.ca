@@ -1,0 +1,1325 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" data-theme="auto">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Dataset curation &#8212; NeuroPoly Internal Wiki  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "auto";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "auto";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme.css?v=9a9c6050" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=c607423c"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'data/dataset-curation';</script>
+    <link rel="icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="data.neuro.polymtl.ca" href="git-datasets.html" />
+    <link rel="prev" title="💾 Data" href="README.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="auto">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../_static/logo_dark.png" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">NeuroPoly Lab Manual</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><!-- GTranslate: https://gtranslate.io/ -->
+<div class="center-g-translate">
+    <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="gflag nturl" style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png" height="24" width="24" alt="English" /></a><a href="#" onclick="doGTranslate('en|fr');return false;" title="French" class="gflag nturl" style="background-position:-200px -100px;"><img src="//gtranslate.net/flags/blank.png" height="24" width="24" alt="French" /></a>
+
+    <style type="text/css">
+        <!--
+        a.gflag {vertical-align:middle;font-size:24px;padding:1px 0;background-repeat:no-repeat;background-image:url(//gtranslate.net/flags/24.png);}
+        a.gflag img {border:0;}
+        a.gflag:hover {background-image:url(//gtranslate.net/flags/24a.png);}
+        #goog-gt-tt {display:none !important;}
+        .goog-te-banner-frame {display:none !important;}
+        .goog-te-menu-value:hover {text-decoration:none !important;}
+        body {top:0 !important;}
+        #google_translate_element2 {display:none!important;}
+        -->
+    </style>
+
+    <div id="google_translate_element2"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'en',autoDisplay: false}, 'google_translate_element2');}
+    </script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
+        /* ]]> */
+    </script>
+</div></div>
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../onboarding/README.html"><span>👋</span> Onboarding</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../onboarding/getting-started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../onboarding/campus-access.html">Campus Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../onboarding/infrastructure.html">Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../onboarding/dropbox-google-drive.html">Google Drive</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../onboarding/computer-setup/README.html">Computer Setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../onboarding/computer-setup/mail.html"><span>📧</span> Email</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../onboarding/computer-setup/slack.html"><span>🗣</span> Slack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../onboarding/computer-setup/eduroam.html"><span>📶</span> Eduroam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../onboarding/computer-setup/shell-profile.html"><span>💻</span> Shell Profile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../onboarding/computer-setup/configuration-tips.html"><span>💡</span> Other configuration tips</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../onboarding/software-development.html">Software development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../onboarding/students-interns.html">Students and Interns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../onboarding/consultants-ra.html">Consultants and RA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../onboarding/postdoc.html">Postdoctoral fellows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../onboarding/admin.html">Administrators</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../agenda-and-calendar.html"><span>📅</span> Calendar &amp; Meetings</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../computing-resources/README.html"><span>🖥</span> Computing Resources</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../computing-resources/neuropoly/README.html"><span>🖥</span> Computers @NeuroPoly</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../computing-resources/neuropoly/cpus.html">CPU Clusters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../computing-resources/neuropoly/gpus.html">GPU Clusters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../computing-resources/neuropoly/cst-studio.html">CST Studio</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../computing-resources/clusters-at-criugm.html"><span>🖥</span> Computers @CRIUGM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computing-resources/compute-canada.html"><span>🖥</span> Compute Canada</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computing-resources/printer.html"><span>🖨</span> Printer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computing-resources/microsoft365.html"><span>☁️</span> Microsoft 365</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../computing-resources/youtube.html">YouTube Procedure</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="README.html"><span>💾</span> Data</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Dataset curation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-datasets.html"><code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="duke.html"><code class="docutils literal notranslate"><span class="pre">duke</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="admin-guide.html">Dataset admin guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deeplearning-models.html">Deep Learning Models</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../mri-scanning/README.html"><span>🧲</span> MRI Scanning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../mri-scanning/unf-3t-prisma.html">UNF (3T Prisma)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mri-scanning/mni-mcgill-7t-terra.html">MNI/McGill (7T Terra)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mri-scanning/mhi-7t-agilent.html">MHI (7T Agilent)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mri-scanning/concordia-ge.html">Concordia (3T GE)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rf-lab/README.html"><span>🔧</span> RF Lab</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rf-lab/mri-coils-at-neuropoly.html">NeuroPoly Coils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rf-lab/misc.html">Misc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rf-lab/mri-phantoms.html">Phantoms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rf-lab/3d-printing/README.html">3D Printing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rf-lab/3d-printing/octoprint.html">OctoPrint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rf-lab/pcb-manufacturing.html">PCB Manufacturing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rf-lab/cnc-machine.html">CNC machine</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Academic Life</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../courses.html"><span>🎓</span> University Courses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../comprehensive-exam-guide.html"><span>📖</span> Comprehensive Exam</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scholarships.html"><span>💰</span> Scholarships</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conferences.html"><span>✈️</span> Conferences</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../bibliography/README.html"><span>📚</span> Bibliography</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../bibliography/lab-theses.html">Theses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bibliography/spinal-cord-injury.html">Spinal Cord Injury</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bibliography/mri.html">MRI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bibliography/mri-analysis.html">MRI Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bibliography/deep-learning.html">Deep Learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bibliography/histology.html">Histology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bibliography/shared-paperpile-folder.html">Paperpile Folder</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../ideas-for-cool-projects.html"><span>💡</span> Ideas for Cool Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing-articles.html"><span>✍️</span>     Academic Writing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Miscellaneous</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../practical-information/README.html"><span>📎</span> Practical Information</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../practical-information/visa.html"><span>🌎</span> VISAs and Work Permits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practical-information/medical.html"><span>🏥</span> Medical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practical-information/living-in-montreal.html"><span>🇨🇦</span> Living in Montreal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../practical-information/purchasing-hardware-and-lab-supplies.html"><span>🛠</span> Purchasing Supplies</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../geek-tips/README.html"><span>🤓</span> Geek tips</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../geek-tips/useful-links.html">Useful links/Software</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../geek-tips/bash-shell/README.html">Bash/Shell</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/bash-shell/script.html">Script</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../geek-tips/programming-languages/README.html">Programming Languages</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/programming-languages/python.html">Python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/programming-languages/matlab.html">MATLAB</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../geek-tips/programming-languages/c%2B%2B/README.html">C++</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../geek-tips/programming-languages/c%2B%2B/installation-of-vtk-and-itk-on-mac-os-x.html">Installation of VTK and ITK on Mac OS X</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../geek-tips/programming-languages/c%2B%2B/using-xcode.html">Using XCode</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../geek-tips/git.html">Git &amp; Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geek-tips/git-annex.html">git-annex</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../geek-tips/os-guides/README.html">OS Guides</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/os-guides/linux.html">Linux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/os-guides/macosx.html">MacOSX</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../geek-tips/misc/README.html">Various Software &amp; Tools</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../geek-tips/misc/virtual-machines/README.html">Virtual Machines</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../geek-tips/misc/virtual-machines/virtualbox.html">VirtualBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../geek-tips/misc/virtual-machines/vagrant.html">Vagrant</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/misc/bitbucket.html">BitBucket</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../geek-tips/misc/docker/README.html">Docker</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../geek-tips/misc/docker/docker-for-deep-learning.html">Docker for Deep Learning</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/misc/dropbox.html">Dropbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/misc/jekyll.html">Jekyll</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/misc/microsoft-word.html">Microsoft Word</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/misc/openneuro.html">OpenNeuro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/misc/sketchup.html">Sketchup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/misc/xquartz.html">XQuartz</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../geek-tips/image-processing-software/README.html">Image Processing Software</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/image-processing-software/advanced-normalization-tools-ants.html">Advanced Normalization Tools (ANTs)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/image-processing-software/anima.html">Anima</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/image-processing-software/diffusion-simulator.html">Diffusion Simulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/image-processing-software/freesurfer.html">FreeSurfer</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../geek-tips/image-processing-software/fsl/README.html">FSL</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../geek-tips/image-processing-software/fsl/fsleyes.html">FSLeyes</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/image-processing-software/itk-snap.html">ITK-SNAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/image-processing-software/nifti.html">NIfTI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/image-processing-software/openneuro-cli.html">OpenNeuro CLI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/image-processing-software/osirix.html">OsiriX</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../geek-tips/deep-learning/README.html">Deep Learning</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/deep-learning/cuda.html">CUDA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/deep-learning/tensorflow.html">Tensorflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/deep-learning/conditional-random-fields-crf.html">Conditional Random Fields (CRF)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/deep-learning/restricted-boltzmann-machines.html">Restricted Boltzmann Machines (RBM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/deep-learning/misc.html">Misc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../geek-tips/deep-learning/WandB.html">WandB</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../edi.html"><span>🧩</span> EDI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html"><span>📞</span> Contact</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://neuro.polymtl.ca">NeuroPoly Website</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/edit/master/data/dataset-curation.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button"
+   title="Suggest edit"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+
+</a>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Dataset curation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Page Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-data-to-bids">Converting data to BIDS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-the-dataset">Naming the dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-raw-dataset">Building the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-structure">Raw structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subject-naming-convention">Subject naming convention</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-entities">Raw entities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-suffixes">Raw suffixes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-extensions">Raw extensions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#readme-md"><code class="docutils literal notranslate"><span class="pre">README.md</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-description-json"><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#participants-tsv"><code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#participants-json"><code class="docutils literal notranslate"><span class="pre">participants.json</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code"><code class="docutils literal notranslate"><span class="pre">code/</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-derivatives-datasets">Building the <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-structure">Derivatives structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-filename"><code class="docutils literal notranslate"><span class="pre">&lt;source_filename&gt;</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-entities">Derivative entities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-suffixes">Derivative suffixes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-extensions">Derivatives extensions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-labels-dataset-description-json"><code class="docutils literal notranslate"><span class="pre">derivatives/labels/dataset_description.json</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-labels-descriptions-tsv"><code class="docutils literal notranslate"><span class="pre">derivatives/labels/descriptions.tsv</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#json-sidecars">JSON sidecars</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#label-names">Label names</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-and-use-cases">Examples and use cases</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changelog-policy">Changelog policy</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="dataset-curation">
+<h1>Dataset curation<a class="headerlink" href="#dataset-curation" title="Link to this heading">#</a></h1>
+<section id="converting-data-to-bids">
+<h2>Converting data to BIDS<a class="headerlink" href="#converting-data-to-bids" title="Link to this heading">#</a></h2>
+<p>All git-annex datasets should be BIDS-compliant. For more information about the BIDS standard, please visit <a class="reference external" href="http://bids.neuroimaging.io">http://bids.neuroimaging.io</a>. For some examples of BIDS datasets, visit <a class="reference external" href="https://github.com/bids-standard/bids-examples">this page</a>. If you have questions, go to the <a class="reference external" href="https://neurostars.org/tag/bids">Neurostars BIDS forum</a>. A quick way to verify compliance with the convention is this <a class="reference external" href="https://bids-standard.github.io/bids-validator/">online BIDS validator</a>.</p>
+<p>When you receive raw data from an external collaborator, save them under a temporary location on one of NeuroPoly’s server, e.g.: <code class="docutils literal notranslate"><span class="pre">duke/temp</span></code>.</p>
+<p>Then, inspect the data and convert them to BIDS. It is recommended to write a script that does the conversion. The
+script should then be saved under the <code class="docutils literal notranslate"><span class="pre">code</span></code> folder of the final dataset. Some previous scripts can be found on
+<a class="reference external" href="https://github.com/neuropoly/data-management/tree/master/scripts">GitHub</a> or under the <code class="docutils literal notranslate"><span class="pre">code</span></code> folder of already existing datasets.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Once the data are converted to BIDS and <a class="reference internal" href="git-datasets.html#upload"><span class="std std-ref">uploaded</span></a> to git-annex repository, please delete the temporary folder.</p>
+</div>
+</section>
+<section id="naming-the-dataset">
+<h2>Naming the dataset<a class="headerlink" href="#naming-the-dataset" title="Link to this heading">#</a></h2>
+<p>Accurately naming our datasets is essential for effective data management and eliminating any ambiguity about their content. This practice significantly reduces the time required to select data for any project.</p>
+<p><strong>Syntax:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">animal</span><span class="o">-</span><span class="n">pathology</span><span class="o">-</span><span class="n">condition</span><span class="o">-</span><span class="n">anatomy</span><span class="o">-</span><span class="n">study</span><span class="o">-</span><span class="n">field</span><span class="o">-</span><span class="n">modality</span>
+</pre></div>
+</div>
+<p><strong>Keys/Values:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">animal</span> <span class="o">=</span> <span class="p">{</span><span class="n">human</span><span class="p">,</span> <span class="n">dog</span><span class="p">,</span> <span class="n">cat</span><span class="p">,</span> <span class="n">rat</span><span class="p">,</span> <span class="n">mouse</span><span class="p">,</span> <span class="o">...</span><span class="p">}</span><span class="o">.</span> <span class="n">Default</span><span class="o">=</span><span class="n">human</span>
+<span class="o">-</span> <span class="n">pathology</span> <span class="o">=</span> <span class="p">{</span><span class="n">hc</span><span class="p">,</span> <span class="n">ms</span><span class="p">,</span> <span class="n">sci</span><span class="p">}</span><span class="o">.</span> <span class="n">Default</span><span class="o">=</span><span class="n">hc</span>
+<span class="o">-</span> <span class="n">condition</span> <span class="o">=</span> <span class="p">{</span><span class="n">invivo</span><span class="p">,</span> <span class="n">exvivo</span><span class="p">}</span><span class="o">.</span> <span class="n">Default</span><span class="o">=</span><span class="n">invivo</span>
+<span class="o">-</span> <span class="n">anatomy</span> <span class="o">=</span> <span class="p">{</span><span class="n">sc</span><span class="p">,</span> <span class="n">gm</span><span class="p">,</span> <span class="n">csf</span><span class="p">,</span> <span class="n">brainstem</span><span class="p">,</span> <span class="n">axon</span><span class="p">,</span> <span class="n">myelin</span><span class="p">,</span> <span class="o">...</span><span class="p">}</span><span class="o">.</span> <span class="n">Default</span><span class="o">=</span><span class="n">sc</span>
+<span class="o">-</span> <span class="n">study</span> <span class="o">=</span> <span class="n">Study</span><span class="o">/</span><span class="n">site</span> <span class="n">associated</span> <span class="k">with</span> <span class="n">the</span> <span class="n">dataset</span><span class="o">.</span> <span class="n">Example</span><span class="p">:</span> <span class="n">canproco</span><span class="p">,</span> <span class="n">zurich</span><span class="p">,</span> <span class="n">mni</span><span class="o">.</span> <span class="n">Default</span><span class="o">=</span><span class="kc">None</span>
+<span class="o">-</span> <span class="n">field</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="n">t</span><span class="p">,</span> <span class="mi">7</span><span class="n">t</span><span class="p">}</span><span class="o">.</span> <span class="n">Do</span> <span class="ow">not</span> <span class="n">specify</span> <span class="k">if</span> <span class="n">multiple</span> <span class="n">strengths</span> <span class="n">are</span> <span class="n">present</span> <span class="n">Default</span> <span class="o">=</span> <span class="mi">3</span><span class="n">t</span><span class="o">.</span>
+<span class="o">-</span> <span class="n">modality</span> <span class="o">=</span> <span class="p">{</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">t2star</span><span class="p">,</span> <span class="n">dwi</span><span class="p">,</span> <span class="n">psir</span><span class="p">,</span> <span class="n">stir</span><span class="p">,</span> <span class="n">sem</span><span class="p">,</span> <span class="n">tem</span><span class="p">,</span> <span class="n">oi</span><span class="p">,</span> <span class="n">ct</span><span class="p">,</span> <span class="o">...</span><span class="p">}</span><span class="o">.</span> <span class="n">Do</span> <span class="ow">not</span> <span class="n">specify</span> <span class="k">if</span> <span class="n">multiple</span> <span class="n">contrasts</span><span class="o">/</span><span class="n">modalities</span> <span class="n">are</span> <span class="n">present</span><span class="o">.</span> <span class="n">Default</span><span class="o">=</span><span class="kc">None</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>[!NOTE]<br />
+Default fields can be ommited to avoid long names.</p>
+</div></blockquote>
+<p><strong>Examples:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ms</span><span class="o">-</span><span class="n">basel</span><span class="o">-</span><span class="n">mp2rage</span>
+<span class="n">hc</span><span class="o">-</span><span class="n">spinegeneric</span>
+<span class="n">ms</span><span class="o">-</span><span class="n">exvivo</span><span class="o">-</span><span class="n">nih</span>
+</pre></div>
+</div>
+</section>
+<section id="building-the-raw-dataset">
+<h2>Building the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset<a class="headerlink" href="#building-the-raw-dataset" title="Link to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset corresponds to the core dataset that contains all the different acquisitions generated for one or several subjects. <strong>NO</strong> postprocessing steps should be applied to these acquisitions.</p>
+<p>Subjects folders in the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset are structured as follows for MRI, with folders corresponding to subjects, [sessions] and MRI modalities:</p>
+<section id="raw-structure">
+<h3>Raw structure<a class="headerlink" href="#raw-structure" title="Link to this heading">#</a></h3>
+<p>Useful BIDS specifications are:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/02-common-principles.html#filesystem-structure">File naming conventions</a>,</p></li>
+<li><p><a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#code">Modality-agnostic conventions</a>,</p></li>
+<li><p><a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html">MRI-specific conventions</a>,</p></li>
+<li><p><a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/10-microscopy.html">Microscopy-specific conventions</a></p></li>
+</ul>
+<p>The example below applies for MRI data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── README.md
+├── dataset_description.json
+├── participants.tsv
+├── participants.json
+├── code/
+│   └── curate.py
+├── sub-&lt;label&gt;/
+│   └── [ses-&lt;label&gt;/]
+│        ├── anat/
+│        │   ├── sub-&lt;label&gt;[_ses-&lt;label&gt;][_acq-&lt;label&gt;][_ce-&lt;label&gt;][_rec-&lt;label&gt;][_run-&lt;index&gt;][_part-&lt;mag|phase|real|imag&gt;]_&lt;suffix&gt;.json
+│        │   └── sub-&lt;label&gt;[_ses-&lt;label&gt;][_acq-&lt;label&gt;][_ce-&lt;label&gt;][_rec-&lt;label&gt;][_run-&lt;index&gt;][_part-&lt;mag|phase|real|imag&gt;]_&lt;suffix&gt;.nii[.gz]
+│        ├── fmap/
+│        ├── func/
+│        └── dwi/
+│            ├── sub-&lt;label&gt;[_ses-&lt;label&gt;][_acq-&lt;label&gt;][_rec-&lt;label&gt;][_dir-&lt;label&gt;][_run-&lt;index&gt;][_part-&lt;mag|phase|real|imag&gt;]_dwi.bval
+│            ├── sub-&lt;label&gt;[_ses-&lt;label&gt;][_acq-&lt;label&gt;][_rec-&lt;label&gt;][_dir-&lt;label&gt;][_run-&lt;index&gt;][_part-&lt;mag|phase|real|imag&gt;]_dwi.bvec
+│            ├── sub-&lt;label&gt;[_ses-&lt;label&gt;][_acq-&lt;label&gt;][_rec-&lt;label&gt;][_dir-&lt;label&gt;][_run-&lt;index&gt;][_part-&lt;mag|phase|real|imag&gt;]_dwi.json
+│            └── sub-&lt;label&gt;[_ses-&lt;label&gt;][_acq-&lt;label&gt;][_rec-&lt;label&gt;][_dir-&lt;label&gt;][_run-&lt;index&gt;][_part-&lt;mag|phase|real|imag&gt;]_dwi.nii[.gz]
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>[Brackets] are characterizing optional informations</p>
+</div>
+</section>
+<section id="subject-naming-convention">
+<h3>Subject naming convention<a class="headerlink" href="#subject-naming-convention" title="Link to this heading">#</a></h3>
+<p><strong>Basic convention</strong>: <code class="docutils literal notranslate"><span class="pre">sub-XXX</span></code></p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">-</span><span class="mi">001</span>
+<span class="n">sub</span><span class="o">-</span><span class="mi">002</span>
+</pre></div>
+</div>
+<p><strong>Multi-institution/Multi-pathology convention</strong>: <code class="docutils literal notranslate"><span class="pre">sub-\&lt;site&gt;\&lt;pathology&gt;XXX</span></code></p>
+<p>Example of Multi-institution dataset:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">-</span><span class="n">mon001</span>      <span class="c1"># mon stands for Montreal</span>
+<span class="n">sub</span><span class="o">-</span><span class="n">tor001</span>      <span class="c1"># tor stands for Toronto</span>
+</pre></div>
+</div>
+<p>Example of Multi-institution/Multi-pathology dataset:</p>
+<p>In the case of multi-pathology dataset (two or more distinct diseases + healthy controls), it is convenient to include also pathology to the subjectID, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span><span class="o">-</span><span class="n">torDCM001</span>      <span class="c1"># tor stands for Toronto and DCM stands for Degenerative Cervical Myelopathy</span>
+<span class="n">sub</span><span class="o">-</span><span class="n">torHC001</span>       <span class="c1"># tor stands for Toronto and HC stands for Healthy Controls</span>
+<span class="n">sub</span><span class="o">-</span><span class="n">zurSCI001</span>      <span class="c1"># zur stands for Zurich and SCI stands for Spinal Cord Injury</span>
+</pre></div>
+</div>
+</section>
+<section id="raw-entities">
+<h3>Raw entities<a class="headerlink" href="#raw-entities" title="Link to this heading">#</a></h3>
+<p>Characterized by a key word (sub, ses, acq, etc.) and a value (label = an alphanumeric value, index = a nonnegative integer, etc) separated with a dash <code class="docutils literal notranslate"><span class="pre">-</span></code></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sub-&lt;label&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[ses-&lt;label&gt;]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[acq-&lt;label&gt;]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[ce-&lt;label&gt;]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[rec-&lt;label&gt;]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[run-&lt;index&gt;]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[part-&lt;mag|phase|real|imag&gt;]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[dir-&lt;label&gt;]</span></code></p></li>
+</ul>
+<p>Multiple entities can be used, but they must be separated using underscores <code class="docutils literal notranslate"><span class="pre">_</span></code></p>
+<p>Examples of special cases below:</p>
+<ul class="simple">
+<li><p>If you need to <strong>differentiate spinal cord images from the brain</strong> within the same dataset, use the <code class="docutils literal notranslate"><span class="pre">acq-cspine</span></code> tag. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_acq-cspine_T1w.nii.gz</span></code>. We opted for <code class="docutils literal notranslate"><span class="pre">acq-cspine</span></code> tag (see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html#anatomy-imaging-data">BIDS template</a>) because <code class="docutils literal notranslate"><span class="pre">bp-cspine</span></code> is not currently supported by the BIDS convention (see <a class="reference external" href="https://docs.google.com/document/d/1chZv7vAPE-ebPDxMktfI9i1OkLNR2FELIfpVYsaZPr4/edit">BEP25</a> BIDS extension proposal).</p></li>
+<li><p>If you need to differentiate between sequences acquired with <strong>different orientations</strong>, use the <code class="docutils literal notranslate"><span class="pre">acq-ax</span></code>, <code class="docutils literal notranslate"><span class="pre">acq-cor</span></code>, or <code class="docutils literal notranslate"><span class="pre">acq-sag</span></code> tag. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_acq-ax_T1w.nii.gz</span></code>.</p></li>
+<li><p>If you need to differentiate between different <strong>magnetization transfer (MT)</strong> sequences, use the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/04-modality-specific-files/01-magnetic-resonance-imaging-data.html#anatomy-imaging-data"><code class="docutils literal notranslate"><span class="pre">flip-&lt;index&gt;_mt-&lt;on|off&gt;</span></code></a> tag. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_flip-1_mt-on_MTS.nii.gz</span></code>, <code class="docutils literal notranslate"><span class="pre">sub-001_flip-1_mt-off_MTS.nii.gz</span></code> or <code class="docutils literal notranslate"><span class="pre">sub-001_flip-2_mt-off_MTS.nii.gz</span></code>.</p></li>
+</ul>
+<blockquote>
+<div><p>[!NOTE]
+“old” vs “new” MT naming (<a class="reference external" href="https://github.com/spine-generic/data-multi-subject/pull/135#issue-1535423905">source</a>):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">acq-MTon_MTS → flip-1_mt-on_MTS</span>
+<span class="go">acq-MToff_MTS → flip-1_mt-off_MTS</span>
+<span class="go">acq-T1w_MTS → flip-2_mt-off_MTS</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you to combine several above mentioned tags, use camelCase. For example, <code class="docutils literal notranslate"><span class="pre">sub-001_acq-cspineSag_T1w.nii.gz</span></code>.</p>
+</div>
+</section>
+<section id="raw-suffixes">
+<h3>Raw suffixes<a class="headerlink" href="#raw-suffixes" title="Link to this heading">#</a></h3>
+<p>An alphanumeric string located after all the entities following a final underscore <code class="docutils literal notranslate"><span class="pre">_</span></code> (i.e. the <code class="docutils literal notranslate"><span class="pre">&lt;suffix&gt;</span></code>). This suffix corresponds for MRI to the MRI contrast:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">T1w</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MP2RAGE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dwi</span></code></p></li>
+<li><p>etc.</p></li>
+</ul>
+<p>Only <strong>ONE</strong> suffix can be used within the filename.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For localizer/scout images, you can use <code class="docutils literal notranslate"><span class="pre">&lt;entities&gt;_acq-localizer_T1w.nii.gz</span></code>. (Relevant discussion <a class="reference external" href="https://github.com/neuropoly/data-management/issues/325#issuecomment-2186894284">here</a> and <a class="reference external" href="https://neurostars.org/t/how-to-name-localizer-scans-in-bids/29720/2">here</a>.)</p>
+</div>
+</section>
+<section id="raw-extensions">
+<h3>Raw extensions<a class="headerlink" href="#raw-extensions" title="Link to this heading">#</a></h3>
+<p>Files extensions:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.nii.gz</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.json</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.bval</span></code></p></li>
+<li><p>etc.</p></li>
+</ul>
+</section>
+<section id="readme-md">
+<h3><code class="docutils literal notranslate"><span class="pre">README.md</span></code><a class="headerlink" href="#readme-md" title="Link to this heading">#</a></h3>
+<p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#readme"><code class="docutils literal notranslate"><span class="pre">README.md</span></code></a> is a <a class="reference external" href="https://markdown-guide.readthedocs.io/en/latest/index.html">markdown</a> file describing the dataset in more detail.</p>
+<p>Please use the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> template below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># &lt;NAME OF DATASET&gt;</span>
+
+<span class="n">This</span> <span class="ow">is</span> <span class="n">an</span> <span class="o">&lt;</span><span class="n">MRI</span><span class="o">/</span><span class="n">Microscopy</span><span class="o">&gt;</span> <span class="n">dataset</span> <span class="n">acquired</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">context</span> <span class="n">of</span> <span class="n">the</span> <span class="o">&lt;</span><span class="n">XYZ</span><span class="o">&gt;</span> <span class="n">project</span><span class="o">.</span> 
+<span class="o">&lt;</span><span class="n">IF</span> <span class="n">DATASET</span> <span class="n">CONTAINS</span> <span class="n">DERIVATIVES</span><span class="o">&gt;</span><span class="n">It</span> <span class="n">also</span> <span class="n">contains</span> <span class="o">&lt;</span><span class="n">manual</span> <span class="n">segmentation</span><span class="o">/</span><span class="n">labels</span><span class="o">&gt;</span> <span class="n">of</span> <span class="o">&lt;</span><span class="n">MS</span> <span class="n">lesions</span><span class="o">/</span><span class="n">tumors</span><span class="o">/</span><span class="n">etc</span><span class="o">&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="o">&lt;</span><span class="n">one</span><span class="o">/</span><span class="n">two</span><span class="o">/</span><span class="ow">or</span> <span class="n">more</span><span class="o">&gt;</span> <span class="n">expert</span> <span class="n">raters</span> <span class="n">located</span> <span class="n">under</span> <span class="n">the</span> <span class="n">derivatives</span> <span class="n">folder</span><span class="o">.</span>
+
+<span class="c1">## Contact Person</span>
+
+<span class="n">Dataset</span> <span class="n">shared</span> <span class="n">by</span><span class="p">:</span>
+<span class="o">-</span> <span class="o">&lt;</span><span class="n">NAME</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">EMAIL</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">IF</span> <span class="n">THERE</span> <span class="n">WAS</span> <span class="n">EMAIL</span> <span class="n">COMM</span><span class="o">&gt;</span><span class="n">Email</span> <span class="n">communication</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">DATE</span> <span class="n">OF</span> <span class="n">EMAIL</span> <span class="n">AND</span> <span class="n">SUBJECT</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">IF</span> <span class="n">THERE</span> <span class="n">IS</span> <span class="n">A</span> <span class="n">PRIMARY</span> <span class="n">PROJECT</span><span class="o">/</span><span class="n">MODEL</span><span class="o">&gt;</span><span class="n">Repository</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/&lt;</span><span class="n">organization</span><span class="o">&gt;/&lt;</span><span class="n">repository_name</span><span class="o">&gt;</span>
+
+<span class="c1">## Publishing with the dataset</span>
+
+<span class="n">If</span> <span class="n">you</span> <span class="n">publish</span> <span class="k">with</span> <span class="n">this</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">please</span> <span class="n">add</span> <span class="n">the</span> <span class="n">following</span> <span class="n">co</span><span class="o">-</span><span class="n">authors</span><span class="p">:</span>
+<span class="o">-</span> <span class="o">&lt;</span><span class="n">NAME</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">EMAIL</span><span class="o">&gt;</span>
+<span class="o">-</span> <span class="o">&lt;</span><span class="n">NAME</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">EMAIL</span><span class="o">&gt;</span>
+<span class="o">-</span> <span class="o">&lt;</span><span class="n">NAME</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">EMAIL</span><span class="o">&gt;</span>
+<span class="o">...</span>
+
+<span class="n">Please</span> <span class="n">also</span> <span class="n">include</span> <span class="n">the</span> <span class="n">following</span> <span class="n">grant</span><span class="o">/</span><span class="n">funding</span> <span class="n">acknowledgment</span> <span class="ow">in</span> <span class="n">your</span> <span class="n">publication</span><span class="p">:</span>
+<span class="s2">&quot;Supported by ...&quot;</span>
+
+<span class="c1">## &lt;IF DATA ARE MISSING FOR SOME SUBJECT(S)&gt;missing data</span>
+
+<span class="o">&lt;</span><span class="n">LIST</span> <span class="n">HERE</span> <span class="n">MISSING</span> <span class="n">SUBJECTS</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="dataset-description-json">
+<h3><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code><a class="headerlink" href="#dataset-description-json" title="Link to this heading">#</a></h3>
+<p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#dataset_descriptionjson"><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code></a> is a JSON file describing the dataset.</p>
+<p>Please use the <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> template below:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The mother of all experiments&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;BIDSVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.6.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;DatasetType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;raw&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;License&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CC0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Authors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;Paul Broca&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Carl Wernicke&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;Keywords&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;neuroscience&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;language&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;brain&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;Acknowledgements&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Special thanks to Korbinian Brodmann for help in formatting this dataset in BIDS. We thank Alan Lloyd Hodgkin and Andrew Huxley for helpful comments and discussions about the experiment and manuscript; Hermann Ludwig Helmholtz for administrative support; and Claudius Galenus for providing data for the medial-to-lateral index analysis.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;HowToAcknowledge&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Please cite this paper: https://www.ncbi.nlm.nih.gov/pubmed/001012092119281&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;Funding&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;National Institute of Neuroscience Grant F378236MFH1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;National Institute of Neuroscience Grant 5RMZ0023106&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;EthicsApprovals&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;Army Human Research Protections Office (Protocol ARL-20098-10051, ARL 12-040, and ARL 12-041)&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;ReferencesAndLinks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;https://www.ncbi.nlm.nih.gov/pubmed/001012092119281&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;Alzheimer A., &amp; Kraepelin, E. (2015). Neural correlates of presenile dementia in humans. Journal of Neuroscientific Data, 2, 234001. doi:1920.8/jndata.2015.7&quot;</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;DatasetDOI&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;doi:10.0.2.3/dfjj.10&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;HEDVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8.0.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;reproin&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.6.0&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;Container&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;docker&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;repronim/reproin:0.6.0&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;SourceDatasets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;URL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s3://dicoms/studies/correlates&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;April 11 2011&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <a class="reference external" href="https://bids-specification.readthedocs.io/">BIDS spec</a> to know what version to fill in here.</p>
+</div>
+</section>
+<section id="participants-tsv">
+<h3><code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code><a class="headerlink" href="#participants-tsv" title="Link to this heading">#</a></h3>
+<p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/modality-agnostic-files/data-summary-files.html#participants-file"><code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code></a> is a Tab-separated value file that lists all subjects in the dataset with useful metadata. Please start off from the example below:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>participant_id</p></th>
+<th class="head"><p>source_id</p></th>
+<th class="head"><p>species</p></th>
+<th class="head text-right"><p>age</p></th>
+<th class="head text-center"><p>sex</p></th>
+<th class="head text-center"><p>pathology</p></th>
+<th class="head text-center"><p>institution</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>sub-001</p></td>
+<td><p>001</p></td>
+<td><p>homo sapiens</p></td>
+<td class="text-right"><p>30</p></td>
+<td class="text-center"><p>F</p></td>
+<td class="text-center"><p>HC</p></td>
+<td class="text-center"><p>montreal</p></td>
+</tr>
+<tr class="row-odd"><td><p>sub-002</p></td>
+<td><p>005</p></td>
+<td><p>homo sapiens</p></td>
+<td class="text-right"><p>40</p></td>
+<td class="text-center"><p>M</p></td>
+<td class="text-center"><p>MS</p></td>
+<td class="text-center"><p>montreal</p></td>
+</tr>
+<tr class="row-even"><td><p>sub-003</p></td>
+<td><p>032</p></td>
+<td><p>homo sapiens</p></td>
+<td class="text-right"><p>n/a</p></td>
+<td class="text-center"><p>O</p></td>
+<td class="text-center"><p>MS</p></td>
+<td class="text-center"><p>montreal</p></td>
+</tr>
+<tr class="row-odd"><td><p>sub-004</p></td>
+<td><p>007</p></td>
+<td><p>homo sapiens</p></td>
+<td class="text-right"><p>n/a</p></td>
+<td class="text-center"><p>n/a</p></td>
+<td class="text-center"><p>MS</p></td>
+<td class="text-center"><p>toronto</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Additional notes:</p>
+<ul class="simple">
+<li><p>Authorized values for <code class="docutils literal notranslate"><span class="pre">pathology</span></code> are listed under <a class="reference internal" href="#participants-json"><code class="docutils literal notranslate"><span class="pre">participants.json</span></code></a>.</p></li>
+<li><p>Indicate missing values with <code class="docutils literal notranslate"><span class="pre">n/a</span></code> (for “not available”), not by empty cells!</p></li>
+<li><p>In the example above, the apparent mismatch between ‘pathology’ and the values is caused by the tabs</p></li>
+<li><p>Other columns can be added if the metadata are relevant</p></li>
+</ul>
+</section>
+<section id="participants-json">
+<h3><code class="docutils literal notranslate"><span class="pre">participants.json</span></code><a class="headerlink" href="#participants-json" title="Link to this heading">#</a></h3>
+<p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file"><code class="docutils literal notranslate"><span class="pre">participants.json</span></code></a> is a JSON file providing a legend for the columns in <code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code>, with longer descriptions, units, and in the case of categorical variables, allowed levels. Please use the template below:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;participant_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Unique Participant ID&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Participant ID&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;source_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Subject ID in the source unprocessed data&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Subject ID in the source unprocessed data&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;species&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Binomial species name of participant&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Species&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Participant age&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Participant age&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Units&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;years&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;sex&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sex of the participant as reported by the participant&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Levels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;M&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;male&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;F&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;female&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;O&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;other&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;pathology&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The diagnosis of pathology of the participant&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Pathology name&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Levels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;HC&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Healthy Control&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;DCM&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Degenerative Cervical Myelopathy (synonymous with CSM - Cervical Spondylotic Myelopathy)&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;MildCompression&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Asymptomatic cord compression, without myelopathy&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;MS&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Multiple Sclerosis&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;PD&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parkinson&#39;s Disease&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;SCI&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Traumatic Spinal Cord Injury&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;institution&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Human-friendly institution name&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BIDS Institution ID&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Additional notes about the participant. For example, if there is more information about a disease, indicate it here.&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Additional notes&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="code">
+<h3><code class="docutils literal notranslate"><span class="pre">code/</span></code><a class="headerlink" href="#code" title="Link to this heading">#</a></h3>
+<p>The data cleaning and curation script(s) that create the <code class="docutils literal notranslate"><span class="pre">sub-XXX/</span></code> folders should be kept with them, under the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#code"><code class="docutils literal notranslate"><span class="pre">code/</span></code></a> folder. Within reason, every dataset should have a script that when run like</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">code</span><span class="o">/</span><span class="n">curate</span><span class="o">.</span><span class="n">py</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">sourcedata</span> <span class="o">./</span>
+</pre></div>
+</div>
+<p>unpacks, converts and renames all the images and related files in <code class="docutils literal notranslate"><span class="pre">path/to/sourcedata/</span></code> into BIDS format in the current dataset <code class="docutils literal notranslate"><span class="pre">./</span></code>.</p>
+<p>This program should be committed first, before the curated data it produces. Afterwards, every commit that modifies the code should also re-run it, and the code and re-curated data should be committed in tandem.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Analysis scripts should not be kept here. Keep them in separate repositories, usually in public on GitHub, with instructions about.</p>
+</div>
+</section>
+</section>
+<section id="building-the-derivatives-datasets">
+<h2>Building the <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> datasets<a class="headerlink" href="#building-the-derivatives-datasets" title="Link to this heading">#</a></h2>
+<p>First, it is important to understand what are <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html#bids-derivatives">BIDS derivatives</a> folders:</p>
+<blockquote>
+<div><p>Derivatives are outputs of common processing pipelines, capturing data and meta-data sufficient for a researcher to understand and (critically) reuse those outputs in subsequent processing. Standardizing derivatives is motivated by use cases where formalized machine-readable access to processed data enables higher level processing.</p>
+</div></blockquote>
+<p>Derivative folders are derived datasets generated from a raw dataset. They must include <strong>ONLY</strong> processed data obtained from a specific raw dataset (e.g., segmentations, masks, labels).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In this section we decided not to fully follow the BIDS derivatives convention. For more information please see our related <a class="reference external" href="https://github.com/neuropoly/data-management/issues/282">issue</a>.</p>
+</div>
+<section id="derivatives-structure">
+<h3>Derivatives structure<a class="headerlink" href="#derivatives-structure" title="Link to this heading">#</a></h3>
+<p>According to BIDS, derived datasets could be stored inside a parent folder <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/common-principles.html#storage-of-derived-datasets"><code class="docutils literal notranslate"><span class="pre">derivatives/</span></code></a> <em>“to make a clear distinction between raw data and results of data processing”</em>. This folder should also follow the same folder logic as the one used for the <code class="docutils literal notranslate"><span class="pre">raw</span></code> data.</p>
+<p>Derivative data obtained using different processes/workflows should ideally be stored using different derivatives folders. Eg:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">derivatives/labels/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">derivatives/sct_5.6/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">derivatives/fmriprep_2.3/</span></code></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Despite what is written above, to streamline data identification and reduce the need for extensive folder crawling, we <a class="reference external" href="https://github.com/neuropoly/data-management/issues/282">opted</a> for common folder names, such as <code class="docutils literal notranslate"><span class="pre">labels/</span></code>, that typically contains binary segmentation and point-wise labels.</p>
+</div>
+<p>Derived datasets follow the <strong>same structure and hierarchy</strong> as the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset, with folders corresponding to subjects, [sessions] and MRI modalities:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── README.md
+├── dataset_description.json
+├── participants.tsv
+├── participants.json
+├── code/
+├── sub-&lt;label&gt;/
+└── derivatives/
+    └── &lt;label&gt;  &lt;-- name of the derivative folder
+        └── sub-&lt;label&gt;/]
+            └── [ses-&lt;label&gt;/]
+                └── data type/  &lt;-- could be &#39;anat&#39;, &#39;fmap&#39;, &#39;func&#39;, etc.
+                    └── &lt;source_filename&gt;[_space-&lt;space&gt;][_res-&lt;label&gt;][_den-&lt;label&gt;][_desc-&lt;label&gt;]_&lt;suffix&gt;.&lt;extension&gt;
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Entities and suffixes are different from those used with the raw filenames and are specific to <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#imaging-data-types">data types</a>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Because derived datasets are datasets, files and folders presented in the raw template section could also be included in this dataset (e.g. README.md, code/, etc.)</p>
+</div>
+</section>
+<section id="source-filename">
+<h3><code class="docutils literal notranslate"><span class="pre">&lt;source_filename&gt;</span></code><a class="headerlink" href="#source-filename" title="Link to this heading">#</a></h3>
+<p>This element corresponds to the entire source filename, with the <strong>omission</strong> of the extension. For example, if the source file name is <code class="docutils literal notranslate"><span class="pre">sub-02_acq-MTon_MTS.nii.gz</span></code>, the <code class="docutils literal notranslate"><span class="pre">&lt;source_filename&gt;</span></code> to be used for the derivatives is <code class="docutils literal notranslate"><span class="pre">sub-02_acq-MTon_MTS</span></code>.</p>
+</section>
+<section id="derivative-entities">
+<h3>Derivative entities<a class="headerlink" href="#derivative-entities" title="Link to this heading">#</a></h3>
+<p>Characterized by a key word (space, res, den, etc.) and a value (label = an alphanumeric value, index = a nonnegative integer, etc) separated with a dash <code class="docutils literal notranslate"><span class="pre">-</span></code></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[space-&lt;space&gt;]</span></code>: image space if different from raw space: template space (e.g. MNI305 etc), orig, other etc. (see <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#spatial-references">BIDS</a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[res-&lt;label&gt;]</span></code>: for changes in resolution</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[den-&lt;label&gt;]</span></code>: for changes related to density</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[desc-&lt;label&gt;]</span></code>: should be used to distinguish two files that do not otherwise have a distinguishing entity. (e.g. <code class="docutils literal notranslate"><span class="pre">sub-001_UNIT1_desc-denoised.nii.gz</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[label-&lt;label&gt;]</span></code>: to avoid confusion if multiple masks are available we have to specify the masked <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels">structure</a> (i.e. <code class="docutils literal notranslate"><span class="pre">_label-WM</span></code> for white matter, <code class="docutils literal notranslate"><span class="pre">_label-GM</span></code> for gray matter, <code class="docutils literal notranslate"><span class="pre">_label-lesion</span></code> for lesions etc.)</p></li>
+</ul>
+<p>Entities are then separated using underscores <code class="docutils literal notranslate"><span class="pre">_</span></code></p>
+</section>
+<section id="derivative-suffixes">
+<h3>Derivative suffixes<a class="headerlink" href="#derivative-suffixes" title="Link to this heading">#</a></h3>
+<p>An alphanumeric string located after all the entities following a final underscore <code class="docutils literal notranslate"><span class="pre">_</span></code> :</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Image type (suffix)</p></th>
+<th class="head text-center"><p>Associated entities</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">seg</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">label-&lt;label&gt;</span></code></p></td>
+<td><p>Suffix used for binary masks (0 and 1 only). The entity is used to specify the segmented structure in the image.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">dseg</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">label-&lt;label&gt;</span></code></p></td>
+<td><p>Suffix used for discrete segmentations representing multiple anatomical structures. The entity is used to specify the atlas used to map the different structures.</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">softseg</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">label-&lt;label&gt;</span></code></p></td>
+<td><p>Suffix used for soft segmentations representing anatomical structures with values ranging from 0 to 1. The entity is used to specify the segmented structure in the image.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">label</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">label-&lt;label&gt;</span></code></p></td>
+<td><p>Suffix used for binary labels (0 and 1 only). The entity is used to specify the type of structure labeled in the image.</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">dlabel</span></code></p></td>
+<td class="text-center"><p><code class="docutils literal notranslate"><span class="pre">label-&lt;label&gt;</span></code></p></td>
+<td><p>Suffix used for discrete labels representing multiple anatomical structures. The entity is used to specify the atlas used to label the different structures</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Here, the corresponding entity <code class="docutils literal notranslate"><span class="pre">label-&lt;label&gt;</span></code> is mandatory to specify the labeled region.</p>
+</div>
+</section>
+<section id="derivatives-extensions">
+<h3>Derivatives extensions<a class="headerlink" href="#derivatives-extensions" title="Link to this heading">#</a></h3>
+<p>Files extensions:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.nii.gz</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.json</span></code></p></li>
+<li><p>etc.</p></li>
+</ul>
+<p>In addition to the subjects folders, derived datasets must include their own <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> file to track all the processing steps used to create the data. Example:</p>
+</section>
+<section id="derivatives-labels-dataset-description-json">
+<h3><code class="docutils literal notranslate"><span class="pre">derivatives/labels/dataset_description.json</span></code><a class="headerlink" href="#derivatives-labels-dataset-description-json" title="Link to this heading">#</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;BIDSVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.9.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;dataset_name&gt;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;DatasetType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;derivative&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="derivatives-labels-descriptions-tsv">
+<h3><code class="docutils literal notranslate"><span class="pre">derivatives/labels/descriptions.tsv</span></code><a class="headerlink" href="#derivatives-labels-descriptions-tsv" title="Link to this heading">#</a></h3>
+<p>To provide more details about the processing steps (e.g., reorientation, resampling), a <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/common-data-types.html#descriptionstsv"><code class="docutils literal notranslate"><span class="pre">descriptions.tsv</span></code></a> file may be added at the root of the folder. This file must contain at least two columns:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">desc_id</span></code>: contains all the labels used with the <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/appendices/entities.html#desc">desc</a> entity within the filenames accross the entire dataset.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: human readable descriptions</p></li>
+</ul>
+</section>
+<section id="json-sidecars">
+<h3>JSON sidecars<a class="headerlink" href="#json-sidecars" title="Link to this heading">#</a></h3>
+<p>JSON sidecars are companion files linked to data files. They share the same filenames but have a “.json” extension. These files store essential metadata, serving as guidebooks to provide crucial details about the associated data, ensuring organized and comprehensive information.</p>
+<p>Therefore, to improve the way we track our data, <code class="docutils literal notranslate"><span class="pre">.json</span></code> sidecars have to be generated for each data present in derived datasets. Here are few examples of JSON sidecar:</p>
+<p>Below is a JSON sidecar describing a fully-manual labels created in the ORIGINAL SPACE:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;SpatialReference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;orig&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Manual&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Nathan Molinier&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-07-14 13:43:10&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If the label was previously produced by an automatic algorithm, append to the <code class="docutils literal notranslate"><span class="pre">GeneratedBy</span></code> section:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;SpatialReference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;orig&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sct_deepseg_sc&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SCT v6.1&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Manual&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Nathan Molinier&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-07-14 13:43:10&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>If the label is created <em>after</em> the data was resampled and cropped, indicate it under <code class="docutils literal notranslate"><span class="pre">SpatialReference</span></code>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;SpatialReference&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;ResamplingFactor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Interpolation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;spline&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Xmin&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Xmax&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">95</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Ymin&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Ymax&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Zmin&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;Zmax&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sct_resample&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SCT v6.1&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sct_crop_image&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SCT v6.1&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Another example of a label created in another space than the image (here: the PAM50 template space):</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;SpatialReference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PAM50&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sct_register_to_template&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SCT v6.1&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For better clarity, if the image space is different between the raw data and the label (as is the case above), the entity <code class="docutils literal notranslate"><span class="pre">space-other</span></code> <strong>MUST</strong> also be used in the filename. For templates, the entity <code class="docutils literal notranslate"><span class="pre">space-template</span></code> or <code class="docutils literal notranslate"><span class="pre">space-&lt;template_name&gt;</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">space-PAM50</span></code>) may be used instead.</p>
+</div>
+</section>
+<section id="label-names">
+<h3>Label names<a class="headerlink" href="#label-names" title="Link to this heading">#</a></h3>
+<p>To be consistent regarding the way anatomical regions will be referred to, please follow this table (based on the BIDS <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/derivatives/imaging.html#common-image-derived-labels">labels</a>):</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>label</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SC</p></td>
+<td><p>Spinal Cord</p></td>
+</tr>
+<tr class="row-odd"><td><p>GM</p></td>
+<td><p>Gray Matter</p></td>
+</tr>
+<tr class="row-even"><td><p>WM</p></td>
+<td><p>White Matter</p></td>
+</tr>
+<tr class="row-odd"><td><p>discs</p></td>
+<td><p>Intervertebral discs, with values following <a class="reference external" href="https://spinalcordtoolbox.com/user_section/tutorials/vertebral-labeling/labeling-conventions.html">this convention</a></p></td>
+</tr>
+<tr class="row-even"><td><p>vertebrae</p></td>
+<td><p>Vertebrae, with values following <a class="reference external" href="https://spinalcordtoolbox.com/user_section/tutorials/vertebral-labeling/labeling-conventions.html">this convention</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>rootlets</p></td>
+<td><p>Spinal rootlets</p></td>
+</tr>
+<tr class="row-even"><td><p>PMJ</p></td>
+<td><p>Pontomedullary Junction, indicated as a single voxel with a value ‘50’</p></td>
+</tr>
+<tr class="row-odd"><td><p>CSF</p></td>
+<td><p>Cerebrospinal Fluid</p></td>
+</tr>
+<tr class="row-even"><td><p>canal</p></td>
+<td><p>Spinal canal</p></td>
+</tr>
+<tr class="row-odd"><td><p>compression</p></td>
+<td><p>Spinal Cord Compression, indicated as a single voxel with a value ‘1’ at the point of compression. There can be more than one compression.</p></td>
+</tr>
+<tr class="row-even"><td><p>lesion</p></td>
+<td><p>Lesion (e.g., multiple sclerosis plaques, spinal cord injury lesions). The pathology associated with the lesion is indicated in the file <code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>tumor</p></td>
+<td><p>Tumor</p></td>
+</tr>
+<tr class="row-even"><td><p>edema</p></td>
+<td><p>Edema</p></td>
+</tr>
+<tr class="row-odd"><td><p>cavity</p></td>
+<td><p>Cavity</p></td>
+</tr>
+<tr class="row-even"><td><p>axon</p></td>
+<td><p>Axon (used in microscopy datasets)</p></td>
+</tr>
+<tr class="row-odd"><td><p>myelin</p></td>
+<td><p>Myelin (used in microscopy datasets)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>When multiple anatomical regions are present in the image, atlases should be used. When specified, these atlases <strong>SHOULD</strong> be added to a folder <code class="docutils literal notranslate"><span class="pre">atlases/</span></code> at the root of the derivative folder or a URL should be included inside the json sidecars.</p>
+</section>
+<section id="examples-and-use-cases">
+<h3>Examples and use cases<a class="headerlink" href="#examples-and-use-cases" title="Link to this heading">#</a></h3>
+<p>Here is an example of a dataset structure with a single subject <code class="docutils literal notranslate"><span class="pre">sub-001</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sci-bordeaux
+├── README.md
+├── dataset_description.json
+├── participants.tsv
+├── participants.json
+├── code/
+│   └── curate.py
+│
+├── sub-001
+│   └── anat
+│       ├──sub-001_acq-sag_T2w.nii.gz
+│       └──sub-001_acq-sag_T2w.json
+│
+└── derivatives
+    └── labels
+        ├── dataset_description.json
+        ├── README.md
+        └── sub-001
+            └── anat
+                ├── sub-001_acq-sag_T2w_label-SC_seg.nii.gz  # spinal cord (SC) binary segmentation 
+                ├── sub-001_acq-sag_T2w_label-SC_softseg.nii.gz  # spinal cord (SC) soft segmentation
+                ├── sub-001_acq-sag_T2w_label-discs_dlabel.nii.gz  # discrete discs labeling
+                ├── sub-001_acq-sag_T2w_label-vertebrae_dseg  # vertebrae discrete segmentation (segmented stuctures have different values based on the vertebral levels)
+                ├── sub-001_acq-sag_T2w_label-rootlets_dseg  # nerve rootlets discrete segmentation
+                ├── sub-001_acq-sag_T2w_label-compression_label.nii.gz  # binary compression labeling
+                ├── sub-001_acq-sag_T2w_label-PMJ_dlabel  # Pontomedullary junction, indicated as a single voxel with a value &#39;50&#39;
+                └── sub-001_acq-sag_T2w_label-lesion_seg  # lesion binary segmentation
+</pre></div>
+</div>
+</section>
+</section>
+<section id="changelog-policy">
+<h2>Changelog policy<a class="headerlink" href="#changelog-policy" title="Link to this heading">#</a></h2>
+<p>We use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code> to track our changes. That means care should be taken to <a class="reference internal" href="../geek-tips/git.html#commit-message-convention"><span class="std std-ref">write good messages</span></a>: they are there to help both you and future researchers understand how the dataset evolved.</p>
+<p>Good commit message examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;Segment spines of subjects 010 through 023</span>
+    
+<span class="n">Produced</span> <span class="n">manually</span><span class="p">,</span> <span class="n">using</span> <span class="n">fsleyes</span><span class="o">.</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;Add new subjects provided by &lt;email_adress&gt;&#39;</span>
+</pre></div>
+</div>
+<p>If you choose to also fill in BIDS’s optional <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#changes">CHANGES</a> file make sure it reflects the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code>.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="README.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span>💾</span> Data</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="git-datasets.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">data.neuro.polymtl.ca</span></code></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Page Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-data-to-bids">Converting data to BIDS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-the-dataset">Naming the dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-raw-dataset">Building the <code class="docutils literal notranslate"><span class="pre">raw</span></code> dataset</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-structure">Raw structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subject-naming-convention">Subject naming convention</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-entities">Raw entities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-suffixes">Raw suffixes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw-extensions">Raw extensions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#readme-md"><code class="docutils literal notranslate"><span class="pre">README.md</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-description-json"><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#participants-tsv"><code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#participants-json"><code class="docutils literal notranslate"><span class="pre">participants.json</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code"><code class="docutils literal notranslate"><span class="pre">code/</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-derivatives-datasets">Building the <code class="docutils literal notranslate"><span class="pre">derivatives</span></code> datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-structure">Derivatives structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#source-filename"><code class="docutils literal notranslate"><span class="pre">&lt;source_filename&gt;</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-entities">Derivative entities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative-suffixes">Derivative suffixes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-extensions">Derivatives extensions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-labels-dataset-description-json"><code class="docutils literal notranslate"><span class="pre">derivatives/labels/dataset_description.json</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivatives-labels-descriptions-tsv"><code class="docutils literal notranslate"><span class="pre">derivatives/labels/descriptions.tsv</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#json-sidecars">JSON sidecars</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#label-names">Label names</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-and-use-cases">Examples and use cases</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changelog-policy">Changelog policy</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By NeuroPoly
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2021-2025, NeuroPoly.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
