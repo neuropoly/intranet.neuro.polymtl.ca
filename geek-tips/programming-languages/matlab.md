@@ -12,7 +12,7 @@ If present, you can run older versions of MATLAB by invoking the full path to th
 ```
 
 ```{note}
-If you need a version upgrade for MATLAB or otherwise need to use a MATLAB version that is not already installed on a given station, please [open an issue](https://github.com/neuropoly/computers/issues/new?template=BLANK_ISSUE) in the [computers repo](https://github.com/neuropoly/computers).
+If you need a version upgrade for MATLAB, or if you otherwise need a MATLAB version that is not already installed on a given station, please [open an issue](https://github.com/neuropoly/computers/issues/new?template=BLANK_ISSUE) in the [computers repo](https://github.com/neuropoly/computers).
 ``` 
 
 ### MATLAB Engine
@@ -20,7 +20,7 @@ If you need a version upgrade for MATLAB or otherwise need to use a MATLAB versi
 If you need [MATLAB engine](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html), you should install it from [PyPi](https://pypi.org/project/matlabengine) within a virtual environment.
 
 - Identify the MATLAB version you will use.
-- Identify the latest compatible version of MATLAB engine (e.g. [25.1.2](https://pypi.org/project/matlabengine/25.1.2/). 
+- Identify the latest compatible version of MATLAB engine (e.g. [25.1.2](https://pypi.org/project/matlabengine/25.1.2/)). 
 - Add the MATLAB root directory to the `LD_LIBRARY_PATH` environment variable. (You can do this on the fly, or in your `~/.bashrc`.)
 - In your virtual environment, install `matlabengine` with `pip`, specifying the target version.
 
