@@ -47,7 +47,7 @@ You can make files available to the podman container by placing them in `/home/c
 
 **Note:** since all NeuroPoly members can run commands inside the CST container, it is theoretically possible for any NeuroPoly user to access data in `/files`. If this is unacceptable for PII reasons, please contact an admin or open an issue in the [computers](https://github.com/neuropoly/computers/issues) repo.
 
-#### Space usage
+#### A note on disk space
 
 CST Studio files can be very large. Please clean up files once you're done using them.
 
