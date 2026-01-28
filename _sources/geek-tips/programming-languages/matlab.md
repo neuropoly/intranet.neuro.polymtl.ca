@@ -1,6 +1,38 @@
 # MATLAB
 
-MATLAB is installed on some [internal machines](/computing-resources/neuropoly/README.md) (but [not yet all](https://github.com/neuropoly/computers/issues/326)). 
+## MATLAB on NeuroPoly-managed machines
+
+MATLAB is installed on all Linux stations managed by NeuroPoly; this includes both servers and desktops. 
+
+MATLAB is installed under `/opt/MATLAB/`. If multiple versions of MATLAB are installed on one station, the default version will typically be the most recent release. (You can confirm the version when you start MATLAB).
+
+If present, you can run older versions of MATLAB by invoking the full path to the installation, e.g.:
+```
+/opt/MATLAB/R2023b/bin/matlab
+```
+
+```{note}
+If you need a version upgrade for MATLAB, or if you otherwise need a MATLAB version that is not already installed on a given station, please [open an issue](https://github.com/neuropoly/computers/issues/new?template=BLANK_ISSUE) in the [computers repo](https://github.com/neuropoly/computers).
+``` 
+
+### MATLAB Engine
+
+If you need [MATLAB engine](https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html), you should install it from [PyPi](https://pypi.org/project/matlabengine) within a virtual environment.
+
+- Identify the MATLAB version you will use.
+- Identify the latest compatible version of MATLAB engine (e.g. [25.1.2](https://pypi.org/project/matlabengine/25.1.2/)). 
+- Add the MATLAB root directory to the `LD_LIBRARY_PATH` environment variable. (You can do this on the fly, or in your `~/.bashrc`.)
+- In your virtual environment, install `matlabengine` with `pip`, specifying the target version.
+
+For example:
+```
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/MATLAB/R2025a/bin/glnxa64
+```
+```
+python -m pip install matlabengine==25.1.2
+```
+
+## MATLAB on your personal computer
 
 To run MATLAB on your personal computer, follow these instructions:
 
