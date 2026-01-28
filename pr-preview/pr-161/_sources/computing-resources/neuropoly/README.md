@@ -6,6 +6,7 @@
 :hidden:
 cpus
 gpus
+cst-studio
 ```
 
 ## GE
