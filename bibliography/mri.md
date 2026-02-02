@@ -35,6 +35,9 @@
 * [Shimming Toolbox overview](https://docs.google.com/document/d/1jNm3qS9L3Wv330jYdoXdwHwhJ5fQlDgukkXZcf_ceJA)
 * [MRI Questions](https://mriquestions.com/active-shimming.html)
 * 📄 [Stockmann JP, Wald LL. In vivo B0 field shimming methods for MRI at 7T. Neuroimage. 2018 Mar;168:71–87.](https://pmc.ncbi.nlm.nih.gov/articles/PMC5760477/)
+* 📄 [D'Astous et al. Shimming toolbox: An open-source software toolbox for B0 and B1 shimming in MRI. MRM 2023](https://onlinelibrary.wiley.com/doi/10.1002/mrm.29528)
+* 📄 [Breheret et al. Impact of through-slice gradient optimization for dynamic slice-wise shimming in the cervico-thoracic spinal cord. MRM 2025](https://onlinelibrary.wiley.com/doi/10.1002/mrm.30543)
+* 📄 [Jayadev et al. Accelerated Navigator for Rapid ∆B0 Field Mapping for Real-Time Shimming and Motion Correction of Human Brain MRI. NMR Biomed 2025](https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/nbm.70126)
 
 ## B1 Shimming
 
