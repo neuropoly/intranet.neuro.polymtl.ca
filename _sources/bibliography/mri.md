@@ -8,6 +8,7 @@
 * [🎥 How MRI works / Fourier encoding (check out Parts 1, 2, 3, etc.)](https://www.youtube.com/watch?v=TQegSF4ZiIQ&t=0s&ab_channel=thePIRL)
 * [🎥 The Insane Engineering of MRI Machines](https://www.youtube.com/watch?v=NlYXqRG7lus&list=PLVvBuh5zSlbntrik2LUfTHCzUTTMxSYgr&index=6&ab_channel=RealEngineering)
 * [🎥 Introduction to MRI by Dr. Michael Lipton (intuitive for people with a less technical background](https://www.youtube.com/watch?v=35gfOtjRcic)
+* [🎥🇫🇷 Introduction à l'IRM (Julien Cohen-Adad, Polytechnique GBM8378](https://www.youtube.com/watch?v=HaWOonVueMY&list=PLaB5xDw-dpDbQnAV_Ey46350Kwqtjqst4)
 * [🌐 Peder Larson: Introduction to Principles of MRI](https://larsonlab.github.io/MRI-education-resources)
 * [📘 Nishimura, Principles of Magnetic Resonance Imaging (1996)](https://drive.google.com/drive/folders/177c9urmoXCYOiEWhuiGeRzKoKsF42cwM) (NeuroPoly members only)
 * [🌐 Questions and Answers in MRI](https://mriquestions.com/index.html)
