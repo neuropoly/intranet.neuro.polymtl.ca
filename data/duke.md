@@ -25,9 +25,12 @@ This is because, inside `duke`, every file has permissions `-rw-r--r--` and ever
 ```
 
 ```{note}
-`duke` is not accessible when using SSH key login to linux stations.
+`duke` is not accessible when using an SSH key to login to Linux stations.
 ```
 
+```{note}
+Members do _not_ have access to all shares by default. Admins looking for a more detailed overview of how access permissions work on `duke` can refer [here](https://github.com/neuropoly/computers/wiki/Duke#access-rights).
+```
 
 ## Access from stations
 

@@ -28,11 +28,6 @@ Admins looking for more detailed information on troubleshooting access issues re
 ```{important}
 Once in a while, you are requested to change your password. To do so, log onto another machine (eg `bireli`, `joplin`) and use the command `passwd` to change your password.
 ```
-
-### Groups
-
-The list of permissions for shared folders on `duke` are available [here](https://docs.google.com/document/d/1ZJUUBpiZPl0wxFsUPxkkR6vXZgfSAd3YBK5vlIpf_aA/edit).
-
 ### Connect to Windows Servers
 
 ```{note}

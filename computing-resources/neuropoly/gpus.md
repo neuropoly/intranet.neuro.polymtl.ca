@@ -943,7 +943,7 @@ As with the [other stations](./cpus.md), you should prefer getting data in via `
 
 ### Long term, slow access \(with backup\)
 
-For projects and permanent storage: `~/duke`
+For projects and permanent storage: `~/duke`. More information about `duke` can be found [here](../data/duke.md).
 
 ```{warning}
 Please, do not use space on duke while training your models. If you need more local space, post a request on [computers](https://github.com/neuropoly/computers/issues/new).
