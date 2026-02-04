@@ -16,7 +16,7 @@ We have spent money and time on this infrastructure for it to push science forwa
 
 ## Connecting
 
-Like [other machines](./README.md#connect-to-neuropoly-computers), connect with ssh using your [polygrames](./README.md#poly-grames) account.
+As with [other machines](./README.md#connect-to-neuropoly-computers), connect with ssh using your [GE](./README.md#ge) account.
 
 ## Hardware
 

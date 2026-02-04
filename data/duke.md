@@ -58,13 +58,8 @@ When working on campus or [over the VPN](../computing-resources/neuropoly/README
     ![Screenshot of Connect to Server dialog](./duke-macOS-01.png)
     
     </details>
-4. <details><summary>Enter your <em>GRAMES</em> username and password</summary>
+4. <details><summary>Enter your <a href="./computing-resources/neuropoly/README.md#ge">GE</a> username and password</summary>
     
-    ```{note}
-    Your user name is your personal number example: p000000 or u000000
-    Your password is the one you use for SSH connections
-    ```
-
     ![Screenshot of password dialog](./duke-macOS-02.png)
     
     </details>
@@ -94,8 +89,8 @@ When working on campus or [over the VPN](../computing-resources/neuropoly/README
 3. Map Network Drive
 4. Address: `\\duke.neuro.polymtl.ca\<FOLDER>`
 5. Check "Connect using different credentials".
-6. Username: `grames\<POLYGRAMES_USERNAME>`
-7. Password: `<POLYGRAMES_PASSWORD>`.
+6. Username: `GE\<GE_USERNAME>`
+7. Password: `<GE_PASSWORD>`.
 :::
 ::::
 
@@ -128,7 +123,11 @@ sudo umount <FOLDER_NAME>/
 To mount:
 
 ```bash
-sudo mount -t cifs //duke.neuro.polymtl.ca/<FOLDER_NAME> /mnt/duke/<FOLDER_NAME> -o username=<GRAMES_USERNAME>,noexec
+sudo mount -t cifs //duke.neuro.polymtl.ca/<FOLDER_NAME> /mnt/duke/<FOLDER_NAME> -o username=<GE_USERNAME>,noexec
 ```
 :::
 ::::
+
+## Retrieve an old backup
+
+`duke` (`/mri`, `/projects`, `/sct_testing`) is backed up on **grappelli** every evening at 21:00 EST. In order to retrieve old backup you have to contact Jean-Sébastien Décarie.

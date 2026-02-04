@@ -4,7 +4,7 @@ description: How to use CPU clusters at Neuropoly
 
 # CPU Clusters
 
-Unless otherwise stated, use your [connect with your polygrames credentials](./README.md#poly-grames)
+As with [other machines](./README.md#connect-to-neuropoly-computers), connect with ssh using your [GE](./README.md#ge) account.
 
 ## `joplin`
 

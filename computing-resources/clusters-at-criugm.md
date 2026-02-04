@@ -72,13 +72,13 @@ ssh -Y username@elm.criugm.qc.ca
 Copy your files using `scp` to Elm from your computer:
 
 ```bash
-scp -r /src username@elm.criugm.qc.ca:neuropoly/<GRAMES_USERNAME>
+scp -r /src username@elm.criugm.qc.ca:neuropoly/<GE_USERNAME>
 ```
 
 For a faster processing move your data on elm from home to scratch:
 
 ```bash
-cp -r source/ /scratch/julien/neuropoly/<GRAMES_USERNAME>
+cp -r source/ /scratch/julien/neuropoly/<GE_USERNAME>
 ```
 
 Activate MATLAB on elm:

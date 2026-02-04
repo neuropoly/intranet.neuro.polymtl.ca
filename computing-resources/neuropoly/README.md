@@ -15,6 +15,14 @@ A [**GE**](https://www.ge.polymtl.ca/compte-informatique/) network account is re
 
 You will receive a GE account during your [onboarding](https://github.com/neuropoly/onboarding/issues).
 
+```{note}
+Legacy users may still be using a GRAMES rather than GE account. Eventually [all users](https://github.com/neuropoly/computers/issues/1003) will be moved to GE accounts. 
+```
+
+```{note}
+Admins looking for more detailed information on troubleshooting access issues related to GE accounts can refer [here](https://github.com/neuropoly/computers/wiki/User-accounts#network-accounts-gramesge).
+```
+
 ### Password
 
 ```{important}
@@ -27,18 +35,15 @@ The list of permissions for shared folders on `duke` are available [here](https:
 
 ### Connect to Windows Servers
 
-Use Microsoft Remote Desktop Connection on creer51, creer52, creer53.
-
-Computer : creer51.grames.polymtl.ca
-
-Username: grames\your_polygrames_username
-
-Password: your_polygrames_password
-
+```{note}
+When using an RDP client to connect to a Windows server, you must specify GE in the domain field.
+```
 ### Home folder
 
-Your home folder at GE is here: `smb://hvclusterfs.grames.polymtl.ca/usagers/personnels`
-
+```{note}
+Legacy GRAMES users may have a home folder available here:
+`smb://hvclusterfs.grames.polymtl.ca/usagers/`
+````
 
 ## List of Computers at NeuroPoly
 
@@ -792,8 +797,6 @@ echo 'export LANG=en_CA.UTF-8' >> ~/.profile
 
 Logout and back in again and apps should now be in English (or the other language code you chose).
 
-
-
 ## Connect to the Polytechnique public disk
 
 Finder –> Go –> Connect to server Server address:
@@ -802,11 +805,7 @@ Finder –> Go –> Connect to server Server address:
 smb://genie06.polymtl.ca/public
 ```
 
-Then enter your ID and password at poly.
-
-## Retrieve an old backup
-
-**duke** (/mri, /projects, /sct_testing) is backed up on **grappelli** every evening at 21:00 EST. In order to retrieve old backup you have to contact Jean-Sébastien Décarie.
+Use your [GE](./README.html#ge) credentials to connect.
 
 ## Software Installed
 
