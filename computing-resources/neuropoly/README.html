@@ -458,7 +458,6 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ge">GE</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#password">Password</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#groups">Groups</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-windows-servers">Connect to Windows Servers</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#home-folder">Home folder</a></li>
 </ul>
@@ -470,13 +469,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bireli">bireli</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joplin">joplin</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abbey">abbey</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fitzgerald">fitzgerald</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tristano">tristano</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vnmrj">vnmrj</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#idea3t">idea3t</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#idea7t">idea7t</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peterson">peterson</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#node006-poly-grames">node006 (Poly-Grames)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#node007-poly-grames">node007 (Poly-Grames)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#herbie">herbie</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vpn">VPN</a><ul class="nav section-nav flex-column">
@@ -490,15 +488,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#locally">Locally</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh-command-line">SSH (command line)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sftp-mount-a-remote-station">SFTP (Mount a remote station)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vnc-graphical-interface">VNC (graphical interface)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linux-stations">Linux stations</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xrdp-graphical-interface">XRDP (graphical interface)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#language">Language</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-the-polytechnique-public-disk">Connect to the Polytechnique public disk</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieve-an-old-backup">Retrieve an old backup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-installed">Software Installed</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installed-on-each-station-local">Installed on each station (local)</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mri">MRI</a></li>
@@ -533,6 +527,14 @@ document.write(`
 <h2>GE<a class="headerlink" href="#ge" title="Link to this heading">#</a></h2>
 <p>A <a class="reference external" href="https://www.ge.polymtl.ca/compte-informatique/"><strong>GE</strong></a> network account is required to have access to internal computational resources.</p>
 <p>You will receive a GE account during your <a class="reference external" href="https://github.com/neuropoly/onboarding/issues">onboarding</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Legacy users may still be using a GRAMES rather than GE account. Eventually <a class="reference external" href="https://github.com/neuropoly/computers/issues/1003">all users</a> will be moved to GE accounts.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Admins looking for more detailed information on troubleshooting access issues related to GE accounts can refer <a class="reference external" href="https://github.com/neuropoly/computers/wiki/User-accounts#network-accounts-gramesge">here</a>.</p>
+</div>
 <section id="password">
 <h3>Password<a class="headerlink" href="#password" title="Link to this heading">#</a></h3>
 <div class="admonition important">
@@ -540,34 +542,34 @@ document.write(`
 <p>Once in a while, you are requested to change your password. To do so, log onto another machine (eg <code class="docutils literal notranslate"><span class="pre">bireli</span></code>, <code class="docutils literal notranslate"><span class="pre">joplin</span></code>) and use the command <code class="docutils literal notranslate"><span class="pre">passwd</span></code> to change your password.</p>
 </div>
 </section>
-<section id="groups">
-<h3>Groups<a class="headerlink" href="#groups" title="Link to this heading">#</a></h3>
-<p>The list of permissions for shared folders on <code class="docutils literal notranslate"><span class="pre">duke</span></code> are available <a class="reference external" href="https://docs.google.com/document/d/1ZJUUBpiZPl0wxFsUPxkkR6vXZgfSAd3YBK5vlIpf_aA/edit">here</a>.</p>
-</section>
 <section id="connect-to-windows-servers">
 <h3>Connect to Windows Servers<a class="headerlink" href="#connect-to-windows-servers" title="Link to this heading">#</a></h3>
-<p>Use Microsoft Remote Desktop Connection on creer51, creer52, creer53.</p>
-<p>Computer : creer51.grames.polymtl.ca</p>
-<p>Username: grames\your_polygrames_username</p>
-<p>Password: your_polygrames_password</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When using an RDP client to connect to a Windows server, you must specify GE in the domain field.</p>
+</div>
 </section>
 <section id="home-folder">
 <h3>Home folder<a class="headerlink" href="#home-folder" title="Link to this heading">#</a></h3>
-<p>Your home folder at GE is here: <code class="docutils literal notranslate"><span class="pre">smb://hvclusterfs.grames.polymtl.ca/usagers/personnels</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Legacy GRAMES users may have a home folder available here:
+<code class="docutils literal notranslate"><span class="pre">smb://hvclusterfs.grames.polymtl.ca/usagers/</span></code></p>
+</div>
 </section>
 </section>
 <section id="list-of-computers-at-neuropoly">
 <h2>List of Computers at NeuroPoly<a class="headerlink" href="#list-of-computers-at-neuropoly" title="Link to this heading">#</a></h2>
 <p>Are you new to NeuroPoly and looking for a desk and a station? Please check the <a class="reference external" href="https://docs.google.com/document/d/11GEh5YvYRnWnERv26TezcyvyPF2W5KF0uoI2U6p7XsM/edit">list of Desktop/Server/Clusters computers and Printers</a> so you can pick one that is free. If you’d like a particular desk and someone else is using a station remotely, please ask the admins to move the station to another location.</p>
 <p>If you prefer to work on your laptop, please let the admins know in your <a class="reference external" href="https://github.com/neuropoly/onboarding/issues/">onboarding ticket</a> and they will find you an available screen you can connect to your laptop.</p>
-<p>The following CPU and GPU clusters are available for internal use at <strong>NeuroPoly</strong>.</p>
+<p>The following CPU and GPU clusters and specialized workstations are available for internal use at <strong>NeuroPoly</strong>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Please indicate in <a class="reference external" href="https://calendar.google.com/calendar/u/0/embed?src=4mg6bgd9pv55thf9486t2miht8&#64;group.calendar.google.com">NeuroPoly’s “Computer resource” calendar</a> if you plan to launch intensive calculations on a computer. These are shared resources, so it helps to know which computer is being used and by who, in order to prioritize tasks and make the best of our resources. Your calendar entry could span several days, and should specify your name and the ID or number of GPU/CPU used. Example: <code class="docutils literal notranslate"><span class="pre">julien&#64;rosenberg:gpu[4,5]</span></code>, or <code class="docutils literal notranslate"><span class="pre">naga&#64;joplin:cpu[n=20]</span></code> If you don’t have writing permission on this calendar please post a request on <a class="reference external" href="https://github.com/neuropoly/computers/issues/">the ticket tracker</a>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you wish to monitor the CPU/GPU/RAM/disk and other aspects of the server you are using, you can use our <a class="reference external" href="https://monitor.neuro.polymtl.ca/v1">monitoring system</a>. You need to be inside the VLAN to see the monitoring system.</p>
+<p>If you wish to monitor the CPU/GPU/RAM/disk and other aspects of the server you are using, you can use our <a class="reference external" href="https://monitor.neuro.polymtl.ca/v1">monitoring system</a>. You need to be on the Polymtl network to see the monitoring system.</p>
 </div>
 <section id="rosenberg">
 <h3>rosenberg<a class="headerlink" href="#rosenberg" title="Link to this heading">#</a></h3>
@@ -579,15 +581,18 @@ document.write(`
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>CPU</strong></p></td>
-<td><p>2x Intel E5-2630</p></td>
+<td><p>2x Intel(R) Xeon(R) CPU E5-2630 v4 &#64; 2.20GHz 10-Core</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>GPU</strong></p></td>
-<td><p>8x P100</p></td>
+<td><p>8x Tesla P100 SXM2 16GB</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>RAM</strong></p></td>
-<td><p>16x 32GB DDR4</p></td>
+<td><p>16x 32GB DDR4 2400 MHz</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Hostname</strong></p></td>
+<tr class="row-odd"><td><p><strong>OS</strong></p></td>
+<td><p>Ubuntu</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Hostname</strong></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">rosenberg.neuro.polymtl.ca</span></code></p></td>
 </tr>
 </tbody>
@@ -602,7 +607,6 @@ document.write(`
 </ul>
 </li>
 </ul>
-<p><em>For system administrators</em>: Please log all the changes on the station by updating the ansible scripts from <a class="github reference external" href="https://github.com/neuropoly/computers">neuropoly/computers</a>.</p>
 </section>
 <section id="romane">
 <h3>romane<a class="headerlink" href="#romane" title="Link to this heading">#</a></h3>
@@ -614,15 +618,18 @@ document.write(`
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>CPU</strong></p></td>
-<td><p>AMD EPYC 7452 32-Core</p></td>
+<td><p>1x AMD EPYC 7452 32-Core</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>GPU</strong></p></td>
-<td><p>4x RTX A6000 48GB</p></td>
+<td><p>4x NVIDIA RTX A6000 48GB</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>RAM</strong></p></td>
-<td><p>16x 32GB DDR4</p></td>
+<td><p>8x 64GB DDR4 3200 MHz</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Hostname</strong></p></td>
+<tr class="row-odd"><td><p><strong>OS</strong></p></td>
+<td><p>Ubuntu</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Hostname</strong></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">romane.neuro.polymtl.ca</span></code></p></td>
 </tr>
 </tbody>
@@ -637,7 +644,6 @@ document.write(`
 </ul>
 </li>
 </ul>
-<p><em>For system administrators</em>: Please log all the changes on the station by updating the ansible scripts from <a class="github reference external" href="https://github.com/neuropoly/computers">neuropoly/computers</a>.</p>
 </section>
 <section id="tassan">
 <h3>tassan<a class="headerlink" href="#tassan" title="Link to this heading">#</a></h3>
@@ -649,16 +655,19 @@ document.write(`
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>CPU</strong></p></td>
-<td><p>Intel(R) Xeon(R) w7-2495X 24-Core</p></td>
+<td><p>1x Intel(R) Xeon(R) w7-2495X 24-Core</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>GPU</strong></p></td>
-<td><p>2x RTX PRO 6000 Blackwell Max-Q Workstation Edition 96GB</p></td>
+<td><p>2x NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition 96GB</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>RAM</strong></p></td>
-<td><p>128GB DDR5</p></td>
+<td><p>2x 64GB DDR5 5600 MHz</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Hostname</strong></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">romane.neuro.polymtl.ca</span></code></p></td>
+<tr class="row-odd"><td><p><strong>OS</strong></p></td>
+<td><p>Ubuntu</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Hostname</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tassan.neuro.polymtl.ca</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -681,23 +690,24 @@ document.write(`
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>CPU</strong></p></td>
-<td><p>i7-5930K 3.5GHz 6 Cores</p></td>
+<td><p>Intel(R) Core(TM) i7-5930K CPU &#64; 3.50GHz 6-Core</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>GPU</strong></p></td>
-<td><p>2x GTX Titan X 12GB</p></td>
+<td><p>NVIDIA GeForce GTX TITAN X 12GB</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>RAM</strong></p></td>
-<td><p>1x 64GB DDR4</p></td>
+<td><p>8× 8GB DDR4 2400 MHz</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Hostname</strong></p></td>
+<tr class="row-odd"><td><p><strong>OS</strong></p></td>
+<td><p>Ubuntu</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Hostname</strong></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">bireli.neuro.polymtl.ca</span></code></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <ul class="simple">
-<li><p>Add event to the computer calendar</p></li>
-<li><p>Use your <strong>GE</strong> account to connect on the machine</p></li>
 <li><p><a class="reference external" href="https://intranet.neuro.polymtl.ca/computing-resources/neuropoly/gpus.html">How to use GPU Clusters at NeuroPoly</a></p>
 <ul>
 <li><p><a class="reference external" href="https://drive.google.com/file/d/17-eLVBiMNA8bNbfzpD6NLxHApZRDoy1B/view?usp=sharing">Video tutorial to get started</a></p></li>
@@ -715,18 +725,20 @@ document.write(`
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>CPU</strong></p></td>
-<td><p>8x Intel E7-4809v4 8-Core 2.10GHz</p></td>
+<td><p>4x Intel(R) Xeon(R) CPU E7-4850 v4 &#64; 2.10GHz 16-Core</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>RAM</strong></p></td>
-<td><p>16x 16GB DDR4</p></td>
+<td><p>16x 16GB DDR4 2400 MHz</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Hostname</strong></p></td>
+<tr class="row-even"><td><p><strong>OS</strong></p></td>
+<td><p>Ubuntu</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Hostname</strong></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">joplin.neuro.polymtl.ca</span></code></p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>The server is bound to the GRAMES which is linked to the GE domain.</p>
 </section>
 <section id="abbey">
 <h3>abbey<a class="headerlink" href="#abbey" title="Link to this heading">#</a></h3>
@@ -738,92 +750,16 @@ document.write(`
 </thead>
 <tbody>
 <tr class="row-even"><td><p><strong>CPU</strong></p></td>
-<td><p>Xeon 12-core</p></td>
+<td><p>2x Intel(R) Xeon(R) CPU E5-2603 v4 &#64; 1.70GHz 6-Core</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>OS</strong></p></td>
+<tr class="row-odd"><td><p><strong>RAM</strong></p></td>
+<td><p>16x 16GB DDR4 1866 MHz</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>OS</strong></p></td>
 <td><p>Ubuntu</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Hostname</strong></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Credentials</strong></p></td>
-<td><p><a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.mtnjvepco2an">NeuroPoly Internal Document: Abbey Teamviewer Credentials</a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="fitzgerald">
-<h3>fitzgerald<a class="headerlink" href="#fitzgerald" title="Link to this heading">#</a></h3>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Spec</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Model</strong></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>OS</strong></p></td>
-<td><p>Windows 7</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Hostname</strong></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Credentials</strong></p></td>
-<td><p><a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.9kegj6dmbnac">NeuroPoly Internal Document: Fitzgerald TeamViewer Credentials</a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="tristano">
-<h3>tristano<a class="headerlink" href="#tristano" title="Link to this heading">#</a></h3>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Spec</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Model</strong></p></td>
-<td><p>Mac Mini</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>OS</strong></p></td>
-<td><p>Ubuntu 16.04</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Hostname</strong></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Credentials</strong></p></td>
-<td><p><a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.wa49ms1v7x01">NeuroPoly Internal Document: Tristano VNC Credentials</a></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>For SCT database interface use: <a class="reference external" href="http://tristano.neuro.polymtl.ca">SCT annotations</a></p>
-</section>
-<section id="vnmrj">
-<h3>vnmrj<a class="headerlink" href="#vnmrj" title="Link to this heading">#</a></h3>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Spec</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Model</strong></p></td>
-<td><p>PC Intel Duo Quad Core</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>OS</strong></p></td>
-<td><p>RedHat</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Hostname</strong></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Credentials</strong></p></td>
-<td><p><a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.jzew4w9jgpfp">NeuroPoly Internal Document: VNMRJ VNC Credentials</a></p></td>
+<tr class="row-odd"><td><p><strong>Hostname</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">abbey.neuro.polymtl.ca</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -845,7 +781,7 @@ document.write(`
 <td><p>PC</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>OS</strong></p></td>
-<td><p>Windows 10 (⚠️ Connect with Microsoft Remote Desktop)</p></td>
+<td><p>Windows 10 (Connect with Microsoft Remote Desktop)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Hostname</strong></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">idea3t.neuro.polymtl.ca</span></code></p></td>
@@ -860,6 +796,34 @@ document.write(`
 <p class="admonition-title">Warning</p>
 <p><strong>Possible error:</strong> “The certificate or associated chain is not valid.”<br />
 <strong>Solution:</strong> Install remote Desktop v10 or higher (v8 does not work)</p>
+</div>
+</section>
+<section id="idea7t">
+<h3>idea7t<a class="headerlink" href="#idea7t" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Spec</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Purpose</strong></p></td>
+<td><p>Programming pulse sequences within the Siemens IDEA environment for VE12U (Terra)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Model</strong></p></td>
+<td><p>PC</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>OS</strong></p></td>
+<td><p>Windows 10 (Connect with Microsoft Remote Desktop)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Hostname</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">idea7t.neuro.polymtl.ca</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Credentials</strong></p></td>
+<td><p><a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.i6g9qdkw050o">NeuroPoly Internal Document: Idea7t Remote Credentials</a></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </section>
 <section id="peterson">
@@ -881,10 +845,10 @@ document.write(`
 <td><p>Windows 10 (Connect with Microsoft Remote Desktop)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Hostname</strong></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">peterson.grames.polymtl.ca</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">peterson.neuro.polymtl.ca</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Credentials</strong></p></td>
-<td><p>Username: “GRAMES\***” (***: Your GE username, eg: p101317)</p></td>
+<td><p>Use your <a class="reference internal" href="#./README.html#ge"><span class="xref myst">GE</span></a> credentials.</p></td>
 </tr>
 </tbody>
 </table>
@@ -912,7 +876,7 @@ document.write(`
 <td><p><code class="docutils literal notranslate"><span class="pre">node006.grames.polymtl.ca</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Credentials</strong></p></td>
-<td><p>Username: “GRAMES\***” (***: Your GE username, eg: p101317)</p></td>
+<td><p>Use your <a class="reference internal" href="#./README.html#ge"><span class="xref myst">GE</span></a> credentials.</p></td>
 </tr>
 </tbody>
 </table>
@@ -940,7 +904,35 @@ document.write(`
 <td><p><code class="docutils literal notranslate"><span class="pre">node007.grames.polymtl.ca</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Credentials</strong></p></td>
-<td><p>Username: “GRAMES\***” (***: Your GE username, eg: p101317)</p></td>
+<td><p>Use your <a class="reference internal" href="#./README.html#ge"><span class="xref myst">GE</span></a> credentials.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="herbie">
+<h3>herbie<a class="headerlink" href="#herbie" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Spec</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Purpose</strong></p></td>
+<td><p>HFSS and CST</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Model</strong></p></td>
+<td><p>HP Z4 Workstation PC 64GB</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>OS</strong></p></td>
+<td><p>Windows 11 (Connect with Microsoft Remote Desktop)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Hostname</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">herbie.neuro.polymtl.ca</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Credentials</strong></p></td>
+<td><p>Use your <a class="reference internal" href="#./README.html#ge"><span class="xref myst">GE</span></a> credentials.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1405,75 +1397,16 @@ mac (Monterey and after)</label><div class="sd-tab-content docutils">
 <p>If you are experiencing mounting issues on macOs, <a class="reference external" href="https://github.com/neuropoly/intranet.neuro.polymtl.ca/issues/57">this</a> might help.</p>
 </div>
 </section>
-<section id="vnc-graphical-interface">
-<h3>VNC (graphical interface)<a class="headerlink" href="#vnc-graphical-interface" title="Link to this heading">#</a></h3>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-3" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-8">
-macOS</label><div class="sd-tab-content docutils">
-<ol class="arabic simple">
-<li><p>Open Finder</p></li>
-<li><p>Click Cmd+K</p></li>
-<li><p>In the “Server Address”, type (using the <code class="docutils literal notranslate"><span class="pre">STATION</span></code> you want): <code class="docutils literal notranslate"><span class="pre">vnc://STATION.neuro.polymtl.ca</span></code></p></li>
-<li><p>You can use your local/network account information or the <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg">shared account credentials</a></p></li>
-</ol>
-</div>
-<input id="sd-tab-item-9" name="sd-tab-set-3" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-9">
-PC/Linux</label><div class="sd-tab-content docutils">
-<ol class="arabic simple">
-<li><p>Establish a VNC connection using <a class="reference external" href="https://wiki.gnome.org/Apps/Vinagre/">vinaigre</a>.</p></li>
-<li><p>In the “Server Address”, type (using the <code class="docutils literal notranslate"><span class="pre">STATION</span></code> you want): <code class="docutils literal notranslate"><span class="pre">vnc://STATION.neuro.polymtl.ca</span></code></p></li>
-<li><p>You can use the password from <a class="reference external" href="https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg">shared account credentials</a></p></li>
-</ol>
-</div>
-</div>
-<section id="linux-stations">
-<h4>Linux stations<a class="headerlink" href="#linux-stations" title="Link to this heading">#</a></h4>
-<p>On Linux targets, a VNC server needs to be started manually before the above instructions will work.</p>
-<ol class="arabic simple">
-<li><p>Create configuration file under <code class="docutils literal notranslate"><span class="pre">~/.vnc/xstartup</span></code> with the following contents:</p></li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="c1">#!/bin/sh</span>
-<span class="w"> </span><span class="c1"># Uncomment the following two lines for normal desktop:</span>
-<span class="w"> </span><span class="nb">unset</span><span class="w"> </span>SESSION_MANAGER
-<span class="w"> </span><span class="nb">unset</span><span class="w"> </span>DBUS_SESSION_BUS_ADDRESS
-<span class="w"> </span>startxfce4<span class="w"> </span><span class="p">&amp;</span>
-<span class="w"> </span><span class="o">[</span><span class="w"> </span>-x<span class="w"> </span>/etc/vnc/xstartup<span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">exec</span><span class="w"> </span>/etc/vnc/xstartup
-<span class="w"> </span><span class="o">[</span><span class="w"> </span>-r<span class="w"> </span><span class="nv">$HOME</span>/.Xresources<span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>xrdb<span class="w"> </span><span class="nv">$HOME</span>/.Xresources
-<span class="w"> </span>xsetroot<span class="w"> </span>-solid<span class="w"> </span>grey
-<span class="w"> </span>vncconfig<span class="w"> </span>-iconic<span class="w"> </span><span class="p">&amp;</span>
-</pre></div>
-</div>
-<ol class="arabic simple">
-<li><p>Give the right permissions to the file <code class="docutils literal notranslate"><span class="pre">~/.vnc/xstartup</span></code></p></li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>~/.vnc/xstartup
-</pre></div>
-</div>
-<ol class="arabic simple">
-<li><p>Start VNC server</p></li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>vncserver<span class="w"> </span>-geometry<span class="w"> </span>1600x1200<span class="w"> </span>:&lt;PORT_NUMBER&gt;
-</pre></div>
-</div>
-<p><strong>Note:</strong> To list all running vncservers, use: ps -ef | grep vnc`</p>
-<p>After starting the vncserver, connect to it as above.</p>
+<section id="xrdp-graphical-interface">
+<h3>XRDP (graphical interface)<a class="headerlink" href="#xrdp-graphical-interface" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.xrdp.org/">XRDP</a> is installed on all remote Linux stations. This means that you can use and RDP client to establish graphical connections to our Linux servers.</p>
+<p>On Linux, <a class="reference external" href="https://remmina.org/">Remmina</a> is recommended. (On NeuroPoly-managed linux desktops, <code class="docutils literal notranslate"><span class="pre">remmina</span></code> is already installed).</p>
+<p>Windows users can use the native <a class="reference external" href="https://support.microsoft.com/en-us/windows/how-to-use-remote-desktop-5fe128d5-8fb1-7a23-3b8a-41e636865e8c">Remote Desktop Connection client</a>.</p>
+<p>MacOS users can use <a class="reference external" href="https://formulae.brew.sh/formula/freerdp">freerdp</a>, the <a class="reference external" href="https://learn.microsoft.com/en-us/windows-app/overview">Windows app for Mac</a>, or another compatible RDP client.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Note:</strong></p>
-<ul class="simple">
-<li><p>On the first start of the vncserver, you will have to set a personal password for your vnc session</p></li>
-<li><p>The resolution can be defined by changing the value of the <code class="docutils literal notranslate"><span class="pre">-geometry</span></code> flag.</p></li>
-</ul>
+<p>VNC is no longer supported for connection to remotes Linux workstations. Admins may still need to use VNC for graphical connections to the few remaining macOS hosts. On Linux, <code class="docutils literal notranslate"><span class="pre">remmina</span></code> with the VNC plugin is recommended.</p>
 </div>
-<ol class="arabic simple">
-<li><p>Stop VNC server - mandatory at the end of your session</p></li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>vncserver<span class="w"> </span>-kill<span class="w"> </span>:&lt;PORT_NUMBER&gt;
-</pre></div>
-</div>
-</section>
 </section>
 <section id="language">
 <h3>Language<a class="headerlink" href="#language" title="Link to this heading">#</a></h3>
@@ -1486,15 +1419,12 @@ PC/Linux</label><div class="sd-tab-content docutils">
 </section>
 <section id="connect-to-the-polytechnique-public-disk">
 <h2>Connect to the Polytechnique public disk<a class="headerlink" href="#connect-to-the-polytechnique-public-disk" title="Link to this heading">#</a></h2>
-<p>Finder –&gt; Go –&gt; Connect to server Server address:</p>
+<p>Finder –&gt; Go –&gt; Connect to server</p>
+<p>Server address:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">smb</span><span class="p">:</span><span class="o">//</span><span class="n">genie06</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span><span class="o">/</span><span class="n">public</span>
 </pre></div>
 </div>
-<p>Then enter your ID and password at poly.</p>
-</section>
-<section id="retrieve-an-old-backup">
-<h2>Retrieve an old backup<a class="headerlink" href="#retrieve-an-old-backup" title="Link to this heading">#</a></h2>
-<p><strong>duke</strong> (/mri, /projects, /sct_testing) is backed up on <strong>grappelli</strong> every evening at 21:00 EST. In order to retrieve old backup you have to contact Jean-Sébastien Décarie.</p>
+<p>Use your <a class="reference internal" href="#./README.html#ge"><span class="xref myst">GE</span></a> credentials to connect.</p>
 </section>
 <section id="software-installed">
 <h2>Software Installed<a class="headerlink" href="#software-installed" title="Link to this heading">#</a></h2>
@@ -1631,7 +1561,6 @@ Mon Aug  4 04:04:38 EDT 2025
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ge">GE</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#password">Password</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#groups">Groups</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-windows-servers">Connect to Windows Servers</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#home-folder">Home folder</a></li>
 </ul>
@@ -1643,13 +1572,12 @@ Mon Aug  4 04:04:38 EDT 2025
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bireli">bireli</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joplin">joplin</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abbey">abbey</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fitzgerald">fitzgerald</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tristano">tristano</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vnmrj">vnmrj</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#idea3t">idea3t</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#idea7t">idea7t</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#peterson">peterson</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#node006-poly-grames">node006 (Poly-Grames)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#node007-poly-grames">node007 (Poly-Grames)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#herbie">herbie</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vpn">VPN</a><ul class="nav section-nav flex-column">
@@ -1663,15 +1591,11 @@ Mon Aug  4 04:04:38 EDT 2025
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#locally">Locally</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh-command-line">SSH (command line)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sftp-mount-a-remote-station">SFTP (Mount a remote station)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vnc-graphical-interface">VNC (graphical interface)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linux-stations">Linux stations</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xrdp-graphical-interface">XRDP (graphical interface)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#language">Language</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-the-polytechnique-public-disk">Connect to the Polytechnique public disk</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieve-an-old-backup">Retrieve an old backup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-installed">Software Installed</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installed-on-each-station-local">Installed on each station (local)</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mri">MRI</a></li>

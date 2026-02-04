@@ -459,6 +459,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-from-stations">Access from stations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mount-with-gui">Mount with GUI</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mount-with-terminal">Mount with Terminal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieve-an-old-backup">Retrieve an old backup</a></li>
 </ul>
             </nav>
         </div>
@@ -515,7 +516,11 @@ document.write(`
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">duke</span></code> is not accessible when using SSH key login to linux stations.</p>
+<p><code class="docutils literal notranslate"><span class="pre">duke</span></code> is not accessible when using an SSH key to login to Linux stations.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Members do <em>not</em> have access to all shares by default. Admins looking for a more detailed overview of how access permissions work on <code class="docutils literal notranslate"><span class="pre">duke</span></code> can refer <a class="reference external" href="https://github.com/neuropoly/computers/wiki/Duke#access-rights">here</a>.</p>
 </div>
 <section id="access-from-stations">
 <h2>Access from stations<a class="headerlink" href="#access-from-stations" title="Link to this heading">#</a></h2>
@@ -545,12 +550,7 @@ macOS</label><div class="sd-tab-content docutils">
 <p><img alt="Screenshot of Connect to Server dialog" src="../_images/duke-macOS-01.png" /></p>
  </details>
 </li>
-<li><details><summary>Enter your <em>GRAMES</em> username and password</summary>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Your user name is your personal number example: p000000 or u000000
-Your password is the one you use for SSH connections</p>
-</div>
+<li><details><summary>Enter your <a href="./computing-resources/neuropoly/README.md#ge">GE</a> username and password</summary>
 <p><img alt="Screenshot of password dialog" src="../_images/duke-macOS-02.png" /></p>
  </details>
 </li>
@@ -582,8 +582,8 @@ Windows 10</label><div class="sd-tab-content docutils">
 <li><p>Map Network Drive</p></li>
 <li><p>Address: <code class="docutils literal notranslate"><span class="pre">\\duke.neuro.polymtl.ca\&lt;FOLDER&gt;</span></code></p></li>
 <li><p>Check “Connect using different credentials”.</p></li>
-<li><p>Username: <code class="docutils literal notranslate"><span class="pre">grames\&lt;POLYGRAMES_USERNAME&gt;</span></code></p></li>
-<li><p>Password: <code class="docutils literal notranslate"><span class="pre">&lt;POLYGRAMES_PASSWORD&gt;</span></code>.</p></li>
+<li><p>Username: <code class="docutils literal notranslate"><span class="pre">GE\&lt;GE_USERNAME&gt;</span></code></p></li>
+<li><p>Password: <code class="docutils literal notranslate"><span class="pre">&lt;GE_PASSWORD&gt;</span></code>.</p></li>
 </ol>
 </div>
 </div>
@@ -616,11 +616,15 @@ sudo<span class="w"> </span>umount<span class="w"> </span>&lt;FOLDER_NAME&gt;/
 <label class="sd-tab-label" for="sd-tab-item-4">
 Linux</label><div class="sd-tab-content docutils">
 <p>To mount:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>mount<span class="w"> </span>-t<span class="w"> </span>cifs<span class="w"> </span>//duke.neuro.polymtl.ca/&lt;FOLDER_NAME&gt;<span class="w"> </span>/mnt/duke/&lt;FOLDER_NAME&gt;<span class="w"> </span>-o<span class="w"> </span><span class="nv">username</span><span class="o">=</span>&lt;GRAMES_USERNAME&gt;,noexec
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>mount<span class="w"> </span>-t<span class="w"> </span>cifs<span class="w"> </span>//duke.neuro.polymtl.ca/&lt;FOLDER_NAME&gt;<span class="w"> </span>/mnt/duke/&lt;FOLDER_NAME&gt;<span class="w"> </span>-o<span class="w"> </span><span class="nv">username</span><span class="o">=</span>&lt;GE_USERNAME&gt;,noexec
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="retrieve-an-old-backup">
+<h2>Retrieve an old backup<a class="headerlink" href="#retrieve-an-old-backup" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">duke</span></code> (<code class="docutils literal notranslate"><span class="pre">/mri</span></code>, <code class="docutils literal notranslate"><span class="pre">/projects</span></code>, <code class="docutils literal notranslate"><span class="pre">/sct_testing</span></code>) is backed up on <strong>grappelli</strong> every evening at 21:00 EST. In order to retrieve old backup you have to contact Jean-Sébastien Décarie.</p>
 </section>
 </section>
 
@@ -672,6 +676,7 @@ Linux</label><div class="sd-tab-content docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-from-stations">Access from stations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mount-with-gui">Mount with GUI</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mount-with-terminal">Mount with Terminal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieve-an-old-backup">Retrieve an old backup</a></li>
 </ul>
   </nav></div>
 
