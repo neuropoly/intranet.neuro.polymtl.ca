@@ -4,7 +4,8 @@ description: How to use CPU clusters at Neuropoly
 
 # CPU Clusters
 
-As with [other machines](./README.md#connect-to-neuropoly-computers), connect with ssh using your [GE](./README.md#ge) account.
+As with [other machines](./README.md#connect-to-neuropoly-computers), connect with ssh using your [GE](./README.md#ge) account. Full specs for these stations can be found [here](./README.md#list-of-computers-at-neuropoly).
+
 
 ## `joplin`
 
@@ -23,5 +24,3 @@ For fast I/O, use the NVMe hard drive, which is automatically available: `~/data
 | **Model** | Xeon 12-core |
 | **OS** | Linux |
 | **Hostname** | `abbey.neuro.polymtl.ca` |
-
-Full specs for these stations can be found [here](./README.md#list-of-computers-at-neuropoly).
