@@ -11,6 +11,9 @@ Neuropoly has several GPUs available for training deep learning models.
 * `bireli.neuro.polymtl.ca` -  2 x [GeForce GTX TITAN X](https://www.nvidia.com/en-us/geforce/graphics-cards/geforce-gtx-titan-x/specifications/) \(released 2014\)
 * `rosenberg.neuro.polymtl.ca` - 8 x [Tesla P100 SXM2 16GB](https://www.nvidia.com/en-us/data-center/tesla-p100/) \(released 2016\)
 * `romane.neuro.polymtl.ca` - 4 x [RTX A6000](https://www.nvidia.com/en-us/design-visualization/rtx-a6000/) \(released 2020\)
+* `tassan.neuro.polymtl.ca` - 2 x [RTX PRO 6000 Blackwell Max-Q Workstation Edition](https://www.nvidia.com/content/dam/en-zz/Solutions/products/workstations/professional-desktop-gpus/rtx-pro-6000-max-q/workstation-datasheet-blackwell-rtx-pro-6000-max-q-nvidia-3519233.pdf) (released 2025)
+
+Full specs for these stations can be found [here](./README.md#list-of-computers-at-neuropoly).
 
 We have spent money and time on this infrastructure for it to push science forward, so please take advantage of it!
 
@@ -1012,7 +1015,7 @@ u918374@rosenberg:~$ CUDA_VISIBLE_DEVICES="2,3,5" ./train.sh
 ### Running memory- and CPU-intensive tasks
 
 ```{note}
-At the moment, this section only applies to romane
+At the moment, this section only applies to [romane](./README.md#romane).
 ```
 
 <details>

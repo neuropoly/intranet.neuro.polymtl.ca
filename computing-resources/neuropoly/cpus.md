@@ -24,3 +24,4 @@ For fast I/O, use the NVMe hard drive, which is automatically available: `~/data
 | **OS** | Linux |
 | **Hostname** | `abbey.neuro.polymtl.ca` |
 
+Full specs for these stations can be found [here](./README.md#list-of-computers-at-neuropoly).
