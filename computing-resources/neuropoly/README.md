@@ -698,70 +698,18 @@ will attach the remote `/tmp/` to the local `./cluster_folder`
 If you are experiencing mounting issues on macOs, [this](https://github.com/neuropoly/intranet.neuro.polymtl.ca/issues/57) might help.
 ```
 
+### XRDP (graphical interface)
 
-### VNC (graphical interface)
+[XRDP](https://www.xrdp.org/) is installed on all remote Linux stations. This means that you can use and RDP client to establish graphical connections to our Linux servers.
 
+On Linux, [Remmina](https://remmina.org/) is recommended. (On NeuroPoly-managed linux desktops, `remmina` is already installed). 
 
-::::{tab-set}
-:::{tab-item} macOS
-1. Open Finder
-2. Click Cmd+K
-3. In the “Server Address”, type (using the `STATION` you want): `vnc://STATION.neuro.polymtl.ca`
-4. You can use your local/network account information or the [shared account credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg)
-:::
+Windows users can use the native [Remote Desktop Connection client](https://support.microsoft.com/en-us/windows/how-to-use-remote-desktop-5fe128d5-8fb1-7a23-3b8a-41e636865e8c).
 
-:::{tab-item} PC/Linux
-1. Establish a VNC connection using [vinaigre](https://wiki.gnome.org/Apps/Vinagre/).
-2. In the “Server Address”, type (using the `STATION` you want): `vnc://STATION.neuro.polymtl.ca`
-3. You can use the password from [shared account credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.ckseg5ldklsg)
-:::
-::::
-
-#### Linux stations
-
-On Linux targets, a VNC server needs to be started manually before the above instructions will work.
-
-1. Create configuration file under `~/.vnc/xstartup` with the following contents:
-
-```bash
- #!/bin/sh
- # Uncomment the following two lines for normal desktop:
- unset SESSION_MANAGER
- unset DBUS_SESSION_BUS_ADDRESS
- startxfce4 &
- [ -x /etc/vnc/xstartup ] && exec /etc/vnc/xstartup
- [ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
- xsetroot -solid grey
- vncconfig -iconic &
-```
-
-1. Give the right permissions to the file `~/.vnc/xstartup`
-
-```bash
- chmod +x ~/.vnc/xstartup
-```
-
-1. Start VNC server
-
-```bash
- vncserver -geometry 1600x1200 :<PORT_NUMBER>
-```
-
-**Note:** To list all running vncservers, use: ps -ef | grep vnc\`
-
-After starting the vncserver, connect to it as above.
+MacOS users can use [freerdp](https://formulae.brew.sh/formula/freerdp), the [Windows app for Mac](https://learn.microsoft.com/en-us/windows-app/overview), or another compatible RDP client.
 
 ```{note}
-**Note:**
-
-* On the first start of the vncserver, you will have to set a personal password for your vnc session
-* The resolution can be defined by changing the value of the `-geometry` flag.
-```
-
-1. Stop VNC server - mandatory at the end of your session
-
-```bash
- vncserver -kill :<PORT_NUMBER>
+VNC is no longer supported for connection to remotes Linux workstations. Admins may still need to use VNC for graphical connections to the few remaining macOS hosts. On Linux, `remmina` with the VNC plugin is recommended. 
 ```
 
 ### Language
