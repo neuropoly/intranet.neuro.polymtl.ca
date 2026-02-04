@@ -724,8 +724,9 @@ Logout and back in again and apps should now be in English (or the other languag
 
 ## Connect to the Polytechnique public disk
 
-Finder –> Go –> Connect to server Server address:
+Finder –> Go –> Connect to server
 
+Server address:
 ```
 smb://genie06.polymtl.ca/public
 ```
