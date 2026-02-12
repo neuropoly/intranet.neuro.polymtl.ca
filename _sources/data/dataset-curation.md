@@ -358,7 +358,7 @@ Analysis scripts should not be kept here. Keep them in separate repositories, us
 
 ## Building the `derivatives` datasets
 
-First, it is important to understand what are [BIDS derivatives](https://bids-specification.readthedocs.io/en/stable/05-derivatives/01-introduction.html#bids-derivatives) folders:
+First, it is important to understand what are [BIDS derivatives](https://bids.neuroimaging.io/getting_started/folders_and_files/derivatives.html).
 
 > Derivatives are outputs of common processing pipelines, capturing data and meta-data sufficient for a researcher to understand and (critically) reuse those outputs in subsequent processing. Standardizing derivatives is motivated by use cases where formalized machine-readable access to processed data enables higher level processing.
 
