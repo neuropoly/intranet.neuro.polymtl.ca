@@ -9,5 +9,6 @@ mri-analysis
 deep-learning
 histology
 shared-paperpile-folder
+pediatric-mri
 ```
 
