@@ -91,7 +91,7 @@ Google Doc is great for collaborating on a paper. We recommend you install (and 
 
 ### Overleaf
 
-Overleaf is a good platform for writing papers with Latex. Mila provides the [Overleaf Pro license](https://www.overleaf.com/edu/mila#overview) for its students. If you're Julien's student, please contact him to get you added to Mila's account. Then, send an email to `it-support@mila.quebec` requesting an Overleaf Pro license. Having access to the Pro license enables the 'tracking' mode in Overleaf, which is essential when collaborating on a paper with multiple authors.
+Overleaf is a good platform for writing papers with Latex. Mila provides the [Overleaf Pro license](https://www.overleaf.com/edu/mila#overview) for its students. If you're Julien's student, please contact him to get your affiliation at Mila. Then, send an email to `it-support@mila.quebec` requesting an Overleaf Pro license. Having access to the Pro license enables the 'tracking' mode in Overleaf, which is essential when collaborating on a paper with multiple authors.
 
 ## Reference manager
 
