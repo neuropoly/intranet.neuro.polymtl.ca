@@ -136,9 +136,10 @@ If you wish to monitor the CPU/GPU/RAM/disk and other aspects of the server you 
 | --------------- | -------------- |
 | **Purpose** | Programming pulse sequences within the Siemens IDEA environment |
 | **Model** | PC |
-| **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
+| **OS** | Windows 10 |
 | **Hostname**    | `idea3t.neuro.polymtl.ca` |
-| **Credentials** | [NeuroPoly Internal Document: Idea3t Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.d65wz45n6ho7) |
+| **How to connect** | Windows/Apple: Microsoft Remote Desktop. Linux: [remmina](https://remmina.org/) |
+| **Credentials** | [NeuroPoly Internal Document: idea3t Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.d65wz45n6ho7) |
 
 ```{warning}
 **Possible error:** “The certificate or associated chain is not valid.”\
@@ -153,7 +154,8 @@ If you wish to monitor the CPU/GPU/RAM/disk and other aspects of the server you 
 | **Model** | PC |
 | **OS** | Windows 10 (Connect with Microsoft Remote Desktop) |
 | **Hostname**    | `idea7t.neuro.polymtl.ca` |
-| **Credentials** | [NeuroPoly Internal Document: Idea7t Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.i6g9qdkw050o) |
+| **How to connect** | Windows/Apple: Microsoft Remote Desktop. Linux: [remmina](https://remmina.org/) |
+| **Credentials** | [NeuroPoly Internal Document: idea7t Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.i6g9qdkw050o) |
 
 ### peterson
 
