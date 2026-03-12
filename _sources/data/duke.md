@@ -25,7 +25,7 @@ This is because, inside `duke`, every file has permissions `-rw-r--r--` and ever
 ```
 
 ```{note}
-`duke` is not accessible when using an SSH key to login to Linux stations.
+`duke` is not accessible by default when using an SSH key to login to Linux stations. However, you can use `cifscreds add duke.neuro.polymtl.ca` to add access after login. 
 ```
 
 ```{note}
