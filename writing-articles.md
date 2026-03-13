@@ -99,9 +99,7 @@ Overleaf is a good platform for writing papers with Latex. Mila provides the [Ov
 
 If you write your article with Google Doc, we recommend using [Paperpile](https://paperpile.com) for managing your bibliography.
 
-We have a Paperpile account for the lab. For login please use the Google account `neuropolylab "at" gmail "dot" com`
-
-If you prefer to have your own Paperpile license please request it to your supervisor.
+Ask your supervisor to get you a licence (send them your gmail address).
 
 ```{note}
 Paperpile on Google Docs works only with Google Chrome.
