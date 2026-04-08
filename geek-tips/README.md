@@ -8,6 +8,7 @@ programming-languages/README
 git
 git-annex
 os-guides/README
+software_containers/README.md
 contributing
 misc/README
 image-processing-software/README
