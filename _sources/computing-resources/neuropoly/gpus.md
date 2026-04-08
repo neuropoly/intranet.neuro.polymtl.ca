@@ -1015,7 +1015,7 @@ u918374@rosenberg:~$ CUDA_VISIBLE_DEVICES="2,3,5" ./train.sh
 ### Running memory- and CPU-intensive tasks
 
 ```{note}
-At the moment, this section only applies to [romane](./README.md#romane).
+At the moment, this section only applies to [romane](./README.md#romane) and [tassan](./README.md#tassan).
 ```
 
 <details>
