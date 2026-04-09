@@ -63,6 +63,10 @@ When working on campus or [over the VPN](../computing-resources/neuropoly/README
     </details>
 4. <details><summary>Enter your <a href="./computing-resources/neuropoly/README.md#ge">GE</a> username and password</summary>
     
+    ```{note}
+    You may need to enter your full GE username, e.g., `p122326@ge.polymtl.ca`
+    ```
+
     ![Screenshot of password dialog](./duke-macOS-02.png)
     
     </details>
