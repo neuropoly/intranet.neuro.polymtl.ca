@@ -56,13 +56,17 @@ When working on campus or [over the VPN](../computing-resources/neuropoly/README
 :::{tab-item} macOS
 1. Open Finder
 2. CMD+K
-3. <details><summary>Enter <code>afp://duke.neuro.polymtl.ca/</code></summary>
+3. <details><summary>Enter <code>smb://duke.neuro.polymtl.ca/</code></summary>
 
     ![Screenshot of Connect to Server dialog](./duke-macOS-01.png)
     
     </details>
 4. <details><summary>Enter your <a href="./computing-resources/neuropoly/README.md#ge">GE</a> username and password</summary>
     
+    ```{note}
+    You may need to enter your full GE username, e.g., `p000000@ge.polymtl.ca`
+    ```
+
     ![Screenshot of password dialog](./duke-macOS-02.png)
     
     </details>
