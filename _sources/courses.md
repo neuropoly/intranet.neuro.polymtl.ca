@@ -100,6 +100,8 @@ Also see this list of [Bio-imaging courses offered by Quebec Universities](https
 
 | Code                                                                                      | Title / Notes                                              | Credits  | Lang.    | Prof                 |
 | ----------------------------------------------------------------------------------------- | -----------------------------------------------------------| -------- | -------- | -------------------- |
+| [MATH 60603A](https://www.hec.ca/en/courses/statistical-learning) @HEC                    | Statistical Learning | | | Aurélie Labbe | |
+| [MATH 70611A](https://www.hec.ca/en/courses/advanced-data-analytics) @HEC                 | Advanced Data Analysis | | | Aurélie Labbe | |
 | [BIO2043B](https://admission.umontreal.ca/cours-et-horaires/cours/bio-2043/)              | Statistique pratique pour sciences de la vie <br> _First 4 classes not really relevant, Last 4 classes interesting, on Pearson, Kendall correlation, Multiple Regressions, ANOVA (Maxime)_ | 3 | 🇫🇷 | ?  |
 | [IFT6268](https://admission.umontreal.ca/cours-et-horaires/cours/ift-6268/)               | Self-Supervised Representation Learning                    | 4         | 🇬🇧      | Aaron Courville      |
 | [IFT6269](https://www-labs.iro.umontreal.ca/~slacoste/teaching/ift6269/)                  | Probabilistic Graphical Models <br> _Given in Fall. Math heavy, assignment with proofs + coding exercises. Really interesting course! (Naga)_  | 4 | 🇬🇧  | Simon Lacoste-Julien |
