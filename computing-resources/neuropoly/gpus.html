@@ -471,7 +471,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#good-training-habits">Good Training Habits</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bookings">Bookings</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sharing-resources-booking-servers-using-slots">Sharing resources: booking servers &amp; using slots</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-booking">GPU booking</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-memory-and-cpu-intensive-tasks">Running memory- and CPU-intensive tasks</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#special-considerations">Special considerations</a></li>
@@ -1469,8 +1469,8 @@ u108545@rosenberg:~$ du -hs data_extrassd_u108545/miniconda3/
 <li><p>Store data as float32 rather than float64</p></li>
 </ul>
 </section>
-<section id="bookings">
-<h2>Bookings<a class="headerlink" href="#bookings" title="Link to this heading">#</a></h2>
+<section id="sharing-resources-booking-servers-using-slots">
+<h2>Sharing resources: booking servers &amp; using slots<a class="headerlink" href="#sharing-resources-booking-servers-using-slots" title="Link to this heading">#</a></h2>
 <p>There are two systems for resource sharing on GPU clusters: GPU sharing and CPU/memory sharing.
 GPU sharing is managed through a calendar. CPU and memory are shared using resource quotas.</p>
 <section id="gpu-booking">
@@ -1513,7 +1513,7 @@ a share of the system’s RAM and CPU.</p>
 <li><p>Book one or more GPU slots (See <a class="reference internal" href="#gpu-booking">GPU booking</a> above)</p></li>
 <li><p>Use the <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> utility script to assign your process to the appropriate slice:</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_slot</span> <span class="o">&lt;</span><span class="n">slot_number</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">args</span><span class="o">...</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_slot</span> <span class="o">&lt;</span><span class="n">slot_number</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">command</span><span class="p">]</span> <span class="p">[</span><span class="n">args</span><span class="o">...</span><span class="p">]</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -1523,11 +1523,12 @@ a share of the system’s RAM and CPU.</p>
 for slots 0 and 1.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;command&gt;</span> <span class="pre">[args...]</span></code> is the command as you would normally run it in the shell, e.g., <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">model.py</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[command]</span> <span class="pre">[args...]</span></code> is the (optional) command as you would normally run it in the shell, e.g., <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">model.py</span></code>.
+If you don’t specify a command, you’ll be placed in a bash shell.</p></li>
 </ul>
 <p>For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_slot</span> <span class="mi">2</span> <span class="n">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="mi">2</span> <span class="n">python3</span> <span class="n">myscript</span><span class="o">.</span><span class="n">py</span>
-<span class="n">set_slot</span> <span class="mi">0</span><span class="o">-</span><span class="mi">3</span> <span class="n">bash</span> <span class="o">--</span><span class="n">login</span>
+<span class="n">set_slot</span> <span class="mi">0</span><span class="o">-</span><span class="mi">3</span>
 </pre></div>
 </div>
 <section id="special-considerations">
@@ -1535,11 +1536,10 @@ for slots 0 and 1.</p></li>
 <ul class="simple">
 <li><p><strong>Environment variables are not currently passed through</strong> by <code class="docutils literal notranslate"><span class="pre">set_slot</span></code>. To run in a specific environment,
 for example a venv, use <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> to start a shell (e.g. <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">bash</span></code>) and then work in that shell.
-(NB: the shell will not persist unless you run it in tmux or screen). We are still improving our
-script, so this may become possible in the future.</p></li>
-<li><p><strong>If you need <code class="docutils literal notranslate"><span class="pre">conda</span></code> inside <code class="docutils literal notranslate"><span class="pre">set_slot</span></code></strong>, run <code class="docutils literal notranslate"><span class="pre">bash</span></code> with the <code class="docutils literal notranslate"><span class="pre">--login</span></code> or <code class="docutils literal notranslate"><span class="pre">-l</span></code> flag, e.g., <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">1-2</span> <span class="pre">bash</span> <span class="pre">-l</span></code>.
-This will put the proper folder inside the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable.</p></li>
-<li><p><strong>If you need to access duke inside <code class="docutils literal notranslate"><span class="pre">set_slot</span></code></strong>, run <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> inside a shell (e.g., <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">bash</span></code>), then
+(NB: the shell will not persist unless you run it in tmux or screen).</p></li>
+<li><p><strong>If you need <code class="docutils literal notranslate"><span class="pre">conda</span></code> inside <code class="docutils literal notranslate"><span class="pre">set_slot</span></code></strong>, run <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> without specifying the command. This will place you
+inside a bash login shell, which will put the proper folder inside the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable.</p></li>
+<li><p><strong>If you need to access duke inside <code class="docutils literal notranslate"><span class="pre">set_slot</span></code></strong>, run <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> inside a shell (e.g., <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span></code>), then
 run <code class="docutils literal notranslate"><span class="pre">cifscreds</span> <span class="pre">add</span> <span class="pre">duke.neuro.polymtl.ca</span></code> in that shell. This will ensure that duke is still
 accessible when you detach or logout</p>
 <ul>
@@ -1552,7 +1552,7 @@ Do NOT do <code class="docutils literal notranslate"><span class="pre">set_slot<
 should do so in this order:</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">tmux</span></code> or <code class="docutils literal notranslate"><span class="pre">tmux</span> <span class="pre">new</span> <span class="pre">-s</span> <span class="pre">mysession</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">bash</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span></code></p></li>
 </ol>
 </li>
 <li><p><strong>set_slot does not know anything about GPUs</strong>, so you still need to set the options with your tooling
@@ -1580,7 +1580,11 @@ to use the appropriate GPU, e.g., <code class="docutils literal notranslate"><sp
 </section>
 <section id="what-resources-are-available-to-me-for-trainings">
 <h4>What resources are available to me for trainings?<a class="headerlink" href="#what-resources-are-available-to-me-for-trainings" title="Link to this heading">#</a></h4>
-<p>Right now each GPU pool is limited to about 90G of RAM (hard limit: 110G) and 14 processors (1400% CPU).</p>
+<p>Right now each GPU pool is limited to:</p>
+<ul class="simple">
+<li><p>romane: ~100GB of RAM and 14 CPUs</p></li>
+<li><p>tassan: ~46GB of RAM ad 20 CPUs</p></li>
+</ul>
 </section>
 </section>
 </section>
@@ -1759,7 +1763,7 @@ Terminal</label><div class="sd-tab-content docutils">
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#good-training-habits">Good Training Habits</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bookings">Bookings</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sharing-resources-booking-servers-using-slots">Sharing resources: booking servers &amp; using slots</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-booking">GPU booking</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-memory-and-cpu-intensive-tasks">Running memory- and CPU-intensive tasks</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#special-considerations">Special considerations</a></li>

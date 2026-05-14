@@ -981,7 +981,7 @@ And:
 
 * Store data as float32 rather than float64
 
-## Bookings
+## Sharing resources: booking servers & using slots
 
 There are two systems for resource sharing on GPU clusters: GPU sharing and CPU/memory sharing.
 GPU sharing is managed through a calendar. CPU and memory are shared using resource quotas.
@@ -1036,31 +1036,31 @@ a share of the system's RAM and CPU.
 1. Book one or more GPU slots (See [GPU booking](#gpu-booking) above)
 2. Use the `set_slot` utility script to assign your process to the appropriate slice:
 ```
-set_slot <slot_number> <command> [args...]
+set_slot <slot_number> [command] [args...]
 ```
 
 - `<slot_number>` is 0, 1, 2, or 3, corresponding to the GPU you are using, e.g., `set_slot 0 ...` for GPU0.
   - If you've reserved more than one GPU, you can specify an inclusive range, e.g., `set_slot 0-1 ...`
     for slots 0 and 1.
-- `<command> [args...]` is the command as you would normally run it in the shell, e.g., `python model.py`
+- `[command] [args...]` is the (optional) command as you would normally run it in the shell, e.g., `python model.py`.
+  If you don't specify a command, you'll be placed in a bash shell.
 
 For example:
 ```
 set_slot 2 CUDA_VISIBLE_DEVICES=2 python3 myscript.py
-set_slot 0-3 bash --login
+set_slot 0-3
 ```
 
 #### Special considerations
 
 - **Environment variables are not currently passed through** by `set_slot`. To run in a specific environment,
 for example a venv, use `set_slot` to start a shell (e.g. `set_slot 0 bash`) and then work in that shell.
-(NB: the shell will not persist unless you run it in tmux or screen). We are still improving our
-script, so this may become possible in the future.
+(NB: the shell will not persist unless you run it in tmux or screen).
 
-- **If you need `conda` inside `set_slot`**, run `bash` with the `--login` or `-l` flag, e.g., `set_slot 1-2 bash -l`.
-This will put the proper folder inside the `PATH` environment variable.
+- **If you need `conda` inside `set_slot`**, run `set_slot` without specifying the command. This will place you
+  inside a bash login shell, which will put the proper folder inside the `PATH` environment variable.
 
-- **If you need to access duke inside `set_slot`**, run `set_slot` inside a shell (e.g., `set_slot 0 bash`), then
+- **If you need to access duke inside `set_slot`**, run `set_slot` inside a shell (e.g., `set_slot 0`), then
   run `cifscreds add duke.neuro.polymtl.ca` in that shell. This will ensure that duke is still
   accessible when you detach or logout
   - [Github issue](https://github.com/neuropoly/computers/issues/996)
@@ -1070,7 +1070,7 @@ processes, and will bypass our systemd slices and run in the limited user resour
 Do NOT do `set_slot 3 tmux new -s mysession`! **If you are using a shell AND tmux/screen** you
 should do so in this order:
   1. `tmux` or `tmux new -s mysession`
-  2. `set_slot 0 bash`
+  2. `set_slot 0`
 
 - **set_slot does not know anything about GPUs**, so you still need to set the options with your tooling
 to use the appropriate GPU, e.g., `CUDA_VISIBLE_DEVICES`
@@ -1090,7 +1090,9 @@ to use the appropriate GPU, e.g., `CUDA_VISIBLE_DEVICES`
 
 #### What resources are available to me for trainings?
 
-Right now each GPU pool is limited to about 90G of RAM (hard limit: 110G) and 14 processors (1400% CPU).
+Right now each GPU pool is limited to:
+- romane: ~100GB of RAM and 14 CPUs
+- tassan: ~46GB of RAM ad 20 CPUs
 
 ## Monitoring
 
