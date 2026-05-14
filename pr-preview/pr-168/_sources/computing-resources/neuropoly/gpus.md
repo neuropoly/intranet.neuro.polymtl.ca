@@ -981,7 +981,7 @@ And:
 
 * Store data as float32 rather than float64
 
-## Bookings
+## Sharing resources: booking servers & using slots
 
 There are two systems for resource sharing on GPU clusters: GPU sharing and CPU/memory sharing.
 GPU sharing is managed through a calendar. CPU and memory are shared using resource quotas.
