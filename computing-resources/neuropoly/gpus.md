@@ -919,8 +919,6 @@ To get your software onto these servers, download it with `git clone`.
 
 For the benefit of being able to test code out locally, without the GPU servers, it's helpful to write device-agnostic code, code that falls back to running on slower CPU emulation if GPUs are not available.
 
-For tensorflow, this
-
 For pytorch, this [looks like this](https://pytorch.org/docs/stable/notes/cuda.html#device-agnostic-code)
 
 ```text
@@ -934,6 +932,21 @@ X = torch.empty((8, 42), device=device)
 # to make neural networks
 model = Network(...).to(device=device)
 ```
+
+### Installing torch-dependent packages
+When it comes to installing python packages, PyTorch is its own beast. You might encounter issues when trying to install recent versions of torch on the GPU clusters, or packages that depend on it. 
+
+What you should know is that your graphics card has a small program called a NVIDIA GPU driver. For all intents and purposes, the version of this driver is fixed. In parallel, PyTorch is a python wrapper over C/C++ code, so it contains 2 parts: the python code, and the lower-level code, including CUDA libraries. CUDA and your NVIDIA gpu driver need compatible versions. This means that the NVIDIA GPU driver version sets a maximum version for CUDA, which in turn puts a maximum version on the pytorch version that you can install. This is because when you install torch with `pip`, it ships with its own version of the required CUDA/cuDNN and runtime libraries. (see [the compatibility matrix here](https://github.com/pytorch/pytorch/blob/main/RELEASE.md)). 
+
+For example, let's look at `romane` and find out the maximum torch version it supports. Using `nvidia-smi` gives us the following information:
+
+```
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.288.01             Driver Version: 535.288.01   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+```
+
+Here, we can see that the NVIDIA GPU driver version is 535.288.01. For convenience, `nvidia-smi` also tells you the maximum CUDA version compatible with this driver: in our case, version 12.2. In other words, you cannot install any torch version that doesn't support CUDA 12.2. According to the compatibility matrix, this means that we currently cannot install any PyTorch version >= 2.8, since they dropped support for CUDA < 12.6 at that point.
 
 ## Data
 
