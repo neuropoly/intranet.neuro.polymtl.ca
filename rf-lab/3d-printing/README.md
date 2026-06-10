@@ -6,7 +6,7 @@
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Model**       | Raspberry Pi                                                                                                                                                         |
 | **OS**          | OctoPrint                                                                                                                                                            |
-| **Hostname**    | `http://132.207.154.91`                                                                                                                                              |
+| **Hostname**    | `modix.neuro.polymtl.ca` or `http://132.207.184.91`                                                                                                                  |
 | **Credentials** | [NeuroPoly Internal Document: Modix Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.125uuajyox5y) |
 
 * [SOP Modix](https://docs.google.com/document/d/1N1sCdYy1kLsIw_NDbPVM3fTg5EPaR50NNuACbf_dI6s/edit?usp=sharing)
