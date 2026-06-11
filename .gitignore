@@ -5,3 +5,6 @@ __pycache__/
 
 .DS_Store
 Thumbs.db
+
+# IDE custom config file
+.idea
