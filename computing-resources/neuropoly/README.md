@@ -134,6 +134,17 @@ If you wish to monitor the CPU/GPU/RAM/disk and other aspects of the server you 
 | **OS**       | Ubuntu                                               |
 | **Hostname** | `abbey.neuro.polymtl.ca`                             |
 
+### idea
+
+| Spec | Description |
+| --------------- | -------------- |
+| **Purpose** | ... |
+| **Model** | PC |
+| **OS** | Windows 10 |
+| **Hostname**    | `idea.neuro.polymtl.ca` |
+| **How to connect** | Windows/Apple: Microsoft Remote Desktop. Linux: [remmina](https://remmina.org/) |
+| **Credentials** | [NeuroPoly Internal Document: idea3t Remote Credentials](https://docs.google.com/document/d/13iNhiBKYZWT9ytsvYeeYV4FJn6Wn00q9Ctka7toMV08/edit#heading=h.vlzzluura73) |
+
 ### idea3t
 
 | Spec | Description |
