@@ -19,7 +19,7 @@ By default, all students will receive a stipend paid by the supervisor's researc
 * [NSERC](http://www.nserc-crsng.gc.ca/students-etudiants/pg-cs/cgsm-bescm_fra.asp) \(need to be Canadian or PR\)
 * [FRQS](http://www.frqs.gouv.qc.ca/en/bourses-et-subventions/consulter-les-programmes-remplir-une-demande/bourse/master-s-training-gfw44gha1560262422777)
 * [FRQNT](http://www.frqnt.gouv.qc.ca/en/bourses-et-subventions/consulter-les-programmes-remplir-une-demande/bourse/programs-of-scholarships-of-2supndsup-and-3suprdsup-cycles-w8dqldzo1561492002107)
-* [CIHR](http://www.nserc-crsng.gc.ca/Students-Etudiants/PG-CS/CGSM-BESCM_fra.asp)
+* [CIHR](https://cihr-irsc.gc.ca/e/50513.html)
 * [IVADO](https://ivado.ca/en/ivado-scholarships/excellence-scholarships-msc/)
 * [TransMedTech](https://www.polymtl.ca/transmedtech/programmes-de-financement-et-daccompagnement)
 * QBIN
