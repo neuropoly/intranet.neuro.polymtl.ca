@@ -26,6 +26,7 @@
 | GIF screen recording | [https://flameshot.org/](https://flameshot.org/), [https://getkap.co/](https://getkap.co/) (only for Macos) | Open-source screenshot software to create GIF. Great for demo. |
 | Gantt diagram | [https://www.ganttproject.biz/](https://www.ganttproject.biz/) |
 | QuickLook viewer | NIFTI quick viewer: [FR[AI]ME](https://apps.apple.com/gb/app/fr-ai-me/id6751278949?mt=12) | Quick viewer for MRI data (only for Macos) |
+| Disk Space Analyzer | https://apps.apple.com/us/app/disk-space-analyzer-inspector | MacOS only |
 
 ## Services
 
