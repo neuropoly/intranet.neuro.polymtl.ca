@@ -7,6 +7,7 @@
 cpus
 gpus
 cst-studio
+resource-sharing
 ```
 
 ## GE
