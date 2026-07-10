@@ -16,7 +16,7 @@ A [**GE**](https://www.ge.polymtl.ca/compte-informatique/) network account is re
 You will receive a GE account during your [onboarding](https://github.com/neuropoly/onboarding/issues).
 
 ```{note}
-Legacy users may still be using a GRAMES rather than GE account. Eventually [all users](https://github.com/neuropoly/computers/issues/1003) will be moved to GE accounts. 
+Legacy users may still be using a GRAMES rather than GE account. Eventually [all users](https://github.com/neuropoly/computers/issues/1003) will be moved to GE accounts.
 ```
 
 ```{note}
@@ -84,7 +84,7 @@ If you wish to monitor the CPU/GPU/RAM/disk and other aspects of the server you 
 * By default, the root (OS and home folder) mount point is on the NVME disk. You can train your model on your /home
 * [How to use GPU Clusters at NeuroPoly](https://intranet.neuro.polymtl.ca/computing-resources/neuropoly/gpus.html)
   * [Video tutorial to get started](https://drive.google.com/file/d/17-eLVBiMNA8bNbfzpD6NLxHApZRDoy1B/view?usp=sharing)
-  * romane and tassan have a [special system for sharing CPU/RAM](./gpus.md#running-memory-and-cpu-intensive-tasks)
+  * romane, tassan, and joplin have a [special system for sharing CPU/RAM](./resource-sharing.md)
 
 ### tassan
 
@@ -98,7 +98,7 @@ If you wish to monitor the CPU/GPU/RAM/disk and other aspects of the server you 
 
 * [How to use GPU Clusters at NeuroPoly](https://intranet.neuro.polymtl.ca/computing-resources/neuropoly/gpus.html)
   * [Video tutorial to get started](https://drive.google.com/file/d/17-eLVBiMNA8bNbfzpD6NLxHApZRDoy1B/view?usp=sharing)
-  * romane and tassan have a [special system for sharing CPU/RAM](./gpus.md#running-memory-and-cpu-intensive-tasks)
+  * romane, tassan, and joplin have a [special system for sharing CPU/RAM](./resource-sharing.md)
 
 ### bireli
 
@@ -121,6 +121,8 @@ If you wish to monitor the CPU/GPU/RAM/disk and other aspects of the server you 
 | **RAM**      | 16x 16GB DDR4 2400 MHz                               |
 | **OS**       | Ubuntu                                               |
 | **Hostname** | `joplin.neuro.polymtl.ca`                            |
+
+* romane, tassan, and joplin have a [special system for sharing CPU/RAM](./resource-sharing.md)
 
 ### abbey
 
@@ -302,7 +304,7 @@ Or, from _within_ the same directory as your script:
 
 _**Optional: Create an alias for your script**_
 ```{note}
-For `macOS`, we assume you are using `zsh`, if you are using bash instead, replace `.zshrc` with `.bashrc` in the instructions. If the relevant file does not already exist, you should create it. 
+For `macOS`, we assume you are using `zsh`, if you are using bash instead, replace `.zshrc` with `.bashrc` in the instructions. If the relevant file does not already exist, you should create it.
 ```
 
 Add the following to `~/.zshrc`:
@@ -349,7 +351,7 @@ _Option 1_
 set -eo pipefail
 
 USER="<YOUR_CAS_USERNAME>"
-GROUP=PolySSL 
+GROUP=PolySSL
 sudo openconnect -u "$USER" --authgroup "$GROUP" --reconnect-timeout 20 ssl.vpn.polymtl.ca
 ```
 
@@ -367,7 +369,7 @@ echo -n "$PASS" | sudo openconnect -u "$USER" --authgroup "$GROUP" --passwd-on-s
 ```
 
 ```{warning}
-_Option 2_ avoids a password prompt each time the script is invoked, **however** it also hardcodes your password, which is insecure and not recommended. We thus prefer _Option 1_. 
+_Option 2_ avoids a password prompt each time the script is invoked, **however** it also hardcodes your password, which is insecure and not recommended. We thus prefer _Option 1_.
 ```
 
 Make your script executable:
@@ -387,7 +389,7 @@ Or, from _within_ the same directory as your script:
 
 _**Optional: Create an alias for your script**_
 ```{note}
-If you are using `zsh` instead of `bash`, replace `.bashrc` with `.zshrc` in the instructions. If the relevant file does not already exist, you should create it. 
+If you are using `zsh` instead of `bash`, replace `.bashrc` with `.zshrc` in the instructions. If the relevant file does not already exist, you should create it.
 ```
 
 Add the following to `~/.bashrc`:
@@ -407,7 +409,7 @@ vpn
 
 **Alternative: Graphical OpenConnect:**
 
-Depending on your Linux set up, you may be able to create a graphical interface for your VPN. 
+Depending on your Linux set up, you may be able to create a graphical interface for your VPN.
 ```{note}
 The following instructions were tested on a system using `NetworkManager` and the `GNOME` desktop environment.
 ```
@@ -705,14 +707,14 @@ If you are experiencing mounting issues on macOs, [this](https://github.com/neur
 
 [XRDP](https://www.xrdp.org/) is installed on all remote Linux stations. This means that you can use and RDP client to establish graphical connections to our Linux servers.
 
-On Linux, [Remmina](https://remmina.org/) is recommended. (On NeuroPoly-managed linux desktops, `remmina` is already installed). 
+On Linux, [Remmina](https://remmina.org/) is recommended. (On NeuroPoly-managed linux desktops, `remmina` is already installed).
 
 Windows users can use the native [Remote Desktop Connection client](https://support.microsoft.com/en-us/windows/how-to-use-remote-desktop-5fe128d5-8fb1-7a23-3b8a-41e636865e8c).
 
 MacOS users can use [freerdp](https://formulae.brew.sh/formula/freerdp), the [Windows app for Mac](https://learn.microsoft.com/en-us/windows-app/overview), or another compatible RDP client.
 
 ```{note}
-VNC is no longer supported for connection to remotes Linux workstations. Admins may still need to use VNC for graphical connections to the few remaining macOS hosts. On Linux, `remmina` with the VNC plugin is recommended. 
+VNC is no longer supported for connection to remotes Linux workstations. Admins may still need to use VNC for graphical connections to the few remaining macOS hosts. On Linux, `remmina` with the VNC plugin is recommended.
 ```
 
 ### Language
