@@ -42,6 +42,7 @@ In order to prevent unresponsive systems due to resource intensive ML processes,
 resource controls in place. Essentially, we impose limits on the amount of CPU and RAM available to a user
 (i.e., a single core of the CPU and a few GB of RAM). Most regular commands (git, scp, etc) should
 run fine under these limitations.
+
 </details>
 
 Most commands (git, scp, tmux, etc) should run just fine without modification.
@@ -61,7 +62,7 @@ set_slot <slot_number> [command] [args...]
   - If you've reserved more than one slot, you can specify an inclusive range, e.g., `set_slot 0-1 ...`
     for slots 0 and 1.
 - `[command] [args...]` is the (optional) command as you would normally run it in the shell, e.g., `python model.py`.
-  If you don't specify a command, you'll be placed in a bash shell.
+- If you don't specify a command, you'll be placed in a bash login shell. Running `set_slot 0` is the equivalent of running `set_slot 0 bash -l`.
 
 For example:
 ```
@@ -72,8 +73,7 @@ set_slot 0-3
 #### Special considerations
 
 - **Environment variables are not currently passed through** by `set_slot`. To run in a specific environment,
-for example a venv, use `set_slot` to start a shell (e.g. `set_slot 0 bash`) and then work in that shell.
-(NB: the shell will not persist unless you run it in tmux or screen).
+for example a venv, use `set_slot` to start a shell (e.g. `set_slot 0 bash`) and then work in that shell. (_NB: the shell will not persist unless you run it in `tmux` or `screen`_).
 
 - **If you need `conda` inside `set_slot`**, run `set_slot` without specifying the command. This will place you
   inside a bash login shell, which will put the proper folder inside the `PATH` environment variable.
@@ -83,7 +83,7 @@ for example a venv, use `set_slot` to start a shell (e.g. `set_slot 0 bash`) and
   accessible when you detach or logout
   - [Github issue](https://github.com/neuropoly/computers/issues/996)
 
-- **tmux/screen**: You must start your session before you use set_slot. `tmux` and `screen` manage their own child
+- **tmux/screen**: You must start your session _before_ you use `set_slot`. `tmux` and `screen` manage their own child
 processes, and will bypass our systemd slices and run in the limited user resource pool.
 Do NOT do `set_slot 3 tmux new -s mysession`! **If you are using a shell AND tmux/screen** you
 should do so in this order:
@@ -106,15 +106,38 @@ to use the appropriate GPU, e.g., `CUDA_VISIBLE_DEVICES`
 - BUT, you might end up competing for resources with someone else.
 - Try not to do this, and ask for help if you realize that you have.
 
+#### How do I know which slots are currently in use?
+
+Run:
+```
+systemd-cgtop ml.slice
+```
+
+The output will look something like this:
+```
+CGroup                                                             Tasks   %CPU   Memory  Input/s Output/s
+ml.slice                                                             340   99.8    43.0G        -        -
+ml.slice/ml-4slots.slice                                             338   99.8    36.7G        -        -
+ml.slice/ml-4slots.slice/ml-4slots-03.slice                          338   99.8    36.7G        -        -
+ml.slice/ml-4slots.slice/ml-4slots-03.slice/run-u959.service         338   99.8    36.7G        -        -
+ml.slice/ml-1slot.slice                                                2      -     6.2G        -        -
+ml.slice/ml-1slot.slice/ml-1slot-0.slice                               2      -     6.2G        -        -
+ml.slice/ml-1slot.slice/ml-1slot-0.slice/run-u803.service              2      -     6.2G        -        -
+```
+
+The numbers next to `ml.slice` show you the total resource usage for all slots combined.
+
+Other lines correspond to classes of slots, particular slots, and process groups within slots. For example:
+- `ml.slice/ml-1slot.slice/ml-1slot-0.slice` corresponds to a single slot invoked with `set_slot 0`.
+- `ml.slice/ml-4slots.slice/ml-4slots-03.slice` corresponds to a groups of four slots invoked with `set_slot 0-3`.
+
+To see which processes are running in which slots, you can use:
+```
+systemd-cgls /ml.slice
+```
+
 #### What resources are available to me for trainings?
 
 Right now each GPU pool is limited to:
-
-#### How do I know what slots are currently in use
-
-Run:
-~~~
-systemd-cgtop ml.slice
-~~~
 - romane: ~100GB of RAM and 14 CPUs
-- tassan: ~46GB of RAM ad 20 CPUs
+- tassan: ~46GB of RAM and 20 CPUs

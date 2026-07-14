@@ -466,8 +466,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-slot-faq">set_slot FAQ</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot">What happens if I forget to do this, and accidentally run my training without set_slot?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0">What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-know-which-slots-are-currently-in-use">How do I know which slots are currently in use?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-resources-are-available-to-me-for-trainings">What resources are available to me for trainings?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-know-what-slots-are-currently-in-use">How do I know what slots are currently in use</a></li>
 </ul>
 </li>
 </ul>
@@ -536,8 +536,8 @@ slots between 0 and 3, inclusive, representing ¼ of available CPUs each.</p></l
 for slots 0 and 1.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[command]</span> <span class="pre">[args...]</span></code> is the (optional) command as you would normally run it in the shell, e.g., <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">model.py</span></code>.
-If you don’t specify a command, you’ll be placed in a bash shell.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[command]</span> <span class="pre">[args...]</span></code> is the (optional) command as you would normally run it in the shell, e.g., <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">model.py</span></code>.</p></li>
+<li><p>If you don’t specify a command, you’ll be placed in a bash login shell. Running <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span></code> is the equivalent of running <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">bash</span> <span class="pre">-l</span></code>.</p></li>
 </ul>
 <p>For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_slot</span> <span class="mi">2</span> <span class="n">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="mi">2</span> <span class="n">python3</span> <span class="n">myscript</span><span class="o">.</span><span class="n">py</span>
@@ -548,8 +548,7 @@ If you don’t specify a command, you’ll be placed in a bash shell.</p></li>
 <h3>Special considerations<a class="headerlink" href="#special-considerations" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Environment variables are not currently passed through</strong> by <code class="docutils literal notranslate"><span class="pre">set_slot</span></code>. To run in a specific environment,
-for example a venv, use <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> to start a shell (e.g. <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">bash</span></code>) and then work in that shell.
-(NB: the shell will not persist unless you run it in tmux or screen).</p></li>
+for example a venv, use <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> to start a shell (e.g. <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">bash</span></code>) and then work in that shell. (<em>NB: the shell will not persist unless you run it in <code class="docutils literal notranslate"><span class="pre">tmux</span></code> or <code class="docutils literal notranslate"><span class="pre">screen</span></code></em>).</p></li>
 <li><p><strong>If you need <code class="docutils literal notranslate"><span class="pre">conda</span></code> inside <code class="docutils literal notranslate"><span class="pre">set_slot</span></code></strong>, run <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> without specifying the command. This will place you
 inside a bash login shell, which will put the proper folder inside the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable.</p></li>
 <li><p><strong>If you need to access duke inside <code class="docutils literal notranslate"><span class="pre">set_slot</span></code></strong>, run <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> inside a shell (e.g., <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span></code>), then
@@ -559,7 +558,7 @@ accessible when you detach or logout</p>
 <li><p><a class="reference external" href="https://github.com/neuropoly/computers/issues/996">Github issue</a></p></li>
 </ul>
 </li>
-<li><p><strong>tmux/screen</strong>: You must start your session before you use set_slot. <code class="docutils literal notranslate"><span class="pre">tmux</span></code> and <code class="docutils literal notranslate"><span class="pre">screen</span></code> manage their own child
+<li><p><strong>tmux/screen</strong>: You must start your session <em>before</em> you use <code class="docutils literal notranslate"><span class="pre">set_slot</span></code>. <code class="docutils literal notranslate"><span class="pre">tmux</span></code> and <code class="docutils literal notranslate"><span class="pre">screen</span></code> manage their own child
 processes, and will bypass our systemd slices and run in the limited user resource pool.
 Do NOT do <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">3</span> <span class="pre">tmux</span> <span class="pre">new</span> <span class="pre">-s</span> <span class="pre">mysession</span></code>! <strong>If you are using a shell AND tmux/screen</strong> you
 should do so in this order:</p>
@@ -591,19 +590,40 @@ to use the appropriate GPU, e.g., <code class="docutils literal notranslate"><sp
 <li><p>Try not to do this, and ask for help if you realize that you have.</p></li>
 </ul>
 </section>
-<section id="what-resources-are-available-to-me-for-trainings">
-<h3>What resources are available to me for trainings?<a class="headerlink" href="#what-resources-are-available-to-me-for-trainings" title="Link to this heading">#</a></h3>
-<p>Right now each GPU pool is limited to:</p>
-</section>
-<section id="how-do-i-know-what-slots-are-currently-in-use">
-<h3>How do I know what slots are currently in use<a class="headerlink" href="#how-do-i-know-what-slots-are-currently-in-use" title="Link to this heading">#</a></h3>
+<section id="how-do-i-know-which-slots-are-currently-in-use">
+<h3>How do I know which slots are currently in use?<a class="headerlink" href="#how-do-i-know-which-slots-are-currently-in-use" title="Link to this heading">#</a></h3>
 <p>Run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">systemd</span><span class="o">-</span><span class="n">cgtop</span> <span class="n">ml</span><span class="o">.</span><span class="n">slice</span>
 </pre></div>
 </div>
+<p>The output will look something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CGroup</span>                                                             <span class="n">Tasks</span>   <span class="o">%</span><span class="n">CPU</span>   <span class="n">Memory</span>  <span class="n">Input</span><span class="o">/</span><span class="n">s</span> <span class="n">Output</span><span class="o">/</span><span class="n">s</span>
+<span class="n">ml</span><span class="o">.</span><span class="n">slice</span>                                                             <span class="mi">340</span>   <span class="mf">99.8</span>    <span class="mf">43.0</span><span class="n">G</span>        <span class="o">-</span>        <span class="o">-</span>
+<span class="n">ml</span><span class="o">.</span><span class="n">slice</span><span class="o">/</span><span class="n">ml</span><span class="o">-</span><span class="mi">4</span><span class="n">slots</span><span class="o">.</span><span class="n">slice</span>                                             <span class="mi">338</span>   <span class="mf">99.8</span>    <span class="mf">36.7</span><span class="n">G</span>        <span class="o">-</span>        <span class="o">-</span>
+<span class="n">ml</span><span class="o">.</span><span class="n">slice</span><span class="o">/</span><span class="n">ml</span><span class="o">-</span><span class="mi">4</span><span class="n">slots</span><span class="o">.</span><span class="n">slice</span><span class="o">/</span><span class="n">ml</span><span class="o">-</span><span class="mi">4</span><span class="n">slots</span><span class="o">-</span><span class="mf">03.</span><span class="n">slice</span>                          <span class="mi">338</span>   <span class="mf">99.8</span>    <span class="mf">36.7</span><span class="n">G</span>        <span class="o">-</span>        <span class="o">-</span>
+<span class="n">ml</span><span class="o">.</span><span class="n">slice</span><span class="o">/</span><span class="n">ml</span><span class="o">-</span><span class="mi">4</span><span class="n">slots</span><span class="o">.</span><span class="n">slice</span><span class="o">/</span><span class="n">ml</span><span class="o">-</span><span class="mi">4</span><span class="n">slots</span><span class="o">-</span><span class="mf">03.</span><span class="n">slice</span><span class="o">/</span><span class="n">run</span><span class="o">-</span><span class="n">u959</span><span class="o">.</span><span class="n">service</span>         <span class="mi">338</span>   <span class="mf">99.8</span>    <span class="mf">36.7</span><span class="n">G</span>        <span class="o">-</span>        <span class="o">-</span>
+<span class="n">ml</span><span class="o">.</span><span class="n">slice</span><span class="o">/</span><span class="n">ml</span><span class="o">-</span><span class="mi">1</span><span class="n">slot</span><span class="o">.</span><span class="n">slice</span>                                                <span class="mi">2</span>      <span class="o">-</span>     <span class="mf">6.2</span><span class="n">G</span>        <span class="o">-</span>        <span class="o">-</span>
+<span class="n">ml</span><span class="o">.</span><span class="n">slice</span><span class="o">/</span><span class="n">ml</span><span class="o">-</span><span class="mi">1</span><span class="n">slot</span><span class="o">.</span><span class="n">slice</span><span class="o">/</span><span class="n">ml</span><span class="o">-</span><span class="mi">1</span><span class="n">slot</span><span class="o">-</span><span class="mf">0.</span><span class="n">slice</span>                               <span class="mi">2</span>      <span class="o">-</span>     <span class="mf">6.2</span><span class="n">G</span>        <span class="o">-</span>        <span class="o">-</span>
+<span class="n">ml</span><span class="o">.</span><span class="n">slice</span><span class="o">/</span><span class="n">ml</span><span class="o">-</span><span class="mi">1</span><span class="n">slot</span><span class="o">.</span><span class="n">slice</span><span class="o">/</span><span class="n">ml</span><span class="o">-</span><span class="mi">1</span><span class="n">slot</span><span class="o">-</span><span class="mf">0.</span><span class="n">slice</span><span class="o">/</span><span class="n">run</span><span class="o">-</span><span class="n">u803</span><span class="o">.</span><span class="n">service</span>              <span class="mi">2</span>      <span class="o">-</span>     <span class="mf">6.2</span><span class="n">G</span>        <span class="o">-</span>        <span class="o">-</span>
+</pre></div>
+</div>
+<p>The numbers next to <code class="docutils literal notranslate"><span class="pre">ml.slice</span></code> show you the total resource usage for all slots combined.</p>
+<p>Other lines correspond to classes of slots, particular slots, and process groups within slots. For example:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ml.slice/ml-1slot.slice/ml-1slot-0.slice</span></code> corresponds to a single slot invoked with <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ml.slice/ml-4slots.slice/ml-4slots-03.slice</span></code> corresponds to a groups of four slots invoked with <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0-3</span></code>.</p></li>
+</ul>
+<p>To see which processes are running in which slots, you can use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">systemd</span><span class="o">-</span><span class="n">cgls</span> <span class="o">/</span><span class="n">ml</span><span class="o">.</span><span class="n">slice</span>
+</pre></div>
+</div>
+</section>
+<section id="what-resources-are-available-to-me-for-trainings">
+<h3>What resources are available to me for trainings?<a class="headerlink" href="#what-resources-are-available-to-me-for-trainings" title="Link to this heading">#</a></h3>
+<p>Right now each GPU pool is limited to:</p>
 <ul class="simple">
 <li><p>romane: ~100GB of RAM and 14 CPUs</p></li>
-<li><p>tassan: ~46GB of RAM ad 20 CPUs</p></li>
+<li><p>tassan: ~46GB of RAM and 20 CPUs</p></li>
 </ul>
 </section>
 </section>
@@ -662,8 +682,8 @@ to use the appropriate GPU, e.g., <code class="docutils literal notranslate"><sp
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-slot-faq">set_slot FAQ</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot">What happens if I forget to do this, and accidentally run my training without set_slot?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0">What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-know-which-slots-are-currently-in-use">How do I know which slots are currently in use?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-resources-are-available-to-me-for-trainings">What resources are available to me for trainings?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-know-what-slots-are-currently-in-use">How do I know what slots are currently in use</a></li>
 </ul>
 </li>
 </ul>
