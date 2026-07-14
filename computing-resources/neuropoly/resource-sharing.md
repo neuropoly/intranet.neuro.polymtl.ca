@@ -128,7 +128,7 @@ ml.slice/ml-1slot.slice/ml-1slot-0.slice/run-u803.service              2      - 
 The numbers next to `ml.slice` show you the total resource usage for all slots combined.
 
 Other lines correspond to classes of slots, particular slots, and process groups within slots. For example:
-- `ml.slice/ml-1slot.slice/ml-1slot-0.slice` corresponds with a single slot invoked with `set_slot 0`.
+- `ml.slice/ml-1slot.slice/ml-1slot-0.slice` corresponds to a single slot invoked with `set_slot 0`.
 - `ml.slice/ml-4slots.slice/ml-4slots-03.slice` corresponds to a groups of four slots invoked with `set_slot 0-3`.
 
 To see which processes are running in which slots, you can use:
