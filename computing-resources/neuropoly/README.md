@@ -138,7 +138,6 @@ If you wish to monitor the CPU/GPU/RAM/disk and other aspects of the server you 
 
 | Spec | Description |
 | --------------- | -------------- |
-| **Purpose** | ... |
 | **Model** | PC |
 | **OS** | Windows 10 |
 | **Hostname**    | `idea.neuro.polymtl.ca` |
