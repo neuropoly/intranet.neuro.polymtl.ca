@@ -106,10 +106,6 @@ to use the appropriate GPU, e.g., `CUDA_VISIBLE_DEVICES`
 - BUT, you might end up competing for resources with someone else.
 - Try not to do this, and ask for help if you realize that you have.
 
-#### What resources are available to me for trainings?
-
-Right now each GPU pool is limited to:
-
 #### How do I know which slots are currently in use?
 
 Run:
