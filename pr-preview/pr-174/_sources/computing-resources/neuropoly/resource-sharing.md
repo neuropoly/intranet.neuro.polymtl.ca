@@ -42,6 +42,7 @@ In order to prevent unresponsive systems due to resource intensive ML processes,
 resource controls in place. Essentially, we impose limits on the amount of CPU and RAM available to a user
 (i.e., a single core of the CPU and a few GB of RAM). Most regular commands (git, scp, etc) should
 run fine under these limitations.
+
 </details>
 
 Most commands (git, scp, tmux, etc) should run just fine without modification.
@@ -82,7 +83,7 @@ for example a venv, use `set_slot` to start a shell (e.g. `set_slot 0 bash`) and
   accessible when you detach or logout
   - [Github issue](https://github.com/neuropoly/computers/issues/996)
 
-- **tmux/screen**: You must start your session before you use set_slot. `tmux` and `screen` manage their own child
+- **tmux/screen**: You must start your session _before_ you use `set_slot`. `tmux` and `screen` manage their own child
 processes, and will bypass our systemd slices and run in the limited user resource pool.
 Do NOT do `set_slot 3 tmux new -s mysession`! **If you are using a shell AND tmux/screen** you
 should do so in this order:
@@ -104,10 +105,6 @@ to use the appropriate GPU, e.g., `CUDA_VISIBLE_DEVICES`
 - This won't affect which GPU will be used.
 - BUT, you might end up competing for resources with someone else.
 - Try not to do this, and ask for help if you realize that you have.
-
-#### What resources are available to me for trainings?
-
-Right now each GPU pool is limited to:
 
 #### How do I know which slots are currently in use?
 

@@ -466,9 +466,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-slot-faq">set_slot FAQ</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot">What happens if I forget to do this, and accidentally run my training without set_slot?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0">What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-resources-are-available-to-me-for-trainings">What resources are available to me for trainings?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-know-which-slots-are-currently-in-use">How do I know which slots are currently in use?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">What resources are available to me for trainings?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-resources-are-available-to-me-for-trainings">What resources are available to me for trainings?</a></li>
 </ul>
 </li>
 </ul>
@@ -559,7 +558,7 @@ accessible when you detach or logout</p>
 <li><p><a class="reference external" href="https://github.com/neuropoly/computers/issues/996">Github issue</a></p></li>
 </ul>
 </li>
-<li><p><strong>tmux/screen</strong>: You must start your session before you use set_slot. <code class="docutils literal notranslate"><span class="pre">tmux</span></code> and <code class="docutils literal notranslate"><span class="pre">screen</span></code> manage their own child
+<li><p><strong>tmux/screen</strong>: You must start your session <em>before</em> you use <code class="docutils literal notranslate"><span class="pre">set_slot</span></code>. <code class="docutils literal notranslate"><span class="pre">tmux</span></code> and <code class="docutils literal notranslate"><span class="pre">screen</span></code> manage their own child
 processes, and will bypass our systemd slices and run in the limited user resource pool.
 Do NOT do <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">3</span> <span class="pre">tmux</span> <span class="pre">new</span> <span class="pre">-s</span> <span class="pre">mysession</span></code>! <strong>If you are using a shell AND tmux/screen</strong> you
 should do so in this order:</p>
@@ -591,10 +590,6 @@ to use the appropriate GPU, e.g., <code class="docutils literal notranslate"><sp
 <li><p>Try not to do this, and ask for help if you realize that you have.</p></li>
 </ul>
 </section>
-<section id="what-resources-are-available-to-me-for-trainings">
-<h3>What resources are available to me for trainings?<a class="headerlink" href="#what-resources-are-available-to-me-for-trainings" title="Link to this heading">#</a></h3>
-<p>Right now each GPU pool is limited to:</p>
-</section>
 <section id="how-do-i-know-which-slots-are-currently-in-use">
 <h3>How do I know which slots are currently in use?<a class="headerlink" href="#how-do-i-know-which-slots-are-currently-in-use" title="Link to this heading">#</a></h3>
 <p>Run:</p>
@@ -623,8 +618,8 @@ to use the appropriate GPU, e.g., <code class="docutils literal notranslate"><sp
 </pre></div>
 </div>
 </section>
-<section id="id1">
-<h3>What resources are available to me for trainings?<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<section id="what-resources-are-available-to-me-for-trainings">
+<h3>What resources are available to me for trainings?<a class="headerlink" href="#what-resources-are-available-to-me-for-trainings" title="Link to this heading">#</a></h3>
 <p>Right now each GPU pool is limited to:</p>
 <ul class="simple">
 <li><p>romane: ~100GB of RAM and 14 CPUs</p></li>
@@ -687,9 +682,8 @@ to use the appropriate GPU, e.g., <code class="docutils literal notranslate"><sp
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-slot-faq">set_slot FAQ</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot">What happens if I forget to do this, and accidentally run my training without set_slot?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0">What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-resources-are-available-to-me-for-trainings">What resources are available to me for trainings?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-know-which-slots-are-currently-in-use">How do I know which slots are currently in use?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">What resources are available to me for trainings?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-resources-are-available-to-me-for-trainings">What resources are available to me for trainings?</a></li>
 </ul>
 </li>
 </ul>
