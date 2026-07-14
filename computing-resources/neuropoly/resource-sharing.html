@@ -467,6 +467,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot">What happens if I forget to do this, and accidentally run my training without set_slot?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0">What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-resources-are-available-to-me-for-trainings">What resources are available to me for trainings?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-know-what-slots-are-currently-in-use">How do I know what slots are currently in use</a></li>
 </ul>
 </li>
 </ul>
@@ -593,6 +594,13 @@ to use the appropriate GPU, e.g., <code class="docutils literal notranslate"><sp
 <section id="what-resources-are-available-to-me-for-trainings">
 <h3>What resources are available to me for trainings?<a class="headerlink" href="#what-resources-are-available-to-me-for-trainings" title="Link to this heading">#</a></h3>
 <p>Right now each GPU pool is limited to:</p>
+</section>
+<section id="how-do-i-know-what-slots-are-currently-in-use">
+<h3>How do I know what slots are currently in use<a class="headerlink" href="#how-do-i-know-what-slots-are-currently-in-use" title="Link to this heading">#</a></h3>
+<p>Run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">systemd</span><span class="o">-</span><span class="n">cgtop</span> <span class="n">ml</span><span class="o">.</span><span class="n">slice</span>
+</pre></div>
+</div>
 <ul class="simple">
 <li><p>romane: ~100GB of RAM and 14 CPUs</p></li>
 <li><p>tassan: ~46GB of RAM ad 20 CPUs</p></li>
@@ -655,6 +663,7 @@ to use the appropriate GPU, e.g., <code class="docutils literal notranslate"><sp
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot">What happens if I forget to do this, and accidentally run my training without set_slot?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0">What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-resources-are-available-to-me-for-trainings">What resources are available to me for trainings?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-know-what-slots-are-currently-in-use">How do I know what slots are currently in use</a></li>
 </ul>
 </li>
 </ul>

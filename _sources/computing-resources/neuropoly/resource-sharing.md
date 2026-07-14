@@ -109,5 +109,12 @@ to use the appropriate GPU, e.g., `CUDA_VISIBLE_DEVICES`
 #### What resources are available to me for trainings?
 
 Right now each GPU pool is limited to:
+
+#### How do I know what slots are currently in use
+
+Run:
+~~~
+systemd-cgtop ml.slice
+~~~
 - romane: ~100GB of RAM and 14 CPUs
 - tassan: ~46GB of RAM ad 20 CPUs
