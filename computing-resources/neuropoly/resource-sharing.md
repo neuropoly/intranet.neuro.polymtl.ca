@@ -61,7 +61,7 @@ set_slot <slot_number> [command] [args...]
   - If you've reserved more than one slot, you can specify an inclusive range, e.g., `set_slot 0-1 ...`
     for slots 0 and 1.
 - `[command] [args...]` is the (optional) command as you would normally run it in the shell, e.g., `python model.py`.
-  If you don't specify a command, you'll be placed in a bash shell.
+- If you don't specify a command, you'll be placed in a bash login shell. Running `set_slot 0` is the equivalent of running `set_slot 0 bash -l`.
 
 For example:
 ```
@@ -72,8 +72,7 @@ set_slot 0-3
 #### Special considerations
 
 - **Environment variables are not currently passed through** by `set_slot`. To run in a specific environment,
-for example a venv, use `set_slot` to start a shell (e.g. `set_slot 0 bash`) and then work in that shell.
-(NB: the shell will not persist unless you run it in tmux or screen).
+for example a venv, use `set_slot` to start a shell (e.g. `set_slot 0 bash`) and then work in that shell. (_NB: the shell will not persist unless you run it in `tmux` or `screen`_).
 
 - **If you need `conda` inside `set_slot`**, run `set_slot` without specifying the command. This will place you
   inside a bash login shell, which will put the proper folder inside the `PATH` environment variable.
@@ -110,11 +109,38 @@ to use the appropriate GPU, e.g., `CUDA_VISIBLE_DEVICES`
 
 Right now each GPU pool is limited to:
 
-#### How do I know what slots are currently in use
+#### How do I know which slots are currently in use?
 
 Run:
-~~~
+```
 systemd-cgtop ml.slice
-~~~
+```
+
+The output will look something like this:
+```
+CGroup                                                             Tasks   %CPU   Memory  Input/s Output/s
+ml.slice                                                             340   99.8    43.0G        -        -
+ml.slice/ml-4slots.slice                                             338   99.8    36.7G        -        -
+ml.slice/ml-4slots.slice/ml-4slots-03.slice                          338   99.8    36.7G        -        -
+ml.slice/ml-4slots.slice/ml-4slots-03.slice/run-u959.service         338   99.8    36.7G        -        -
+ml.slice/ml-1slot.slice                                                2      -     6.2G        -        -
+ml.slice/ml-1slot.slice/ml-1slot-0.slice                               2      -     6.2G        -        -
+ml.slice/ml-1slot.slice/ml-1slot-0.slice/run-u803.service              2      -     6.2G        -        -
+```
+
+The numbers next to `ml.slice` show you the total resource usage for all slots combined.
+
+Other lines correspond to classes of slots, particular slots, and process groups within slots. For example:
+- `ml.slice/ml-1slot.slice/ml-1slot-0.slice` corresponds with a single slot invoked with `set_slot 0`.
+- `ml.slice/ml-4slots.slice/ml-4slots-03.slice` corresponds to a groups of four slots invoked with `set_slot 0-3`.
+
+To see which processes are running in which slots, you can use:
+```
+systemd-cgls /ml.slice
+```
+
+#### What resources are available to me for trainings?
+
+Right now each GPU pool is limited to:
 - romane: ~100GB of RAM and 14 CPUs
-- tassan: ~46GB of RAM ad 20 CPUs
+- tassan: ~46GB of RAM and 20 CPUs
