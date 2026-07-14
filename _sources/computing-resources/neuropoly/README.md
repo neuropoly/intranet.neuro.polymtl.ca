@@ -181,24 +181,24 @@ If you wish to monitor the CPU/GPU/RAM/disk and other aspects of the server you 
 | **Hostname**    | `peterson.neuro.polymtl.ca`                        |
 | **Credentials** | Use your [GE](./README.html#ge) credentials.       |
 
-### node006 (Poly-Grames)
+### grames006 (Poly-Grames) 
 
 | Spec            | Description                                        |
 | --------------- | -------------------------------------------------- |
 | **Purpose**     | EM simulation with CST                             |
 | **Model**       | PC, NVIDIA Tesla V100S-PCIE-32GB (1x)              |
 | **OS**          | Windows 10 (Connect with Microsoft Remote Desktop) |
-| **Hostname**    | `node006.grames.polymtl.ca`                        |
+| **Hostname**    | `grames006.ge.polymtl.ca`                          |
 | **Credentials** | Use your [GE](./README.html#ge) credentials.       |
 
-### node007 (Poly-Grames)
+### grames007 (Poly-Grames)
 
 | Spec            | Description                                        |
 | --------------- | -------------------------------------------------- |
 | **Purpose**     | EM simulation with CST                             |
 | **Model**       | PC, NVIDIA Tesla V100S-PCIE-32GB (1x)              |
 | **OS**          | Windows 10 (Connect with Microsoft Remote Desktop) |
-| **Hostname**    | `node007.grames.polymtl.ca`                        |
+| **Hostname**    | `grames007.ge.polymtl.ca`                          |
 | **Credentials** | Use your [GE](./README.html#ge) credentials.       |
 
 ### herbie
