@@ -106,6 +106,10 @@ to use the appropriate GPU, e.g., `CUDA_VISIBLE_DEVICES`
 - BUT, you might end up competing for resources with someone else.
 - Try not to do this, and ask for help if you realize that you have.
 
+#### How do I terminate `set_slot` once I am done with it?
+
+You can either kill the `tmux` or `screen` session in which you launched your `set_slot` shell, or you can exit the shell directly with `exit`. 
+
 #### How do I know which slots are currently in use?
 
 Run:
@@ -135,6 +139,24 @@ To see which processes are running in which slots, you can use:
 ```
 systemd-cgls /ml.slice
 ```
+
+#### How can I tell if my shell is running in a slot?
+
+If you typically use `set_slot` to run a bash login shell (the default behaviour), then you can add the following to your `~/.bashrc`:
+```
+# Detect if in slot and modify prompt
+IN_SLOT=false
+if [[ $(cat /proc/self/cgroup 2>/dev/null || true) == 0::/ml.slice* ]]; then
+  IN_SLOT=true
+fi
+if [[ $IN_SLOT == true ]]; then
+  PS1='\[\e[1;34m\][set_slot]\[\e[0m\] '"$PS1"
+fi
+```
+
+(Right after you edit the file, you'll need to run `source ~/.bashrc` in your active session for this to take effect. Subsequent logins/sessions will load this automatically, so no need to run this command in the future.)
+
+This will add a blue `[set_slot]` tag to the beginning of your command prompt when you are in a `set_slot` shell. You can also `echo $IN_SLOT`.
 
 #### What resources are available to me for trainings?
 
