@@ -140,9 +140,9 @@ To see which processes are running in which slots, you can use:
 systemd-cgls /ml.slice
 ```
 
-#### How can I tel if my shell is running in a slot?
+#### How can I tell if my shell is running in a slot?
 
-If you typically use `set_slot` to run a bash login shell, then you can add the following to your `~./bashrc`:
+If you typically use `set_slot` to run a bash login shell (the default behaviour), then you can add the following to your `~/.bashrc`:
 ```
 # Detect if in slot and modify prompt
 IN_SLOT=false
@@ -153,6 +153,8 @@ if [[ $IN_SLOT == true ]]; then
   PS1='\[\e[1;34m\][set_slot]\[\e[0m\] '"$PS1"
 fi
 ```
+
+(Right after you edit the file, you'll need to run `source ~/.bashrc` in your active session for this to take effect. Subsequent logins/sessions will load this automatically, so no need to run this command in the future.)
 
 This will add a blue `[set_slot]` tag to the beginning of your command prompt when you are in a `set_slot` shell. You can also `echo $IN_SLOT`.
 
