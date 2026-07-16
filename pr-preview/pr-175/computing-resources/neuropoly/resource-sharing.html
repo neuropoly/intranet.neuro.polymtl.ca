@@ -468,7 +468,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0">What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-terminate-set-slot-once-i-am-done-with-it">How do I terminate <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> once I am done with it?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-know-which-slots-are-currently-in-use">How do I know which slots are currently in use?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-tel-if-my-shell-is-running-in-a-slot">How can I tel if my shell is running in a slot?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-tell-if-my-shell-is-running-in-a-slot">How can I tell if my shell is running in a slot?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-resources-are-available-to-me-for-trainings">What resources are available to me for trainings?</a></li>
 </ul>
 </li>
@@ -624,9 +624,9 @@ to use the appropriate GPU, e.g., <code class="docutils literal notranslate"><sp
 </pre></div>
 </div>
 </section>
-<section id="how-can-i-tel-if-my-shell-is-running-in-a-slot">
-<h3>How can I tel if my shell is running in a slot?<a class="headerlink" href="#how-can-i-tel-if-my-shell-is-running-in-a-slot" title="Link to this heading">#</a></h3>
-<p>If you typically use <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> to run a bash login shell, then you can add the following to your <code class="docutils literal notranslate"><span class="pre">~./bashrc</span></code>:</p>
+<section id="how-can-i-tell-if-my-shell-is-running-in-a-slot">
+<h3>How can I tell if my shell is running in a slot?<a class="headerlink" href="#how-can-i-tell-if-my-shell-is-running-in-a-slot" title="Link to this heading">#</a></h3>
+<p>If you typically use <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> to run a bash login shell (the default behaviour), then you can add the following to your <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Detect if in slot and modify prompt
 IN_SLOT=false
 if [[ $(cat /proc/self/cgroup 2&gt;/dev/null || true) == 0::/ml.slice* ]]; then
@@ -637,6 +637,7 @@ if [[ $IN_SLOT == true ]]; then
 fi
 </pre></div>
 </div>
+<p>(Right after you edit the file, you’ll need to run <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">~/.bashrc</span></code> in your active session for this to take effect. Subsequent logins/sessions will load this automatically, so no need to run this command in the future.)</p>
 <p>This will add a blue <code class="docutils literal notranslate"><span class="pre">[set_slot]</span></code> tag to the beginning of your command prompt when you are in a <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> shell. You can also <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">$IN_SLOT</span></code>.</p>
 </section>
 <section id="what-resources-are-available-to-me-for-trainings">
@@ -705,7 +706,7 @@ fi
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0">What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-terminate-set-slot-once-i-am-done-with-it">How do I terminate <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> once I am done with it?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-know-which-slots-are-currently-in-use">How do I know which slots are currently in use?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-tel-if-my-shell-is-running-in-a-slot">How can I tel if my shell is running in a slot?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-tell-if-my-shell-is-running-in-a-slot">How can I tell if my shell is running in a slot?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-resources-are-available-to-me-for-trainings">What resources are available to me for trainings?</a></li>
 </ul>
 </li>
