@@ -94,10 +94,10 @@ should do so in this order:
 to use the appropriate GPU, e.g., `CUDA_VISIBLE_DEVICES`
 
 - **Using VSCode on servers with set_slot**: unfortunately, the VSCode server, especially when paired with automation
-tools like Claude Code, tends to use up all available memory outside of your slot, making your user session
-unresponsive. There's currently _no known way to run the VSCode server inside a slot_, so we recommend running VSCode
-locally and copying files onto the server using tools like `scp`, `rsync`, etc. If you want help setting this up,
-please reach out to a sysadmin.
+tools like Claude Code, tends to use up all available memory outside of your slot, making your user session unresponsive.
+Running VSCode server inside a slot may interfere with resource availability for other users who have booked computing resources for trainings and analyses, so we typically advise against it.
+Instead, we recommend running VSCode locally and copying files onto the server using tools like `scp`, `rsync`, etc.
+If you want help setting this up, please reach out to a sysadmin.
 
 ### set_slot FAQ
 #### What happens if I forget to do this, and accidentally run my training without set_slot?
