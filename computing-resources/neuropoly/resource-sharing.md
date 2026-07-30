@@ -93,6 +93,12 @@ should do so in this order:
 - **set_slot does not know anything about GPUs**, so you still need to set the options with your tooling
 to use the appropriate GPU, e.g., `CUDA_VISIBLE_DEVICES`
 
+- **Using VSCode on servers with set_slot**: unfortunately, the VSCode server, especially when paired with automation
+tools like Claude Code, tends to use up all available memory outside of your slot, making your user session unresponsive.
+Running VSCode server inside a slot may interfere with resource availability for other users who have booked computing resources for trainings and analyses, so we typically advise against it.
+Instead, we recommend running VSCode locally and copying files onto the server using tools like `scp`, `rsync`, etc.
+If you want help setting this up, please reach out to a sysadmin.
+
 ### set_slot FAQ
 #### What happens if I forget to do this, and accidentally run my training without set_slot?
 
@@ -108,7 +114,7 @@ to use the appropriate GPU, e.g., `CUDA_VISIBLE_DEVICES`
 
 #### How do I terminate `set_slot` once I am done with it?
 
-You can either kill the `tmux` or `screen` session in which you launched your `set_slot` shell, or you can exit the shell directly with `exit`. 
+You can either kill the `tmux` or `screen` session in which you launched your `set_slot` shell, or you can exit the shell directly with `exit`.
 
 #### How do I know which slots are currently in use?
 
