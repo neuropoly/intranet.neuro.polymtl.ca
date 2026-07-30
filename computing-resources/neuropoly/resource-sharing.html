@@ -571,6 +571,11 @@ should do so in this order:</p>
 </li>
 <li><p><strong>set_slot does not know anything about GPUs</strong>, so you still need to set the options with your tooling
 to use the appropriate GPU, e.g., <code class="docutils literal notranslate"><span class="pre">CUDA_VISIBLE_DEVICES</span></code></p></li>
+<li><p><strong>Using VSCode on servers with set_slot</strong>: unfortunately, the VSCode server, especially when paired with automation
+tools like Claude Code, tends to use up all available memory outside of your slot, making your user session unresponsive.
+Running VSCode server inside a slot may interfere with resource availability for other users who have booked computing resources for trainings and analyses, so we typically advise against it.
+Instead, we recommend running VSCode locally and copying files onto the server using tools like <code class="docutils literal notranslate"><span class="pre">scp</span></code>, <code class="docutils literal notranslate"><span class="pre">rsync</span></code>, etc.
+If you want help setting this up, please reach out to a sysadmin.</p></li>
 </ul>
 </section>
 </section>
