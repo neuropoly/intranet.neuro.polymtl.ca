@@ -576,7 +576,7 @@ It is locked behind a <a class="reference internal" href="../computing-resources
 </div>
 <p>It might ask for the <strong>passphrase</strong> for your key <code class="docutils literal notranslate"><span class="pre">~/.ssh/id_ed25519.pub</span></code>. It should output something like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PTY allocation request failed
-Hi there, &quot;$USER&quot;! You&#39;ve successfully authenticated with the key named &quot;$EMAIL&quot;, but Gitea does not provide shell access.
+Hi there, "$USER"! You've successfully authenticated with the key named "$EMAIL", but Gitea does not provide shell access.
 If this is unexpected, please log in with password and setup Gitea under another user.
 Shared connection to data.neuro.polymtl.ca closed.
 </pre></div>
@@ -603,8 +603,8 @@ Shared connection to data.neuro.polymtl.ca closed.
 <ol class="arabic">
 <li><p>If you’re off-campus: first connect to the <a class="reference internal" href="../computing-resources/neuropoly/README.html#vpn"><span class="std std-ref">VPN</span></a>.</p></li>
 <li><p>To make a local clone, replace <code class="docutils literal notranslate"><span class="pre">&quot;$REPO&quot;</span></code> with the actual repository name in the following commands:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>git@data.neuro.polymtl.ca:datasets/<span class="s2">&quot;</span><span class="nv">$REPO</span><span class="s2">&quot;</span>
-<span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$REPO</span><span class="s2">&quot;</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>git@data.neuro.polymtl.ca:datasets/<span class="s2">"</span><span class="nv">$REPO</span><span class="s2">"</span>
+<span class="nb">cd</span><span class="w"> </span><span class="s2">"</span><span class="nv">$REPO</span><span class="s2">"</span>
 git<span class="w"> </span>annex<span class="w"> </span>init
 git<span class="w"> </span>annex<span class="w"> </span>dead<span class="w"> </span>here
 git<span class="w"> </span>annex<span class="w"> </span>get
@@ -620,7 +620,7 @@ git<span class="w"> </span>annex<span class="w"> </span>get
 <p>If you have already cloned a repository and would like to get the latest version:</p>
 <ol class="arabic">
 <li><p>Make sure you’re on the right branch, and all your changes are saved, and you have a clean worktree. The command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> should say:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">On</span> <span class="n">branch</span> <span class="s2">&quot;$BRANCH&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">On</span> <span class="n">branch</span> <span class="s2">"$BRANCH"</span>
 <span class="o">...</span>
 <span class="n">nothing</span> <span class="n">to</span> <span class="n">commit</span><span class="p">,</span> <span class="n">working</span> <span class="n">tree</span> <span class="n">clean</span>
 </pre></div>

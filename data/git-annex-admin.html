@@ -516,14 +516,14 @@ It is compatible with <a class="reference external" href="https://www.datalad.or
 <p>We use a backup tool called <code class="docutils literal notranslate"><span class="pre">restic</span></code> and to recover files you should <a class="reference external" href="https://restic.readthedocs.io/en/stable/050_restore.html">review its full recovery documentation</a> to use it safely, but the quick version is that you need to provide backup credentials, one set for either location. <strong>It is your responsibility as a data server admin</strong> to ensure you have generated and can protect these credentials.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># AWS</span>
 <span class="n">export</span> <span class="n">RESTIC_REPOSITORY</span><span class="o">=</span><span class="n">s3</span><span class="p">:</span><span class="n">s3</span><span class="o">.</span><span class="n">ca</span><span class="o">-</span><span class="n">central</span><span class="o">-</span><span class="mf">1.</span><span class="n">amazonaws</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span><span class="o">.</span><span class="n">restic</span>
-<span class="n">export</span> <span class="n">RESTIC_PASSWORD</span><span class="o">=</span><span class="s2">&quot;....&quot;</span>
-<span class="n">export</span> <span class="n">AWS_ACCESS_KEY_ID</span><span class="o">=</span><span class="s2">&quot;....&quot;</span>
-<span class="n">export</span> <span class="n">AWS_SECRET_ACCESS_KEY</span><span class="o">=</span><span class="s2">&quot;.....&quot;</span>
+<span class="n">export</span> <span class="n">RESTIC_PASSWORD</span><span class="o">=</span><span class="s2">"...."</span>
+<span class="n">export</span> <span class="n">AWS_ACCESS_KEY_ID</span><span class="o">=</span><span class="s2">"...."</span>
+<span class="n">export</span> <span class="n">AWS_SECRET_ACCESS_KEY</span><span class="o">=</span><span class="s2">"....."</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ComputeCanada</span>
 <span class="n">export</span> <span class="n">RESTIC_REPOSITORY</span><span class="o">=</span><span class="n">sftp</span><span class="p">:</span><span class="n">narval</span><span class="o">.</span><span class="n">computecanada</span><span class="o">.</span><span class="n">ca</span><span class="p">:</span><span class="n">projects</span><span class="o">/</span><span class="n">def</span><span class="o">-</span><span class="n">jcohen</span><span class="o">/</span><span class="n">data</span><span class="o">.</span><span class="n">neuro</span><span class="o">.</span><span class="n">polymtl</span><span class="o">.</span><span class="n">ca</span><span class="o">.</span><span class="n">restic</span>
-<span class="n">export</span> <span class="n">RESTIC_PASSWORD</span><span class="o">=</span><span class="s2">&quot;....&quot;</span>
+<span class="n">export</span> <span class="n">RESTIC_PASSWORD</span><span class="o">=</span><span class="s2">"...."</span>
 <span class="c1"># you also implicitly need an account that can `ssh narval.computecanada.ca`</span>
 </pre></div>
 </div>
@@ -554,7 +554,7 @@ commit 892c030faef331591048f8b6487dd65f74afbea7
 Author: Nick Guenther &lt;nick.guenther@polymtl.ca&gt;
 Date:   Thu Feb 11 12:36:32 2021 -0500
 
-    bids-validator: README should be named just &#39;README&#39;
+    bids-validator: README should be named just 'README'
 </pre></div>
 </div>
 </details>

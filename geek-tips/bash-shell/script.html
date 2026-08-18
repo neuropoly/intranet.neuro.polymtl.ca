@@ -523,7 +523,7 @@ document.write(`
 <section id="strings">
 <h2>Strings<a class="headerlink" href="#strings" title="Link to this heading">#</a></h2>
 <p><strong>Get the first 2 characters of a string</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">my_string</span><span class="o">=</span><span class="s2">&quot;hola&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">my_string</span><span class="o">=</span><span class="s2">"hola"</span>
 <span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">my_string</span><span class="p">:</span><span class="nv">0</span><span class="p">:</span><span class="nv">2</span><span class="si">}</span>
 </pre></div>
 </div>
@@ -540,18 +540,18 @@ document.write(`
 </pre></div>
 </div>
 <p><strong>Display the first line where a pattern is found (here dim3), and remove the first characters that matches a given string</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fslhd<span class="w"> </span>t1w.nii.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-m<span class="w"> </span><span class="m">1</span><span class="w"> </span>dim3<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;s/^dim3           //&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fslhd<span class="w"> </span>t1w.nii.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-m<span class="w"> </span><span class="m">1</span><span class="w"> </span>dim3<span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s2">"s/^dim3           //"</span>
 </pre></div>
 </div>
 <p><strong>Batch actions with grep</strong></p>
 <p>`grep` is powerful for creating an action based on a series of input (e.g. multiple files). Below is an example to delete several branches in git, based on their prefix name:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>-D<span class="w"> </span><span class="sb">`</span>git<span class="w"> </span>branch<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s1">&#39;BRANCH_PREFIX*&#39;</span><span class="sb">`</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>-D<span class="w"> </span><span class="sb">`</span>git<span class="w"> </span>branch<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s1">'BRANCH_PREFIX*'</span><span class="sb">`</span>
 </pre></div>
 </div>
 <p><strong>Check if substring is in string</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">my_string</span><span class="o">=</span><span class="s1">&#39;My long string&#39;</span>
-<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$my_string</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*<span class="s2">&quot;My long&quot;</span>*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;It&#39;s there!&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">my_string</span><span class="o">=</span><span class="s1">'My long string'</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$my_string</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*<span class="s2">"My long"</span>*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"It's there!"</span>
 <span class="k">fi</span>
 </pre></div>
 </div>
@@ -560,7 +560,7 @@ document.write(`
 <section id="dates">
 <h2>Dates<a class="headerlink" href="#dates" title="Link to this heading">#</a></h2>
 <p>To list the date every week for the next five weeks, starting in 2 days:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..5<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="k">$(</span>date<span class="w"> </span>-v<span class="w"> </span>+<span class="si">${</span><span class="nv">i</span><span class="si">}</span>w<span class="w"> </span>-v<span class="w"> </span>+2d<span class="w"> </span><span class="s2">&quot;+%Y-%m-%d&quot;</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..5<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="k">$(</span>date<span class="w"> </span>-v<span class="w"> </span>+<span class="si">${</span><span class="nv">i</span><span class="si">}</span>w<span class="w"> </span>-v<span class="w"> </span>+2d<span class="w"> </span><span class="s2">"+%Y-%m-%d"</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
 </pre></div>
 </div>
 </section>
@@ -576,7 +576,7 @@ document.write(`
 <p><strong>Loop across list elements (using indices)</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">ARRAY</span><span class="o">=(</span>element1<span class="w"> </span>element2<span class="w"> </span>element3<span class="o">)</span>
 <span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="si">${</span><span class="p">!ARRAY[@]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
-<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Element: </span><span class="k">$((</span><span class="nv">i</span><span class="o">+</span><span class="m">1</span><span class="k">))</span><span class="s2">/</span><span class="si">${#</span><span class="nv">ARRAY</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Element: </span><span class="k">$((</span><span class="nv">i</span><span class="o">+</span><span class="m">1</span><span class="k">))</span><span class="s2">/</span><span class="si">${#</span><span class="nv">ARRAY</span><span class="p">[@]</span><span class="si">}</span><span class="s2">"</span>
 <span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">ARRAY</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span>
 <span class="k">done</span>
 </pre></div>
@@ -585,7 +585,7 @@ document.write(`
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">START</span><span class="o">=</span><span class="m">30</span>
 <span class="nv">END</span><span class="o">=</span><span class="m">150</span>
 
-<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>seq<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;%03g&quot;</span><span class="w"> </span><span class="nv">$START</span><span class="w"> </span><span class="nv">$END</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>seq<span class="w"> </span>-f<span class="w"> </span><span class="s2">"%03g"</span><span class="w"> </span><span class="nv">$START</span><span class="w"> </span><span class="nv">$END</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
 <span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$i</span>
 <span class="k">done</span>
 </pre></div>
@@ -624,7 +624,7 @@ document.write(`
 <h2>IF Statements<a class="headerlink" href="#if-statements" title="Link to this heading">#</a></h2>
 <section id="if-and">
 <h3>IF - AND<a class="headerlink" href="#if-and" title="Link to this heading">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-z<span class="w"> </span><span class="s2">"</span><span class="nv">$var</span><span class="s2">"</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">"</span><span class="nv">$var</span><span class="s2">"</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
 <span class="w">  </span><span class="k">do</span><span class="w"> </span>something<span class="w"> </span>...
 <span class="k">else</span>
 <span class="w">  </span><span class="k">do</span><span class="w"> </span>something<span class="w"> </span><span class="k">else</span>...
@@ -632,24 +632,24 @@ document.write(`
 </pre></div>
 </div>
 <p>alternative:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span><span class="w"> </span>-a<span class="w">  </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-z<span class="w"> </span><span class="s2">"</span><span class="nv">$var</span><span class="s2">"</span><span class="w"> </span>-a<span class="w">  </span>-e<span class="w"> </span><span class="s2">"</span><span class="nv">$var</span><span class="s2">"</span><span class="w"> </span><span class="o">]</span>
 </pre></div>
 </div>
 </section>
 <section id="if-or">
 <h3>IF - OR<a class="headerlink" href="#if-or" title="Link to this heading">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$s1</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$s2</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">"</span><span class="nv">$s1</span><span class="s2">"</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"</span><span class="nv">$s2</span><span class="s2">"</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
 <span class="w">  </span><span class="k">do</span><span class="w"> </span>something...
 <span class="k">fi</span>
 </pre></div>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-z<span class="w"> </span><span class="s2">"</span><span class="nv">$var</span><span class="s2">"</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">"</span><span class="nv">$var</span><span class="s2">"</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
 <span class="w">  </span><span class="k">do</span><span class="w"> </span>something<span class="w"> </span>...
 <span class="k">fi</span>
 </pre></div>
 </div>
 <p>alternative:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span><span class="w"> </span>-o<span class="w">  </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-z<span class="w"> </span><span class="s2">"</span><span class="nv">$var</span><span class="s2">"</span><span class="w"> </span>-o<span class="w">  </span>-e<span class="w"> </span><span class="s2">"</span><span class="nv">$var</span><span class="s2">"</span><span class="w"> </span><span class="o">]</span>
 </pre></div>
 </div>
 </section>
@@ -660,7 +660,7 @@ document.write(`
 <h3>Parse CSV File<a class="headerlink" href="#parse-csv-file" title="Link to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="w"> </span><span class="nv">IFS</span><span class="o">=</span>,<span class="w"> </span><span class="nb">read</span><span class="w"> </span>col1<span class="w"> </span>col2<span class="w"> </span>col3<span class="w"> </span>col4<span class="w"> </span>col5
 <span class="w">  </span><span class="k">do</span>
-<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$col2</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"</span><span class="nv">$col2</span><span class="s2">"</span>
 <span class="w">  </span><span class="k">done</span><span class="w"> </span>&lt;<span class="w"> </span>&lt;FILE&gt;.csv
 </pre></div>
 </div>
@@ -671,23 +671,23 @@ document.write(`
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1"># use predefined variables to access passed arguments</span>
 <span class="c1"># echo arguments to the shell</span>
-<span class="nb">echo</span><span class="w"> </span><span class="nv">$1</span><span class="w"> </span><span class="nv">$2</span><span class="w"> </span><span class="nv">$3</span><span class="w"> </span><span class="s1">&#39; -&gt; echo $1 $2 $3&#39;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$1</span><span class="w"> </span><span class="nv">$2</span><span class="w"> </span><span class="nv">$3</span><span class="w"> </span><span class="s1">' -&gt; echo $1 $2 $3'</span>
 <span class="c1"># list all arguments:</span>
 <span class="nb">echo</span><span class="w"> </span><span class="nv">$@</span>
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># We can also store arguments from bash command line in special array</span>
-<span class="nv">args</span><span class="o">=(</span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span><span class="o">)</span>
+<span class="nv">args</span><span class="o">=(</span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span><span class="o">)</span>
 <span class="c1"># echo arguments to the shell</span>
-<span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">args</span><span class="p">[0]</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">args</span><span class="p">[1]</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">args</span><span class="p">[2]</span><span class="si">}</span><span class="w"> </span><span class="s1">&#39; -&gt; args=(&quot;$@&quot;); echo ${args[0]} ${args[1]} ${args[2]}&#39;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">args</span><span class="p">[0]</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">args</span><span class="p">[1]</span><span class="si">}</span><span class="w"> </span><span class="si">${</span><span class="nv">args</span><span class="p">[2]</span><span class="si">}</span><span class="w"> </span><span class="s1">' -&gt; args=("$@"); echo ${args[0]} ${args[1]} ${args[2]}'</span>
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># use $@ to print out all arguments at once</span>
-<span class="nb">echo</span><span class="w"> </span><span class="nv">$@</span><span class="w"> </span><span class="s1">&#39; -&gt; echo $@&#39;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$@</span><span class="w"> </span><span class="s1">' -&gt; echo $@'</span>
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># use $# variable to print out number of arguments passed to the bash script</span>
-<span class="nb">echo</span><span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>arguments<span class="w"> </span>passed:<span class="w"> </span><span class="nv">$#</span><span class="w"> </span><span class="s1">&#39; -&gt; echo Number of arguments passed: $#&#39;</span><span class="w">  </span>
+<span class="nb">echo</span><span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>arguments<span class="w"> </span>passed:<span class="w"> </span><span class="nv">$#</span><span class="w"> </span><span class="s1">' -&gt; echo Number of arguments passed: $#'</span><span class="w">  </span>
 </pre></div>
 </div>
 <p>also see: <a class="reference external" href="https://www.shellscript.sh/tips/getopts/">Bash: parsing arguments with ‘getopts’</a></p>
@@ -713,7 +713,7 @@ document.write(`
 <section id="colors">
 <h2>Colors<a class="headerlink" href="#colors" title="Link to this heading">#</a></h2>
 <p>The Mountain Lion Terminal does not support the command <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">-e</span></code> therefore the following has to be used:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;\e[0;32mText here\e[0m&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">printf</span><span class="w"> </span><span class="s2">"\e[0;32mText here\e[0m"</span>
 </pre></div>
 </div>
 <section id="ansi-escape-codes-for-colours">
@@ -761,9 +761,9 @@ document.write(`
 </tbody>
 </table>
 </div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BLACK</span><span class="o">=</span><span class="s1">&#39;\033[0;30m&#39;</span>
-<span class="nv">RED</span><span class="o">=</span><span class="s1">&#39;\033[0;31m&#39;</span>
-<span class="nv">NC</span><span class="o">=</span><span class="s1">&#39;\033[0m&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BLACK</span><span class="o">=</span><span class="s1">'\033[0;30m'</span>
+<span class="nv">RED</span><span class="o">=</span><span class="s1">'\033[0;31m'</span>
+<span class="nv">NC</span><span class="o">=</span><span class="s1">'\033[0m'</span>
 </pre></div>
 </div>
 </section>
@@ -771,11 +771,11 @@ document.write(`
 <section id="misc">
 <h2>Misc<a class="headerlink" href="#misc" title="Link to this heading">#</a></h2>
 <p><strong>Pass argument from file</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mycommand<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>&lt;<span class="w"> </span>file.txt<span class="k">)</span><span class="s2">&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mycommand<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>&lt;<span class="w"> </span>file.txt<span class="k">)</span><span class="s2">"</span>
 </pre></div>
 </div>
 <p><strong>Test existence of a file</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$var</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">"</span><span class="nv">$var</span><span class="s2">"</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
 </pre></div>
 </div>
 </section>

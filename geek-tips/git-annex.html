@@ -611,7 +611,7 @@ nguenther@data:~/datasets/uk-biobank-processed$ du -hs uk-biobank-processed/.git
 </pre></div>
 </div>
 <p>and then locating a file with this name in <code class="docutils literal notranslate"><span class="pre">.git/annex/objects/</span></code>; however, it is not as simple as just combining the two together, git-annex prepends extra filenames, so you need to use <code class="docutils literal notranslate"><span class="pre">find(1)</span></code> to locate the file:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ find .git/annex/objects/ -name &quot;SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz&quot;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ find .git/annex/objects/ -name "SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz"
 .git/annex/objects/6V/X3/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
 .git/annex/objects/6V/X3/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz/SHA256E-s28305--3f309650bbc2d5146d9e1d1e24c7b17ee82c9da2fb609030ee83f3c1f2d74acb.nii.gz
 </pre></div>
@@ -624,7 +624,7 @@ It will usually – but not always – give you a warning in these cases saying 
 Despite the innocuous sounded warning, this glitch prevents git operating.
 A symptom of this glitch is that <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> reports many, many “modified” files that shouldn’t be.</p>
 <p>The fix is:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span> <span class="o">|</span> <span class="n">sed</span> <span class="o">-</span><span class="n">n</span> <span class="s1">&#39;s/modified://p&#39;</span> <span class="o">|</span> <span class="n">xargs</span> <span class="n">git</span> <span class="n">update</span><span class="o">-</span><span class="n">index</span> <span class="o">-</span><span class="n">q</span> <span class="o">--</span><span class="n">refresh</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span> <span class="o">|</span> <span class="n">sed</span> <span class="o">-</span><span class="n">n</span> <span class="s1">'s/modified://p'</span> <span class="o">|</span> <span class="n">xargs</span> <span class="n">git</span> <span class="n">update</span><span class="o">-</span><span class="n">index</span> <span class="o">-</span><span class="n">q</span> <span class="o">--</span><span class="n">refresh</span>
 </pre></div>
 </div>
 <p>This doesn’t touch file contents, so it should be safe to run anytime.</p>
@@ -651,9 +651,9 @@ complete repo, you can use</p>
 <p>When trying to get rid of a git-annex dataset, you will run into, for example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rm -rf data-single-subject/
 [...]
-rm: cannot remove &#39;data-single-subject/.git/annex/objects/mF/GV/SHA256E-s1082687--290a43b80da6f608e3d47107f3b6c05e98eebe56ed4eea633748c08bd1a7837a.nii.gz/SHA256E-s1082687--290a43b80da6f608e3d47107f3b6c05e98eebe56ed4eea633748c08bd1a7837a.nii.gz&#39;: Permission denied
-rm: cannot remove &#39;data-single-subject/.git/annex/objects/Vq/vF/SHA256E-s15564390--7d3e45f0d4c67f31883b76eafc6cfdca1c1591590e2243dc8d443b07616b3609.nii.gz/SHA256E-s15564390--7d3e45f0d4c67f31883b76eafc6cfdca1c1591590e2243dc8d443b07616b3609.nii.gz&#39;: Permission denied
-rm: cannot remove &#39;data-single-subject/.git/annex/objects/79/G6/SHA256E-s7183853--3262ac5d6c5f573720c5e508da47608bd9fa49d6cd4dd547f75046c1a2f0d5b6.nii.gz/SHA256E-s7183853--3262ac5d6c5f573720c5e508da47608bd9fa49d6cd4dd547f75046c1a2f0d5b6.nii.gz&#39;: Permission denied
+rm: cannot remove 'data-single-subject/.git/annex/objects/mF/GV/SHA256E-s1082687--290a43b80da6f608e3d47107f3b6c05e98eebe56ed4eea633748c08bd1a7837a.nii.gz/SHA256E-s1082687--290a43b80da6f608e3d47107f3b6c05e98eebe56ed4eea633748c08bd1a7837a.nii.gz': Permission denied
+rm: cannot remove 'data-single-subject/.git/annex/objects/Vq/vF/SHA256E-s15564390--7d3e45f0d4c67f31883b76eafc6cfdca1c1591590e2243dc8d443b07616b3609.nii.gz/SHA256E-s15564390--7d3e45f0d4c67f31883b76eafc6cfdca1c1591590e2243dc8d443b07616b3609.nii.gz': Permission denied
+rm: cannot remove 'data-single-subject/.git/annex/objects/79/G6/SHA256E-s7183853--3262ac5d6c5f573720c5e508da47608bd9fa49d6cd4dd547f75046c1a2f0d5b6.nii.gz/SHA256E-s7183853--3262ac5d6c5f573720c5e508da47608bd9fa49d6cd4dd547f75046c1a2f0d5b6.nii.gz': Permission denied
 </pre></div>
 </div>
 <p>This is because git-annex <a class="reference external" href="https://git-annex.branchable.com/internals/lockdown/">tries extra hard</a> to make it hard to lose data, by marking its contents read-only. If you really intend to erase the dataset you need to open the permissions first with <code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">-R</span> <span class="pre">u+w</span></code>, for example:</p>

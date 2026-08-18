@@ -511,7 +511,7 @@ sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w
 sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:webupd8team/java
 sudo<span class="w"> </span>apt-get<span class="w"> </span>update
 sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>oracle-java8-installer
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb http://storage.googleapis.com/bazel-apt stable jdk1.8&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/bazel.list
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"deb http://storage.googleapis.com/bazel-apt stable jdk1.8"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/bazel.list
 curl<span class="w"> </span>https://storage.googleapis.com/bazel-apt/doc/apt-key.pub.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>-
 sudo<span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span>-<span class="w"> </span>See<span class="w"> </span>more<span class="w"> </span>at:<span class="w"> </span>http://www.nvidia.com/object/gpu-accelerated-applications-tensorflow-installation.html#sthash.sG3VIfZK.dpuf
 
@@ -557,7 +557,7 @@ sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w
 <section id="fix-module-tensorflow-import-error">
 <h2>Fix module tensorflow import error <a id="fix_module_tensorflow_import_error"></a><a class="headerlink" href="#fix-module-tensorflow-import-error" title="Link to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>pip<span class="w"> </span>uninstall<span class="w"> </span>six
-sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>six<span class="w"> </span>--upgrade<span class="w"> </span>--target<span class="o">=</span><span class="s2">&quot;/usr/lib/python2.7/dist-packages&quot;</span>
+sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>six<span class="w"> </span>--upgrade<span class="w"> </span>--target<span class="o">=</span><span class="s2">"/usr/lib/python2.7/dist-packages"</span>
 </pre></div>
 </div>
 </section>

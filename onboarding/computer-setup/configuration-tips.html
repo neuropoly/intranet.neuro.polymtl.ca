@@ -479,8 +479,8 @@ document.write(`
 <p>In automator, create new application - run apple script. Add the following script:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">on</span> <span class="n">run</span> <span class="p">{</span><span class="nb">input</span><span class="p">,</span> <span class="n">parameters</span><span class="p">}</span>
   <span class="nb">set</span> <span class="n">f</span> <span class="n">to</span> <span class="n">POSIX</span> <span class="n">path</span> <span class="n">of</span> <span class="p">(</span><span class="nb">input</span> <span class="k">as</span> <span class="n">text</span><span class="p">)</span>
-  <span class="n">do</span> <span class="n">shell</span> <span class="n">script</span> <span class="s2">&quot;source ~/.bash_profile&quot;</span>
-  <span class="n">do</span> <span class="n">shell</span> <span class="n">script</span> <span class="s2">&quot;open -n -a fslview.app --args &quot;</span> <span class="o">&amp;</span> <span class="n">f</span>
+  <span class="n">do</span> <span class="n">shell</span> <span class="n">script</span> <span class="s2">"source ~/.bash_profile"</span>
+  <span class="n">do</span> <span class="n">shell</span> <span class="n">script</span> <span class="s2">"open -n -a fslview.app --args "</span> <span class="o">&amp;</span> <span class="n">f</span>
   <span class="n">end</span> <span class="n">run</span>
 </pre></div>
 </div>

@@ -502,18 +502,18 @@ document.write(`
 <span class="nv">BUILD_SHARED_LIBS</span><span class="o">=</span>ON<span class="w"> </span><span class="c1"># (ON to compile dynamically, OFF to compile statically)</span>
 <span class="nv">CMAKE_INSTALL_PREFIX</span><span class="o">=</span>/usr/local/vtk
 <span class="w">    </span><span class="c1"># Probably the most important option to change. It is where the library</span>
-<span class="w">    </span><span class="c1"># will be installed. In this case, it&#39;s in local but you can provide another</span>
+<span class="w">    </span><span class="c1"># will be installed. In this case, it's in local but you can provide another</span>
 <span class="w">    </span><span class="c1"># folder. Installing ITK and VTK in the same folder is also important.</span>
-<span class="w">    </span><span class="c1"># This way will put all library files (.dylib) in the same folder and it&#39;s</span>
+<span class="w">    </span><span class="c1"># This way will put all library files (.dylib) in the same folder and it's</span>
 <span class="w">    </span><span class="c1"># easier to link with your project.</span>
 <span class="nv">CMAKE_OSX_ARCHITECTURES</span><span class="o">=</span>x86_64
 <span class="w">    </span><span class="c1"># Some authors suggest changing this feature. You can add architecture like</span>
 <span class="w">    </span><span class="c1"># i386 or pcc</span>
 <span class="nv">CMAKE_OSX_DEPLOYMENT_TARGET</span><span class="o">=</span><span class="m">10</span>.8
 <span class="nv">CMAKE_OSX_SYSROOT</span><span class="o">=</span>/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
-<span class="w">    </span><span class="c1"># This path is required to link Xcode with VTK. If you don&#39;t have XCode</span>
+<span class="w">    </span><span class="c1"># This path is required to link Xcode with VTK. If you don't have XCode</span>
 <span class="w">    </span><span class="c1"># installed the path will be different.</span>
-<span class="nv">VTK_Group_Qt</span><span class="o">=</span>OFF<span class="w"> </span><span class="c1"># (building doesn&#39;t work with Qt...)</span>
+<span class="nv">VTK_Group_Qt</span><span class="o">=</span>OFF<span class="w"> </span><span class="c1"># (building doesn't work with Qt...)</span>
 <span class="nv">VTK_Group_Rendering</span><span class="o">=</span>ON
 <span class="nv">VTK_Group_StandAlone</span><span class="o">=</span>ON
 <span class="nv">VTK_USE_64BITS_IDS</span><span class="o">=</span>ON
@@ -546,16 +546,16 @@ make<span class="w"> </span>-j<span class="w"> </span><span class="m">4</span>
 <span class="nv">BUILD_TESTING</span><span class="o">=</span>OFF
 <span class="nv">CMAKE_INSTALL_PREFIX</span><span class="o">=</span>/usr/local/itk
 <span class="w">    </span><span class="c1"># Probably the most important option to change. It is where the library</span>
-<span class="w">    </span><span class="c1"># will be installed. In this case, it&#39;s in local but you can provide another</span>
+<span class="w">    </span><span class="c1"># will be installed. In this case, it's in local but you can provide another</span>
 <span class="w">    </span><span class="c1"># folder. Installing ITK and VTK in the same folder is also important.</span>
-<span class="w">    </span><span class="c1"># This way will put all library files (.dylib) in the same folder and it&#39;s</span>
+<span class="w">    </span><span class="c1"># This way will put all library files (.dylib) in the same folder and it's</span>
 <span class="w">    </span><span class="c1"># easier to link with your project.</span>
 <span class="nv">CMAKE_OSX_ARCHITECTURES</span><span class="o">=</span>x86_64
 <span class="w">    </span><span class="c1"># Some authors suggest changing this feature. You can add architecture</span>
 <span class="w">    </span><span class="c1"># like i386 or pcc</span>
 <span class="nv">CMAKE_OSX_DEPLOYMENT_TARGET</span><span class="o">=</span><span class="m">10</span>.8
 <span class="nv">CMAKE_OSX_SYSROOT</span><span class="o">=</span>/Applications/XCode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
-<span class="w">    </span><span class="c1"># This path is required to link Xcode with VTK. If you don&#39;t have Xcode</span>
+<span class="w">    </span><span class="c1"># This path is required to link Xcode with VTK. If you don't have Xcode</span>
 <span class="w">    </span><span class="c1"># installed the path will be different.</span>
 <span class="nv">ITK_BUILD_ALL_MODULES</span><span class="o">=</span>ON
 <span class="nv">ITK_USE_64BITS_IDS</span><span class="o">=</span>ON

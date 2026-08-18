@@ -1213,7 +1213,7 @@ Wed May 18 06:29:10 2022
 ======================== python ========================
 + python -c import sys; print(sys.version); print(sys.path)
 3.10.4 (main, Apr  2 2022, 09:04:19) [GCC 11.2.0]
-[&#39;&#39;, &#39;/usr/lib/python310.zip&#39;, &#39;/usr/lib/python3.10&#39;, &#39;/usr/lib/python3.10/lib-dynload&#39;, &#39;/usr/local/lib/python3.10/dist-packages&#39;, &#39;/usr/lib/python3/dist-packages&#39;]
+['', '/usr/lib/python310.zip', '/usr/lib/python3.10', '/usr/lib/python3.10/lib-dynload', '/usr/local/lib/python3.10/dist-packages', '/usr/lib/python3/dist-packages']
 
 ======================== Tensorflow ========================
 + python -c import tensorflow; print(tensorflow.__version__)
@@ -1352,7 +1352,7 @@ tensor([[   5.1328, -104.2500,   -3.1445,  ..., -115.8125,   25.5625,
         [ 150.7500,  -80.3750,  -27.6719,  ...,  -66.1250,  -99.1875,
           153.6250],
         [ -13.2422,    7.9688,  -27.8906,  ...,  103.1250,   29.6094,
-           77.6875]], device=&#39;cuda:0&#39;, dtype=torch.float16)
+           77.6875]], device='cuda:0', dtype=torch.float16)
 device: cuda:0
 We are PID = 58390
 Wed May 18 06:29:28 2022
@@ -1398,7 +1398,7 @@ Wed May 18 06:29:28 2022
 <h3>GPU-Agnostic code<a class="headerlink" href="#gpu-agnostic-code" title="Link to this heading">#</a></h3>
 <p>For the benefit of being able to test code out locally, without the GPU servers, it’s helpful to write device-agnostic code, code that falls back to running on slower CPU emulation if GPUs are not available.</p>
 <p>For pytorch, this <a class="reference external" href="https://pytorch.org/docs/stable/notes/cuda.html#device-agnostic-code">looks like this</a></p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>device = torch.device(&#39;cuda&#39; if torch.cuda.is_available() else &#39;cpu&#39;)
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 ...
 

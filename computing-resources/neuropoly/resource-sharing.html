@@ -497,12 +497,12 @@ GPU sharing is managed through a calendar. CPU and memory are shared using resou
 <p>Use this format: u918374&#64;rosenberg:gpu[3].</p>
 <p>Note that the GPUs are numbered from 0, as you can see in <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code>.</p>
 <p>To train, run your scripts like this:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ CUDA_VISIBLE_DEVICES=&quot;3&quot; ./train.sh
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ CUDA_VISIBLE_DEVICES="3" ./train.sh
 </pre></div>
 </div>
 <p>You can book multiple GPUs just with commas: u918374&#64;rosenberg:gpu[2,3,5]</p>
 <p>and use them with</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ CUDA_VISIBLE_DEVICES=&quot;2,3,5&quot; ./train.sh
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ CUDA_VISIBLE_DEVICES="2,3,5" ./train.sh
 </pre></div>
 </div>
 </section>
@@ -638,7 +638,7 @@ if [[ $(cat /proc/self/cgroup 2&gt;/dev/null || true) == 0::/ml.slice* ]]; then
   IN_SLOT=true
 fi
 if [[ $IN_SLOT == true ]]; then
-  PS1=&#39;\[\e[1;34m\][set_slot]\[\e[0m\] &#39;&quot;$PS1&quot;
+  PS1='\[\e[1;34m\][set_slot]\[\e[0m\] '"$PS1"
 fi
 </pre></div>
 </div>
@@ -647,10 +647,24 @@ fi
 </section>
 <section id="what-resources-are-available-to-me-for-trainings">
 <h3>What resources are available to me for trainings?<a class="headerlink" href="#what-resources-are-available-to-me-for-trainings" title="Link to this heading">#</a></h3>
-<p>Right now each GPU pool is limited to:</p>
+<p>Right now resource limitations for slots are as follows:</p>
+<p><strong>romane:</strong></p>
 <ul class="simple">
-<li><p>romane: ~100GB of RAM and 14 CPUs</p></li>
-<li><p>tassan: ~46GB of RAM and 20 CPUs</p></li>
+<li><p>~91GB of RAM for a single slot</p></li>
+<li><p>14 CPU cores for a single slot</p></li>
+<li><p>Up to 4 slots available (corresponding with 4 GPUs)</p></li>
+</ul>
+<p><strong>tassan:</strong></p>
+<ul class="simple">
+<li><p>~46GB of RAM for a single slot</p></li>
+<li><p>20 CPU cores for a single slot</p></li>
+<li><p>Up to 2 slots available (corresponding with 2 GPUs)</p></li>
+</ul>
+<p><strong>joplin:</strong></p>
+<ul class="simple">
+<li><p>~46GB of RAM for a single slot</p></li>
+<li><p>30 CPU cores for a single slot</p></li>
+<li><p>Up to 4 slots available (No GPUs)</p></li>
 </ul>
 </section>
 </section>

@@ -704,13 +704,13 @@ Please make sure you have the correct access rights and the repository exists.</
 <span class="w">  </span>$<span class="w"> </span>git<span class="w"> </span>status
 <span class="w">  </span><span class="c1"># On branch master</span>
 <span class="w">  </span><span class="c1"># Changes to be committed:</span>
-<span class="w">  </span><span class="c1">#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)</span>
+<span class="w">  </span><span class="c1">#   (use "git reset HEAD &lt;file&gt;..." to unstage)</span>
 <span class="w">  </span><span class="c1">#</span>
 <span class="w">  </span><span class="c1">#   new file:   &lt;path_to_file_1&gt;</span>
 <span class="w">  </span><span class="c1">#   new file:   &lt;path_to_file_2&gt;</span>
 <span class="w">  </span><span class="c1">#   ...</span>
 <span class="w">  </span>
-<span class="w">  </span>$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;explanation of the commit you are doing&quot;</span>
+<span class="w">  </span>$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"explanation of the commit you are doing"</span>
 </pre></div>
 </div>
 <p>See the page <a class="reference external" href="http://jasonrudolph.com/blog/2009/02/25/git-tip-how-to-merge-specific-files-from-another-branch/">git tip how to merge specific files from another branch</a> for more details.</p>
@@ -764,9 +764,9 @@ Please make sure you have the correct access rights and the repository exists.</
 <p>When reviewing a PR, instead of creating a branch locally we recommend using the following approach:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>username<span class="w"> </span>git@github.com:username/repository_name.git
 git<span class="w"> </span>fetch<span class="w"> </span>username
-<span class="c1"># If you want to temporarily check out the fork&#39;s branch in a detached HEAD state:</span>
+<span class="c1"># If you want to temporarily check out the fork's branch in a detached HEAD state:</span>
 git<span class="w"> </span>checkout<span class="w"> </span>username/branch-name
-<span class="c1"># If you want to create a new local branch that tracks the fork&#39;s branch:</span>
+<span class="c1"># If you want to create a new local branch that tracks the fork's branch:</span>
 git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>branch-name<span class="w"> </span>username/branch-name
 </pre></div>
 </div>
@@ -816,7 +816,7 @@ git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span
 <span class="w">    </span>git<span class="w"> </span>init<span class="w">  </span><span class="c1"># initialize local git repos</span>
 <span class="w">    </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://USERNAME@URL_TO_REPOSITORY.git<span class="w">  </span><span class="c1"># link to remote repos</span>
 <span class="w">    </span>git<span class="w"> </span>add<span class="w"> </span>.<span class="w">  </span><span class="c1"># add every file under folder</span>
-<span class="w">    </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;First commit&#39;</span>
+<span class="w">    </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s1">'First commit'</span>
 <span class="w">    </span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>master
 </pre></div>
 </div>
@@ -875,7 +875,7 @@ git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span
 <h3>Commit message convention<a class="headerlink" href="#commit-message-convention" title="Link to this heading">#</a></h3>
 <p>Writing good commit messages is an art. They should be concise but accurate. They should help someone several years from now with little knowledge of your project understand at a high-level what each change was for, and they should help you remember the direction you are working in while working on a branch in the present.</p>
 <p>For short, simple commits, this can be achieved via:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;A message describing your commit&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"A message describing your commit"</span>
 </pre></div>
 </div>
 <p>However, you may want a longer, more descriptive message. To do this, just run:</p>
@@ -886,15 +886,15 @@ git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Commit message style guide for Git
 
 The first line of a commit message serves as a summary.  When displayed
-on the web, it&#39;s often styled as a heading, and in emails, it&#39;s
+on the web, it's often styled as a heading, and in emails, it's
 typically used as the subject.  As such, you should capitalize it and
 omit any trailing punctuation.  Aim for about 50 characters, give or
 take, otherwise it may be painfully truncated in some contexts.  Write
-it, along with the rest of your message, in the imperative tense: &quot;Fix
-bug&quot; and not &quot;Fixed bug&quot; or &quot;Fixes bug&quot;.  Consistent wording makes it
+it, along with the rest of your message, in the imperative tense: "Fix
+bug" and not "Fixed bug" or "Fixes bug".  Consistent wording makes it
 easier to mentally process a list of commits.
 
-Oftentimes a subject by itself is sufficient.  When it&#39;s not, add a
+Oftentimes a subject by itself is sufficient.  When it's not, add a
 blank line (this is important) followed by one or more paragraphs hard
 wrapped to 72 characters.  Git is strongly opinionated that the author
 is responsible for line breaks; if you omit them, command line tooling
@@ -915,7 +915,7 @@ text editors are capable of automating this.
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>--amend<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;New commit message&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>--amend<span class="w"> </span>-m<span class="w"> </span><span class="s2">"New commit message"</span>
 </pre></div>
 </div>
 <p>This will add the changes you have added to the most recent commit. Make sure to only use this on local commits (i.e. commits that have not been pushed).</p>
@@ -996,11 +996,11 @@ git<span class="w"> </span>push<span class="w"> </span>-f
 </pre></div>
 </div>
 <p>Commit the files</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;enter description here&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s1">'enter description here'</span>
 </pre></div>
 </div>
 <p>Note: You have to configure the commit params (do only once):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s1">&#39;Your Name&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s1">'Your Name'</span>
 git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span>you@somedomain.com
 </pre></div>
 </div>
@@ -1029,7 +1029,7 @@ git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"
 </pre></div>
 </div>
 <p>Removed tracked files</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>rm<span class="w"> </span><span class="s2">&quot;file name&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>rm<span class="w"> </span><span class="s2">"file name"</span>
 </pre></div>
 </div>
 </section>
@@ -1071,7 +1071,7 @@ git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> <
 <li><p>Update repository:</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>*
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;First commit&quot;</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"First commit"</span>
 git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>master
 </pre></div>
 </div>
@@ -1090,7 +1090,7 @@ git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span
 <section id="commit-change-message">
 <h3>Commit: change message<a class="headerlink" href="#commit-change-message" title="Link to this heading">#</a></h3>
 <p>If you haven’t pushed and wish to replace your commit message, use that:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>--amend<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;New commit message&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>--amend<span class="w"> </span>-m<span class="w"> </span><span class="s2">"New commit message"</span>
 </pre></div>
 </div>
 </section>
@@ -1212,7 +1212,7 @@ git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w">
 </section>
 <section id="add-tag">
 <h3>Add tag<a class="headerlink" href="#add-tag" title="Link to this heading">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>vx.y.z<span class="w"> </span><span class="c1">#COMMIT -m &quot;added tag for vx.y.z&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>vx.y.z<span class="w"> </span><span class="c1">#COMMIT -m "added tag for vx.y.z"</span>
 git<span class="w"> </span>push<span class="w"> </span>--tag<span class="w"> </span>origin<span class="w"> </span>master
 </pre></div>
 </div>
@@ -1227,13 +1227,13 @@ git<span class="w"> </span>tag<span class="w"> </span>-d<span class="w"> </span>
 <section id="useful-aliases">
 <h3>Useful aliases<a class="headerlink" href="#useful-aliases" title="Link to this heading">#</a></h3>
 <p>Here are useful aliases that you could add to your <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span><span class="w"> </span><span class="nv">gs</span><span class="o">=</span><span class="s2">&quot;git status -s&quot;</span>
-<span class="nb">alias</span><span class="w"> </span><span class="nv">gc</span><span class="o">=</span><span class="s2">&quot;git commit -a&quot;</span>
-<span class="nb">alias</span><span class="w"> </span><span class="nv">gp</span><span class="o">=</span><span class="s2">&quot;git push&quot;</span>
-<span class="nb">alias</span><span class="w"> </span><span class="nv">gl</span><span class="o">=</span><span class="s2">&quot;git log --pretty=oneline&quot;</span>
-<span class="nb">alias</span><span class="w"> </span><span class="nv">glg</span><span class="o">=</span><span class="s2">&quot;git log --pretty=oneline --decorate --all --graph&quot;</span>
-<span class="nb">alias</span><span class="w"> </span><span class="nv">gd</span><span class="o">=</span><span class="s2">&quot;git diff&quot;</span>
-<span class="nb">alias</span><span class="w"> </span><span class="nv">gb</span><span class="o">=</span><span class="s2">&quot;git branch&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span><span class="w"> </span><span class="nv">gs</span><span class="o">=</span><span class="s2">"git status -s"</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">gc</span><span class="o">=</span><span class="s2">"git commit -a"</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">gp</span><span class="o">=</span><span class="s2">"git push"</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">gl</span><span class="o">=</span><span class="s2">"git log --pretty=oneline"</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">glg</span><span class="o">=</span><span class="s2">"git log --pretty=oneline --decorate --all --graph"</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">gd</span><span class="o">=</span><span class="s2">"git diff"</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">gb</span><span class="o">=</span><span class="s2">"git branch"</span>
 </pre></div>
 </div>
 </section>
@@ -1251,7 +1251,7 @@ git<span class="w"> </span>tag<span class="w"> </span>-d<span class="w"> </span>
 <p>Follow <a class="reference external" href="https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key">this procedure</a>.</p>
 <p>Then, if you experience this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">error</span><span class="p">:</span> <span class="n">unsupported</span> <span class="n">value</span> <span class="k">for</span> <span class="n">gpg</span><span class="o">.</span><span class="n">format</span><span class="p">:</span> <span class="n">ssh</span>
-<span class="n">fatal</span><span class="p">:</span> <span class="n">bad</span> <span class="n">config</span> <span class="n">variable</span> <span class="s1">&#39;gpg.format&#39;</span> <span class="ow">in</span> <span class="n">file</span> <span class="s1">&#39;/Users/julien/.gitconfig&#39;</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="n">fatal</span><span class="p">:</span> <span class="n">bad</span> <span class="n">config</span> <span class="n">variable</span> <span class="s1">'gpg.format'</span> <span class="ow">in</span> <span class="n">file</span> <span class="s1">'/Users/julien/.gitconfig'</span> <span class="n">at</span> <span class="n">line</span> <span class="mi">3</span>
 </pre></div>
 </div>
 <p>Maybe git is not up-to-date (see: <a class="reference external" href="https://1password.community/discussion/comment/656138/#Comment_656138">this comment</a>). Update it.</p>

@@ -564,7 +564,7 @@ document.write(`
 <h2>Booting Options<a class="headerlink" href="#booting-options" title="Link to this heading">#</a></h2>
 <p>It depends if you have an Intel or Silicon chip. See options: https://support.apple.com/en-ca/102603</p>
 <p>To boot with verbose mode on an Apple Silicon, do this:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nvram<span class="w"> </span>boot-args<span class="o">=</span><span class="s2">&quot;-v&quot;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nvram<span class="w"> </span>boot-args<span class="o">=</span><span class="s2">"-v"</span>
 </pre></div>
 </div>
 </section>
@@ -812,7 +812,7 @@ killall<span class="w"> </span>Dock
 </section>
 <section id="generate-dwi-mean-in-same-folder">
 <h4><strong>generate dwi_mean in same folder</strong><a class="headerlink" href="#generate-dwi-mean-in-same-folder" title="Link to this heading">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FSLDIR</span><span class="o">=</span>/usr/local/fsl<span class="w"> </span>.<span class="w"> </span><span class="si">${</span><span class="nv">FSLDIR</span><span class="si">}</span>/etc/fslconf/fsl.sh<span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/usr/local/fsl/bin<span class="w"> </span><span class="nv">fold</span><span class="o">=</span><span class="k">$(</span>dirname<span class="w"> </span>“<span class="nv">$1</span>”<span class="k">)</span><span class="w"> </span><span class="nv">NAME</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span><span class="w"> </span>“<span class="k">$(</span>basename<span class="w"> </span>“<span class="nv">$1</span>”<span class="k">)</span>”<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="s1">&#39;.&#39;</span><span class="w"> </span>-f1<span class="sb">`</span><span class="w"> </span>fslmaths<span class="w"> </span>“<span class="nv">$1</span>”<span class="w"> </span>-Tmean<span class="w"> </span><span class="nv">$fold</span>“/“<span class="nv">$NAME</span>”_mean”
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">FSLDIR</span><span class="o">=</span>/usr/local/fsl<span class="w"> </span>.<span class="w"> </span><span class="si">${</span><span class="nv">FSLDIR</span><span class="si">}</span>/etc/fslconf/fsl.sh<span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/usr/local/fsl/bin<span class="w"> </span><span class="nv">fold</span><span class="o">=</span><span class="k">$(</span>dirname<span class="w"> </span>“<span class="nv">$1</span>”<span class="k">)</span><span class="w"> </span><span class="nv">NAME</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span><span class="w"> </span>“<span class="k">$(</span>basename<span class="w"> </span>“<span class="nv">$1</span>”<span class="k">)</span>”<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="s1">'.'</span><span class="w"> </span>-f1<span class="sb">`</span><span class="w"> </span>fslmaths<span class="w"> </span>“<span class="nv">$1</span>”<span class="w"> </span>-Tmean<span class="w"> </span><span class="nv">$fold</span>“/“<span class="nv">$NAME</span>”_mean”
 </pre></div>
 </div>
 </section>
@@ -928,9 +928,9 @@ mv com.apple.ImageCaptureExtension2.plist com.apple.ImageCaptureExtension2.plist
 <p><strong>Add a signature</strong></p>
 <p>To avoid having to click multiple times to add a signature, here is an awesome AppleScript + QuickSilver combo:</p>
 <p>Create this AppleScript:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>tell application &quot;Preview&quot; to activate
-  tell application &quot;System Events&quot; to tell process &quot;Preview&quot;
-    click menu item 1 of menu 1 of menu item &quot;Signature&quot; of menu 1 of menu item &quot;Annotate&quot; of menu 1 of menu bar item &quot;Tools&quot; of menu bar 1
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>tell application "Preview" to activate
+  tell application "System Events" to tell process "Preview"
+    click menu item 1 of menu 1 of menu item "Signature" of menu 1 of menu item "Annotate" of menu 1 of menu bar item "Tools" of menu bar 1
 end tell
 </pre></div>
 </div>
@@ -958,7 +958,7 @@ end tell
 </pre></div>
 </div>
 <p>Debug</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>qlmanage -p &quot;path_to_plugin&quot;
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>qlmanage -p "path_to_plugin"
 Example: qlmanage -p /Library/QuickLook/DTITK_QuickLookPlugin.qlgenerator
 </pre></div>
 </div>
@@ -1034,7 +1034,7 @@ rm<span class="w"> </span>~/Library/Preferences/uk.fmrib.ox.ac.fslview.plist
 <ul class="simple">
 <li><p>open AppleScript Editor and run:</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tell<span class="w"> </span>application<span class="w"> </span><span class="s2">&quot;fslview&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tell<span class="w"> </span>application<span class="w"> </span><span class="s2">"fslview"</span>
 <span class="w">  </span><span class="nb">set</span><span class="w"> </span>bounds<span class="w"> </span>of<span class="w"> </span>windows<span class="w"> </span>to<span class="w"> </span><span class="o">{</span><span class="m">100</span>,<span class="w"> </span><span class="m">100</span>,<span class="w"> </span><span class="m">800</span>,<span class="w"> </span><span class="m">800</span><span class="o">}</span>
 end<span class="w"> </span>tell
 </pre></div>

@@ -481,7 +481,7 @@ document.write(`
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>-i
 mkdir<span class="w"> </span>/etc/cert/
 <span class="nb">cd</span><span class="w"> </span>/etc/cert/
-wget<span class="w"> </span>--user-agent<span class="o">=</span><span class="s2">&quot;Mozilla&quot;</span><span class="w"> </span>http://si-reseau.polymtl.ca/entrust_g2_ca.cer
+wget<span class="w"> </span>--user-agent<span class="o">=</span><span class="s2">"Mozilla"</span><span class="w"> </span>http://si-reseau.polymtl.ca/entrust_g2_ca.cer
 mv<span class="w"> </span>/etc/cert/entrust_g2_ca.cer<span class="w"> </span>/etc/cert/entrust_g2_ca.pem
 <span class="w"> </span>
 </pre></div>
@@ -491,7 +491,7 @@ mv<span class="w"> </span>/etc/cert/entrust_g2_ca.cer<span class="w"> </span>/et
 <span class="w"> </span><span class="nv">ctrl_interface</span><span class="o">=</span><span class="nv">DIR</span><span class="o">=</span>/var/run/wpa_supplicant<span class="w"> </span><span class="nv">GROUP</span><span class="o">=</span>netdev
 <span class="w"> </span><span class="nv">update_config</span><span class="o">=</span><span class="m">1</span>
 <span class="w"> </span><span class="nv">network</span><span class="o">={</span>
-<span class="w"> </span><span class="nv">ssid</span><span class="o">=</span><span class="s2">&quot;eduroam&quot;</span>
+<span class="w"> </span><span class="nv">ssid</span><span class="o">=</span><span class="s2">"eduroam"</span>
 <span class="w"> </span><span class="nv">priority</span><span class="o">=</span><span class="m">1</span>
 <span class="w"> </span><span class="nv">proto</span><span class="o">=</span>RSN
 <span class="w"> </span><span class="nv">key_mgmt</span><span class="o">=</span>WPA-EAP
@@ -500,11 +500,11 @@ mv<span class="w"> </span>/etc/cert/entrust_g2_ca.cer<span class="w"> </span>/et
 <span class="w"> </span><span class="nv">group</span><span class="o">=</span>CCMP<span class="w"> </span>TKIP
 <span class="w"> </span><span class="nv">identity</span><span class="o">=</span>&lt;YOUR_CODE_HERE&gt;
 <span class="w"> </span><span class="nv">password</span><span class="o">=</span>hash:&lt;YOUR_HASH_HERE&gt;
-<span class="w"> </span><span class="nv">anonymous_identity</span><span class="o">=</span><span class="s2">&quot;anonymous@polymtl.ca&quot;</span>
-<span class="w"> </span><span class="nv">phase1</span><span class="o">=</span><span class="s2">&quot;peaplabel=0&quot;</span>
-<span class="w"> </span><span class="nv">phase2</span><span class="o">=</span><span class="s2">&quot;auth=MSCHAPV2&quot;</span>
+<span class="w"> </span><span class="nv">anonymous_identity</span><span class="o">=</span><span class="s2">"anonymous@polymtl.ca"</span>
+<span class="w"> </span><span class="nv">phase1</span><span class="o">=</span><span class="s2">"peaplabel=0"</span>
+<span class="w"> </span><span class="nv">phase2</span><span class="o">=</span><span class="s2">"auth=MSCHAPV2"</span>
 <span class="w"> </span><span class="nv">eap</span><span class="o">=</span>PEAP
-<span class="w"> </span><span class="nv">ca_cert</span><span class="o">=</span><span class="s2">&quot;/etc/cert/entrust_g2_ca.pem&quot;</span>
+<span class="w"> </span><span class="nv">ca_cert</span><span class="o">=</span><span class="s2">"/etc/cert/entrust_g2_ca.pem"</span>
 <span class="w"> </span><span class="nv">proactive_key_caching</span><span class="o">=</span><span class="m">1</span>
 <span class="w"> </span><span class="o">}</span>
 <span class="w"> </span>

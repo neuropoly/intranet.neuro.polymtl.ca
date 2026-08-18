@@ -1051,10 +1051,10 @@ Open your Keychain program and click ‘+’ to add a new item:</p>
 
 <span class="nb">set</span><span class="w"> </span>-eo<span class="w"> </span>pipefail
 
-<span class="nv">USER</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR_CAS_USERNAME&gt;&quot;</span>
-<span class="nv">PASS</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span>security<span class="w"> </span>find-generic-password<span class="w"> </span>-a<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>-s<span class="w"> </span>poly-vpn<span class="w"> </span>-w<span class="k">)</span><span class="s2">&quot;</span>
+<span class="nv">USER</span><span class="o">=</span><span class="s2">"&lt;YOUR_CAS_USERNAME&gt;"</span>
+<span class="nv">PASS</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span>security<span class="w"> </span>find-generic-password<span class="w"> </span>-a<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">USER</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span>-s<span class="w"> </span>poly-vpn<span class="w"> </span>-w<span class="k">)</span><span class="s2">"</span>
 <span class="nv">GROUP</span><span class="o">=</span>PolySSL
-<span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PASS</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>openconnect<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span><span class="w"> </span>--authgroup<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$GROUP</span><span class="s2">&quot;</span><span class="w"> </span>--passwd-on-stdin<span class="w"> </span>--reconnect-timeout<span class="w"> </span><span class="m">20</span><span class="w"> </span>ssl.vpn.polymtl.ca
+<span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"</span><span class="nv">$PASS</span><span class="s2">"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>openconnect<span class="w"> </span>-u<span class="w"> </span><span class="s2">"</span><span class="nv">$USER</span><span class="s2">"</span><span class="w"> </span>--authgroup<span class="w"> </span><span class="s2">"</span><span class="nv">$GROUP</span><span class="s2">"</span><span class="w"> </span>--passwd-on-stdin<span class="w"> </span>--reconnect-timeout<span class="w"> </span><span class="m">20</span><span class="w"> </span>ssl.vpn.polymtl.ca
 </pre></div>
 </div>
 <p>Make your script executable:</p>
@@ -1075,7 +1075,7 @@ Open your Keychain program and click ‘+’ to add a new item:</p>
 <p>For <code class="docutils literal notranslate"><span class="pre">macOS</span></code>, we assume you are using <code class="docutils literal notranslate"><span class="pre">zsh</span></code>, if you are using bash instead, replace <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code> with <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> in the instructions. If the relevant file does not already exist, you should create it.</p>
 </div>
 <p>Add the following to <code class="docutils literal notranslate"><span class="pre">~/.zshrc</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">vpn</span><span class="o">=</span><span class="s1">&#39;~/bin/vpn.sh&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">vpn</span><span class="o">=</span><span class="s1">'~/bin/vpn.sh'</span>
 </pre></div>
 </div>
 <p>Source your shell to make the new alias available:</p>
@@ -1111,9 +1111,9 @@ Linux</label><div class="sd-tab-content docutils">
 
 <span class="nb">set</span><span class="w"> </span>-eo<span class="w"> </span>pipefail
 
-<span class="nv">USER</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR_CAS_USERNAME&gt;&quot;</span>
+<span class="nv">USER</span><span class="o">=</span><span class="s2">"&lt;YOUR_CAS_USERNAME&gt;"</span>
 <span class="nv">GROUP</span><span class="o">=</span>PolySSL
-sudo<span class="w"> </span>openconnect<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span><span class="w"> </span>--authgroup<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$GROUP</span><span class="s2">&quot;</span><span class="w"> </span>--reconnect-timeout<span class="w"> </span><span class="m">20</span><span class="w"> </span>ssl.vpn.polymtl.ca
+sudo<span class="w"> </span>openconnect<span class="w"> </span>-u<span class="w"> </span><span class="s2">"</span><span class="nv">$USER</span><span class="s2">"</span><span class="w"> </span>--authgroup<span class="w"> </span><span class="s2">"</span><span class="nv">$GROUP</span><span class="s2">"</span><span class="w"> </span>--reconnect-timeout<span class="w"> </span><span class="m">20</span><span class="w"> </span>ssl.vpn.polymtl.ca
 </pre></div>
 </div>
 <p><em>Option 2</em></p>
@@ -1122,10 +1122,10 @@ sudo<span class="w"> </span>openconnect<span class="w"> </span>-u<span class="w"
 
 <span class="nb">set</span><span class="w"> </span>-eo<span class="w"> </span>pipefail
 
-<span class="nv">USER</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR_CAS_USERNAME&gt;&quot;</span>
-<span class="nv">PASS</span><span class="o">=</span><span class="s2">&quot;&lt;YOUR_CAS_PASSWORD&gt;&quot;</span>
+<span class="nv">USER</span><span class="o">=</span><span class="s2">"&lt;YOUR_CAS_USERNAME&gt;"</span>
+<span class="nv">PASS</span><span class="o">=</span><span class="s2">"&lt;YOUR_CAS_PASSWORD&gt;"</span>
 <span class="nv">GROUP</span><span class="o">=</span>PolySSL
-<span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$PASS</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>openconnect<span class="w"> </span>-u<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$USER</span><span class="s2">&quot;</span><span class="w"> </span>--authgroup<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$GROUP</span><span class="s2">&quot;</span><span class="w"> </span>--passwd-on-stdin<span class="w"> </span>--reconnect-timeout<span class="w"> </span><span class="m">20</span><span class="w"> </span>ssl.vpn.polymtl.ca
+<span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"</span><span class="nv">$PASS</span><span class="s2">"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>openconnect<span class="w"> </span>-u<span class="w"> </span><span class="s2">"</span><span class="nv">$USER</span><span class="s2">"</span><span class="w"> </span>--authgroup<span class="w"> </span><span class="s2">"</span><span class="nv">$GROUP</span><span class="s2">"</span><span class="w"> </span>--passwd-on-stdin<span class="w"> </span>--reconnect-timeout<span class="w"> </span><span class="m">20</span><span class="w"> </span>ssl.vpn.polymtl.ca
 </pre></div>
 </div>
 <div class="admonition warning">
@@ -1150,7 +1150,7 @@ sudo<span class="w"> </span>openconnect<span class="w"> </span>-u<span class="w"
 <p>If you are using <code class="docutils literal notranslate"><span class="pre">zsh</span></code> instead of <code class="docutils literal notranslate"><span class="pre">bash</span></code>, replace <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> with <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code> in the instructions. If the relevant file does not already exist, you should create it.</p>
 </div>
 <p>Add the following to <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">vpn</span><span class="o">=</span><span class="s1">&#39;~/bin/vpn.sh&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alias</span> <span class="n">vpn</span><span class="o">=</span><span class="s1">'~/bin/vpn.sh'</span>
 </pre></div>
 </div>
 <p>Source your shell to make the new alias available:</p>
@@ -1266,7 +1266,7 @@ Cisco AnyConnect in a VM</label><div class="sd-tab-content docutils">
 <li><p>Get the ip address of your VM (<code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">a</span></code>) and write it down.</p></li>
 <li><p>On the host, generate an SSH key pair, (or select an existing key pair to use) then transfer the public key to your VM using <code class="docutils literal notranslate"><span class="pre">ssh-copy-id</span></code>. You can <strong>modify</strong> the following commands with the correct info to do this:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;&lt;VM_USER&gt;@&lt;VM_NAME&gt;&quot;</span><span class="w"> </span>-f<span class="w"> </span>~/.ssh/&lt;VM_USER&gt;_ed25519
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">"&lt;VM_USER&gt;@&lt;VM_NAME&gt;"</span><span class="w"> </span>-f<span class="w"> </span>~/.ssh/&lt;VM_USER&gt;_ed25519
 </pre></div>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-copy-id<span class="w"> </span>-i<span class="w"> </span>~/.ssh/&lt;VM_USER&gt;_ed25519.pub<span class="w"> </span>-o<span class="w"> </span><span class="nv">PreferredAuthentications</span><span class="o">=</span>password<span class="w"> </span>&lt;VM_USER&gt;@&lt;VM_IP&gt;
@@ -1278,7 +1278,7 @@ Cisco AnyConnect in a VM</label><div class="sd-tab-content docutils">
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Needed for proxy jump with AnyConnect vm</span>
 
-<span class="c1"># Replace the HostName with your VM&#39;s IP</span>
+<span class="c1"># Replace the HostName with your VM's IP</span>
 <span class="c1"># Replace the User with the username on your VM</span>
 <span class="c1"># Replace the IdentityFile with the correct path to the relevant SSH key</span>
 Host<span class="w"> </span>jumpvm
@@ -1384,7 +1384,7 @@ Official instructions</label><div class="sd-tab-content docutils">
 <span class="s">PreferredAuthentications password</span>
 <span class="s">EOF</span>
 
-<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;Include ~/.ssh/config_neuropoly&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.ssh/config
+<span class="nb">echo</span><span class="w"> </span><span class="s1">'Include ~/.ssh/config_neuropoly'</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.ssh/config
 </pre></div>
 </div>
 <p>Optionally, add this shortcut which makes simultaneous ssh connections possible without retyping your password:</p>
@@ -1452,7 +1452,7 @@ mac (Monterey and after)</label><div class="sd-tab-content docutils">
 <section id="language">
 <h3>Language<a class="headerlink" href="#language" title="Link to this heading">#</a></h3>
 <p>The default interface on our systems is français. To use another language, set your <code class="docutils literal notranslate"><span class="pre">LANG</span></code> environment variable:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s1">&#39;export LANG=en_CA.UTF-8&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">profile</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s1">'export LANG=en_CA.UTF-8'</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">profile</span>
 </pre></div>
 </div>
 <p>Logout and back in again and apps should now be in English (or the other language code you chose).</p>

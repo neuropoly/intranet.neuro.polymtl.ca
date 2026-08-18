@@ -547,7 +547,7 @@ module<span class="w"> </span>load<span class="w"> </span>apps/git/2.13.0
 </div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-You have to build everything from source because you don&#39;t have root permission to install anything yourself. You can send an email to `guillimin &quot;at&quot; calculquebec &quot;dot&quot; ca` if you need them to install something on your session. They are quite responsive.
+You have to build everything from source because you don't have root permission to install anything yourself. You can send an email to `guillimin "at" calculquebec "dot" ca` if you need them to install something on your session. They are quite responsive.
 
 ### **Disk Space**
 
@@ -674,7 +674,7 @@ slurm queueing system</p>
 <span class="w"> </span>
 <span class="nv">DATA_PATH</span><span class="o">=</span>&lt;/PATH/TO/SUBJECTS/DATA/&gt;
 <span class="w"> </span>
-&lt;/PATH/TO/SCT_PIPELINE&gt;<span class="w"> </span>--nb-cup<span class="w"> </span><span class="m">255</span><span class="w"> </span>-f<span class="w"> </span>sct_propseg<span class="w"> </span>-d<span class="w"> </span>&lt;/PATH/TO/BIG_DATASET&gt;<span class="w">  </span>-p<span class="w">  </span><span class="se">\&quot;</span>-i<span class="w"> </span>t2s/t2s.nii.gz<span class="w">  </span>-c<span class="w"> </span>t2s<span class="se">\&quot;</span><span class="w">    </span><span class="c1"># run propseg on 255 workers</span>
+&lt;/PATH/TO/SCT_PIPELINE&gt;<span class="w"> </span>--nb-cup<span class="w"> </span><span class="m">255</span><span class="w"> </span>-f<span class="w"> </span>sct_propseg<span class="w"> </span>-d<span class="w"> </span>&lt;/PATH/TO/BIG_DATASET&gt;<span class="w">  </span>-p<span class="w">  </span><span class="se">\"</span>-i<span class="w"> </span>t2s/t2s.nii.gz<span class="w">  </span>-c<span class="w"> </span>t2s<span class="se">\"</span><span class="w">    </span><span class="c1"># run propseg on 255 workers</span>
 </pre></div>
 </div>
 </div>
@@ -690,7 +690,7 @@ squeue<span class="w"> </span>-u<span class="w"> </span><span class="nv">$UID</s
 </pre></div>
 </div>
 <p>Then run <code class="docutils literal notranslate"><span class="pre">sct_pipeline</span></code>. The 16 cores will be accessible via the MPI interface:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;PATH/TO/SCT&gt;/bin/sct_pipeline<span class="w"> </span>-cpu-nb<span class="w"> </span><span class="m">16</span><span class="w">  </span>-f<span class="w"> </span>sct_propseg<span class="w"> </span>-d<span class="w"> </span>/home/poq/small<span class="w"> </span>-p<span class="w"> </span><span class="se">\&quot;</span><span class="w"> </span>-i<span class="w">  </span>t2s/t2s.nii.gz<span class="w">  </span>-c<span class="w"> </span>t2s<span class="w"> </span><span class="se">\&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;PATH/TO/SCT&gt;/bin/sct_pipeline<span class="w"> </span>-cpu-nb<span class="w"> </span><span class="m">16</span><span class="w">  </span>-f<span class="w"> </span>sct_propseg<span class="w"> </span>-d<span class="w"> </span>/home/poq/small<span class="w"> </span>-p<span class="w"> </span><span class="se">\"</span><span class="w"> </span>-i<span class="w">  </span>t2s/t2s.nii.gz<span class="w">  </span>-c<span class="w"> </span>t2s<span class="w"> </span><span class="se">\"</span>
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>

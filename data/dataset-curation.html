@@ -685,7 +685,7 @@ Default fields can be ommited to avoid long names.</p>
 <span class="o">...</span>
 
 <span class="n">Please</span> <span class="n">also</span> <span class="n">include</span> <span class="n">the</span> <span class="n">following</span> <span class="n">grant</span><span class="o">/</span><span class="n">funding</span> <span class="n">acknowledgment</span> <span class="ow">in</span> <span class="n">your</span> <span class="n">publication</span><span class="p">:</span>
-<span class="s2">&quot;Supported by ...&quot;</span>
+<span class="s2">"Supported by ..."</span>
 
 <span class="c1">## &lt;IF DATA ARE MISSING FOR SOME SUBJECT(S)&gt;missing data</span>
 
@@ -698,48 +698,48 @@ Default fields can be ommited to avoid long names.</p>
 <p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#dataset_descriptionjson"><code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code></a> is a JSON file describing the dataset.</p>
 <p>Please use the <code class="docutils literal notranslate"><span class="pre">dataset_description.json</span></code> template below:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The mother of all experiments&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;BIDSVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.6.0&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;DatasetType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;raw&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;License&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CC0&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;Authors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="s2">&quot;Paul Broca&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;Carl Wernicke&quot;</span>
+<span class="w">  </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The mother of all experiments"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"BIDSVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.6.0"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"DatasetType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"raw"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"License"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CC0"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Authors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">"Paul Broca"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"Carl Wernicke"</span>
 <span class="w">  </span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;Keywords&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="s2">&quot;neuroscience&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;language&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;brain&quot;</span>
+<span class="w">  </span><span class="nt">"Keywords"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">"neuroscience"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"language"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"brain"</span>
 <span class="w">  </span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;Acknowledgements&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Special thanks to Korbinian Brodmann for help in formatting this dataset in BIDS. We thank Alan Lloyd Hodgkin and Andrew Huxley for helpful comments and discussions about the experiment and manuscript; Hermann Ludwig Helmholtz for administrative support; and Claudius Galenus for providing data for the medial-to-lateral index analysis.&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;HowToAcknowledge&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Please cite this paper: https://www.ncbi.nlm.nih.gov/pubmed/001012092119281&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;Funding&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="s2">&quot;National Institute of Neuroscience Grant F378236MFH1&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;National Institute of Neuroscience Grant 5RMZ0023106&quot;</span>
+<span class="w">  </span><span class="nt">"Acknowledgements"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Special thanks to Korbinian Brodmann for help in formatting this dataset in BIDS. We thank Alan Lloyd Hodgkin and Andrew Huxley for helpful comments and discussions about the experiment and manuscript; Hermann Ludwig Helmholtz for administrative support; and Claudius Galenus for providing data for the medial-to-lateral index analysis."</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"HowToAcknowledge"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Please cite this paper: https://www.ncbi.nlm.nih.gov/pubmed/001012092119281"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Funding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">"National Institute of Neuroscience Grant F378236MFH1"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"National Institute of Neuroscience Grant 5RMZ0023106"</span>
 <span class="w">  </span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;EthicsApprovals&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="s2">&quot;Army Human Research Protections Office (Protocol ARL-20098-10051, ARL 12-040, and ARL 12-041)&quot;</span>
+<span class="w">  </span><span class="nt">"EthicsApprovals"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">"Army Human Research Protections Office (Protocol ARL-20098-10051, ARL 12-040, and ARL 12-041)"</span>
 <span class="w">  </span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;ReferencesAndLinks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="s2">&quot;https://www.ncbi.nlm.nih.gov/pubmed/001012092119281&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s2">&quot;Alzheimer A., &amp; Kraepelin, E. (2015). Neural correlates of presenile dementia in humans. Journal of Neuroscientific Data, 2, 234001. doi:1920.8/jndata.2015.7&quot;</span>
+<span class="w">  </span><span class="nt">"ReferencesAndLinks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">"https://www.ncbi.nlm.nih.gov/pubmed/001012092119281"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">"Alzheimer A., &amp; Kraepelin, E. (2015). Neural correlates of presenile dementia in humans. Journal of Neuroscientific Data, 2, 234001. doi:1920.8/jndata.2015.7"</span>
 <span class="w">  </span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;DatasetDOI&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;doi:10.0.2.3/dfjj.10&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;HEDVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8.0.0&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="nt">"DatasetDOI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"doi:10.0.2.3/dfjj.10"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"HEDVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8.0.0"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"GeneratedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;reproin&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.6.0&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;Container&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;docker&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Tag&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;repronim/reproin:0.6.0&quot;</span>
+<span class="w">      </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"reproin"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"Version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.6.0"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"Container"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"docker"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"Tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"repronim/reproin:0.6.0"</span>
 <span class="w">      </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">],</span>
-<span class="w">  </span><span class="nt">&quot;SourceDatasets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="nt">"SourceDatasets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;URL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;s3://dicoms/studies/correlates&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;April 11 2011&quot;</span>
+<span class="w">      </span><span class="nt">"URL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"s3://dicoms/studies/correlates"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"Version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"April 11 2011"</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">]</span>
 <span class="p">}</span>
@@ -812,50 +812,50 @@ Default fields can be ommited to avoid long names.</p>
 <h3><code class="docutils literal notranslate"><span class="pre">participants.json</span></code><a class="headerlink" href="#participants-json" title="Link to this heading">#</a></h3>
 <p>The <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#participants-file"><code class="docutils literal notranslate"><span class="pre">participants.json</span></code></a> is a JSON file providing a legend for the columns in <code class="docutils literal notranslate"><span class="pre">participants.tsv</span></code>, with longer descriptions, units, and in the case of categorical variables, allowed levels. Please use the template below:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;participant_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Unique Participant ID&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Participant ID&quot;</span>
+<span class="w">    </span><span class="nt">"participant_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"Description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Unique Participant ID"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"LongName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Participant ID"</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;source_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Subject ID in the source unprocessed data&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Subject ID in the source unprocessed data&quot;</span>
+<span class="w">    </span><span class="nt">"source_id"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"Description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Subject ID in the source unprocessed data"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"LongName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Subject ID in the source unprocessed data"</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;species&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Binomial species name of participant&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Species&quot;</span>
+<span class="w">    </span><span class="nt">"species"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"Description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Binomial species name of participant"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"LongName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Species"</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Participant age&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Participant age&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Units&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;years&quot;</span>
+<span class="w">    </span><span class="nt">"age"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"Description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Participant age"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"LongName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Participant age"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"Units"</span><span class="p">:</span><span class="w"> </span><span class="s2">"years"</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;sex&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sex of the participant as reported by the participant&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Levels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;M&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;male&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;F&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;female&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;O&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;other&quot;</span>
+<span class="w">    </span><span class="nt">"sex"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"Description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sex of the participant as reported by the participant"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"Levels"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"M"</span><span class="p">:</span><span class="w"> </span><span class="s2">"male"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"F"</span><span class="p">:</span><span class="w"> </span><span class="s2">"female"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"O"</span><span class="p">:</span><span class="w"> </span><span class="s2">"other"</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;pathology&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The diagnosis of pathology of the participant&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Pathology name&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Levels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;HC&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Healthy Control&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;DCM&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Degenerative Cervical Myelopathy (synonymous with CSM - Cervical Spondylotic Myelopathy)&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;MildCompression&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Asymptomatic cord compression, without myelopathy&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;MS&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Multiple Sclerosis&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;PD&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Parkinson&#39;s Disease&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;SCI&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Traumatic Spinal Cord Injury&quot;</span>
+<span class="w">    </span><span class="nt">"pathology"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"Description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The diagnosis of pathology of the participant"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"LongName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pathology name"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"Levels"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"HC"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Healthy Control"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"DCM"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Degenerative Cervical Myelopathy (synonymous with CSM - Cervical Spondylotic Myelopathy)"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"MildCompression"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Asymptomatic cord compression, without myelopathy"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"MS"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Multiple Sclerosis"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"PD"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Parkinson's Disease"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"SCI"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Traumatic Spinal Cord Injury"</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;institution&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Human-friendly institution name&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BIDS Institution ID&quot;</span>
+<span class="w">    </span><span class="nt">"institution"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"Description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Human-friendly institution name"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"LongName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BIDS Institution ID"</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;notes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;Description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Additional notes about the participant. For example, if there is more information about a disease, indicate it here.&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;LongName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Additional notes&quot;</span>
+<span class="w">    </span><span class="nt">"notes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"Description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Additional notes about the participant. For example, if there is more information about a disease, indicate it here."</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"LongName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Additional notes"</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -910,7 +910,7 @@ Default fields can be ommited to avoid long names.</p>
     └── &lt;label&gt;  &lt;-- name of the derivative folder
         └── sub-&lt;label&gt;/]
             └── [ses-&lt;label&gt;/]
-                └── data type/  &lt;-- could be &#39;anat&#39;, &#39;fmap&#39;, &#39;func&#39;, etc.
+                └── data type/  &lt;-- could be 'anat', 'fmap', 'func', etc.
                     └── &lt;source_filename&gt;[_space-&lt;space&gt;][_res-&lt;label&gt;][_den-&lt;label&gt;][_desc-&lt;label&gt;]_&lt;suffix&gt;.&lt;extension&gt;
 </pre></div>
 </div>
@@ -991,9 +991,9 @@ Default fields can be ommited to avoid long names.</p>
 <section id="derivatives-labels-dataset-description-json">
 <h3><code class="docutils literal notranslate"><span class="pre">derivatives/labels/dataset_description.json</span></code><a class="headerlink" href="#derivatives-labels-dataset-description-json" title="Link to this heading">#</a></h3>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;BIDSVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.9.0&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;dataset_name&gt;&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;DatasetType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;derivative&quot;</span>
+<span class="w">    </span><span class="nt">"BIDSVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.9.0"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;dataset_name&gt;"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"DatasetType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"derivative"</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -1012,12 +1012,12 @@ Default fields can be ommited to avoid long names.</p>
 <p>Therefore, to improve the way we track our data, <code class="docutils literal notranslate"><span class="pre">.json</span></code> sidecars have to be generated for each data present in derived datasets. Here are few examples of JSON sidecar:</p>
 <p>Below is a JSON sidecar describing a fully-manual labels created in the ORIGINAL SPACE:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;SpatialReference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;orig&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nt">"SpatialReference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"orig"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"GeneratedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Manual&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;Author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Nathan Molinier&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;Date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-07-14 13:43:10&quot;</span>
+<span class="w">            </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manual"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"Author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nathan Molinier"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"Date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-07-14 13:43:10"</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">]</span>
 <span class="p">}</span>
@@ -1025,16 +1025,16 @@ Default fields can be ommited to avoid long names.</p>
 </div>
 <p>If the label was previously produced by an automatic algorithm, append to the <code class="docutils literal notranslate"><span class="pre">GeneratedBy</span></code> section:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;SpatialReference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;orig&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nt">"SpatialReference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"orig"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"GeneratedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sct_deepseg_sc&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SCT v6.1&quot;</span>
+<span class="w">            </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sct_deepseg_sc"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"Version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SCT v6.1"</span>
 <span class="w">        </span><span class="p">},</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Manual&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;Author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Nathan Molinier&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;Date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-07-14 13:43:10&quot;</span>
+<span class="w">            </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manual"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"Author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nathan Molinier"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"Date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-07-14 13:43:10"</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">]</span>
 <span class="p">}</span>
@@ -1042,24 +1042,24 @@ Default fields can be ommited to avoid long names.</p>
 </div>
 <p>If the label is created <em>after</em> the data was resampled and cropped, indicate it under <code class="docutils literal notranslate"><span class="pre">SpatialReference</span></code>:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;SpatialReference&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;ResamplingFactor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Interpolation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;spline&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Xmin&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Xmax&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">95</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Ymin&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Ymax&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Zmin&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;Zmax&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span>
+<span class="w">    </span><span class="nt">"SpatialReference"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"ResamplingFactor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"Interpolation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"spline"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"Xmin"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"Xmax"</span><span class="p">:</span><span class="w"> </span><span class="mi">95</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"Ymin"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"Ymax"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"Zmin"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"Zmax"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span>
 <span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nt">"GeneratedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sct_resample&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SCT v6.1&quot;</span>
+<span class="w">            </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sct_resample"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"Version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SCT v6.1"</span>
 <span class="w">        </span><span class="p">},</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sct_crop_image&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SCT v6.1&quot;</span>
+<span class="w">            </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sct_crop_image"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"Version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SCT v6.1"</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">]</span>
 <span class="p">}</span>
@@ -1067,11 +1067,11 @@ Default fields can be ommited to avoid long names.</p>
 </div>
 <p>Another example of a label created in another space than the image (here: the PAM50 template space):</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;SpatialReference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PAM50&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;GeneratedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nt">"SpatialReference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PAM50"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"GeneratedBy"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sct_register_to_template&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;Version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SCT v6.1&quot;</span>
+<span class="w">            </span><span class="nt">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sct_register_to_template"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"Version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SCT v6.1"</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">]</span>
 <span class="p">}</span>
@@ -1173,7 +1173,7 @@ Default fields can be ommited to avoid long names.</p>
                 ├── sub-001_acq-sag_T2w_label-vertebrae_dseg  # vertebrae discrete segmentation (segmented stuctures have different values based on the vertebral levels)
                 ├── sub-001_acq-sag_T2w_label-rootlets_dseg  # nerve rootlets discrete segmentation
                 ├── sub-001_acq-sag_T2w_label-compression_label.nii.gz  # binary compression labeling
-                ├── sub-001_acq-sag_T2w_label-PMJ_dlabel  # Pontomedullary junction, indicated as a single voxel with a value &#39;50&#39;
+                ├── sub-001_acq-sag_T2w_label-PMJ_dlabel  # Pontomedullary junction, indicated as a single voxel with a value '50'
                 └── sub-001_acq-sag_T2w_label-lesion_seg  # lesion binary segmentation
 </pre></div>
 </div>
@@ -1183,13 +1183,13 @@ Default fields can be ommited to avoid long names.</p>
 <h2>Changelog policy<a class="headerlink" href="#changelog-policy" title="Link to this heading">#</a></h2>
 <p>We use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code> to track our changes. That means care should be taken to <a class="reference internal" href="../geek-tips/git.html#commit-message-convention"><span class="std std-ref">write good messages</span></a>: they are there to help both you and future researchers understand how the dataset evolved.</p>
 <p>Good commit message examples:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;Segment spines of subjects 010 through 023</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">'Segment spines of subjects 010 through 023</span>
     
-<span class="n">Produced</span> <span class="n">manually</span><span class="p">,</span> <span class="n">using</span> <span class="n">fsleyes</span><span class="o">.</span><span class="s1">&#39;</span>
+<span class="n">Produced</span> <span class="n">manually</span><span class="p">,</span> <span class="n">using</span> <span class="n">fsleyes</span><span class="o">.</span><span class="s1">'</span>
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">&#39;Add new subjects provided by &lt;email_adress&gt;&#39;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s1">'Add new subjects provided by &lt;email_adress&gt;'</span>
 </pre></div>
 </div>
 <p>If you choose to also fill in BIDS’s optional <a class="reference external" href="https://bids-specification.readthedocs.io/en/stable/03-modality-agnostic-files.html#changes">CHANGES</a> file make sure it reflects the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code>.</p>
