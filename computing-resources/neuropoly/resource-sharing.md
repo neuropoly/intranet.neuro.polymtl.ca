@@ -166,6 +166,19 @@ This will add a blue `[set_slot]` tag to the beginning of your command prompt wh
 
 #### What resources are available to me for trainings?
 
-Right now each GPU pool is limited to:
-- romane: ~100GB of RAM and 14 CPUs
-- tassan: ~46GB of RAM and 20 CPUs
+Right now resource limitations for slots are as follows:
+
+*romane:* 
+- ~91GB of RAM for a single slot
+- 14 CPU cores for a single slot
+- Up to 4 slots available (corresponding with 4 GPUs)
+
+*tassan:*
+- ~46GB of RAM for a single slot
+- 20 CPU cores for a single slot
+- Up to 2 slots available (corresponding with 2 GPUs)
+
+*joplin:*
+- ~46GB of RAM for a single slot
+- 30 CPU cores for a single slot
+- Up to 4 slots available (No GPUs)
