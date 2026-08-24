@@ -15,8 +15,6 @@ As with [other machines](./README.md#connect-to-neuropoly-computers), connect wi
 | **OS** | Linux |
 | **Hostname** | `joplin.neuro.polymtl.ca` |
 
-For fast I/O, use the NVMe hard drive, which is automatically available: `~/data_nvme_$USER`
-
 * romane, tassan, and joplin have a [special system for sharing CPU/RAM](./resource-sharing.md)
 
 ### `abbey`
