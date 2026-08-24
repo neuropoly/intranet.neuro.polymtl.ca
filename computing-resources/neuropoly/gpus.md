@@ -962,25 +962,21 @@ For projects and permanent storage: `~/duke`. More information about `duke` can 
 Please, do not use space on duke while training your models. If you need more local space, post a request on [computers](https://github.com/neuropoly/computers/issues/new).
 ```
 
-### Mid-term, rapid access \(no backup\)
+### Short term, rapid access \(no backup\)
 
 This corresponds to your home `~/`. This is where you keep your software \(conda envs, virtualenvs, etc.\).
 
-### Short-term, very rapid access \(no backup\)
-
-This is where you run your experiments \(eg: deep learning training\). On `rosenberg`, go to `~/data_nvme_$USER`or `~/data_extrassd_$USER`. On `bireli` and `romane` , go to your home `~/` .
-
-To keep track of your disk space, you can run `df`:
+To keep track of your disk space, you can run `df` or `du`:
 
 ```text
-u108545@rosenberg:~$ # to see how much space is available on the spare disk
-u108545@rosenberg:~$ df -h data_extrassd_u108545
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sdb1       440G   50G  368G  12% /mnt/extrassd
+p117849@ge.polymtl.ca@rosenberg:~$ # to see how much space is available on the disk
+p117849@ge.polymtl.ca@rosenberg:~$ df -h ~/
+Filesystem        Size  Used Avail Use% Mounted on
+/dev/mapper/home   11T  2.8T  7.1T  29% /home
 
-u108545@rosenberg:~$ # to measure how much space a tool takes
-u108545@rosenberg:~$ du -hs data_extrassd_u108545/miniconda3/
-18G    data_extrassd_u108545/miniconda3/
+p117849@ge.polymtl.ca@rosenberg:~$ # to measure how much disk space a tool uses
+p117849@ge.polymtl.ca@rosenberg:~$ du -hs ~/miniconda3/
+18G    /home/ge.polymtl.ca/p117849/miniconda3/
 ```
 
 ## Good Training Habits
