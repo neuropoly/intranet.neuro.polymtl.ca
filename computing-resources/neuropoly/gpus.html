@@ -468,8 +468,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#storage">Storage</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#long-term-slow-access-with-backup">Long term, slow access (with backup)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mid-term-rapid-access-no-backup">Mid-term, rapid access (no backup)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-term-very-rapid-access-no-backup">Short-term, very rapid access (no backup)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-term-rapid-access-no-backup">Short term, rapid access (no backup)</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#good-training-habits">Good Training Habits</a></li>
@@ -1437,22 +1436,18 @@ model = Network(...).to(device=device)
 <p>Please, do not use space on duke while training your models. If you need more local space, post a request on <a class="reference external" href="https://github.com/neuropoly/computers/issues/new">computers</a>.</p>
 </div>
 </section>
-<section id="mid-term-rapid-access-no-backup">
-<h3>Mid-term, rapid access (no backup)<a class="headerlink" href="#mid-term-rapid-access-no-backup" title="Link to this heading">#</a></h3>
+<section id="short-term-rapid-access-no-backup">
+<h3>Short term, rapid access (no backup)<a class="headerlink" href="#short-term-rapid-access-no-backup" title="Link to this heading">#</a></h3>
 <p>This corresponds to your home <code class="docutils literal notranslate"><span class="pre">~/</span></code>. This is where you keep your software (conda envs, virtualenvs, etc.).</p>
-</section>
-<section id="short-term-very-rapid-access-no-backup">
-<h3>Short-term, very rapid access (no backup)<a class="headerlink" href="#short-term-very-rapid-access-no-backup" title="Link to this heading">#</a></h3>
-<p>This is where you run your experiments (eg: deep learning training). On <code class="docutils literal notranslate"><span class="pre">rosenberg</span></code>, go to <code class="docutils literal notranslate"><span class="pre">~/data_nvme_$USER</span></code>or <code class="docutils literal notranslate"><span class="pre">~/data_extrassd_$USER</span></code>. On <code class="docutils literal notranslate"><span class="pre">bireli</span></code> and <code class="docutils literal notranslate"><span class="pre">romane</span></code> , go to your home <code class="docutils literal notranslate"><span class="pre">~/</span></code> .</p>
-<p>To keep track of your disk space, you can run <code class="docutils literal notranslate"><span class="pre">df</span></code>:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u108545@rosenberg:~$ # to see how much space is available on the spare disk
-u108545@rosenberg:~$ df -h data_extrassd_u108545
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sdb1       440G   50G  368G  12% /mnt/extrassd
+<p>To keep track of your disk space, you can run <code class="docutils literal notranslate"><span class="pre">df</span></code> or <code class="docutils literal notranslate"><span class="pre">du</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>p117849@ge.polymtl.ca@rosenberg:~$ # to see how much space is available on the disk
+p117849@ge.polymtl.ca@rosenberg:~$ df -h ~/
+Filesystem        Size  Used Avail Use% Mounted on
+/dev/mapper/home   11T  2.8T  7.1T  29% /home
 
-u108545@rosenberg:~$ # to measure how much space a tool takes
-u108545@rosenberg:~$ du -hs data_extrassd_u108545/miniconda3/
-18G    data_extrassd_u108545/miniconda3/
+p117849@ge.polymtl.ca@rosenberg:~$ # to measure how much disk space a tool uses
+p117849@ge.polymtl.ca@rosenberg:~$ du -hs ~/miniconda3/
+18G    /home/ge.polymtl.ca/p117849/miniconda3/
 </pre></div>
 </div>
 </section>
@@ -1644,8 +1639,7 @@ Terminal</label><div class="sd-tab-content docutils">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#storage">Storage</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#long-term-slow-access-with-backup">Long term, slow access (with backup)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mid-term-rapid-access-no-backup">Mid-term, rapid access (no backup)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-term-very-rapid-access-no-backup">Short-term, very rapid access (no backup)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-term-rapid-access-no-backup">Short term, rapid access (no backup)</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#good-training-habits">Good Training Habits</a></li>
