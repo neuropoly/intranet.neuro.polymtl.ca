@@ -27,6 +27,7 @@
 | Gantt diagram | [https://www.ganttproject.biz/](https://www.ganttproject.biz/) |
 | QuickLook viewer | NIFTI quick viewer: [FR[AI]ME](https://apps.apple.com/gb/app/fr-ai-me/id6751278949?mt=12) | Quick viewer for MRI data (only for Macos) |
 | Disk Space Analyzer | https://apps.apple.com/us/app/disk-space-analyzer-inspector | MacOS only |
+| Create QR codes | [https://pypi.org/project/qrcode/](https://pypi.org/project/qrcode/) | Python package to create QR codes for free that don't expire |
 
 ## Services
 
