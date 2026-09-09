@@ -181,12 +181,22 @@ If you wish to monitor the CPU/GPU/RAM/disk and other aspects of the server you 
 | **Hostname**    | `peterson.neuro.polymtl.ca`                        |
 | **Credentials** | Use your [GE](./README.html#ge) credentials.       |
 
+### grames003 (Poly-Grames) 
+
+| Spec            | Description                                        |
+| --------------- | -------------------------------------------------- |
+| **Purpose**     | EM simulation with CST                             |
+| **Model**       | PC, NVIDIA Tesla V100S-PCIE-32GB (1x). More details [here](https://www.grames.polymtl.ca/facilities/servers-information/#servers) |
+| **OS**          | Windows 10 (Connect with Microsoft Remote Desktop) |
+| **Hostname**    | `grames006.ge.polymtl.ca`                          |
+| **Credentials** | Use your [GE](./README.html#ge) credentials.       |
+
 ### grames006 (Poly-Grames) 
 
 | Spec            | Description                                        |
 | --------------- | -------------------------------------------------- |
 | **Purpose**     | EM simulation with CST                             |
-| **Model**       | PC, NVIDIA Tesla V100S-PCIE-32GB (1x)              |
+| **Model**       | PC, NVIDIA Tesla V100S-PCIE-32GB (1x). More details [here](https://www.grames.polymtl.ca/facilities/servers-information/#servers) |
 | **OS**          | Windows 10 (Connect with Microsoft Remote Desktop) |
 | **Hostname**    | `grames006.ge.polymtl.ca`                          |
 | **Credentials** | Use your [GE](./README.html#ge) credentials.       |
@@ -196,7 +206,7 @@ If you wish to monitor the CPU/GPU/RAM/disk and other aspects of the server you 
 | Spec            | Description                                        |
 | --------------- | -------------------------------------------------- |
 | **Purpose**     | EM simulation with CST                             |
-| **Model**       | PC, NVIDIA Tesla V100S-PCIE-32GB (1x)              |
+| **Model**       | PC, NVIDIA Tesla V100S-PCIE-32GB (1x). More details [here](https://www.grames.polymtl.ca/facilities/servers-information/#servers) |
 | **OS**          | Windows 10 (Connect with Microsoft Remote Desktop) |
 | **Hostname**    | `grames007.ge.polymtl.ca`                          |
 | **Credentials** | Use your [GE](./README.html#ge) credentials.       |
