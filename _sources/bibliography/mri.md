@@ -51,7 +51,7 @@
 ## Pulse Sequences
 
 * [🕹️ SimMRI – A web-based MR Image Simulator for easy accessible MRI teaching](https://virtmri.keks.li/)
-* [Siemens IDEA programming](https://drive.google.com/drive/folders/1KiKF1FKRLcwFhLe1m2PcLkFSYu6XY708)
+* [Siemens IDEA programming](https://drive.google.com/drive/folders/1KiKF1FKRLcwFhLe1m2PcLkFSYu6XY708) (link is private, reserved to NeuroPoly students working on IDEA sequence. If this is your case, please contact your PI to access these documents)
 * [Spinbench: Pulse sequence simulator](http://www.heartvista.com/spinbench/)
 * Open source pulse sequence programming (Matlab): [http://pulseq.github.io/](http://pulseq.github.io/)
 * [MR Pulse Sequences: What Every Radiologist Wants to Know but Is Afraid to Ask](https://pubs.rsna.org/doi/10.1148/rg.262055063)
