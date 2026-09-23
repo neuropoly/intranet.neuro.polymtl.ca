@@ -28,8 +28,9 @@ How to connect:
    If it's the first time you visit this URL, you will probably get a security warning about the [self-signed HTTPS certificate we're using](https://github.com/neuropoly/computers/issues/337#issuecomment-1976098453). You may have to add a security exception in your browser.
 
    Note that there's a language selector (English / français) at the bottom right of every page.
-4. Click "Sign In" at the top right of the page.
-5. The username and password should be the same as the ones you normally use to connect to lab computers (that is, your [GRAMES / GE account](../computing-resources/neuropoly/README.md#ge)).
+3. Click "Sign In" at the top right of the page.
+4. A username and temporary password will be provided to you as part of your onboarding. Legacy users may have usernames that match their [GE](https://intranet.neuro.polymtl.ca/computing-resources/neuropoly/README.html#ge) usernames, but the password used will be unique to `data.neuro.polymtl.ca`.
+5. You should be prompted to change your password at first login. If you are not, you can change your password [here](https://data.neuro.polymtl.ca/user/settings/account).
 6. If it's your first time using the web interface, you may want to start by [changing some of your settings](#initial-setup).
 
 ## Initial setup
