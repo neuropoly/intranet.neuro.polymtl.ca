@@ -29,8 +29,9 @@ Extensive list of BIC how-to information: [https://forum.bic.mni.mcgill.ca/t/how
 Short version:
 1. Login to BIC server (you need to ask for an account in the first place): [http://www.bic.mni.mcgill.ca/Services/HowToLogin](http://www.bic.mni.mcgill.ca/Services/HowToLogin)
 
-  > [!NOTE]  
-  > If the BIC server accepts SSH keys, that's simpler and more secure than any of this. Run ssh-copy-id USERNAME@login.bic.mni.mcgill.ca once, and after that you won't need a password or sshpass at all.
+   ```{note}
+   If the BIC server accepts SSH keys, that's simpler and more secure than any of this. Run ssh-copy-id USERNAME@login.bic.mni.mcgill.ca once, and after that you won't need a password or sshpass at all.
+   ```
 
 2. Type `find_mri <SESSION_NAME>`, where SESSION_NAME is the name of your scan session. Example: `find_mri acdc_spine_7t_049p`.
 3. Note down the FULL_PATH of the SESSION_NAME: `/data/transfer/dicom/sessionname_X_X_`. Example: `/data/dicom/acdc_spine_7t_049p_20220923_111852672`.
