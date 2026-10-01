@@ -3,33 +3,33 @@
 There are two systems for resource sharing on GPU clusters: GPU sharing and CPU/memory sharing.
 GPU sharing is managed through a calendar. CPU and memory are shared using resource quotas (and the calendar).
 
-### GPU booking
+## GPU and CPU booking
 
-Please allocate your GPUs on the [computer resource calendar](https://calendar.google.com/calendar?cid=NG1nNmJnZDlwdjU1dGhmOTQ4NnQybWlodDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
+Please allocate your GPUs (for romane, rosenberg, and tassan) and CPU time (for joplin) on the [computer resource calendar](https://calendar.google.com/calendar?cid=NG1nNmJnZDlwdjU1dGhmOTQ4NnQybWlodDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
 
 ```{warning}
 **IMPORTANT:** If you don't have writing permission on this calendar please contact your supervisor; all NeuroPoly accounts should have access by default.
 ```
 
-Use this format: u918374@rosenberg:gpu\[3\].
+Use this format: your-name@rosenberg:gpu\[3\].
 
 Note that the GPUs are numbered from 0, as you can see in `nvidia-smi`.
 
 To train, run your scripts like this:
 
 ```text
-u918374@rosenberg:~$ CUDA_VISIBLE_DEVICES="3" ./train.sh
+your-name@rosenberg:~$ CUDA_VISIBLE_DEVICES="3" ./train.sh
 ```
 
-You can book multiple GPUs just with commas: u918374@rosenberg:gpu\[2,3,5\]
+You can book multiple GPUs just with commas: your-name@rosenberg:gpu\[2,3,5\]
 
 and use them with
 
 ```text
-u918374@rosenberg:~$ CUDA_VISIBLE_DEVICES="2,3,5" ./train.sh
+your-name@rosenberg:~$ CUDA_VISIBLE_DEVICES="2,3,5" ./train.sh
 ```
 
-### Running memory- and CPU-intensive tasks
+## Running memory- and CPU-intensive tasks using `set_slot`
 
 ```{note}
 At the moment, this section only applies to romane, tassan, and joplin.
@@ -50,17 +50,37 @@ Most commands (git, scp, tmux, etc) should run just fine without modification.
 For processes that need to use the full resources of the system, we have dedicated "slots" with
 a share of the system's RAM and CPU.
 
-**To run a heavy process**:
-1. Book one or more GPU slots (See [GPU booking](#gpu-booking) above). For joplin, select a range of
+### Running inside a shell (recommended)
+
+1. Make sure you've booked one or more GPU or CPU slots (See [booking](#gpu-and-cpu-booking) above). For joplin, select a range of
   slots between 0 and 3, inclusive, representing ¼ of available CPUs each.
-2. Use the `set_slot` utility script to assign your process to the appropriate slice:
+2. Start your `tmux` or `screen` session:
 ```
-set_slot <slot_number> [command] [args...]
+$ tmux
+```
+3. Enter the slot(s):
+```
+$ set_slot <slot_number>
 ```
 
-- `<slot_number>` is 0, 1, 2, or 3, corresponding to the GPU you are using, e.g., `set_slot 0 ...` for GPU0.
-  - If you've reserved more than one slot, you can specify an inclusive range, e.g., `set_slot 0-1 ...`
-    for slots 0 and 1.
+```{note}
+`<slot_number>` is 0, 1, 2, or 3, corresponding to the GPU you are using, e.g., `set_slot 0 ...` for GPU0.
+If you've reserved more than one slot, you can specify an inclusive range, e.g., `set_slot 0-1 ...`
+for slots 0 and 1.
+```
+
+This will start a shell with the appropriate resources allocated.
+
+4. **(Important)** Run any environment setup steps, like `conda activate` or `source .venv/bin/activate`. When you enter a slot, your environment is reset, so environment changes from your session _before_ `set_slot` will not persist.
+
+### Running a single command inside a slot
+
+If you don't want or need an interactive shell, you can also run one-off commands inside a slot:
+
+```
+$ set_slot <slot_number> [command] [args...]
+```
+
 - `[command] [args...]` is the (optional) command as you would normally run it in the shell, e.g., `python model.py`.
 - If you don't specify a command, you'll be placed in a bash login shell. Running `set_slot 0` is the equivalent of running `set_slot 0 bash -l`.
 
@@ -70,7 +90,7 @@ set_slot 2 CUDA_VISIBLE_DEVICES=2 python3 myscript.py
 set_slot 0-3
 ```
 
-#### Special considerations
+### Special considerations
 
 - **Environment variables are not currently passed through** by `set_slot`. To run in a specific environment,
 for example a venv, use `set_slot` to start a shell (e.g. `set_slot 0 bash`) and then work in that shell. (_NB: the shell will not persist unless you run it in `tmux` or `screen`_).
@@ -168,7 +188,7 @@ This will add a blue `[set_slot]` tag to the beginning of your command prompt wh
 
 Right now resource limitations for slots are as follows:
 
-**romane:** 
+**romane:**
 - ~91GB of RAM for a single slot
 - 14 CPU cores for a single slot
 - Up to 4 slots available (corresponding with 4 GPUs)
