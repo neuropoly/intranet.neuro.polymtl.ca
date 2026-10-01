@@ -468,7 +468,10 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-platforms">Writing Platforms</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#google-docs">Google Docs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overleaf">Overleaf</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overleaf">Overleaf</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fast-compile-mode">Fast compile mode</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-manager">Reference manager</a><ul class="nav section-nav flex-column">
@@ -814,6 +817,14 @@ document.write(`
 <section id="overleaf">
 <h3>Overleaf<a class="headerlink" href="#overleaf" title="Link to this heading">#</a></h3>
 <p>Overleaf is a good platform for writing papers with Latex. Mila provides the <a class="reference external" href="https://www.overleaf.com/edu/mila#overview">Overleaf Pro license</a> for its students. If you’re Julien’s student, please contact him to get your affiliation at Mila. Then, send an email to <code class="docutils literal notranslate"><span class="pre">it-support&#64;mila.quebec</span></code> requesting an Overleaf Pro license. Having access to the Pro license enables the ‘tracking’ mode in Overleaf, which is essential when collaborating on a paper with multiple authors.</p>
+<section id="fast-compile-mode">
+<h4>Fast compile mode<a class="headerlink" href="#fast-compile-mode" title="Link to this heading">#</a></h4>
+<p>Papers with lots of high-res figures (microscopy, MRI montages, etc.) can get slow to compile on Overleaf, and sometimes even hit the compile timeout. While you’re working on the text, you can click the arrow next to <strong>Recompile</strong> and set the compile mode to <strong>Fast [draft]</strong>. This skips image processing: figures show up as empty boxes of the right size, but text, equations, references and cross-refs render as usual. If a project compiles in Fast mode but not in Normal mode, your images are the bottleneck: export vector figures as PDF (not EPS/SVG) and downsample large raster images to what’s actually needed for print.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Switch back to <strong>Normal</strong> mode before checking the final layout, page count, or downloading the PDF for co-authors/submission. If your figures suddenly “disappear”, check this setting first.</p>
+</div>
+</section>
 </section>
 </section>
 <section id="reference-manager">
@@ -1008,7 +1019,10 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-platforms">Writing Platforms</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#google-docs">Google Docs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overleaf">Overleaf</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#overleaf">Overleaf</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fast-compile-mode">Fast compile mode</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-manager">Reference manager</a><ul class="nav section-nav flex-column">
