@@ -63,11 +63,16 @@ $ tmux
 $ set_slot <slot_number>
 ```
 
-`<slot_number>` is 0, 1, 2, or 3, corresponding to the GPU you are using, e.g., `set_slot 0 ...` for GPU0.
+- `<slot_number>` is 0, 1, 2, or 3, corresponding to the GPU you are using, e.g., `set_slot 0 ...` for GPU0.
 If you've reserved more than one slot, you can specify an inclusive range, e.g., `set_slot 0-1 ...`
 for slots 0 and 1.
 
 4. **(Important)** Run any environment setup steps, like `conda activate` or `source .venv/bin/activate`. When you enter a slot, your environment is reset, so environment changes from your session _before_ `set_slot` will not persist.
+
+5. To check what's running inside of slots, you can run:
+```shell
+$ systemd-cgtop ml.slice
+```
 
 ### Method 2: Running a single command inside a slot
 

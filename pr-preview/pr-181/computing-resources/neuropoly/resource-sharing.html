@@ -540,12 +540,18 @@ slots between 0 and 3, inclusive, representing ¼ of available CPUs each.</p></l
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>set_slot<span class="w"> </span>&lt;slot_number&gt;
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">&lt;slot_number&gt;</span></code> is 0, 1, 2, or 3, corresponding to the GPU you are using, e.g., <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">...</span></code> for GPU0.
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;slot_number&gt;</span></code> is 0, 1, 2, or 3, corresponding to the GPU you are using, e.g., <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">...</span></code> for GPU0.
 If you’ve reserved more than one slot, you can specify an inclusive range, e.g., <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0-1</span> <span class="pre">...</span></code>
-for slots 0 and 1.</p>
+for slots 0 and 1.</p></li>
+</ul>
 <ol class="arabic simple" start="4">
 <li><p><strong>(Important)</strong> Run any environment setup steps, like <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span></code> or <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">.venv/bin/activate</span></code>. When you enter a slot, your environment is reset, so environment changes from your session <em>before</em> <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> will not persist.</p></li>
+<li><p>To check what’s running inside of slots, you can run:</p></li>
 </ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>systemd-cgtop<span class="w"> </span>ml.slice
+</pre></div>
+</div>
 </section>
 <section id="method-2-running-a-single-command-inside-a-slot">
 <h3>Method 2: Running a single command inside a slot<a class="headerlink" href="#method-2-running-a-single-command-inside-a-slot" title="Link to this heading">#</a></h3>
