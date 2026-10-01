@@ -50,38 +50,36 @@ Most commands (git, scp, tmux, etc) should run just fine without modification.
 For processes that need to use the full resources of the system, we have dedicated "slots" with
 a share of the system's RAM and CPU.
 
-### Running inside a shell (recommended)
+### Method 1: Running inside a shell (recommended)
 
 1. Make sure you've booked one or more GPU or CPU slots (See [booking](#gpu-and-cpu-booking) above). For joplin, select a range of
   slots between 0 and 3, inclusive, representing ¼ of available CPUs each.
 2. Start your `tmux` or `screen` session:
-```
+```shell
 $ tmux
 ```
-3. Enter the slot(s):
-```
+3. Enter the slot(s). This will start a shell with the appropriate resources allocated:
+```shell
 $ set_slot <slot_number>
 ```
 
-```{note}
 `<slot_number>` is 0, 1, 2, or 3, corresponding to the GPU you are using, e.g., `set_slot 0 ...` for GPU0.
 If you've reserved more than one slot, you can specify an inclusive range, e.g., `set_slot 0-1 ...`
 for slots 0 and 1.
-```
-
-This will start a shell with the appropriate resources allocated.
 
 4. **(Important)** Run any environment setup steps, like `conda activate` or `source .venv/bin/activate`. When you enter a slot, your environment is reset, so environment changes from your session _before_ `set_slot` will not persist.
 
-### Running a single command inside a slot
+### Method 2: Running a single command inside a slot
 
 If you don't want or need an interactive shell, you can also run one-off commands inside a slot:
 
-```
+```shell
 $ set_slot <slot_number> [command] [args...]
 ```
 
 - `[command] [args...]` is the (optional) command as you would normally run it in the shell, e.g., `python model.py`.
+- Note that environment variables will not be passed through to the command. If you need to modify the command environment,
+  use Method 1 above.
 - If you don't specify a command, you'll be placed in a bash login shell. Running `set_slot 0` is the equivalent of running `set_slot 0 bash -l`.
 
 For example:
