@@ -93,6 +93,14 @@ Google Doc is great for collaborating on a paper. We recommend you install (and 
 
 Overleaf is a good platform for writing papers with Latex. Mila provides the [Overleaf Pro license](https://www.overleaf.com/edu/mila#overview) for its students. If you're Julien's student, please contact him to get your affiliation at Mila. Then, send an email to `it-support@mila.quebec` requesting an Overleaf Pro license. Having access to the Pro license enables the 'tracking' mode in Overleaf, which is essential when collaborating on a paper with multiple authors.
 
+#### Fast compile mode
+
+Papers with lots of high-res figures (microscopy, MRI montages, etc.) can get slow to compile on Overleaf, and sometimes even hit the compile timeout. While you're working on the text, you can click the arrow next to **Recompile** and set the compile mode to **Fast [draft]**. This skips image processing: figures show up as empty boxes of the right size, but text, equations, references and cross-refs render as usual. If a project compiles in Fast mode but not in Normal mode, your images are the bottleneck: export vector figures as PDF (not EPS/SVG) and downsample large raster images to what's actually needed for print.
+
+```{warning}
+Switch back to **Normal** mode before checking the final layout, page count, or downloading the PDF for co-authors/submission. If your figures suddenly "disappear", check this setting first.
+```
+
 ## Reference manager
 
 ### Paperpile
