@@ -50,6 +50,12 @@ Most commands (git, scp, tmux, etc) should run just fine without modification.
 For processes that need to use the full resources of the system, we have dedicated "slots" with
 a share of the system's RAM and CPU.
 
+```{warning}
+
+On systems with `set_slot`, heavy jobs which run without following the steps below will have extremely limited
+resources, and thus will run very slowly.
+```
+
 ### Method 1: Running inside a shell (recommended)
 
 1. Make sure you've booked one or more GPU or CPU slots (See [booking](#gpu-and-cpu-booking) above). For joplin, select a range of
