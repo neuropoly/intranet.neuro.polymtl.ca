@@ -27,23 +27,36 @@ The gateway uses a self-signed certificate, so you need to pin it as trusted (wi
 
 You can use the official FortiClient VPN, but it asks for your credentials at every login. The open-source [openfortivpn](https://github.com/adrienverge/openfortivpn) is a convenient alternative.
 
-### Linux
+The connection is the same on Linux and macOS: the command-line config below works on both, only the installation and GUI options differ.
 
-Install `openfortivpn` (e.g. `sudo apt install openfortivpn`) and, optionally, the [OpenFortiGUI](https://github.com/theinvisible/openfortigui) front-end, which can store your credentials. In OpenFortiGUI, create a new VPN with the settings in the table above (VPN-Device: `Fortigate`, check "Credentials" and fill your username/password, leave "Trust all Certs" unchecked and paste the SHA256 in "Trusted-Cert").
+::::{tab-set}
+:::{tab-item} Linux
 
-### macOS
+**Install:**
+```bash
+sudo apt install openfortivpn
+```
 
-Install from Homebrew:
+**GUI (optional):** [OpenFortiGUI](https://github.com/theinvisible/openfortigui) can store your credentials so you don't have to type them at each login. Create a new VPN with the settings in the table above:
+- VPN-Device: `Fortigate`
+- Check "Credentials" and fill in your username/password
+- Leave "Trust all Certs" unchecked and paste the SHA256 in "Trusted-Cert"
 
+:::
+
+:::{tab-item} macOS
+
+**Install:**
 ```bash
 brew install openfortivpn
 ```
 
-For a friendlier GUI, you can try [openfortivpn-connect](https://github.com/walcew/openfortivpn-connect).
+**GUI (optional):** you can try [openfortivpn-connect](https://github.com/walcew/openfortivpn-connect), using the settings in the table above.
 
-### Command line (Linux and macOS)
+:::
+::::
 
-Create a config file, e.g. `~/.config/openfortivpn/criugm.conf`:
+**Command line (Linux and macOS):** create a config file, e.g. `~/.config/openfortivpn/criugm.conf`:
 
 ```
 host = 206.167.239.2
