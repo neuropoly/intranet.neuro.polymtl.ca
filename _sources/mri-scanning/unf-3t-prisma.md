@@ -4,7 +4,7 @@ description: 3T Siemens Prisma at the Unité de Neuroimagerie Fonctionnelle (UNF
 
 # UNF (3T Prisma)
 
-More details on the UNF website: [https://unf-montreal.ca/en/documentation/facility/mri/](https://unf-montreal.ca/en/documentation/facility/mri/)
+More details on the UNF website: [https://unfmontreal.github.io/en/mri/](https://unfmontreal.github.io/en/mri/)
 
 ## Booking the scanner
 
@@ -12,7 +12,7 @@ More details on the UNF website: [https://unf-montreal.ca/en/documentation/facil
 2. Second, you must have an account to reserve the scanner (Send another email to the same address to get your account ready).
 3. The last step includes a disinfection training which will be given to you once you get to UNF for your first scan.
 
-Details about the booking system [here](https://unf-montreal.ca/en/documentation/facility/reservation/).
+Details about the booking system [here](https://unfmontreal.github.io/en/reservations/).
 
 ```{note}
 Under the `session name` you will need to enter a study suffix that is listed in this [JSON file](https://github.com/UNFmontreal/bids_configs/blob/master/studies.json). Look for the fields that start with `neuropoly`.
@@ -29,17 +29,15 @@ Have your participant fill the MRI eligibility form, which is accessible once th
 
 ## Access to UNF
 
-Google map link: [https://goo.gl/maps/Kqj3JimAtPWZowc1A](https://goo.gl/maps/Kqj3JimAtPWZowc1A)
+The UNF is located at the Institut universitaire de gériatrie de Montréal (IUGM), 4565 chemin Queen-Mary, Montréal ([Google Maps](https://www.google.com/maps/search/?api=1&query=4565+chemin+Queen-Mary+Montreal)). Detailed access maps are on the [UNF website](https://unfmontreal.github.io/en/access/).
 
 ![](../.gitbook/assets/path\_to\_unf.png)
 
-​[GitHub NeuroPoly: Siemens Recon](https://github.com/neuropoly/siemens-recon)
-
 ## Download the data
 
-See info here: [https://unf-montreal.ca/documentation/your\_data/download\_data/](https://unf-montreal.ca/documentation/your\_data/download\_data/)
+See info here: [https://unfmontreal.github.io/en/download-data/](https://unfmontreal.github.io/en/download-data/)
 
-Data for NeuroPoly group are located under: `elm:/unf/dicoms/by_groups/neuropoly/`
+Data for NeuroPoly group are located under: `elm.criugm.qc.ca:/unf/dicoms/by_groups/neuropoly/`
 
 In case you need to [reset your password](https://pwd.unf-montreal.ca/).
 
