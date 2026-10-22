@@ -458,18 +458,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-booking">GPU booking</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-memory-and-cpu-intensive-tasks">Running memory- and CPU-intensive tasks</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-and-cpu-booking">GPU and CPU booking</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-memory-and-cpu-intensive-tasks-using-set-slot">Running memory- and CPU-intensive tasks using <code class="docutils literal notranslate"><span class="pre">set_slot</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-running-inside-a-shell-recommended">Method 1: Running inside a shell (recommended)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-running-a-single-command-inside-a-slot">Method 2: Running a single command inside a slot</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#special-considerations">Special considerations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-slot-faq">set_slot FAQ</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot">What happens if I forget to do this, and accidentally run my training without set_slot?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0">What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-terminate-set-slot-once-i-am-done-with-it">How do I terminate <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> once I am done with it?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-know-which-slots-are-currently-in-use">How do I know which slots are currently in use?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-tell-if-my-shell-is-running-in-a-slot">How can I tell if my shell is running in a slot?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-resources-are-available-to-me-for-trainings">What resources are available to me for trainings?</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-slot-faq">set_slot FAQ</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot">What happens if I forget to do this, and accidentally run my training without set_slot?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0">What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-terminate-set-slot-once-i-am-done-with-it">How do I terminate <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> once I am done with it?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-know-which-slots-are-currently-in-use">How do I know which slots are currently in use?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-tell-if-my-shell-is-running-in-a-slot">How can I tell if my shell is running in a slot?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-resources-are-available-to-me-for-trainings">What resources are available to me for trainings?</a></li>
 </ul>
 </li>
 </ul>
@@ -487,27 +489,27 @@ document.write(`
 <h1>Resource sharing and booking<a class="headerlink" href="#resource-sharing-and-booking" title="Link to this heading">#</a></h1>
 <p>There are two systems for resource sharing on GPU clusters: GPU sharing and CPU/memory sharing.
 GPU sharing is managed through a calendar. CPU and memory are shared using resource quotas (and the calendar).</p>
-<section id="gpu-booking">
-<h2>GPU booking<a class="headerlink" href="#gpu-booking" title="Link to this heading">#</a></h2>
-<p>Please allocate your GPUs on the <a class="reference external" href="https://calendar.google.com/calendar?cid=NG1nNmJnZDlwdjU1dGhmOTQ4NnQybWlodDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">computer resource calendar</a>.</p>
+<section id="gpu-and-cpu-booking">
+<h2>GPU and CPU booking<a class="headerlink" href="#gpu-and-cpu-booking" title="Link to this heading">#</a></h2>
+<p>Please allocate your GPUs (for romane, rosenberg, and tassan) and CPU time (for joplin) on the <a class="reference external" href="https://calendar.google.com/calendar?cid=NG1nNmJnZDlwdjU1dGhmOTQ4NnQybWlodDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">computer resource calendar</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>IMPORTANT:</strong> If you don’t have writing permission on this calendar please contact your supervisor; all NeuroPoly accounts should have access by default.</p>
 </div>
-<p>Use this format: u918374&#64;rosenberg:gpu[3].</p>
+<p>Use this format: your-name&#64;rosenberg:gpu[3].</p>
 <p>Note that the GPUs are numbered from 0, as you can see in <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code>.</p>
 <p>To train, run your scripts like this:</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ CUDA_VISIBLE_DEVICES="3" ./train.sh
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>your-name@rosenberg:~$ CUDA_VISIBLE_DEVICES="3" ./train.sh
 </pre></div>
 </div>
-<p>You can book multiple GPUs just with commas: u918374&#64;rosenberg:gpu[2,3,5]</p>
+<p>You can book multiple GPUs just with commas: your-name&#64;rosenberg:gpu[2,3,5]</p>
 <p>and use them with</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>u918374@rosenberg:~$ CUDA_VISIBLE_DEVICES="2,3,5" ./train.sh
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>your-name@rosenberg:~$ CUDA_VISIBLE_DEVICES="2,3,5" ./train.sh
 </pre></div>
 </div>
 </section>
-<section id="running-memory-and-cpu-intensive-tasks">
-<h2>Running memory- and CPU-intensive tasks<a class="headerlink" href="#running-memory-and-cpu-intensive-tasks" title="Link to this heading">#</a></h2>
+<section id="running-memory-and-cpu-intensive-tasks-using-set-slot">
+<h2>Running memory- and CPU-intensive tasks using <code class="docutils literal notranslate"><span class="pre">set_slot</span></code><a class="headerlink" href="#running-memory-and-cpu-intensive-tasks-using-set-slot" title="Link to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>At the moment, this section only applies to romane, tassan, and joplin.</p>
@@ -522,23 +524,50 @@ run fine under these limitations.</p>
 <p>Most commands (git, scp, tmux, etc) should run just fine without modification.</p>
 <p>For processes that need to use the full resources of the system, we have dedicated “slots” with
 a share of the system’s RAM and CPU.</p>
-<p><strong>To run a heavy process</strong>:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>On systems with <code class="docutils literal notranslate"><span class="pre">set_slot</span></code>, heavy jobs which run without following the steps below will have extremely limited
+resources, and thus will run very slowly.</p>
+</div>
+<section id="method-1-running-inside-a-shell-recommended">
+<h3>Method 1: Running inside a shell (recommended)<a class="headerlink" href="#method-1-running-inside-a-shell-recommended" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p>Book one or more GPU slots (See <a class="reference internal" href="#gpu-booking">GPU booking</a> above). For joplin, select a range of
+<li><p>Make sure you’ve booked one or more GPU or CPU slots (See <a class="reference internal" href="#gpu-and-cpu-booking">booking</a> above). For joplin, select a range of
 slots between 0 and 3, inclusive, representing ¼ of available CPUs each.</p></li>
-<li><p>Use the <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> utility script to assign your process to the appropriate slice:</p></li>
+<li><p>Start your <code class="docutils literal notranslate"><span class="pre">tmux</span></code> or <code class="docutils literal notranslate"><span class="pre">screen</span></code> session:</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">set_slot</span> <span class="o">&lt;</span><span class="n">slot_number</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">command</span><span class="p">]</span> <span class="p">[</span><span class="n">args</span><span class="o">...</span><span class="p">]</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>tmux
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Enter the slot(s). This will start a shell with the appropriate resources allocated:</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>set_slot<span class="w"> </span>&lt;slot_number&gt;
 </pre></div>
 </div>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;slot_number&gt;</span></code> is 0, 1, 2, or 3, corresponding to the GPU you are using, e.g., <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">...</span></code> for GPU0.</p>
-<ul>
-<li><p>If you’ve reserved more than one slot, you can specify an inclusive range, e.g., <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0-1</span> <span class="pre">...</span></code>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;slot_number&gt;</span></code> is 0, 1, 2, or 3, corresponding to the GPU you are using, e.g., <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">...</span></code> for GPU0.
+If you’ve reserved more than one slot, you can specify an inclusive range, e.g., <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0-1</span> <span class="pre">...</span></code>
 for slots 0 and 1.</p></li>
 </ul>
-</li>
+<ol class="arabic simple" start="4">
+<li><p><strong>(Important)</strong> Run any environment setup steps, like <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span></code> or <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">.venv/bin/activate</span></code>. When you enter a slot, your environment is reset, so environment changes from your session <em>before</em> <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> will not persist.</p></li>
+<li><p>To check what’s running inside of slots, you can run:</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>systemd-cgtop<span class="w"> </span>ml.slice
+</pre></div>
+</div>
+</section>
+<section id="method-2-running-a-single-command-inside-a-slot">
+<h3>Method 2: Running a single command inside a slot<a class="headerlink" href="#method-2-running-a-single-command-inside-a-slot" title="Link to this heading">#</a></h3>
+<p>If you don’t want or need an interactive shell, you can also run one-off commands inside a slot:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>set_slot<span class="w"> </span>&lt;slot_number&gt;<span class="w"> </span><span class="o">[</span>command<span class="o">]</span><span class="w"> </span><span class="o">[</span>args...<span class="o">]</span>
+</pre></div>
+</div>
+<ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[command]</span> <span class="pre">[args...]</span></code> is the (optional) command as you would normally run it in the shell, e.g., <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">model.py</span></code>.</p></li>
+<li><p>Note that environment variables will not be passed through to the command. If you need to modify the command environment,
+use Method 1 above.</p></li>
 <li><p>If you don’t specify a command, you’ll be placed in a bash login shell. Running <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span></code> is the equivalent of running <code class="docutils literal notranslate"><span class="pre">set_slot</span> <span class="pre">0</span> <span class="pre">bash</span> <span class="pre">-l</span></code>.</p></li>
 </ul>
 <p>For example:</p>
@@ -546,6 +575,7 @@ for slots 0 and 1.</p></li>
 <span class="n">set_slot</span> <span class="mi">0</span><span class="o">-</span><span class="mi">3</span>
 </pre></div>
 </div>
+</section>
 <section id="special-considerations">
 <h3>Special considerations<a class="headerlink" href="#special-considerations" title="Link to this heading">#</a></h3>
 <ul class="simple">
@@ -578,11 +608,10 @@ Instead, we recommend running VSCode locally and copying files onto the server u
 If you want help setting this up, please reach out to a sysadmin.</p></li>
 </ul>
 </section>
-</section>
 <section id="set-slot-faq">
-<h2>set_slot FAQ<a class="headerlink" href="#set-slot-faq" title="Link to this heading">#</a></h2>
+<h3>set_slot FAQ<a class="headerlink" href="#set-slot-faq" title="Link to this heading">#</a></h3>
 <section id="what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot">
-<h3>What happens if I forget to do this, and accidentally run my training without set_slot?<a class="headerlink" href="#what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot" title="Link to this heading">#</a></h3>
+<h4>What happens if I forget to do this, and accidentally run my training without set_slot?<a class="headerlink" href="#what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Your training won’t have enough resources to run properly</p></li>
 <li><p>Your individual user session may be borked</p></li>
@@ -590,7 +619,7 @@ If you want help setting this up, please reach out to a sysadmin.</p></li>
 </ul>
 </section>
 <section id="what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0">
-<h3>What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)<a class="headerlink" href="#what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0" title="Link to this heading">#</a></h3>
+<h4>What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)<a class="headerlink" href="#what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>This won’t affect which GPU will be used.</p></li>
 <li><p>BUT, you might end up competing for resources with someone else.</p></li>
@@ -598,11 +627,11 @@ If you want help setting this up, please reach out to a sysadmin.</p></li>
 </ul>
 </section>
 <section id="how-do-i-terminate-set-slot-once-i-am-done-with-it">
-<h3>How do I terminate <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> once I am done with it?<a class="headerlink" href="#how-do-i-terminate-set-slot-once-i-am-done-with-it" title="Link to this heading">#</a></h3>
+<h4>How do I terminate <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> once I am done with it?<a class="headerlink" href="#how-do-i-terminate-set-slot-once-i-am-done-with-it" title="Link to this heading">#</a></h4>
 <p>You can either kill the <code class="docutils literal notranslate"><span class="pre">tmux</span></code> or <code class="docutils literal notranslate"><span class="pre">screen</span></code> session in which you launched your <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> shell, or you can exit the shell directly with <code class="docutils literal notranslate"><span class="pre">exit</span></code>.</p>
 </section>
 <section id="how-do-i-know-which-slots-are-currently-in-use">
-<h3>How do I know which slots are currently in use?<a class="headerlink" href="#how-do-i-know-which-slots-are-currently-in-use" title="Link to this heading">#</a></h3>
+<h4>How do I know which slots are currently in use?<a class="headerlink" href="#how-do-i-know-which-slots-are-currently-in-use" title="Link to this heading">#</a></h4>
 <p>Run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">systemd</span><span class="o">-</span><span class="n">cgtop</span> <span class="n">ml</span><span class="o">.</span><span class="n">slice</span>
 </pre></div>
@@ -630,7 +659,7 @@ If you want help setting this up, please reach out to a sysadmin.</p></li>
 </div>
 </section>
 <section id="how-can-i-tell-if-my-shell-is-running-in-a-slot">
-<h3>How can I tell if my shell is running in a slot?<a class="headerlink" href="#how-can-i-tell-if-my-shell-is-running-in-a-slot" title="Link to this heading">#</a></h3>
+<h4>How can I tell if my shell is running in a slot?<a class="headerlink" href="#how-can-i-tell-if-my-shell-is-running-in-a-slot" title="Link to this heading">#</a></h4>
 <p>If you typically use <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> to run a bash login shell (the default behaviour), then you can add the following to your <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Detect if in slot and modify prompt
 IN_SLOT=false
@@ -646,7 +675,7 @@ fi
 <p>This will add a blue <code class="docutils literal notranslate"><span class="pre">[set_slot]</span></code> tag to the beginning of your command prompt when you are in a <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> shell. You can also <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">$IN_SLOT</span></code>.</p>
 </section>
 <section id="what-resources-are-available-to-me-for-trainings">
-<h3>What resources are available to me for trainings?<a class="headerlink" href="#what-resources-are-available-to-me-for-trainings" title="Link to this heading">#</a></h3>
+<h4>What resources are available to me for trainings?<a class="headerlink" href="#what-resources-are-available-to-me-for-trainings" title="Link to this heading">#</a></h4>
 <p>Right now resource limitations for slots are as follows:</p>
 <p><strong>romane:</strong></p>
 <ul class="simple">
@@ -666,6 +695,7 @@ fi
 <li><p>30 CPU cores for a single slot</p></li>
 <li><p>Up to 4 slots available (No GPUs)</p></li>
 </ul>
+</section>
 </section>
 </section>
 </section>
@@ -715,18 +745,20 @@ fi
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-booking">GPU booking</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-memory-and-cpu-intensive-tasks">Running memory- and CPU-intensive tasks</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-and-cpu-booking">GPU and CPU booking</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-memory-and-cpu-intensive-tasks-using-set-slot">Running memory- and CPU-intensive tasks using <code class="docutils literal notranslate"><span class="pre">set_slot</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-running-inside-a-shell-recommended">Method 1: Running inside a shell (recommended)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-running-a-single-command-inside-a-slot">Method 2: Running a single command inside a slot</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#special-considerations">Special considerations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-slot-faq">set_slot FAQ</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot">What happens if I forget to do this, and accidentally run my training without set_slot?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0">What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-terminate-set-slot-once-i-am-done-with-it">How do I terminate <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> once I am done with it?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-know-which-slots-are-currently-in-use">How do I know which slots are currently in use?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-tell-if-my-shell-is-running-in-a-slot">How can I tell if my shell is running in a slot?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-resources-are-available-to-me-for-trainings">What resources are available to me for trainings?</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-slot-faq">set_slot FAQ</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot">What happens if I forget to do this, and accidentally run my training without set_slot?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0">What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-terminate-set-slot-once-i-am-done-with-it">How do I terminate <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> once I am done with it?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-do-i-know-which-slots-are-currently-in-use">How do I know which slots are currently in use?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-can-i-tell-if-my-shell-is-running-in-a-slot">How can I tell if my shell is running in a slot?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-resources-are-available-to-me-for-trainings">What resources are available to me for trainings?</a></li>
 </ul>
 </li>
 </ul>
