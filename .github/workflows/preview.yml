@@ -1,3 +1,4 @@
+---
 name: Deploy PR previews
 
 on:
@@ -12,7 +13,7 @@ concurrency: preview-${{ github.ref }}
 
 jobs:
   deploy-preview:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -20,7 +21,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.12'
 
       - name: Install dependencies
         run: |
@@ -29,7 +30,7 @@ jobs:
       - name: Build
         run: |
           make html
-          
+
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
