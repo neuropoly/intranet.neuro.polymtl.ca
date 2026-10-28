@@ -213,7 +213,7 @@ For projects involving SEM, please add:
 
 > the Center for Characterization and Microscopy of Materials (CM)² for electron microscopy scanning
 
-If using the GPU on Bireli, add:
+If using the GPU on `bireli` or `tassan`, add:
 
 > NVIDIA Corporation for the donation of GPUs.
 

@@ -16,14 +16,6 @@ A [**GE**](https://www.ge.polymtl.ca/compte-informatique/) network account is re
 
 You will receive a GE account during your [onboarding](https://github.com/neuropoly/onboarding/issues).
 
-```{note}
-Legacy users may still be using a GRAMES rather than GE account. Eventually [all users](https://github.com/neuropoly/computers/issues/1003) will be moved to GE accounts.
-```
-
-```{note}
-Admins looking for more detailed information on troubleshooting access issues related to GE accounts can refer [here](https://github.com/neuropoly/computers/wiki/User-accounts#network-accounts-gramesge).
-```
-
 ### Password
 
 ```{important}
@@ -138,11 +130,12 @@ If you wish to monitor the CPU/GPU/RAM/disk and other aspects of the server you 
 
 | Spec | Description |
 | --------------- | -------------- |
+| **Purpose** | Programming pulse sequences within the Siemens IDEA environment |
 | **Model** | PC |
 | **OS** | Windows 11 |
 | **Hostname**    | `mingus.neuro.polymtl.ca` |
 | **How to connect** | Windows/Apple: Microsoft Remote Desktop. Linux: [remmina](https://remmina.org/) |
-| **Credentials** |  Use your [GE](./README.html#ge) credentials. |
+| **Credentials** |  Use your [GE](./README.html#ge) credentials. Example: username: `ge\p101334` |
 
 ### idea3t
 
@@ -839,3 +832,5 @@ Please try to give admins a working day's notice for postponement requests.
 ## Admin
 
 Technical details about station management and documentation is found on [this repository](https://github.com/neuropoly/computers).
+
+Admins looking for more detailed information on troubleshooting access issues related to GE accounts can refer [here](https://github.com/neuropoly/computers/wiki/User-accounts#network-accounts-gramesge).
