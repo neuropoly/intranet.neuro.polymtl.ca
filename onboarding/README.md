@@ -3,6 +3,7 @@
 ```{toctree}
 :maxdepth: 1
 getting-started
+password-management
 campus-access
 infrastructure
 dropbox-google-drive
