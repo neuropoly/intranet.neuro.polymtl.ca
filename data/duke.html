@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=4418a689" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../_static/theme.css?v=9a9c6050" />
   
   <!-- So that users can add custom icons -->
@@ -45,7 +45,7 @@
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../_static/design-tabs.js?v=fcb327ea"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'data/duke';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../_static/logo.png"/>
@@ -590,8 +590,8 @@ drwxr-xr-x 2 u108545 domain users  4096 Jun  8 16:44 temp
 <p>When working on campus or <a class="reference internal" href="../computing-resources/neuropoly/README.html#vpn"><span class="std std-ref">over the VPN</span></a>, you can connect your computer to <code class="docutils literal notranslate"><span class="pre">duke</span></code>:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-0">
-macOS</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-0-content" class="sd-tab-label" for="sd-tab-item-0">
+macOS</label><div class="sd-tab-content docutils" id="sd-tab-item-0-content">
 <ol class="arabic">
 <li><p>Open Finder</p></li>
 <li><p>CMD+K</p></li>
@@ -618,8 +618,8 @@ macOS</label><div class="sd-tab-content docutils">
 </ol>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-1">
-Linux</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-1-content" class="sd-tab-label" for="sd-tab-item-1">
+Linux</label><div class="sd-tab-content docutils" id="sd-tab-item-1-content">
 <ol class="arabic simple">
 <li><p>Open File Browser</p></li>
 <li><p>Menu &gt; Go &gt; Open Network Location</p></li>
@@ -627,8 +627,8 @@ Linux</label><div class="sd-tab-content docutils">
 </ol>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-2">
-Windows 10</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-2-content" class="sd-tab-label" for="sd-tab-item-2">
+Windows 10</label><div class="sd-tab-content docutils" id="sd-tab-item-2-content">
 <ol class="arabic simple">
 <li><p>Open Windows explorer</p></li>
 <li><p>Right click This PC</p></li>
@@ -654,8 +654,8 @@ Windows 10</label><div class="sd-tab-content docutils">
 <p>You can also connect your computer from the CLI, or with a script, which might be more efficient in the long run:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-3">
-Mac OSX</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-3-content" class="sd-tab-label" for="sd-tab-item-3">
+Mac OSX</label><div class="sd-tab-content docutils" id="sd-tab-item-3-content">
 <p>Create folder for the mount point on a location (your home directory) where you have read and write access:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>&lt;FOLDER_NAME&gt;<span class="w"> </span><span class="c1"># (e.g. &lt;FOLDER_NAME&gt;=sct_testing)</span>
 <span class="c1"># To mount:</span>
@@ -666,8 +666,8 @@ sudo<span class="w"> </span>umount<span class="w"> </span>&lt;FOLDER_NAME&gt;/
 </div>
 </div>
 <input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-4">
-Linux</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-4-content" class="sd-tab-label" for="sd-tab-item-4">
+Linux</label><div class="sd-tab-content docutils" id="sd-tab-item-4-content">
 <p>To mount:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>mount<span class="w"> </span>-t<span class="w"> </span>cifs<span class="w"> </span>//duke.neuro.polymtl.ca/&lt;FOLDER_NAME&gt;<span class="w"> </span>/mnt/duke/&lt;FOLDER_NAME&gt;<span class="w"> </span>-o<span class="w"> </span><span class="nv">username</span><span class="o">=</span>&lt;GE_USERNAME&gt;,noexec
 </pre></div>

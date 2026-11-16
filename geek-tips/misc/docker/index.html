@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=4418a689" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../../_static/theme.css?v=9a9c6050" />
   
   <!-- So that users can add custom icons -->
@@ -45,7 +45,7 @@
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
-    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../../_static/design-tabs.js?v=fcb327ea"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/misc/docker/README';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../../../_static/logo.png"/>
@@ -550,7 +550,7 @@
 <p><a class="reference external" href="https://hub.docker.com/_/ubuntu">List of Ubuntu images</a></p>
 </section>
 <section id="install-run-linux-distribution">
-<h3>Install &amp; Run Linux distribution <a id="install_run_linux_distribution"></a><a class="headerlink" href="#install-run-linux-distribution" title="Link to this heading">#</a></h3>
+<span id="install--run-linux-distribution-"></span><h3>Install &amp; Run Linux distribution <a id="install_run_linux_distribution"></a><a class="headerlink" href="#install-run-linux-distribution" title="Link to this heading">#</a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>docker pull debian  # will install debian
 docker pull ubuntu:16.04
 docker pull centos
@@ -558,13 +558,13 @@ docker pull centos
 </div>
 </section>
 <section id="list-local-docker-images">
-<h3>List local Docker images <a id="list_local_docker_images"></a><a class="headerlink" href="#list-local-docker-images" title="Link to this heading">#</a></h3>
+<span id="list-local-docker-images-"></span><h3>List local Docker images <a id="list_local_docker_images"></a><a class="headerlink" href="#list-local-docker-images" title="Link to this heading">#</a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>docker images
 </pre></div>
 </div>
 </section>
 <section id="run-docker-image">
-<h3>Run Docker image <a id="run_docker_image"></a><a class="headerlink" href="#run-docker-image" title="Link to this heading">#</a></h3>
+<span id="run-docker-image-"></span><h3>Run Docker image <a id="run_docker_image"></a><a class="headerlink" href="#run-docker-image" title="Link to this heading">#</a></h3>
 <p>To run in interactive mode, use flag <code class="docutils literal notranslate"><span class="pre">-i</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>IMAGE<span class="w"> </span>/bin/bash
 docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>ubuntu:trusty<span class="w"> </span>/bin/bash
@@ -573,7 +573,7 @@ docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </s
 </div>
 </section>
 <section id="remove-docker-image-or-containers-force-deletion">
-<h3>Remove Docker image or containers (force deletion) <a id="remove_docker_image_or_containers_force_deletion"></a><a class="headerlink" href="#remove-docker-image-or-containers-force-deletion" title="Link to this heading">#</a></h3>
+<span id="remove-docker-image-or-containers-force-deletion-"></span><h3>Remove Docker image or containers (force deletion) <a id="remove_docker_image_or_containers_force_deletion"></a><a class="headerlink" href="#remove-docker-image-or-containers-force-deletion" title="Link to this heading">#</a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>docker rmi -f IMAGE_ID
 docker rmi $(docker images -a -q)  # WARNING!!! This will remove all images
 docker rm $(docker ps -a -f status=exited -q)  # WARNING!!! This will remove all containers
@@ -581,7 +581,7 @@ docker rm $(docker ps -a -f status=exited -q)  # WARNING!!! This will remove all
 </div>
 </section>
 <section id="save-a-docker-image">
-<h3>Save a Docker image <a id="save_a_docker_image"></a><a class="headerlink" href="#save-a-docker-image" title="Link to this heading">#</a></h3>
+<span id="save-a-docker-image-"></span><h3>Save a Docker image <a id="save_a_docker_image"></a><a class="headerlink" href="#save-a-docker-image" title="Link to this heading">#</a></h3>
 <p>The example below shows how to install useful items on a standard ubuntu image, and then save the image locally.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span># launch docker
 docker pull ubuntu:16.04
@@ -598,7 +598,7 @@ docker commit &lt;container_id&gt; your_name/ubuntu:16.04
 </div>
 </section>
 <section id="build-docker-container-from-dockerfile">
-<h3>Build Docker container from Dockerfile <a id="build_docker_container_from_dockerfile"></a><a class="headerlink" href="#build-docker-container-from-dockerfile" title="Link to this heading">#</a></h3>
+<span id="build-docker-container-from-dockerfile-"></span><h3>Build Docker container from Dockerfile <a id="build_docker_container_from_dockerfile"></a><a class="headerlink" href="#build-docker-container-from-dockerfile" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Create a Dockerfile by running `touch Dockerfile`</p></li>
 <li><p>Inside the Dockerfile write the following (items below are just given as an example):</p></li>
@@ -627,7 +627,7 @@ ENV PATH "/sct/bin:${PATH}"
 </ol>
 </section>
 <section id="run-with-display-redirection">
-<h3>Run with DISPLAY redirection <a id="run_with_display_redirection"></a><a class="headerlink" href="#run-with-display-redirection" title="Link to this heading">#</a></h3>
+<span id="run-with-display-redirection-"></span><h3>Run with DISPLAY redirection <a id="run_with_display_redirection"></a><a class="headerlink" href="#run-with-display-redirection" title="Link to this heading">#</a></h3>
 <p>In order to run scripts with GUI you need to allow X11 redirection:</p>
 <ol class="arabic simple">
 <li><p>Install XQuartz X11 server and run it.</p></li>
@@ -643,7 +643,7 @@ ENV PATH "/sct/bin:${PATH}"
 </ol>
 </section>
 <section id="copy-file-into-container">
-<h3>Copy file into container <a id="copy_file_into_container"></a><a class="headerlink" href="#copy-file-into-container" title="Link to this heading">#</a></h3>
+<span id="copy-file-into-container-"></span><h3>Copy file into container <a id="copy_file_into_container"></a><a class="headerlink" href="#copy-file-into-container" title="Link to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># list container</span>
 docker<span class="w"> </span>ps
 <span class="c1"># copy file</span>

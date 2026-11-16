@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=4418a689" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../../_static/theme.css?v=9a9c6050" />
   
   <!-- So that users can add custom icons -->
@@ -45,7 +45,7 @@
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
-    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../../_static/design-tabs.js?v=fcb327ea"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/programming-languages/c++/using-xcode';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../../../_static/logo.png"/>
@@ -539,7 +539,7 @@
 <p>This page provides a guide to properly create a project using ITK and/or VTK libraries on XCode. Furthermore, it gives a way to export your project as an executable which are usable as a command-line. The paths to VTK and ITK present in this page follow the guide about the installation of VTK and ITK and depend on the version of the libraries.</p>
 <p>The creation of the project follows these steps:</p>
 <section id="create-a-new-project">
-<h3>1. Create a New Project<a class="headerlink" href="#create-a-new-project" title="Link to this heading">#</a></h3>
+<span id="1-create-a-new-project"></span><h3>1. Create a New Project<a class="headerlink" href="#create-a-new-project" title="Link to this heading">#</a></h3>
 <p>File → New Project</p>
 <ul class="simple">
 <li><p>Choose a template for your project → OS X → Application → Command Line Tool</p></li>
@@ -548,7 +548,7 @@
 </ul>
 </section>
 <section id="edit-settings">
-<h3>2. Edit Settings<a class="headerlink" href="#edit-settings" title="Link to this heading">#</a></h3>
+<span id="2-edit-settings"></span><h3>2. Edit Settings<a class="headerlink" href="#edit-settings" title="Link to this heading">#</a></h3>
 <p>Once your project is created, some settings have to be changed to compile your project with ITK and VTK and to assure that the IDE recognize the libraries during editing:</p>
 <section id="build-settings">
 <h4>Build Settings<a class="headerlink" href="#build-settings" title="Link to this heading">#</a></h4>
@@ -584,12 +584,12 @@ Typical ITK libraries are (to read, make basic treatments and write an image) :<
 </section>
 </section>
 <section id="add-files">
-<h3>3. Add Files<a class="headerlink" href="#add-files" title="Link to this heading">#</a></h3>
+<span id="3-add-files"></span><h3>3. Add Files<a class="headerlink" href="#add-files" title="Link to this heading">#</a></h3>
 <p>You can now add your file .h and .cpp to the project, or create new files/classes directly with a right-click on the project in the Project Navigator.<br />
 If you add files by dragging and dropping them to the project navigator, assure yourself that they are in the Compile Sources in Build Phases.</p>
 </section>
 <section id="set-dyld-library-path">
-<h3>4. Set DYLD_LIBRARY_PATH<a class="headerlink" href="#set-dyld-library-path" title="Link to this heading">#</a></h3>
+<span id="4-set-dyld_library_path"></span><h3>4. Set DYLD_LIBRARY_PATH<a class="headerlink" href="#set-dyld-library-path" title="Link to this heading">#</a></h3>
 <p>To tell to Xcode where to find libraries at the execution of your program, you have to set manually the Environment Variable <code class="docutils literal notranslate"><span class="pre">DYLD_LIBRARY_PATH</span></code> to the libraries. Go to:</p>
 <p>Product (in the menu) -&gt; Scheme -&gt; Edit Scheme -&gt; Arguments -&gt; Environment Variables -&gt; add the variable:</p>
 <p>    Name = <code class="docutils literal notranslate"><span class="pre">DYLD_LIBRARY_PATH</span></code><br />

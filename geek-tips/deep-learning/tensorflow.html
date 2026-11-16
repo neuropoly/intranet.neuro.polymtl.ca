@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=4418a689" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=9a9c6050" />
   
   <!-- So that users can add custom icons -->
@@ -45,7 +45,7 @@
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../_static/design-tabs.js?v=fcb327ea"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/deep-learning/tensorflow';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../../_static/logo.png"/>
@@ -534,7 +534,7 @@
 </pre></div>
 </div>
 <section id="install-tensorflow">
-<h2>Install tensorflow <a id="install_tensorflow"></a><a class="headerlink" href="#install-tensorflow" title="Link to this heading">#</a></h2>
+<span id="install-tensorflow-"></span><h2>Install tensorflow <a id="install_tensorflow"></a><a class="headerlink" href="#install-tensorflow" title="Link to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is for install tensorflow with GTX1080 drvier.</span>
 <span class="c1"># refered link</span>
 <span class="c1"># https://www.bazel.io/versions/master/docs/install.html#compiling-from-source</span>
@@ -594,7 +594,7 @@ python<span class="w"> </span>test_tensorflow.py
 </div>
 </section>
 <section id="fix-cuda-driver-version">
-<h2>Fix CUDA driver version <a id="fix_cuda_driver_version"></a><a class="headerlink" href="#fix-cuda-driver-version" title="Link to this heading">#</a></h2>
+<span id="fix-cuda-driver-version-"></span><h2>Fix CUDA driver version <a id="fix_cuda_driver_version"></a><a class="headerlink" href="#fix-cuda-driver-version" title="Link to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:graphics-drivers/ppa
 sudo<span class="w"> </span>apt-get<span class="w"> </span>update
 sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>nvidia-367
@@ -602,14 +602,14 @@ sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w
 </div>
 </section>
 <section id="fix-module-tensorflow-import-error">
-<h2>Fix module tensorflow import error <a id="fix_module_tensorflow_import_error"></a><a class="headerlink" href="#fix-module-tensorflow-import-error" title="Link to this heading">#</a></h2>
+<span id="fix-module-tensorflow-import-error-"></span><h2>Fix module tensorflow import error <a id="fix_module_tensorflow_import_error"></a><a class="headerlink" href="#fix-module-tensorflow-import-error" title="Link to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>pip<span class="w"> </span>uninstall<span class="w"> </span>six
 sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>six<span class="w"> </span>--upgrade<span class="w"> </span>--target<span class="o">=</span><span class="s2">"/usr/lib/python2.7/dist-packages"</span>
 </pre></div>
 </div>
 </section>
 <section id="reference">
-<h2>Reference <a id="reference"></a><a class="headerlink" href="#reference" title="Link to this heading">#</a></h2>
+<span id="reference-"></span><h2>Reference <a id="reference"></a><a class="headerlink" href="#reference" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://github.com/uher/InstallGpuEnableTensorflow">Install with GPU support</a></p>
 </section>
 </section>

@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=4418a689" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=9a9c6050" />
   
   <!-- So that users can add custom icons -->
@@ -45,7 +45,7 @@
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../_static/design-tabs.js?v=fcb327ea"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/image-processing-software/README';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../../_static/logo.png"/>
@@ -567,7 +567,7 @@
 <h2>Intensity Correction<a class="headerlink" href="#intensity-correction" title="Link to this heading">#</a></h2>
 <p>It happens that an image has not a homogeneous intensity field. In MRI, the intensity is proportional to the antena proximity.</p>
 <section id="n3-non-parametric-non-uniform-intensity-normalization">
-<h3>N3 - Non-parametric Non-uniform Intensity Normalization<a class="headerlink" href="#n3-non-parametric-non-uniform-intensity-normalization" title="Link to this heading">#</a></h3>
+<span id="n3---non-parametric-non-uniform-intensity-normalization"></span><h3>N3 - Non-parametric Non-uniform Intensity Normalization<a class="headerlink" href="#n3-non-parametric-non-uniform-intensity-normalization" title="Link to this heading">#</a></h3>
 <p>Information can be found on <a class="reference external" href="http://en.wikibooks.org/wiki/MINC/Tools/N3">http://en.wikibooks.org/wiki/MINC/Tools/N3</a></p>
 <p>This filter can be applied using the following command (MNI tools): (Problem –&gt; lost the image intensity dynamic)</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mri_nu_correct.mni<span class="w"> </span>--i<span class="w"> </span>&lt;input_image&gt;<span class="w"> </span>--o<span class="w"> </span>&lt;output_image&gt;

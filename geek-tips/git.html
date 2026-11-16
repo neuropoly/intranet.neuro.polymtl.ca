@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=4418a689" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../_static/theme.css?v=9a9c6050" />
   
   <!-- So that users can add custom icons -->
@@ -45,7 +45,7 @@
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../_static/design-tabs.js?v=fcb327ea"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/git';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../_static/logo.png"/>
@@ -598,10 +598,10 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="git-github">
-<span id="git"></span><h1>Git &amp; Github<a class="headerlink" href="#git-github" title="Link to this heading">#</a></h1>
+  <section id="git">
+<span id="git-github"></span><span id="git--github"></span><h1>Git &amp; Github<a class="headerlink" href="#git" title="Link to this heading">#</a></h1>
 <section id="tutorials-courses">
-<h2>Tutorials &amp; Courses<a class="headerlink" href="#tutorials-courses" title="Link to this heading">#</a></h2>
+<span id="tutorials--courses"></span><h2>Tutorials &amp; Courses<a class="headerlink" href="#tutorials-courses" title="Link to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Everyone working with <code class="docutils literal notranslate"><span class="pre">git</span></code> at NeuroPoly Lab: Please take 2+ hours of your time and learn how to use <code class="docutils literal notranslate"><span class="pre">git</span></code> before using it.</strong></p>
@@ -641,24 +641,24 @@
 <p>Full instructions to install <code class="docutils literal notranslate"><span class="pre">git</span></code> <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">here</a>. We have a quick-start below:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-0">
-Linux/Docker</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-0-content" class="sd-tab-label" for="sd-tab-item-0">
+Linux/Docker</label><div class="sd-tab-content docutils" id="sd-tab-item-0-content">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
 apt-get<span class="w"> </span>install<span class="w"> </span>git-all
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-1">
-macOS</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-1-content" class="sd-tab-label" for="sd-tab-item-1">
+macOS</label><div class="sd-tab-content docutils" id="sd-tab-item-1-content">
 <p>Probably the easiest way to install on macOS is to install via <a class="reference external" href="https://developer.apple.com/downloads/">XCode Command Line Tools</a>. To check if <code class="docutils literal notranslate"><span class="pre">git</span></code> is installed:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>--version
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-2">
-Windows</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-2-content" class="sd-tab-label" for="sd-tab-item-2">
+Windows</label><div class="sd-tab-content docutils" id="sd-tab-item-2-content">
 <p>Recommended install: Go to <a class="reference external" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a> and the download will start automatically.</p>
 </div>
 </div>
@@ -1124,7 +1124,7 @@ git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span
 </div>
 </section>
 <section id="discard-local-changes-if-pull-doesn-t-work">
-<h3>Discard local changes (if <code class="docutils literal notranslate"><span class="pre">pull</span></code> doesn’t work)<a class="headerlink" href="#discard-local-changes-if-pull-doesn-t-work" title="Link to this heading">#</a></h3>
+<span id="discard-local-changes-if-pull-doesnt-work"></span><h3>Discard local changes (if <code class="docutils literal notranslate"><span class="pre">pull</span></code> doesn’t work)<a class="headerlink" href="#discard-local-changes-if-pull-doesn-t-work" title="Link to this heading">#</a></h3>
 <p>For a specific file use:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>&lt;path/to/file/to/revert&gt;
 </pre></div>
@@ -1198,7 +1198,7 @@ git<span class="w"> </span>push<span class="w"> </span>-f
 </div>
 </section>
 <section id="compare-commits-branches-tags">
-<h3>Compare commits/branches/tags<a class="headerlink" href="#compare-commits-branches-tags" title="Link to this heading">#</a></h3>
+<span id="compare-commitsbranchestags"></span><h3>Compare commits/branches/tags<a class="headerlink" href="#compare-commits-branches-tags" title="Link to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>https://github.com/ORGANIZATION/REPOSITORY/compare/TAG1...TAG2
 </pre></div>
 </div>

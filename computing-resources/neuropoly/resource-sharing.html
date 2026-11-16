@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=4418a689" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=9a9c6050" />
   
   <!-- So that users can add custom icons -->
@@ -45,7 +45,7 @@
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../_static/design-tabs.js?v=fcb327ea"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'computing-resources/neuropoly/resource-sharing';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../../_static/logo.png"/>
@@ -556,7 +556,7 @@ GPU sharing is managed through a calendar. CPU and memory are shared using resou
 </div>
 </section>
 <section id="running-memory-and-cpu-intensive-tasks-using-set-slot">
-<h2>Running memory- and CPU-intensive tasks using <code class="docutils literal notranslate"><span class="pre">set_slot</span></code><a class="headerlink" href="#running-memory-and-cpu-intensive-tasks-using-set-slot" title="Link to this heading">#</a></h2>
+<span id="running-memory--and-cpu-intensive-tasks-using-set_slot"></span><h2>Running memory- and CPU-intensive tasks using <code class="docutils literal notranslate"><span class="pre">set_slot</span></code><a class="headerlink" href="#running-memory-and-cpu-intensive-tasks-using-set-slot" title="Link to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>At the moment, this section only applies to romane, tassan, and joplin.</p>
@@ -656,9 +656,9 @@ If you want help setting this up, please reach out to a sysadmin.</p></li>
 </ul>
 </section>
 <section id="set-slot-faq">
-<h3>set_slot FAQ<a class="headerlink" href="#set-slot-faq" title="Link to this heading">#</a></h3>
+<span id="set_slot-faq"></span><h3>set_slot FAQ<a class="headerlink" href="#set-slot-faq" title="Link to this heading">#</a></h3>
 <section id="what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot">
-<h4>What happens if I forget to do this, and accidentally run my training without set_slot?<a class="headerlink" href="#what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot" title="Link to this heading">#</a></h4>
+<span id="what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set_slot"></span><h4>What happens if I forget to do this, and accidentally run my training without set_slot?<a class="headerlink" href="#what-happens-if-i-forget-to-do-this-and-accidentally-run-my-training-without-set-slot" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Your training won’t have enough resources to run properly</p></li>
 <li><p>Your individual user session may be borked</p></li>
@@ -666,7 +666,7 @@ If you want help setting this up, please reach out to a sysadmin.</p></li>
 </ul>
 </section>
 <section id="what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0">
-<h4>What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)<a class="headerlink" href="#what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0" title="Link to this heading">#</a></h4>
+<span id="what-happens-if-i-send-my-process-to-the-wrong-pool-eg-i-did-set_slot-1-when-i-meant-set_slot-0"></span><h4>What happens if I send my process to the wrong pool? (e.g. I did set_slot 1, when I meant set_slot 0)<a class="headerlink" href="#what-happens-if-i-send-my-process-to-the-wrong-pool-e-g-i-did-set-slot-1-when-i-meant-set-slot-0" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>This won’t affect which GPU will be used.</p></li>
 <li><p>BUT, you might end up competing for resources with someone else.</p></li>
@@ -674,7 +674,7 @@ If you want help setting this up, please reach out to a sysadmin.</p></li>
 </ul>
 </section>
 <section id="how-do-i-terminate-set-slot-once-i-am-done-with-it">
-<h4>How do I terminate <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> once I am done with it?<a class="headerlink" href="#how-do-i-terminate-set-slot-once-i-am-done-with-it" title="Link to this heading">#</a></h4>
+<span id="how-do-i-terminate-set_slot-once-i-am-done-with-it"></span><h4>How do I terminate <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> once I am done with it?<a class="headerlink" href="#how-do-i-terminate-set-slot-once-i-am-done-with-it" title="Link to this heading">#</a></h4>
 <p>You can either kill the <code class="docutils literal notranslate"><span class="pre">tmux</span></code> or <code class="docutils literal notranslate"><span class="pre">screen</span></code> session in which you launched your <code class="docutils literal notranslate"><span class="pre">set_slot</span></code> shell, or you can exit the shell directly with <code class="docutils literal notranslate"><span class="pre">exit</span></code>.</p>
 </section>
 <section id="how-do-i-know-which-slots-are-currently-in-use">

@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=4418a689" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=9a9c6050" />
   
   <!-- So that users can add custom icons -->
@@ -45,7 +45,7 @@
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../_static/design-tabs.js?v=fcb327ea"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/os-guides/linux';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../../_static/logo.png"/>
@@ -537,8 +537,8 @@ sudo<span class="w"> </span>mkdir<span class="w"> </span>/mnt/data_shared
 <p>3. For the following operating systems:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-0">
-Ubuntu 14.04 LTS</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-0-content" class="sd-tab-label" for="sd-tab-item-0">
+Ubuntu 14.04 LTS</label><div class="sd-tab-content docutils" id="sd-tab-item-0-content">
 <p>Add the following lines at the bottom of the file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#data_processing @SERVER</span>
 //IP_SERVER/data_processing<span class="w">        </span>/mnt/data_processing<span class="w">    </span>cifs<span class="w">    </span><span class="nv">username</span><span class="o">=</span>XXX,password<span class="o">=</span>XXX<span class="w">    </span><span class="m">0</span><span class="w">       </span><span class="m">0</span>
@@ -549,8 +549,8 @@ Ubuntu 14.04 LTS</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-1">
-Debian Wheezy 8</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-1-content" class="sd-tab-label" for="sd-tab-item-1">
+Debian Wheezy 8</label><div class="sd-tab-content docutils" id="sd-tab-item-1-content">
 <p>Add the following lines at the bottom of the file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#data_processing @SERVER</span>
 //IP_SERVER/data_processing<span class="w">    </span>/mnt/data_processing<span class="w">    </span>cifs<span class="w">  </span>nounix,sec<span class="o">=</span>ntlmssp,user<span class="o">=</span>XXX,password<span class="o">=</span>XXX<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span>
@@ -564,9 +564,9 @@ Debian Wheezy 8</label><div class="sd-tab-content docutils">
 <p>4. Remount drives and type: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">mount</span> <span class="pre">-a</span></code></p>
 </section>
 <section id="centos-fedora-red-hat">
-<h2>CentOS/Fedora/Red Hat<a class="headerlink" href="#centos-fedora-red-hat" title="Link to this heading">#</a></h2>
+<span id="centosfedorared-hat"></span><h2>CentOS/Fedora/Red Hat<a class="headerlink" href="#centos-fedora-red-hat" title="Link to this heading">#</a></h2>
 <section id="ants-c3d">
-<h3>Ants &amp; c3d<a class="headerlink" href="#ants-c3d" title="Link to this heading">#</a></h3>
+<span id="ants--c3d"></span><h3>Ants &amp; c3d<a class="headerlink" href="#ants-c3d" title="Link to this heading">#</a></h3>
 <p>Binaries for debian work well, just make sure the paths are set in the bashrc as follow:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PATH=${PATH}:${SCT_DIR}/install/debian/ants
 

@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=4418a689" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=9a9c6050" />
   
   <!-- So that users can add custom icons -->
@@ -45,7 +45,7 @@
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../_static/design-tabs.js?v=fcb327ea"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'computing-resources/neuropoly/README';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../../_static/logo.png"/>
@@ -570,8 +570,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="computers-neuropoly">
-<span id="computing-resources-neuropoly"></span><h1><span>🖥</span> Computers &#64;NeuroPoly<a class="headerlink" href="#computers-neuropoly" title="Link to this heading">#</a></h1>
+  <section id="computing-resources-neuropoly">
+<span id="computers-neuropoly"></span><span id="-computers-neuropoly"></span><h1><span>🖥</span> Computers &#64;NeuroPoly<a class="headerlink" href="#computing-resources-neuropoly" title="Link to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <section id="ge">
@@ -1089,8 +1089,8 @@
 <p><code class="docutils literal notranslate"><span class="pre">Windows</span></code> users should typically follow the official Polytechnique instructions. Advanced users concerned about the monitoring capabilities of the <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">AnyConnect</span></code> client might consider adapting the instructions for a VM-based workaround documented under <code class="docutils literal notranslate"><span class="pre">Polytechnique</span> <span class="pre">Staff</span></code> to their needs.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-0">
-MacOS</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-0-content" class="sd-tab-label" for="sd-tab-item-0">
+MacOS</label><div class="sd-tab-content docutils" id="sd-tab-item-0-content">
 <p><strong>Install OpenConnect:</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1159,8 +1159,8 @@ Open your Keychain program and click ‘+’ to add a new item:</p>
 </div>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-1">
-Linux</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-1-content" class="sd-tab-label" for="sd-tab-item-1">
+Linux</label><div class="sd-tab-content docutils" id="sd-tab-item-1-content">
 <p><strong>Install OpenConnect:</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">openconnect</span>
 </pre></div>
@@ -1258,8 +1258,8 @@ sudo<span class="w"> </span>openconnect<span class="w"> </span>-u<span class="w"
 </ol>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-2">
-Windows</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-2-content" class="sd-tab-label" for="sd-tab-item-2">
+Windows</label><div class="sd-tab-content docutils" id="sd-tab-item-2-content">
 <p>Please follow the official steps from PolyMTL (<a class="reference external" href="https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/rentree/documentLibrary/Aide-m%C3%A9moire%20tutoriels%20A2020/Aide-Memoire_VPN.pdf?a=true&amp;guest=true">French</a> or <a class="reference external" href="https://share.polymtl.ca/alfresco/service/api/path/content;cm:content/workspace/SpacesStore/Company%20Home/Sites/rentree/documentLibrary/Aide-m%C3%A9moire%20tutoriels%20A2020/Checklist_VPN.pdf?a=true&amp;guest=true">English</a>).</p>
 <p>In case the above links ever break, the steps are:</p>
 <ol class="arabic simple">
@@ -1291,8 +1291,8 @@ Windows</label><div class="sd-tab-content docutils">
 <p><em>Instructions for each of these options are as follows:</em></p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-3">
-Openconnect with cookie extraction</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-3-content" class="sd-tab-label" for="sd-tab-item-3">
+Openconnect with cookie extraction</label><div class="sd-tab-content docutils" id="sd-tab-item-3-content">
 <p>This workaround allows you to complete the <code class="docutils literal notranslate"><span class="pre">Okta</span></code>-based authentication flow while using the <code class="docutils literal notranslate"><span class="pre">openconnect</span></code> client.</p>
 <p>It should be effective for <code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">macOS</span></code> users.</p>
 <ol class="arabic simple">
@@ -1313,8 +1313,8 @@ Openconnect with cookie extraction</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-4">
-Cisco AnyConnect in a VM</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-4-content" class="sd-tab-label" for="sd-tab-item-4">
+Cisco AnyConnect in a VM</label><div class="sd-tab-content docutils" id="sd-tab-item-4-content">
 <p>This workaround allows you to isolate the <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">AnyConnect</span></code> client in a virtual machine. Additionally it allows you to determine which traffic you send through the VPN.</p>
 <p>It should be effective for <code class="docutils literal notranslate"><span class="pre">Linux</span></code>, <code class="docutils literal notranslate"><span class="pre">macOS</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows</span></code> users.</p>
 <p>It is recommended for advanced users.</p>
@@ -1396,8 +1396,8 @@ Host<span class="w"> </span>data.neuro.polymtl.ca
 <p>Then in your browser go to: <code class="docutils literal notranslate"><span class="pre">http://localhost:3000</span></code></p>
 </div>
 <input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-5">
-Official instructions</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-5-content" class="sd-tab-label" for="sd-tab-item-5">
+Official instructions</label><div class="sd-tab-content docutils" id="sd-tab-item-5-content">
 <p>The official Polytechnique instructions for configuring the <code class="docutils literal notranslate"><span class="pre">Cisco</span> <span class="pre">AnyConnect</span></code> client <a class="reference external" href="https://www.polymtl.ca/si/acces-securise-rvp-ou-vpn">can be found here</a>.</p>
 </div>
 </div>
@@ -1473,15 +1473,15 @@ Official instructions</label><div class="sd-tab-content docutils">
 <p>Install sshfs, if not yet installed:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-6" name="sd-tab-set-2" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-6">
-Linux</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-6-content" class="sd-tab-label" for="sd-tab-item-6">
+Linux</label><div class="sd-tab-content docutils" id="sd-tab-item-6-content">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">sshfs</span>
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-7" name="sd-tab-set-2" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-7">
-mac (Monterey and after)</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-7-content" class="sd-tab-label" for="sd-tab-item-7">
+mac (Monterey and after)</label><div class="sd-tab-content docutils" id="sd-tab-item-7-content">
 <p>Follow <a class="reference external" href="https://www.petergirnus.com/blog/how-to-use-sshfs-on-macos">this procedure</a>.</p>
 </div>
 </div>

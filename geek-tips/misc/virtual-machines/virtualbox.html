@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=4418a689" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../../_static/theme.css?v=9a9c6050" />
   
   <!-- So that users can add custom icons -->
@@ -45,7 +45,7 @@
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
-    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../../_static/design-tabs.js?v=fcb327ea"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/misc/virtual-machines/virtualbox';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../../../_static/logo.png"/>
@@ -531,7 +531,7 @@
   <section id="virtualbox">
 <h1>VirtualBox<a class="headerlink" href="#virtualbox" title="Link to this heading">#</a></h1>
 <section id="import-a-ova-file">
-<h2>Import a .ova file <a href="import_a_ova_file" id="import_a_ova_file"></a><a class="headerlink" href="#import-a-ova-file" title="Link to this heading">#</a></h2>
+<span id="import-a-ova-file-"></span><h2>Import a .ova file <a href="import_a_ova_file" id="import_a_ova_file"></a><a class="headerlink" href="#import-a-ova-file" title="Link to this heading">#</a></h2>
 <p>If you have a Virtual Machine (VM) that has a .ova extension here’s what to do to use it with Virtualbox</p>
 <ul class="simple">
 <li><p>Install virtualbox <a class="reference external" href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a></p></li>
@@ -542,14 +542,14 @@
 </ul>
 </section>
 <section id="shared-folder">
-<h2>Shared folder <a href="shared_folder" id="shared_folder"></a><a class="headerlink" href="#shared-folder" title="Link to this heading">#</a></h2>
+<span id="shared-folder-"></span><h2>Shared folder <a href="shared_folder" id="shared_folder"></a><a class="headerlink" href="#shared-folder" title="Link to this heading">#</a></h2>
 <section id="using-guest-additions-recommended">
-<h3>Using Guest Additions (recommended) <a href="using_guest_additions_recommended" id="using_guest_additions_recommended"></a><a class="headerlink" href="#using-guest-additions-recommended" title="Link to this heading">#</a></h3>
+<span id="using-guest-additions-recommended-"></span><h3>Using Guest Additions (recommended) <a href="using_guest_additions_recommended" id="using_guest_additions_recommended"></a><a class="headerlink" href="#using-guest-additions-recommended" title="Link to this heading">#</a></h3>
 <p><a class="reference external" href="https://www.virtualbox.org/manual/ch04.html#idp91444064">https://www.virtualbox.org/manual/ch04.html#idp91444064</a></p>
 <p>On Linux: once you ran all the instructions here, a CD-ROM will be mounted on the guest. Then, go to /mnt/ and run the file ./VBoxLinuxAdditions.run in a terminal.</p>
 </section>
 <section id="manual-method">
-<h3>Manual method <a href="manual_method" id="manual_method"></a><a class="headerlink" href="#manual-method" title="Link to this heading">#</a></h3>
+<span id="manual-method-"></span><h3>Manual method <a href="manual_method" id="manual_method"></a><a class="headerlink" href="#manual-method" title="Link to this heading">#</a></h3>
 <p><a class="reference external" href="https://www.virtualbox.org/manual/ch04.html#idp91444064">https://www.virtualbox.org/manual/ch04.html#idp91444064</a> If you want to transfer files between your computer (host) and your Virtual Machine (guest) you’ll need a shared folder.</p>
 <ul class="simple">
 <li><p>Create a folder on your computer that will be your shared folder e.g. /home/user/VM_shared</p></li>
@@ -583,13 +583,13 @@
 </section>
 </section>
 <section id="create-a-virtual-machine-vm-with-debian">
-<h2>Create a Virtual Machine (VM) with Debian <a href="create_a_virtual_machine_vm_with_debian" id="create_a_virtual_machine_vm_with_debian"></a><a class="headerlink" href="#create-a-virtual-machine-vm-with-debian" title="Link to this heading">#</a></h2>
+<span id="create-a-virtual-machine-vm-with-debian-"></span><h2>Create a Virtual Machine (VM) with Debian <a href="create_a_virtual_machine_vm_with_debian" id="create_a_virtual_machine_vm_with_debian"></a><a class="headerlink" href="#create-a-virtual-machine-vm-with-debian" title="Link to this heading">#</a></h2>
 <p>To create a Virtual Machine with Debian, you can follow this excellent tutorial: <a class="reference external" href="http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/">http://www.brianlinkletter.com/installing-debian-linux-in-a-virtualbox-virtual-machine/</a>.</p>
 <p><strong>RAM</strong></p>
 <p>Don’t give to your VM more than the half of your system RAM. You need to keep memory for your own system.</p>
 </section>
 <section id="reduce-the-size-of-the-vm">
-<h2>Reduce the size of the VM <a href="reduce_the_size_of_the_vm" id="reduce_the_size_of_the_vm"></a><a class="headerlink" href="#reduce-the-size-of-the-vm" title="Link to this heading">#</a></h2>
+<span id="reduce-the-size-of-the-vm-"></span><h2>Reduce the size of the VM <a href="reduce_the_size_of_the_vm" id="reduce_the_size_of_the_vm"></a><a class="headerlink" href="#reduce-the-size-of-the-vm" title="Link to this heading">#</a></h2>
 <p>Run defrag in the guest (Windows only)</p>
 <p>Nullify free space:</p>
 <p><strong>With a Linux Guest run this:</strong></p>
@@ -625,9 +625,9 @@
 </ul>
 </section>
 <section id="install-guest-additions">
-<h2>Install guest additions <a href="install_guest_additions" id="install_guest_additions"></a><a class="headerlink" href="#install-guest-additions" title="Link to this heading">#</a></h2>
+<span id="install-guest-additions-"></span><h2>Install guest additions <a href="install_guest_additions" id="install_guest_additions"></a><a class="headerlink" href="#install-guest-additions" title="Link to this heading">#</a></h2>
 <section id="ubuntu-14-04">
-<h3>Ubuntu 14.04 <a href="ubuntu_1404" id="ubuntu_1404"></a><a class="headerlink" href="#ubuntu-14-04" title="Link to this heading">#</a></h3>
+<span id="ubuntu-1404-"></span><h3>Ubuntu 14.04 <a href="ubuntu_1404" id="ubuntu_1404"></a><a class="headerlink" href="#ubuntu-14-04" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
 <span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">virtualbox</span><span class="o">-</span><span class="n">guest</span><span class="o">-</span><span class="n">additions</span><span class="o">-</span><span class="n">iso</span>
 </pre></div>

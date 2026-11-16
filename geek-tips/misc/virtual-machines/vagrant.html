@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=4418a689" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../../_static/theme.css?v=9a9c6050" />
   
   <!-- So that users can add custom icons -->
@@ -45,7 +45,7 @@
     <script src="../../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
-    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../../_static/design-tabs.js?v=fcb327ea"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/misc/virtual-machines/vagrant';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../../../_static/logo.png"/>
@@ -531,14 +531,14 @@
 <p><strong>Vagrant</strong> is a wrapper for <strong>VirtualBox</strong>. It allows you to interact with your virtual box using a <code class="docutils literal notranslate"><span class="pre">Vagrantfile</span></code> and a set of commands, similar to Docker.</p>
 <p>Tutorial: <a class="reference external" href="https://www.youtube.com/watch?v=vBreXjkizgo">https://www.youtube.com/watch?v=vBreXjkizgo</a>​</p>
 <section id="installing">
-<h2>Installing <a href="installing" id="installing"></a><a class="headerlink" href="#installing" title="Link to this heading">#</a></h2>
+<span id="installing-"></span><h2>Installing <a href="installing" id="installing"></a><a class="headerlink" href="#installing" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>To use <strong>Vagrant</strong>, you will first need to install <strong>VirtualBox</strong>: <a class="reference external" href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a>​</p></li>
 <li><p>Install Vagrant from here: <a class="reference external" href="https://learn.hashicorp.com/tutorials/vagrant/getting-started-index?in=vagrant/getting-started">https://learn.hashicorp.com/tutorials/vagrant/getting-started-index?in=vagrant/getting-started</a>​</p></li>
 </ol>
 </section>
 <section id="getting-started-basic-commands">
-<h2>Getting Started &amp; Basic Commands <a href="getting-started-and-basic-commands" id="getting-started-and-basic-commands"></a><a class="headerlink" href="#getting-started-basic-commands" title="Link to this heading">#</a></h2>
+<span id="getting-started--basic-commands-"></span><h2>Getting Started &amp; Basic Commands <a href="getting-started-and-basic-commands" id="getting-started-and-basic-commands"></a><a class="headerlink" href="#getting-started-basic-commands" title="Link to this heading">#</a></h2>
 <p>To create a box:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant<span class="w"> </span>init<span class="w"> </span>&lt;BOX_NAME&gt;
 </pre></div>
@@ -569,7 +569,7 @@
 </div>
 </section>
 <section id="ssh-into-box">
-<h2>SSH into Box <a href="ssh-into-box" id="ssh-into-box"></a><a class="headerlink" href="#ssh-into-box" title="Link to this heading">#</a></h2>
+<span id="ssh-into-box-"></span><h2>SSH into Box <a href="ssh-into-box" id="ssh-into-box"></a><a class="headerlink" href="#ssh-into-box" title="Link to this heading">#</a></h2>
 <p>You can SSH into your box:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant<span class="w"> </span>ssh
 </pre></div>
@@ -581,9 +581,9 @@ sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w
 </div>
 </section>
 <section id="vagrantfile">
-<h2>Vagrantfile <a href="vagrantfile" id="vagrantfile"></a><a class="headerlink" href="#vagrantfile" title="Link to this heading">#</a></h2>
+<span id="vagrantfile-"></span><h2>Vagrantfile <a href="vagrantfile" id="vagrantfile"></a><a class="headerlink" href="#vagrantfile" title="Link to this heading">#</a></h2>
 <section id="memory-and-cpu-settings">
-<h3>Memory and CPU Settings <a href="memory-and-cpu-settings" id="memory-and-cpu-settings"></a><a class="headerlink" href="#memory-and-cpu-settings" title="Link to this heading">#</a></h3>
+<span id="memory-and-cpu-settings-"></span><h3>Memory and CPU Settings <a href="memory-and-cpu-settings" id="memory-and-cpu-settings"></a><a class="headerlink" href="#memory-and-cpu-settings" title="Link to this heading">#</a></h3>
 <p>To configure memory and CPU used by your virtual box:</p>
 <div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provider</span><span class="w"> </span><span class="s2">"virtualbox"</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="o">|</span><span class="n">vb</span><span class="o">|</span>
 <span class="w">    </span><span class="n">vb</span><span class="o">.</span><span class="n">memory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2048</span>
@@ -593,7 +593,7 @@ sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w
 </div>
 </section>
 <section id="folder-settings">
-<h3>Folder Settings <a href="folder-settings" id="folder-settings"></a><a class="headerlink" href="#folder-settings" title="Link to this heading">#</a></h3>
+<span id="folder-settings-"></span><h3>Folder Settings <a href="folder-settings" id="folder-settings"></a><a class="headerlink" href="#folder-settings" title="Link to this heading">#</a></h3>
 <p>You will probably also want to use data from your local machine. To do this:</p>
 <div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">synced_folder</span><span class="w"> </span><span class="s2">"path/to/local/folder"</span><span class="p">,</span><span class="w"> </span><span class="s2">"path/to/vagrant/folder"</span>
 </pre></div>
@@ -601,7 +601,7 @@ sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w
 <p>The <code class="docutils literal notranslate"><span class="pre">path/to/local/folder</span></code> can be absolute, or relative to the location of the Vagrantfile. The <code class="docutils literal notranslate"><span class="pre">path/to/vagrant/folder</span></code> is where you want the data to be added in your box.</p>
 </section>
 <section id="startup-provision-settings">
-<h3>Startup/Provision Settings <a href="startup-provision-settings" id="startup-provision-settings"></a><a class="headerlink" href="#startup-provision-settings" title="Link to this heading">#</a></h3>
+<span id="startupprovision-settings-"></span><h3>Startup/Provision Settings <a href="startup-provision-settings" id="startup-provision-settings"></a><a class="headerlink" href="#startup-provision-settings" title="Link to this heading">#</a></h3>
 <p>When you start your box, you can install packages/run commands:</p>
 <div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provision</span><span class="w"> </span><span class="s2">"shell"</span><span class="p">,</span><span class="w"> </span><span class="ss">inline</span><span class="p">:</span><span class="w"> </span><span class="o">&lt;&lt;-</span><span class="dl">SHELL</span><span class="w">    </span>
 <span class="sh">    apt-get update</span>
@@ -615,7 +615,7 @@ sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w
 </div>
 </section>
 <section id="running-macos">
-<h3>Running MacOS <a href="running-macos" id="running-macos"></a><a class="headerlink" href="#running-macos" title="Link to this heading">#</a></h3>
+<span id="running-macos-"></span><h3>Running MacOS <a href="running-macos" id="running-macos"></a><a class="headerlink" href="#running-macos" title="Link to this heading">#</a></h3>
 <p>In order to run MacOS, you may need to reinstall.</p>
 <ol class="arabic simple">
 <li><p>Clear <code class="docutils literal notranslate"><span class="pre">csrutil</span></code> and restart.</p></li>

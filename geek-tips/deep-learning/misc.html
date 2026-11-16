@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=4418a689" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=9a9c6050" />
   
   <!-- So that users can add custom icons -->
@@ -45,7 +45,7 @@
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../_static/design-tabs.js?v=fcb327ea"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/deep-learning/misc';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../../_static/logo.png"/>
@@ -520,7 +520,7 @@
   <section id="misc">
 <h1>Misc<a class="headerlink" href="#misc" title="Link to this heading">#</a></h1>
 <section id="isolating-gpus-without-docker">
-<h2>Isolating GPUs (without Docker) <a id="isolating_gpus_without_docker"></a><a class="headerlink" href="#isolating-gpus-without-docker" title="Link to this heading">#</a></h2>
+<span id="isolating-gpus-without-docker-"></span><h2>Isolating GPUs (without Docker) <a id="isolating_gpus_without_docker"></a><a class="headerlink" href="#isolating-gpus-without-docker" title="Link to this heading">#</a></h2>
 <p>You can isolate the GPU that your software will be able to see using a NVIDIA environment called <code class="docutils literal notranslate"><span class="pre">CUDA_VISIBLE_DEVICES</span></code>, where you can select which GPUs will be visible to your software. Let’s say you want to execute <code class="docutils literal notranslate"><span class="pre">my_script.py</span></code> and you want only the GPU 0 (zero) to be visible for your process:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>  CUDA_VISIBLE_DEVICES=0 python my_script.py
 </pre></div>

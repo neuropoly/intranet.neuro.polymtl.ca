@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=4418a689" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=9a9c6050" />
   
   <!-- So that users can add custom icons -->
@@ -45,7 +45,7 @@
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../_static/design-tabs.js?v=fcb327ea"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'onboarding/computer-setup/configuration-tips';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../../_static/logo.png"/>
@@ -519,9 +519,9 @@
                 <article class="bd-article">
                   
   <section id="other-configuration-tips">
-<h1><span>💡</span> Other configuration tips<a class="headerlink" href="#other-configuration-tips" title="Link to this heading">#</a></h1>
+<span id="-other-configuration-tips"></span><h1><span>💡</span> Other configuration tips<a class="headerlink" href="#other-configuration-tips" title="Link to this heading">#</a></h1>
 <section id="niftiviewer-app-macos">
-<h2>niftiviewer.app (MacOS) <a href="niftiviewerapp" id="niftiviewerapp"></a><a class="headerlink" href="#niftiviewer-app-macos" title="Link to this heading">#</a></h2>
+<span id="niftiviewerapp-macos-"></span><h2>niftiviewer.app (MacOS) <a href="niftiviewerapp" id="niftiviewerapp"></a><a class="headerlink" href="#niftiviewer-app-macos" title="Link to this heading">#</a></h2>
 <p>UPDATE: NO NEED TO DO THE THING BELOW ANYMORE WITH NIFTI. Instead, right click &gt; “get info” &gt; Open with &gt; change all… &gt; select fsleyes</p>
 <p>In automator, create new application - run apple script. Add the following script:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">on</span> <span class="n">run</span> <span class="p">{</span><span class="nb">input</span><span class="p">,</span> <span class="n">parameters</span><span class="p">}</span>
@@ -534,7 +534,7 @@
 <p>Select .nii file – open with –&gt; select niftiviewer.app</p>
 </section>
 <section id="configure-virtualenvwrapper-under-linux">
-<h2>Configure virtualenvwrapper under LINUX <a href="configure_virtualenvwrapper_under_linux" id="configure_virtualenvwrapper_under_linux"></a><a class="headerlink" href="#configure-virtualenvwrapper-under-linux" title="Link to this heading">#</a></h2>
+<span id="configure-virtualenvwrapper-under-linux-"></span><h2>Configure virtualenvwrapper under LINUX <a href="configure_virtualenvwrapper_under_linux" id="configure_virtualenvwrapper_under_linux"></a><a class="headerlink" href="#configure-virtualenvwrapper-under-linux" title="Link to this heading">#</a></h2>
 <p>Add script under /etc/profile.d/virtual_env_config.sh :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">WORKON_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/.virtualenvs
 <span class="nb">export</span><span class="w"> </span><span class="nv">PROJECT_HOME</span><span class="o">=</span><span class="nv">$HOME</span>/

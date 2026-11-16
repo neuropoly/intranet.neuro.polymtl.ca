@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=4418a689" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=9a9c6050" />
   
   <!-- So that users can add custom icons -->
@@ -45,7 +45,7 @@
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../_static/design-tabs.js?v=fcb327ea"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/bash-shell/README';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../../_static/logo.png"/>
@@ -579,7 +579,7 @@
                 <article class="bd-article">
                   
   <section id="bash-shell">
-<span id="id1"></span><h1>Bash/Shell<a class="headerlink" href="#bash-shell" title="Link to this heading">#</a></h1>
+<span id="id1"></span><span id="bashshell"></span><h1>Bash/Shell<a class="headerlink" href="#bash-shell" title="Link to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <section id="awesome-links">
@@ -607,7 +607,7 @@
 </div>
 </section>
 <section id="file-folders">
-<h2>File/Folders<a class="headerlink" href="#file-folders" title="Link to this heading">#</a></h2>
+<span id="filefolders"></span><h2>File/Folders<a class="headerlink" href="#file-folders" title="Link to this heading">#</a></h2>
 <section id="copying">
 <h3>Copying<a class="headerlink" href="#copying" title="Link to this heading">#</a></h3>
 <section id="copy-and-synchronize-with-rsync">
@@ -705,7 +705,7 @@ rsync<span class="w"> </span>-azP<span class="w"> </span>&lt;FOLDER_SOURCE&gt;/<
 </div>
 </section>
 <section id="number-of-files">
-<h3>Number of files <a href="number_of_files" id="number_of_files"></a><a class="headerlink" href="#number-of-files" title="Link to this heading">#</a></h3>
+<span id="number-of-files-"></span><h3>Number of files <a href="number_of_files" id="number_of_files"></a><a class="headerlink" href="#number-of-files" title="Link to this heading">#</a></h3>
 <p>== Get number of files that match a pattern</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">dq</span> <span class="o">*</span><span class="n">pattern</span><span class="o">*</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
 </pre></div>
@@ -744,7 +744,7 @@ chmod<span class="w"> </span><span class="m">701</span><span class="w">	 </span>
 </div>
 </section>
 <section id="look-for-group-owner-permission">
-<h4><strong>Look for group owner &amp; permission</strong><a class="headerlink" href="#look-for-group-owner-permission" title="Link to this heading">#</a></h4>
+<span id="look-for-group-owner--permission"></span><h4><strong>Look for group owner &amp; permission</strong><a class="headerlink" href="#look-for-group-owner-permission" title="Link to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-le@a
 </pre></div>
 </div>
@@ -763,13 +763,13 @@ chmod<span class="w"> </span><span class="m">701</span><span class="w">	 </span>
 </div>
 </section>
 <section id="stdout-stderr">
-<h4>Stdout / Stderr <a href="stdoutstderr" id="stdoutstderr"></a><a class="headerlink" href="#stdout-stderr" title="Link to this heading">#</a></h4>
+<span id="stdout--stderr-"></span><h4>Stdout / Stderr <a href="stdoutstderr" id="stdoutstderr"></a><a class="headerlink" href="#stdout-stderr" title="Link to this heading">#</a></h4>
 <p><a class="reference external" href="https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file">https://askubuntu.com/questions/420981/how-do-i-save-terminal-output-to-a-file</a>Edit</p>
 </section>
 </section>
 </section>
 <section id="compression-extraction">
-<h2>Compression/Extraction<a class="headerlink" href="#compression-extraction" title="Link to this heading">#</a></h2>
+<span id="compressionextraction"></span><h2>Compression/Extraction<a class="headerlink" href="#compression-extraction" title="Link to this heading">#</a></h2>
 <section id="tar">
 <h3><strong>tar</strong><a class="headerlink" href="#tar" title="Link to this heading">#</a></h3>
 <p>compress:</p>
@@ -797,19 +797,19 @@ chmod<span class="w"> </span><span class="m">701</span><span class="w">	 </span>
 <p><strong>copie de fichiers ds une directory</strong></p>
 <p>find -name sica*.png | xargs -t -i /bin/cp ./{} ./imagesEdit</p>
 <section id="checksum">
-<h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum" title="Link to this heading">#</a></h4>
+<span id="checksum-"></span><h4>Checksum <a href="checksum" id="checksum"></a><a class="headerlink" href="#checksum" title="Link to this heading">#</a></h4>
 <p>This procedure creates a unique signature for your files and folders. It enables to check for integrity when you share data.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-0">
-Linux</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-0-content" class="sd-tab-label" for="sd-tab-item-0">
+Linux</label><div class="sd-tab-content docutils" id="sd-tab-item-0-content">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>FOLDER<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>md5sum<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>md5sum
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-1">
-Mac</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-1-content" class="sd-tab-label" for="sd-tab-item-1">
+Mac</label><div class="sd-tab-content docutils" id="sd-tab-item-1-content">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>-s<span class="w"> </span>FOLDER<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>shasum<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>shasum
 find<span class="w"> </span>-s<span class="w"> </span>FOLDER<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-exec<span class="w"> </span>md5<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>md5
 </pre></div>
@@ -818,7 +818,7 @@ find<span class="w"> </span>-s<span class="w"> </span>FOLDER<span class="w"> </s
 </div>
 </section>
 <section id="remove-files-from-tmp">
-<h4>Remove files from tmp <a href="remove_files_from_tmp" id="remove_files_from_tmp"></a><a class="headerlink" href="#remove-files-from-tmp" title="Link to this heading">#</a></h4>
+<span id="remove-files-from-tmp-"></span><h4>Remove files from tmp <a href="remove_files_from_tmp" id="remove_files_from_tmp"></a><a class="headerlink" href="#remove-files-from-tmp" title="Link to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">"tmp.*"</span><span class="w"> </span>-type<span class="w"> </span>d<span class="w"> </span>-print0<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-0<span class="w"> </span>/bin/rm<span class="w"> </span>-rf
 </pre></div>
 </div>
@@ -826,7 +826,7 @@ find<span class="w"> </span>-s<span class="w"> </span>FOLDER<span class="w"> </s
 </section>
 </section>
 <section id="bash-profile">
-<h2>.bash_profile<a class="headerlink" href="#bash-profile" title="Link to this heading">#</a></h2>
+<span id="bash_profile"></span><h2>.bash_profile<a class="headerlink" href="#bash-profile" title="Link to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code> file is launched when you open a new terminal. You can configure your environment variables from there. It is located in your home folder (<code class="docutils literal notranslate"><span class="pre">$HOME</span></code>).</p>
 <p>To load it:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>~/.bash_profile
@@ -871,7 +871,7 @@ find<span class="w"> </span>-s<span class="w"> </span>FOLDER<span class="w"> </s
 </section>
 </section>
 <section id="internet-network">
-<h2>Internet / Network<a class="headerlink" href="#internet-network" title="Link to this heading">#</a></h2>
+<span id="internet--network"></span><h2>Internet / Network<a class="headerlink" href="#internet-network" title="Link to this heading">#</a></h2>
 <section id="download-file-from-internet">
 <h3>Download file from internet<a class="headerlink" href="#download-file-from-internet" title="Link to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-o<span class="w"> </span>filename<span class="w"> </span>-L<span class="w"> </span>&lt;URL&gt;
@@ -885,7 +885,7 @@ curl<span class="w"> </span>-o<span class="w"> </span>data.zip<span class="w"> <
 </div>
 </section>
 <section id="id2">
-<h3>Copying<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<span id="copying-1"></span><h3>Copying<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <section id="copy-file-between-computers">
 <h4>Copy file between computers<a class="headerlink" href="#copy-file-between-computers" title="Link to this heading">#</a></h4>
 <ul class="simple">
@@ -922,7 +922,7 @@ scp<span class="w"> </span>username@station.domain:<span class="w"> </span>&lt;/
 </section>
 </section>
 <section id="network-dns">
-<h3>Network/DNS<a class="headerlink" href="#network-dns" title="Link to this heading">#</a></h3>
+<span id="networkdns"></span><h3>Network/DNS<a class="headerlink" href="#network-dns" title="Link to this heading">#</a></h3>
 <p><strong>List all stations on the network (only works on a server)</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">findsmb</span>
 </pre></div>

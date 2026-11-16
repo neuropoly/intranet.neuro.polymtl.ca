@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=4418a689" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../_static/theme.css?v=9a9c6050" />
   
   <!-- So that users can add custom icons -->
@@ -45,7 +45,7 @@
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../_static/design-tabs.js?v=fcb327ea"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/git-annex';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../_static/logo.png"/>
@@ -545,8 +545,8 @@
 <p>You must have a unix OS. <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> is simply not compatible with anything else.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-0">
-Linux</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-0-content" class="sd-tab-label" for="sd-tab-item-0">
+Linux</label><div class="sd-tab-content docutils" id="sd-tab-item-0-content">
 <ul class="simple">
 <li><p><strong>Arch</strong>: <code class="docutils literal notranslate"><span class="pre">pacman</span> <span class="pre">-Sy</span> <span class="pre">git-annex</span></code></p></li>
 <li><p><strong>Fedora/RedHat/CentOS</strong>: <code class="docutils literal notranslate"><span class="pre">dnf</span> <span class="pre">install</span> <span class="pre">git-annex</span></code></p></li>
@@ -556,15 +556,15 @@ Linux</label><div class="sd-tab-content docutils">
 </ul>
 </div>
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-1">
-macOS</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-1-content" class="sd-tab-label" for="sd-tab-item-1">
+macOS</label><div class="sd-tab-content docutils" id="sd-tab-item-1-content">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">git</span><span class="o">-</span><span class="n">annex</span>
 </pre></div>
 </div>
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-2">
-Windows 10 (via WSL)</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-2-content" class="sd-tab-label" for="sd-tab-item-2">
+Windows 10 (via WSL)</label><div class="sd-tab-content docutils" id="sd-tab-item-2-content">
 <p>Install <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">WSL</a>, pick a distro, and then run one of:</p>
 <ul class="simple">
 <li><p><strong><a class="reference external" href="https://www.microsoft.com/store/apps/9n6svws3rx71">Ubuntu-20.04</a></strong>: <code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">install</span> <span class="pre">git-annex</span></code></p></li>
@@ -573,8 +573,8 @@ Windows 10 (via WSL)</label><div class="sd-tab-content docutils">
 </ul>
 </div>
 <input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-3">
-Windows 10 (via VirtualBox)</label><div class="sd-tab-content docutils">
+<label aria-controls="sd-tab-item-3-content" class="sd-tab-label" for="sd-tab-item-3">
+Windows 10 (via VirtualBox)</label><div class="sd-tab-content docutils" id="sd-tab-item-3-content">
 <p>Install <a class="reference external" href="https://virtualbox.org/">VirtualBox</a>, install a Linux distro inside of it, and then follow the Linux instructions.</p>
 </div>
 </div>
@@ -612,7 +612,7 @@ upgrade supported from repository versions: 0 1 2 3 4 5 6 7
 <p>Follow <a class="reference internal" href="../data/git-datasets.html#creating-a-new-repository"><span class="std std-ref">these instructions</span></a> to get a new repository on our internal dataset server. The new repository will be based on <a class="reference external" href="https://data.neuro.polymtl.ca/datasets/template">the lab’s dataset template</a>, which includes some default configuration for <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> and follows the recommendations in <a class="reference internal" href="../data/dataset-curation.html"><span class="std std-doc">our dataset curation instructions</span></a>.</p>
 </section>
 <section id="annex-thin-hardlinks">
-<h2><code class="docutils literal notranslate"><span class="pre">annex.thin</span></code> Hardlinks <a id="hardlinks"><a class="headerlink" href="#annex-thin-hardlinks" title="Link to this heading">#</a></h2>
+<span id="annexthin-hardlinks-"></span><h2><code class="docutils literal notranslate"><span class="pre">annex.thin</span></code> Hardlinks <a id="hardlinks"><a class="headerlink" href="#annex-thin-hardlinks" title="Link to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">annex.thin</span></code> saves a lot of space by deduplicating file content via <a class="reference external" href="https://wiki.debian.org/ln">hard links</a>:
 the files your checkout <code class="docutils literal notranslate"><span class="pre">repo/</span></code> will be physically the same content as their sources in <code class="docutils literal notranslate"><span class="pre">repo/.git/annex/objects/</span></code>, instead of copies.</p>
 <p>To confirm this is working, you can compare the size of the content with the annex.

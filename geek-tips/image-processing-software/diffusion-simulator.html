@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=4418a689" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=9a9c6050" />
   
   <!-- So that users can add custom icons -->
@@ -45,7 +45,7 @@
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../_static/design-tabs.js?v=fcb327ea"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/image-processing-software/diffusion-simulator';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../../_static/logo.png"/>
@@ -529,7 +529,7 @@ fslchfiletype<span class="w"> </span>NIFTI<span class="w"> </span>Diffusion.img
 <p>You can choose the permeability of the barriers via p but not the thickness.</p>
 <p>However, you can also build any kind of shape using a PLY file (3D object file). Here is a tutorial for this option: <a class="reference external" href="http://cmic.cs.ucl.ac.uk/camino/index.php?n=Tutorials.MCMeshSimulation">Monte-Carlo Mesh Simulation</a>.</p>
 <section id="recommendations">
-<h2>Recommendations <a id="advices"></a><a class="headerlink" href="#recommendations" title="Link to this heading">#</a></h2>
+<span id="recommendations-"></span><h2>Recommendations <a id="advices"></a><a class="headerlink" href="#recommendations" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cylindersep</span></code> must be at least twice as big as <code class="docutils literal notranslate"><span class="pre">cylinderrad</span></code> (cylinders mustn’t overlap)</p></li>
 <li><p>Be very careful at high q-values (&gt;0.14 um-1). You need lots of walkers (200 000), and time steps (-tmax 3000)</p></li>

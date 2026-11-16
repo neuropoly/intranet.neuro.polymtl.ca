@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=4418a689" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../_static/theme.css?v=9a9c6050" />
   
   <!-- So that users can add custom icons -->
@@ -45,7 +45,7 @@
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../_static/design-tabs.js?v=fcb327ea"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'data/deeplearning-models';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../_static/logo.png"/>
@@ -535,7 +535,7 @@
 </ol>
 <p>More details on each step can be found below:</p>
 <section id="creating-and-naming-the-model-repository">
-<h2>1. Creating and naming the model repository<a class="headerlink" href="#creating-and-naming-the-model-repository" title="Link to this heading">#</a></h2>
+<span id="1-creating-and-naming-the-model-repository"></span><h2>1. Creating and naming the model repository<a class="headerlink" href="#creating-and-naming-the-model-repository" title="Link to this heading">#</a></h2>
 <p>Each model is saved in its own repository under the <a class="reference external" href="https://github.com/ivadomed">ivadomed</a> organization. The convention for naming repositories is the following:</p>
 <p>Syntax:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">model_task_anatomy_animal_pathology_condition_contrast_architecture</span>
@@ -564,12 +564,12 @@ Default fields can be ommited to avoid long names.</p>
 </section>
 <hr class="docutils" />
 <section id="training-the-model">
-<h2>2. Training the model<a class="headerlink" href="#training-the-model" title="Link to this heading">#</a></h2>
+<span id="2-training-the-model"></span><h2>2. Training the model<a class="headerlink" href="#training-the-model" title="Link to this heading">#</a></h2>
 <p>For instructions on how to train a new model using the nnU-Net framework, please refer to the <a class="reference external" href="https://github.com/ivadomed/utilities/blob/main/quick_start_guides/nnU-Net_quick_start_guide.md">nnU-Net Quick Start Guide</a>.</p>
 </section>
 <hr class="docutils" />
 <section id="packaging-models">
-<h2>3. Packaging models<a class="headerlink" href="#packaging-models" title="Link to this heading">#</a></h2>
+<span id="3-packaging-models"></span><h2>3. Packaging models<a class="headerlink" href="#packaging-models" title="Link to this heading">#</a></h2>
 <p>Models to be used by 3rd party software (e.g. <a class="reference external" href="https://spinalcordtoolbox.com/">SCT</a>) should be uploaded as ‘assets’ to a release of the repository. The steps are:</p>
 <ol class="arabic simple">
 <li><p>Create a release of the repository. The tag and title of the release should be <code class="docutils literal notranslate"><span class="pre">rYYYYMMDD</span></code>, example: <code class="docutils literal notranslate"><span class="pre">r20240915</span></code>.</p></li>
@@ -608,7 +608,7 @@ on what should be in this file, please refer to the <a class="reference external
 </section>
 <hr class="docutils" />
 <section id="integrating-the-model-into-sct">
-<h2>4. Integrating the model into SCT.<a class="headerlink" href="#integrating-the-model-into-sct" title="Link to this heading">#</a></h2>
+<span id="4-integrating-the-model-into-sct"></span><h2>4. Integrating the model into SCT.<a class="headerlink" href="#integrating-the-model-into-sct" title="Link to this heading">#</a></h2>
 <p>For instructions on how to integrate the model into the Spinal Cord Toolbox, please refer to the <a class="reference external" href="https://github.com/spinalcordtoolbox/spinalcordtoolbox/wiki/DL-models%3A-Integrating-a-new-model-into-SCT">Integrating a new model into SCT</a> page on the SCT Developer Wiki.</p>
 </section>
 </section>

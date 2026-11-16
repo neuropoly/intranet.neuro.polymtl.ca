@@ -32,7 +32,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=4418a689" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=6a604523" />
     <link rel="stylesheet" type="text/css" href="../../_static/theme.css?v=9a9c6050" />
   
   <!-- So that users can add custom icons -->
@@ -45,7 +45,7 @@
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../../_static/design-tabs.js?v=fcb327ea"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'geek-tips/bash-shell/script';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="icon" href="../../_static/logo.png"/>
@@ -544,7 +544,7 @@
   <section id="script">
 <h1>Script<a class="headerlink" href="#script" title="Link to this heading">#</a></h1>
 <section id="tutorials-links">
-<h2>Tutorials/Links<a class="headerlink" href="#tutorials-links" title="Link to this heading">#</a></h2>
+<span id="tutorialslinks"></span><h2>Tutorials/Links<a class="headerlink" href="#tutorials-links" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="http://linuxconfig.org/bash-scripting-tutorial">http://linuxconfig.org/bash-scripting-tutorial</a></p>
 <p><a class="reference external" href="https://devhints.io/bash">Bash scripting cheatsheet</a></p>
 </section>
@@ -670,7 +670,7 @@
 <section id="if-statements">
 <h2>IF Statements<a class="headerlink" href="#if-statements" title="Link to this heading">#</a></h2>
 <section id="if-and">
-<h3>IF - AND<a class="headerlink" href="#if-and" title="Link to this heading">#</a></h3>
+<span id="if---and"></span><h3>IF - AND<a class="headerlink" href="#if-and" title="Link to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-z<span class="w"> </span><span class="s2">"</span><span class="nv">$var</span><span class="s2">"</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">"</span><span class="nv">$var</span><span class="s2">"</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
 <span class="w">  </span><span class="k">do</span><span class="w"> </span>something<span class="w"> </span>...
 <span class="k">else</span>
@@ -684,7 +684,7 @@
 </div>
 </section>
 <section id="if-or">
-<h3>IF - OR<a class="headerlink" href="#if-or" title="Link to this heading">#</a></h3>
+<span id="if---or"></span><h3>IF - OR<a class="headerlink" href="#if-or" title="Link to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">"</span><span class="nv">$s1</span><span class="s2">"</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"</span><span class="nv">$s2</span><span class="s2">"</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
 <span class="w">  </span><span class="k">do</span><span class="w"> </span>something...
 <span class="k">fi</span>
@@ -742,7 +742,7 @@
 <section id="log-files">
 <h2>Log Files<a class="headerlink" href="#log-files" title="Link to this heading">#</a></h2>
 <section id="generate-log-file">
-<h3>Generate log file <a id="generate_log_file"></a><a class="headerlink" href="#generate-log-file" title="Link to this heading">#</a></h3>
+<span id="generate-log-file-"></span><h3>Generate log file <a id="generate_log_file"></a><a class="headerlink" href="#generate-log-file" title="Link to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">LOGFILE</span><span class="o">=</span>&lt;FILE_NAME&gt;.log
 <span class="o">{</span>
 <span class="w">    </span><span class="c1"># bash commands...</span>
