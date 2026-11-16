@@ -26,6 +26,7 @@ By default, all students will receive a stipend paid by the supervisor's researc
 * [UNIQUE research group](https://www.unique.quebec/funding)
 * [Fondation Arbour](https://www.fondationarbour.com/en/bourses-d-etudes-doctoract-phd-dba/maitrise/#content)
 * [Polytechnique Montreal](https://www.polymtl.ca/aide-financiere/bourses/recherche)
+* [Poly - Concours Annuel Cycles Supérieurs](https://www.polymtl.ca/aide-financiere/bourses/concours-annuel-cycles-superieurs)
 
 For students in neurosciences:
 
@@ -48,6 +49,7 @@ For students in neurosciences:
 * [Scholarship for anglophone student: Bourse de la Fondation Richard J. Schmeelk \(For canadians + anglophones only\)](http://schmeelkca.globat.com/wp-content/uploads/2013/06/Schmeelk_applicationform_EN.pdf)
 * [MITACS accelerate](https://www.mitacs.ca/fr/programmes/acceleration)
 * [Google](https://www.polymtl.ca/aide-financiere/bourses/bourses-de-doctorat-google-en-amerique-du-nord)
+* [Poly - Concours Annuel Cycles Supérieurs](https://www.polymtl.ca/aide-financiere/bourses/concours-annuel-cycles-superieurs)
 
 FOUNDATIONS
 
