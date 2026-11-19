@@ -11,7 +11,7 @@ Both pages are managed by volunteer students (currently Paul Hoareau and Youssef
 
 ### QR codes
 
-Use these on posters, slides and flyers. The labelled version shows the LinkedIn logo and the page address, so it is clear that the code leads to LinkedIn and not to a website. The plain version is for designs where you add your own label: if you add the LinkedIn logo yourself, use the official one from [LinkedIn's brand site](https://brand.linkedin.com/in-logo), without changing it or merging it with another logo.
+Use these on posters, slides and flyers. Each code has the page's logo in the centre and the LinkedIn logo in the corner, so it is clear that it leads to LinkedIn and not to a website. The labelled version also shows the page name and address; the plain version is the code alone, for designs where you add your own label.
 
 ::::{grid} 1 2 2 2
 :gutter: 3
