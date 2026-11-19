@@ -22,4 +22,5 @@ When the NeuroPoly or SCT page is invited as a collaborator on a post, an admin 
 ## Settings and analytics
 
 - Super admins manage page details (description, logo, banner, links) and roles.
+- Do not change the pages' public URLs (`neuropoly-lab` and `spinal-cord-toolbox-sct`): the [QR codes](linkedin.md#qr-codes) contain them and would stop working.
 - Page analytics (followers, post impressions) are visible to admins. Checking them from time to time shows which posts work well.

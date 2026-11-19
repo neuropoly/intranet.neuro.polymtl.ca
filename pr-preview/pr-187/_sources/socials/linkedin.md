@@ -9,6 +9,47 @@ LinkedIn is where we share what happens in the lab. See [Socials](README.md) for
 
 Both pages are managed by volunteer students (currently Paul Hoareau and Youssef Laatar). Contact them on Slack.
 
+### QR codes
+
+Use these on posters, slides and flyers. The labelled version shows the LinkedIn logo and the page address, so it is clear that the code leads to LinkedIn and not to a website. The plain version is for designs where you add your own label: if you add the LinkedIn logo yourself, use the official one from [LinkedIn's brand site](https://brand.linkedin.com/in-logo), without changing it or merging it with another logo.
+
+::::{grid} 1 2 2 2
+:gutter: 3
+
+:::{grid-item}
+:class: sd-text-center
+
+```{image} qr/qr-neuropoly-card.png
+:width: 220px
+:alt: QR code to the NeuroPoly LinkedIn page
+:align: center
+```
+
+**NeuroPoly**
+
+Labelled: {download}`PNG <qr/qr-neuropoly-card.png>`, {download}`SVG <qr/qr-neuropoly-card.svg>`<br>
+Plain: {download}`PNG <qr/qr-neuropoly.png>`, {download}`SVG <qr/qr-neuropoly.svg>`
+:::
+
+:::{grid-item}
+:class: sd-text-center
+
+```{image} qr/qr-sct-card.png
+:width: 220px
+:alt: QR code to the Spinal Cord Toolbox LinkedIn page
+:align: center
+```
+
+**Spinal Cord Toolbox (SCT)**
+
+Labelled: {download}`PNG <qr/qr-sct-card.png>`, {download}`SVG <qr/qr-sct-card.svg>`<br>
+Plain: {download}`PNG <qr/qr-sct.png>`, {download}`SVG <qr/qr-sct.svg>`
+:::
+
+::::
+
+The codes are static: they contain the page address itself, with no redirect or tracking service in between, so they never expire. They keep working as long as the pages keep their current address. PNGs are 1960 px wide, which is enough for posters; use the SVG for large prints.
+
 ### SCT showcase page
 
 The SCT page is a LinkedIn **showcase page**: an extension of the NeuroPoly page, dedicated to one product or initiative. It has its own followers, so people interested in SCT can follow it without following everything else the lab does. See [LinkedIn's documentation on showcase pages](https://www.linkedin.com/help/linkedin/answer/a566168) for details.
