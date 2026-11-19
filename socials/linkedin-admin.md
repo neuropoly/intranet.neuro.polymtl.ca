@@ -6,7 +6,7 @@ Roles and settings of the NeuroPoly LinkedIn page and the SCT showcase page. For
 
 | Role | Who | Can do |
 | ---- | --- | ------ |
-| Super admin | PIs and the page managers (currently Paul Hoareau and Youssef Laatar) | Everything, including managing other admins and page settings |
+| Super admin | PIs, Mathieu Guay-Paquet, Eliot Hills, and the page managers (currently Paul Hoareau and Youssef Laatar) | Everything, including managing other admins and page settings |
 | Content admin | All other students | Post, repost, react and comment as the page |
 
 These are LinkedIn's own role names, see [LinkedIn Page admin roles](https://www.linkedin.com/help/linkedin/answer/a541981). Roles are given separately on the NeuroPoly page and on the SCT showcase page.
