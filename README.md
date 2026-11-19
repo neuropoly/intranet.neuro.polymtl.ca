@@ -5,6 +5,7 @@
 :hidden:
 onboarding/README
 agenda-and-calendar
+socials/README
 computing-resources/README
 data/README
 mri-scanning/README
