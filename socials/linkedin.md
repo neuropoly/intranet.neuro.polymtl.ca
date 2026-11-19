@@ -11,8 +11,6 @@ Both pages are managed by volunteer students (currently Paul Hoareau and Youssef
 
 ### QR codes
 
-Use these on posters, slides and flyers. Each code has the page's logo in the centre and the LinkedIn logo in the corner, so it is clear that it leads to LinkedIn and not to a website. The labelled version also shows the page name and address; the plain version is the code alone, for designs where you add your own label.
-
 ::::{grid} 1 2 2 2
 :gutter: 3
 
@@ -48,7 +46,7 @@ Plain: {download}`PNG <qr/qr-sct.png>`, {download}`SVG <qr/qr-sct.svg>`
 
 ::::
 
-The codes are static: they contain the page address itself, with no redirect or tracking service in between, so they never expire. They keep working as long as the pages keep their current address. PNGs are 1960 px wide, which is enough for posters; use the SVG for large prints.
+The codes link directly to the pages and do not expire.
 
 ### SCT showcase page
 
