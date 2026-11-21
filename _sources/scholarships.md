@@ -22,7 +22,7 @@ By default, all students will receive a stipend paid by the supervisor's researc
 * [CIHR](https://cihr-irsc.gc.ca/e/50513.html)
 * [IVADO](https://ivado.ca/en/ivado-scholarships/excellence-scholarships-msc/)
 * [TransMedTech](https://www.polymtl.ca/transmedtech/programmes-de-financement-et-daccompagnement)
-* QBIN
+* [Institut Lassonde](https://www.polymtl.ca/institut-lassonde/appels-projets)
 * [UNIQUE research group](https://www.unique.quebec/funding)
 * [Fondation Arbour](https://www.fondationarbour.com/en/bourses-d-etudes-doctoract-phd-dba/maitrise/#content)
 * [Polytechnique Montreal](https://www.polymtl.ca/aide-financiere/bourses/recherche)
@@ -45,6 +45,7 @@ For students in neurosciences:
 * [Vanier \(HIGHLY COMPETITIVE!\)](http://vanier.gc.ca/eng/scholarship_details-renseignements_generaux.aspx)
 * [FRQNT](https://frq.gouv.qc.ca/en/program/merit-scholarship-program-for-foreign-students-pbeee-2023-2024/)
 * Jeton BSFD from EE department at Polytechinque (ask a faculty)
+* [Institut Lassonde](https://www.polymtl.ca/institut-lassonde/appels-projets)
 * [Fondation Polytechnique \(mostly for canadians](http://www.polymtl.ca/aidefinanciere/chrono/internes-sup.php)
 * [Scholarship for anglophone student: Bourse de la Fondation Richard J. Schmeelk \(For canadians + anglophones only\)](http://schmeelkca.globat.com/wp-content/uploads/2013/06/Schmeelk_applicationform_EN.pdf)
 * [MITACS accelerate](https://www.mitacs.ca/fr/programmes/acceleration)
