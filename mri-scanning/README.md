@@ -20,9 +20,10 @@ A list of MRI facilities accessible to NeuroPoly members is available [here](htt
 
 If you book the MRI, please use the “[Neuropoly - MRI](https://calendar.google.com/calendar/embed?src=k4moiei5d2lh84iokouk6lt84o%40group.calendar.google.com\&ctz=America%2FToronto)” google cal. 
 Create an event in the gcal, with:
-* Event name: scan session name followed by your name in brackets. Example: `acdc_spine_7t_033p (Julien)`
-* Event description: Link to the MRI logbook header page of the acquisition
-* Invities: if other people are joining you in the scan session, invite them as a courtesy/reminder 
+* **Title**: scan session name followed by your name in brackets. Example: `acdc_spine_7t_033p (Julien)`
+* **Location**: UNF, Neuro, etc.
+* **Description**: Link to the MRI logbook header page of the acquisition
+* **Invities**: If other people are joining you in the scan session, invite them as a courtesy/reminder 
 
 Details to book an MRI scanner are given in the specific MRI sub-section.&#x20;
 
