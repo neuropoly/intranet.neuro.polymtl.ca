@@ -201,9 +201,9 @@ For medical imaging AI papers, consider filling the [CLAIM](https://pubs.rsna.or
 
 ## Acknowledgements
 
-For all articles/abstracts, please add the following:
+For all articles/abstracts from Julien's team, please add the following:
 
-> Funded by the Canada Research Chair in Quantitative Magnetic Resonance Imaging [CRC-2020-00179], the Canadian Institute of Health Research [PJT-190258, PJT-203803], the Canada Foundation for Innovation [32454, 34824], the Fonds de Recherche du Québec - Santé [322736, 324636], the Natural Sciences and Engineering Research Council of Canada [RGPIN-2025-05074], the Canada First Research Excellence Fund (IVADO and TransMedTech), Praxis Institute.
+> Funded by the Canada Research Chair in Quantitative Magnetic Resonance Imaging [CRC-2020-00179], the Canadian Institute of Health Research [PJT-190258, PJT-203803], the Canada Foundation for Innovation [32454, 34824], the Fonds de Recherche du Québec - Santé [322736, 324636], the Natural Sciences and Engineering Research Council of Canada [RGPIN-2025-05074], the Canada First Research Excellence Fund (IVADO and TransMedTech), Praxis Institute, France Sclérose en Plaques.
 
 For projects using Digital Alliance (formerly Compute Canada), please add:
 
