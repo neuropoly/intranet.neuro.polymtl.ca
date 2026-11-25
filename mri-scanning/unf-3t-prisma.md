@@ -8,14 +8,19 @@ More details on the UNF website: [https://unfmontreal.github.io/en/mri/](https:/
 
 ## Booking the scanner
 
-1. First, you should take the MRI safety training (Send an email to support.unf@criugm.qc.ca requesting participation in the training).
-2. Second, you must have an account to reserve the scanner (Send another email to the same address to get your account ready).
-3. The last step includes a disinfection training which will be given to you once you get to UNF for your first scan.
+```{important}
+Before being able to book and scan, you must:
+- Take the MRI safety training. Send an email to support.unf@criugm.qc.ca requesting participation in the training.
+- Have an account to reserve the scanner. Send another email to the same address to get your account ready.
+```
 
-Details about the booking system [here](https://unfmontreal.github.io/en/reservations/).
+To book the scanner, follow instructions [here](https://unfmontreal.github.io/en/reservations/).
 
 ```{note}
-Under the `session name` you will need to enter a study suffix that is listed in this [JSON file](https://github.com/UNFmontreal/bids_configs/blob/master/studies.json). Look for the fields that start with `neuropoly`.
+- Under the `session name` you will need to enter a study suffix that is listed in this [JSON file](https://github.com/UNFmontreal/bids_configs/blob/master/studies.json). Look for the fields that start with `neuropoly`.
+- In the comments of the booking event, indicate:
+  - **dev**: If this is a development scan (debugging/pilot/tests), or
+  - **paid**: If this is a scan that will be used for a publication (conference, article)
 ```
 
 
