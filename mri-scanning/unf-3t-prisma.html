@@ -527,15 +527,26 @@
 <p>More details on the UNF website: <a class="reference external" href="https://unfmontreal.github.io/en/mri/">https://unfmontreal.github.io/en/mri/</a></p>
 <section id="booking-the-scanner">
 <h2>Booking the scanner<a class="headerlink" href="#booking-the-scanner" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>First, you should take the MRI safety training (Send an email to support.unf&#64;criugm.qc.ca requesting participation in the training).</p></li>
-<li><p>Second, you must have an account to reserve the scanner (Send another email to the same address to get your account ready).</p></li>
-<li><p>The last step includes a disinfection training which will be given to you once you get to UNF for your first scan.</p></li>
-</ol>
-<p>Details about the booking system <a class="reference external" href="https://unfmontreal.github.io/en/reservations/">here</a>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Before being able to book and scan, you must:</p>
+<ul class="simple">
+<li><p>Take the MRI safety training. Send an email to support.unf&#64;criugm.qc.ca requesting participation in the training.</p></li>
+<li><p>Have an account to reserve the scanner. Send another email to the same address to get your account ready.</p></li>
+</ul>
+</div>
+<p>To book the scanner, follow instructions <a class="reference external" href="https://unfmontreal.github.io/en/reservations/">here</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Under the <code class="docutils literal notranslate"><span class="pre">session</span> <span class="pre">name</span></code> you will need to enter a study suffix that is listed in this <a class="reference external" href="https://github.com/UNFmontreal/bids_configs/blob/master/studies.json">JSON file</a>. Look for the fields that start with <code class="docutils literal notranslate"><span class="pre">neuropoly</span></code>.</p>
+<ul class="simple">
+<li><p>Under the <code class="docutils literal notranslate"><span class="pre">session</span> <span class="pre">name</span></code> you will need to enter a study suffix that is listed in this <a class="reference external" href="https://github.com/UNFmontreal/bids_configs/blob/master/studies.json">JSON file</a>. Look for the fields that start with <code class="docutils literal notranslate"><span class="pre">neuropoly</span></code>.</p></li>
+<li><p>In the comments of the booking event, indicate:</p>
+<ul>
+<li><p><strong>dev</strong>: If this is a development scan (debugging/pilot/tests), or</p></li>
+<li><p><strong>paid</strong>: If this is a scan that will be used for a publication (conference, article)</p></li>
+</ul>
+</li>
+</ul>
 </div>
 </section>
 <section id="finding-participants">
