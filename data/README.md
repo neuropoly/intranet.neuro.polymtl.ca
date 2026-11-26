@@ -17,6 +17,7 @@ MRI, microscopy and other research data are stored in the following servers:
 :maxdepth: 1
 git-datasets
 duke
+borealis
 ```
 
 And [here](https://docs.google.com/spreadsheets/d/1yjcA8Z0COn4OZxusIDHjStH2DpeXvscsj-aWE2X-_sg) is a useful list of MRI data to use for various projects.
