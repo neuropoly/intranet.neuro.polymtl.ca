@@ -175,7 +175,7 @@ Electrical and Computer Engineering Course List: [http://www.mcgill.ca/ece/progr
 | [ELE4501A](http://www.polymtl.ca/etudes/cours/details.php?sigle=ELE4501A) | <p>Circuits et systèmes communications radiofréquences</p><p><em>(laboratoire simulation ADS Agilent)</em></p> | Français | Ke Wu               |
 | [ELE6502](http://www.polymtl.ca/etudes/cours/details.php?sigle=ELE6502)   | Instrumentation automatisée en micro-ondes                                                                     | Français | Cevdet Akyel        |
 | [ELE8500](https://www.polymtl.ca/programmes/cours/circuits-passifs-micro-ondes-0)   | <p>Circuits Passifs Micro-ondes  </p><p><em>(laboratoires d’initiation aux analyseurs de réseau et de spectre)</em></p>  | Français | Ke Wu               |
-| ELE6953ME                                                                 | <p>Electromagnetic Compatibility: Theory and Practice ({download}`syllabus <_media/courses/ELE6953ME_course_description.txt>`)</p><p><em>(Winter 2027. EMC fundamentals, cabling, grounding, shielding, filtering, PDN, emissions and immunity. Includes a 3-hour visit to an industrial EMC/RF testing lab)</em></p> | ?        | ?                   |
+| ELE6953ME                                                                 | <p>Electromagnetic Compatibility: Theory and Practice ({download}`syllabus <_media/courses/ELE6953ME_course_description.txt>`)</p><p><em>(Winter 2027. EMC fundamentals, cabling, grounding, shielding, filtering, PDN, emissions and immunity. Includes a 3-hour visit to an industrial EMC/RF testing lab)</em></p> | English  | Keyhan Sheshyekani  |
 
 ### McGill
 
