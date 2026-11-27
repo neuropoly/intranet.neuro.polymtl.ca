@@ -1,0 +1,72 @@
+              ELE6953ME – Electromagnetic Compatibility: Theory and Practice
+                                   Polytechnique Montréal, Winter 2027
+
+Course description
+Fundamental principles of Electromagnetic Compatibility (EMC); electromagnetic noise and interference;
+coupling mechanisms; mitigation and filtering techniques; EMC-oriented design principles for electrical and
+electronic systems; regulatory framework and industrial EMC standards; emission and immunity requirements;
+electromagnetic interactions involving cables; crosstalk phenomena; capacitive, inductive, and radiated
+coupling; grounding and shielding practices for equipment and digital circuits; power integrity and Power
+Distribution Network (PDN) design; radiation mechanisms and common-mode noise conversion; conducted
+and radiated emissions; EMC measurement techniques; practical mitigation and troubleshooting methods;
+ESD, EFT/Burst, surge immunity; conducted and radiated RF immunity; three-hour industrial visit to
+an EMC/RF testing laboratory; EMC instrumentation and test setups; near-field probing and debugging
+techniques; interpretation of EMC standards, compliance requirements, and industrial test reports.
+
+Syllabus
+
+Introduction to electromagnetic compatibility                                                            3h
+Fundamentals and classification of electromagnetic noise and interference. Mitigation and filtering tech-
+niques. EMC design principles and practical measures for designing for compliance. Regulatory framework,
+applicable standards, and emission and immunity limits across standards and industries.
+
+Cabling                                                                                                  3h
+Interaction of electromagnetic fields with cables. Crosstalk between adjacent cables. Principles and behavior
+of shielded and unshielded cables. Capacitive (electric), inductive (magnetic), and electromagnetic coupling.
+
+Grounding                                                                                                3h
+AC power distribution and protective grounding. Signal ground references, equipment grounding, digital
+circuit grounding, and ground loops.
+
+Noise and filtering techniques                                                                           6h
+Electromagnetic noise fundamentals and coupling mechanisms. Frequency-domain analysis, passive filters,
+and common-mode filtering. Power integrity, printed circuit board (PCB) design and routing, measurement,
+and debugging.
+
+Syllabus (continued)
+
+Shielding                                                                                               3h
+Shielding effectiveness fundamentals, material selection, and material properties. Cable shielding and
+grounding strategies. Shielding design for enclosures and PCBs. Measurement and validation of shielding
+performance.
+
+Digital power distribution and radiation mechanisms                                                     6h
+Power distribution network (PDN) fundamentals. Switching noise and simultaneous switching noise (SSN).
+Decoupling strategies and capacitor optimization. PCB layer stack-up and return-current control. Power-plane
+resonances and cavity radiation. Common-mode noise conversion, radiation mechanisms, and PDN-level
+EMI mitigation.
+
+Conducted emissions                                                                                     3h
+Coupling paths and propagation. Line impedance stabilization networks (LISNs) and measurement principles.
+Applicable EMC standards and limits. Effects of grounding and bonding. Practical troubleshooting.
+
+Radiated emissions                                                                                      3h
+Radiation mechanisms and sources at PCB and system levels. Measurement techniques and test setups. EMC
+standards and compliance requirements. Design techniques for reducing emissions.
+
+RF and transient immunity                                                                               6h
+Immunity fundamentals. Radiated RF immunity and field-to-system coupling. Conducted RF immunity.
+Electrical fast transients (EFT/burst) and switching disturbances. Surge and high-energy transient immunity,
+electrostatic discharge (ESD), power supply variations, and low-frequency immunity. Design techniques for
+improving immunity, measurement and test methods, and applicable standards.
+
+Industrial visit to an EMC/RF testing laboratory                                                        3h
+Hour 1 — Safety briefing and introduction to the laboratory facilities, semi-anechoic chamber, and key
+measurement and test instruments.
+Hour 2 — Conducted and radiated emissions demonstrations. Pre-compliance measurement, near-field
+probing, and EMC debugging.
+Hour 3 — Introduction to RF, ESD, and EFT immunity testing, demonstrations on actual equipment, and
+discussion of applicable standards, test reports, and industry compliance issues.
+
+Total                                                                                                  39 h
+
